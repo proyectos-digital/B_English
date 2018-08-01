@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/*! ========================================================================== TIPOGRAPHY */
+	// Font face, import de Google Fonts o regla font-face
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+	@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900');
+
+	@font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/materialicons/v29/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
+    }
+
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+	
+	@font-face {
+		font-family: "b-english";
+		src:url("../fonts/b-english.eot");
+		src:url("../fonts/b-english.eot?#iefix") format("embedded-opentype"),
+			url("../fonts/b-english.woff") format("woff"),
+			url("../fonts/b-english.ttf") format("truetype"),
+			url("../fonts/b-english.svg#b-english") format("svg");
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	[data-icon]:before {
+		font-family: "b-english" !important;
+		content: attr(data-icon);
+		font-style: normal !important;
+		font-weight: normal !important;
+		font-variant: normal !important;
+		text-transform: none !important;
+		speak: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	[class^="appicon-"]:before,
+	[class*=" appicon-"]:before {
+		font-family: "b-english" !important;
+		font-style: normal !important;
+		font-weight: normal !important;
+		font-variant: normal !important;
+		text-transform: none !important;
+		speak: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.appicon-link:before 			{ content: "\67"; }
+	.appicon-send:before 			{ content: "\6a"; }
+	.appicon-alert:before 			{ content: "\6b"; }
+	.appicon-alert-circled:before	{ content: "\6c"; }
+	.appicon-add:before 			{ content: "\6d"; }
+	.appicon-alarm-clock:before		{ content: "\6e"; }
+	.appicon-arrow-down:before		{ content: "\6f"; }
+	.appicon-arrow-back:before		{ content: "\70"; }
+	.appicon-arrow-forward:before	{ content: "\71"; }
+	.appicon-arrow-up:before		{ content: "\72"; }
+	.appicon-notis-off:before		{ content: "\75"; }
+	.appicon-user:before 			{ content: "\76"; }
+	.appicon-play:before 			{ content: "\79"; }
+	.appicon-pause:before 			{ content: "\7a"; }
+	.appicon-locked:before 			{ content: "\61"; }
+	.appicon-unlocked:before		{ content: "\62"; }
+	.appicon-plus:before 			{ content: "\63"; }
+	.appicon-checkmark:before		{ content: "\64"; }
+	.appicon-close:before 			{ content: "\65"; }
+	.appicon-tags:before 			{ content: "\66"; }
+	.appicon-notis:before 			{ content: "\68"; }
+	.appicon-more:before 			{ content: "\73"; }
+	.appicon-move:before 			{ content: "\69"; }
+	.appicon-camera:before 			{ content: "\74"; }
+	.appicon-arrow-swap:before		{ content: "\77"; }
+	.appicon-sort:before 			{ content: "\78"; }
+	  

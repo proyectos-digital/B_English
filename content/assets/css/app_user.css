@@ -1,0 +1,16 @@
+.template-wrapper {
+	padding-bottom: var(--size-uiLogo);
+	min-height: calc(100vh - (3.5rem * 1));
+}
+
+.template-section {
+	padding-top: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+@media screen and (max-width: 599px) {
+	.template.qa-version3 .template-section {
+		padding-top: 0rem;
+	}
+}

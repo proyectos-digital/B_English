@@ -1,0 +1,248 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a act_1" ng-init="unirColumnasFuncion()")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+        
+            div(class="row mt40 ")
+                h5 #[strong.u-textColor_4 1. ] Watch the video:
+                div(class="row-flex")
+                    div(class="col-flex-xs12 col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row mt20 mb20"): div(class="col md11 col-center"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                            source(src="unit_2/module_6/"+pathVideo+"act_1_1.mp4" type="video/mp4")
+                        
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row")
+                            h6(class="mb20 mt20") Look at the following sentences. Pay attention at the words in bold:
+                        div(class="row")
+                            div(class="col-flex-sm10 col-center")
+                                p • She 
+                                    strong.mr5 took off
+                                    | her shoes. 
+                                p • She 
+                                    strong.mr5 woke up
+                                    | five minutes later. 
+                                p • She  
+                                    strong.mr5 got up
+                                    | and went to the kitchen.
+                                p • She 
+                                    strong.mr5 looked out
+                                    | not to step on the dog.
+                                p • She 
+                                    strong.mr5 went back
+                                    | to bed.
+        |
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row"): h5(class="mb30") #[strong.u-textColor_4 2. ] Match the definitions with the examples.
+            div(class="row mt30-md mt20-xs")
+                div(class="col xs12 sm10 md8 col-center" data-ejercicio="unir")
+                    div(id="sourceElements" class="ancho270 js-columnas ")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1"): p.ta-j To get out of bed after sleeping.
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2"): p.ta-j To get into a bus, plane or train. / To continue doing something, especially with more effort or more quickly than before.
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3"): p.ta-j To have just enough of something such as money or knowledge so that you can do what you need to do.
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4"): p.ta-j When a vehicle or driver drives off, the vehicle starts moving and leaves. / To force someone to go away, especially when they are attacking or threatening you.
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5"): p.ta-j To return to a place.
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="6"): p.ta-j To stop being unsuccessful and to start being successful, or to make something do this. / To complete a piece of work, process, or activity within a particular time.
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="7"): p.ta-j When a machine or vehicle breaks down, it stops working. / To divide something such as a total amount into separate parts.
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="8"): p.ta-j Used for warning someone to be careful, especially because they are likely to have an accident.
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="9"): p.ta-j To remove something, especially a piece of clothing. / When an aircraft takes off, it leaves the ground and starts flying.
+                    div(id="linecanvas" style="width: 60px;")
+                    div(id="targetElements" class="ancho270 js-columnas row-flex flex-column justify-center") 
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="3"): p.ta-j My arithmetic isn’t very good, but I #[strong get by ].
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="5"): p.ta-j We decided to #[strong come back ] to Scotland for another holiday.
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="7"): p.ta-j The car #[strong broke down ] just outside Winchester.
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="9"): p.ta-j I’d better #[strong take ] my shoes #[strong off ].
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="6"): p.ta-j The £400 million loan will help turn the Russian economy #[strong around ].
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="8"): p.ta-j #[strong Look out! ] There’s a car coming.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="1"): p.ta-j He never #[strong gets up ] before nine.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="4"): p.ta-j They stood and waved as we #[strong drove off ].
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="2"): p.ta-j Can we please #[strong get on ] , because there are a lot of things still to discuss.
+            div(class="row")
+                //- div(class="col-flex-sm12 col-flex-md12 col-center mt40-sm mt10-md mt10-xs m-a")
+                //-     div(class="c-flickity h_auto")
+                //-         div(class="row c-flickity-controls c-flickity-controls-flex")
+                //-             div(class="c-flickity-controlsSlides")
+                //-                 button(class="c-flickity-button is-selected ") Exercises 1
+                //-                 button(class="c-flickity-button ") Exercises 2
+                //-                 button(class="c-flickity-button ") Exercises 3
+                //-                 button(class="c-flickity-button ") Exercises 4
+                //-                 button(class="c-flickity-button ") Exercises 5
+                //-                 button(class="c-flickity-button ") Exercises 6
+                //-                 button(class="c-flickity-button ") Exercises 7
+                //-                 button(class="c-flickity-button ") Exercises 8
+                //-                 button(class="c-flickity-button ") Exercises 9
+                //-                 span(class="c-flickity--cell-total") 9
+                //-             button(class="c-flickity-button c-flickity-button--previous") ←
+                //-             button(class="c-flickity-button c-flickity-button--next") →
+                //-         div(class="row mt50-sm")
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") To get out of bed after sleeping.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                //-                     label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10"): span My arithmetic isn´t very good, but I #[strong get by ]
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                //-                     label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10"): span He never  #[strong gets up ] before nine.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                //-                     label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10"): span Can we please #[strong get on ], because there are a lot of things still to discuss.
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") To get into a bus, plane or train. / To continue doing something, especially with more effort or more quickly than before.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                //-                     label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10"): span Can we please #[strong get on ], because there are a lot of things still to discuss.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                //-                     label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10"): span To stop being unsuccessful and to start being successful, or to make something do this. / To complete a piece of work, process, or activity within a particular time.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="3")
+                //-                     label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10"): span When a machine or vehicle breaks down, it stops working. / To divide something such as a total amount into separate parts.
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") To have just enough of something such as money or knowledge so that you can do what you need to do.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                //-                     label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10"): span My arithmetic isn´t very good, but I #[strong get by ].
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                //-                     label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10"): span We decided to come back to Scotland for another holiday.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="3")
+                //-                     label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10"): span The car #[strong broke down  ] just outside Winchester.
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") When a vehicle or driver drivers off, the vehicle starts moving and leaves. / to force someone to go away, especially when they are attacking or threatening you.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                //-                     label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10"): span He never  #[strong gets up  ] before nine.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                //-                     label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10"): span They stood and waved as we #[strong drove off ].
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_4" value="3")
+                //-                     label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10"): span #[strong Look out! ] There´s a car coming.
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") To return to a place.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                //-                     label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10"): span We decided to come back to Scotland for another holiday.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                //-                     label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10"): span I´d better #[strong take ] my shoes off.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_5" value="3")
+                //-                     label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10"): span The £400 million loan will help turn the Russian economy #[strong around ].
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") To stop being unsuccessful and to start being successful, or to make something do this. / To complete a piece of work, process, or activity within a particular time.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_16" name="SelInputRadio_6" value="1")
+                //-                     label(for="inputRadio_16" class="c-CheckSelected col-flex ml10 mr10"): span My arithmetic isn´t very good, but I #[strong get by ].
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_17" name="SelInputRadio_6" value="2")
+                //-                     label(for="inputRadio_17" class="c-CheckSelected col-flex ml10 mr10"): span They stood and waved as we #[strong drove off ].
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_18" name="SelInputRadio_6" value="3")
+                //-                     label(for="inputRadio_18" class="c-CheckSelected col-flex ml10 mr10"): span The £400 million loan will help turn the Russian economy #[strong around ].
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") When a machine or vehicle breaks down, it stops working. / To divide something such as a total amount into separate parts.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_19" name="SelInputRadio_7" value="1")
+                //-                     label(for="inputRadio_19" class="c-CheckSelected col-flex ml10 mr10"): span He never  #[strong gets up ] before nine.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_20" name="SelInputRadio_7" value="2")
+                //-                     label(for="inputRadio_20" class="c-CheckSelected col-flex ml10 mr10"): span The car  #[strong broke down ] just outside Winchester.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_21" name="SelInputRadio_7" value="3")
+                //-                     label(for="inputRadio_21" class="c-CheckSelected col-flex ml10 mr10"): span I´d better #[strong take ] my shoes off.
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") Used for warning someone to be careful, especially because they are likely to have an accident.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_22" name="SelInputRadio_8" value="1")
+                //-                     label(for="inputRadio_22" class="c-CheckSelected col-flex ml10 mr10"): span To get into a bus, plane or train. / To continue doing something, especially with more effort or more quickly than before.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_23" name="SelInputRadio_8" value="2")
+                //-                     label(for="inputRadio_23" class="c-CheckSelected col-flex ml10 mr10"): span He never  #[strong gets up ] before nine.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_24" name="SelInputRadio_8" value="3")
+                //-                     label(for="inputRadio_24" class="c-CheckSelected col-flex ml10 mr10"): span #[strong Look out! ] There´s a car coming.
+                //-             |
+                //-             |
+                //-             div(class="c-flickity--cell")
+                //-                 div(class="row-flex justify-center mt30 mb30")
+                //-                     div(class="col xs12 sm7 col-center")
+                //-                         div(class="c-cardGreen")
+                //-                             div(class="c-cardGreenContent ta-c")
+                //-                                 h5(class="ta-c") Definition
+                //-                                 div(class="mb10") To remove something, especially a piece of clothing. / When an aircraft #[strong take ] off, it leaves the ground and starts flying.
+                //-                 div(class="row flex")
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_25" name="SelInputRadio_9" value="1")
+                //-                     label(for="inputRadio_25" class="c-CheckSelected col-flex ml10 mr10"): span My arithmetic isn´t very good, but I #[strong get by ].
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_26" name="SelInputRadio_9" value="2")
+                //-                     label(for="inputRadio_26" class="c-CheckSelected col-flex ml10 mr10"): span We decided to come back to Scotland for another holiday.
+                //-                     input(class="c-inputRadio" type="radio" id="inputRadio_27" name="SelInputRadio_9" value="3")
+                //-                     label(for="inputRadio_27" class="c-CheckSelected col-flex ml10 mr10"): span I´d better #[strong take ] my shoes off.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()"  ng-show="s_actividad == 2")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+div(class="c-noticeAside is-visible" id="notice") 
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_6/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

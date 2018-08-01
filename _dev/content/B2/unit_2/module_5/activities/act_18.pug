@@ -1,0 +1,85 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                h5  #[strong.u-textColor_4 1. ] Read the paragraph and complete it with the correct form of the verbs.
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                        div(class="row mt40")
+                            img(src="./unit_2/module_5/assets/images/act_18_1.png", alt="", srcset="" class="u-responsive-img centrado w80")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center") 
+                        div(class="row mt40")
+                            p(class="u-txtSpace")
+                                | Dale Carnegie 
+                                strong (1)
+                                select(class="c-select c-textField w30 ml10 mr10")
+                                    option(disabled selected) 
+                                    option(value="1") began
+                                    option(value="2") had begun
+                                |  teaching people how to speak in public in 1912. But only a year before that, he 
+                                strong (2)
+                                select(class="c-select c-textField w30 ml10 mr10")
+                                    option(disabled selected) 
+                                    option(value="1") lived
+                                    option(value="2")  had been living
+                                | in a New York hostel, out of money and out of work. His problems 
+                                strong (3)
+                                select(class="c-select c-textField w30 ml10 mr10")
+                                    option(disabled selected) 
+                                    option(value="1") had started
+                                    option(value="2")  had been starting
+                                | when he quit the company where he 
+                                strong (4) 
+                                select(class="c-select c-textField w30 ml10 mr10")
+                                    option(disabled selected) 
+                                    option(value="1") worked
+                                    option(value="2")  had been working
+                                | as a salesman. Instead, he studied acting and 
+                                strong (5)
+                                select(class="c-select c-textField w30 ml10 mr10")
+                                    option(disabled selected) 
+                                    option(value="1") got 
+                                    option(value="2") had been getting
+                                | a part in a travelling show. The show closed after a short time and Carnegie needed work. Before his acting course, he 
+                                strong (6)
+                                select(class="c-select c-textField w30 ml10 mr10")
+                                    option(disabled selected) 
+                                    option(value="1") thought
+                                    option(value="2") had been thinking
+                                | of becoming a teacher, and he decided to setup the "Dale Carnegie Course". His success 
+                                strong (7)
+                                select(class="c-select c-textField w30 ml10 mr10")
+                                    option(disabled selected) 
+                                    option(value="1") was
+                                    option(value="2") had been
+                                | immediate. By the time Carnegie died, over 5 million people 
+                                strong (8)
+                                select(class="c-select c-textField w30 ml10 mr10")
+                                    option(disabled selected) 
+                                    option(value="1") read
+                                    option(value="2") had read
+                                | his book How to Win Friends and Influence People, and he was one of the best-known trainers in public speaking in the world.
+ 
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

@@ -1,0 +1,74 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_5")
+
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+                 
+                div(class="row-flex align-items-center")
+                    h5.mb40 From the list in the previous screen, the following are really common: Match the pictures to the verbs.
+                    div(class="row")
+                        div(class="col xs12 sm4 md3")
+                            div(class="row row-flex")
+                                div(class="dragCont mt10")
+                                    span(class="drag") Get lost.
+                            
+                                div(class="dragCont mt10")
+                                    span(class="drag") Get married.
+                            
+                                div(class="dragCont mt10")
+                                    span(class="drag") Go on a diet.
+                            
+                                div(class="dragCont mt10")
+                                    span(class="drag") Go bald.
+                            
+                                div(class="dragCont mt10")
+                                    span(class="drag") Get ready.
+                            
+                                div(class="dragCont mt10")
+                                    span(class="drag") Go bankrupt.
+                        div(class="col xs12 sm8 md9 mt10-md mt20-xs")
+                            div(class="row row-flex")
+                                div(class="col xs6 sm4 md3 col-center mb20")
+                                    img(src="unit_2/module_7/assets/images/act_5_1.png", alt="act_2" class="u-responsive-img _draggableImg")
+                                    div.drop.mt10
+                                        
+                                div(class="col xs6 sm4 md3 col-center mb20")
+                                    img(src="unit_2/module_7/assets/images/act_5_2.png", alt="act_2" class="u-responsive-img _draggableImg")
+                                    div.drop.mt10
+                                
+                                div(class="col xs6 sm4 md3 col-center mb20")
+                                    img(src="unit_2/module_7/assets/images/act_5_3.png", alt="act_2" class="u-responsive-img _draggableImg")
+                                    div.drop.mt10
+
+                                div(class="col xs6 sm4 md3 col-center mb20")
+                                    img(src="unit_2/module_7/assets/images/act_5_4.png", alt="act_2" class="u-responsive-img _draggableImg")
+                                    div.drop.mt10
+
+                                div(class="col xs6 sm4 md3 col-center mb20")
+                                    img(src="unit_2/module_7/assets/images/act_5_5.png", alt="act_2" class="u-responsive-img _draggableImg")
+                                    div.drop.mt10
+
+                                div(class="col xs6 sm4 md3 col-center mb20")
+                                    img(src="unit_2/module_7/assets/images/act_5_6.png", alt="act_2" class="u-responsive-img _draggableImg")
+                                    div.drop.mt10
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_5_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

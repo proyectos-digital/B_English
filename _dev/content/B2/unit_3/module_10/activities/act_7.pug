@@ -1,0 +1,80 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    div(class="row")                   
+                        h5 #[strong.u-textColor_4 1. ] Pay attention to the “negative” word at the beginning. 
+                        h6.ml15 Pay attention to the word order:
+                    div(class="col xs12 md6")
+                        
+                        div(class="col x8 md10 col-center ta-c mt30 mb30")
+                            img(src="unit_3/module_10/assets/images/act_7.png", alt="act_7" class="u-responsive-img m-a")
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+                            h6(class="ta-c mb30 u-textColor_4") Javier Pinto is giving his impressions about his program at UNAD.
+                            p
+                                strong: span(class="u-textColor_2") Never   
+                                span  (before) have I met such a serious program. 
+                            p
+                                strong: span(class="u-textColor_5") Rarely  
+                                span have there been cases of demotivated students. 
+
+                            p
+                                strong: span(class="u-textColor_2") Seldom  
+                                span have we seen tutors who have not prepared their sessions.
+                            p
+                                strong: span(class="u-textColor_5") Little 
+                                span  did I know when I started the program. I am simply happy!
+                            p
+                                strong: span(class="u-textColor_2") Hardly   
+                                span had we started the program when we received information about each course.
+                            p
+                                strong: span(class="u-textColor_5") Barely  
+                                span had I opened the book to read #[strong when ] my tutor was already offering her help. 
+                            p
+                                strong: span(class="u-textColor_2") No sooner   
+                                span had tutorial session begun #[strong than ] I began to understand everything.
+                            
+                            
+                    div(class="col xs12 md6")
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+                            h5(class="mb50 mt30") Transform the following sentences into negative adverbials.
+                            div(class="mb30")
+                                p #[strong(class="u-textColor_4-dark") 1].  I had hardly arrived home when my phone rang.
+                                input(type="text" placeholder="Text here..." class="c-input js-escribir row")
+                            div(class="mb30")
+                                p #[strong(class="u-textColor_4-dark") 2].  They had barely won the match when the coach had a heart attack. 
+                                input(type="text" placeholder="Text here..." class="c-input js-escribir row")
+                            div(class="mb30")
+                                p #[strong(class="u-textColor_4-dark") 3].   The company had no sooner launched a new product than it went bankrupt. 
+                                input(type="text" placeholder="Text here..." class="c-input js-escribir row")
+                            div(class="mb30")
+                                p #[strong(class="u-textColor_4-dark") 4].  She didn’t really understand what the conversation was about. (Little...) 
+                                input(type="text" placeholder="Text here..." class="c-input js-escribir row")
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_10/activities/act_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

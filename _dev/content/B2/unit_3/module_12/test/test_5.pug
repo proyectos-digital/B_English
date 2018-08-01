@@ -1,0 +1,92 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            
+            div(class="row-flex col-center mt50-xs mt100-md align-items-center")
+                div.col.xs12.md7
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/test_5_1.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="3") Example 1
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/test_5_2.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="2") Example 2
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/test_5_3.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="1") Example 3
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/test_5_4.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="2") Example 4
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/test_5_5.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="1") Example 5
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/test_5_6.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="3") Example 6
+                    
+
+                div.col.xs12.md5
+                    table(class="c-table-estilo_uno col xs12")
+                        thead
+                            tr
+                                th INTEREST
+                                th SYMPATHY
+                                th SURPRISE
+                          
+                        tbody
+                            tr
+                                td
+                                    span(class="drop h35 centrado")
+                                td
+                                    span(class="drop h35 centrado")
+                                td
+                                    span(class="drop h35 centrado")
+                                
+                            tr
+                                td
+                                    span(class="drop h35 centrado")
+                                td
+                                    span(class="drop h35 centrado")
+                                td
+                                    span(class="drop h35 centrado")
+                               
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

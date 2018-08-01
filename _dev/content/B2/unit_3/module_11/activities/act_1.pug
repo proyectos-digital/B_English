@@ -1,0 +1,84 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown")
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center padding10")
+                        h5 Watch the video about paying taxes in Colombia. 
+                        h6 Pay attention to the use of the words 
+                            strong “whose”, “whom”, “where”, 
+                            | and 
+                            strong “when”.
+
+                        div(class="row-flex justify-center mt20 mb20"): div(class="col md11"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                            source(src="unit_3/module_11/"+pathVideo+"act_1.mp4" type="video/mp4")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center padding10")
+                        h5 Listen again and pay attention to these sentences and the words in bold:
+                        p(class="ml30 mt30") • People 
+                            strong whose
+                            |  salary is over six minimum monthly salaries have to declare.
+                        p(class="ml30 mt30") • There are people 
+                            strong who 
+                            | pay taxes before the deadline.
+                        p(class="ml30 mt30") • People 
+                            strong whose
+                            |  ID number ends in digits from 00 to 09 have to pay the first week.
+                        p(class="ml30 mt30")
+                            strong • When 
+                            | preparing your statement, you need to know #[strong who] paid you money and #[strong who] owes you money.
+                        p(class="ml30 mt30") • You have to know 
+                            strong where 
+                            | is the DIAN office that is closest to your home.
+                    div(class="col-flex-sm12 col-flex-md12 col-center")
+                        table(class="c-table-estilo_tres m-a mt30")
+                            thead
+                                tr
+                                    th(colspan="2") PEOPLE
+                                    th(rowspan="2") POSSESSION
+                                    th(rowspan="2") PLACES
+                                    th(rowspan="2") TIME
+                                tr
+                                    th Subject
+                                    th Object
+                            tbody
+                                tr
+                                    td 
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir")
+                                    td 
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir")
+                                    td 
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir")
+                                    td 
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir")
+                                    td 
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir")
+                                tr
+                                    td 
+                                    td 
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir")
+                                    td 
+                                    td 
+                                    td 
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconAlert openNotice is-active" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_11/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

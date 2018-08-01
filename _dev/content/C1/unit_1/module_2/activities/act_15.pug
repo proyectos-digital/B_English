@@ -1,0 +1,47 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_15")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            .row-flex.justify-between.align-items-center
+                .col.xs12.md6.ta-c
+                    img(src="unit_1/module_2/assets/images/act_15_1.png" alt="" class="u-responsive-img mt30 m-a")
+
+                .col.xs12.md6
+                    h5 Remember is when you think of a memory.
+                    ul.lh25
+                        li #[strong.u-textColor_4 •] I remembered the last time we had a lunch meeting, it was very productive.
+                        li #[strong.u-textColor_4 •] I remember playing football as a teenager.
+
+                    h5 Remind is when someone or something makes us think about something.
+                    ul.lh25
+                        li #[strong.u-textColor_4 •] The football shoes you are wearing remind me of the ones I have at home.
+                        li #[strong.u-textColor_4 •] The secretary reminded me of the meeting today.
+
+                    h5 Complete the sentence with remember or remind.
+                    ul.lh25
+                        li #[strong.u-textColor_4 •] John #[input(type="text" class="c-input js-escribir")] Sarah to turn off the light.
+                        li #[strong.u-textColor_4 •] Frankie #[input(type="text" class="c-input js-escribir")] to reschedule the meeting on Wednesday.
+                        li #[strong.u-textColor_4 •] Martin was #[input(type="text" class="c-input js-escribir")] of his trip to Cartagena by the smell of the sea.
+                        li #[strong.u-textColor_4 •] Juan  #[input(type="text" class="c-input js-escribir")] that his sister was alone at home so he had to hurry home.
+                        li #[strong.u-textColor_4 •] #[input(type="text" class="c-input js-escribir")] to bring the movie tickets!
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

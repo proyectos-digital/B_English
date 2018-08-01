@@ -1,0 +1,86 @@
+.header_iconChat {
+    height: 4rem;
+    width: 6rem;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    font-size: 2.5rem;
+    color: #27677b;
+    cursor: pointer;
+}
+
+.header_iconChat:focus {
+    outline: none;
+}
+
+.header_iconChat--new{
+    color: #f4ad18;
+}
+
+.chat-admin{
+    color: #ffffff;
+}
+
+.header_iconChat--new:after {
+    content: attr(data-newMsn);
+    position: relative;
+    z-index: 2;
+    top: -10px;
+    left: -20px;
+
+    min-width: 15px;
+    height: 15px;
+    line-height: 15px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: #e46126;
+    border-radius: 50%;
+    font-size: 0.5rem;
+    
+    font-size: 0.6rem;
+    font-family: sans-serif;
+    color: white;
+}
+
+/*Icono para el admin*/
+
+button.header_iconChat--new:after {
+    color: #fff;
+    background: #f4ac17;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+.admin_iconChat{
+    position: relative;
+}
+.admin_iconChat--new{
+    /*color: #27677b;*/
+}
+.admin_iconChat--new:after{
+    content: attr(data-newmsn);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    height: 1.1rem;
+
+    margin: auto;
+    margin-left: 20px;
+    background: #326678;
+    border-radius: 30%;
+    color: white;
+}
+.admin_iconChat:focus {
+    outline: none;
+}

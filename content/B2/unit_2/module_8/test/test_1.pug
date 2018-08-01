@@ -1,0 +1,94 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex mt10-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md5 col-center mt10-sm mt20-md")|
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • I get up at 6:00 a.m. on weekdays.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                            label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ) To get out of bed after sleeping.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                            label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ) To get into a bus, plane or train.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                            label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ) To continue doing something, especially with more effort or more quickly than before.
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • Janet is not working, but she´s getting by just fine.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                            label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ) To get into a bus, plane or train.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                            label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ) To continue doing something, especially with more effort or more quickly than before.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="3")
+                            label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ) To have just enough of something such as money or knowledge so that you can do what you need to do.
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • Please, fill in the form before you approach the front desk.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                            label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ) To write something in a quick informal way.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                            label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ) To add information such as your name or address in the empty spaces on an official document.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="3")
+                            label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ) To discuss a problem or a plan.
+                    
+                div(class="col-flex-xs12 col-flex-md5 offset-md1 col-center mt10-sm mt20-md")|
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • Don´t worry. We´ll work things out.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                            label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ) To discuss a problem or a plan.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                            label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ) To try to discover the facts about something such as a problem or a crime.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_4" value="3")
+                            label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10" ) To deal with a problem in a satisfactory way.
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • The police is trying to get at the reasons for the murder.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                            label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ) To remove something, especially a piece of clothing.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                            label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ) To leave, move or go away.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_5" value="3")
+                            label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10" ) To stop being unsuccessful and to start being successful, or to make something do this.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

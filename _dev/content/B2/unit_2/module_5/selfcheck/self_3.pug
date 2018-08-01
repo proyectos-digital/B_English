@@ -1,0 +1,50 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            
+            div(class="row")
+
+            div(class="row-flex mt40-md")
+                div(class="col-flex-sm4 col-flex-xs5 col-center showTo-md")
+                    div(class="row mt40")
+                        img(src="./unit_2/module_5/assets/images/self_3_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                div(class="col-flex-sm11 col-flex-md7 col-center")
+
+                    div(class="row mt30" data-ejercicio="unir")
+                        div(id="sourceElements" class="ancho250 js-columnas")
+                            span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") For
+                            span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") During 
+                            span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") While  
+                            span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") As a matter of fact
+       
+                        div(id="linecanvas" style="width: 60px;")
+                        div(id="targetElements" class="ancho250 js-columnas") 
+                            span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="3") Used when speaking about 2 actions that are happening at the same time
+                            span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="4") Used as a synonym of "in fact."
+                            span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="1") Used to express how long something or someone is doing something.
+                            span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="2") Used to represent the length of time of an action that is while the action is happening.
+                            
+                    
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

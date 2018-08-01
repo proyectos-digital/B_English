@@ -1,0 +1,86 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_8")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-init="DragandDrop()")
+            div(class="row mt30-md mt20-xs")
+                //- h6 When we travel whether nationally in Colombia or internationally to other countries we need to understand how to maneuver through the airport. 
+                p.
+                    Look at the pictures below and match them to the description. 
+
+                div(class="col xs12 col-center row-flex justify-center")
+
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A deadly tornado
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A massive tsunami
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag An explosive volcanic eruption
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A Severe drought
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A disastrous wildfire
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A Catastrophic flood
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A fast moving landslide
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A large sinkhole
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A shallow earthquake
+                    .col.xs6.md2.mt30
+                        span.dragCont: .drag A destructive hurricane
+
+                div(class="col xs12 col-center row-flex justify-center")
+                
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_1.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_2.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_3.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_4.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_5.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_6.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_7.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_8.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_9.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_2/module_6/assets/images/col_8_10.png", alt="myColombia")
+                    
+                   
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'") 
+|
+|

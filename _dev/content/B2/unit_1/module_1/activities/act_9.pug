@@ -1,0 +1,58 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex mt30-xs")
+                h5 #[strong.u-textColor_4 1. ]  Imagine it is the year 2050. Your city had to be completely evacuated because of a very destructive virus. Listen to the interview. Make sentences in the future perfect using the cues.
+            div(class="row-flex mt30")
+                div(class="col-flex-xs12 col-flex-md5 col-center mb30")
+                    div(class="row w90 col-center showTo-md")
+                        div(class="row ta-c showTo-sm"): img(src="unit_1/module_1/assets/images/act_9_1.png", alt="", class="u-responsive-img")
+                    div(class="row w90 col-center mt40-md")
+                        audio( controls class="row ")
+                            source(src="unit_1/module_1/assets/audios/act_9.mp3" type="audio/mpeg")
+                            | Your browser does not support the audio element.
+
+                div(class="col-flex-xs11 col-flex-md7 col-center")
+                    div(class="row-flex mb30")
+                        div(class="row " data-ejercicio="")
+                            p become / extremely dirty. / the streets of the city / By the year 2050,
+                            div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                    div(class="row-flex mb30")
+                        div(class="row " data-ejercicio="")
+                            p The city / of gas / run out.
+                            div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                    div(class="row-flex mb30")
+                        div(class="row " data-ejercicio="")
+                            p their cars / abandon / everywhere. / People
+                            div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                    div(class="row-flex mb30")
+                        div(class="row " data-ejercicio="")
+                            p Power / go off.
+                            div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                    div(class="row-flex mb30")
+                        div(class="row " data-ejercicio="")
+                            p the angry population. / Buildings / by / destroy
+                            div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                    div(class="row-flex")
+                        div(class="row " data-ejercicio="")
+                            p for cancer / discover. / be / A cure
+                            div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconListen")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

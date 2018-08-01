@@ -1,0 +1,60 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2" )
+
+    aside(class="template-asideLeft o-aside-Item")
+        |
+        |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            div(class="row-flex align-items-center")
+                
+                        
+                        
+                div(class="col xs12 md6 col-center" )
+                    div(data-ejercicio="unir" class="mt40 row")                 
+                        div(id="sourceElements" class="ancho350 js-columnas")
+                            
+                            span(id="Item0_0" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="1") Don’t leave the room.
+                            span(id="Item0_1" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="2") They said they looked around but couldn’t find me.
+                            span(id="Item0_2" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="3") He asked us where we wanted to go.
+                            span(id="Item0_3" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="4") Have you been saving water?
+                            span(id="Item0_4" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="5") My friend told me it was always good to see me.
+                            span(id="Item0_4" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="6") My boss asked me whether I was busy.
+                            
+                        div(id="linecanvas" style="width: 60px;")
+                        div(id="targetElements" class="ancho350 js-columnas") 
+                           
+                            span(id="Item1_0" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="6") Are you busy?
+                            span(id="Item1_1" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="5") It’s always good to see you!
+                            span(id="Item1_2" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="4") The man asked us if we had been saving water.
+                            span(id="Item1_3" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="3") Where do you want to go?
+                            span(id="Item1_4" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="2") We looked around, but couldn’t find you.
+                            span(id="Item1_4" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="1") She told us not to leave the room.
+       
+                div(class="col sm12 md6 col-center")
+                    
+                    div(class="row-flex align-items-center")
+                        img(src="unit_2/module_7/assets/images/self_6.png", alt="act_2" class="u-responsive-img m-a")
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

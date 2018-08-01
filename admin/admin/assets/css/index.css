@@ -1,0 +1,132 @@
+body{
+	background-color: #31708f;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,31708f+100&0.8+0,1+100 */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(125,185,232,0.8) 0%, rgba(49,112,143,1) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(125,185,232,0.8) 0%,rgba(49,112,143,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(125,185,232,0.8) 0%,rgba(49,112,143,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc7db9e8', endColorstr='#31708f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	height: 100vh;
+}
+*{
+	border-radius: 0 !important;
+}
+
+.form-login {
+	background: rgba(255, 255, 255, .2);
+	border: solid 1px #fff;
+	margin: 0;
+	width: 100%;
+}
+
+.form-login h2.form-login-heading {
+    /* background: rgba(104, 223, 240, .3); */
+    background: transparent; 
+    border-bottom: solid 1px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.ingreso {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================================================================== */
+/* ---------------------- ↓↓ Input de Index ↓↓ ---------------------- */
+/* ================================================================== */
+.cont_input {
+	/*padding: 30px 0 0 0;*/
+	position: relative;
+}
+.cont_input:after, .cont_input:before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+}
+.cont_input:after {
+	background-color: white;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+.cont_input:before {
+	background-color: rgba(255, 255, 255, 0.5);
+	transform: scaleX(0);
+	height: 34px;
+	transition: all .2s;
+}
+.cont_input.active:after, .cont_input.active:before {
+	transform: scaleX(1);
+}
+.cont_input.ready .label {
+	transform: translateY(0) translateX(-43%);
+}
+.cont_input .label {
+	display: block;
+	font-size: 16px;
+	transform: translateY(30px);
+	color: #fff;
+	transition: all .5s;
+	height: 18px;
+}
+.cont_input .input {
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.2);
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 8px 0;
+	font-size: 16px;
+	color: #568cac;
+    padding-left: 15px;
+}
+.cont_input .input:focus:after {
+	content: '';
+	background-color: #fff;
+	height: 50px;
+}
+
+/* ================================================================= */
+
+.mainCont{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../img/login-bg.png);
+	background-position: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	-webkit-animation: move 20s infinite;
+	animation: move 20s infinite;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+
+@-webkit-keyframes move {
+	0% {
+		background-size: 100%;
+	}
+	50% {
+		background-size: 70%;
+	}
+	100% {
+		background-size: 100%;
+	}
+}
+@keyframes move {
+	0% {
+		background-size: 100%;
+	}
+	50% {
+		background-size: 70%;
+	}
+	100% {
+		background-size: 100%;
+	}
+}

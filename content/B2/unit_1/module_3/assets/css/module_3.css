@@ -1,0 +1,41 @@
+.u-bgTemplate {
+	background-image: url(../images/wel_bg.jpg);
+}
+
+.u-bgItem {
+	background-color: #b04f52;
+	color: #fff;
+}
+
+.act_7 .drop .drag {
+	display: inline-block;
+}
+
+.act_7 .drop .drag::first-letter {
+	text-transform: uppercase;
+}
+
+.act_11 .dragCont .drag,.act_11 .drop .drag {
+	display: inline-block;
+}
+
+.act_11 .dragCont .drag::first-letter,.act_11 .drop .drag::first-letter {
+	text-transform: uppercase;
+}
+
+.act_10 .flip_back {
+	text-align: center;
+}
+
+.act_10 .flip_back-text {
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	top: auto;
+	padding: 10px;
+	font-size: 0.8rem;
+}
+
+.act_10 .flip_card.is-good .flip_back-text {
+	color: var(--color_good);
+}

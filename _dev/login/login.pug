@@ -1,0 +1,10 @@
+section(class="template-wrapper row-flex justify-center align-items-center" )
+    form(class="c-appLogin")
+        header.c-appLogin-header
+        section.c-appLogin-body
+            article.c-appLogin-block
+                article.c-appLogin-row: input(type="text", name="username" class="c-appLogin-input" placeholder="username" ng-model="username")
+                article.c-appLogin-row: input(type="password", name="password" class="c-appLogin-input" placeholder="password" ng-model="password")
+            article.c-appLogin-block
+                button(class="c-appLogin-button" type="submit" id="login-button" ng-click="nivelUsuario()") Login
+        footer.c-appLogin-footer

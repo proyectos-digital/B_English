@@ -1,0 +1,79 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row")
+                            p 
+                                strong(class="u-textColor_4-dark") 1.
+                                |  I 
+                                strong (not / work)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | there long when she decided to quit.
+
+                        div(class="row mt20")
+                            p 
+                                strong(class="u-textColor_4-dark") 2.
+                                |  He didn’t feel healthy, because for many years he
+                                strong  (not / go)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | to the gym.
+
+                        div(class="row mt20")
+                            p 
+                                strong(class="u-textColor_4-dark") 3.
+                                |  Summer last year was really hard. It 
+                                strong (not / rain)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | at all when I got home.
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 4.
+                                |  He was in trouble with the teacher because he 
+                                strong (not / go)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | to classes.
+
+                        div(class="row mt20")
+
+                            p
+                                strong(class="u-textColor_4-dark") 5.
+                                |  We 
+                                strong (not / live)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | in Caloto for three years when we got married! It was more like five years.
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 6.
+                                |  I caught a cold because I 
+                                strong (not / eat)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | properly at that time.
+
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center") 
+                        div(class="row")
+                            img(src="./unit_2/module_5/assets/images/self_5_1.png", alt="", srcset="" class="u-responsive-img centrado w70")
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

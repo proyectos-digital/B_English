@@ -1,0 +1,73 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                h5 
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        img(src="./unit_2/module_5/assets/images/act_4.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center") 
+                        div(class="row")
+                            h6 #[strong.u-textColor_4 1. ] Pay attention to the words in bold:
+                        
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent")
+                                    p(class="ta-c") 
+                                        | Simon has been sleeping <strong>for</strong> 8 hours.
+                                    p(class="ta-c")  
+                                        | I met him 
+                                        strong while 
+                                        | we were studying in the library.
+                                    p(class="ta-c")  
+                                        | Choco gets plenty of rain 
+                                        strong during 
+                                        | the rainy season.
+
+                        div(class="row")
+                            h6 Complete:
+
+                            p(class="mt20") 
+                                strong(class="u-textColor_4-dark") 1.
+                                |  I've been meaning to call you
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | some time.
+
+                            p(class="mt20")
+                                strong(class="u-textColor_4-dark") 2.
+                                |  When we were in Condoto, we all stayed inside
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | the storm.
+        
+                            p(class="mt20")
+                                strong(class="u-textColor_4-dark") 3.
+                                |  Someone stole my bag
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | I was riding on the train.
+
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_5/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

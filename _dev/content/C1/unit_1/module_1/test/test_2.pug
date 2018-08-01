@@ -1,0 +1,73 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_2")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Listen to Mike and Ron talk about an adventure in Kenya.
+            .row
+                .col.xs12.sm10.md8.col-center
+                    audio(controls class='row mt30')
+                        source(src='unit_1/module_1/assets/audios/test_2_1.mp3' type='audio/mpeg' )
+                        | Your browser does not support the audio element.
+
+            div(class="row row-flex mt30 align-items-center")
+                .col.xs12.md6
+                    div(class="col xs11 col-center mt30")
+                        .row-flex
+                            p  #[strong.u-textColor_4 •]  From the dialog, you can infer that Mike generally #[input(class="c-input js-escribir" type="text" ng-model="modelTextA") ] to get back to the Research Center Dorms.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                            label(class="c-Checkbox row ta-l "   for="selInput_1" ng-click="modelTextA = 'drives a car.' ") drives a car
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                            label(class="c-Checkbox row ta-l "   for="selInput_2" ng-click="modelTextA = 'rides a bike.' ") rides a bike
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                            label(class="c-Checkbox row ta-l "   for="selInput_3" ng-click="modelTextA = 'goes on foot.' ") goes on foot
+
+                    div(class="col xs11 col-center mt30")
+                        .row-flex.align-items-center
+                            p  #[strong.u-textColor_4 •]  You can infer that Mike was working in Kenya as a:
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_4")  Researcher.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_5") Driver.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                            label(class="c-Checkbox row ta-l " for="selInput_6") Bike trainer.
+
+                .col.xs12.md6
+                    div(class="col xs11 col-center mt30")
+                        .row-flex
+                            p  #[strong.u-textColor_4 •] From the story, it is clear that Mike’s main concern in that moment was:
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                            label(class="c-Checkbox row ta-c" for="selInput_7") Not to be seen by the rhino.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_8") Not to find a rhino.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_9") Not to be smelled by the rhino.
+
+                    div(class="col xs11 col-center mt30")
+                        .row-flex
+                            p  #[strong.u-textColor_4 •] It was possible to escape without being hurt due to:
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+                            label(class="c-Checkbox row ta-c" for="selInput_10") The speed of the wind.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_11") The direction of the wind.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_12") The distance Mike had to run.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

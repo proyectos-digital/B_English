@@ -1,0 +1,88 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_5")
+	aside(class="template-asideLeft o-aside-Item")
+
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content")
+
+			div(class="row row-flex mt30")
+
+					p The table below shows #[strong the cinema viewing statistics by country origin and genre (in millions)]. Summarize the information by selecting and reporting the main ideas and make comparisons where relevant. Minimum 150 words.
+
+
+					table(class="c-table-estilo_tres m-a")
+						thead: tr
+							th(class="w15 u-bgColor_white")
+							th(class="w15") Action
+							th(class="w15") Romance
+							th(class="w15") Comedy
+							th(class="w15") Horror
+							th(class="w15") Total
+
+
+						tbody
+							tr
+								th.u-bgColor_4-dark.u-textWhite India
+								td.ta-c 8
+								td.ta-c 7,5
+								td.ta-c 6,5
+								td.ta-c 2,5
+								td.ta-c 24,5
+							tr
+								th.u-bgColor_4-dark.u-textWhite Ireland
+								td.ta-c 7,6
+								td.ta-c 3,8
+								td.ta-c 5,5
+								td.ta-c 6,4
+								td.ta-c 23,3
+							tr
+								th.u-bgColor_4-dark.u-textWhite New Zealand
+								td.ta-c 7,2
+								td.ta-c 4,5
+								td.ta-c 3,9
+								td.ta-c 4,7
+								td.ta-c 20,3
+							tr
+								th.u-bgColor_4-dark.u-textWhite Japan
+								td.ta-c 7,1
+								td.ta-c 4,5
+								td.ta-c 3,9
+								td.ta-c 4,7
+								td.ta-c 20,3
+							tr
+								th.u-bgColor_4-dark.u-textWhite Total
+								td.ta-c 29,9
+								td.ta-c 20,3
+								td.ta-c 19,9
+								td.ta-c 15,8
+								td
+
+
+					div(class="c-wrapTextarea " ng-init="ContadorPalabras(150)")
+						textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+						div(class="c-wrapTextarea__counter")
+							span(id="contador") 0 
+							span(ng-bind="limitePalabras")
+							span(id="alertamensaje")
+
+
+
+
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		//- button(class="c-btn-IconAction u-bgIconRefresh")
+		button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,99 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_6" )
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content" )
+
+                h5 Listen to the news report and answer the questions that follow.
+                .row-flex.align-items-center.jusify-between
+
+                    .col.xs12.md5.row-flex.align-items-center
+                        audio(controls class="col-center")
+                            source(src='unit_1/module_4/assets/audios/act_6_1.mp3' type='audio/mpeg')
+                            | Your browser does not support the audio element.
+                    .col.xs12.md6.offset-md1
+                        .c-cardGreen
+                            .c-cardGreenContent.ta-c
+                                h5 Ontario, Canada Celebrates Family Day
+                                h6 Wikinews.org, Monday, February 18, 2008
+
+                                p Read the full story here: #[a(href="https://en.wikinews.org/wiki/Ontario,_Canada_celebrates_Family_Day " target="blank")  https://en.wikinews.org/]
+
+                .row-flex.justify-between.align-items-center
+                    .col.xs12.md5
+                        h5 Now choose the best answer.
+                        .row.mt30
+                            .row
+                                p #[strong.u-textColor_4 •] The government of Ontario...
+
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_1") was elected two terms in a row.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_2") is new to government.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_3") introduced a statutory holiday for federal workers.
+                        .row.mt30
+                            .row
+                                p #[strong.u-textColor_4 •]  Complete the sentence.
+                                p Not all workers will enjoy this holiday...
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_4") only Federal workers.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_5") only tourism workers.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_6") only 60% of workers.
+                        .row.mt30
+                            .row
+                                p #[strong.u-textColor_4 •] Answer true or false.
+                                p Everyone is in agreement with the new holiday.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_7") True.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_8") False.
+
+                    .col.xs12.md5
+
+                        .row.mt30
+                            .row
+                                p #[strong.u-textColor_4 •] Fill in the blank space with appropriate answer or option.
+                                p Under the new Family Day holiday law, #[input(type="text" readonly class="c-input" ng-model="txtcaptura_a")] must observe the holiday.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" ng-click="txtcaptura_a = 'tourism workers and Federal employees' " value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_10") tourism workers and Federal employees
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" ng-click="txtcaptura_a = 'city employees and tourism workers' " value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_11") city employees and tourism workers
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" ng-click="txtcaptura_a = 'federal Employees' " value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_12") federal Employees
+
+                        .row.mt30
+                            .row
+                                p #[strong.u-textColor_4 •] Family day is observed on a different day in...
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_13") Alberta and Saskatchewan.
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_14" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_14") Manitoba's and South Africa.
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_15" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_15") South Africa and Australia.
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

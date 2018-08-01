@@ -1,0 +1,138 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    h6 #[strong.u-textColor_4 1. ] Read the article. Then say if the sentences are True (T) or False (F).
+
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent")
+                    
+                                p.ta-j The TIME 100 is a list of the world's most influential men and women. The list was started with a debate at a symposium in Washington, D.C. on February 1, 1998 and was first published in 1999, when Time magazine named the 100 most influential people of the 20th century. The following is one of these 100 individuals:
+
+                                p.ta-j Tony Fadell was born on March 22, 1969. He is a Lebanese American inventor, designer, entrepreneur, and angel investor. He served as the Senior Vice President of the iPod Division at Apple Inc., from March 2006 to November 2008 and is known as one of the creators of the iPod for his work on the first generations of Apple's music player. He also played a central role in the development of the iPhone.
+
+                                p.ta-j In may 2010, he founded Nest Labs, which announced its first product, the Nest Learning Thermostat, in October 2011. Fadell is an alumnus of Grosse Pointe South High School in Grosse Pointe Farms, Michigan. He graduated from the University of Michigan with a BS in Computer Engineering in 1991.
+
+                                
+                    img(src="./unit_2/module_5/assets/images/act_15_1.png", alt="", srcset="" class="u-responsive-img  mt20 mb20 showTo-md")
+
+                div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center") 
+                    div(class="row-flex justify-center")
+
+                        img(src="./unit_2/module_5/assets/images/act_15_2.png", alt="", srcset="" class="u-responsive-img  mt20 mb20 showTo-md")
+
+                        table(class="c-table" data-ejercicio="table-truefalse")
+                            thead
+                                tr
+                                    th 
+                                    th true
+                                    th false
+                            tbody
+                                tr
+                                    td 
+                                        p 
+                                            strong(class="u-textColor_4-dark") 1. 
+                                            | The TIME 100 list was started in 1999.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="tfInputRadio_1" value="1")
+                                            label(for="inputRadio_1" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="tfInputRadio_1" value="2")
+                                            label(for="inputRadio_2" class="c-CheckFalse")
+                                tr
+                                    td 
+                                        p 
+                                            strong(class="u-textColor_4-dark") 2. 
+                                            | The TIME 100 is a list of the wealthiest people in the world.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="tfInputRadio_2" value="1")
+                                            label(for="inputRadio_3" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="tfInputRadio_2" value="2")
+                                            label(for="inputRadio_4" class="c-CheckFalse")
+
+                                tr
+                                    td 
+                                        p 
+                                            strong(class="u-textColor_4-dark") 3. 
+                                            | Tony Fadell is part of the TIME 100 list.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="tfInputRadio_3" value="1")
+                                            label(for="inputRadio_5" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="tfInputRadio_3" value="2")
+                                            label(for="inputRadio_6" class="c-CheckFalse")
+
+                                tr
+                                    td 
+                                        p 
+                                            strong(class="u-textColor_4-dark") 4. 
+                                            | Fadell helped develop the iPod and iPhone.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="tfInputRadio_4" value="1")
+                                            label(for="inputRadio_7" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="tfInputRadio_4" value="2")
+                                            label(for="inputRadio_8" class="c-CheckFalse")
+
+
+                                tr
+                                    td 
+                                        p 
+                                            strong(class="u-textColor_4-dark") 5. 
+                                            | Fadell continues to work for Apple.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="tfInputRadio_5" value="1")
+                                            label(for="inputRadio_9" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="tfInputRadio_5" value="2")
+                                            label(for="inputRadio_10" class="c-CheckFalse")
+                
+                                tr
+                                    td 
+                                        p 
+                                            strong(class="u-textColor_4-dark") 6. 
+                                            | He is a Computer Engineer.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_11" name="tfInputRadio_6" value="1")
+                                            label(for="inputRadio_11" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_12" name="tfInputRadio_6" value="2")
+                                            label(for="inputRadio_12" class="c-CheckFalse")
+                
+
+                                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

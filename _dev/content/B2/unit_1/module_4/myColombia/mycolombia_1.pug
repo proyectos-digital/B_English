@@ -1,0 +1,29 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+        //- button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        //- button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row mt40 ")
+                h5 #[strong.u-textColor_4 1. ] Look careful the following picture. Can you guess what is going to be the text about?
+                div(class="row-flex m-a")
+                    div(class="col-flex-sm12 col-flex-md9 col-center ta-c")
+                        img(src="unit_1/module_4/assets/images/col_1a.png", alt="" class="u-responsive-img ancho340 mt30" )
+                        img(src="unit_1/module_4/assets/images/col_1b.png", alt="" class="u-responsive-img ancho340 mt30 ")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

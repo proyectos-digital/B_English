@@ -1,0 +1,67 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+            
+        section(class="template-content")
+        
+            div(class="row mt40 ")
+                h5 #[strong.u-textColor_4 1. ]  Read the following examples. Pay attention to the words in bold.
+            div(class="row-flex")
+                ul(class="c-listDefault")
+                    li José Pardo #[strong will have been teaching] at the university for more than a year by the time he leaves for Europe.
+                    li How long #[strong will you have been studying] when you graduate?
+            div(class="row mt40 ")
+                h6 Complete the sentences using the correct form of the verb.
+            div(class="row-flex mt40-md")
+                div(class="col-flex-sm4 col-flex-xs5 col-center ta-c mb40 showTo-md")
+                    img(src="./unit_1/module_1/assets/images/act_13_1.png", alt="", srcset="" class="u-responsive-img")
+
+                div(class="col-flex-sm11 col-flex-md7 col-center")
+                    div(class="row-flex mt40-xs")
+                        ol(class="c-listDefault row mb30" data-ejercicio="")
+                            li
+                                span She will have been 
+                                strong (work)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span here for 3 hours by 9 this morning!
+                            li
+                                span Tomás will have been 
+                                strong (study)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span for four hours by the time he takes the test.
+                            li
+                                span What will they have been 
+                                strong (do)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span by the time we arrive?
+                            li
+                                span Kevin and Anderson won’t have been
+                                strong  (play) 
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span tennis for long by six o’clock.
+                            li
+                                span How long will they have been 
+                                strong (wait)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span by the time he arrives?
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction is-active u-bgIconAlert openNotice" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh"  ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_13_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

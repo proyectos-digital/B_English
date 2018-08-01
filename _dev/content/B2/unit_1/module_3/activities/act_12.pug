@@ -1,0 +1,50 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            
+            div(class="row-flex mt40-md")
+                div(class="col-flex-sm4 col-flex-xs5 col-center showTo-md")
+                    div(class="mt40")
+                        img(src="./unit_1/module_3/assets/images/act_12_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                div(class="col-flex-sm11 col-flex-md7 col-center")
+                    div(class="row")
+                        h6 #[strong.u-textColor_4 1. ]  Match the sentences that have the same meaning.
+                    div(class="row mt30" data-ejercicio="unir")
+                        div(id="sourceElements" class="ancho250 js-columnas")
+                            span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") That must have been Sara.
+                            span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") It can’t have been Sara.
+                            span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") It should have been Sara. 
+                            span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") It could have been Sara. 
+                            span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") It may have been Sara.
+                        div(id="linecanvas" style="width: 60px;")
+                        div(id="targetElements" class="ancho250 js-columnas") 
+                            span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="5") I am not certain if it was Sara.
+                            span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="1") I'm certain it was Sara.
+                            span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="4") There is a possibility it was Sara.
+                            span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="2") I'm sure it wasn't Sara.
+                            span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="3") I expected it to be Sara.
+                    
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

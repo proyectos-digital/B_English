@@ -1,0 +1,150 @@
+.c-{
+	&chat{
+        position: absolute;
+        bottom: 0;
+        right: 1vw;
+        width: 20vw;
+        min-width: 320px;
+        height: 45vh;
+        box-shadow: -1px -2px 7px rgba(0, 0, 0, 0.17);
+        transition: .3s ease all;
+        z-index: 10;
+
+        &.hide{
+            opacity: 0;
+            transform: translateY(50vh);
+            z-index: 0;
+			user-select: none;
+			pointer-events: none;
+        }
+		
+        .chat__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                padding: 0;
+            }
+        }
+        .chat__content{
+            padding: 10px;
+            height: 75%;
+            overflow-y: scroll;
+
+            .chat__card{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                justify-content: flex-end;
+
+                .chat__photo{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin: 17.5px,
+                }
+                .chat__msn{
+                    font-size: 14px;
+                    padding: 10px;
+                    background:var(--color_4-lighter);
+                    position: relative;
+                    border-radius: 7px;
+
+                    p{
+                        margin: 0;
+                    }
+                    .msn__info{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 8px;
+                        .msn__user{
+                            font-weight: bold;
+                        }
+                        .msn__time{
+                            font-size: 11px;
+                            opacity: .6;
+                            margin-left: 5px;
+                        }
+                    }
+                    &:before{
+                        content:"";
+                        width: 15px;
+                        height: 15px;
+                        //border-right: 1px solid var(--color_1-lighter);
+                        //border-bottom: 1px solid var(--color_1-lighter);
+                        background:var(--color_4-lighter);
+                        position: absolute;
+                        right: -7.5px;
+                        top: calc(50% - 7.5px);
+                        transform: rotate(-45deg);
+
+                    }
+
+                }
+                &.send{
+
+                }
+                &.recived{
+
+                    flex-direction: row-reverse;
+                    .chat__msn{
+                        background: lighten( $color_1-lighter, 6) ;
+                        border: none;
+                        &:before{
+                            content:"";
+                            width: 15px;
+                            height: 15px;
+                            background: lighten( $color_1-lighter, 6) ;
+                            border:none;
+                            position: absolute;
+                            left: -7.5px;
+                            top: calc(50% - 7.5px);
+                            transform: rotate(135deg);
+                        }
+                    }
+                }
+            }
+        }
+        .chat__write{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            height: auto;
+            background: white;
+            border-top: 1px solid var(--color_1-lighter);
+            transition: .3s all ease;
+            display: flex;
+            textarea {
+                border: 0 none white;
+                overflow-y: scroll;
+                padding: 0;
+                outline: none;
+                resize: none;
+                width: 90%;
+                max-height: 15vh;
+                transition: .3s all ease;
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+.btn_chat{
+    position: absolute;
+    top: -8vh;
+    right: 1.1vw;
+    padding: 13px;
+    border-radius: 50%;
+    box-shadow: -1px 2px 9px rgba(0, 0, 0, 0.47);
+    outline: none;
+    z-index: 3;
+}
+
+@media screen and (max-height: 800px) {
+    .c-chat {
+        height: 90vh;
+    }
+}

@@ -1,0 +1,94 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-top")
+                    div(class="row ta-c")                   
+                        h5.row.mb40 You are going out on a day trip and you’re taking some items with you. What might you need them for? Match the pictures with their possible use. I’m taking this item with me…                      
+                    div(class="col xs6 md4 ta-c mt30")
+                        img(src="unit_3/module_12/assets/images/act_8_1.png", alt="act_5" class="u-responsive-img mb20")
+                        select(name="act_8_1" class="col xs10 col-center c-select" )
+                                    option(value="" disabled selected) 
+                                    option(value="1") because if there’s a change I can get lost.
+                                    option(value="2") because it could be very sunny.
+                                    option(value="3") because it could rain in the afternoon.
+                                    option(value="4") because I might get hungry.
+                                    option(value="5") in case I need to make a phone call.
+                                    option(value="6") because I might want to take some photos.
+                    div(class="col xs6 md4 ta-c mt30")
+                        img(src="unit_3/module_12/assets/images/act_8_2.png", alt="act_5" class="u-responsive-img mb20")
+                        select(name="act_8_2" class="col xs10 col-center c-select")
+                                    option(value="" disabled selected) 
+                                    option(value="1") because if there’s a change I can get lost.
+                                    option(value="2") because it could be very sunny.
+                                    option(value="3") because it could rain in the afternoon.
+                                    option(value="4") because I might get hungry.
+                                    option(value="5") in case I need to make a phone call.
+                                    option(value="6") because I might want to take some photos.
+                    div(class="col xs6 md4 ta-c mt30")
+                        img(src="unit_3/module_12/assets/images/act_8_3.png", alt="act_5" class="u-responsive-img mb20")
+                        select(name="act_8_3" class="col xs10 col-center c-select")
+                                    option(value="" disabled selected) 
+                                    option(value="1") because if there’s a change I can get lost.
+                                    option(value="2") because it could be very sunny.
+                                    option(value="3") because it could rain in the afternoon.
+                                    option(value="4") because I might get hungry.
+                                    option(value="5") in case I need to make a phone call.
+                                    option(value="6") because I might want to take some photos.
+                    div(class="col xs6 md4 ta-c mt30")
+                        img(src="unit_3/module_12/assets/images/act_8_4.png", alt="act_5" class="u-responsive-img mb20")
+                        select(name="act_8_4" class="col xs10 col-center c-select" )
+                                    option(value="" disabled selected) 
+                                    option(value="1") because if there’s a change I can get lost.
+                                    option(value="2") because it could be very sunny.
+                                    option(value="3") because it could rain in the afternoon.
+                                    option(value="4") because I might get hungry.
+                                    option(value="5") in case I need to make a phone call.
+                                    option(value="6") because I might want to take some photos.
+                    div(class="col xs6 md4 ta-c mt30")
+                        img(src="unit_3/module_12/assets/images/act_8_5.png", alt="act_5" class="u-responsive-img mb20")
+                        select(name="act_8_5" class="col xs10 col-center c-select")
+                                    option(value="" disabled selected) 
+                                    option(value="1") because if there’s a change I can get lost.
+                                    option(value="2") because it could be very sunny.
+                                    option(value="3") because it could rain in the afternoon.
+                                    option(value="4") because I might get hungry.
+                                    option(value="5") in case I need to make a phone call.
+                                    option(value="6") because I might want to take some photos.
+                    div(class="col xs6 md4 ta-c mt30")
+                        img(src="unit_3/module_12/assets/images/act_8_6.png", alt="act_6" class="u-responsive-img mb20")
+                        select(name="act_8_6" class="col xs10 col-center c-select")
+                                    option(value="" disabled selected) 
+                                    option(value="1") because if there’s a change I can get lost.
+                                    option(value="2") because it could be very sunny.
+                                    option(value="3") because it could rain in the afternoon.
+                                    option(value="4") because I might get hungry.
+                                    option(value="5") in case I need to make a phone call.
+                                    option(value="6") because I might want to take some photos.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+     
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/self_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

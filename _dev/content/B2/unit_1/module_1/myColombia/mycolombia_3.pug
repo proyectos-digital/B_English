@@ -1,0 +1,116 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper myColombia_3" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div.row
+                    h5(class="mb40 ta-c") #[strong.u-textColor_4 1. ]   Choose the best answer for the following questions:
+                .row
+                    div(class="c-flickity h_auto")
+                        div(class="row c-flickity-controls")
+                            div(class="c-flickity-controlsSlides")
+                                button(class="c-flickity-button is-selected ") 1
+                                button(class="c-flickity-button ") 2
+
+                            
+                        div(class="row mt50-sm")
+                            div(class="c-flickity--cell  ")
+                                div(class="col xs12 md6 ")
+                                    div(class="col xs9 md10 lg12 col-center mb30 ta-c showTo-md")
+                                        img(src="unit_1/module_1/assets/images/col_3_1.png", alt="" class="u-responsive-img")  
+
+                                div(class="col xs12 md6 ta-l")
+                                    div(class="row mt30")
+                                        p 
+                                            strong(class="u-textColor_4-dark") 1.
+                                            |  What was the reason for the 1567 expedition to the New World?
+                                        div(class="row-flex mt20")
+                                            
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                            label(for="SelectRadio_1" class="c-CheckSelected col-flex") To attack Spanish ships.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                            label(for="SelectRadio_2" class="c-CheckSelected col-flex")  To trade slaves.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_3" name="selection_1" value="3")
+                                            label(for="SelectRadio_3" class="c-CheckSelected col-flex") To get pearls
+
+                                    div(class="row mt30")
+                                        p 
+                                            strong(class="u-textColor_4-dark") 2.
+                                            |  Who considered Drake a pirate?
+                                        div(class="row-flex mt20")
+                                            
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="1")
+                                            label(for="SelectRadio_4" class="c-CheckSelected col-flex") The British.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_2" value="2")
+                                            label(for="SelectRadio_5" class="c-CheckSelected col-flex")  The Colombians.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_6" name="selection_2" value="3")
+                                            label(for="SelectRadio_6" class="c-CheckSelected col-flex") The Spanish.
+
+                            div(class="c-flickity--cell ")
+                                div(class="col xs12 md6 ")
+                                    div(class="col xs9 md10 lg12 col-center mb30 ta-c showTo-md")
+                                        img(src="unit_1/module_1/assets/images/col_3_2.png", alt="" class="u-responsive-img")  
+
+                                div(class="col xs12 md6 ta-l")
+                                    div(class="row mt30")
+                                        p 
+                                            strong(class="u-textColor_4-dark") 3.
+                                            |  Why was Drake interested in Riohacha?
+                                        div(class="row-flex mt20")
+                                            
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_3" value="1")
+                                            label(for="SelectRadio_7" class="c-CheckSelected col-flex") Because he could get canoes there
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_3" value="2")
+                                            label(for="SelectRadio_8" class="c-CheckSelected col-flex")  Because of its famous pearls.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_9" name="selection_3" value="3")
+                                            label(for="SelectRadio_9" class="c-CheckSelected col-flex") Because he had slaves to trade.
+
+                                    div(class="row mt30")
+                                        p 
+                                            strong(class="u-textColor_4-dark") 4.
+                                            |  What did Drake do to Riohacha and Santa Marta?
+                                        div(class="row-flex mt20")
+                                            
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_10" name="selection_4" value="1")
+                                            label(for="SelectRadio_10" class="c-CheckSelected col-flex") He burned them down.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_11" name="selection_4" value="2")
+                                            label(for="SelectRadio_11" class="c-CheckSelected col-flex") He conquered them.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_12" name="selection_4" value="3")
+                                            label(for="SelectRadio_12" class="c-CheckSelected col-flex") He settled there.
+
+                                    div(class="row mt30")
+                                        p 
+                                            strong(class="u-textColor_4-dark") 5.
+                                            |  Was Drake successful in acquiring riches in Riohacha and Santa Marta?
+                                        div(class="row-flex mt20")
+                                            
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_5" value="1")
+                                            label(for="SelectRadio_13" class="c-CheckSelected col-flex") Yes.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_5" value="2")
+                                            label(for="SelectRadio_14" class="c-CheckSelected col-flex") No.
+                                            input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_5" value="3")
+                                            label(for="SelectRadio_15" class="c-CheckSelected col-flex") I don´t know.
+
+                
+ 
+            
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'") 
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell ', 'c-flickity-controlsSlides', 'c-flickity-button');

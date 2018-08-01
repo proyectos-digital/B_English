@@ -1,0 +1,269 @@
+%headerDefault{
+    width: 100%;
+    min-width: 100vw;
+    max-height: $height-header;
+    box-shadow: 0px 1px 10px -2px var(--color_1-light);
+}
+%navigationDefault{
+    display: flex;
+    height: $height-header;
+    width: 100%;
+    position: relative;
+    
+}
+
+/* Componente layout contendedor primer nivel */
+.template{
+    /* Componente layout cabecera */
+    &-header{
+        @extend %headerDefault;
+
+        // position: relative;
+        // z-index: $zIndex_templateHeader;
+        
+        
+        animation-duration: 500ms;
+        animation-name: fadeDownContent;
+    }
+    &-footer{
+        @extend %headerDefault;
+
+        position: fixed;
+        top: auto;
+        left: 0;
+        bottom: 0;
+        z-index: $zIndex_templateFooter + 10;
+        
+        
+        background-color: #fff;
+        
+        animation-duration: 900ms;
+        animation-name: fadeUpContent;
+    }
+    /* Componente navegación */
+    &-navigation{
+        @extend %navigationDefault;
+    }
+}
+
+
+.template{
+    min-height: 100vh;
+    max-height: max-content;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    
+    overflow: hidden;
+    margin: 0 auto;
+    
+    /* Componente layout contenedor segundo nivel */
+    &-wrapper{
+
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: space-between;
+
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+        max-height: max-content;
+        min-height: $height-wrapper;
+
+        animation-duration: 700ms;
+        animation-name: fadeUpContent;
+
+        padding-bottom: 124px;
+        
+    }
+    
+    /* Componente layout aside */
+    &-aside{
+        &Left, &Right{
+            min-width: $height-header;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+
+            padding-top: 35vh;
+
+            /*! Ajuste de botones */
+
+            & > button {
+                margin-bottom: 1.2rem;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                
+            }
+        }
+        &Left{}
+        &Right{}
+    }
+    
+    /* Componente layout - contenedor tercer nivel */
+    &-section{
+        width: 100%;
+        height: 100%;
+        //
+        //position: absolute;
+        //top: 0;
+        //left: 0;
+        //right: 0;
+        //bottom: 0;
+        
+        padding-top: 1rem;
+        // padding-left: $height-header;
+        // padding-right: $height-header;
+
+        
+        padding-left: .5rem;
+        padding-right: .5rem;
+
+        margin-left: auto;
+        margin-right: auto;
+        
+        overflow: initial
+    }
+    /* Componente layout - contenido neto ( actividades ) */
+    &-content{
+        width: 100%;
+        max-width: 1100px;
+
+        margin-left: auto;
+        margin-right: auto;
+        // padding-bottom: $height-header * 0.8;
+        padding-bottom: initial;
+    }
+    /* Stado MediaQuiery */
+    
+    @include maxBreakPoint(599px){
+        .template-header{
+            box-shadow: none;
+        }
+        .template-footer{
+            &.no-visible{
+                bottom: -4rem !important;
+            }
+        }
+
+        .template-wrapper{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-top: 1rem;
+            align-items: baseline;
+        }
+        .template-section{
+            order: 3;
+            margin: 0;
+            padding-top: 4.5rem;
+        }
+        .o-aside-Item{
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            padding-top: 0;
+
+            height: 3.5rem;
+            flex: 0 0 50vw;
+            min-width: 50vw;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+
+            &.template-asideLeft{
+                right: auto;
+                min-width: 62vw;
+                box-shadow: 0px 4px 6px -3px var(--color_1-lighter);
+            }
+            &.template-asideRight{
+                left: auto;
+                min-width: 23vw;
+                box-shadow: 0px 4px 6px -3px var(--color_1-lighter);
+            }
+
+            & button{
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-right: 6px;
+            }
+            & > button:first-child{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    &.qa-versionDefault{
+        min-height: 100vh;
+        width: 100%;
+        
+        display: block;
+        // flex-wrap: wrap;
+        // flex-direction: row;
+        // align-items: center;
+        
+        margin: 0 auto;
+    
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        .o-aside{
+            &-Item{
+                height: 100%;
+                min-height: $height-wrapper;
+
+                position: relative;
+                top: 0;
+                left: auto;
+                right: auto;
+            }
+        }
+        .template-asideLeft{
+            left: 0;
+        }
+        .template-asideRight{
+            right: 0;
+        }
+        .template-footer{
+            position: fixed;
+            top: auto;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+        }
+        .template-wrapper{
+            height: 100%;
+        }
+        .template-section{
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding-top: 1rem;
+            max-width: calc(100vw - 7rem);
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
+    }
+    
+}
+
+[ui-view="estilo"] {
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+    height: 0px;
+}
+
+

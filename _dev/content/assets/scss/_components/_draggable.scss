@@ -1,0 +1,212 @@
+// Draggable Exercices
+// Drag and Drop Exercices
+.dragCont, .drag, .drop{
+    position: relative;
+
+    min-height: 1.5rem;
+    min-width: 100px;
+
+    // font-size: 1rem;
+    text-align: center;
+
+    border-radius: 1px;
+    user-select: none;
+}
+
+.dragCont{ }
+
+.dragCont, .drop{
+    background-color: $white;
+    border: .093rem dashed $color_3;
+    margin-bottom: 10px;
+}
+.drag{
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: $draggable_drop;
+    width: 100%;
+
+    padding: 0 5px;
+    margin: 0 auto;
+    cursor: move;
+    
+    background-color: rgba($color_2, 0.3);
+    box-shadow: 0 0 0 2px $color_2; 
+
+    &.u-bgColor_5{
+        background-color: rgba($color_5, 0.3);
+        box-shadow: 0 0 0 2px $color_5; 
+    }
+}
+.drop{
+    .drag{
+        &:hover{
+            &::after{
+                content: none;
+            }
+        }
+    }
+    &.bien, &.mal { cursor: default; color: white;}
+    &.bien{
+        &, .drag{
+            background-color: var(--color_good);
+        }
+        .drag{
+            box-shadow: 0 0 0 2px var(--color_good);
+        }
+        
+    }
+    &.mal{
+        &, .drag{
+            background-color: var(--color_wrong); 
+        }
+        .drag {
+            box-shadow: 0 0 0 2px white;
+        }
+    }
+}
+.drag{
+    &::after{
+            content: none;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 350ms;
+    }
+    &:hover{
+        &::after{
+            opacity: 1;
+            visibility: visible;
+
+            font-family: "b-english" !important;
+            font-size: 0.6rem;
+            color: rgba(0, 72, 127, 0.5);
+            
+            content: "\69";
+            width: 1rem;
+            height: 1rem;
+
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+
+            background-color: rgba($color_2, .5);
+            box-shadow: 0 0 0 2px rgba($color_3, .5);
+            
+        }
+    }
+}
+span{
+    &.dragCont, &.drop{
+        display: inline-block;
+        margin: 0 5px;
+        vertical-align: middle;
+    }
+}
+
+/*---------------------------------------------------------------BLUE-------------------------------------------------------------------*/
+
+
+// Drag and Drop Exercices
+.dragCont-blue, .drag-blue, .drop-blue{
+    position: relative;
+
+    min-height: 1.5rem;
+    min-width: 100px;
+
+    // font-size: 1rem;
+    text-align: center;
+
+    border-radius: 2px;
+    user-select: none;
+}
+
+
+.dragCont-blue,
+.drop-blue{
+    background-color: $white;
+    border: 2px dashed $color_3;
+    margin-bottom: 10px;
+}
+.drag-blue{
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: $draggable_drop;
+    width: 100%;
+
+    padding: 0 5px;
+    margin: 0 auto;
+    cursor: move;
+    
+    background-color: rgba($color_5, 0.3);
+    box-shadow: 0 0 0 2px $color_5; 
+}
+.drop-blue{
+    .drag-blue{
+        &:hover{
+            &::after{
+                content: none;
+            }
+        }
+    }
+}
+.drag-blue{
+    &::after{
+            content: none;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 350ms;
+    }
+    &:hover{
+        &::after{
+            opacity: 1;
+            visibility: visible;
+
+            font-family: "b-english" !important;
+            font-size: 0.6rem;
+            color: rgba(0, 72, 127, 0.5);
+            
+            content: "\76";
+            width: 1rem;
+            height: 1rem;
+
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+
+            background-color: rgba($color_5, .5);
+            box-shadow: 0 0 0 2px rgba($color_5, .5);
+            
+        }
+    }
+}
+span{
+    &.dragCont-blue, &.drop-blue{
+        display: inline-block;
+        margin: 0 5px;
+        vertical-align: middle;
+    }
+}

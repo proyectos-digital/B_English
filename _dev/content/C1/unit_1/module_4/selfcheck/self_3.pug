@@ -1,0 +1,160 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_5")
+    aside(class="template-asideLeft o-aside-Item")
+      
+
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")                  
+                            
+
+            div(class="row row-flex mt30 align-items-center")
+                .row
+                    h5.ta-c Listen to the news report and answer the questions that follow.
+
+                    .row-flex.align-items-center.justify-between
+                        .col.xs12.md5.row-flex.align-items-center
+                            audio(controls class='col-center')
+                                source(src='unit_1/module_4/assets/audios/self_3_1.mp3' type='audio/mpeg')
+                       
+                        .col.xs12.md6    
+                            .c-cardGreen
+                                .c-cardGreenContent.ta-c
+                                    h5 Family Guy
+                                    h6 Wikipedia.org
+
+                                    p Read the full story here: #[a(href="https://en.wikipedia.org/wiki/Family_Guy" target="blank")  https://en.wikinews.org/]
+                    
+                .row-flex.align-items-center.justify-between
+                    .col.xs12.md5.row-flex.align-items-center.justify-between
+                        
+                        p.row.mt30.
+                            #[strong.u-textColor_4 •] The Family Guy is centered around...
+
+                        .row.mt20
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_1") four characters.
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_2") 2 characters
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_3") six characters.
+                            input(type="hidden" class="js-select")
+
+                        p.ta-j.mt30.
+                            #[strong.u-textColor_4 •] Complete the sentence. #[br] #[br]
+                            Family guy was cancelled in...
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_4") 1988.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_5") 2002.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_6") 2003.
+                            input(type="hidden" class="js-select")
+
+
+                        p.ta-j.mt30.
+                            #[strong.u-textColor_4 •] Choose true or false.  #[br] #[br]
+                            Family guy was considered a failure by one TV channel.
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_7") True.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_8") False
+                            input(type="hidden" class="js-select")
+                        
+                    .col.xs12.md6.mt30
+                        table(class="c-table-estilo_tres row ")
+                            thead
+                                tr
+                                    th Parents
+                                    th Children
+                                    th Pet
+                            tbody
+                                tr
+                                    td.padding15: select(name="self_3_1" class="c-select ml5 mr5 mt5 mb5 row js-escribir")
+                                        option(value="" disabled selected) 
+                                        option(value="3") Brian 
+                                        option(value="2") Meg   
+                                        option(value="2") Chris 
+                                        option(value="1") Lois
+                                        option(value="1") Peter
+                                        option(value="2") Stewie    
+
+                                    td.padding15: select(name="self_3_2" class="c-select ml5 mr5 mt5 mb5 row js-escribir")
+                                        option(value="" disabled selected) 
+                                        option(value="3") Brian 
+                                        option(value="2") Meg   
+                                        option(value="2") Chris
+                                        option(value="1") Lois
+                                        option(value="1") Peter
+                                        option(value="2") Stewie
+                                    td.padding15: select(name="self_3_3" class="c-select ml5 mr5 mt5 mb5 row js-escribir")
+                                        option(value="" disabled selected) 
+                                        option(value="3") Brian 
+                                        option(value="2") Meg   
+                                        option(value="2") Chris 
+                                        option(value="1") Lois
+                                        option(value="1") Peter
+                                        option(value="2") Stewie
+                                tr
+                                    td.padding15: select(name="self_3_4" class="c-select ml5 mr5 mt5 mb5 row js-escribir")
+                                        option(value="" disabled selected) 
+                                        option(value="3") Brian 
+                                        option(value="2") Meg   
+                                        option(value="2") Chris 
+                                        option(value="1") Lois
+                                        option(value="1") Peter
+                                        option(value="2") Stewie
+                                    td.padding15: select(name="self_3_5" class="c-select ml5 mr5 mt5 mb5 row js-escribir")
+                                        option(value="" disabled selected) 
+                                        option(value="3") Brian 
+                                        option(value="2") Meg   
+                                        option(value="2") Chris 
+                                        option(value="1") Lois
+                                        option(value="1") Peter
+                                        option(value="2") Stewie
+                                    td.padding15
+
+                                tr
+                                    td.padding15
+                                    td.padding15: select(name="self_3_6" class="c-select ml5 mr5 mt5 mb5 row js-escribir")
+                                        option(value="" disabled selected) 
+                                        option(value="3") Brian 
+                                        option(value="2") Meg   
+                                        option(value="2") Chris 
+                                        option(value="1") Lois
+                                        option(value="1") Peter
+                                        option(value="2") Stewie
+                                    td.padding15
+
+                        p.ta-j.mt30.
+                            #[strong.u-textColor_4 •] Family guy has won...
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_9") 12 Primetime Emmy awards.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_10") 6 awards.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_11") 11 Annie Awards. 
+                            input(type="hidden" class="js-select")                   
+                                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="CompTxt_SelectMult()")
+|        
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

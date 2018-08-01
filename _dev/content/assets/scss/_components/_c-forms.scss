@@ -1,0 +1,98 @@
+.c- {
+    &wrapTextarea{
+
+        // ---------------
+        $desviacionSpeuso: 5px;
+        $desviacionComponente: 2rem;
+        // ---------------
+        
+        position: relative;
+        z-index: 1;
+        
+        width: calc(100% - #{$desviacionComponente});
+        min-height: 5.5rem;
+        
+        padding: 0;
+        margin: 2rem #{$desviacionComponente / 2};
+    
+        background-position:center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 74, 0.00);
+        // -------------------
+
+        &[wrapTextarea="default"]{
+            &::before, &::after{
+                display: none;
+            }
+        }
+        // -------------------
+        
+        &:before, &:after{
+            
+            content: "";
+            
+            position: absolute;
+            top: -($desviacionSpeuso / 2);
+            left: -($desviacionSpeuso / 2);
+            
+            width: calc(100% + #{$desviacionSpeuso});
+            height: calc(100% + #{$desviacionSpeuso});
+            cursor: text;
+            
+            border-color: var(--color_2-dark);
+            border-width: 2px;
+            user-select: none;
+            border-radius: 10px;
+        }
+
+        // -------------------
+        &:before{
+            z-index: -1;
+            transform: rotateZ(-0.5deg);
+            border-style: dotted;
+        }
+        // -------------------
+        &:after{
+            display: none;
+            z-index: -2;
+            border-style:solid;
+            transform: rotateZ(2deg);
+        }
+        // -------------------
+        & textarea{
+            border-radius: 10px;
+        }
+        &__counter {
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+
+            top: auto;
+            bottom: 0.5rem;
+            left: auto;
+            right: 0.5rem;
+            
+            pointer-events: none;
+            user-select: none;
+            font-size: 0.8rem;
+            background-color: white;
+        }
+    }
+    &-wrapInput{
+        position: relative;
+        z-index: 1;
+    }
+    &-wrapSelect{
+        position: relative;
+        z-index: 1;
+    }
+}
+/*! ============================ inputs.scss */
+@import "_c-inputs";
+/*! ============================ textarea.scss */
+@import "_c-textarea";
+/*! ============================ select.scss */
+@import "_c-select";
+
+

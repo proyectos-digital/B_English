@@ -1,0 +1,78 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_7" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="girarCartas()")
+        section(class="template-content")
+            div.row
+                h5 #[strong.u-textColor_4 1. ] Find the two activities that go together.
+
+            div.flip_card-container.mt40-md
+                div(class="flip_card-row flipFlexible")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Before the kids went outside to make a snowman
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content because she had been driving for 12 straight hours.
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Columbus had been sailing for more than 2 months
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content  Her eyes were itchy.
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content The doctor had been training for 4 years
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content  I had been studyng French for 2 years
+                div(class="flip_card-row flipFlexible")
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Before he opened his own office.
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content She had been watching TV all afternoon.
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content it had been snowing all morning
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content she had an accident
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content I finally visited France
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content before he and his 90 sailors saw North America.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadCartas()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarWordFind")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+| 
+script(src="./../assets/js/librerias/jquery.flip.min.js")

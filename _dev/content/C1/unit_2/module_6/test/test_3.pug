@@ -1,0 +1,107 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_5")
+	aside(class="template-asideLeft o-aside-Item")
+
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content")
+
+
+			div(class="row row-flex mt30 align-items-center")
+				.row
+					h5.ta-c Listen to the news report and answer the questions that follow.
+				.row-flex.justify-between
+					.col.xs12.md5
+						audio(controls class='mt30')
+							source(src='unit_2/module_6/assets/audios/test_3_1.mp3' type='audio/mpeg')
+
+						.c-cardGreen
+							.c-cardGreenContent.ta-c
+								h5 We Will Soon Be Using More Than the Earth Can Provide
+								h6 David Korten posted Jun 14, 2017
+								p Read the full story here: #[a(href="http://www.yesmagazine.org/planet/we-will-soon-be-using-more-than-the-earth-can-provide-20170614" target="blank") www.yesmagazine.org]
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] The GFN stands for...
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_1") Global Financial Network.
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_2") Global Footprint Network.
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_3") Global Food Nation.
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Complete the sentence. #[br] #[br]
+							GFN argues that...
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_4") Governments must consider investing more in measures to combat the world's ecological footprint.
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_5") China like the U.S has a high per capita biocapacity.
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_6") The collecting and reporting of statistical information should be the responsibility of a small non-profit.
+
+
+
+
+					.col.xs12.md6
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] The world consumes 60% of...  #[br] #[br]
+
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_7") All processed food and meats in the U.S and China.
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_8") All available land space.
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_9") Carbon energy.
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Choose true or false. #[br] #[br]
+							Mass transit affects energy efficiency in urbanized areas.
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_10") True.
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_11") False.
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] The Earth is consuming more than it can sustain due to...
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_12" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_12") A growing population.
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_13") An imbalance with its capacities.
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_14" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_14") Misleading economic indicators.
+
+
+
+
+
+
+
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

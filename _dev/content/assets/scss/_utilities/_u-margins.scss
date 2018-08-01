@@ -1,0 +1,80 @@
+// ===========
+.ma-{
+    &t{ margin-top: auto; }
+    &l{ margin-left: auto; }
+    &b{ margin-bottom: auto; }
+    &r{ margin-right: auto; }
+}
+// =========== 
+@each $size, $screen-size in $grid-breakpoints{
+    @media screen and (min-width: $screen-size - 1){
+
+        $pixel : 'px';
+        $vh : 'vh';
+        $porcent : '%';
+        
+        .mt0-#{$size} { margin-top: 0#{$pixel} !important; }
+
+        @for $i from 1 through 100 {
+            $a : $i*5;
+            /*! MediaQuery margin desde $size */
+            .mt#{$a}-#{$size} { margin-top: #{$a}#{$pixel} !important; }
+        }
+	}
+}
+// ===========
+.w33{ width: 33%; }
+// =========== 
+@for $i from 0 through 100 {
+    $a : $i*5;
+    $pixel : 'px';
+    $vh : 'vh';
+    $porcent : '%';
+    /*Width ↓↓↓*/
+    .w#{$a} { width: #{$a}#{$porcent} !important; }
+    .ancho#{$a} { width: #{$a}#{$pixel} !important; }
+    /*Height ↓↓↓*/
+    .h#{$a} { height: #{$a}#{$pixel} !important; }
+    .h_auto { height: auto !important; }
+    
+    /*Min-width ↓↓↓*/
+    .min-w#{$a} { min-width: #{$a}#{$pixel} !important; }
+    /*Max-width ↓↓↓*/
+    .max-ancho#{$a} { max-width: #{$a}#{$pixel} !important; }
+    /*Max-width ↓↓↓*/
+    .max-w#{$a} { max-width: #{$a}#{$porcent} !important; }
+    /*Min-Height ↓↓↓*/
+    .min-h#{$a} { min-height: #{$a}#{$pixel} !important; }
+    /*max-Height ↓↓↓*/
+    .max-h#{$a} { max-height: #{$a}#{$pixel} !important; }
+    .vh#{$a} { height: #{$a}#{$vh} !important; }
+    .min-vh#{$a} { min-height: #{$a}#{$vh} !important; }
+    .max-vh#{$a} { min-height: #{$a}#{$vh} !important; }
+    
+    /*Positions ↓↓↓*/
+    .top#{$a}{ top: #{$a}#{$pixel}; }
+    .top#{$a}-negative{ top: -#{$a}#{$pixel}; }
+    .bottom#{$a}{ bottom: #{$a}#{$pixel}; }
+    .bottom#{$a}-negative{ bottom: -#{$a}#{$pixel}; }
+    .right#{$a}{ right: #{$a}#{$pixel}; }
+    .right#{$a}-negative{ right: -#{$a}#{$pixel}; }
+    .left#{$a}{ left: #{$a}#{$pixel}; }
+    .left#{$a}-negative{ left: -#{$a}#{$pixel}; }
+    /*Margins ↓↓↓*/
+    .mt#{$a}{ margin-top: #{$a}#{$pixel} !important; }
+    .mb#{$a}{ margin-bottom: #{$a}#{$pixel} !important; }
+    .mr#{$a}{ margin-right: #{$a}#{$pixel} !important; }
+    .ml#{$a}{ margin-left: #{$a}#{$pixel} !important; }
+    /*padding ↓↓↓*/
+    .padding#{$a}{ padding: #{$a}#{$pixel} !important; }
+    .pt#{$a}{ padding-top: #{$a}#{$pixel} !important; }
+    .pb#{$a}{ padding-bottom: #{$a}#{$pixel} !important; }
+    .pr#{$a}{ padding-right: #{$a}#{$pixel} !important; }
+    .pl#{$a}{ padding-left: #{$a}#{$pixel} !important; }
+    /*line heigth ↓↓↓*/
+    .lh#{$a}{ line-height: #{$a}#{$pixel} !important; }
+}
+// =========== 
+@for $i from 1 through 360 {
+    .rotar#{$i} { transform: rotate(#{$i}deg);}
+}

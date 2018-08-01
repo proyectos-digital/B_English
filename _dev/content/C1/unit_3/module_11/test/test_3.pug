@@ -1,0 +1,45 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_3")
+    aside(class="template-asideLeft o-aside-Item")
+
+
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Let’s talk about science.
+            div(class="row row-flex mt30 align-items-center")
+                div(class="col xs12 md6")
+                    div(class="row-flex justify-center mb20"): div(class="col md11 col-center")
+                        div(class="c-contVideo")
+                            video(controls class="u-responsive-video")
+                                source(src="unit_3/module_11/"+pathVideo+"test_3_1.mp4" type="video/mp4")
+                                | Your browser does not support the video element.
+                div(class="col xs12 md6")
+                    .c-cardGreen
+                        .c-cardGreenContent
+                            ul.c-list
+                                li Answer the following questions. Describe an important invention that you think has positively influenced the human race.
+                                li Talk about:
+                                li What the invention is.
+                                li Who invented it?
+                                li What changes has it brought?
+                                li Explain how it has positively influenced the human race.
+                                //- li Mention two famous scientists in your country.
+                                //- li Why should we invest more in research?
+                                //- li What is the single most important invention in your opinion?
+
+                    div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt3_mod11_test3',1)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,90 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1; DragandDrop()")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+
+    |
+    |
+    
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            h5 #[strong.u-textColor_4 1. ] Read the following examples. Pay attention to the verbs in bold:
+            div(class="row mt50 flex align-items-center")
+                div(class="col xs10 md6 col-center")
+                    .c-cardBlue
+                        div(class="c-cardBlueContent")
+                            p.mb20The The company #[strong was shipping] the apples by boat. #[br] The apples #[strong were being shipped] by boat. 
+                            p.mb20The A #[i farmer ] #[strong picked] the apples first, then he #[strong cleaned] them, and finally, he #[strong packed] and #[strong shipped] them to the market.
+                            p.mb20The First the #[i apples ] #[strong were picked], then they #[strong were cleaned], and finally, they #[strong were packed] and #[strong shipped] to the market.
+                            
+
+                div(class="col xs12 md4")
+                    img(src="unit_1/module_4/assets/images/act_7_1.png", alt="" class="u-responsive-img")
+
+
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+
+            div(class="row-flex mt50-xs mt50-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md8 offset-md2 col-center mt10-sm mt30-md")
+                    div(class="row-flex")
+                        h5 #[strong.u-textColor_4 2. ] Complete the examples below with the verbs in the box. 
+                        h6.ml20 Drag and drop the verbs' box into the right phrase.
+                div(class="row mt30")
+                    div(class="row ")
+                        div(class="row-flex justify-around")
+                            div(class="dragCont ml10")
+                                div(class="drag padding5") was given
+                            div(class="dragCont ml10")
+                                div(class="drag padding5") were being chased
+                            div(class="dragCont ml10")
+                                div(class="drag padding5") was considered
+                            div(class="dragCont ml10")
+                                div(class="drag padding5") was being repaired
+                div(class="col-flex-xs12 col-flex-md8 offset-md2 col-center mt10-sm mt30-md")
+ 
+                        
+                div(class="row mt20 flex align-items-center")
+                    div(class="col xs12 md4 showTo-md")
+                        img(src="unit_1/module_4/assets/images/act_7a.png", alt="" class="u-responsive-img")
+                    div(class="col xs12 md8")
+                        h5 The passive voice is used when:
+                        div(class="row")
+                            p(class="mt20 mb20"): h6(class="u-textColor_4") • We do not know who did the action:
+                            p(class="u-textColor_4 mt40")
+                                span(class="u-textColor_1-dark") This book
+                                    span(class="drop ancho220 h30")
+                                    | to her for Christmas.
+                            p(class="u-textColor_4")
+                                span(class="u-textColor_1-dark") Before discovering the cure, that illness 
+                                    span(class="drop ancho220 h30")
+                                    | lethal.
+                            p(class="mt40 mb20"): h6(class="u-textColor_4") • The receiver of the action is more important:
+                            p(class="u-textColor_4 mt40")
+                                span(class="u-textColor_1-dark") The zebras
+                                    span(class="drop ancho220 h30")
+                                    | by a couple of lions.
+                            p(class="u-textColor_4")
+                                span(class="u-textColor_1-dark") The car 
+                                    span(class="drop ancho220 h30")
+                                    | by our old mechanic.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 2")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()" ng-show="s_actividad == 2")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_4/activities/act_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

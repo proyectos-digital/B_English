@@ -1,0 +1,21 @@
+.c-{
+    &select {
+        padding: 5px;
+        
+        color: $color_3-dark;
+        background-color: rgba($color_3 ,0.5);
+        border: 1px solid $color_3-darker;
+        border-radius: 2px;
+        margin: 0;
+        height: 2.15rem;
+
+        &[c-select-style="inline"]{
+            height: 1.5rem;
+            padding: 0 5px;
+        }
+        &-Default{
+            @extend .c-select;
+            display: inline-flex;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Write sentences expressing certainty, probability and doubt. Use words from the box and the cues given.
+            div(class="row-flex mt40 ")
+                div(class="col-flex-sm12 col-flex-md6 col-center padding20")
+                    div(class="c-cardGreen"): div(class="c-cardGreenContent  ")
+                        p Must | May | Might | Could | Can’t
+                        p
+                            strong Example: There might be life on other planets.
+
+                    img(src="unit_2/module_6/assets/images/act_14.png", alt="" class="u-responsive-img w80 centrado")
+
+                div(class="col-flex-sm12 col-flex-md6 col-center padding20")
+                        div(class="mb20 row-flex")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | green / skin / not / extraterrestrials / have  
+                        span(class="c-textField w100"): input(type="text" placeholder="Text here..." class="c-input js-escribir w100")
+                        div(class="mb20 row-flex mt40")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | discover / life / in / planets / one / day / other / be
+                        span(class="c-textField w100"): input(type="text" placeholder="Text here..." class="c-input js-escribir w100")
+                        div(class="mb20 row-flex mt40")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | in / there / planets / other / in / galaxies / be / water / other
+                        span(class="c-textField w100"): input(type="text" placeholder="Text here..." class="c-input js-escribir w100")
+                        div(class="mb20 row-flex mt40")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | with / life / be / there / oxygen / no
+                        span(class="c-textField w100"): input(type="text" placeholder="Text here..." class="c-input js-escribir w100")
+                        div(class="mb20 row-flex mt40")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | atmosphere / our / in / preserve / planet’s
+                        span(class="c-textField w100"): input(type="text" placeholder="Text here..." class="c-input js-escribir w100")
+                        
+                        div(class="c-cardGreen"): div(class="c-cardGreenContent")
+                            p What do you think? Choose one of the sentences you wrote and say why you think it could or could not be possible. Provide at least 2 arguments to support your idea. Speak for 60 seconds.    
+                        
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt2_mod6_act_14',1)")
+                                
+                                div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                |
+                                div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                    div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                        button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                            type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                            ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                            span {{recorder.status.isRecording ? 'Stop' : 'Start '}} 
+                                            span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                            span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}} 
+                                                sub seg.
+                                        |
+                                        button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                            type="button" 
+                                            ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                            ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                            ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                            span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Send
+                                            span(ng-if="recorder.status.isPlaying"): span pause
+                                        |
+                                |
+                                div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting") 
+                                    p Please wait while we process your recording
+                                |
+                        
+            
+
+
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRecord" )
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+        //- button(class="c-btn-IconAction u-bgIconUpload" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,45 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_11")
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a" ng-init="MostrarIframe()")
+        section(class="template-content u-animationFadeDown")
+            article(class="row-flex justify-center")
+                div(class="row xs12 md6")
+                    div(class="col")
+                        p Interview one of your friends or family member about some of their favourite high school memories. Ask about their favourite teacher, subjects and friends..
+                        p Summarize in English what the interviewee said in Spanish. Then record yourself in a video reporting what was said by the interviewee.
+                    div(class="col")
+                        ul.row
+                            li » Record your video using your smartphone, tablet or computer.
+                            li » Upload your video to youtube.
+                            li » The video should last at least 2 minutes.  
+
+                    div(class="col mt30-sm")
+                        h5 Tips for uploading  the video.
+                        ul
+                            li • Upload your video to Youtube. If you don’t know how what to do, visit this tutorial #[a(href="https://support.google.com/youtube/answer/57407") https://support.google.com/youtube/answer/57407]
+                            li • When your video is ready in Youtube.
+                            li • On a computer, go to the YouTube video you want to embed.
+                            li • Under the video, click Share.
+                            li • Click Embed.
+                            li • Copy the HTML code &lt;iframe...
+                            
+                div(class="col-flex-xs12 col-flex-md6 mt10-sm mb40 pr10 pl10")
+                    div(class="c-customVideoUpdate")
+                        div(class="c-customVideoUpdate--contentIframe" ng-bind-html="veriframe | unsafe")  
+                        div(class="c-customVideoUpdate--controls")
+                            input(class="c-customVideoUpdate--input" type="text", name="" placeholder="Copy the HTML code here." ng-model="iframevideo") 
+                            button(class="c-customVideoUpdate--button" ng-click="UploadIframe()")
+    |        
+    | 
+    aside(class="template-asideRight o-aside-Item")  
+| 
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")   

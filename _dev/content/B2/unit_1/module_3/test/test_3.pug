@@ -1,0 +1,76 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row-flex justify-around")
+                            div(class="dragCont"): div(class="drag" rescon="1") Stop
+                            div(class="dragCont"): div(class="drag" rescon="2") Decide
+                            div(class="dragCont"): div(class="drag" rescon="2") Need
+                            div(class="dragCont"): div(class="drag" rescon="2") Plan
+                            div(class="dragCont"): div(class="drag" rescon="1") Enjoy
+                            div(class="dragCont"): div(class="drag" rescon="1") Avoid
+                            div(class="dragCont"): div(class="drag" rescon="2") Promise
+                            div(class="dragCont"): div(class="drag" rescon="1") Look forward to
+                            div(class="dragCont"): div(class="drag" rescon="1") Mind
+                            div(class="dragCont"): div(class="drag" rescon="2") Invite someone
+                            div(class="dragCont"): div(class="drag" rescon="2") Want
+                            div(class="dragCont"): div(class="drag" rescon="1") Finish
+
+                div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center")
+                    div(class="row")
+                        table(class="c-table-estilo_uno w100")
+                            thead
+                                tr
+                                    th +ING
+                                    th + INFINITE
+                            tbody
+                                tr
+                                    td
+                                        span(class="drop w80 centrado")
+                                    td
+                                        span(class="drop w80 centrado")
+                                tr
+                                    td
+                                        span(class="drop w80 centrado")
+                                    td
+                                        span(class="drop w80 centrado")
+                                tr
+                                    td
+                                        span(class="drop w80 centrado")
+                                    td
+                                        span(class="drop w80 centrado")
+                                tr
+                                    td
+                                        span(class="drop w80 centrado")
+                                    td
+                                        span(class="drop w80 centrado")
+                                tr
+                                    td
+                                        span(class="drop w80 centrado")
+                                    td
+                                        span(class="drop w80 centrado")
+                                tr
+                                    td
+                                        span(class="drop w80 centrado")
+                                    td
+                                        span(class="drop w80 centrado")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

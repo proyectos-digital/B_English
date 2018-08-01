@@ -1,0 +1,90 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_4")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-init="DragandDrop()")
+            div(class="row mt30-md mt20-xs")
+                h6 Matc these iconic science pictures to their names  
+                p.
+                    Let’s review some common science words and what they mean.
+
+                div(class="col xs12 col-center row-flex justify-center")
+
+                    span.dragCont.mt10: .drag Atom
+                    span.dragCont.mt10: .drag Hazard
+                    span.dragCont.mt10: .drag Microscope
+                    span.dragCont.mt10: .drag DNA
+                    span.dragCont.mt10: .drag Fossil
+                    span.dragCont.mt10: .drag Evolution
+                    span.dragCont.mt10: .drag An animal cell
+                    span.dragCont.mt10: .drag equation
+               
+
+                div(class="col xs12 col-center row-flex justify-center")
+                
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_3/module_11/assets/images/col_3_1.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_3/module_11/assets/images/col_3_2.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_3/module_11/assets/images/col_3_3.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_3/module_11/assets/images/col_3_4.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_3/module_11/assets/images/col_3_5.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_3/module_11/assets/images/col_3_6.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_3/module_11/assets/images/col_3_7.png", alt="myColombia")
+                    .col.xs6.md2.mt30
+                        span( class="drop w100 margin0 ")
+                        img(class="u-responsive-img m-a w100 mt10" src="unit_3/module_11/assets/images/col_3_8.png", alt="myColombia")
+             
+                    
+                   
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'") 
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()
+style.
+    .treeItem[correcta="bien"],
+    .treeItem_hi[correcta="bien"],
+    .treeItem_set[correcta="bien"]{
+        background-color: var(--color_good);
+        color: white;
+        width: 5px;
+    }
+    .treeItem[correcta="mal"],
+    .treeItem_hi[correcta="mal"],
+    .treeItem_set[correcta="mal"]{
+        background-color: var(--color_wrong);
+        color: white;
+        width: 5px;
+        
+    }
+

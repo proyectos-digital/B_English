@@ -1,0 +1,141 @@
+%animation{
+    &FadeDown{
+        $TransitionDuration : 700ms;
+        $Translatex: 0;
+        $Translatey: 50px;
+        $Translatez: 0;
+        animation-duration: $TransitionDuration;
+    }
+}
+
+/*! animación del indicador de carga - svg*/
+.loading_svg{
+    $len: 200px;
+    $time: 1.6s;
+    #outline {
+        stroke-dasharray: $len*0.01, $len;
+        stroke-dashoffset: 0;
+        animation: anim $time linear infinite;
+    }
+    @keyframes anim {
+        10% {
+            stroke-dasharray: $len*0.14, $len;
+            stroke-dashoffset: -$len*0.11;
+        }
+        50% {
+            stroke-dasharray: $len*0.35, $len;
+            stroke-dashoffset: -$len*0.35;
+        }
+        100% {
+            stroke-dasharray: $len*0.01, $len;
+            stroke-dashoffset: -$len*0.99;
+        }
+    }
+}
+
+.templateApplication{ 
+	$TransitionDuration : 500ms;
+	$Translatex: 0;
+	$Translatey: 50px;
+    $Translatez: 0;
+    
+	$animationName :fadeInEnterView;
+	@keyframes #{$animationName} {
+		0% {
+			opacity: 0;
+			// transform:translate3d(#{$Translatex}, #{$Translatey}, #{$Translatez});
+		}
+		100% {
+			opacity: 1;
+			// transform:none;
+		}
+	}
+	// $animationNameLeave :fadeInLeaveView;
+	// @keyframes #{$animationNameLeave} {
+	// 	0% {
+	// 		opacity: 0;
+	// 		transform:translate3d(#{$Translatex}, #{$Translatey}, #{$Translatez});
+	// 	}
+	// 	100% {
+	// 		opacity: 1;
+	// 		transform:none;
+	// 	}
+	// }
+	/* start 'enter' transition */
+	&.ng-enter { 
+		/* transition on enter for */
+		animation-duration: $TransitionDuration;
+		transition: $TransitionDuration; 
+		/* start with opacity 0 (invisible) */
+        opacity: 0;
+	} 
+	// &.ng-leave { 
+	// 	/* transition on enter for */
+	// 	animation-duration: $TransitionDuration;
+	// 	transition: $TransitionDuration; 
+	// 	/* start with opacity 0 (invisible) */
+    //     // opacity: 0;
+	// } 
+	// &.ng-leave-active { 
+	// 	/* transition on enter for */
+	// 	animation-duration: $TransitionDuration;
+	// 	transition: $TransitionDuration; 
+	// 	/* start with opacity 0 (invisible) */
+    //     // opacity: 0;
+    //     animation-name: $animationNameLeave;
+	// } 
+	/* end 'enter' transition */
+	&.ng-enter-active {
+		animation-name: $animationName;
+		/* end with opacity 1 (fade in) */
+        opacity: 1; 
+        
+	}
+}
+
+.u-animationFadeDown {
+    &.ng-hide-animate {}
+    
+    &.ng-hide-add{
+        // transition: all 100ms ease-in-out;
+        opacity: 0.05;
+    }
+    &.ng-hide-add.ng-hide-add-active{
+        // top: 0;
+        // z-index: 1;
+        // transform: translate3d(0, -50px, 0);
+        opacity: 0.3;
+    }
+
+    &.ng-hide-remove {
+        transition: all 350ms ease-in-out;
+        // position: relative;
+        // top: 0;
+        // z-index: 2;
+        opacity: 0.5;
+        // transform: translate3d(0, 50px, 0);
+    }
+    &.ng-hide-remove.ng-hide-remove-active{
+        opacity: 1;
+        // transform: none;
+    }
+}
+
+
+
+/*! animation - c-noticeAside */
+
+@keyframes afterVisible {
+    from {opacity: 0;}
+    to {opacity: 0.5;}
+}
+
+@keyframes fadeDownContent {
+    0%		{ opacity: 0; transform:translate3d(0, -50px, 0); }
+    100% 	{ opacity: 1; transform:none; }
+}
+
+@keyframes fadeUpContent {
+    0%		{ opacity: 0; transform:translate3d(0, 50px, 0); }
+    100% 	{ opacity: 1; transform:none; }
+}

@@ -1,0 +1,81 @@
+.test_2 .drag {
+	height: calc(2rem - 4px);
+	font-size: 0.8rem;
+}
+
+.test_2 .dragCont {
+	margin: 5px auto;
+}
+
+.test_2 ._dropCont {
+	padding-bottom: 10px;
+	position: relative;
+	width: 90%;
+	min-height: 90%;
+	box-shadow: 0 0 0 1px #8496c5;
+	padding: .5rem 1rem 1.5rem 1rem;
+	font-size: 0.8rem;
+	background-color: rgba(132,150,197,0.61);
+}
+
+.test_2 .drop {
+	position: absolute;
+	top: auto;
+	bottom: -1rem;
+	left: auto;
+	right: 0;
+}
+
+.test_2 .dragCont,.test_2 .drop {
+	min-width: 150px;
+	height: 2rem;
+}
+
+.act_13 .c-table-estilo_tres {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (minmax(calc(275px - 0.5rem),1fr))[auto-fill];
+	grid-template-columns: repeat(auto-fill,minmax(calc(275px - 0.5rem),1fr));
+	grid-gap: 0.5rem;
+}
+
+.act_13 .c-table-estilo_tres--tbody--tr {
+	min-height: 300px;
+	padding: .5rem;
+}
+
+.act_13 .c-table-estilo_tres--th {
+	text-align: center;
+	font-weight: 700;
+}
+
+.act_13 .c-table-estilo_tres--td {
+	border: none;
+}
+
+.act_14 .drag {
+	height: calc(4rem - 4px);
+	font-size: 0.8rem;
+}
+
+.act_14 .dragCont {
+	margin: 5px auto;
+}
+
+.act_14 ._dropCont {
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.act_14 ._dropCont .u-bgIconListen {
+	position: absolute;
+	top: -1rem;
+	left: 0;
+	z-index: 7;
+	padding: 2px;
+}
+
+.act_14 .dragCont,.act_14 .drop {
+	width: 150px;
+	height: 4rem;
+}

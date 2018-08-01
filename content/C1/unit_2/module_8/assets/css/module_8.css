@@ -1,0 +1,165 @@
+.act_1 .c-card-phrasalVerbs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+.act_1 .c-card-phrasalVerbs--header {
+	height: 3rem;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding: 5px;
+	background-color: var(--color_2);
+}
+
+.act_1 .c-card-phrasalVerbs--header-title {
+	color: white;
+}
+
+.act_1 .c-card-phrasalVerbs--body {
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 2px 9px rgba(0,0,0,0.5);
+}
+
+.act_1 .c-card-phrasalVerbs--body-image {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+}
+
+@media all and (min-width: 1024px) {
+	.act_2 ._phrasal-column {
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+
+@media all and (min-width: 600px) {
+	.act_3 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_3 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.act_10 [grid-layout] {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+.act_10 [grid-layout="column-2"] {
+	-ms-grid-columns: (1fr)[2];
+	grid-template-columns: repeat(2,1fr);
+}
+
+@media screen and (max-width: 680px) {
+	.act_10 [grid-layout="column-2"] {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+.act_10 [grid-layout="column-3"] {
+	-ms-grid-columns: (1fr)[3];
+	grid-template-columns: repeat(3,1fr);
+}
+
+@media screen and (max-width: 680px) {
+	.act_10 [grid-layout="column-3"] {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+.act_11 [grid-layout] {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+.act_11 [grid-layout="column-3"] {
+	-ms-grid-columns: (1fr)[3];
+	grid-template-columns: repeat(3,1fr);
+}
+
+@media screen and (max-width: 680px) {
+	.act_11 [grid-layout="column-3"] {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+.act_12 .hov {
+	position: relative;
+}
+
+.act_12 .hov .ic {
+	position: absolute;
+	width: 98%;
+	height: 100%;
+	top: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: .3s ease-out;
+}
+
+.act_12 .hov .ic:hover {
+	opacity: 1;
+}
+
+.act_15 .book {
+	background: url(../images/act_15_1.png) no-repeat;
+	background-size: cover;
+	padding: 12% 25%;
+	line-height: 30px;
+}

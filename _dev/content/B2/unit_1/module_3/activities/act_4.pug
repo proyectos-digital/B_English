@@ -1,0 +1,97 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            div(class="row")
+                div(class="col sm11 col md6"): div(class="xs12 md11 col-center")
+
+                    img(src="./unit_1/module_3/assets/images/act_4.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="c-cardGreen mt40")
+                        div(class="c-cardGreenContent")
+                            p.mt20 #[strong(class="u-textColor_1") Would ] you #[strong(class="u-textColor_1") rather ] go to the movies or stay at home?
+                            blockquote: ul(class="c-list ml20 mt10")
+                                li
+                                    | I would
+                                    strong(class="u-textColor_1")  rather
+                                    |   stay at home.
+                            p.mt20 #[strong(class="u-textColor_1") Would ] you #[strong(class="u-textColor_1") prefer ] to go to the movies or stay at home?
+                            blockquote: ul(class="c-list ml20 mt10")
+                                li
+                                    | I #[strong(class="u-textColor_1") would prefer to ]
+                                    | stay at home.
+                |
+                div(class="col sm11 col md6"): div(class="xs12 md11 col-center")
+                    div(class="row mt50-xs mt30-md")
+                        h5 Drag and drop the best option for each sentence.
+
+                        p(class="mt20")
+                            strong(class="u-textColor_4-dark") 1.
+                            |  I would prefer
+                            strong  (live)
+                            span(class="drop")
+                            | in a warm country.
+
+                        p
+                            strong(class="u-textColor_4-dark") 2.
+                            |  She'd rather
+                            strong  (go)
+                            span(class="drop")
+                            | to a different restaurant.
+
+                        p
+                            strong Not,
+                            |  comes before the verb with both rather and prefer.
+
+                        div(class="row-flex justify-around mt20")
+                            div(class="dragCont"): div(class="drag") live
+                            div(class="dragCont"): div(class="drag") to live
+                            div(class="dragCont"): div(class="drag") go
+                            div(class="dragCont"): div(class="drag") to go
+
+                    div(class="row mt50")
+
+                        p
+                            strong(class="u-textColor_4-dark") 3.
+                            |  I would rather
+                            strong  (negative - go)
+                            span(class="drop")
+                            | to work today.
+
+                        p
+                            strong(class="u-textColor_4-dark") 4.
+                            |  I'd prefer
+                            strong  (negative – play)
+                            span(class="drop")
+                            | a game.
+
+                        p Be ready to use these expressions in the next exercise.
+
+                        div(class="row-flex justify-around mt20")
+                            div(class="dragCont"): div(class="drag") not go
+                            div(class="dragCont"): div(class="drag") not to go
+                            div(class="dragCont"): div(class="drag") not play
+                            div(class="dragCont"): div(class="drag") not to play
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconAlert openNotice is-active" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_3/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

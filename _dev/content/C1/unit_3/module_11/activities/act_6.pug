@@ -1,0 +1,90 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_6" )
+	aside(class="template-asideLeft o-aside-Item")
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content" )
+			.row-flex.justify-between.align-items-center
+				.col.xs12.md5
+					h5 Listen to the news report and answer the questions that follow.
+					.row-flex.justify-center
+						audio(controls class='mt30')
+							source(src='unit_3/module_11/assets/audios/act_6_1.mp3' type='audio/mpeg')
+
+					.c-cardGreen
+						.c-cardGreenContent.ta-c
+							h5 One solution to make women scientists more visible
+							h6: i Put them on posters.
+							p.ta-c Jennifer Luxton posted Apr 20, 2017
+
+							p Read the full story here: #[a(href="http://www.yesmagazine.org/people-power/one-solution-to-make-women-scientists-more-visible-20170420" target="blank")  www.yesmagazine.org]
+
+					h5 Now choose the best answer.
+					.row.mt30
+						.row
+							p #[strong.u-textColor_4 •] The March for Science aims to...
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+							label(class="c-Checkbox row ta-l " for="selInput_1") Bring greater awareness to the field of science.
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+							label(class="c-Checkbox row ta-l " for="selInput_2") Encourage greater interest by females in science.
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+							label(class="c-Checkbox row ta-l " for="selInput_3") Highlight some of the essential contributions to science.
+
+					.row.mt30
+						.row
+							p #[strong.u-textColor_4 •] Choose true or false.
+							p Areas such as Neuroscience suffer from insufficient tools and experts to transmit knowledge.
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+							label(class="c-Checkbox row ta-l " for="selInput_4") True.
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+							label(class="c-Checkbox row ta-l " for="selInput_5") False.
+
+
+				.col.xs12.md5
+					.row.mt30
+						.row
+							p #[strong.u-textColor_4 •]  Amanda Phingbodhipakkiya is...
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_6" value="1")
+							label(class="c-Checkbox row ta-l " for="selInput_6") A graphic designer who became a neuroscientist.
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="2")
+							label(class="c-Checkbox row ta-l " for="selInput_7") Trying to promote interest in science through the use of illustrated posters.
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="3")
+							label(class="c-Checkbox row ta-l " for="selInput_8") A well-known female researcher.
+					.row.mt30
+						.row
+							p #[strong.u-textColor_4 •] Choose true or false.#[br]#[br] In 2003, 29% of female graduates made up the science and technology workforce.
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="1" )
+							label(class="c-Checkbox row ta-l " for="selInput_9") True.
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="2" )
+							label(class="c-Checkbox row ta-l " for="selInput_10") False.
+					.row.mt30
+						.row
+							p #[strong.u-textColor_4 •] Marie Curie...
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_11" value="1")
+							label(class="c-Checkbox row ta-l " for="selInput_11") Won a Nobel Prize at the age of 32.
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_12" value="2")
+							label(class="c-Checkbox row ta-l " for="selInput_12") Didn’t graduate from grade-school but made significant contributions to the field of science.
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="3")
+							label(class="c-Checkbox row ta-l " for="selInput_13") Made numerous contributions to the field of science.
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,12 @@
+
+<!-- ============================== templateContainer-->
+<div class="vh100 row-flex">
+  <div class="row m-a">
+    <header class="c-noticeAside-header">
+      <div class="row mt20"><img class="u-responsive-img m-a w80" src="unit_2/module_5/assets/images/col_12_1.png" alt="myColombia"/></div>
+      <div class="row mt20">           <img class="u-responsive-img m-a w80" src="unit_2/module_5/assets/images/col_12_2.png" alt="myColombia"/></div>
+      <div class="row mt20">           <img class="u-responsive-img m-a w80" src="unit_2/module_5/assets/images/col_12_3.png" alt="myColombia"/></div>
+      <div class="row mt20">           <img class="u-responsive-img m-a w80" src="unit_2/module_5/assets/images/col_12_4.png" alt="myColombia"/></div>
+    </header>
+  </div>
+</div>

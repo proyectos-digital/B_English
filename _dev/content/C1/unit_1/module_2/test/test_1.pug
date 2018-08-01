@@ -1,0 +1,110 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a" ng-init="s_actividad = 1")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+
+            div(class="row row-flex mt30 align-items-center")
+                .c-cardGreen
+                    .c-cardGreenContent.ta-c.u-textColor_1
+                        .col.xs12
+                            h5 Mt Healthy High School
+                            p.ta-c 2046 Adams Rd. cincinnati, ohio, 45231 | grades 9-12
+                            .row
+                                img(src="unit_1/module_2/assets/images/test_1_1.jpg" alt="" class="u-responsive-img mt30 m-a")
+
+
+                        .col.xs12
+                            div(class="row mt30" phrasal-column="column-xs1 column-md2")
+                                h6.ta-c Mt Healthy High School, in Cincinnati, Ohio, is part of the Mt Healthy City district. The school reports enrolling 940 students in grades nine through 12, and it has 63 teachers on staff.
+
+                                p.ta-j  #[strong 1] Mt Healthy High School is above the state average but below the district average in terms of the percentage of students eligible for free or reduced-price lunches. On average, 37 percent of students in Ohio are eligible for free or reduced-price lunch programs, whereas 49 percent of Mt Healthy High School students do. At the district level, 68 percent of students are eligible.
+
+                                p.ta-j  #[strong 2] ProPublica’s analysis found that all too often, states and schools provide poor students fewer educational programs like Advanced Placement, gifted and talented programs, and advanced math and science classes. Studies have linked participation in these programs with better outcomes later in life. Our analysis uses free and reduced-price lunch to estimate poverty at schools. We based our findings on the most comprehensive data set of access to advanced classes and special programs in U.S. public schools — known as the Civil Rights Data Set— released by the U.S. Department of Education Office for Civil Rights.
+
+                                p.ta-j #[strong 3] Mt Healthy High School offers four AP courses, and 7 percent of students participate in those classes.
+                                p.ta-j Mt Healthy High School’s enrollment rates in chemistry, physics and advanced math subject areas are 6 percent, 5 percent and 5 percent, respectively. Gifted and talented at the school has an enrollment rate of 7 percent.
+                                p.ta-j Dublin Jerome High School, in Dublin, Ohio, is a lower-poverty school than Mt Healthy High School, with 1 percent of its students qualifying for free or reduced-price lunch. The school offers 14 AP courses, and 35 percent of students are enrolled in those classes.
+                                p.ta-j These data points were reported by schools and districts to the Office for Civil Rights.
+                                p.ta-j Read the full story here: #[a(href="https://projects.propublica.org/schools/schools/390444101346") https://projects.propublica.org]
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row row-flex mt30 align-items-center")
+                .col.xs12.md10.col-center
+                    div(class="row")
+                        h6 #[strong(class="u-textColor_4") •] Choose the most appropriate heading for the following extract:
+                        p ProPublica’s analysis found that all too often, states and schools provide poor students fewer educational programs like Advanced Placement, gifted and talented programs, and advanced math and science classes. Studies have linked participation in these programs with better outcomes later in life. Our analysis uses free and reduced-price lunch to estimate poverty at schools. We based our findings on the most comprehensive data set of access to advanced classes and special programs in U.S. public schools — known as the Civil Rights Data Set— released by the U.S. Department of Education Office for Civil Rights.
+
+                        div(class="u-checkbox-responsive")
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                            label(class="c-Checkbox" for="selInput_1") The analysis of poor student’s education.
+
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                            label(class="c-Checkbox" for="selInput_2") The Civil rights data.
+
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                            label(class="c-Checkbox" for="selInput_3") U. S. Department of Education.
+                            input(type="hidden" ng-model="valorinputa" class="js-select")
+            div(class="row mt30")
+                .col.xs12.md6
+                    .row
+                        h6 #[strong(class="u-textColor_4") •] Answer “true”, “false” or “information not given”.
+                        p MT Healthy High School is the poorest in the district?
+                        div(class="u-checkbox-responsive")
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox row w100" for="selInput_4") True.
+
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                            label(class="c-Checkbox row w100" for="selInput_5") False.
+
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                            label(class="c-Checkbox row w100" for="selInput_6") Information not given.
+                            input(type="hidden" ng-model="valorinputb" class="js-select")
+                .col.xs12.md6
+                    .row
+                        h6 #[strong(class="u-textColor_4") •] Fill in the summary using the words form the paragraph.
+                        .col-center.col.xs10
+                            .c-cardGreen
+                                .c-cardGreenContent.flex.align-items-center.justify-center
+                                    span outcomes | findings | average | poverty
+                        p #[strong(class="u-textColor_4") •] The analysis of  #[input(type="text" class="c-input js-escribir")] from research published by Propublica finds that the #[input(type="text" class="c-input js-escribir")] student facing #[input(type="text" class="c-input js-escribir")] will have less successful #[input(type="text" class="c-input js-escribir")] than students from wealthier areas.
+            div(class="row mt30")
+                .col.xs12.md6
+                    .row
+                        h6 #[strong(class="u-textColor_4") •] Match the information given with one of the paragraphs from the text.
+                        p MT Healthy High School is the poorest in the district?
+                        div(class="xs12 md8 col-center row-flex justify-around")
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                            label(class="c-Checkbox" for="selInput_7") 1.
+
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                            label(class="c-Checkbox" for="selInput_8") 2.
+
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+                            label(class="c-Checkbox" for="selInput_9") 3.
+                            input(type="hidden" ng-model="valorinputc" class="js-select")
+                .col.xs12.md6
+                    .row
+                        h6 #[strong(class="u-textColor_4") •] Complete the sentence with a word from the table below.
+                        .col-center.col.xs10
+                            .c-cardGreen
+                                .c-cardGreenContent.flex.align-items-center.justify-center
+                                    span outcomes | finding | average | poverty
+                        p Research has shown that students who are more disciplined in their studies have better #[input(type="text" class="c-input js-escribir")] that student who aren’t.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

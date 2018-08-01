@@ -1,0 +1,76 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    div(class="row")                   
+                        h5 Read and choose the right word to complete the story.
+                    div(class="col xs12 md6")
+                        
+                        div(class="col x8 md10 col-center ta-c mt30 mb30")
+                            img(src="unit_2/module_7/assets/images/self_6.png", alt="act_12" class="u-responsive-img m-a")
+                        
+                    div(class="col xs12 md6")
+                        div(class="col-center col xs12 md11 lh-20 ta-j")
+                            strong: span(class="u-textColor_4-dark") (1)
+                            select(class="c-select" name="act_12_2")
+                                option(value="" disabled selected) 
+                                option(value="1") Even though
+                                option(value="2") In spite of
+                                option(value="3") Although
+                            span  all the limitations I had in my childhood in Siloé in Cali, I think I am an example of how people in my neighborhood can be successful.  
+
+                            strong: span(class="u-textColor_4-dark") (2)
+                            select(class="c-select" name="act_12_3")
+                                option(value="" disabled selected) 
+                                option(value="1") Although
+                                option(value="2") In spite
+                                option(value="3") Despite
+                            span  this is considered one of the most dangerous places in Cali, I had the opportunity to study in a public school in the area. My teacher of English taught me that  
+                            strong: span(class="u-textColor_4-dark") (3)
+                            select(class="c-select" name="act_12_2")
+                                option(value="" disabled selected) 
+                                option(value="1") In spite
+                                option(value="2") Even though
+                                option(value="3") Despite
+                            span  English was a difficult subject, I could be totally bilingual if I studied hard. That’s what I did  
+                            strong: span(class="u-textColor_4-dark") (4)
+                            select(class="c-select" name="act_12_2")
+                                option(value="" disabled selected) 
+                                option(value="1") Even though
+                                option(value="2") Despite
+                                option(value="3") In Spite of
+                            span  of he taught the class only in English, I could understand most of the things he said. I was able to finish all the levels 
+                            strong: span(class="u-textColor_4-dark") (5)
+                            select(class="c-select" name="act_12_2")
+                                option(value="" disabled selected) 
+                                option(value="1") Although
+                                option(value="2") In Spite of
+                                option(value="3") Despite
+                            span  I didn’t have the textbooks and I didn’t have the chance to practice with anybody.                        
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

@@ -1,0 +1,72 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")            
+            div(class="row-flex col-center align-items-center")
+                h5.mt20 Listen to different reactions and classify them according to a type of reaction they express.
+                div(class="row mt40")
+                    div(class="col xs12 md6 ta-c")
+                        img(src="unit_3/module_12/assets/images/act_15.png", alt="act_5" class="u-responsive-img m-a")
+                    div(class="col xs12 md6")
+                        div(class="row mt30")
+                            div(class="row")
+                                div(class="col xs12 sm6 md3")
+                                    div(class="col xs4 md12 mb15 ta-c")
+                                        button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_16_3.mp3")
+                                    div(class="col xs8 md12 mb15")    
+                                        div(class="dragCont ")
+                                            div(class="drag" rescon="1") Example 1
+                                div(class="col xs12 sm6 md3")
+                                    div(class="col xs4 md12 mb15 ta-c")
+                                        button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_16_4.mp3")
+                                    div(class="col xs8 md12 mb15")    
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="2") Example 2
+                                div(class="col xs12 sm6 md3")
+                                    div(class="col xs4 md12 mb15 ta-c")
+                                        button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_16_1.mp3")
+                                    div(class="col xs8 md12 mb15")    
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="2") Example 3
+                                div(class="col xs12 sm6 md3")
+                                    div(class="col xs4 md12 mb15 ta-c")
+                                        button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_16_2.mp3")
+                                    div(class="col xs8 md12 mb15")    
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="1") Example 4
+
+                            div(class="row")
+                                table(class="c-table-estilo_uno col xs12")
+                                    thead
+                                        tr
+                                            th Positive Reaction
+                                            th Negative Reaction
+                                    tbody
+                                        tr
+                                            td: span(class="drop h40 centrado")
+                                            td: span(class="drop h40 centrado")
+                                        tr
+                                            td: span(class="drop h40 centrado")
+                                            td: span(class="drop h40 centrado")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_12/activities/act_16_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

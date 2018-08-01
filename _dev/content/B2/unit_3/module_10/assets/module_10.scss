@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+$MultimediaImages   : '../images/';
+
+.test_2{
+    $heightDrag: 2rem;
+    $widthDrag: 150px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+        
+    }
+    ._dropCont{
+        padding-bottom:10px;
+        position: relative;
+        width: 90%;
+        min-height: 90%;
+        box-shadow: 0 0 0 1px #8496c5;
+        padding: .5rem 1rem 1.5rem 1rem;
+        font-size: 0.8rem;
+        background-color: rgba(132, 150, 197, 0.61);
+        
+    }
+    .drop{
+        position: absolute;
+        top: auto;
+        bottom: -1rem;
+        left: auto;
+        right: 0;
+    }
+    .drop, .dragCont{
+        min-width: $widthDrag;
+        height: $heightDrag;
+    }
+}
+
+.act_13{
+    .c-table-estilo_tres{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calc(275px - 0.5rem), 1fr));
+        grid-gap: 0.5rem;
+        &--tbody--tr{
+            min-height: 300px;
+            padding: .5rem;
+        }
+        &--th{
+            text-align: center;
+            font-weight: bold;
+        }
+        &--td{
+            border: none;
+        }
+    }
+}
+
+.act_14{
+    $heightDrag: 4rem;
+    $widthDrag: 150px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+        
+    }
+    ._dropCont{
+        padding-bottom:10px;
+        position: relative;
+        // width: 90%;
+        // min-height: 90%;
+        // box-shadow: 0 0 0 1px #8496c5;
+        // padding: .5rem 1rem 1.5rem 1rem;
+        // font-size: 0.8rem;
+        // background-color: rgba(132, 150, 197, 0.61);
+        .u-bgIconListen{
+            position: absolute;
+            top: -1rem;
+            left: 0;
+            z-index: 7;
+            padding: 2px;
+        }
+    }
+
+    .drop, .dragCont{
+        width: $widthDrag;
+        height: $heightDrag;
+    }
+}

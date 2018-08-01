@@ -1,0 +1,108 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2" ng-init="s_actividad = 1" )
+
+    aside(class="template-asideLeft o-aside-Item")
+        |
+        |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5(class="mb30") Certain verbs + prepositions are followed by gerunds (-ing).
+            div(class="row-flex align-items-center" )
+                
+                div(class="col xs12 md6")
+                    div(class="col-center col xs12 md11 lg12")
+                        table(class="c-table-estilo_tres ta-c u-fz09")
+                            thead
+                                tr
+                                    th 
+                                    th EXAMPLE
+                                    
+                            tbody
+                                tr
+                                    td #[strong (dis)agree to]
+                                    td Elizabeth agreed to sign the paper
+                                tr
+                                    td #[strong be interested in]
+                                    td Everybody is interested in studying the new Agricultural program.
+                                tr
+                                    td #[strong believe in]
+                                    td We need to believe in behaving according to the law.
+                                tr
+                                    td #[strong concentrate on]
+                                    td You need to concentrate on studying for the final examinations!
+                                tr
+                                    td #[strong cope with]
+                                    td We need to cope with accepting the amount of work while we study.
+                                tr
+                                    td #[strong count on]
+                                    td I count on reviewing the topic before delivering the paper.
+                                tr
+                                    td #[strong decide against]
+                                    td She had to decide against allowing graffiti in the campus.
+                                tr
+                                    td #[strong depend on]
+                                    td Your grades will depend on studying really hard.
+                                tr
+                                    td #[strong get on with]
+                                    td She had to get on with reading in front of the audience.
+                                    
+
+                div(class="col xs12 md6")
+                    div(class="col-center col xs12 md11 lg12")
+                        table(class="c-table-estilo_tres ta-c u-fz09")
+                            thead
+                                tr
+                                    th 
+                                    th EXAMPLE
+                                    
+                            tbody
+                                tr
+                                    td #[strong get used to]
+                                    td I am getting used to eating at 2:00 PM.
+                                tr
+                                    td #[strong insist on]
+                                    td She insisted on bringing the kids to the party.
+                                tr
+                                    td #[strong look forward to]
+                                    td I look forward to hearing from you soon!
+                                tr
+                                    td #[strong object to]
+                                    td I object to driving after you are 21 years old.
+                                tr
+                                    td #[strong put up with]
+                                    td I cannot put up with listening to salsa while I study.
+                                tr
+                                    td #[strong rely on]
+                                    td She had to rely on receiving the paperwork a few minutes before the meeting.
+                                tr
+                                    td #[strong resort to]
+                                    td Armando had to rely on preparing the presentation in Prezi.
+                                tr
+                                    td #[strong specialize in]
+                                    td Javier specialized in fixing computers.
+                                tr
+                                    td #[strong succeed in]
+                                    td Norma succeeded in taking three exams on the same day!
+
+                
+                                    
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+    

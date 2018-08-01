@@ -1,0 +1,35 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_7" ng-init="ContadorPalabras(150)")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content")
+            h5 The graph below shows the number of computer and internet users in different Central America countries.
+
+            .row
+                .row-flex.align-items-center
+                    .col.xs12.md6.ta-c
+                        img(src="unit_2/module_7/assets/images/act_8_1.png" alt="" class="u-responsive-img mt30 m-a")
+                    .col.xs12.md6.ta-c
+                        h6 Write a report describing the information in the graph below. #[strong Minimum 150 words. You have 20 minutes for this task].
+                        div(class="c-wrapTextarea ")
+                            textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                            div(class="c-wrapTextarea__counter")
+                                span(id="contador") 0
+                                span(ng-bind="limitePalabras")
+                                span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="enviarTexto()" ng-show="enviarMensaje_minPalabras")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

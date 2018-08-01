@@ -1,0 +1,94 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md6 col-center mt30-md mt30-sm")
+                    h5 We use different pronouns in relative clauses to express different levels of formality:
+                    div(class="row-flex ta-c")
+                        img(src="unit_3/module_11/assets/images/act_18_1.png", alt="" class="showTo-sm u-responsive-img m-a")
+                        h6(class="hideFrom-sm u-bgColor_3-light ta-c w90 m-a padding10") More Formal
+                    div(class="row-flex")
+                        div(class="col-flex-xs4 col-center")
+                            table(class="c-table-estilo_dos w90 m-a ta-c")
+                                tbody
+                                    tr
+                                        td Whom
+                                    tr
+                                        td Who
+                                    tr
+                                        td That
+                                    tr
+                                        td No Pronoun
+                                
+                        div(class="col-flex-xs4 col-center")
+                            table(class="c-table-estilo_dos w90 m-a")
+                                tbody
+                                    tr
+                                        td Which
+                                    tr
+                                        td That
+                                    tr
+                                        td No Pronoun
+                        div(class="col-flex-xs4 col-center")
+                            table(class="c-table-estilo_dos w90 m-a")
+                                tbody
+                                    tr
+                                        td In which
+                                    tr
+                                        td Which
+                                    tr
+                                        td Where
+                                    tr
+                                        td That
+                                    tr
+                                        td No Pronoun
+                    div(class="row-flex")
+                            h6(class="hideFrom-sm u-bgColor_3-light ta-c w90 m-a padding10") Less formal
+                    //- div(class="col-flex-sm12 col-flex-md4 col-center mt30-md mt30-sm")
+                    //- div(class="row-flex")
+                        //- div(class="col-flex-sm12 col-flex-md4 col-center mt30-md mt30-sm")
+                                //- 
+                        //- div(class="col-flex-sm12 col-flex-md4 col-center mt30-md mt30-sm")
+                    //- div(class="row-flex")
+                        //- div(class="col-flex-sm12 col-flex-md4 col-center mt30-md mt30-sm")
+                                //- 
+                        //- div(class="col-flex-sm12 col-flex-md4 col-center mt30-md mt30-sm")
+                div(class="col-flex-sm12 col-flex-md6 col-center mt30-md mt30-sm")
+                    h5 The following sentences are written in formal register. Rewrite them to make them more informal.
+                    div(class="row-flex")
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | That is the woman whom I talked to about the problem.  #[span(class="c-textField mt10"): input(type="text" placeholder="Text here..." class="c-input js-escribir w235")] 
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | Can you bring the box in which all your things were packed? #[span(class="c-textField mt10"): input(type="text" placeholder="Text here..." class="c-input js-escribir w235")] 
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | I don´t have the paper which you mention.  #[span(class="c-textField mt10 row"): input(type="text" placeholder="Text here..." class="c-input js-escribir w80")] 
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | The man over there is the mechanic who usually fixes our car.  #[span(class="c-textField mt10"): input(type="text" placeholder="Text here..." class="c-input js-escribir w235")] 
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark") • 
+                                | This is the museum in which his paintings are displayed.  #[span(class="c-textField mt10"): input(type="text" placeholder="Text here..." class="c-input js-escribir w235")] 
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

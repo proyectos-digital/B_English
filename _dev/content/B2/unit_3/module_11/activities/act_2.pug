@@ -1,0 +1,68 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            h5 Based on the information and the exercises above, choose the correct pronoun to complete the sentences.
+            div(class="row")
+                div(class="row-flex mt10-xs mt10-md mt10-sm m-a")
+                    div(class="col-flex-xs12 col-flex-md2 offset-md1 col-center mt10-sm mt20-md"): div(class="row-flex")
+                        div(class="dragCont m-a f-l mt10")
+                            span(class="drag") when
+                        div(class="dragCont m-a f-l mt10")
+                            span(class="drag") whose
+                        div(class="dragCont m-a f-l mt10")
+                            span(class="drag") where
+                        div(class="dragCont m-a f-l mt10")
+                            span(class="drag") whom
+                        div(class="dragCont m-a f-l mt10")
+                            span(class="drag") who
+
+                    div(class="col-flex-xs12 col-flex-md8 offset-md1 col-center mt10-sm mt20-md")
+                        div(class="mb20 row-flex mt30")
+                            div(class="col-flex")
+                                p
+                                    strong(class="u-textColor_4-dark")  1. 
+                                    | He is the player 
+                                    span(class="drop") 
+                                    | scored the last goal.
+                        div(class="mb20 row-flex mt30")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  2. 
+                                | Summer is the season 
+                                span(class="drop") 
+                                | I prefer to go on vacation. 
+                        div(class="mb20 row-flex mt30")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  3. 
+                                | I know a mechanic 
+                                span(class="drop") 
+                                | can help us fix the car.
+                        div(class="mb20 row-flex mt30")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  4. 
+                                | We went back to the shop 
+                                span(class="drop") 
+                                | I saw the skirt I liked.
+                        div(class="mb20 row-flex mt30")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  5. 
+                                |  He is the painter paints 
+                                span(class="drop ") 
+                                | are being auctioned.
+                    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,239 @@
+// 
+%mensajes{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    padding: 0.5rem;
+    opacity: 0;
+    user-select: none;
+    z-index: 1;
+}
+.c-game{
+    /* juego completar la frase*/
+
+    $zIndexBtnInstruction: 1;
+    $zIndexBtnClose: 3;
+    $zIndexFeedBack: 2;
+
+    &CompletePhrase{
+        // 
+        position: relative;
+        min-height: min-content;
+
+        &--button{
+            
+            &-Instructions{
+                @extend .c-btn;
+                position: absolute;
+                padding: 0.5rem;
+                top: 1rem;
+                left: 1rem;
+                z-index: $zIndexBtnInstruction;
+            }
+
+            &-Close,
+            &-Init {
+                @extend .c-btn;
+                
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+
+                width: 100px;
+                height: 2rem;
+                
+                padding: 0.5rem;
+                z-index: $zIndexBtnClose;
+            }
+
+            &-Check{
+                @extend .c-btn-Icon;
+                width: 2.5rem;
+                outline: none;
+                background-color: var(--color_2);
+                &::before{ background-image: url('#{$GlobalImages}/ui-icon-check.svg');
+                }
+            }
+        }
+        &--Counter{
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            padding: 0.5rem;
+            opacity: 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.3);
+        }
+        &--FeedBack{
+            @extend %mensajes;
+            background-color: rgba(black,0.5);
+            opacity: 0;
+            user-select: none;
+            pointer-events: none;
+            transition: opacity 350ms ease-in-out;
+            z-index: $zIndexFeedBack;
+
+            &.is-visible{
+                opacity: 1;
+                user-select: initial;
+                pointer-events: initial;
+            }
+        }
+        &--Init{
+            @extend %mensajes;
+            background-color: rgba(black,0.5);
+            opacity: 1;
+            transition: opacity 350ms ease-in-out;
+            
+            &.is-hidden{
+                opacity: 0;
+                user-select: none;
+                z-index: $zIndexFeedBack;
+            }
+        }
+        &--Block{
+            min-height: 360px;
+
+            padding-bottom: 4rem;
+
+            background-color: var(--color_2-dark);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-blend-mode: hard-light;
+        }
+        &--Phrases{
+            min-height: 360px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        &--Words{
+            margin: 0.5rem 2vmax;
+            padding: 5px 10px;
+            position: relative;
+            
+            color: white;
+            font-size: 1.2rem;
+
+            background-color: #36b1a3;
+            border-radius: 7px;
+            cursor: pointer;
+            user-select: none;
+            outline: none;
+            border-width: 1px;
+
+            animation: jumpInfinite ease-in-out 2s;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 50%;
+            animation-fill-mode:forwards; /*when the spec is finished*/
+            &:nth-child(even){
+                animation-delay: .5s;
+            }
+
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                top: -0.15rem;
+                left: -0.15rem;
+                width: calc(100% + 0.3rem);
+                height: calc(100% + 0.3rem);
+                user-select: none;
+            }
+            &:before {
+                z-index: 3;
+                transform: rotateZ(3.75deg);
+                border-width: 0.07rem;
+                border-style: solid;
+                border-color: var(--color_2-darker);
+                border-radius: .3rem;
+            }
+            &:after {
+                z-index: -2;
+                border-style: dashed;
+                transform: rotateZ(-4deg);
+                border-color: var(--color_2-dark);
+                border-radius: .3rem;
+                border-width: 0.13rem;
+            }
+        }
+        &--CountTimer{
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            padding: 0.2rem 0.7rem 0 0;
+            user-select: none;
+            z-index: 2;
+            width: 4rem;
+            &::before{
+                content: attr(data-tempo);
+                font-size: 0.8rem;
+                position: absolute;
+                right: 0;
+                bottom: 5px;
+            }
+        }
+        &--Timer{
+            width: 100%;
+            height: 100%;
+            font-size: 1.8rem;
+            border: none;
+            pointer-events: none;
+            user-select: none;
+            background-color: transparent;
+        }
+        &--Result{
+            display: flex;
+            width: 100%;
+            padding: 0 1.5rem;
+
+            position: absolute;
+            top: auto;
+            bottom: 10px;
+        }
+        &--Response{
+            width: 90%;
+            min-width: 300px;
+            height: 2.5rem;
+            margin: 0 auto;
+            display: block;
+            pointer-events: none;
+            user-select: none;
+        }
+        /* Estados del juego*/
+        &.has-finished{
+            .c-gameCompletePhrase--Instructions{
+                opacity: 1;
+                z-index: 3;
+            }
+            .c-gameCompletePhrase--FeedBack{
+                opacity: 1;
+                z-index: 4;
+            }
+        }
+    }    
+}
+
+
+@keyframes jumpInfinite{
+    0% {
+      transform:  translate(0px,0px)  ;
+    }
+    50% {
+      transform:  translate(0px,10px)  ;
+    }
+    100% {
+      transform:  translate(0px,0px)  ;
+    }
+  }
+

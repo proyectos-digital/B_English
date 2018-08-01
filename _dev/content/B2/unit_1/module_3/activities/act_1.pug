@@ -1,0 +1,93 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row")
+                h5 #[strong.u-textColor_4 1. ] Watch the video. What do you think just happened?
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row-flex justify-center mt20 mb20"): div(class="col md11"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                            source(src="unit_1/module_3/"+pathVideo+"act_1.mp4" type="video/mp4")
+
+                        div(class="row"): div(class="col-flex-sm10 col-center")
+                            h6 Now read the following sentences:
+
+                            p(class="mt20")
+                                strong(class="u-textColor_4-dark")  1.
+                                | The burglar #[strong can’t have entered] the house through one of the windows. They are too small.
+
+                            p(class="mt20")
+                                strong(class="u-textColor_4-dark")  2.
+                                |  If the burglar was alone, he #[strong can’t have taken ] many things with him.
+
+                    div(class="col-flex-sm11 col-flex-md6 col-center")
+
+                        div(class="row mt100-md mt30-xs")
+                            ul(class="c-list" data-ejercicio="")
+                                h6 Complete the following sentences using #[strong can’t have + past participle]:
+
+                                p(class="mt30")
+                                    strong(class="u-textColor_4-dark")  1.
+                                    |  The burglar
+                                    strong (get)
+                                    span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")
+                                    | in through the windows. They are too small.
+
+                                p
+                                    strong(class="u-textColor_4-dark")  2.
+                                    |  If he was alone, he
+                                    strong (taken)
+                                    span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")
+                                    too too many things with him.
+                                p
+                                    strong(class="u-textColor_4-dark")  3.
+                                    |  He
+                                    strong (make)
+                                    span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")
+                                    | too much noise, because the dogs didn’t bark.
+
+                                p
+                                    strong(class="u-textColor_4-dark")  4.
+                                    |  If he was quick, he
+                                    strong (search)
+                                    span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")
+                                    | all the house.
+
+                                p
+                                    strong(class="u-textColor_4-dark")  5.
+                                    |  He
+                                    strong (find)
+                                    span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")
+                                    | the safe box. It is very well hidden.
+
+
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_3/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

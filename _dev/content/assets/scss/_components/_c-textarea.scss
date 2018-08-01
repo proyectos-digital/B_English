@@ -1,0 +1,24 @@
+.c{
+    &-textarea {
+        @extend %placeholder;
+        @extend %textField;
+        
+        height: auto;
+        min-height : 5.5rem;
+        width: 100%;
+
+        padding: 5px;
+        margin: 0;
+        resize: none;
+        cursor: text;
+    }
+}
+
+// For textarea autoresize
+.hiddendiv {
+	display: none;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
+	padding-top: 1.2rem; /* prevents text jump on Enter keypress */
+}

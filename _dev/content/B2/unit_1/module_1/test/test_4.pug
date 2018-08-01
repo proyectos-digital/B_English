@@ -1,0 +1,102 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex col-center mt10-xs mt100-md align-items-center")
+                div(class="col xs12 sm10 md8 col-center ")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent lh25")
+                            p James Jackson usually has only 15 minutes to eat lunch, so he #[strong.u-textColor_4 (1)] #[strong.u-textColor_1 bolts it down. ] He only has a sandwich and a soda. But his wife loves cooking and she always #[strong.u-textColor_4 (2)] #[strong.u-textColor_1 whips up ] a wonderful dinner, which she has ready when he arrives home. This explains why James is not so thin. He #[strong.u-textColor_4 (3)] #[strong.u-textColor_1 pigs out ] every evening on a full course dinner: meat and vegetables, a pasta or rice side dish, and to #[strong.u-textColor_4 (4)] #[strong.u-textColor_1 top it off ], a big dessert that his wife #[strong.u-textColor_4 (5)] #[strong.u-textColor_1 picks up on] her way home from work.
+
+            div(class="row-flex col-center mt30-xs mt50-md align-items-top")
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10 ")
+
+                    div(class="row mb10")
+                        p
+                            strong: span(class="u-textColor_4-dark") •
+                            span  To eat food very quickly is to…
+                            div(class="row-flex ta-c")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                label(for="SelectRadio_1" class="c-CheckSelected col-flex ml10 mr10" ) Bolt it down.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                label(for="SelectRadio_2" class="c-CheckSelected col-flex ml10 mr10") Pig out.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_3" name="selection_1" value="3")
+                                label(for="SelectRadio_3" class="c-CheckSelected col-flex ml10 mr10") Whip it up.
+
+                    div(class="row mb10")
+                        p
+                            strong: span(class="u-textColor_4-dark") •
+                            span  To eat a lot of food is to…
+                            div(class="row-flex ta-c")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="1")
+                                label(for="SelectRadio_4" class="c-CheckSelected col-flex ml10 mr10" ) Wear out.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_2" value="2")
+                                label(for="SelectRadio_5" class="c-CheckSelected col-flex ml10 mr10") Roll out.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_6" name="selection_2" value="3")
+                                label(for="SelectRadio_6" class="c-CheckSelected col-flex ml10 mr10") Pig out.
+
+                    div(class="row mb10")
+                        p
+                            strong: span(class="u-textColor_4-dark") •
+                            span  To pick up is to…
+                            div(class="row-flex ta-c")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_3" value="1")
+                                label(for="SelectRadio_7" class="c-CheckSelected col-flex ml10 mr10" ) To throw away.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_3" value="2")
+                                label(for="SelectRadio_8" class="c-CheckSelected col-flex ml10 mr10") To buy something.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_9" name="selection_3" value="3")
+                                label(for="SelectRadio_9" class="c-CheckSelected col-flex ml10 mr10") To cook something.
+
+
+
+
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+
+                    div(class="row mb10")
+                        p
+                            strong: span(class="u-textColor_4-dark") •
+                            span  To prepare something to eat is to…
+                            div(class="row-flex ta-c")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_10" name="selection_4" value="1")
+                                label(for="SelectRadio_10" class="c-CheckSelected col-flex ml10 mr10" ) Bolt down.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_11" name="selection_4" value="2")
+                                label(for="SelectRadio_11" class="c-CheckSelected col-flex ml10 mr10") Whip up.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_12" name="selection_4" value="3")
+                                label(for="SelectRadio_12" class="c-CheckSelected col-flex ml10 mr10") Top off.
+
+                    div(class="row mb10")
+                        p
+                            strong: span(class="u-textColor_4-dark") •
+                            span To finish something with a final activity or detail is to…
+                            div(class="row-flex ta-c")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_5" value="1")
+                                label(for="SelectRadio_13" class="c-CheckSelected col-flex ml10 mr10" ) Top it off.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_5" value="2")
+                                label(for="SelectRadio_14" class="c-CheckSelected col-flex ml10 mr10") Pick it up.
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_5" value="3")
+                                label(for="SelectRadio_15" class="c-CheckSelected col-flex ml10 mr10") Pig out.
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

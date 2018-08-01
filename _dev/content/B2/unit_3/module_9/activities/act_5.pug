@@ -1,0 +1,61 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropClonable()")
+        section(class="template-content")
+            
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                    div(class="row")
+                        img(src="./unit_3/module_9/assets/images/act_5.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+                    div(class="row")
+                        h6 Read the following passage. Drag and drop the word that best completes the sentences. NOTICE. You can repeat some of these:
+
+                        div(class="row-flex justify-around mt30")
+                            div(class="dragCont"): div(class="drag") take
+                            div(class="dragCont"): div(class="drag") had
+                            div(class="dragCont"): div(class="drag") have
+                            div(class="dragCont"): div(class="drag") taking
+
+                        div(class="row mt30")
+                            p(class="u-txtSpace")
+                                | Sometimes it's a good idea to
+                                span(class="drop")
+                                | your time when making a decision. For example, when I decided to get married, I have
+                                span(class="drop")
+                                | a relationship with my boyfriend for four years. This is one of the secrets for our stability. Now, my husband and I are planning to 
+                                span(class="drop")
+                                | a baby. When we
+                                span(class="drop")
+                                | a look at our future, we imagine the two of us 
+                                span(class="drop")
+                                | pictures of the baby, 
+                                span(class="drop")
+                                | a nap and hugging him or her. We don't plan to
+                                span(class="drop")
+                                | arguments about the way to raise the kid, and mainly, we are planning to
+                                span(class="drop")
+                                | a good time with both of them. The secret is that the baby will not
+                                span(class="drop")
+                                | the place of my husband. He will be just our beloved baby!!!
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropClonable()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

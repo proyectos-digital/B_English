@@ -1,0 +1,65 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2" )
+
+    aside(class="template-asideLeft o-aside-Item")
+        |
+        |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            div(class="row-flex align-items-center")
+                div(class="col sm12 md6 col-center")
+                    div(class="row-flex align-items-center")
+                        h6 #[span(class="u-textColor_4-dark") 1] .  Read the sentence on the left and find how it is related on the right.
+                        img(src="unit_2/module_7/assets/images/self_10.png", alt="act_2" class="u-responsive-img m-a showTo-md")
+                        
+                        
+                div(class="col xs12 md6 col-center")
+                    div(data-ejercicio="unir" class="mt40 row-flex")
+                            div(class="col-flex-xs5"): h6.ta-c A month ago,Amanda said
+                            div(class="col-flex-xs5 col-center"): h6.ta-c A month ago, Amanda said that she
+                    div(data-ejercicio="unir" class=" row m-a")
+                        div(id="sourceElements" class="ancho300 js-columnas")
+                            span(id="Item0_0" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="1") “A month ago, Amanda said”
+                            span(id="Item0_1" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="2") “I am in Itagui.”
+                            span(id="Item0_2" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="4") “had been in Itagui by that time.”
+                            span(id="Item0_3" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="3") “I have been to Itagui.”
+                            span(id="Item0_4" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="5") “I have visited Itagui three times this year.”
+                            span(id="Item0_5" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="6") “I visited Itagui a month ago.” 
+                            span(id="Item0_6" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="7") “I can visit many places in Itagui.”
+                            span(id="Item0_7" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="8") “I must stay one more week in Itagui.” 
+                            
+                            
+                        div(id="linecanvas" style="width: 60px;")
+                        div(id="targetElements" class="ancho300 js-columnas") 
+                            span(id="Item1_0" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="6") had visited Itagui a month ago.
+                            span(id="Item1_1" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="4") I was in Itagui by that time
+                            span(id="Item1_2" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="5") had visited Itagui three times this year.
+                            span(id="Item1_3" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="7") could visit many places in Itagui
+                            span(id="Item1_4" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="3") had been in Itagui.
+                            span(id="Item1_5" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="8") had to stay one more week in Itagui.
+                            span(id="Item1_6" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="2") was in Itagui.
+                            span(id="Item1_7" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="1") A month ago, Amanda said that she
+                                                               
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

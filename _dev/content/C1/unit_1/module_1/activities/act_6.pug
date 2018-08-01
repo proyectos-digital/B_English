@@ -1,0 +1,27 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_6")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Give a two-minute summary of the text you read. Record it and send it to your teacher.
+            div(class="row row-flex ")
+                figure(class="m-a")
+                    img(src="unit_1/module_1/assets/images/act_6_1.jpg" alt="" class="u-responsive-img mt30")
+                    figcaption
+                        div(class="row c-ngRecorder ta-c mt30" ng-audio-recorder id="mainAudio" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod1_act6',1)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

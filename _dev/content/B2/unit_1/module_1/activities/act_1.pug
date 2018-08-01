@@ -1,0 +1,76 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row")
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md9 col-center") 
+                        h5 #[strong.u-textColor_4 1. ] Watch the video:
+                        div(class="row-flex justify-center mb20"): div(class="col md11 col-center"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                            source(src="unit_1/module_1/"+pathVideo+"act_1.mp4" type="video/mp4")
+
+                        div(class="row"): div(class="col-flex-sm10 col-center")
+                            h6 Now, listen again and read the following examples, paying attention to the words in bold.
+                            p • By this time tomorrow, #[strong we will be flying ] over Barranquilla, just before landing.
+                            p • What do you think you #[strong will be doing]  at around 5:00 PM tomorrow?
+                            p • At 5:00 PM tomorrow, we will be checking in at the hotel.
+                    div(class="col-flex-sm11 col-flex-md10 col-center")
+
+                        div(class="row mt20-md mt30-xs offset-md1")
+                            ul(class="c-list " data-ejercicio="") 
+                                p. 
+                                    #[strong 2] Complete the sentences using the future continuous form of the verbs in parenthesis.
+                                li: span.
+                                    This time tomorrow, Clara 
+                                    #[span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")] 
+                                    #[strong (travel)] 
+                                    to Barranquilla with her husband.
+                                li: span.
+                                    At the Frogs Disco, there is a famous chef who 
+                                    #[span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")] 
+                                    #[strong (cooking)] 
+                                    local food.
+                                li: span.
+                                        #[span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")]
+                                        anyone.
+                                        #[span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")]
+                                        #[strong (wait) ]
+                                        for you at the airport?
+                                li
+                                    span No, because as soon as we arrive we 
+                                    span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")
+                                    strong (rent)
+                                    span  a car!
+                                li
+                                    span.
+                                        We 
+                                        #[span(class="c-textField"): input(type="text" placeholder="Write here..." class="c-input js-escribir")] 
+                                        #[strong (celebrate)] 
+                                        our anniversary with my wife this year.
+
+
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

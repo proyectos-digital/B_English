@@ -1,0 +1,35 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_4")
+    aside(class="template-asideLeft o-aside-Item")
+
+
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row row-flex mt30")
+                .col.xs12.md6
+                    h5 You have 40 minutes for this task. Write an argument or a case to an educated reader with no specialized knowledge of the following topic:
+                    p.u-textColor_2 Some people prefer to buy designer clothes while others prefer to have their clothes made by a tailor or a dressmaker. Which one do you prefer?
+                    p Give reasons for your answers.#[br] #[strong Minimum 250 words].
+                    div(class="c-wrapTextarea " ng-init="ContadorPalabras(250)")
+                        textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0 
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")
+                .col.xs12.md6.ta-c
+                    img(src="unit_3/module_9/assets/images/test_4_1.png", alt="", class="u-responsive-img")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        bbutton(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

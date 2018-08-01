@@ -1,0 +1,30 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown")
+            
+            div(class="row mt40 ")
+                h5 #[strong.u-textColor_4 1. ]  Listen carefully to the following text:
+                div(class="row w90 m-a")
+                    div(class="xs6 col-center")
+                        img(src="unit_1/module_2/assets/images/col_2a.png", alt="" class="u-responsive-img mt20")
+                    div(class="col-flex-xs6 col-center")
+                        audio( controls class="row mt30")
+                            source(src="unit_1/module_2/assets/audios/col_2.mp3" type="audio/mpeg")
+                            | Your browser does not support the audio element.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,98 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                div(class="col-flex-sm12 col-flex-md12 col-center mt50-md mt30-sm")
+                    table(class="c-table-SelfCheck mt20")
+                        thead   
+                            tr
+                                th.w5 
+                                th.w35 LANGUAGE
+                                th.w20 
+                                th.w20 
+                                th.w20 
+                        tbody
+                            tr
+                                td.ta-c: strong 1
+                                td.ta-c.padding10 Identify and use would to talk about habits in the past
+                                    
+                                td.ta-c.padding10 
+                                    input(class="c-inputRadio ml10" id="inputRadio_1" type="radio" name="selInputRadio_1" value="1")
+                                    label(class="c-Checkbox ml10" for="inputRadio_1") We would love to go with you!
+                                td.ta-c.padding10 
+                                    input(class="c-inputRadio ml10" id="inputRadio_2" type="radio" name="selInputRadio_1" value="2")
+                                    label(class="c-Checkbox ml10" for="inputRadio_2") We would go to the beach after school.
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_3" type="radio" name="selInputRadio_1" value="3")
+                                    label(class="c-Checkbox ml10" for="inputRadio_3") I would like a sandwich.
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_4" type="radio" name="selInputRadio_1" value="4")
+                                    label(class="c-Checkbox ml10" for="inputRadio_4") Where would I go?
+
+                            tr
+                                td.ta-c: strong 2
+                                td.ta-c.padding10 Identify and use verbs following prepositions of, for, from and on
+                                    
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_5" type="radio" name="selInputRadio_2" value="1")
+                                    label(class="c-Checkbox ml10" for="inputRadio_5") Let’s go for a walk.
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_6" type="radio" name="selInputRadio_2" value="2")
+                                    label(class="c-Checkbox ml10" for="inputRadio_6") I was looking for you
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_7" type="radio" name="selInputRadio_2" value="3")
+                                    label(class="c-Checkbox ml10" for="inputRadio_7") They are waiting for the doctor.
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_8" type="radio" name="selInputRadio_2" value="4")
+                                    label(class="c-Checkbox ml10" for="inputRadio_8") I’m all for going to the movies tonight.
+
+                            tr
+                                td.ta-c: strong 3
+                                td.ta-c.padding10 Synthesize
+                                    
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_9" type="radio" name="selInputRadio_3" value="1")
+                                    label(class="c-Checkbox ml10" for="inputRadio_9") To tell someone something in a way that helps them understand it better
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_10" type="radio" name="selInputRadio_3" value="2")
+                                    label(class="c-Checkbox ml10" for="inputRadio_10") To think carefully about something before making a judgment about its value, importance, or quality
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_11" type="radio" name="selInputRadio_3" value="3")
+                                    label(class="c-Checkbox ml10" for="inputRadio_11") To make something new or original that did not exist before
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_12" type="radio" name="selInputRadio_3" value="4")
+                                    label(class="c-Checkbox ml10" for="inputRadio_12") To combine different ideas, styles, or systems into a single idea or system
+
+                            tr
+                                td.ta-c: strong 4
+                                td.ta-c.padding10 Evaluate arguments
+                                    
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_13" type="radio" name="selInputRadio_4" value="1")
+                                    label(class="c-Checkbox ml10" for="inputRadio_13") To make something new or original that did not exist before
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_14" type="radio" name="selInputRadio_4" value="2")
+                                    label(class="c-Checkbox ml10" for="inputRadio_14") To combine different ideas, styles, or systems into a single idea or system
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_15" type="radio" name="selInputRadio_4" value="3")
+                                    label(class="c-Checkbox ml10" for="inputRadio_15") To think carefully about something before making a judgment about its value, importance, or quality
+                                td.ta-c.padding10
+                                    input(class="c-inputRadio ml10" id="inputRadio_16" type="radio" name="selInputRadio_4" value="4")
+                                    label(class="c-Checkbox ml10" for="inputRadio_16") To tell someone something in a way that helps them understand it better
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

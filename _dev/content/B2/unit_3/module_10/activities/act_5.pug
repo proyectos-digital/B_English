@@ -1,0 +1,79 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_7")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="girarCartas()")
+        section(class="template-content")
+            div.flip_card-container.mt40-md
+                div(class="flip_card-row flipFlexible")
+                        div(class="flip_card col-center" seleccion pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content A large number of people want to buy cars.
+                        div(class="flip_card col-center" seleccion pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content I think he might be sick.
+                        div(class="flip_card col-center" seleccion pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Damage was estimated at around $ 5 million.
+                        div(class="flip_card col-center" seleccion pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content It could be more or less 50.000 people.
+                        div(class="flip_card col-center" seleccion pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Not exactly 3 o´clock.
+                        div(class="flip_card col-center" seleccion pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content It could be more or less $ 5 million.
+
+
+                div(class="flip_card-row flipFlexible")
+                        div(class="flip_card col-center" seleccion pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content It is about 3 o´clock.
+                        div(class="flip_card col-center" seleccion pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content About 40 people died in the explosion.
+                        div(class="flip_card col-center" seleccion pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Approximately 50.000 people filled the stadium.
+                        div(class="flip_card col-center" seleccion pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Many people want to buy cars.
+                        div(class="flip_card col-center" seleccion pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content The exact number of people may be slightly more or less.
+                        div(class="flip_card col-center" seleccion pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content I am sort of worried about his health. 
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+       
+        button(class="c-btn-IconAction u-bgIconCheck js-validarWordFind")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadCartas()")
+
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+| 
+script(src="./../assets/js/librerias/jquery.flip.min.js")

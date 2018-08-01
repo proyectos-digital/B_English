@@ -1,0 +1,52 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_3")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h6.mb20.
+                    A wide range of vocabulary is used when we speak about entertainment. Let’s talk a look at some different categories of words. 
+                    #[br]
+                    Match the following words with their correct definition.
+                div(class="col xs12 col-center " data-ejercicio="unir")
+                    div(id="sourceElements" class="js-columnas w30")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Scene 
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") Episode
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Caption
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") Coming attractions
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Docudrama
+                                             
+                        
+                    div(id="linecanvas" style="width: 80px; flex: 0 0 80px;")
+                    div(id="targetElements" class=" js-columnas max-w75 w75") 
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="5") A television drama based on real events. 
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="3") The text at the bottom of the screen that explains the movie. 
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="2") A part of the series that a radio or TV programme is divided into.
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="4") The movies that will be in the cinema soon.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="1") A small part of a movie, usually just a few seconds or minutes long. 
+  
+                    
+                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

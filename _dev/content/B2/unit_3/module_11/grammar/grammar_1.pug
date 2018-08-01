@@ -1,0 +1,144 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10" ng-init="listenImage = 1; s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            
+            
+            h5 Pronouns in Defining Relative Clauses:
+            div(class="row-flex mt10-xs mt10-md")
+                div(class="col-flex-xs12 col-flex-md12 col-center mt10-sm")
+                    table(class="c-table-estilo_tres w100")
+                        thead
+                            tr
+                                th 
+                                th PEOPLE
+                                th THINGS
+                                th PLACE
+                                th TIME
+                                th REASON
+                        tbody
+                            tr
+                                td: strong SUBJECT
+                                td who, that
+                                td which, that
+                                td 
+                                td 
+                                td 
+                            tr
+                                td: strong OBJECT
+                                td that, who, whom
+                                td which, that
+                                td where
+                                td when
+                                td what/why
+                            tr
+                                td: strong POSSESSIVE
+                                td whose
+                                td whose, of which
+                                td 
+                                td 
+                                td 
+            h5 Pronouns in Non-defining Relative Clauses:
+            div(class="row-flex mt10-xs mt10-md")
+                div(class="col-flex-xs12 col-flex-md12 col-center mt10-sm")
+                    table(class="c-table-estilo_tres w100")
+                        thead
+                            tr
+                                th 
+                                th PEOPLE
+                                th THINGS
+                                th PLACE
+                                th TIME
+                                th REASON
+                        tbody
+                            tr
+                                td: strong SUBJECT
+                                td who
+                                td which
+                                td 
+                                td 
+                                td 
+                            tr
+                                td: strong OBJECT
+                                td who, whom
+                                td which
+                                td where
+                                td when
+                                td why
+                            tr
+                                td: strong POSSESSIVE
+                                td whose
+                                td whose, of which
+                                td 
+                                td 
+                                td
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row"): h6 Formality Scales:
+            div(class="row-flex")
+                div(class="col-flex-xs12 col-flex-sm10 col-center")
+                    table(class="c-table-estilo_dos row")
+                        tbody
+                            tr
+                                td(rowspan="4" class="showTo-sm xs3" style="background-color: #86CFF2; border-right: 2px solid white;"): img(src="unit_3/module_11/assets/images/gra_1.png", alt="" class="u-responsive-img min-h120 u-ob_fit-cover")
+                                td(class="ancho130" style="border-right: 20px solid white;") Whom
+                                td
+                                    strong(class="u-textColor_3 mr10") Example:
+                                    br
+                                    strong The people whom I call can enter the room.
+                            tr
+                                td(style="border-right: 20px solid white;") Who
+                                td The people who I call can enter the room.
+                            tr
+                                td(style="border-right: 20px solid white;") That
+                                td The people that I call can enter the room.
+                            tr
+                                td(style="border-right: 20px solid white;") No Pronoun
+                                td The people I call can enter the room.
+                        
+                div(class="col-flex-xs12 col-flex-sm10 col-center mt20")
+                    table(class="c-table-estilo_dos row")
+                        tbody
+                            tr
+                                td(rowspan="3" class="showTo-sm xs3" style="background-color: #86CFF2; border-right: 2px solid white;"): img(src="unit_3/module_11/assets/images/gra_1.png", alt="" class="u-responsive-img min-h120 u-ob_fit-cover")
+                                td(class="ancho130" style="border-right: 20px solid white;") Which
+                                td This is the book which I chose.
+                            tr
+                                td(style="border-right: 20px solid white;") That
+                                td This is the book that I chose.
+                            tr
+                                td(style="border-right: 20px solid white;") No Pronoun
+                                td This is the book I chose.
+                        
+                div(class="col-flex-xs12 col-flex-sm10 col-center mt20")
+                    table(class="c-table-estilo_dos row")
+                        tbody
+                            tr
+                                td(rowspan="3" class="showTo-sm xs3" style="background-color: #86CFF2; border-right: 2px solid white;"): img(src="unit_3/module_11/assets/images/gra_1.png", alt="" class="u-responsive-img min-h120 u-ob_fit-cover")
+                                td(class="ancho130" style="border-right: 20px solid white;") In which
+                                td This is the building in which I teach my class.
+                            tr
+                                td(style="border-right: 20px solid white;") Where
+                                td This is the building where I teach my class.
+                                
+                            tr
+                                td(style="border-right: 20px solid white;") No Pronoun
+                                td This is the building I teach my class.
+                                
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" )
+        //- button(class="c-btn-IconAction u-bgIconCheck" )
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

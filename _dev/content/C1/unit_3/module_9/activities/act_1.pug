@@ -1,0 +1,400 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        div(class="template-content")
+            article(class="row u-animationFadeDown" ng-show="s_actividad == 1")
+
+                div(class="row row-flex")
+                    h5 Listen to the use of the following phrasal verbs. Choose the correct meaning.
+                div(class="row")
+                    div(class="c-flickity")
+                        div(class="row mt10 mb30")
+                            div(class="row c-flickity-controls c-flickity-controls-flex")
+                                div(class="c-flickity-controlsSlides")
+                                    button(class="c-flickity-button is-selected ") Exercise 1
+                                    button(class="c-flickity-button ") Exercise 2
+                                    button(class="c-flickity-button ") Exercise 3
+                                    button(class="c-flickity-button ") Exercise 4
+                                    button(class="c-flickity-button ") Exercise 5
+                                    button(class="c-flickity-button ") Exercise 6
+                                    button(class="c-flickity-button ") Exercise 7
+                                    button(class="c-flickity-button ") Exercise 8
+                                    button(class="c-flickity-button ") Exercise 9
+                                    button(class="c-flickity-button ") Exercise 10
+                                    span(class="c-flickity--cell-total") 10
+                                button(class="c-flickity-button c-flickity-button--previous") ←
+                                button(class="c-flickity-button c-flickity-button--next") →
+                        div(class="row mt50-sm ")
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Keep on
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_1.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_1.gif", alt="LOOK UP")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_1"  name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_1" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_2"  name="SelInputRadio_1" value="2")
+                                    label(for="inputRadio_2" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_3"  name="SelInputRadio_1" value="3")
+                                    label(for="inputRadio_3" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_4"  name="SelInputRadio_1" value="4")
+                                    label(for="inputRadio_4" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_5"  name="SelInputRadio_1" value="5")
+                                    label(for="inputRadio_5" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_6"  name="SelInputRadio_1" value="6")
+                                    label(for="inputRadio_6" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_7"  name="SelInputRadio_1" value="7")
+                                    label(for="inputRadio_7" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_8"  name="SelInputRadio_1" value="8")
+                                    label(for="inputRadio_8" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_9"  name="SelInputRadio_1" value="9")
+                                    label(for="inputRadio_9" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_10"  name="SelInputRadio_1" value="10")
+                                    label(for="inputRadio_10" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Keep up with
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_2.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_2.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_11"  name="SelInputRadio_2" value="1")
+                                    label(for="inputRadio_11" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_12"  name="SelInputRadio_2" value="2")
+                                    label(for="inputRadio_12" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_13"  name="SelInputRadio_2" value="3")
+                                    label(for="inputRadio_13" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_14"  name="SelInputRadio_2" value="4")
+                                    label(for="inputRadio_14" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_15"  name="SelInputRadio_2" value="5")
+                                    label(for="inputRadio_15" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_16"  name="SelInputRadio_2" value="6")
+                                    label(for="inputRadio_16" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_17"  name="SelInputRadio_2" value="7")
+                                    label(for="inputRadio_17" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_18"  name="SelInputRadio_2" value="8")
+                                    label(for="inputRadio_18" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_19"  name="SelInputRadio_2" value="9")
+                                    label(for="inputRadio_19" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_20"  name="SelInputRadio_2" value="10")
+                                    label(for="inputRadio_20" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Kick off
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_3.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_3.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_21"  name="SelInputRadio_3" value="1")
+                                    label(for="inputRadio_21" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_22"  name="SelInputRadio_3" value="2")
+                                    label(for="inputRadio_22" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_23"  name="SelInputRadio_3" value="3")
+                                    label(for="inputRadio_23" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_24"  name="SelInputRadio_3" value="4")
+                                    label(for="inputRadio_24" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_25"  name="SelInputRadio_3" value="5")
+                                    label(for="inputRadio_25" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_26"  name="SelInputRadio_3" value="6")
+                                    label(for="inputRadio_26" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_27"  name="SelInputRadio_3" value="7")
+                                    label(for="inputRadio_27" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_28"  name="SelInputRadio_3" value="8")
+                                    label(for="inputRadio_28" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_29"  name="SelInputRadio_3" value="9")
+                                    label(for="inputRadio_29" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_30"  name="SelInputRadio_3" value="10")
+                                    label(for="inputRadio_30" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Leave out
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_4.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_4.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_31"  name="SelInputRadio_4" value="1")
+                                    label(for="inputRadio_31" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_32"  name="SelInputRadio_4" value="2")
+                                    label(for="inputRadio_32" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_33"  name="SelInputRadio_4" value="3")
+                                    label(for="inputRadio_33" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_34"  name="SelInputRadio_4" value="4")
+                                    label(for="inputRadio_34" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_35"  name="SelInputRadio_4" value="5")
+                                    label(for="inputRadio_35" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_36"  name="SelInputRadio_4" value="6")
+                                    label(for="inputRadio_36" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_37"  name="SelInputRadio_4" value="7")
+                                    label(for="inputRadio_37" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_38"  name="SelInputRadio_4" value="8")
+                                    label(for="inputRadio_38" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_39"  name="SelInputRadio_4" value="9")
+                                    label(for="inputRadio_39" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_40"  name="SelInputRadio_4" value="10")
+                                    label(for="inputRadio_40" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Let down
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_5.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_5.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_41"  name="SelInputRadio_5" value="1")
+                                    label(for="inputRadio_41" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_42"  name="SelInputRadio_5" value="2")
+                                    label(for="inputRadio_42" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_43"  name="SelInputRadio_5" value="3")
+                                    label(for="inputRadio_43" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_44"  name="SelInputRadio_5" value="4")
+                                    label(for="inputRadio_44" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_45"  name="SelInputRadio_5" value="5")
+                                    label(for="inputRadio_45" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_46"  name="SelInputRadio_5" value="6")
+                                    label(for="inputRadio_46" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_47"  name="SelInputRadio_5" value="7")
+                                    label(for="inputRadio_47" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_48"  name="SelInputRadio_5" value="8")
+                                    label(for="inputRadio_48" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_49"  name="SelInputRadio_5" value="9")
+                                    label(for="inputRadio_49" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_50"  name="SelInputRadio_5" value="10")
+                                    label(for="inputRadio_50" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Look after
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_6.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_6.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_51"  name="SelInputRadio_6" value="1")
+                                    label(for="inputRadio_51" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_52"  name="SelInputRadio_6" value="2")
+                                    label(for="inputRadio_52" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_53"  name="SelInputRadio_6" value="3")
+                                    label(for="inputRadio_53" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_54"  name="SelInputRadio_6" value="4")
+                                    label(for="inputRadio_54" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_55"  name="SelInputRadio_6" value="5")
+                                    label(for="inputRadio_55" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_56"  name="SelInputRadio_6" value="6")
+                                    label(for="inputRadio_56" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_57"  name="SelInputRadio_6" value="7")
+                                    label(for="inputRadio_57" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_58"  name="SelInputRadio_6" value="8")
+                                    label(for="inputRadio_58" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_59"  name="SelInputRadio_6" value="9")
+                                    label(for="inputRadio_59" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_60"  name="SelInputRadio_6" value="10")
+                                    label(for="inputRadio_60" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Look down on
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_7.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_7.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_61"  name="SelInputRadio_7" value="1")
+                                    label(for="inputRadio_61" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_62"  name="SelInputRadio_7" value="2")
+                                    label(for="inputRadio_62" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_63"  name="SelInputRadio_7" value="3")
+                                    label(for="inputRadio_63" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_64"  name="SelInputRadio_7" value="4")
+                                    label(for="inputRadio_64" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_65"  name="SelInputRadio_7" value="5")
+                                    label(for="inputRadio_65" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_66"  name="SelInputRadio_7" value="6")
+                                    label(for="inputRadio_66" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_67"  name="SelInputRadio_7" value="7")
+                                    label(for="inputRadio_67" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_68"  name="SelInputRadio_7" value="8")
+                                    label(for="inputRadio_68" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_69"  name="SelInputRadio_7" value="9")
+                                    label(for="inputRadio_69" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_70"  name="SelInputRadio_7" value="10")
+                                    label(for="inputRadio_70" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Move in
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_8.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_8.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_71"  name="SelInputRadio_8" value="1")
+                                    label(for="inputRadio_71" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_72"  name="SelInputRadio_8" value="2")
+                                    label(for="inputRadio_72" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_73"  name="SelInputRadio_8" value="3")
+                                    label(for="inputRadio_73" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_74"  name="SelInputRadio_8" value="4")
+                                    label(for="inputRadio_74" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_75"  name="SelInputRadio_8" value="5")
+                                    label(for="inputRadio_75" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_76"  name="SelInputRadio_8" value="6")
+                                    label(for="inputRadio_76" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_77"  name="SelInputRadio_8" value="7")
+                                    label(for="inputRadio_77" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_78"  name="SelInputRadio_8" value="8")
+                                    label(for="inputRadio_78" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_79"  name="SelInputRadio_8" value="9")
+                                    label(for="inputRadio_79" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_80"  name="SelInputRadio_8" value="10")
+                                    label(for="inputRadio_80" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Move out
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_9.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_9.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_81"  name="SelInputRadio_9" value="1")
+                                    label(for="inputRadio_81" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_82"  name="SelInputRadio_9" value="2")
+                                    label(for="inputRadio_82" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_83"  name="SelInputRadio_9" value="3")
+                                    label(for="inputRadio_83" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_84"  name="SelInputRadio_9" value="4")
+                                    label(for="inputRadio_84" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_85"  name="SelInputRadio_9" value="5")
+                                    label(for="inputRadio_85" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_86"  name="SelInputRadio_9" value="6")
+                                    label(for="inputRadio_86" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_87"  name="SelInputRadio_9" value="7")
+                                    label(for="inputRadio_87" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_88"  name="SelInputRadio_9" value="8")
+                                    label(for="inputRadio_88" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_89"  name="SelInputRadio_9" value="9")
+                                    label(for="inputRadio_89" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_90"  name="SelInputRadio_9" value="10")
+                                    label(for="inputRadio_90" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+
+                            |
+                            div(class="c-flickity--cell")
+                                div(class="col xs12 sm6 md4")
+                                    div(class="c-card-phrasalVerbs")
+                                        div(class="c-card-phrasalVerbs--header")
+                                            div(class="c-card-phrasalVerbs--header-title") Wear out
+                                            button(class="c-card-phrasalVerbs--header-audio c-btn-Icon u-bgIconListen u-bgColor_1" ng-audio="unit_3/module_9/assets/audios/act_1_10.mp3")
+                                        div(class="c-card-phrasalVerbs--body")
+                                            img(class="c-card-phrasalVerbs--body-image" src="unit_3/module_9/assets/images/act_1_10.gif", alt="", srcset="")
+                                div(class="col xs12 sm6 md7 offset-md1 mt10-xs"): div(class="w100" layout="grid" grid-columns-repeat="180" grid-gap="0.5")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_91"  name="SelInputRadio_10" value="1")
+                                    label(for="inputRadio_91" class="c-CheckSelected") To disappoint someone.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_92"  name="SelInputRadio_10" value="2")
+                                    label(for="inputRadio_92" class="c-CheckSelected") To not include.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_93"  name="SelInputRadio_10" value="3")
+                                    label(for="inputRadio_93" class="c-CheckSelected") To leave or no longer live in a place.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_94"  name="SelInputRadio_10" value="4")
+                                    label(for="inputRadio_94" class="c-CheckSelected") To continue or persist in doing something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_95"  name="SelInputRadio_10" value="5")
+                                    label(for="inputRadio_95" class="c-CheckSelected") To consider someone or something as unimportant or worthless.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_96"  name="SelInputRadio_10" value="6")
+                                    label(for="inputRadio_96" class="c-CheckSelected") To advance at the same pace as someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_97"  name="SelInputRadio_10" value="7")
+                                    label(for="inputRadio_97" class="c-CheckSelected") To reside in a new house or apartment.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_98"  name="SelInputRadio_10" value="8")
+                                    label(for="inputRadio_98" class="c-CheckSelected") Take care of someone or something.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_99"  name="SelInputRadio_10" value="9")
+                                    label(for="inputRadio_99" class="c-CheckSelected") To become useless from use; To make someone tired.
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_100"  name="SelInputRadio_10" value="10")
+                                    label(for="inputRadio_100" class="c-CheckSelected") To start or commence.
+                                    input(type="hidden" class="js-select")
+
+                            |
+            |
+            article(class="row u-animationFadeDown" ng-show="s_actividad == 2")
+                h5 Fill in the blanks with the phrasal verbs below.
+
+
+                .c-cardGreen
+                    .c-cardGreenContent.flex.align-items-center.justify-center
+                        span wear me out | keeps up | let down | moved in | move out
+
+                .row-flex.align-items-center
+
+
+                    .col.xs12.md6
+                        p.lh25.
+                            I’m tired of being#[input(type="text" class="c-input js-escribir")] by George. When he first#[input(type="text" class="c-input js-escribir")] he promised to keep
+                            things clean and organized. However, he’s not doing anything! This attitude of his is really
+                            starting to#[input(type="text" class="c-input js-escribir")] and if he#[input(type="text" class="c-input js-escribir")] with it, I’m afraid he’ll have to#[input(type="text" class="c-input js-escribir")] .
+                            He must remember that this is a shared apartment and not his personal space!
+
+                    .col.xs12.md6.ta-c
+                        img(src="unit_3/module_9/assets/images/act_1_11.png" alt="" class="u-responsive-img")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next');

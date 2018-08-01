@@ -1,0 +1,96 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex col-center mt50-xs mt100-md")
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    div(class="row mb50") 
+                        strong: span(class="u-textColor_4-dark") 1.
+                        p.ml20 #[span(class="u-textColor_2"): strong A: ] I arrived on time for the concert! I drove at 180 Km/hour!
+                        p.ml20 #[span(class="u-textColor_5"): strong B: ] In your dreams!
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                            label(for="SelectRadio_1" class="c-CheckSelected col-flex ml10 mr10") I believe you
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                            label(for="SelectRadio_2" class="c-CheckSelected col-flex ml10 mr10") I don’t believe you
+
+                    div(class="row mb50")
+                        
+                        strong: span(class="u-textColor_4-dark") 2.
+                        p.ml20 #[span(class="u-textColor_2"): strong A: ] I have a terrible pain in the chest!
+                        p.ml20 #[span(class="u-textColor_5"): strong B: ] That’s serious!
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="1")
+                            label(for="SelectRadio_4" class="c-CheckSelected col-flex ml10 mr10") I believe you
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_2" value="2")
+                            label(for="SelectRadio_5" class="c-CheckSelected col-flex ml10 mr10") I don’t believe you
+                                
+                    
+                    div(class="row mb50")
+                        
+                        strong: span(class="u-textColor_4-dark") 3.
+                        p.ml20 #[span(class="u-textColor_2"): strong A: ] Guess who is here! Alfredo! He arrived yesterday.
+                        p.ml20 #[span(class="u-textColor_5"): strong B: ] Really? Super!
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_3" value="1")
+                            label(for="SelectRadio_7" class="c-CheckSelected col-flex ml10 mr10") I believe you
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_3" value="2")
+                            label(for="SelectRadio_8" class="c-CheckSelected col-flex ml10 mr10") I don’t believe you                         
+                    
+                    
+                
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    
+                    
+                    div(class="row mb50")
+                        
+                        strong: span(class="u-textColor_4-dark") 4.
+                        p.ml20 #[span(class="u-textColor_2"): strong A: ] I bought a new car.
+                        p.ml20 #[span(class="u-textColor_5"): strong B: ] You must be kidding me!
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_4" value="1")
+                            label(for="SelectRadio_13" class="c-CheckSelected col-flex ml10 mr10") I believe you
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_4" value="2")
+                            label(for="SelectRadio_14" class="c-CheckSelected col-flex ml10 mr10") I don’t believe you
+
+                                
+                    
+                    div(class="row mb50")
+                        
+                        strong: span(class="u-textColor_4-dark") 5.
+                        p.ml20 #[span(class="u-textColor_2"): strong A: ] Hey! I am a millionaire! I won the lotto!
+                        p.ml20 #[span(class="u-textColor_5"): strong B: ] Sure! And I am Leonardo Dicaprio!
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_5" value="1")
+                            label(for="SelectRadio_15" class="c-CheckSelected col-flex ml10 mr10") I believe you
+                            input(class="c-inputRadio" type="radio" id="SelectRadio_16" name="selection_5" value="2")
+                            label(for="SelectRadio_16" class="c-CheckSelected col-flex ml10 mr10") I don’t believe you
+                                
+                                
+                                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()") 
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

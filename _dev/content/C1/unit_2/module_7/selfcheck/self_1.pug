@@ -1,0 +1,60 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                .row-flex.justify-center.col-center.mt30
+
+                    .dragCont.ml5: .drag.w10 hang out
+                    .dragCont.ml5: .drag.w10.padding0 went through
+                    .dragCont.ml5: .drag.w10 get out of
+                    .dragCont.ml5: .drag.w10 get off
+                    .dragCont.ml5: .drag.w10 get into
+                    .dragCont.ml5: .drag.w10 get on with
+                    .dragCont.ml5: .drag.w10 give up
+                    .dragCont.ml5: .drag.w10 grows up
+                    .dragCont.ml5: .drag.w10 hung up
+
+
+                .row-flex.mt30.align-items-center.justify-between
+                    .col.xs12.md5
+                        p.ta-j #[strong.u-textColor_4 •]  It's raining, #[span.drop.w20] the car, let's go!
+                        p.ta-j #[strong.u-textColor_4 •]  Why are the children standing on the table, please #[span.drop.w20] the table now!
+                        p.ta-j #[strong.u-textColor_4 •]  We have had several delays this week so we need to #[span.drop.w20] the project if we are going to finish next week.
+                        p.ta-j #[strong.u-textColor_4 •]  I hate going to work on Saturdays. I need to find a way to #[span.drop.w20] going to work on Saturdays.
+                        p.ta-j #[strong.u-textColor_4 •]  When things get hard, you should never #[span.drop.w20]. You must keep on trying.
+
+                    .col.xs12.md6
+                        p.ta-j #[strong.u-textColor_4 •] When we started the company, there were a lot of problems, we #[span.drop.w20] a lot of changes to make the company successful.
+                        p.ta-j #[strong.u-textColor_4 •] The 6-year-old boy said when he #[span.drop.w20] he wants to be like Cristiano Ronald.
+                        p.ta-j #[strong.u-textColor_4 •] I like to spend time with my co-workers on the weekend.We #[span.drop.w20] at the park and sometimes play football.
+                        p.ta-j #[strong.u-textColor_4 •] I was talking to my boss on the phone, after I #[span.drop.w20] I realized I did not tell him about the meeting today. I have to call him back.
+
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

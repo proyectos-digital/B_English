@@ -1,0 +1,115 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    div(class="row")                   
+                        h5 Decide if the following sentences are correct or incorrect.
+                    div(class="col xs12 md6 flex justify-between flex-wrap")
+                        img(src="unit_3/module_10/assets/images/act_9_1.png", alt="act_7" class="u-responsive-img mt30")
+                        img(src="unit_3/module_10/assets/images/act_9_2.png", alt="act_7" class="u-responsive-img mt30")
+                    div(class="col xs12 md6 flex justify-between flex-wrap")
+                        img(src="unit_3/module_10/assets/images/act_9_3.png", alt="act_7" class="u-responsive-img mt30")
+                        img(src="unit_3/module_10/assets/images/act_9_4.png", alt="act_7" class="u-responsive-img mt30")
+
+                    div(class="col xs12 md6")
+
+                        div(class="col-flex col-center xs11 mt30 align-items-center")
+                            div(class="col xs12 sm8")
+                                p
+                                    strong #[span(class="u-textColor_4-dark") 1. ]
+                                    span  I love the massive transportation system in Cartagena. Hardly I had reached the bus stop when the bus arrived.
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_1" name="tfInputRadio_1" value="1")
+                                label(for="inputRadio_1" class="c-CheckSelected") CORRECT
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_2" name="tfInputRadio_1" value="2")
+                                label(for="inputRadio_2" class="c-CheckSelected") INCORRECT
+
+                        div(class="col-flex col-center xs11 mt30 align-items-center")
+                            div(class="col xs12 sm8")
+                                p
+                                    strong #[span(class="u-textColor_4-dark") 2. ]
+                                    span Many people in Colombia love to attend the Vallenata Legend Festival. Never had I seen such a vast crowd in Valledupar.
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_3" name="tfInputRadio_2" value="1")
+                                label(for="inputRadio_3" class="c-CheckSelected") CORRECT
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_4" name="tfInputRadio_2" value="2")
+                                label(for="inputRadio_4" class="c-CheckSelected") INCORRECT
+
+                        div(class="col-flex col-center xs11 mt30 align-items-center")
+                            div(class="col xs12 sm8")
+                                p
+                                    strong #[span(class="u-textColor_4-dark") 3. ]
+                                    span  Eliana took the admission exam at the University of Colombia. No sooner she had read the telegram that she started screaming.
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_5" name="tfInputRadio_3" value="1")
+                                label(for="inputRadio_5" class="c-CheckSelected") CORRECT
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_6" name="tfInputRadio_3" value="2")
+                                label(for="inputRadio_6" class="c-CheckSelected") INCORRECT
+
+                    div(class="col xs12 md6")
+
+                        div(class="col-flex col-center xs11 mt30 align-items-center")
+                            div(class="col xs12 sm8")
+                                p
+                                    strong #[span(class="u-textColor_4-dark") 4. ]
+                                    span I love to eat “lechona” when I am in Espinal. Last week, I ate a lot! We sooner no sat down in the main park than I felt sick.
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_7" name="tfInputRadio_4" value="1")
+                                label(for="inputRadio_7" class="c-CheckSelected") CORRECT
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_8" name="tfInputRadio_4" value="2")
+                                label(for="inputRadio_8" class="c-CheckSelected") INCORRECT
+
+                        div(class="col-flex col-center xs11 mt30 align-items-center")
+                            div(class="col xs12 sm8")
+                                p
+                                    strong #[span(class="u-textColor_4-dark") 5. ]
+                                    span Francisco can’t find a moment to relax! For example yesterday, he had finished hardly his lunch when someone knocked at the door.
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_9" name="tfInputRadio_5" value="1")
+                                label(for="inputRadio_9" class="c-CheckSelected") CORRECT
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_10" name="tfInputRadio_5" value="2")
+                                label(for="inputRadio_10" class="c-CheckSelected") INCORRECT
+
+                        div(class="col-flex col-center xs11 mt30 align-items-center")
+                            div(class="col xs12 sm8")
+                                p
+                                    strong #[span(class="u-textColor_4-dark") 6. ]
+                                    span The Pascual Guerrero Stadium in Cali is really nice. Last week, Cali and America were playing. The game had scarcely started when the rain came pouring down.
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_11" name="tfInputRadio_6" value="1")
+                                label(for="inputRadio_11" class="c-CheckSelected") CORRECT
+                            div(class="col xs6 sm2 ta-c")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_12" name="tfInputRadio_6" value="2")
+                                label(for="inputRadio_12" class="c-CheckSelected") INCORRECT
+                        
+                            
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_10/activities/act_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

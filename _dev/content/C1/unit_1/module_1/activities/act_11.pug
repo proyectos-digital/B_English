@@ -1,0 +1,188 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_11" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="4" ng-click="s_actividad = 4" ng-class="(s_actividad == 4) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+
+            div(class="row row-flex")
+                h6 #[span(class="u-textColor_4") 1]. Find the words in the list. Words can go vertically, horizontally or diagonally.
+            div(class="row-flex justify-center mt50-md")
+                div(class="col-flex-xs12 col-flex-md5 ta-c col-center")
+                    div(id='words' class="mt50-md")
+                div(class="col-flex-md7 col-flex-sm10 col-flex-xs12 col-center ta-c")
+                    div(id="puzzle" style="display: inline-block")
+            div(class="row mt30")
+                h6 #[span(class="u-textColor_4") 2]. Which emotions have you tried to bottle up and avoid feeling? Explain why.
+                div(class="row row-flex mt30"): div(class="col-flex-xs12 col-flex-md7 col-center")
+                    div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea h160" ng-model="textousuario")
+                    button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2" ng-init="listaractividadmodulo(2)")
+            div(class="row")
+
+                h6 #[span(class="u-textColor_4") 2]. Emotions can be caused by music
+                h6 Different people may feel different about the same types of music. List songs that cause the emotions listed below and give a short explanation of your choice.
+            div(class="row row-flex align-items-center mt30")
+                div(class="col-flex-xs12 col-flex-md5 ta-c col-center ")
+                    table(class="c-table-estilo_tres m-a")
+                        thead: tr
+                            th(class="w33") Emotion
+                            th(class="w33") Song / Music
+                            th(class="w33") Explanation
+                        tbody
+                            tr(ng-repeat="palabra in palabras")
+                                td {{palabra.emotion}}
+                                td: input(type="text" placeholder="Text here..." class="c-input js-escribir" name="act_11_1" id="song_{{palabra.orden}}" preguntaid="{{palabra.orden}}")
+                                td: input(type="text" placeholder="Text here..." class="c-input js-escribir" name="act_11_2" id="explanation_{{palabra.orden}}")
+
+
+                div(class="col-flex-xs12 col-flex-md5 ta-c col-center showTo-md ")
+                    img(src="unit_1/module_1/assets/images/act_11_1.png", alt="", class="u-responsive-img mb30")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 3" ng-init="listaractividadmodulo(3)")
+
+            div(class="row ")
+                h6 #[span(class="u-textColor_4") 3]. Emotions can be caused by music
+                h6 As with music, people may feel different about the same movies. List the movie titles that cause the emotions below.
+
+
+            div(class="row row-flex align-items-center mt30")
+                div(class="col-flex-xs12 col-flex-md5 ta-c col-center showTo-md ")
+                    img(src="unit_1/module_1/assets/images/act_11_2.png", alt="", class="u-responsive-img mb30")
+
+
+                div(class="col-flex-xs12 col-flex-md5 ta-c col-center")
+                    table(class="c-table-estilo_tres m-a")
+                        thead: tr
+                            th(class="w33") Emotion
+                            th(class="w33") Song / Music
+                            th(class="w33") Explanation
+                        tbody
+                            tr(ng-repeat="palabra in palabrasdos")
+                                td {{palabra.emotion}}
+                                td: input(type="text" placeholder="Text here..." class="c-input js-escribir" name="act_11_1" id="song_{{palabra.orden}}" preguntaid="{{palabra.orden}}")
+                                td: input(type="text" placeholder="Text here..." class="c-input js-escribir" name="act_11_2" id="explanation_{{palabra.orden}}")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 4")
+            div(class="row")
+                h6 #[span(class="u-textColor_4") 4]. Empathy
+                h6 Empathy means to understand how others could feel by placing yourself in their situation. Listen to each situation below. Record how someone would feel.
+            |
+            div(class="row row-flex align-items-center mt30")
+                div(class="col-flex-xs12 col-flex-sm7 col-flex-md7 ta-c col-center")
+
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_1.mp3")
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod1_act11a',1)"): +ngRecorder
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_2.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt1_mod1_act11b',2)"): +ngRecorder
+
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_3.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt1_mod1_act11c',3)"): +ngRecorder
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_4.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt1_mod1_act11d',4)"): +ngRecorder
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_5.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_e" time-limit='120' audio-model="audio_5" on-playback-start="guardarRecord('unt1_mod1_act11e',5)"): +ngRecorder
+
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_6.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_f" time-limit='120' audio-model="audio_6" on-playback-start="guardarRecord('unt1_mod1_act11f',6)"): +ngRecorder
+
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_7.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_g" time-limit='120' audio-model="audio_7" on-playback-start="guardarRecord('unt1_mod1_act11g',7)"): +ngRecorder
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_8.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_h" time-limit='120' audio-model="audio_8" on-playback-start="guardarRecord('unt1_mod1_act11h',8)"): +ngRecorder
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_9.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_i" time-limit='120' audio-model="audio_9" on-playback-start="guardarRecord('unt1_mod1_act11i',9)"): +ngRecorder
+                    div(class="row-flex col xs12 lg6 mt30")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_11_10.mp3")
+
+                        div(class="w80 row c-ngRecorder" ng-audio-recorder id="mainAudio_j" time-limit='120' audio-model="audio_10" on-playback-start="guardarRecord('unt1_mod1_act11j',10)"): +ngRecorder
+
+
+                div(class="col-flex-xs12 col-flex-md5 ta-c col-center showTo-md ")
+                    img(src="unit_1/module_1/assets/images/act_11_3.png", alt="", class="u-responsive-img mb30")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarWordFind" ng-show="s_actividad == 1")
+        button(class="c-btn-IconAction u-bgIconCheck " ng-show="s_actividad == 2" ng-click="guardarActividad()")
+        button(class="c-btn-IconAction u-bgIconCheck " ng-show="s_actividad == 3" ng-click="guardarActividad()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/wordfind.js")
+script(src="./../assets/js/librerias/wordfindgame.js")
+
+script.
+    $(function() {
+        $( "#puzzle" ).draggable();
+    });
+
+script.
+    var words = ['Active'
+                , 'Bright'
+                , 'Embarrassed'
+                , 'Joyful'
+                , 'Relaxed'
+                , 'Afraid'
+                , 'Cautious'
+                , 'Excited'
+                , 'Lonely'
+                , 'Sad'
+                , 'Alert'
+                , 'Confident'
+                , 'Glad'
+                , 'Peaceful'
+                , 'Silly'
+                , 'Confused'
+                , 'Happy'
+                , 'Playful'
+                , 'Stressed'
+                , 'Ashamed'
+                , 'Hurt'
+                , 'Depressed'
+                , 'Proud'
+                , 'Weak'
+                ];
+
+    // start a word find game
+    var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+
+    $('#solve').click( function() {
+        wordfindgame.solve(gamePuzzle, words);
+    });
+
+    // create just a puzzle, without filling in the blanks and print to console
+    var puzzle = wordfind.newPuzzle( words, {height: 10, width:10, fillBlanks: false} );
+    wordfind.print(puzzle);

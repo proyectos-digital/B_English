@@ -1,0 +1,244 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_1"  ng-init="s_actividad = 1")
+	aside(class="template-asideLeft o-aside-Item")
+		button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+		button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+			h5.ta-c  Read the following excerpt and choose the correct answers.
+			div(class="c-flickity")
+				div(class="row mt10 mb30")
+					div(class="row c-flickity-controls c-flickity-controls-flex")
+						div(class="c-flickity-controlsSlides")
+							button(class="c-flickity-button is-selected ") Page 1
+							button(class="c-flickity-button ") Page 2
+							span(class="c-flickity--cell-total") 2
+						button(class="c-flickity-button c-flickity-button--previous") ←
+						button(class="c-flickity-button c-flickity-button--next") →
+
+				div(class="row ")
+					div(class="c-flickity--cell"): div(class="row" style="height:680px; overflow-x: hidden; overflow-y:auto;")
+						.c-cardGreen
+							.c-cardGreenContent.u-textColor_1
+								.row
+									.col.xs12.md6
+										h5.ta-c Obama wants you to have cheap, fast internet, but many cities aren’t allowed to provide it
+										p.ta-c Obama hailed the benefits of an open Internet in his State of the Union address. Here’s what it is and how he’s trying to make it happen.
+										p.ta-c by Leticia Miranda#[br]ProPublica, Jan. 23, 2015, 1:12 p.m.
+
+										p.ta-j.
+											#[strong 1] On Tuesday evening during the State of the Union address, President Obama
+											#[strong pledged] “to protect a free and open Internet, extend its reach to every classroom, and
+											every community, and help folks build the fastest networks.” Obama is #[strong calling] on the
+											Federal Communications Commission to challenge a wave of state laws blocking the
+											construction of municipal broadband networks, which are high-speed Internet services
+											run by local communities.#[br]
+											Here’s what you need to know about the
+											president’s proposal and what it might mean
+											for consumers.
+										p.ta-j.
+											#[img(src="unit_2/module_7/assets/images/test_1_1.png" alt="" class="u-responsive-img w40 ml10 mt10 showTo-md" align="right")]
+											#[strong 2 Why can’t cities just build their own broadband networks?]
+											Although there are about #[strong 300] municipal
+											broadband networks across the country, laws in
+											about 20 states create multiple administrative
+											and financial hurdles for new networks to
+											get off the ground. Such legislation makes it
+											difficult, for example, for communities to issue
+											#[strong bonds] to cover the upfront costs of building
+											a network or to #[strong lease] out unused fiber as a
+											way to offset their costs. In Florida, residential
+									.col.xs12.md6
+										p.ta-j.
+											#[img(src="unit_2/module_7/assets/images/test_1_2.png" alt="" class="u-responsive-img w40 ml10 mt10" align="right")]
+											broadband networks must demonstrate how
+											they plan to turn a profit within four years, a
+											tall order. According to The Baller Herbst Law
+											Group, so-called fiber-to-the-home networks
+											often take much #[strong longer] to become profitable.
+											In Nevada, there are population restrictions.
+											Municipalities are prohibited from providing
+											broadband if the population #[strong exceeds] 25,000;
+											for counties, it is 55,000 or #[strong more]. #[br]#[br]
+											#[strong 3 Why have some states put these restrictions on municipal broadband networks?] #[br]
+											The cable lobby and some conservatives
+											believe that the business of Internet service
+											should stay in the private sector. Last week, Nebraska Sen. Deb Fischer #[strong called]
+											Obama’s plan “a new federal takeover of state laws governing broadband and the
+											Internet.” Telecom industry groups such as the National Cable & Telecommunications
+											Association have #[strong argued] that these networks are risky investments that could drive
+											cities into debt. Telecom companies have #[strong donated] millions of dollars to state and
+											federal politicians on both sides of the aisle. Besides contributions, the cable lobby
+											has directly submitted legislation to restrict municipal broadband networks and taken
+											fledgling networks to court. Last year, #[strong according] to a report by Ars Technica, the
+											Kansas Legislature squashed a bill to limit municipal broadband networks that was
+											drafted and submitted by the Kansas Cable Telecommunications Association. When
+											Lafayette Utilities System in Louisiana announced its intention to build a municipal
+											broadband network, they faced three years of court battles with two incumbent
+											Internet providers, costing them $4 million, #[strong according] to a report from the Center
+											for Public Integrity.
+					div(class="c-flickity--cell"): div(class="row" style="height:680px; overflow-x: hidden; overflow-y:auto;")
+						.c-cardGreen
+							.c-cardGreenContent.u-textColor_1
+								.row
+									.col.xs12.md6
+										p.ta-j.
+											#[img(src="unit_2/module_7/assets/images/test_1_3.png" alt="" class="u-responsive-img w40 mr10 mt10" align="left")]
+											#[strong 4 How is Obama going to get around these restrictions to expand municipal broadband?]#[br]
+											The Obama administration is #[strong urging] the
+											FCC “to ensure that communities have the
+											tools necessary to satisfy their citizens’
+											demand for broadband.” Section 706 of the
+											1996 Telecommunications Act #[strong charges]
+											the commission with encouraging “the
+											deployment on a reasonable and timely basis
+											of advanced telecommunications capability
+											to all Americans.” In its #[strong letter] to the FCC, the
+											administration argues that “where private
+											investment has not resulted in adequate
+											broadband infrastructure, communities can
+											and should play a leading role in expanding broadband access.” In addition, the U.S.
+											Department of Agriculture will #[strong revamp] its broadband loan program to offer financing
+											to eligible high-speed broadband carriers in unserved and underserved rural areas. The
+											Department of Commerce will #[strong launch] a new initiative to provide online and in-person
+											technical assistance to communities that will help them address challenges in planning
+											and implementing broadband networks.#[br]#[br]
+											#[strong 5 What obstacles does Obama face?] #[br]
+											With a Republican Congress, it’s likely Obama will face opposition. Sen. John Thune,
+											R-S.D., drafted a net neutrality #[strong bill] that would strip the FCC of Section 706 authority.
+											He #[strong argues] that this change is “necessary to update FCC authority for the Internet Age.”
+											Moreover, FCC Commissioner Ajit Pai has said the Commission does not have the
+											authority to preempt state bans on municipal broadband. In a #[strong statement] last week,
+											Pai recommended that the commission “focus on removing regulatory barriers to
+											broadband deployment by the private sector.”
+
+
+									.col.xs12.md6
+										p.ta-j.
+											But it’s still possible for Obama’s proposal to have an effect. New Jersey Sen. Cory
+											Booker introduced a #[strong bill] on Thursday that would amend the Telecommunications Act
+											to make it illegal for states to restrict or prohibit municipal broadband networks. And
+											FCC Chairman Tom Wheeler has already seemed to express his support for using the
+											FCC’s authority to remove barriers for municipal broadband networks in Tennessee
+											and in North Carolina, which have submitted #[strong petitions] to lift restrictions on their
+											networks. “I believe that it is in the best interests of consumers and competition that
+											the FCC exercises its power to preempt state laws that ban or restrict competition
+											from community broadband,” he #[strong wrote] in a blog post in June.
+
+										p.ta-j.
+											Read the story here:  #[a(href="https://www.propublica.org/article/obama-wants-you-to-have-cheap-fast-internet-but-many-cities-arent-allowed-t") www.propublica.org]
+
+
+		section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+			.row-flex.align-items-center.justify-between
+				.col.xs12.md6
+					p.ta-j.
+						#[strong.u-textColor_4 •] Choose the most appropriate heading for the following extract: #[br] #[br]
+						Although there are about #[strong 300] municipal broadband networks across the country, laws in about
+						20 states create multiple administrative and financial hurdles for new networks to get off the
+						ground. Such legislation makes it difficult, for example, for communities to issue #[strong bonds] to
+						cover the upfront costs of building a network or to #[strong lease] out unused fiber as a way to offset
+						their costs. In Florida, residential broadband networks must demonstrate how they plan to
+						turn a profit within four years, a tall order. According to The Baller Herbst Law Group, so-called
+						fiber-to-the-home networks often take much #[strong longer] to become profitable. In Nevada,
+						there are population restrictions. Municipalities are prohibited from providing broadband if the
+						population #[strong exceeds] 25,000; for counties, it is 55,000 or #[strong more].
+
+
+
+					.row
+						input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1" ng-click="valorinputa=1")
+						label(class="c-Checkbox w100 ta-l " for="selInput_1") Prohibition of broadband networks create issues.
+						input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2" ng-click="valorinputa=2")
+						label(class="c-Checkbox w100 ta-l " for="selInput_2") New broadband networks face legislative challenges.
+						input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3" ng-click="valorinputa=3")
+						label(class="c-Checkbox w100 ta-l " for="selInput_3") Residents not able to afford broadband internet
+						input(type="hidden" ng-model="valorinputa" class="js-select")
+
+					p.ta-j.mt20.
+						#[strong.u-textColor_4 •] Choose “true”, “false” or “information not given”. #[br] #[br]
+						The business of Internet service is not profitable and is risky. Therefore, it should be controlled by the private sector.
+
+					.row
+						input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1" ng-click="valorinputb=1")
+						label(class="c-Checkbox w100 ta-l " for="selInput_4") True.
+						input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2" ng-click="valorinputb=2")
+						label(class="c-Checkbox w100 ta-l " for="selInput_5") False.
+						input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3" ng-click="valorinputb=3")
+						label(class="c-Checkbox w100 ta-l " for="selInput_6") Information not given.
+						input(type="hidden" ng-model="valorinputb" class="js-select")
+
+					p.ta-j.mt20.
+						#[strong.u-textColor_4 •] Match the information given with one of the paragraphs from the text.  #[br] #[br]
+						Possible support for the implementation of municipal broadband networks.
+
+					.row
+						input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1" ng-click="valorinputc=1")
+						label(class="c-Checkbox w100 ta-l " for="selInput_7") 3
+						input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2" ng-click="valorinputc=2")
+						label(class="c-Checkbox w100 ta-l " for="selInput_8") 2
+						input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3" ng-click="valorinputc=3")
+						label(class="c-Checkbox w100 ta-l " for="selInput_9") 5
+						input(type="hidden" ng-model="valorinputc" class="js-select")
+
+
+				.col.xs12.md5
+
+
+
+					p.ta-j.mt20.
+						#[strong.u-textColor_4 •] Fill in the summary using the words form the paragraph.
+					.c-cardGreen
+						.c-cardGreenContent.flex.align-items-center.justify-center
+							span high-speed | adequate | timely | technical | ensure | leading role
+					p.lh25.
+						It is the hope of the Obama administration to #[input(type="text" class="c-input js-escribir")] that all Americans obtain advanced
+						telecommunications in a #[input(type="text" class="c-input js-escribir")] manner. The administration also states that communities
+						should be able to play a #[input(type="text" class="c-input js-escribir")] in the expansion of broadband access. This, in cases
+						where there is no #[input(type="text" class="c-input js-escribir")] broadband infrastructure provided by private investment.
+
+
+					p.ta-j.mt30.
+						#[strong.u-textColor_4 •] Complete the sentence with a word from the table below.
+					.c-cardGreen
+						.c-cardGreenContent.flex.align-items-center.justify-center
+							span ensure | propose | launch | preempt | provide
+					p.lh25.
+						Increased online security measures will #[input(type="text" class="c-input js-escribir")] fraudsters from stealing sensitive personal information.
+
+					p.ta-j.mt20.
+						#[strong.u-textColor_4 •] Choose the correct answer for the following question.  #[br] #[br]
+						Sen. John Thune plans to...
+
+					.row
+						input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1" ng-click="valorinputd=1")
+						label(class="c-Checkbox w100 ta-l " for="selInput_10") Make necessary changes to the internet sphere.
+						input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2" ng-click="valorinputd=2")
+						label(class="c-Checkbox w100 ta-l " for="selInput_11") Deny Barack Obama of the right to provide free internet.
+						input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3" ng-click="valorinputd=3")
+						label(class="c-Checkbox w100 ta-l " for="selInput_12") Draw up a net neutrality bill.
+						input(type="hidden" ng-model="valorinputd" class="js-select")
+
+
+
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		//- button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" ng-click="reloadEscribSelect()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2" ng-click="CompTxt_SelectMult()")
+
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script.
+	flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next','680');

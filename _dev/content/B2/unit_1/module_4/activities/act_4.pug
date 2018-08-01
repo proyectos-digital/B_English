@@ -1,0 +1,96 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+
+            div(class="row flex align-items-center justify-center")
+                div(class="col xs12 md6 col-center ta-c showTo-md ")
+                    img(src="unit_1/module_4/assets/images/act_4a.png", alt="" class="c-figure")
+                div(class="col-flex-xs12 col-flex-md6 col-center ")
+                    div(class="row-flex")
+                        h5 #[strong.u-textColor_4 1. ] Complete the sentences.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  1. 
+                                | It’s your turn to #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] the dishes today.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  2. 
+                                | I will #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] a list of the things we need.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  3. 
+                                | Ok, I will #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] an exception for you.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  4. 
+                                | Please, don’t #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] mistakes.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  5. 
+                                | I need to go out now, it’s urgent. I have to #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] a phone call.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  6. 
+                                | The workers I hire always #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] a good job.
+
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            h5(class="u-textColor_4 mb30") Do and Make are two verbs that can be difficult to learn because they translate the same in Spanish: HACER.
+            h6 The following are the most common cases where we use do and make:
+            div(class="row-flex align-items-center mt50")
+                div(class="col xs12 sm6 md4")
+                    ul(class="u-bgColor_4-light padding20 lh25 col xs8 col-center")
+                        li Do me a favor
+                        li Do the cooking
+                        li Do the dishes
+                        li Do the housework
+                        li Do the shopping
+                        li Do a good job
+                        li Do the washing up
+                        li Do your best
+                        li Do your hair
+                div(class="col xs4 ta-c showTo-md")
+                    img(src="unit_1/module_4/assets/images/act_4.png", alt="" class="c-figure")
+                div(class="col xs12 sm6 md4")
+                    ul(class="u-bgColor_4-light padding20 lh25 col xs8 col-center")
+                        li Make a difference
+                        li Make a mess
+                        li Make a mistake
+                        li Make a noise
+                        li Make an effort
+                        li Make money
+                        li Make exceptions
+                        li Make calls
+                        li Make a list
+
+
+
+
+
+
+
+
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice u-bgIconAlert" ng-click="idNotice = 2")
+        //- button(class="c-btn-IconAction openNotice u-bgIconInfoActivity" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_4/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

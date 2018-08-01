@@ -1,0 +1,169 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_1")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row")
+                h4 Solve the problem
+                p There are 8 people in a hotel. You have some information. Karen has the rest of the information.
+                p Taking turns, work together to find out who is each room, where everybody is from and what they do for living.
+            
+            div(class="row mt30 mb30")
+                table(class="c-table-estilo_uno col-center")
+                    thead
+                    tbody
+                        tr
+                            th Names 
+                            td Mario, Catalina, Andrés, Sandra, Yadira, Mercedes, Tomas, Diego. 
+                        tr
+                            th Origin
+                            td Cali, San Andrés, Valledupar, Santa Marta, Cartagena, Bogotá, Manizales, Leticia
+                        tr
+                            th Job or occupation
+                            td Architect, dentist, engineer, journalist, librarian, nurse, pilot, teacher.
+
+            div(class="c-game no-init" game="HowIsIt" id="HowIsIt")
+                - var URLRecourses = '../assets/multimedia/images/games/HowIsIt/'
+                - var welcome = 'game_welcome.png'
+                - var instructions = 'game_instructions.png'
+                - var selectName = 'game_selectName.png'
+                - var karem = 'game_karem.png'
+                - var avatar_1 = 'game_avatar_1.png'
+                - var avatar_2 = 'game_avatar_2.png'
+                - var avatar_3 = 'game_avatar_3.png'
+                - var avatar_4 = 'game_avatar_4.png'
+                - var map = 'game_map.png'
+                div(class="c-game--header")
+                //--------------------------
+                div(class="js-game--feedBack" game="game--feedBack")
+                    div(class="js-game--imageSection js-game--welcome" game="game--feedBack-welcome"): img(class="u-responsive-img" src=URLRecourses+welcome alt="", draggable="false")
+                    //--------------------------
+                    div(class="js-game--instructions" game="game--feedBack-instructions")
+                        div(class="" game="game--feedBack-instructions-content")
+                            div(class="m-a"): img(class="u-responsive-img" src=URLRecourses+karem alt="", draggable="false")
+                            div(class="m-a" game="game--feedBack-instructions-content_block")
+                                h4(game="game--feedBack-instructions-content_title") INSTRUCTIONS
+                                p(game="game--feedBack-instructions-content_text") There are 8 people in a hotel. You have some information. Karen has the rest of the information. Taking turns, work together to find out who is each room, where everybody is from and what they do for living.
+                        img(class="js-game--imageSection u-responsive-img" src=URLRecourses+instructions alt="", draggable="false")
+                    //--------------------------
+                    div(class="js-game--selectAvatar" game="game--feedBack-selectAvatar")
+                        div(class="js-game--selectImage" game="game--selectAvatar")
+                            input(type="radio" id="checkbox--avatar_1" name="game_checkboxSelAvatar" game="game--inputRadio")
+                            label(for="checkbox--avatar_1"): img(class="js-game--avatar_1 is-inactive" game="game--avatar_1" src=URLRecourses+avatar_1 alt="", draggable="false")
+                            input(type="radio" id="checkbox--avatar_2" name="game_checkboxSelAvatar" game="game--inputRadio")
+                            label(for="checkbox--avatar_2"): img(class="js-game--avatar_2 is-inactive" game="game--avatar_2" src=URLRecourses+avatar_2 alt="", draggable="false")
+                            input(type="radio" id="checkbox--avatar_3" name="game_checkboxSelAvatar" game="game--inputRadio")
+                            label(for="checkbox--avatar_3"): img(class="js-game--avatar_3 is-inactive" game="game--avatar_3" src=URLRecourses+avatar_3 alt="", draggable="false")
+                            input(type="radio" id="checkbox--avatar_4" name="game_checkboxSelAvatar" game="game--inputRadio")
+                            label(for="checkbox--avatar_4"): img(class="js-game--avatar_4 is-inactive" game="game--avatar_4" src=URLRecourses+avatar_4 alt="", draggable="false")
+                        input(type="text" value="" placeholder="Select your name" class="js-game--inputName" game="game--feedBack-inputName")
+                        img(class="js-game--imageSection u-responsive-img" src=URLRecourses+selectName alt="", draggable="false") 
+                //--------------------------
+                div(class="js-game--notices" game="game--notices")
+                    div(class="js-game--result" game="game--result")
+                        div(class="js-game--winner" game="game--result-youWin"): h1 youWin
+                        div(class="js-game--loser" game="game--result-youLose"): h1 youLose
+                    div(game="game--error")
+                //--------------------------
+                div(class="js-game--body" game="game--body")
+                    //-------------------------- Aqui se ubican las preguntas y opciones de preguntas.
+                    //-------------------------- Importante opciones de preguntas igual a <li> tag
+                    //- div(class="js-game--content" game="game--content")
+                        div(game="game--content-body")
+                            div(class="" game="game--content-header")
+                            ul(class="js-game--question" game="game--content-section")
+                                // li(class="game--option")
+                    //--------------------------
+                    div(class="js-game--scene" game="game--scene")
+                        div(class="js-game--scene-one" game="game--scene-one"): img(game="game--map" src=URLRecourses+map alt="", draggable="false")
+                        
+                        div(class="js-game--scene-two" game="game--scene-two")
+                            div(class="" game="game--avatar")
+                                img(class="u-responsive-img" src=URLRecourses+karem alt="", draggable="false") 
+                            div(class="" game="game--pista")
+                                h5(style="font-size: 2.5vmin; font-weight:normal; margin: 0;  padding-right: 2%;") Hi, I'm Karem, How I can help you?
+                                div(class="js-game--pista-karem" game="game--pista-opciones")
+                                p(class="js-game--pista-karem_frase" game="game--pista-frase")
+                        //--------------------------
+                        div(class="js-game--scene-three" game="game--scene-three")
+                            div(class="" game="game--avatar")
+                                img(class="js-game--avatarSelected u-responsive-img" alt="", draggable="false") 
+                                span(class="js-game--nameUser" game="game--avatar-name")
+                            div(class="" game="game--pista")
+                                h5(style="font-size: 2.5vmin; font-weight:normal; margin: 0;  padding-right: 2%;") Hi Karem, I'm #[span(class="js-game--nameUser")], Let's work together to find out where the guests are from and what they do...
+                                div(class="js-game--pista-user" game="game--pista-opciones")
+                                p(class="js-game--pista-user_frase" game="game--pista-frase")
+                    //--------------------------
+                    div(class="js-game--footer" game="game--footer")
+                        input(type="radio" id="checkbox--btn_one" name="game_checkboxBtn" checked game="game--inputRadio")
+                        label(for="checkbox--btn_one" class="js-game--btn-one"   game="game--footer-btn-one")
+                        input(type="radio" id="checkbox--btn_two" name="game_checkboxBtn" game="game--inputRadio")
+                        label(for="checkbox--btn_two" class="js-game--btn-two"   game="game--footer-btn-two")
+                        input(type="radio" id="checkbox--btn_three" name="game_checkboxBtn" game="game--inputRadio")
+                        label(for="checkbox--btn_three" class="js-game--btn-three" game="game--footer-btn-three")
+                //--------------------------
+                div(class="js-game--bg" game="game--bg")
+            |
+            div(class="row mt40"): div(class="xs12 md10 col-center")
+                h5 Complete the information here:
+                table(class="c-table-estilo_uno row" ng-init="listarJuegoRoles()")
+                    thead
+                            th 
+                            th Names 
+                            th Origin
+                            th Job or occupation
+                    tbody
+                        tr(ng-repeat="habitacion in habitaciones")
+                            td {{habitacion.habitacion}}
+                            td: input(type="text" class="c-input row js-escribir" id="names_{{habitacion.id}}" preguntaid="{{habitacion.id}}")
+                            td: input(type="text" class="c-input row js-escribir" id="origin_{{habitacion.id}}")
+                            td: input(type="text" class="c-input row js-escribir" id="occupation_{{habitacion.id}}")
+
+            div(class="row mt20 ta-c mb100"): button(class="c-btn-IconAction u-bgIconUpload" ng-click="guardarJuegoRoles()")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script.
+    let arrPistas = [
+        pistas_1 = [
+            'The man in room 102 is from San Andrés.',
+            'Sandra is an engineer.',
+            'The pilot is in the room next to the teacher.',
+            'Yadira is from Leticia.',
+            'The woman in room 109, is Catalina.',
+            'There is an architect in the room in front of the pilot.',
+            'The woman from Cali is in the room next to Mercedes.',
+            'Catalina is from Bogotá.',
+            'Mario is a dentist.',
+            'Catalina is in the room next to the man from Santa Marta.',
+            'The man in the room closer to the beverage room comes from Cartagena.',
+        ]
+        , pistas_2 = [
+            'The man in room 104 is an architect.',
+            'Diego is a librarian',
+            'The nurse comes from Bogota.',
+            'The woman that comes from Leticia is in the room in front of Tomas.',
+            'The woman from room 106 comes from Leticia.',
+            'Mercedes is a pilot.',
+            'The man between Mario y Sandra, is Andres.',
+            'Mario and Sandra are in the rooms on both sides of  the TV lounge. ',
+            'The architect is from Valledupar.',
+            'Yadira is a journalist.',
+            'The man from San Andres is in the room in front of Sandra.',
+        ]
+    ];
+
+    $('#HowIsIt').game_howIsIt(arrPistas);

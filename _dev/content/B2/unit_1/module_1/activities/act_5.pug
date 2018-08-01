@@ -1,0 +1,71 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            //- and write them in the spaces
+            h5 #[strong.u-textColor_4 1. ]  Find 6 phrasal verbs and write them in the spaces below
+            div(class="row-flex justify-center mt50-md")
+                div(class="col-flex-xs12 col-flex-md4 ta-c col-center")
+                    img(src="unit_1/module_1/assets/images/act_5.png", alt="", class="u-responsive-img showTo-md mb30")
+                    //- div(id='words')
+                    div(class="words")
+                        ul(class="row-flex justify-between")
+                            .col-flex-xs6
+                                li: span(class="c-textField") 1. 
+                                        input(type="text" placeholder="Text here..." class="c-input js-escribir max-ancho120")
+                                li: span(class="c-textField") 2. 
+                                        input(type="text" placeholder="Text here..." class="c-input js-escribir max-ancho120")
+                                li: span(class="c-textField") 3. 
+                                        input(type="text" placeholder="Text here..." class="c-input js-escribir max-ancho120")
+                            .col-flex-xs6     
+                                li: span(class="c-textField") 4. 
+                                        input(type="text" placeholder="Text here..." class="c-input js-escribir max-ancho120")
+                                li: span(class="c-textField") 5. 
+                                        input(type="text" placeholder="Text here..." class="c-input js-escribir max-ancho120")
+                                li: span(class="c-textField") 6. 
+                                        input(type="text" placeholder="Text here..." class="c-input js-escribir max-ancho120")
+
+                div(class="col-flex-md7 col-flex-sm10 col-flex-xs12 col-center ta-c  ")
+                    div(id="puzzle" style="display: inline-block")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarWordFind")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+| 
+script(src="./../assets/js/librerias/wordfind.js")
+script(src="./../assets/js/librerias/wordfindgame.js")
+
+script.
+    $(function() {
+        $( "#puzzle" ).draggable();
+    });
+
+script.
+    var words = ['Look-after', 'Look-at', 
+                 'Think-about', 'Talk-about' , 
+                 'Wait-for' , 'Complain-about'
+                ];
+
+    // start a word find game
+    var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+
+    $('#solve').click( function() {
+        wordfindgame.solve(gamePuzzle, words);
+    });
+
+    // create just a puzzle, without filling in the blanks and print to console
+    var puzzle = wordfind.newPuzzle( words, {height: 10, width:18, fillBlanks: false} );
+    wordfind.print(puzzle);

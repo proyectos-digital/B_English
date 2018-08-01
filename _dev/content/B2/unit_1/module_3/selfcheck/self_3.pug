@@ -1,0 +1,124 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+             div(class="row")
+                h5 #[strong.u-textColor_4 1. ] Choose the right word to complete the conversation.
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                        div(class="row mt60")
+                            img(src="./unit_1/module_3/assets/images/sel_3.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row mt50")
+                            p
+                                strong Jane: 
+                                | What plans do you have for the weekend?
+                            p   
+                                strong Tom: 
+                                | I hope I find some time to read. I 
+                                strong (1)
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_a")
+                                | read a novel than a magazine. What about you?
+
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                                label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='would rather'") would rather
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                                label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='would prefer'") would prefer
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                                label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='prefer'") prefer
+
+                        div(class="row mt20")
+                            p
+                                strong Jane: 
+                                | I’ll probably watch football with my family. My father 
+                                strong (2)
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_b")
+                                | watching football than playing it.
+
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                                label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='rather'") rather
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                                label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='prefers'") prefers
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="3")
+                                label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='would rather'") would rather
+
+                        div(class="row mt20")
+
+                            p
+                                strong Tom: 
+                                | We could do something together. Would you 
+                                strong (3)
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_c")
+                                | go out today or tomorrow?
+
+                                
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                                label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='rather to'") rather to
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                                label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='rather not to'") rather not to
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="3")
+                                label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='rather'") rather
+
+                        div(class="row mt20")
+
+                            p
+                                strong Jane: 
+                                | I'd rather 
+                                strong (4)
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_d")
+                                | home the entire weekend.
+
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                                label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='stay'") stay
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                                label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='to stay'") to stay
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_4" value="3")
+                                label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='staying'") staying
+
+                        div(class="row mt20")
+                            p 
+                                strong Tom: 
+                                | OK. I would also 
+                                strong (5)
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_e")
+                                | to have a quiet weekend.
+
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                                label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='prefer'") prefer
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                                label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='rather'") rather
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_5" value="3")
+                                label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='not prefer'") not prefer
+    |                           
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

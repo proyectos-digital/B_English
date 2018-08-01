@@ -1,0 +1,34 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_6" ng-init="ContadorPalabras(250)")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row row-flex mt30")
+                .col.xs12.md6.ta-c.mb30.showTo-md: img(src="unit_1/module_4/assets/images/self_6_1.png", alt="", class="u-responsive-img")
+
+                .col.xs12.md6
+                    h5  You have 40 minutes for this task.
+                    p.ta-j Many people believe that women make better parents than men and that is why they have the greatest role in raising children in most societies. Others claim that men are just as good as women at parenting
+                    h6 Write an essay expressing your point of view. Give reasons for your answers and provide relevant examples and experiences you might have had. Minimum 250 words.
+                    div(class="c-wrapTextarea ")
+                        textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0 
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()" ng-show="enviarMensaje_minPalabras")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

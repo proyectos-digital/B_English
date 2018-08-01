@@ -1,0 +1,49 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex mt80-xs mt60-md ")
+                |
+                div(class="col-flex-xs5 col-flex-xs5 col-flex-md5 m-a ta-c col-center")
+                    table(class="c-table-estilo_tres m-a")
+                        thead: tr: th(colspan="2") Future continuous
+                        tbody
+                            tr
+                                td Affirmative
+                                td Will + be + ing
+                            tr
+                                td Negative
+                                td Will + not + be + ing
+                            tr
+                                td Questions
+                                td Will + pronoun + be + ing
+                |
+                div(class="col-flex-sm8 col-flex-md5 m-a col-center")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent")
+                            ul.c-list
+                                p We use the future continuous to talk about something that will be in progress at or around a time in the future.
+                                li Don’t call grandma now, she #[strong.u-textColor_1 ’ll be having] dinner and won´t answer the phone.
+                                    br
+                                    span We can use the future continuous to talk about what we assume is happening at the moment.
+                                br
+                                li The kids are very quiet. They #[strong.u-textColor_1 ’ll be doing] something wrong, I know it.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction is-active u-bgIconAlert")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" )
+        //- button(class="c-btn-IconAction u-bgIconCheck" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

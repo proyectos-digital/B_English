@@ -1,0 +1,64 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    div(class="row")                   
+                        h5(class="mb40") #[strong.u-textColor_4 1. ] Complete the sentences with y #[strong You will ], #[strong you won´t ] or #[strong you might ] .
+                    
+                    div(class="c-cardGreen")
+                                div(class="c-cardGreenContent ta-c")
+                                    h6.u-textWhite Take your next vacation in our brand-new starship. #[strong You will ] have the time of your life! Don’t worry, you won’t be bored. Outer space is fascinating. Every night you’ll eat unusual, delicious food from other planets. Every morning, #[strong You will ] wake up in a strange, new place. #[strong You might ] be on the moon, or Mercury. One day #[strong you might ] look out of your window and see the beautiful rings of Saturn, or the Red Planet itself. One thing is for sure: #[strong You will ] never forget your vacation in outer space. Call today!    
+                            
+                    div(class="col xs12 md6")
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+                            
+
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 1]. #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] have a great time.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 2]. #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] be bored.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 3]. #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] eat delicious food.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 4]. #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] wake up in new places.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5]. #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] be on Mercury or the moon.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 6]. #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] forget a vacation like this one.
+
+                    div(class="col xs12 md6")
+                        
+                        div(class="col x8 md10 col-center ta-c mt30 mb30")
+                            img(src="unit_3/module_10/assets/images/test_3.png", alt="act_13" class="u-responsive-img m-a")
+                            
+                           
+
+                        
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+     
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")        
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/self_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

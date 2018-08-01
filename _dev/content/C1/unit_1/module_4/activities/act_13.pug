@@ -1,0 +1,144 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_7" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+
+    |
+    |
+    div(class="template-section m-a"  )
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            .row-flex.align-items-center
+                
+                .col.xs12.md6
+                    p: strong  Here are some useful expressions that can be used when arguing a point or stating a fact:
+                    .col.xs12.md11.col-center   
+                        ul.col.xs4
+                            li #[strong(class="u-textColor_4") •] There is no denying (the fact) that…
+                            li #[strong(class="u-textColor_4") •] Clearly…
+                            li #[strong(class="u-textColor_4") •] It is clear that…
+                            li #[strong(class="u-textColor_4") •] There is no doubt that…
+                            
+                        ul.col.xs4 
+                            li #[strong(class="u-textColor_4") •] It is evident that…
+                            li #[strong(class="u-textColor_4") •] It is obvious that…
+                            li #[strong(class="u-textColor_4") •] Obviously...
+                            li #[strong(class="u-textColor_4") •] It is certain that… 
+
+                        ul.col.xs4 
+                            li #[strong(class="u-textColor_4") •] In truth and in fact…
+                            li #[strong(class="u-textColor_4") •] The fact is that…
+                            li #[strong(class="u-textColor_4") •] Certainly…
+
+                    .row.mt30
+
+                        p #[strong(class="u-textColor_4") •] #[strong Eg1: There’s no doubt that , ] Germany’s economy is larger than that of Italy’s.
+                        p #[strong(class="u-textColor_4") •] #[strong  Eg2: Certainly,] in terms of population size, Colombia is more populated than Cuba.
+    
+
+                    .row.mt30   
+                        p  #[strong Remember, when making comparisons, we are comparing two people, things, objects or qualities. Depending on the syllables of the adjective, there are certain rules to follow: ]   
+
+                        .row-flex.justify-between
+                            .u-bgColor_4-lighter.w30.flex.align-items-center.ta-c.padding10
+                                .row
+                                    p #[strong 1 syllable]
+                                    p #[strong(class="u-textColor_4") • ] #[strong add ER (+ than)]
+                                    p #[strong Eg: young] #[br] France’s President is #[stong younger than] Canada’s president.
+                             
+                            .u-bgColor_4-lighter.w30.flex.align-items-center.ta-c.padding10
+                                .row
+                                    p #[strong 1 Adjectives with 2 syllables that end in ‘y’]
+                                    p #[strong(class="u-textColor_4") • ] #[strong change the ‘Y’ to ‘I’ then add ER (+ than)]
+                                    p #[strong Eg: scary] #[br] Compared to the horror movies of today, I think the Chucky movies were  #[stong scarier].
+
+                            .u-bgColor_4-lighter.w30.flex.align-items-center.ta-c.padding10
+                                .row
+                                    p #[strong 3 or more syllables]
+                                    p #[strong(class="u-textColor_4") • ] #[strong MORE + Adjective (+ than)]
+                                    p #[strong Eg: interactive] #[br] This new online program is  #[stong more interactive].
+                .col.xs12.md6
+                    p  Bear in mind that there are also irregular adjectives. In this case, their comparative forms are different:                 
+                    .col.xs12.md11.col-center   
+                        ul.lh25
+                            li #[strong(class="u-textColor_4") •] good → better (than)
+                            li #[strong(class="u-textColor_4") •] bad → worse (than)
+                            li #[strong(class="u-textColor_4") •] far → farther (than) [physical distance] / further [non-physical distance or things]
+
+                    p.mt30 #[strong as + adjective + as] #[br] This structure of comparison is used to indicate similarities. In this instance, there’s no need to change the adjectives.
+                        .col.xs12.md11.col-center 
+                            ul.lh25
+                                li #[strong(class="u-textColor_4") •] #[strong Eg1:] Brian is #[strong as organized as] his father. Like father, like son.
+                                li #[strong(class="u-textColor_4") •] #[strong Eg2:] Physics is  #[strong as hard as] chemistry. I really don’t like it!
+
+                    p.mt30 #[strong not as + adjective + as] #[br] This structure can be used when you wish to say that something or someone is less than the other. Again, in this instance, there’s no need to change the adjectives.
+                        .col.xs12.md11.col-center 
+                            ul.lh25
+                                li #[strong(class="u-textColor_4") •] #[strong Eg1:] It is obvious that Melissa is not as strong as Kimberly.
+                                li #[strong(class="u-textColor_4") •] #[strong Eg2:] Many Caribbean countries are not as developed as European countries.
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            .row-flex.align-items-center.justify-between 
+              
+                .col.xs12.md5.ta-c
+                    img(src="unit_1/module_4/assets/images/act_13_1.png", alt="", class="u-responsive-img")
+                .col.xs12.md6
+                    h5 Based on the context, choose the best answer. 
+                    .row
+                        p #[strong(class="u-textColor_4") •] There’s no denying that technology is #[input(type="text" class="c-input js-escribir")] #[strong(class="u-textColor_2") (good)] today than it was 10 years ago.
+
+                    .row.mt25
+                        p #[strong(class="u-textColor_4") •] The video footage shows the man entering the supermarket with a gun. 
+                        .row-flex.align-items-center.justify-center
+                            input(class="c-inputRadio" type="radio" id="inputRadio_1"  name="SelInputRadio_1" value="1")
+                            label.mr10.mt0(for="inputRadio_1" class="c-CheckSelected") Fact
+                            span.mr10 or
+                            input(class="c-inputRadio" type="radio" id="inputRadio_2"  name="SelInputRadio_1" value="2")
+                            label.mr10.mt0(for="inputRadio_2" class="c-CheckSelected") Opinion
+                            span.mr10 ?
+                            input(type="hidden" class="js-select")
+
+                    .row.mt25
+                        span.
+                            #[strong(class="u-textColor_4") •] The fact is that the policies implemented by the current administration are  
+                        select(name="act_13_1" class="c-select ml5 mr5 mt5 mb5" class="js-escribir")
+                            option(value="" disabled selected) 
+                            option(value="1") not as effective as
+                            option(value="2") as effective as
+                        span they should be.
+
+                    .row.mt25
+                        span.
+                            #[strong(class="u-textColor_4") •] Based on the university’s assessment of the issue, each student is 
+                        select(name="act_13_2" class="c-select ml5 mr5 mt5 mb5" class="js-escribir")
+                            option(value="" disabled selected)
+                            option(value="1") guiltier than
+                            option(value="2") as guilty as
+                        span the other. 
+
+                    .row
+                        p #[strong(class="u-textColor_4") •] He’s #[input(type="text" class="c-input js-escribir")] #[strong(class="u-textColor_2") (dishonest)] I thought.
+                    
+                    .row.mt25
+                        span.
+                            #[strong(class="u-textColor_4") •] When you compare both signatures, they do not match. So
+                        select(name="act_13_3" class="c-select ml5 mr5 mt5 mb5" class="js-escribir")
+                            option(value="" disabled selected)
+                            option(value="1") in my opinion
+                            option(value="2") certainly
+                        span Paul forged his mother’s signature.
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

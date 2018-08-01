@@ -1,0 +1,64 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                    div(class="row")
+                        img(src="./unit_1/module_3/assets/images/test_4.png", alt="", srcset="" class="u-responsive-img centrado")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row")
+                        table(class="c-table-estilo_uno row ta-c")
+                            thead
+                                tr
+                                    th Adverb
+                                    th Adjetive
+                            tbody
+                                tr
+                                    td Name:
+                                    td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir h30")
+                                tr
+                                    td Profession:
+                                    td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir h30")
+                                tr
+                                    td Likes doing in spare time.
+                                    td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir h30")
+                                tr
+                                    td Pets:
+                                    td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir h30")
+                                tr
+                                    td Favorite music:
+                                    td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir h30")
+                                tr
+                                    td Favorite room in the house:
+                                    td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir h30")
+                                tr
+                                    td Favorite sport:
+                                    td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir h30")
+                                tr
+                                    td Favorite book:
+                                    td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir h30")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconInfoActivity" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_3/test/test_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

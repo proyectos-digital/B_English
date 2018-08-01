@@ -1,0 +1,223 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section")
+        section(class="template-content")
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md5 col-center")
+
+                        table(class="c-table-estilo_tres w100")
+                            thead
+                                tr
+                                    th(colspan="2") 
+                                        br
+                                        p(ta-c)
+                                            strong PRESENT
+                                        p(ta-c)  
+                                            strong Modal + infinitive (simple or continuous)
+                                    
+                            tbody
+                                tr
+                                    td
+                                        p
+                                            strong MUST
+                                    td 
+                                        p
+                                            | We use 
+                                            strong must 
+                                            | when we are almost sure something is true. 
+                                        p
+                                            | He 
+                                            strong must 
+                                            | be listening to music.
+
+                                tr
+                                    td
+                                        p   
+                                            strong CAN'T
+                                    td
+                                        p
+                                            | We use 
+                                            strong can't 
+                                            | when we are almost sure something isn't true. 
+                                        p
+                                            | The store 
+                                            strong can't 
+                                            | be open yet. It's too early.
+
+                                tr
+                                    td
+                                        p 
+                                            strong MAY/MIGHT/COULD
+
+                                    td
+                                        p
+                                            | We use 
+                                            strong may/might/could 
+                                            | when it is possible that something is true. 
+                                        p
+                                            | I haven't seen her yet. She 
+                                            strong may/might/could 
+                                            | be late for work.
+
+                                tr
+                                    td
+                                        p 
+                                            strong SHOULD
+                                    td
+                                        p 
+                                            | We use 
+                                            strong should 
+                                            | when we expect something to happen. 
+                                        
+                                        p   
+                                            | If I send this package today, it 
+                                            strong should 
+                                            | be delivered this same week.
+                                    
+
+                    div(class="col-flex-sm12 col-flex-md6 offset-md1 col-center")
+                        table(class="c-table-estilo_tres w100")
+                            thead
+                                tr
+                                    th(colspan="2") 
+                                        br
+                                        p(ta-c)
+                                            strong PAST
+                                        p(ta-c)
+                                            | Modal + participle (present or continuous)
+                                    
+                            tbody
+                                tr
+                                    td(rowspan="3" class="w30")
+                                        p 
+                                            strong MUST HAVE VS CAN'T HAVE
+                                    td(class="w70") 
+                                        p 
+                                            strong MUST HAVE: 
+                                            | we use it to make positive deductions, when we have a strong opinion about what happened in the past. He looks tired.
+                                        p 
+                                            | He 
+                                            strong must have 
+                                            | been working late.
+                                tr
+                                    td 
+                                        p 
+                                            strong CAN'T HAVE: 
+                                            | we use it to make negative deductions, when we are sure something did not happen in the past.
+                                        p
+                                            | They 
+                                            strong can't have 
+                                            | bought that house. It's too expensive.
+                                tr
+                                    td 
+                                        p 
+                                            | Both can be used with 
+                                            strong CLEARLY, SURELY 
+                                            | or 
+                                            strong OBVIOUSLY 
+                                            | in exclamations: 
+                                        p   
+                                            strong Obviously, 
+                                            | you 
+                                            strong must have 
+                                            | noticed how angry she was! 
+
+                                        p   
+                                            strong Surely, 
+                                            | you 
+                                            strong can't have 
+                                            | eaten all that! 
+                                            
+                                        p   
+                                            strong Clearly, 
+                                            | he 
+                                            strong can't have 
+                                            | written this on his own.
+                                tr
+                                    td(rowspan="2")
+                                        p 
+                                            strong SHOULD HAVE
+
+                                    td
+                                        p 
+                                            strong EXPECTATION: 
+                                            | should have refers to something which was supposed to happen. 
+                                        p
+                                            | She 
+                                            strong should have 
+                                            | brought all the materials.
+                                tr
+                                    td
+                                        p
+                                            strong CRITICISM OF AN ACTION: 
+                                        p
+                                            | He 
+                                            strong shouldn't have 
+                                            | forgotten to call!
+                                tr
+                                    td(rowspan="2")
+                                        p 
+                                            strong COULD HAVE
+                                    td
+                                        p
+                                            strong POSSIBILITY:
+                                        
+                                        p   
+                                            | They 
+                                            strong could have 
+                                            | arrived on time if they had left earlier.
+
+                                tr
+                                    td
+                                        p 
+                                            strong UNCERTAINTY:
+                                        
+                                        p   
+                                            | That call you didn't answer 
+                                            strong could have 
+                                            | been your boss.
+
+                                tr
+                                    td(rowspan="2")
+                                        p
+                                            strong MAY/MIGHT HAVE
+                                    td
+                                        p 
+                                            strong UNCERTAINTY:
+                                        
+                                        p   
+                                            | She 
+                                            strong might have 
+                                            | not received my message.
+                                tr
+                                    td
+                                        p 
+                                            strong MIGHT HAVE:
+                                            |  we use it to express ANNOYANCE at someone's failure to do something:
+                                        
+                                        p   
+                                            | You 
+                                            strong might have 
+                                            | told me you were not coming!
+                                    
+
+                                
+                                    
+                    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" )
+        button(class="c-btn-IconAction u-bgIconCheck" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,39 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_9")
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a" ng-init="ContadorPalabras(150)")
+        section(class="template-content u-animationFadeDown")
+            div(class="row-flex justify-between col-center") 
+                article(class="xs12 md6")
+                    h6.mb20 Colombia: Chamber of Representatives
+                    .row-flex.justify-center
+                        img(class="u-responsive-img " src="unit_3/module_12/assets/images/col_9_1.png", alt="")
+                article(class="row-flex xs12 md6")
+                    h6.mb20 Colombia: Senate
+                    .row-flex.justify-center.centrar_bottom.w100
+                        img(class="u-responsive-img " src="unit_3/module_12/assets/images/col_9_2.png", alt="")
+                div(class="row col-flex-md7 col-flex-xs12 mt30")
+                    h6 Write a report for a university teacher describing the information shown.
+                    p » You should write at least 150 words.
+                    p » You should spend about 20 minutes on this task.
+                div(class="row col-flex-md7 col-flex-xs12")
+                    div(class="c-wrapTextarea ")
+                        textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0 
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")
+    |        
+    | 
+    aside(class="template-asideRight o-aside-Item")  
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")  
+|  
+| 
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")     

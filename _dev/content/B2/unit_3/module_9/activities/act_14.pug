@@ -1,0 +1,85 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            div(class="row")
+                h6(class="ta-c") Match the sentences with their endings.
+
+                div(class="row-flex align-items-center mt60")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+
+                        div(class="row-flex flex-column w60 centrado")
+                            div(class="dragCont"): div(class="drag") I gave it to Peter,
+                            div(class="dragCont"): div(class="drag") We stopped at the museum,
+                            div(class="dragCont"): div(class="drag") He gave me the letter,
+                            div(class="dragCont"): div(class="drag") I spoke to Fred,
+                            div(class="dragCont"): div(class="drag") He was carrying his belongings,
+                            div(class="dragCont"): div(class="drag") An elephant and a mouse fell in love,
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center") 
+                        div(class="row")
+                            p(class="ta-c") 
+                                strong(class="u-textColor_4-dark") 1.
+                                span(class="drop w60")
+
+                            p(class="ta-c")
+                                | who explained the problem.
+
+                        div(class="row mt20")
+                            p(class="ta-c") 
+                                strong(class="u-textColor_4-dark") 2.
+                                span(class="drop w60")
+
+                            p(class="ta-c")
+                                | which we'd never been to.
+
+                        div(class="row mt20")
+                            p(class="ta-c")
+                                strong(class="u-textColor_4-dark") 3.
+                                span(class="drop w60")
+
+                            p(class="ta-c")
+                                | who now has it.
+
+                        div(class="row mt20")
+                            p(class="ta-c") 
+                                strong(class="u-textColor_4-dark") 4.
+                                span(class="drop w60")
+
+                            p(class="ta-c")
+                                | which was in a blue envelope.
+
+                        div(class="row mt20")
+                            p(class="ta-c")
+                                strong(class="u-textColor_4-dark") 5.
+                                span(class="drop w60")
+
+                            p(class="ta-c")
+                                | which is most unusual.
+
+                        div(class="row mt20")
+                            p(class="ta-c")
+                                strong(class="u-textColor_4-dark") 6.
+                                span(class="drop w60")
+
+                            p(class="ta-c")
+                                | many of which were broken.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

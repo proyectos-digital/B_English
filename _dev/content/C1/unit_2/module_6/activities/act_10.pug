@@ -1,0 +1,83 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content" )
+            .row-flex.align-items-center  
+                .col.xs12.md6
+                    h5 Expressing doubt, disbelief and degrees of certainty. 
+                    h6 Expressing misunderstandings or confusions. 
+                    h6 Posing hypotheses or suppositions.
+                    h6 Complete with the right tense or expression.
+                    h6 Expressing doubt, disbelief and degrees of certainty. Expressing misunderstandings or confusions. Posing hypotheses or suppositions
+
+                    p.mt40  #[strong.u-textColor_4 • ] If you #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (not arrive)] to the exam on time, you #[input(class="c-input ta-c js-escribir" type="text") ] #[strong.u-textColor_2 (fail)] the semester.
+                    p.mt20  #[strong.u-textColor_4 • ] In case you #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (come)] and I’m not here, just leave the folder in the kitchen.
+                    p.mt20  #[strong.u-textColor_4 • ] Catherine #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (not speak)] to you ever again, if you did that.
+                    p.mt20  #[strong.u-textColor_4 • ] We #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (consider)]  it if you were more polite.
+                    p.mt20  #[strong.u-textColor_4 • ] Never travel all alone late at night. What if something unfortunate  #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (happen)] to you.
+                    p.mt20  #[strong.u-textColor_4 • ] I would definitely help you, if you   #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (ask)] .
+
+
+                .col.xs12.md6
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            p.
+                                To express one’s doubt or uncertainty regarding something, any of the following phrases can be used:
+                            ul.row
+                                .col.xs6.ta-c
+                                    li • I doubt it.                   
+                                    li • I doubt if…                   
+                                    li • I don’t think so.
+                                .col.xs6.ta-c
+                                    li • I don’t know.                   
+                                    li • I don’t know if…  
+
+                            p.ta-l.mt20.lh25.
+                                #[strong Eg: #[i I’m not sure if ] ] I’ll attend the meeting later this afternoon. #[br]
+                                #[strong Eg:] Hey Antonio. Is Miguel at work today? - #[strong #[i I don’t know ] ].#[br]#[br]
+
+                                A hypothesis is a proposed explanation for the occurrence of something, while
+                                a supposition is an idea or statement that is believed or assumed to be true
+                                without any proof. When making hypotheses or suppositions, we can use the
+                                expressions:#[br]#[br]
+
+                                #[strong #[i ‘what if’, ‘in case’ or ‘suppose’ + present tense] ]#[br]
+                                #[strong • ] If there is a possibility the action will happen in the future.#[br]
+
+                                #[strong Eg:] It looks overcast. #[strong #[i In case it rains] ], bring an umbrella.#[br]
+
+                                #[strong Eg:] Andrew, do not walk with your wallet in your back pocket. #[strong #[i What if you get] ]
+                                 robbed while boarding a bus.#[br]
+
+                                #[strong Eg:] But #[strong #[i suppose the manager asks] ] me about the missing files, what do I say?#[br]#[br]
+
+                                Another way of expressing suppositions is by using the modal verb ‘would’
+                                especially when referring to an imagined or unreal future:#[br]
+
+                                #[strong #[i subject + would / wouldn’t, if + subject + simple past] ]#[br]
+
+                                #[strong Eg:] I would travel the world, if I won the lottery.#[br]
+
+                                #[strong Eg:] If my mother didn’t raise me right, I wouldn’t be the man I am today. #[br]          
+                                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

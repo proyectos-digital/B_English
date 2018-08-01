@@ -1,0 +1,132 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_11" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" )
+        section(class="template-content")
+            
+            div(class="row mt40-md")
+                h5 #[strong.u-textColor_4 1. ]  Choose the right time expression to complete the sentences.
+            div(class="row-flex mt60-xs mt40-md")
+                div(class="col-flex-md5 col-flex-sm11 col-center")
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span  I’ll keep phoning
+                                    span(class="c-textField"): input(type="text" class="c-input ta-c js-escribir" ng-model="txtcaptura_a")
+                                    span  you pay me.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                            label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='by the time'") by the time
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                            label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='until'") until
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                            label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='by'") by
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span It’s open from 7:00 am
+                                    span(class="c-textField"): input(type="text" class="c-input ta-c js-escribir" ng-model="txtcaptura_b")
+                                    span 5:00 pm.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                            label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='by the time'") by the time
+                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                            label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='until'") until
+                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="3")
+                            label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='by'") by
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span(class="c-textField"): input(type="text" class="c-input ta-c js-escribir" ng-model="txtcaptura_c")
+                                    span we get there, it will have stopped raining.
+                        div(class="row-flex justify-around")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                            label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='by the time'") By the time
+                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                            label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='until'") Until
+                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="3")
+                            label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='by'") By
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span It must be finished 
+                                    span(class="c-textField"): input(type="text" class="c-input ta-c js-escribir" ng-model="txtcaptura_d")
+                                    span Thursday afternoon.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                            label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='by the time'") by the time
+                            input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                            label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='until'") until
+                            input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_4" value="3")
+                            label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='by'") by
+                |
+                div(class="col-flex-md5 col-flex-sm11 col-center")
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span I will be gone
+                                    span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_e")
+                                    span you arrive.
+                        div(class="row-flex justify-around")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                            label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='by the time'") by the time
+                            input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                            label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='until'") until
+                            input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_5" value="3")
+                            label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='by'") by
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span She’ll be staying at the hotel 
+                                    span(class="c-textField"): input(type="text" class="c-input ta-c js-escribir" ng-model="txtcaptura_f")
+                                    span Friday.
+                        div(class="row-flex justify-around")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_16" name="SelInputRadio_6" value="1")
+                            label(for="inputRadio_16" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='by the time'") by the time
+                            input(class="c-inputRadio" type="radio" id="inputRadio_17" name="SelInputRadio_6" value="2")
+                            label(for="inputRadio_17" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='until'") until
+                            input(class="c-inputRadio" type="radio" id="inputRadio_18" name="SelInputRadio_6" value="3")
+                            label(for="inputRadio_18" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='by'") by
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span He’ll arrive at five; 
+                                    span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_g")
+                                    span which time you must not leave the room.
+                        div(class="row-flex justify-around")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_19" name="SelInputRadio_7" value="1")
+                            label(for="inputRadio_19" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='by the time'") by the time
+                            input(class="c-inputRadio" type="radio" id="inputRadio_20" name="SelInputRadio_7" value="2")
+                            label(for="inputRadio_20" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='until'") until
+                            input(class="c-inputRadio" type="radio" id="inputRadio_21" name="SelInputRadio_7" value="3")
+                            label(for="inputRadio_21" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='by'") by
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction is-active u-bgIconAlert openNotice" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh"  ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|   
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_11_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

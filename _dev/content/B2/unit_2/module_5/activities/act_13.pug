@@ -1,0 +1,182 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            |
+            div(class="row-flex s-actividad u-animationFadeDown align-items-center " ng-show="s_actividad == 1")
+                
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+
+                    h6 #[strong.u-textColor_4 1. ] Read the following sentences. Pay attention to the words in bold.
+
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent")
+                            p 
+                                | Mariana works at the Colombian taxes department. She is really worried about Julian, a friend who works in the same office because between January and June he 
+                                strong had been working 
+                                | too hard. 
+                                    
+                            p   
+                                | She decided to go to Julian's house. She rang Julian's doorbell at 8:15 yesterday but Julian 
+                                strong had already left 
+                                | the house. 
+                                
+                            p
+                                | Her plan was to invite him to spend the weekend at her parent's country house in Santandersito but Julian 
+                                strong had already taken 
+                                | a taxi to the airport because he 
+                                strong had bought 
+                                | tickets to go to Armenia.
+
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    img(src="./unit_2/module_5/assets/images/act_13.png", alt="", srcset="" class="u-responsive-img centrado")
+                
+            div(class="row-flex s-actividad u-animationFadeDown align-items-center" ng-show="s_actividad == 2")
+
+                div(class="col-flex-sm12 col-center")
+
+                    h6 #[strong.u-textColor_4 2. ] Choose the correct words to complete the sentences.
+
+                    div(class="row mt20")
+                        p(class="mt20 row-flex align-items-center")
+                            strong(class="u-textColor_4-dark") 1.
+
+                            span.ml5.mr5 I
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                label.mt0(for="SelectRadio_1" class="c-CheckSelected col-flex ml5 mr5") didn't understand
+                            span /
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                label.mt0(for="SelectRadio_2" class="c-CheckSelected col-flex ml5 mr5") hadn't understood 
+                            |
+                            span what was happening because
+                            |
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_3" name="selection_2" value="1")
+                                label.mt0(for="SelectRadio_3" class="c-CheckSelected col-flex ml5 mr5") hadn't been listening.
+                            span /
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="2")
+                                label.mt0(for="SelectRadio_4" class="c-CheckSelected col-flex ml5 mr5") I didn’t listen
+
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 2.
+
+                            span.ml5.mr5 I
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_3" value="1")
+                                label.mt0(for="SelectRadio_5" class="c-CheckSelected col-flex ml5 mr5") didn't pay attention
+                            span /
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_6" name="selection_3" value="2")
+                                label.mt0(for="SelectRadio_6" class="c-CheckSelected col-flex ml5 mr5") hadn't been paying attention 
+                            |
+                            span in class so I
+                            |
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_4" value="1")
+                                label.mt0(for="SelectRadio_7" class="c-CheckSelected col-flex ml5 mr5") got
+                            span /
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_4" value="2")
+                                label.mt0(for="SelectRadio_8" class="c-CheckSelected col-flex ml5 mr5") had got
+                            span all the answers wrong in the test today.
+
+                    
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 3.
+                            
+                            span.ml5.mr5 She 
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_9" name="selection_5" value="1")
+                                label.mt0(for="SelectRadio_9" class="c-CheckSelected col-flex ml5 mr5") left
+                                
+                            span /
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_10" name="selection_5" value="2")
+                                label.mt0(for="SelectRadio_10" class="c-CheckSelected col-flex ml5 mr5") had left 
+                            |
+                            span by the time
+                            |
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_11" name="selection_6" value="1")
+                                label.mt0(for="SelectRadio_11" class="c-CheckSelected col-flex ml5 mr5") arrived
+
+                            span /
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_12" name="selection_6" value="2")
+                                label.mt0(for="SelectRadio_12" class="c-CheckSelected col-flex ml5 mr5") had arrived
+
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 4.
+                            
+                            span.ml5.mr5 She
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_7" value="1")
+                                label.mt0(for="SelectRadio_13" class="c-CheckSelected col-flex ml5 mr5") was
+                                
+                            span /
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_7" value="2")
+                                label.mt0(for="SelectRadio_14" class="c-CheckSelected col-flex ml5 mr5") had been  
+                            |
+                            span upset when we arrived because I
+                            |
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_8" value="1")
+                                label.mt0(for="SelectRadio_15" class="c-CheckSelected col-flex ml5 mr5") forgot
+
+                            span /
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_16" name="selection_8" value="2")
+                                label.mt0(for="SelectRadio_16" class="c-CheckSelected col-flex ml5 mr5") had forgotten 
+                            span to tell her we’d be late.
+
+
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 5.
+                            
+                            span.ml5.mr5 He
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_17" name="selection_9" value="1")
+                                label.mt0(for="SelectRadio_17" class="c-CheckSelected col-flex ml5 mr5") waited
+                                
+                            span /
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_18" name="selection_9" value="2")
+                                label.mt0(for="SelectRadio_18" class="c-CheckSelected col-flex ml5 mr5") had been waiting  
+                            |
+                            span for three years when she finally
+                            |
+                            span
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_19" name="selection_10" value="1")
+                                label.mt0(for="SelectRadio_19" class="c-CheckSelected col-flex ml5 mr5") said
+
+                            span /
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_20" name="selection_10" value="2")
+                                label.mt0(for="SelectRadio_20" class="c-CheckSelected col-flex ml5 mr5") had said 
+                            span she would marry him.
+                    
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1" ng-show="s_actividad == 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_5/activities/act_13_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

@@ -1,0 +1,66 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                    div(class="row")
+                        img(src="./unit_3/module_9/assets/images/act_6.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+                    div(class="row")
+                        h6 Questions.
+
+                        p(class="mt20")
+                            strong(class="u-textColor_4-dark") 1.
+                            |  Have you ever dreamed of seeing the world? 
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+
+                    div(class="row mt10")
+                        p
+                            strong(class="u-textColor_4-dark") 2.
+                            |  What is the Assistant Directors responsible for? 
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+
+                    div(class="row mt10")
+                        p
+                           strong(class="u-textColor_4-dark") 3.
+                           |  What qualifications do the candidates need to be experienced in? 
+                           span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir") 
+
+                    div(class="row mt10")
+                        p
+                            strong(class="u-textColor_4-dark") 4.
+                            |  Should candidates have experience in planning recreational activities? 
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir") 
+
+                    div(class="row mt10")
+                        p
+                            strong(class="u-textColor_4-dark") 5.
+                            | What about other languages, is that necessary to apply for the position?
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")  
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconInfoActivity is-active openNotice" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

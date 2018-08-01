@@ -1,0 +1,152 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            h5 It is important to learn how to express feelings of surprise or disbelief in difficult situations. 
+            h6 Take a look at this chart:
+            div(class="row-flex col-center align-items-center mt20")
+                .row
+                    table(class="c-table-estilo_uno col xs12")
+                                thead
+                                    tr
+                                        th NEUTRAL
+                                        th INFORMAL
+                                        th FORMAL
+                                tbody
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") That’s very surprising
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") What?
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="3") I find that very surprising
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") Really?
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") No! I don’t believe it!
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="3") I must say it surprises me
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") Here?
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") Are you serious?
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="3") I find it extraordinary
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") Is she?
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") Well, I never!
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="3") Indeed?
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") That is a surprise
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") Oh, no!
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="3") How very surprising
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") What a surprise
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") Fantastic!
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="3") I must say it surprises me
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") Good heavens
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") You don’t say
+                                        td
+                                            
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") That’s amazing/extraordinary
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") Who’d have thought it?
+                                        td
+                                            
+                                    tr
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="1") My goodness
+                                        td
+                                            div(class="dragCont")
+                                                div(class="drag" rescon="2") You’re kidding
+                                        td
+                                            
+                                        
+                h5.mb40.mt50 Now, complete the conversations with the correct expressions of disbelief and surprise.
+
+                div(class="col xs12 md6")
+                    h5 CONVERSATION 1
+                    p #[span(class="u-textColor_2"): strong Joe: ] What did you do yesterday?
+                    p #[span(class="u-textColor_5"): strong Mary: ] Not much, I read a book.
+                    p #[span(class="u-textColor_2"): strong Joe: ] #[span(class="u-textColor_4"): strong (1) ] #[span(class="drop h30 ") ]
+                    p #[span(class="u-textColor_5"): strong Mary: ] How about you?
+                    p #[span(class="u-textColor_2"): strong Joe: ] I watched TV for a couple of hours and went to bed early. I’ve been really tired lately.
+                    p #[span(class="u-textColor_5"): strong Mary: ] #[span(class="u-textColor_4"): strong (2) ] #[span(class="drop h30 ") ] What from? 
+                    p #[span(class="u-textColor_2"): strong Joe: ] Nothing in particular, I think I’m just bored.
+                    
+                    
+                div(class="col xs12 md6")
+                    h5 CONVERSATION 2
+                    p #[span(class="u-textColor_2"): strong Alice: ] I’m never going to get married!
+                    p #[span(class="u-textColor_5"): strong Bianca: ] #[span(class="u-textColor_4"): strong (3) ] #[span(class="drop h30 ") ] Why?
+                    p #[span(class="u-textColor_2"): strong Alice: ] I hate all men!
+                    p #[span(class="u-textColor_5"): strong Bianca: ] #[span(class="u-textColor_4"): strong (4) ] #[span(class="drop h30 ") ] I thought you had three boyfriends! 
+                    p #[span(class="u-textColor_2"): strong Alice: ]  I did but they all found out about each other and now none of them will talk to me. I really loved one of them too… what was his name?
+                    p #[span(class="u-textColor_5"): strong Bianca: ] #[span(class="u-textColor_4"): strong (5) ] #[span(class="drop h30 ") ] You don’t know what love is. You’ll get married when you fall in love. Right now you’re frustrated and it’s your own damn fault. 
+                    
+
+                               
+                
+                            
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+//- |
+//- div(class="c-noticeAside is-visible" id="notice")
+//-     article(class="c-noticeAside-body" ng-include="'unit_3/module_12/activities/act_11_notice_'+ idNotice +'.php'")
+//-     footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

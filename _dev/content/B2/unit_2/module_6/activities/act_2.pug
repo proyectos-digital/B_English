@@ -1,0 +1,84 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="c-cardGreen"): div(class="c-cardGreenContent flex align-items-center justify-center ")
+                    p Get up | Get on | Get by | Drive off | Come back | Turn around | Break down | Look out | Take off
+                div(class="col-flex-xs12 col-flex-md5 col-center mt10-sm mt20-md ")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex")
+                            button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_1.mp3")
+                            strong(class="u-textColor_4-dark")  1. 
+                            | We’ll #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] if we try to spend the least possible.
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex")
+                            button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_2.mp3")
+                            strong(class="u-textColor_4-dark")  2. 
+                            | He has a way of #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] a failing business.
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex")
+                            button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_3.mp3")
+                            strong(class="u-textColor_4-dark")  3. 
+                            | Walter practiced every day, hoping to #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] from his injury.
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex")
+                            button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_4.mp3")
+                            strong(class="u-textColor_4-dark")  4. 
+                            | When presented with the pile of files, the first thing he did was to #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] by month.
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex")
+                            button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_5.mp3")
+                            strong(class="u-textColor_4-dark")  5. 
+                            |  By #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] early in the morning one also gets more time.
+                
+                div(class="col-flex-xs12 col-flex-md5 offset-md1 col-center mt10-sm mt20-md showTo-md")
+                    img(src="unit_2/module_6/assets/images/act_2a.png", alt="" class="c-figure w80")
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="c-cardGreen"): div(class="c-cardGreenContent flex align-items-center justify-center ")
+                    p Get up | Get on | Get by | Drive off | Come back | Turn around | Break down | Look out | Take of
+                div(class="col-flex-xs12 col-flex-md5 offset-md1 col-center mt10-sm mt20-md showTo-md")
+                    img(src="unit_2/module_6/assets/images/act_2a.png", alt="" class="c-figure w80")
+                                
+                div(class="col-flex-xs12 col-flex-md5 offset-md1 col-center mt10-sm mt20-md")
+                    div(class="row-flex")
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_6.mp3")
+                                strong(class="u-textColor_4-dark")  6. #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                |, there are dangers ahead.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_7.mp3")
+                                strong(class="u-textColor_4-dark")  7. 
+                                | The police car #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] after the drunken driver.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_8.mp3")
+                                strong(class="u-textColor_4-dark")  8. 
+                                | I don’t know how he’s going to #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] in life.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_2/module_6/assets/audios/act_2_9.mp3")
+                                strong(class="u-textColor_4-dark")  9. 
+                                | We #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] bugs #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] with fly traps.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

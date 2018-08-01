@@ -1,0 +1,69 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                    img(src="./unit_3/module_9/assets/images/test_2_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    img(src="./unit_3/module_9/assets/images/test_2_2.png", alt="", srcset="" class="u-responsive-img centrado mt30")
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+
+                    div(class="row-flex justify-around")
+                        div(class="dragCont"): div(class="drag" rescon="4") advantage
+                        div(class="dragCont"): div(class="drag" rescon="3") a barbecue
+                        div(class="dragCont"): div(class="drag" rescon="4") a bath
+                        div(class="dragCont"): div(class="drag" rescon="1") a complaint
+                        div(class="dragCont"): div(class="drag" rescon="2") well
+                        div(class="dragCont"): div(class="drag" rescon="1") an appointment
+                        div(class="dragCont"): div(class="drag" rescon="2") your best
+                        div(class="dragCont"): div(class="drag" rescon="3") a class
+
+
+                    div(class="row")
+                        table(class="c-table-estilo_uno w100 mt40")
+                            thead
+                                tr
+                                    th Make
+                                    th Do
+                                    th Have
+                                    th Take
+                            tbody
+                                tr
+                                    td 
+                                        div(class="drop h30")
+                                    td 
+                                        div(class="drop h30")
+                                    td
+                                        div(class="drop h30")
+                                    td 
+                                        div(class="drop h30")
+
+                                tr
+                                    td 
+                                        div(class="drop h30")
+                                    td 
+                                        div(class="drop h30")
+                                    td
+                                        div(class="drop h30")
+                                    td 
+                                        div(class="drop h30")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

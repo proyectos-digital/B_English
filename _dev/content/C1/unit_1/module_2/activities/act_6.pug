@@ -1,0 +1,99 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_6" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            div(class="row row-flex justify-between align-items-center")
+                .col.xs12.md7
+                    h5 Listen to the news report and answer the questions that follow.
+                    div.row-flex.justify-center.align-items-center
+                        audio(controls class='mt30 row')
+                            source(src='unit_1/module_2/assets/audios/act_6_1.mp3')
+                            | Your browser does not support the audio element.
+                    .c-cardGreen
+                        .c-cardGreenContent.ta-c
+                            h5 A fifth of American kids projected to become obese
+                            h6 Saturday, September 16, 2006
+                            p Read the full story here: #[a(href=" https://en.wikinews.org/wiki/A_fifth_of_American_kids_projected_to_become_obese" target="blank")  https://en.wikinews.org/]
+            div(class="row ")
+                h5 Now choose the best answer.
+                div(class="row ")
+                    h6 #[strong.u-textColor_4 •] Choose the most appropriate heading for the following excerpt:
+                    p Dr. Risa Lavizzo-Mourey, president of Robert Wood Johnson Foundation, the organization that funded the report, said “if we do not reverse the epidemic of childhood obesity, millions of kids and our society will be robbed of a healthy and hopeful future”. The percentage of children who are overweight or obese has been increasing worldwide in recent years. Food Consumer reports that according to the World Health Organization (WHO), childhood overweight and obesity is a “global pandemic”.
+                div(class="row"): div(class="u-checkbox-responsive")
+                    input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                    label(class="c-Checkbox " for="selInput_1")  The Robert Wood Johnson foundation
+                    input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                    label(class="c-Checkbox " for="selInput_2") The World Health Organization report.
+                    input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                    label(class="c-Checkbox " for="selInput_3") The childhood obesity epidemic.
+        |
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+
+            div(class="row row-flex justify-between align-items-center")
+                .col.xs12.md5
+                    .row.mt30
+                        h6 Choose “true”, “false” or “information not given”
+                        .row
+                            p #[strong.u-textColor_4 •] The Institute of health is 100% behind the results of the study.
+                        div(class="row"): div(class="u-checkbox-responsive")
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_4") True
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_5") False.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                            label(class="c-Checkbox row ta-l " for="selInput_6") Information not given.
+                    .row.mt30
+                        .row
+                            h6 #[strong.u-textColor_4 •] Complete the sentence.
+                            p The percentage of children that are overweight is...
+                        div(class="row"): div(class="u-checkbox-responsive")
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_7")  will be over 20 % if something not done soon.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_8") is over 30%.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+                            label(class="c-Checkbox row ta-l " for="selInput_9") is decreasing.
+                .col.xs12.md5
+
+                    .row.mt30
+                        .row
+                            h6 #[strong.u-textColor_4 •] According to the report,
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+                            label(class="c-Checkbox row ta-c " for="selInput_10")  obesity causes cancer.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_11") obesity is more common in African Americans.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_12") obesity increases the risk of stroke.
+
+                    .row.mt30
+                        .row
+                            h6 #[strong.u-textColor_4 •] The report suggests that...
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="1")
+                            label(class="c-Checkbox row ta-c " for="selInput_13") latinos are genetically predisposed to become obese.
+                            input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_14" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_14") asians are genetically predisposed to become obese.
+                            input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_15" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_15") the Latino population is growing faster than the white population.
+            .row.ta-c(class="showTo-md"): img(src="unit_1/module_2/assets/images/act_6_1.png" alt="" class="u-responsive-img mt30 m-a")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

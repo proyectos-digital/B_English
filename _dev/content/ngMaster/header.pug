@@ -1,0 +1,55 @@
+//- ============================== Mixins
+include ../_pug/_mixin
+<?php session_start();?>
+aside(class="c-modal c-modal--MenuHeader" id="navSections")
+    nav(class="template-navigation o-nav c-modal--MenuHeader-Wrapper")
+        |
+        |
+        div(class="o-nav__block o-nav--Menu c-modal--MenuHeader-BurgueMenu")
+            div(class="o-nav--Menu-burguer" ng-click="triggerNavigationMenu('navSections', false)")
+                div(class="c-menuBurguer" id="burguerClose")
+                    div(class="c-menuBurguer--Item")
+                    div(class="c-menuBurguer--Item")
+                    div(class="c-menuBurguer--Item")
+                h6 Navigate into Sections
+        |
+        |
+        ul(class="o-nav__block o-nav--Info c-modal--MenuHeader-Info" ng-click="triggerNavigationMenu('container_navSections', false)")
+            li(class="c-modal--MenuHeader-Item"): a(data-title="Home" class="o-nav--Data-Link  c-btn-IconNavigation u-bgIconHome" ui-sref="units")
+            li(class="c-modal--MenuHeader-Item")
+                a(data-title="User" class="o-nav--Data-Link  c-btn-IconNavigation u-bgIconUserProfile " ui-sref="user")
+                    .alert(ng-class = "ClasNotifUser")
+            li(
+                class="c-modal--MenuHeader-Item "
+                ng-repeat="menu in menuuser"
+                ng-class!="( menu.estado == 0 && rol_id == 3 ) ? 'is-disabled' : '' ")
+                |
+                a(data-title="{{menu.titulo}}" class="o-nav--Data-Link  c-btn-IconNavigation {{menu.icono}}" ng-class="('{{menu.titulo | lowercase }}' == '{{state.name}}') ? 'is-active' : ''" ui-sref="{{menu.url}}")
+                |
+            li(ng-show!="(<?php echo $_SESSION['nivel_id']?> == 4) ? true : false" class="c-modal--MenuHeader-Item"): a(data-title="Grammar" class="o-nav--Data-Link  c-btn-IconNavigation u-bgIconSelfCheck" ui-sref="grammar({Unidad_id: unidadid, Module_id: moduloid, Activity_id: 1})")
+            li(class="c-modal--MenuHeader-Item"): a(data-title="Logout" class="o-nav--Data-Link  c-btn-IconNavigation u-bgIconUserProfile" href="../../login/data/logout.php")
+|
+|
+nav(class="template-navigation template-navigation--header o-nav")
+    |
+    |
+    div(class="o-nav__block o-nav--Menu")
+        div(class="o-nav--Menu-burguer " ng-click="triggerNavigationMenu('navSections')"): div(class="c-menuBurguer" ng-class = "ClasNotif" id="burguerOpen ")
+            div(class="c-menuBurguer--Item")
+            div(class="c-menuBurguer--Item")
+            div(class="c-menuBurguer--Item")
+    |
+    |
+    div(class="o-nav__block o-nav--Info")
+        |
+        span(class="o-nav--Info-indicator" ng-bind-html="numAct")
+        div(class="row row-flex o-nav--Info-title")
+            h1(class="o-nav--Info-titleSection" ng-bind-html="titulo | uppercase")
+            h4(class="o-nav--Info-titleDescription" ng-bind-html="titulo_2 | uppercase")
+    |
+    |
+    div(class="o-nav__block o-nav--Data")
+        div(class="o-nav--Data-Item" ng-if="(state.name == 'objectives') ? false : (state.name == 'units') ? false : (state.name == 'user') ? false : true" ): div(class="c-btn-IconAction u-bgIconInfoActivity" ng-click="callObjectiveModal()")
+        //- div(class="o-nav--Data-Item"): div(class="c-btn-IconAction u-bgIconHelp")
+        div(class="o-nav--Data-Item"): div(class="c-btn-IconIndicator u-bgIconINVIL" ng-class="iconoActividad")
+        div(class="o-nav--Data-Item"): div(class="c-btn-IconIndicator u-bgLogoProyect" js-level!="<?php echo $_SESSION['nivel_id']?>")

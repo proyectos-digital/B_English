@@ -1,0 +1,95 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row mt40-xs mt20-md")
+                h5 #[strong.u-textColor_4 1. ]  Complete it with the right word from the box.
+                h6 Drag and drop the right word into the correct phrase.
+            div(class="row-flex mt40")
+                div(class="col-flex-xs12 col-flex-md7")
+                    .row-flex.justify-center
+                    
+                        audio(controls class='row mt20 mb20 xs6')
+                            source(src='unit_1/module_1/assets/audios/act_12_1.mp3' type='audio/mpeg')
+                            | Your browser does not support the audio element.
+                    div(class="row-flex justify-around"): div(class="col-flex-xs12 col-flex-sm9 col-flex-md12 col-center")
+                        div(class="row row-flex justify-around")
+                            div(class="dragCont"): div(class="drag") paid off
+                            div(class="dragCont"): div(class="drag") married
+                            div(class="dragCont"): div(class="drag") working
+                            div(class="dragCont"): div(class="drag") transferred
+                            div(class="dragCont"): div(class="drag") running
+                            div(class="dragCont"): div(class="drag") quit
+                            div(class="dragCont"): div(class="drag") found
+                    div(class="row mt20")
+                        table(class="c-table-default")
+                            thead
+                            tbody
+                                tr
+                                    td: strong Woman
+                                    td.
+                                        Do you think you’ll still be
+                                        #[strong (1) ]
+                                        #[span(class="drop")]
+                                        here ten years from now?
+                                tr
+                                    td: strong Man
+                                    td.
+                                        I hope not! I really hope that by that time I will have
+                                        #[strong (2) ]
+                                        #[span(class="drop")]
+                                        a better job!
+                                        I think I’ll have (3)
+                                        #[span(class="drop")]
+                                        this job by then. Or maybe I´ll
+                                        be
+                                        #[strong (4)]
+                                        #[span(class="drop")]
+                                        my own company by then. How about you?
+                                tr
+                                    td: strong Woman
+                                    td.
+                                        Well, in ten years, I’ll have
+                                        #[strong (5)]
+                                        #[span(class="drop")]
+                                        my student loans at ICETEX. I think
+                                        I’ll still be here, but with any luck, I’ll have
+                                        #[strong (6)]
+                                        #[span(class="drop")]
+                                        to the Main office in
+                                        Ibagué.
+                                tr
+                                    td: strong Man
+                                    td.
+                                        It’s scary to think of the future, isn’t it? Who knows! Maybe we could both be
+                                        #[strong (7)]
+                                        #[span(class="drop")]
+                                        with lots of kids by then!
+                |
+                div(class="col-flex-xs12 col-flex-md5 ")
+                    div(class="row-flex mt20-xs mt10-md")
+                        div(class="col xs6 md10 col-center showTo-md ta-c mb30"): img(src="unit_1/module_1/assets/images/act_12_1.png", alt="", class="u-responsive-img")
+                        |
+                        div(class="col xs12 sm7 md10 col-center")
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent") Now it´s your turn to think what you will be doing 10 years from now. Record 4 things you think you will be doing in 10 years’ time.
+                        |
+                        div(class="col xs8 col-flex-md12 col-center")
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod1_act12',1)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

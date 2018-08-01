@@ -1,0 +1,49 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex mt10-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md9 col-center mt10-sm mt10-md")
+                    h5 Write a conclusion for each of the situations.
+                    img(src="unit_2/module_6/assets/images/act_4.png", alt="" class="u-responsive-img ancho200 ml10 mb10 mt30 centrado")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt10-md")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • This window must be replaced.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuario")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • The tourists could be lost.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuariob")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • You can´t be serious.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuarioc")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • Our cousins might join us for lunch today.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuariod")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • That salesman may be here to see you.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuarioe")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 2")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconInfoActivity" ng-click="idNotice = 1")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" )
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTextoMultiple()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_6/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

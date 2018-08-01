@@ -1,0 +1,32 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="ContadorPalabras(120)")
+        section(class="template-content")
+            h5 I can express certainty, probability, and doubt.
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt30-md")
+                    p Look at the gadget in the picture. What do you think it might be? What do you think it could be used for? Who may be interested in buying and using it? Write a description of the gadget answering these questions and any other that come to your mind. Write 120 words.
+                    div(class="row mb30 mt30 ta-c showTo-md")
+                        img(src="unit_2/module_6/assets/images/self_3.png", alt="" class="u-responsive-img")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt10-md")
+                    div(class="c-wrapTextarea ")
+                        textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0 
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

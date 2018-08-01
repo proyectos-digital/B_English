@@ -1,0 +1,141 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex col-center mt50-xs mt100-md")
+               
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 1.
+                            span  The sun is shining, the sky is blue! What 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_a")   
+                            span   ! 
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                label(for="SelectRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='a beautiful day'") a beautiful day
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                label(for="SelectRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='beautiful day'") beautiful day
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 2.
+                            span  I heard you lost your dog! How
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_b") 
+                            span   !
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_3" name="selection_2" value="1")
+                                label(for="SelectRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='a great idea'") awfully
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="2")
+                                label(for="SelectRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='great idea'") awful
+                                
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 3.
+                            span  Using a recycled bag for your groceries! What
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_c") 
+                            span  !
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_3" value="1")
+                                label(for="SelectRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='a terrible storm'") a great idea
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_6" name="selection_3" value="2")
+                                label(for="SelectRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='terrible'") great idea
+                                
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 4.
+                            span  It is raining cats and dogs and there are floods all over! How
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_d") 
+                            span   !
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_4" value="1")
+                                label(for="SelectRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='a terrible storm'") a terrible storm
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_4" value="2")
+                                label(for="SelectRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='terrible'") terrible                               
+                    
+                    
+                
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 5.
+                            span  First, there was a storm, Then there was a blackout. What 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_e") 
+                            span  !
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_9" name="selection_5" value="1")
+                                label(for="SelectRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='a night'") a night
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_10" name="selection_5" value="2")
+                                label(for="SelectRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='night'") night
+
+                                
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 6.
+                            span  You have been waiting for hours here! How
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_f") 
+                            span   you are!
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_11" name="selection_6" value="1")
+                                label(for="SelectRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='patient person'") patient person
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_12" name="selection_6" value="2")
+                                label(for="SelectRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='patient'") patient
+                                
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 7.
+                            span  The ballet “Romeo and Juliet” was superb! What
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_g") 
+                            span  it was to attend that performance!
+
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_7" value="1")
+                                label(for="SelectRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='amazing experience'") amazing experience
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_7" value="2")
+                                label(for="SelectRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='an amazing experience'") an amazing experience
+                                
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 8.
+                            span  Forty people died in the plane crash. How 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_h") 
+                            span  !
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_8" value="1")
+                                label(for="SelectRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_h='a tragic event'") a tragic event
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_16" name="selection_8" value="2")
+                                label(for="SelectRadio_16" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_h='tragic'") tragic
+                                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

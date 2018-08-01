@@ -1,0 +1,87 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+               
+                    div(class="row-flex align-items-center justify-between")
+                        div(class="col xs12 md6 col-center")
+                            p #[strong Go and Get ] are probably two of the most common verbs in English. Sometimes, they are combined with other words. The following are the most common words accompanying with go and get. Notice that in Spanish we use some of these combinations, too:
+                            div(class="row-flex align-items-center justify-center")
+                                div(class="col-flex-xs8 col-flex-sm5 col-center ")
+                                    div(class="c-cardBlue ")
+                                        div(class="c-cardBlueContent") 
+                                            ul
+                                                li • go abroad/overseas
+                                                li • go online
+                                                li • go shopping/swimming
+                                                li • go crazy/mad
+                                                li • go blind
+                                                li • go bald
+                                                li • go quiet/silent
+                                                li • go bankrupt
+                                                li • go missing
+                                                li • go on a diet        
+                                div(class="col-flex-xs8 col-flex-sm5 col-center ")
+                                    div(class="c-cardGreen ")
+                                        div(class="c-cardGreenContent") 
+                                            ul
+                                                li • get drunk
+                                                li • get a job
+                                                li • get lost
+                                                li • get married
+                                                li • get ready
+                                                li • get permission
+                                                li • get angry
+                                                li • get divorced
+                                                li • get started 
+
+                    
+                        |
+                        div(class="col xs12 lg6 col-center")
+                            h5 Complete the sentences.
+                            h6(class="mb50") Remember to type the verbs in the proper tense.
+
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 1]. Are you ready to #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]?
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 2]. I heard that company #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]last year. That’s why they closed.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 3]. Let me #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]to see if we can find the information.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 4]. The police is still looking for the little girl that #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]last week.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5]. Did you #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]to take the day off?
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 6]. We #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]completely #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] ! We drove for hours and never found the restaurant.
+                        
+
+                                
+
+                                    
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

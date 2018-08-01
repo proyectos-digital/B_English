@@ -1,0 +1,95 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_2"  ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            div(class="row"): h5 Listen to the news report and answer the questions that follow
+            .row-flex.align-items-center
+                .col.xs12.md8.col-center
+                    div(class="row")
+                        audio( controls class="row")
+                            source(src="unit_1/module_3/assets/audios/self_2_1.mp3" type="audio/mpeg")
+                            | Your browser does not support the audio element.
+                    div(class="row mt20")
+                        .c-cardGreen.m-a
+                            .c-cardGreenContent.u-textColor_1
+                                h5.ta-c Brazilian Ministry of Education defends external control over Universities
+                                p.ta-c Wikinews.org, Wednesday, February 2, 2005
+                                p.ta-j.mt20 Read the full article at: #[a(href="https://en.wikinews.org/wiki/Brazilian_Ministry_of_Education_defends_external_control_over_Universities" target="blank") https://en.wikinews.org/wiki/]
+                .col.xs12.md6
+                    div(class="row col-center")
+                        h6 #[strong.u-textColor_4 •] The government currently has...
+                        div(class="u-checkbox-responsive")
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                            label(class="c-Checkbox row ta-c " for="selInput_1") No control of the universities.
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_2") Limited control.
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_3") More control.
+                            input(type="hidden" class="js-select")
+
+                        h6.mt30 #[strong.u-textColor_4 •] Complete the sentence
+                        p.ml10 The universities generally believe.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox row ta-c " for="selInput_4") That universities need help with their finance
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_5") That the Ministry of Education needs to make universities completely independent.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_6") That universities do not need more oversight
+                            input(type="hidden" class="js-select")
+
+
+                .col.xs12.md5.col-center
+
+                    h6.mt30  #[strong.u-textColor_4 •] Fill in the blank space with appropriate person.
+                        table(class="c-table-estilo_tres m-a")
+                            thead
+                                tr
+                                    th For more external control
+                                    th For less external control
+                            tbody
+                                tr
+                                    td: input(type="text" class="c-input row js-escribir")
+                                    td: input(type="text" class="c-input row js-escribir")
+
+                                tr
+                                    td: input(type="text" class="c-input row js-escribir")
+                                    td: input(type="text" class="c-input row js-escribir")
+
+                    div(class="row col-center")
+                        h6 #[strong.u-textColor_4 •] Choose true or false.
+                        p.ml10 When a magazine in Brazil puts a donkey to represent someone it means they are a hard worker.
+                        div(class="u-checkbox-responsive dos-columnas")
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                            label(class="c-Checkbox row ta-c " for="selInput_7") True.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_8") False.
+                            input(type="hidden" class="js-select")
+
+                    div(class="row col-center")
+                        h6 #[strong.u-textColor_4 •] The academics are worried about...
+                        div(class="u-checkbox-responsive")
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="1")
+                            label(class="c-Checkbox row ta-c " for="selInput_9") Finances.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_10") The university Syllabi.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_11") Minority groups.
+                            input(type="hidden" class="js-select")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,126 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_8")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm11 col-center col-flex-md12")
+                        p(class="pr50") 
+                            strong #[span(class="u-textColor_4-dark") 1]. Read the following sentences. Pay attention to the words in bold.
+                            br
+                            br
+                            span I read an article on Facebook about a policeman and a driver in Bosa. It is about a man who was under the influence of alcohol and driving. #[strong The policeman asked him where he lived] . The man didn’t even know! Then #[strong he asked the man if he could give him a number to call his family], but the man didn’t even understand the question. Then #[strong he asked him where he had been drinking], and the man immediately remembered! He was arrested and had to pay a fine!
+                    div(class="col-flex-sm11 col-center col-flex-md6")
+                        table(class="c-table-estilo_tres xs11 col-center mt20 mb20")
+                               thead
+                                   tr
+                                       th(colspan="2") Yes / No Questions     
+                               tbody
+                                   tr
+                                       td(class="ta-c"): strong Direct Speech
+                                       td(class="ta-c"): strong Reported Speech
+                                   tr
+                                       td(class="ta-l"): span The police officer asked, “ #[strong Do] you #[strong live] on Main Street?”
+                                       td(class="ta-l"): span The police officer asked #[strong if Mr. Anderson lived] on Main Street.
+
+                                   tr
+                                       td(class="ta-l"): span The police officer asked, “ #[strong Did] he #[strong say] anything?”
+                                       td(class="ta-l"): span The police officer asked #[strong if the man had said] anything.
+                                                    
+                                   tr
+                                       th(colspan="2"  class="u-bgColor_4-dark u-textWhite") Wh- Questions
+                                   tr
+                                       td(class="ta-l"): span The police officer asked, #[strong “Where do you live?”]
+                                       td(class="ta-l"): span The police officer asked #[strong where she lived].
+                                   tr
+                                       td(class="ta-l"): span The police officer asked, #[strong “What happened?”] 
+                                       td(class="ta-l"): span ” The police officer asked if Mr. Anderson lived on Main Street. The police officer #[strong asked what had happened].
+                    |
+                    |
+                    div(class="col-flex-sm11 col-center col-flex-md6") 
+                        p(class="row mb30") 
+                            strong #[span(class="u-textColor_4-dark") 2]. Report the questions.
+                        
+                        div.row
+                            div(class="col xs3 sm4")
+                                div(class="dragCont")
+                                    div(class="drag") …why he was wearing a raincoat.
+                            div(class="col xs3 sm4")
+                                div(class="dragCont")
+                                    div(class="drag") …whether he wanted to leave early.
+                            div(class="col xs3 sm4")
+                                div(class="dragCont")
+                                    div(class="drag") …where she had left her purse.
+                            div(class="col xs3 sm4")
+                                div(class="dragCont")
+                                    div(class="drag") …who had given me those documents.
+                            div(class="col xs3 sm4")
+                                div(class="dragCont")
+                                    div(class="drag") …if we lived in the same town.
+
+                        div.row.mt30
+                            div(class="row-flex align-items-center")  
+                                div(class="col xs8")  
+                                    p #[strong: span(class="u-textColor_4-dark") 1. ] Where did you leave your purse? He asked her…
+                                div(class="col xs4")  
+                                    span(class="drop centrado mt10")
+
+                            div(class="row-flex align-items-center")  
+                                div(class="col xs8")  
+                                    p #[strong: span(class="u-textColor_4-dark") 2. ] Why are you wearing a raincoat? She asked him…
+                                div(class="col xs4")  
+                                    span(class="drop centrado mt10")
+
+                            div(class="row-flex align-items-center")  
+                                div(class="col xs8")  
+                                    p #[strong: span(class="u-textColor_4-dark") 3. ] Who gave you those documents? They asked me…
+                                div(class="col xs4")  
+                                    span(class="drop centrado mt10")
+
+                            div(class="row-flex align-items-center")  
+                                div(class="col xs8")  
+                                    p #[strong: span(class="u-textColor_4-dark") 4. ] Did you live in the same town? She asked us…
+                                div(class="col xs4")  
+                                    span(class="drop centrado mt10")
+
+                            div(class="row-flex align-items-center")  
+                                div(class="col xs8")  
+                                    p #[strong: span(class="u-textColor_4-dark") 5. ] Do you want to leave early? I asked him…
+                                div(class="col xs4")  
+                                    span(class="drop centrado mt10")
+                    
+                    
+                        
+
+                  
+                        
+
+                                
+
+                                    
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_8_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

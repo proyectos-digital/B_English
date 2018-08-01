@@ -1,0 +1,200 @@
+.u-{
+    &bg{
+        /* Proyect icons */
+
+        &IconListen         { &:before{ background-image: url('#{$GlobalImages}/ui-icon-listen.svg'); } }
+        &IconPlay           { &:before{ background-image: url('#{$GlobalImages}/ui-icon-play.svg'); } }
+        &IconPause          { &:before{ background-image: url('#{$GlobalImages}/ui-icon-pause.svg'); } }
+        &IconTranslate      { &:before{ background-image: url('#{$GlobalImages}/ui-icon-translate.svg'); } }
+        &IconUpload         { &:before{ background-image: url('#{$GlobalImages}/ui-icon-upload.svg'); } }
+        &IconDownload       { &:before{ background-image: url('#{$GlobalImages}/ui-icon-download.svg'); } }
+        &IconSearch         { &:before{ background-image: url('#{$GlobalImages}/ui-icon-search.svg'); } }
+        &IconHome           { &:before{ background-image: url('#{$GlobalImages}/ui-icon-home.svg'); } }
+        &IconUpload         { &:before{ background-image: url('#{$GlobalImages}/ui-icon-upload.svg'); } }
+        &IconListen         { &:before{ background-image: url('#{$GlobalImages}/ui-icon-listen.svg'); } }
+        &IconRecord         { &:before{ background-image: url('#{$GlobalImages}/ui-icon-record.svg'); } }
+        &IconRefresh        { &:before{ background-image: url('#{$GlobalImages}/ui-icon-refresh.svg'); } }
+        &IconClose          { &:before{ background-image: url('#{$GlobalImages}/ui-icon-close.svg'); } }
+        &IconClip          { &:before{ background-image: url('#{$GlobalImages}/ui-icon-clip.svg'); } }
+        &IconChat          { &:before{ background-image: url('#{$GlobalImages}/ui-icon-chat.svg'); } }
+
+        &IconArrowBack          { &:before{ background-image: url('#{$GlobalImages}/ui-icon-arrowBack.svg'); } }
+        &IconArrowNext          { &:before{ background-image: url('#{$GlobalImages}/ui-icon-arrowNext.svg'); } }
+        &IconArrowBack-active   { &:before{ background-image: url('#{$GlobalImages}/ui-icon-arrowBack_active.svg'); } }
+        &IconArrowNext-active   { &:before{ background-image: url('#{$GlobalImages}/ui-icon-arrowNext_active.svg'); } }
+
+        &IconActivities     { &:before{ background-image: url('#{$GlobalImages}/ui-icon-activities.svg'); } }
+        &IconColombia       { &:before{ background-image: url('#{$GlobalImages}/ui-icon-colombia.svg'); } }
+        &IconUserProfile    { &:before{ background-image: url('#{$GlobalImages}/ui-icon-userProfile.svg'); } }
+        &IconSelfCheck      { &:before{ background-image: url('#{$GlobalImages}/ui-icon-selfCheck.svg'); } }
+        &IconTest           { &:before{ background-image: url('#{$GlobalImages}/ui-icon-test.svg'); } }
+        &IconCheck          { &:before{ background-image: url('#{$GlobalImages}/ui-icon-check.svg'); } }
+        &IconAlert          { &:before{ background-image: url('#{$GlobalImages}/ui-icon-alert.svg'); } }
+        &IconHelp           { &:before{ background-image: url('#{$GlobalImages}/ui-icon-help.svg'); } }
+        &IconSend           { &:before{ background-image: url('#{$GlobalImages}/ui-icon-send.svg'); } }
+        &IconSendChat           { &:before{ background-image: url('#{$GlobalImages}/ui-icon-send2.svg'); } }
+        &IconInfoActivity   { &:before{ background-image: url('#{$GlobalImages}/ui-icon-infoActivity.svg'); } }
+        // 
+        &ActActivity        { &:before{ background-image: url('#{$GlobalImages}/act-activity.svg'); } }
+        &ActGame            { &:before{ background-image: url('#{$GlobalImages}/act-game.svg'); } }
+        &ActListening       { &:before{ background-image: url('#{$GlobalImages}/act-listening.svg'); } }
+        &ActReading         { &:before{ background-image: url('#{$GlobalImages}/act-reading.svg'); } }
+        &ActRecording       { &:before{ background-image: url('#{$GlobalImages}/act-recording.svg'); } }
+        &ActWriting         { &:before{ background-image: url('#{$GlobalImages}/act-writing.svg'); } }
+        // 
+        &MenuModules        { &:before{ background-image: url('#{$GlobalImages}/menu-modules.svg'); } }
+        &MenuBurguer        { &:before{ background-image: url('#{$GlobalImages}/menu-burguer.svg'); } }
+        //
+        &IconINVIL          {
+            &::before {
+                background-image: url(../multimedia/images/client/cliente_invil_english.svg);
+                background-size: contain;
+                min-width: calc(var(--size-uiBtns) * 9);
+            }
+        }
+        //
+        &LogoProyect[js-level="1"]        { &:before{ background-image: url('#{$GlobalImages}/logo-english_a1.svg'); } }
+        &LogoProyect[js-level="2"]        { &:before{ background-image: url('#{$GlobalImages}/logo-english_a2.svg'); } }
+        &LogoProyect[js-level="3"]        { &:before{ background-image: url('#{$GlobalImages}/logo-english_b1.svg'); } }
+        &LogoProyect[js-level="4"]        { &:before{ background-image: url('#{$GlobalImages}/logo-english_b2.svg'); } }
+        &LogoProyect[js-level="5"]        { &:before{ background-image: url('#{$GlobalImages}/logo-english_c1.svg'); } }
+        // &Template        { background-image: url('#{$GlobalImages}/logo-english.svg'); } 
+        
+        /* Proyect Color */
+        
+        // Black
+        &Color_white{   background-color: white	!important;}
+        &Color_transparent{   background-color: transparent	!important;}
+
+        &Color_1-lighter{   background-color: $color_1-lighter	;}
+        &Color_1-light{     background-color: $color_1-light		;}
+        &Color_1{           background-color: $color_1			;}
+        &Color_1-dark{      background-color: $color_1-dark		;}
+        &Color_1-darker{    background-color: $color_1-darker		;}
+        // Green
+        &Color_2-lighter{   background-color: $color_2-lighter	;}
+        &Color_2-light{     background-color: $color_2-light		;}
+        &Color_2{           background-color: $color_2    		;}
+        &Color_2-dark{      background-color: $color_2-dark		;}
+        &Color_2-darker{    background-color: $color_2-darker		;}
+        // Yellow
+        &Color_3-lighter{   background-color: $color_3-lighter    ;}
+        &Color_3-light{     background-color: $color_3-light  	;}
+        &Color_3{           background-color: $color_3    		;}
+        &Color_3-dark{      background-color: $color_3-dark   	;}
+        &Color_3-darker{    background-color: $color_3-darker     ;}
+        // Red
+        &Color_4-lighter{   background-color: $color_4-lighter	;}
+        &Color_4-light{     background-color: $color_4-light		;}
+        &Color_4{           background-color: $color_4			;}
+        &Color_4-dark{      background-color: $color_4-dark		;}
+        &Color_4-darker{    background-color: $color_4-darker		;}
+        // blue
+        &Color_5-lighter{   background-color: $color_5-lighter 	;}
+        &Color_5-light{     background-color: $color_5-light  	;}
+        &Color_5{           background-color: $color_5    		;}
+        &Color_5-dark{      background-color: $color_5-dark   	;}
+        &Color_5-darker{    background-color: $color_5-darker  	;}
+        // state
+        &Color_good{        background-color: $color_good			;}
+        &Color_wrong{       background-color: $color_wrong		;}
+    }
+    &ob_fit-cover{ object-fit: cover }
+    &ob_fit-contain{ object-fit: contain }
+}
+
+[img-fit~="cover"]{ object-fit: cover; }
+[img-fit~="h100"]{ height: 100%; }
+[img-fit~="w100"]{ width: 100%; }
+[img-fit~="contain"]{ object-fit: contain; }
+
+[pseudo-bgmix="multiply"]       { &::before{ mix-blend-mode: multiply; } }
+[pseudo-bgmix="color"]          { &::before{ mix-blend-mode: color; } }
+[pseudo-bgmix="hard-light"]     { &::before{ mix-blend-mode: hard-light; } }
+[pseudo-bgcolor="color_1"]      { &::before{ background-color: var(--color_1); } }
+[pseudo-bgcolor="color_2"]      { &::before{ background-color: var(--color_2); } }
+[pseudo-bgcolor="color_3"]      { &::before{ background-color: var(--color_3); } }
+[pseudo-bgcolor="color_4"]      { &::before{ background-color: var(--color_4); } }
+[pseudo-bgcolor="color_5"]      { &::before{ background-color: var(--color_5); } }
+
+[pseudo-bgimage]{
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+[pseudo-content]{
+    &[before-content]{
+        &::before{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &[after-content]{
+        &::after{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+[pseudo-content='relative']{
+    &[before-content]{
+        &::before{
+            position: relative;
+            min-height: 1rem;
+            display: inline-block;
+        }
+    }
+    &[after-content]{
+        &::after{
+            position: relative;
+            min-height: 1rem;
+            display: inline-block;
+        }
+    }
+}
+
+[before-content]{
+    &::before{
+        content: attr(before-content) !important;
+        
+    }
+}
+
+[after-content]{
+    &::after{
+        content: attr(before-content) !important;
+    }
+}
+
+[content-size="1"]      { &::before{ font-size: 1rem; } }
+[content-size="2"]      { &::before{ font-size: 2rem; } }
+[content-size="3"]      { &::before{ font-size: 3rem; } }
+[content-size="4"]      { &::before{ font-size: 4rem; } }
+[content-size="5"]      { &::before{ font-size: 5rem; } }
+
+[content-color="color_2"]      { &::before{ color: var(--color_2); } }
+[content-color="color_3"]      { &::before{ color: var(--color_3); } }
+[content-color="color_4"]      { &::before{ color: var(--color_4); } }
+[content-color="color_5"]      { &::before{ color: var(--color_5); } }

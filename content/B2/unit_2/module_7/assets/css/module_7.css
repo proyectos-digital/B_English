@@ -1,0 +1,192 @@
+.act_1 .italicFont {
+	font-style: italic;
+	font-size: 0.9rem;
+}
+
+.act_2 .lh-20 {
+	line-height: 25px;
+}
+
+.act_5 ._draggableImg {
+	width: 180px;
+}
+
+@media all and (max-width: 599px) {
+	.act_5 ._draggableImg {
+		width: 200px;
+	}
+}
+
+.act_5 .drag {
+	height: calc(2rem - 4px);
+	font-size: 0.8rem;
+}
+
+.act_5 .dragCont {
+	margin: 5px auto;
+}
+
+.act_5 .drop {
+	position: absolute;
+	top: auto;
+	bottom: -10px;
+	left: auto;
+	right: 30px;
+}
+
+.act_5 .dragCont,.act_5 .drop {
+	width: 120px;
+	height: 2rem;
+}
+
+.act_8 .drag {
+	height: calc(3rem - 4px);
+	font-size: 0.8rem;
+}
+
+.act_8 .dragCont {
+	margin: 5px auto;
+}
+
+.act_8 .dragCont,.act_8 .drop {
+	min-width: 120px;
+	height: 3rem;
+}
+
+.act_15 .drag {
+	height: calc(3rem - 4px);
+	font-size: 0.8rem;
+}
+
+.act_15 .dragCont {
+	margin: 5px auto;
+}
+
+.act_15 .dragCont,.act_15 .drop {
+	min-width: 120px;
+	height: 3rem;
+}
+
+@media all and (max-width: 599px) {
+	.act_17 .flip_card {
+		width: 120px;
+		height: 164px;
+		font-size: 0.8rem;
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+	.act_17 .flip_card {
+		width: 130px;
+		height: 174px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.act_17 .flip_card {
+		width: 140px;
+		height: 184px;
+	}
+}
+
+.test_1 .drag {
+	height: calc(2rem - 4px);
+	font-size: 0.8rem;
+}
+
+.test_1 .dragCont {
+	margin: 5px auto;
+}
+
+.test_1 ._dropCont {
+	position: relative;
+	width: 90%;
+	min-height: 90%;
+	box-shadow: 0 0 0 1px #8496c5;
+	padding: .5rem 1rem 1rem;
+	font-size: 0.8rem;
+	background-color: rgba(132,150,197,0.61);
+}
+
+.test_1 .drop {
+	position: absolute;
+	top: auto;
+	bottom: -1rem;
+	left: auto;
+	right: 0;
+}
+
+.test_1 .dragCont,.test_1 .drop {
+	min-width: 150px;
+	height: 2rem;
+}
+
+.test_3 .drag {
+	height: calc(2rem - 4px);
+	font-size: 0.8rem;
+}
+
+.test_3 .dragCont {
+	margin: 5px auto;
+}
+
+.test_3 ._dropCont {
+	position: relative;
+	width: 90%;
+	min-height: 90%;
+	box-shadow: 0 0 0 1px #8496c5;
+	padding: .5rem 1rem 1rem;
+	font-size: 0.8rem;
+	background-color: rgba(132,150,197,0.61);
+}
+
+.test_3 .drop {
+	position: absolute;
+	top: auto;
+	bottom: -1rem;
+	left: auto;
+	right: 0;
+}
+
+.test_3 .dragCont,.test_3 .drop {
+	min-width: 120px;
+	height: 2rem;
+}
+
+@media all and (min-width: 600px) {
+	.test_5 .c-CheckSelected {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.test_5 .c-CheckSelected {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.col_2 li {
+	padding-left: 3rem!important;
+	border: none;
+}
+
+.col_2 li span {
+	text-align: left;
+	margin-left: 10px;
+	width: 100%;
+}
+
+.col_2 li img {
+	-o-object-fit: cover;
+	object-fit: cover;
+}

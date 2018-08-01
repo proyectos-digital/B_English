@@ -1,0 +1,112 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a act_7")
+        section(class="template-content")
+            
+            div(class="row u-animationFadeDown" ng-show="s_actividad == 1")
+                h6 Look at the following sentences.
+                div(class="col xs12 md10 col-center")
+                    div(class="row mt50"): div(class="c-cardBlue m-a mt10"): div(class="c-cardBlueContent"): div(class="row row-flex align-items-center")
+                        div(class="col-flex-xs12 col-flex-sm5 col-center")
+                            p(class="u-textColor_5-darker") #[strong •] This is the dress that I bought in the sales. 
+                            hr
+                            p(class="u-textColor_5-darker") #[strong •] This is the dress which I bought in the sales.
+
+                        div(class="col-flex-sm1 col-flex-md1 col-center")
+                            //- img(src="./unit_3/module_9/assets/images/act_7_1.png", alt="", srcset="" class="u-responsive-img centrado")
+                            h5.arrow_rotate ->
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): blockquote This is the dress I bought in the sales.
+                    |
+                    div(class="row"): div(class="c-cardBlue m-a mt10"): div(class="c-cardBlueContent"): div(class="row row-flex align-items-center")
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): p(class="u-textColor_5-darker") #[strong •] The man who is interested in your car will telephone later.
+                        div(class="col-flex-sm1 col-flex-md1 col-center")
+                            //- img(src="./unit_3/module_9/assets/images/act_7_1.png", alt="", srcset="" class="u-responsive-img centrado")
+                            h5.arrow_rotate ->
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): blockquote The man interested in your car will telephone later.
+                    |
+                    div(class="row"): div(class="c-cardBlue m-a mt10"): div(class="c-cardBlueContent"): div(class="row row-flex align-items-center")
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): p(class="u-textColor_5-darker") #[strong •] The books which are on the table have been read.
+                        div(class="col-flex-sm1 col-flex-md1 col-center")
+                            //- img(src="./unit_3/module_9/assets/images/act_7_1.png", alt="", srcset="" class="u-responsive-img centrado")
+                            h5.arrow_rotate ->
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): blockquote The books on the table have been read.
+                    |
+                    div(class="row"): div(class="c-cardBlue m-a mt10"): div(class="c-cardBlueContent"): div(class="row row-flex align-items-center")
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): p(class="u-textColor_5-darker") #[strong •] A person who has been tricked once is careful the next time.
+                        div(class="col-flex-sm1 col-flex-md1 col-center")
+                            //- img(src="./unit_3/module_9/assets/images/act_7_1.png", alt="", srcset="" class="u-responsive-img centrado")
+                            h5.arrow_rotate ->
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): blockquote A person tricked once is careful the next time.
+                    |
+                    div(class="row"): div(class="c-cardBlue m-a mt10"): div(class="c-cardBlueContent"): div(class="row row-flex align-items-center")
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): p(class="u-textColor_5-darker") #[strong •] The family who are living in the house are very rich.
+                        div(class="col-flex-sm1 col-flex-md1 col-center")
+                            //- img(src="./unit_3/module_9/assets/images/act_7_1.png", alt="", srcset="" class="u-responsive-img centrado")
+                            h5.arrow_rotate ->
+                        div(class="col-flex-xs12 col-flex-sm5 col-center"): blockquote The family living in the house are very rich.
+                |    
+            div(class="row u-animationFadeDown" ng-show="s_actividad == 2")
+                h6 Rewrite the sentences reducing the relative clauses.
+                div(class="row"): div(class="col-flex-xs11 col-flex-md7 col-center"): img(src="./unit_3/module_9/assets/images/act_7_2.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                div(class="row mt50")
+                    div(class="col xs12 md6")
+                        p
+                            strong(class="u-textColor_4-dark") 1.
+                            |  The movie that we watched yesterday was very boring. 
+
+                        input(type="text" placeholder="Write here..." class="c-input js-escribir w100")
+
+                    div(class="col xs12 md6")
+                        p
+                            strong(class="u-textColor_4-dark") 2.
+                            |  Carnivore is the name that we give to animals that eat meat.
+
+                        input(type="text" placeholder="Write here..." class="c-input js-escribir w100")
+
+                    div(class="col xs12 md6")
+                        p
+                            strong(class="u-textColor_4-dark") 3.
+                            |  The lady who is standing in the corner is my aunt. 
+
+                        input(type="text" placeholder="Write here..." class="c-input js-escribir w100")
+
+                    div(class="col xs12 md6")
+                        p
+                            strong(class="u-textColor_4-dark") 4.
+                            |  The books that are on the desk are mine. 
+
+                        input(type="text" placeholder="Write here..." class="c-input js-escribir w100")    
+
+                    div(class="col xs12 md6")
+                        p
+                            strong(class="u-textColor_4-dark") 5.
+                            |  This is the house that the famous architect designed.
+
+                        input(type="text" placeholder="Write here..." class="c-input js-escribir w100")  
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        //-  button(class="c-btn-IconAction u-bgIconInfoActivity is-active openNotice" ng-click="idNotice = 2")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/activities/act_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

@@ -1,0 +1,105 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section")
+        section(class="template-content")
+            div(class="row mt40-md")
+            div(class="row-flex mt40-md")
+                div(class="col-flex-md5 ta-c col-center showTo-md")
+                    img(src="unit_1/module_1/assets/images/self_3.png", alt="", class="u-responsive-img")
+                div(class="col-flex-sm9 col-flex-md7 col-center")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent") Futurology is a science that makes predictions based on the systematic analysis of trends in the past and realities in the present. Many scientists have analyzed, for example, the effect of social networks in younger generations in thirty years. These are some of their predictions:
+            div(class="row-flex mt60-xs mt40-md")
+                div(class="col-flex-md5 col-flex-sm11 col-center")
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span Adults in the future
+                                    span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_a")
+                                    span mobiles to write. Handwriting will disappear.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                            label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='will be using'") will be using
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                            label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='will have used'") will have used
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                            label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='are using'") are using
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span Many adults
+                                    span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_b")
+                                    span to machines. It will be difficult to establish face-to-face communications.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                            label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='talk'") talk
+                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                            label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='will be talking'") will be talking
+                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="3")
+                            label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='will have talked'") will have talked
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span Since adults
+                                    span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_c")
+                                    span their thumbs to text, there will be more diseases related to tendinitis.
+                        div(class="row-flex justify-around")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                            label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='won’t use'") won’t use
+                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                            label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='will have used'") will have used
+                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="3")
+                            label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='will be using'") will be using
+                |
+                div(class="col-flex-md5 col-flex-sm11 col-center")
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span Because smartphones
+                                    span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_d")
+                                    span conversations, people will not continue studying languages. 
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                            label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='translating'") translating
+                            input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                            label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='will be translating'") will be translating
+                            input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_4" value="3")
+                            label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='will have translated'") will have translated
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span In the future, many engineers
+                                    span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_e")
+                                    span more Apps related to very basic things we do at home.
+                        div(class="row-flex justify-around")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                            label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='designed'") designed
+                            input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                            label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='designing'") designing
+                            input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_5" value="3")
+                            label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='will be designing'") will be designing
+    |
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

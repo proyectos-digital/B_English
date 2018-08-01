@@ -1,0 +1,95 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_6" )
+	aside(class="template-asideLeft o-aside-Item")
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content" )
+				.row-flex.justify-between.align-items-center
+					.col.xs12.md5
+						h5 Listen to the news report and answer the questions that follow.
+						.row-flex.justify-center
+							audio(controls class='mt30')
+								source(src='unit_3/module_9/assets/audios/act_6_1.mp3' type='audio/mpeg')
+
+						.c-cardGreen
+							.c-cardGreenContent.ta-c
+								h5 Andrea Muizelaar on fashion, anorexia, and life after 'Top Model'
+								h6 Monday, November 26, 2007
+
+								p Read the full story here: #[a(href="https://en.wikinews.org/wiki/Andrea_Muizelaar_on_fashion,_anorexia,_and_life_after_%27Top_Model%27" target="blank")  en.wikinews.org]
+
+						h5 Now choose the best answer.
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •] According to Andrea #[input(type="text" class="c-input js-escribir row w80 mt10" ng-model="txtcaptura_a")]
+
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_1" ng-click = "txtcaptura_a = 'she was bullied for looking geeky.'") she was bullied for looking geeky.
+								input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_2" ng-click = "txtcaptura_a = 'she wanted to work in media.'") she wanted to work in media.
+								input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+								label(class="c-Checkbox row ta-l " for="selInput_3" ng-click = "txtcaptura_a = 'she developed bad eating habits as a child.'") she developed bad eating habits as a child.
+
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •] Choose true or false.
+								p  Andrea used modelling to help cure her anorexic disorder.
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_4") True.
+								input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_5") False.
+
+
+					.col.xs12.md5
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •]  Complete the sentence.
+								p Thin girls are the norm in the modelling world because #[input(type="text" class="c-input js-escribir row w80 mt10" ng-model="txtcaptura_b")]
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_6" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_6" ng-click = "txtcaptura_b = 'they were victims of bullying.'") they were victims of bullying.
+								input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_7" ng-click = "txtcaptura_b = 'girls with a bigger body size won’t be successful.'") girls with a bigger body size won’t be successful.
+								input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="3")
+								label(class="c-Checkbox row ta-l " for="selInput_8" ng-click = "txtcaptura_b = 'being slender is considered to be the image of perfection.'") being slender is considered to be the image of perfection.
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •] What is Andrea’s opinion of the image of thin models?
+
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_9") It can psychologically affect the public.
+								input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_10") It promotes diversity.
+								input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="3")
+								label(class="c-Checkbox row ta-l " for="selInput_11") It negatively impacts young girls.
+
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •] Andrea considers that Tyra Banks #[input(type="text" class="c-input js-escribir row w80 mt10" ng-model="txtcaptura_c")]
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_12" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_12" ng-click = "txtcaptura_c = 'gained success in modelling as a result of her slim figure.'") gained success in modelling as a result of her slim figure.
+								input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_13" ng-click = "txtcaptura_c = 'used her platform to promote different body types.'") used her platform to promote different body types.
+								input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_14" value="3")
+								label(class="c-Checkbox row ta-l " for="selInput_14" ng-click = "txtcaptura_c = 'is a role model to many young girls.'") is a role model to many young girls.
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

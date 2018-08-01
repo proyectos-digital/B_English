@@ -1,0 +1,56 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 #[strong.u-textColor_4 1. ] Read and listen to the stories about two mysterious places in the world. Complete the sentences.
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md5 col-center mt30-md mt30-sm")
+                    div(class=" row ta-c mb30 showTo-md"): img(src="unit_1/module_4/assets/images/act_15a.png", alt="" class="u-responsive-img w60")
+                    h5 Machu Picchu
+                    p(class="ta-j line-h1") Five hundred years ago, Machu Picchu was a vibrant city high on a mountaintop in Peru. Archaeologists think it 
+                        strong (1)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                        | by the Incas around 1460 C.E. Then, in the early 1500s, Machu Picchu  
+                        strong (2)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")].
+                        | Thick jungle plants covered the city. It 
+                        strong (3)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                        | for hundreds of years. The city  
+                        strong (4)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                        | in 1911 by the explorer Hiram Bingham. But why did the Incas leave the city? Was there a war or some terrible disease? No one knows. The full story of Machu Picchu remains a mystery.
+
+                div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center mt30-md mt30-sm")
+                    div(class=" row ta-c mb30 showTo-md"): img(src="unit_1/module_4/assets/images/act_15b.png", alt="" class="u-responsive-img w60")
+                    h5 Altamira Cave
+                    p(class="ta-j line-h1") In 1875, animal bones and ancient black-wall paintings 
+                        strong (5)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                        | by a Spanish nobleman named Marcelino de Sautuola in Altamira Cave in Spain. Years later in 1879, he returned with his twelve-year-old daughter Maria. She noticed colorful paintings of bulls and other animals on the ceiling. Human handprints 
+                        strong (6)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                        | on the walls of the cave. Today archaeologists think the paintings and prints 
+                        strong (7)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                        | by hunters who lived about 16,000 years ago. But no one is sure exactly why they
+                        strong (8)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                        | there.
+                div(class="col-flex-sm8 col-flex-md6 col-center mt30-md mt30-sm")
+                    audio(src="unit_1/module_4/assets/audios/act_15.mp3" preload="auto" controls class="centrado")
+                        p Tu navegador no implementa el elemento audio.
+            
+
+
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconListen" )
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

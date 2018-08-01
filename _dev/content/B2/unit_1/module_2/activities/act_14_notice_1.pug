@@ -1,0 +1,22 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+div.vh100.row-flex
+    div(class="row m-a ml40 mr40")
+        header(class="c-noticeAside-header")
+            div(class="row mt40")
+                img(src=""+appPathImage+"c_noticeTitle.png", alt="", class="u-responsive-img w70")
+        section(class="c-noticeAside-section ")
+            div(class="row mt40")
+                p(class="ta-r") Notice the use of the phrases in bold:
+                p(class="ta-r") They <strong>will have completed the</strong> project before the deadline. 
+                    strong Active <br>
+                    | The project 
+                    strong will have been completed 
+                    | before the deadline. 
+                    strong Passive
+                p(class="ta-r"): strong Active Form
+                p(class="ta-r") In <strong>active sentences</strong>, the subject of the sentence performs an action and the object of the sentences receives that action.
+                p(class="ta-r"): strong Passive Form
+                p(class="ta-r") In <strong>passive sentences</strong>, the subject of the sentence receives the action, and the object performing the action is optionally included near the end of the sentence.
+                

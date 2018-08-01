@@ -1,0 +1,72 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_7" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content" )
+
+
+            .row-flex.align-items-center
+                .col.xs12.md6
+                    h5 Complete with the correct phrasal verb.
+                    .row.mt30
+                        p #[strong(class="u-textColor_4") •] I’m afraid I can’t meet you. Something has #[input(type="text" class="c-input js-escribir")] .
+                        p.mt20 #[strong(class="u-textColor_4") •] I can’t meet you this week. I’m  #[input(type="text" class="c-input js-escribir")] all week.
+                        p.mt20 #[strong(class="u-textColor_4") •] Let’s  #[input(type="text" class="c-input js-escribir")] at the Juan Valdez at 8 pm and walk home together.
+                        p.mt20 #[strong(class="u-textColor_4") •] I can’t meet you on Wednesday. Can we #[input(type="text" class="c-input js-escribir")] the meeting to Monday?
+                        p.mt20 #[strong(class="u-textColor_4") •] I can’t meet you on Friday. Can we #[input(type="text" class="c-input js-escribir")] the meeting to next Tuesday?
+                        p.mt20 #[strong(class="u-textColor_4") •] I’m sorry, but I have to  #[input(type="text" class="c-input js-escribir")] tomorrow’s meeting.
+                        p.mt20 #[strong(class="u-textColor_4") •] I’ll #[input(type="text" class="c-input js-escribir")] at 2 pm and take you straight to the conference.
+                        p.mt20 #[strong(class="u-textColor_4") •] #[input(type="text" class="c-input js-escribir")] we still #[input(type="text" class="c-input js-escribir")] for Saturday night? I hope your plans haven’t changed.
+
+                .col.xs12.md6
+                    div(class="row" ng-init="unirColumnasEscrFuncion()")
+                        h6  Match the meaning with the phrasal verb.
+                        div(class="row mt30 justify-center" data-ejercicio="unir")
+                            div(id="sourceElements" class="ancho250 js-columnas")
+                                div(id="Item0_0" class="treeItem" js-bien = 'jsbien' jsvalida = 'jsvalida' onclick="setSource(this)" seleccion valor="1") Come up
+                                div(id="Item0_1" class="treeItem" js-bien = 'jsbien' jsvalida = 'jsvalida' onclick="setSource(this)" seleccion valor="2") Tied up
+                                div(id="Item0_2" class="treeItem" js-bien = 'jsbien' jsvalida = 'jsvalida' onclick="setSource(this)" seleccion valor="3") Meet up
+                                div(id="Item0_3" class="treeItem" js-bien = 'jsbien' jsvalida = 'jsvalida' onclick="setSource(this)" seleccion valor="4") Bring forward
+                                div(id="Item0_4" class="treeItem" js-bien = 'jsbien' jsvalida = 'jsvalida' onclick="setSource(this)" seleccion valor="5") Put off
+                                div(id="Item0_5" class="treeItem" js-bien = 'jsbien' jsvalida = 'jsvalida' onclick="setSource(this)" seleccion valor="6") Call off
+                                div(id="Item0_6" class="treeItem" js-bien = 'jsbien' jsvalida = 'jsvalida' onclick="setSource(this)" seleccion valor="7") Pick somebody up
+                                div(id="Item0_7" class="treeItem" js-bien = 'jsbien' jsvalida = 'jsvalida' onclick="setSource(this)" seleccion valor="8") On
+                            div(id="linecanvas" style="width: 60px;")
+                            div(id="targetElements" class="ancho300 js-columnas")
+                                div(id="Item1_0" class="treeItem" jsblock = 'jsblock' jsvalidb = 'jsvalidb' onclick="setTarget(this)" seleccion valor="2") Busy
+                                div(id="Item1_1" class="treeItem" jsblock = 'jsblock' jsvalidb = 'jsvalidb' onclick="setTarget(this)" seleccion valor="3") Meet someone in order to do something together
+                                div(id="Item1_2" class="treeItem" jsblock = 'jsblock' jsvalidb = 'jsvalidb' onclick="setTarget(this)" seleccion valor="1") Happen unexpectedly
+                                div(id="Item1_3" class="treeItem" jsblock = 'jsblock' jsvalidb = 'jsvalidb' onclick="setTarget(this)" seleccion valor="5") Change to a later time / day
+                                div(id="Item1_4" class="treeItem" jsblock = 'jsblock' jsvalidb = 'jsvalidb' onclick="setTarget(this)" seleccion valor="7") Go and get somebody, e.g. with your car
+                                div(id="Item1_5" class="treeItem" jsblock = 'jsblock' jsvalidb = 'jsvalidb' onclick="setTarget(this)" seleccion valor="4") Change to an earlier time / day
+                                div(id="Item1_6" class="treeItem" jsblock = 'jsblock' jsvalidb = 'jsvalidb' onclick="setTarget(this)" seleccion valor="6") Cancel
+                                div(id="Item1_7" class="treeItem" jsblock = 'jsblock' jsvalidb = 'jsvalidb' onclick="setTarget(this)" seleccion valor="8") Meeting as planned
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()
+style.
+    .treeItem[jsblock="jsblock"]{
+        cursor: no-drop;
+        pointer-events :none;
+    }

@@ -1,0 +1,48 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content" ng-init="ContadorPalabras(120)")
+ 
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="row-flex col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="col-flex-xs6 mb30 ta-c showTo-md")
+                        figure(class="c-figure-Rombo" figure-size="15")
+                                div(class="c-figure-RomboRotate")
+                                    img(src="unit_1/module_2/assets/images/act_3_1.png", alt="" class="c-figure-RomboImage")
+                    div(class="col-flex-xs6 mb30 ta-c showTo-md")
+                        figure(class="c-figure-Rombo" figure-size="15")
+                                div(class="c-figure-RomboRotate")
+                                    img(src="unit_1/module_2/assets/images/act_3_2.png", alt="" class="c-figure-RomboImage")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="row-flex")
+                        h5 #[strong.u-textColor_4 1. ]  Now write a paragraph with your predictions of what human life will be like in the next four billion years, considering what you have read. 
+                            br
+                            br
+                            | Write 120 words.
+                        div(class="c-wrapTextarea ")
+                            textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                            div(class="c-wrapTextarea__counter")
+                                span(id="contador") 0 
+                                span(ng-bind="limitePalabras")
+                                span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        button(class="c-btn-IconAction openNotice u-bgIconInfoActivity is-active" ng-click="idNotice = 2")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_2/activities/act_3_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

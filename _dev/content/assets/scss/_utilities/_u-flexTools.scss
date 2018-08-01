@@ -1,0 +1,48 @@
+// ===========
+.flex                   { display: flex; }
+.flex-inline            { display: inline-flex; }
+.flex-column            { flex-direction: column !important; }
+.flex-row               { flex-direction: row !important; }
+.justify-around         { justify-content: space-around !important; }
+.justify-center         { justify-content: center !important; }
+.justify-between        { justify-content: space-between !important; }
+.justify-evenly         { justify-content: space-evenly !important; }
+.justify-end            { justify-content: flex-end !important; }
+.justify-start          { justify-content: flex-start !important; }
+.align-items-center     { align-items: center !important; }
+.align-items-start      { align-items: flex-start !important; }
+.align-items-end        { align-items: flex-end !important; }
+.flex-wrap              { flex-wrap: wrap !important; }
+.align-content-center   { align-content: center !important; }
+
+/*! 
+*
+* Definir offsets 
+* - Loops para tamaños Hasta lo descrito en 
+*   #{$grid-breakpoints}
+* ( pendiente )
+*/
+@each $size, $screen-size in $grid-breakpoints{
+// @media all and (min-width: $screen-size){
+    /*! Clases flexTools en #{$screen-size} */
+    // ===========
+    // .flex-#{$size}                   { display: flex; }
+    // .block-#{$size}                  { display: block; }
+    // .inline-block-#{$size}           { display: inline-block; }
+    // .inline-#{$size}                 { display: inline; }
+    // .flex-column-#{$size}            { flex-direction: column !important; }
+    // .flex-row-#{$size}               { flex-direction: row !important; }
+    // .justify-around-#{$size}         { justify-content: space-around !important; }
+    // .justify-center-#{$size}         { justify-content: center !important; }
+    // .justify-between-#{$size}        { justify-content: space-between !important; }
+    // .justify-evenly-#{$size}         { justify-content: space-evenly !important; }
+    // .justify-end-#{$size}            { justify-content: flex-end !important; }
+    // .justify-start-#{$size}          { justify-content: flex-start !important; }
+    // .align-items-center-#{$size}     { align-items: center !important; }
+    // .align-items-start-#{$size}      { align-items: flex-start !important; }
+    // .align-items-end-#{$size}        { align-items: flex-end !important; }
+    // .flex-wrap-#{$size}              { flex-wrap: wrap !important; }
+    // .flex-nowrap-#{$size}            { flex-wrap: wrap !important; }
+    // .align-content-center-#{$size}   { align-content: center !important; }
+// }
+}

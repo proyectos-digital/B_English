@@ -1,0 +1,64 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_4")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h5 Match these word with their meanings.
+                div(class="col xs12 col-center" data-ejercicio="unir")
+                    div(id="sourceElements" class="js-columnas")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Dormitory
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") Freshman
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Attendance
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") Class timetable
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Enroll
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="6") Recess
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="7") Principal/headmaster
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="8") Term/ semester
+                    div(id="linecanvas" style="width: 60px;")
+                    div(id="targetElements" class=" js-columnas") 
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="8") The two or three time periods in which the school year is divided. 
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="6") A break between classes.
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="5") To join a class or course.
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="3") Going to school and classes.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="4") A table showing classes and when they start and end.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="2") A student in the first year of high school or university.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="1") Student residence at a school.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="7") The person in charge of a primary or high school.
+                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()
+style.
+    .treeItem[correcta="bien"],
+    .treeItem_hi[correcta="bien"],
+    .treeItem_set[correcta="bien"]{
+        background-color: var(--color_good);
+        color: white;
+    }
+    .treeItem[correcta="mal"],
+    .treeItem_hi[correcta="mal"],
+    .treeItem_set[correcta="mal"]{
+        background-color: var(--color_wrong);
+        color: white;
+    }

@@ -1,0 +1,55 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+
+
+|
+|
+section(class="template-wrapper act_8" ng-init="s_actividad = 1" )
+    aside(class="template-asideLeft o-aside-Item" )
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1" )
+            h5 What is the best way to apologize in English?
+            div(class="row mt20 sm11 md8 lg9 hd12 col-center"): div(class="c-contVideo"): video(controls class='u-responsive-video')
+                    source(src='unit_2/module_5/assets/videos/act_8_1.mp4' type='video/mp4') 
+      
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2" ng-init="DragandDrop()")
+            div(class="row row-flex mt30 align-items-center")
+                .col.xs12 
+                    h5 Complete these apology sentences with the correct word.
+                    .xs12.sm9.row-flex.justify-around.mt30.mb30.col-center
+                        .dragCont.mt5: .drag mad
+                        .dragCont.mt5: .drag careless
+                        .dragCont.mt5: .drag sorry
+                        .dragCont.mt5: .drag forgive
+                        .dragCont.mt5: .drag apologize
+                        .dragCont.mt5: .drag sorry
+
+                    .row.mt50
+                        p #[strong.u-textColor_4 •]  “Please #[span.drop.w20] me for interrupting you. I didn’t realize you were busy.”
+                        p #[strong.u-textColor_4 •]  “I can’t believe I forgot to call you. Please don’t be  #[span.drop.w20] at me.”
+                        p #[strong.u-textColor_4 •]  “I’m so #[span.drop.w20] I’m late. This is the rush hour!”
+                        p #[strong.u-textColor_4 •]  “Oh no, how  #[span.drop.w20] of me! Do you have a cloth so I can clean it?”
+                        p #[strong.u-textColor_4 •]  “We #[span.drop.w20] for the train delay. We will get you to your destination as soon as possible.”
+                        p #[strong.u-textColor_4 •]  “I’m  #[span.drop.w20] but you are sitting in my seat.”
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,89 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_1"  ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            .col.xs12.sm8.col-center
+                div(class="row mt20 sm11 md8 lg9 hd12 col-center")
+                    div(class="c-contVideo")
+                        video(controls class="u-responsive-video")
+                            source(src='unit_3/module_10/assets/videos/col_1_1.mp4' type='video/mp4')
+                            | Your browser does not support the video element.
+
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2 || s_actividad == 3")
+            h5 ART FORMS
+            h6 Research one artist from each of the following categories and complete the forms below.
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            .row-flex.justify-between
+                .row(class="pr5 xs12 md6 mt30 col-center")
+                    div(class="c-ficha_form")
+                        h6(class="c-ficha_form--title") Street artist
+                        input(class="c-ficha_form--input textg4" type="text" placeholder="Name:")
+                        input(class="c-ficha_form--input textg4" type="text" placeholder="Description of artwork:")
+                        textarea(class="c-ficha_form--textarea textg4" type="text" placeholder="Description of artwork:")
+                        textarea(class="c-ficha_form--textarea textg4" type="text" placeholder="Where can you see this artist’s work:" )
+                        input(type="hidden" id="grupo4" ng-model="textousuarioc")
+                .row(class="pr5 xs12 md6 mt30 col-center")
+                    div(class="c-ficha_form ")
+                        h6(class="c-ficha_form--title") Sculpture
+                        input(class="c-ficha_form--input textg3" type="text" placeholder="Name:")
+                        input(class="c-ficha_form--input textg3" type="text" placeholder="Description of artwork:")
+                        textarea(class="c-ficha_form--textarea textg3" type="text" placeholder="Description of artwork:")
+                        textarea(class="c-ficha_form--textarea textg3" type="text" placeholder="Where can you see this artist’s work:" )
+                        input(type="hidden" id="grupo3" ng-model="textousuariob")
+
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 3")
+            .col.xs12.sm8.col-center
+                div(class="row c-ficha_form col-flex xs12 md10")
+                    h6(class="c-ficha_form--title") Photography
+                    input(class="c-ficha_form--input textg6" type="text" placeholder="Name:")
+                    input(class="c-ficha_form--input textg6" type="text" placeholder="Description of artwork:")
+                    textarea(class="c-ficha_form--textarea textg6" type="text" placeholder="Description of artwork:")
+                    textarea(class="c-ficha_form--textarea textg6" type="text" placeholder="Where can you see this artist’s work:" )
+                    input(type="hidden" id="grupo6" ng-model="textousuarioe")
+
+            .row-flex.justify-between
+                .row(class="pr5 xs12 md6 mt30 col-center")
+                    div(class="col c-ficha_form")
+                        h6(class="c-ficha_form--title") Dancer
+                        input(class="c-ficha_form--input textg4" type="text" placeholder="Name:")
+                        input(class="c-ficha_form--input textg4" type="text" placeholder="Description of artwork:")
+                        textarea(class="c-ficha_form--textarea textg4" type="text" placeholder="Description of artwork:")
+                        textarea(class="c-ficha_form--textarea textg4" type="text" placeholder="Where can you see this artist’s work:" )
+                        input(type="hidden" id="grupo4" ng-model="textousuarioc")
+                .row(class="pr5 xs12 md6 mt30 col-center")
+                    div(class="col c-ficha_form")
+                        h6(class="c-ficha_form--title") Musician
+                        input(class="c-ficha_form--input textg5" type="text" placeholder="Name:")
+                        input(class="c-ficha_form--input textg5" type="text" placeholder="Description of artwork:")
+                        textarea(class="c-ficha_form--textarea textg5" type="text" placeholder="Description of artwork:")
+                        textarea(class="c-ficha_form--textarea textg5" type="text" placeholder="Where can you see this artist’s work:" )
+                        input(type="hidden" id="grupo5" ng-model="textousuariod")
+
+        //- section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="EnviarFormMod10_mycol1()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

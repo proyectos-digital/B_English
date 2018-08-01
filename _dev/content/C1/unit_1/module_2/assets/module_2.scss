@@ -1,0 +1,169 @@
+@charset "utf-8";
+@import "./../../../../assets/scss/_var/_variables.scss";
+$MultimediaImages   : '../images/';
+
+.u-{
+    &foo{
+        @media all and (orientation: portrait) {
+        }
+        @media all and (orientation: landscape) {
+        }
+    }
+}
+
+.act_1{
+    .c-card-phrasalVerbs{
+        @include layoutFlex(flex, '', '', wrap);
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        &--header{
+            height: 3rem;
+            width: 100%;
+            @include layoutFlex(flex, space-between, center, wrap);
+            padding: 5px;
+            background-color: var(--color_2);
+            &-title{
+                color: white;
+            }
+        }
+        &--body{
+            width: 100%;
+            height: auto;
+            box-shadow:0px 2px 9px rgba(black, 0.5);
+            &-image{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+.act_2 {
+    .c-select{
+        color: white;
+        background-color: var(--color_5)
+    }
+}
+
+.act_3{
+    [height-cardGreen="auto"]{
+        height: auto;
+    }
+
+    .dragCont, .drop {
+        width: 130px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        .drag {
+            width: 100%;
+        }
+    }
+
+}
+
+.act_6{
+    .u-checkbox-responsive{
+        display: grid;
+        @media all and (min-width:600px) {
+            grid-gap:1rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media all and (max-width:599px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.act_17{
+    @media all and (min-width:600px) {
+        .c-Checkbox{
+            flex: 0 0 calc(33% - 10px);
+            margin: 0 auto;
+            width: calc(33% - 10px);
+            float: left;
+        }
+    }
+    @media all and (max-width:599px) {
+        .c-Checkbox{
+            flex: 0 0 100%;
+            margin: .5rem auto;
+            width: 100%;
+            float: left;
+        }
+    }
+}
+
+.col_1{
+    .dragCont, .drop{
+        width: 120px;
+        height: 120px;
+        display: inline-flex;
+    }
+    .drag{
+        width: auto;
+        padding: 0;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.col_4{
+    .on-mayusc{
+        display: inline-block;
+        .drag{
+            display: inline-block;
+            &:first-letter{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.col_5 {
+    .c-Checkbox{
+        @media all and (min-width: 600px){
+            width: 150px;
+        }
+        @media all and (max-width: 598px){
+            width: 45%;
+            margin-right: 3%;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.col_7 {
+    .u-checkbox-responsive{
+        display: grid;
+        grid-gap: 1rem;
+        @media all and (min-width: 600px){
+            grid-template-columns: repeat(3, 1fr)
+        }
+        @media all and (max-width: 598px){
+            grid-template-columns: repeat(1, 1fr)
+        }
+    }
+}
+
+
+.test_1{
+    .u-checkbox-responsive{
+        display: grid;
+        @media all and (min-width:767px) {
+            grid-gap:1rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media all and (max-width:599px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

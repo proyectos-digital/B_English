@@ -1,0 +1,48 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_7")
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown")
+            h5 Look at the following pictures, write brief description of what each of this events are.
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="row-flex col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="col-flex-xs12 col-flex-md4 col-center")
+                        div(class="row mb30 ta-c ")
+                            img(src="unit_3/module_12/assets/images/col_7_1.png", alt="" class="u-responsive-img")
+                    div(class="col-flex-xs12 col-flex-md5 col-flex-hd7 col-center")
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea h150" ng-model="textousuario")  
+                |
+                div(class="row-flex col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="col-flex-xs12 col-flex-md4 col-center")
+                        div(class="row mb30 ta-c ")
+                            img(src="unit_3/module_12/assets/images/col_7_2.png", alt="" class="u-responsive-img")
+                    div(class="col-flex-xs12 col-flex-md5 col-flex-hd7 col-center")
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea h150" ng-model="textousuariob")  
+                |
+                div(class="row-flex col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="col-flex-xs12 col-flex-md4 col-center")
+                        div(class="row mb30 ta-c ")
+                            img(src="unit_3/module_12/assets/images/col_7_3.png", alt="" class="u-responsive-img")
+                    div(class="col-flex-xs12 col-flex-md5 col-flex-hd7 col-center")
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea h150" ng-model="textousuarioc")  
+                |
+                div(class="row-flex col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="col-flex-xs12 col-flex-md4 col-center")
+                        div(class="row mb30 ta-c ")
+                            img(src="unit_3/module_12/assets/images/col_7_4.png", alt="" class="u-responsive-img")
+                    div(class="col-flex-xs12 col-flex-md5 col-flex-hd7 col-center")
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea h150" ng-model="textousuariod")                        
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTextoMultiple()")  
+| 
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,108 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex col-center mt50-xs mt100-md lh25")
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 1.
+                            span  Diana Northup is a cave explorer. To learn about life in caves, they…    
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                label(for="SelectRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='must be visited'") must be visited
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                label(for="SelectRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='must visit'") must visit
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_3" name="selection_1" value="3")
+                                label(for="SelectRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='mustn´t be visited'") mustn´t be visited
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 2.
+                            span  Diana knows that some risks
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_b") 
+                            span  when exploring caves. That´s why she´s always careful.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="1")
+                                label(for="SelectRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='are taken'") are taken
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_2" value="2")
+                                label(for="SelectRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='should take'") should take
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_6" name="selection_2" value="3")
+                                label(for="SelectRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='have to be taken'") have to be taken
+                                
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 3.
+                            span  Some caves
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_c") 
+                            span without a gas mask.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_3" value="1")
+                                label(for="SelectRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='must be entered'") must be entered
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_3" value="2")
+                                label(for="SelectRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='mustn´t be entered'") mustn´t be entered   
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_9" name="selection_3" value="3")
+                                label(for="SelectRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='couldn´t be entered'") couldn´t be entered                         
+                    
+                    
+                
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 4.
+                            span  It is important for explorers to monitor gas levels in caves. That´s why a gas meter
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_4" value="1")
+                                label(for="SelectRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='has to be used'") has to be used
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_4" value="2")
+                                label(for="SelectRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='can´t be used'") can´t be used
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_4" value="3")
+                                label(for="SelectRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='might be used'") might be used
+
+                                
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 5.
+                            span  With a gas meter, gas levels
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_f") 
+                            span while explorers are in the caves.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_16" name="selection_5" value="1")
+                                label(for="SelectRadio_16" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='can´t be checked'") can´t be checked
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_17" name="selection_5" value="2")
+                                label(for="SelectRadio_17" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='must check'") must check
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_18" name="selection_5" value="3")
+                                label(for="SelectRadio_18" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='can be checked'") can be checked
+                                
+                                
+                                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

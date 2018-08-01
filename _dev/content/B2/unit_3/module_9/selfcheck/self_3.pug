@@ -1,0 +1,93 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            
+             div(class="row")
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        h6 Notice that some phrases are in bold. Drag and drop those phrases in the respective box (defining or non-defining).
+
+                        div(class="row mt30")
+                        p(class="u-txtSpace") 
+                            span(class="dragCont mb10"): span(class="drag" rescon="1") Foreigners who have lived in Colombia
+                            | for long periods have a different perspective of our country. In general,
+                            span(class="dragCont mb10"): span(class="drag" rescon="1") most of them find that
+                            | this is an excellent country to live. 
+                            span(class="dragCont mb10"): span(class="drag" rescon="1") Some of them say that
+                            | people are very friendly and others
+                            span(class="dragCont mb10"): span(class="drag" rescon="1") say that they fell in love
+                            | with our landscapes. Jan, 
+                            span(class="dragCont mb10"): span(class="drag" rescon="2") who is from Belgium
+                            | , says that Colombia is his second home. Edward,
+                            span(class="dragCont mb10"): span(class="drag" rescon="2") who is from the USA
+                            | , married a Colombian and has Colombian children. He says
+                            span(class="dragCont mb10"): span(class="drag" rescon="1") that he would never leave the country
+                            | . While these opinions are very positive, all of them coincide
+                            span(class="dragCont mb10"): span(class="drag" rescon="1") that there are things that can be changed
+                            | . The first problem is
+                            span(class="dragCont mb10"): span(class="drag" rescon="1") that is mentioned
+                            | traffic. The second one,
+                            span(class="dragCont mb10"): span(class="drag" rescon="2") which is mentioned only in big cities
+                            | , is security. The last one,
+                            span(class="dragCont mb10"): span(class="drag" rescon="2") which is not a problem exclusive of Colombia
+                            | , is corruption. All of them agree that the great majority of Colombians are good, honest, and hard-working people.
+
+                    div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center") 
+                        div(class="row")
+                            table(class="c-table-estilo_uno w100")
+                                thead
+                                    tr
+                                        th DEFINING
+                                        th NON DEFINING
+                                        
+                                tbody
+                                    tr
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                    tr
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                    tr
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                    tr
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                    tr
+                                        td 
+                                            span(class="drop w80 h30 centrado")
+                                    tr
+                                        td
+                                            span(class="drop w80 h30 centrado")
+                                    tr
+                                        td
+                                            span(class="drop w80 h30 centrado")
+                                        
+                                        
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

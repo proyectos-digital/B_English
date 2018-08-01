@@ -1,0 +1,40 @@
+.u-{
+    &text{
+        // Proyect Color
+        &White{   color: white	;}
+        // Black
+        &Color_1-lighter{   color: $color_1-lighter	;}
+        &Color_1-light{     color: $color_1-light		;}
+        &Color_1{           color: $color_1			;}
+        &Color_1-dark{      color: $color_1-dark		;}
+        &Color_1-darker{    color: $color_1-darker		;}
+        &Color_1-darker_05{ color: rgba($color_1-darker, 0.5)		;}
+        // Green
+        &Color_2-lighter{   color: $color_2-lighter	;}
+        &Color_2-light{     color: $color_2-light		;}
+        &Color_2{           color: $color_2    		;}
+        &Color_2-dark{      color: $color_2-dark		;}
+        &Color_2-darker{    color: $color_2-darker		;}
+        // Yellow
+        &Color_3-lighter{   color: $color_3-lighter    ;}
+        &Color_3-light{     color: $color_3-light  	;}
+        &Color_3{           color: $color_3    		;}
+        &Color_3-dark{      color: $color_3-dark   	;}
+        &Color_3-darker{    color: $color_3-darker     ;}
+        // Red
+        &Color_4-lighter{   color: $color_4-lighter	;}
+        &Color_4-light{     color: $color_4-light		;}
+        &Color_4{           color: $color_4			;}
+        &Color_4-dark{      color: $color_4-dark		;}
+        &Color_4-darker{    color: $color_4-darker		;}
+        // blue
+        &Color_5-lighter{   color: $color_5-lighter 	;}
+        &Color_5-light{     color: $color_5-light  	;}
+        &Color_5{           color: $color_5    		;}
+        &Color_5-dark{      color: $color_5-dark   	;}
+        &Color_5-darker{    color: $color_5-darker  	;}
+        // state
+        &Color_good{        color: $color_good			;}
+        &Color_wrong{       color: $color_wrong		;}
+    }
+}

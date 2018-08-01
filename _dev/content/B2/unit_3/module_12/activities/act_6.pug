@@ -1,0 +1,127 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex col-center ")
+                div(class="col xs12 md6")
+                    .row
+                        h5 Listen to the short conversations and choose the appropriate phrase from the box to complete them.
+                        .row.ta-c.mb20.mt20
+                            img(src="unit_3/module_12/assets/images/act_6.png", alt="act_5" class="u-responsive-img")
+
+                    div(class="row flex align-items-center")
+                        .col.xs2.ta-c
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_6_1.mp3")
+                        .col.xs10
+                            h6 CONVERSATION 1
+                            p #[span.u-textColor_2: strong A:] Why weren’t you at work yesterday?
+                            p #[span.u-textColor_5: strong B:] I wasn’t really feeling well.
+                            p #[span.u-textColor_2: strong A:] What was wrong with you?
+                            p #[span.u-textColor_5: strong B:] My stomach was upset.
+                            p #[span.u-textColor_2: strong A:] Do you feel better now?
+                            p #[span.u-textColor_5: strong B:] I don’t really feel well yet.
+                            p #[span.u-textColor_2: strong A:] #[strong: span(class="u-textColor_4-dark") (1)]
+                                select(name="act_12_3" class="c-select")
+                                    option(value="" disabled selected)
+                                    option(value="1") Get better. / I hope you feel better.
+                                    option(value="2") I’m going to the store. Would you like a pain killer?
+                                    option(value="3") I hope you feel better. / Get better.
+                                    option(value="4") Are you feeling any better?
+                                    option(value="5") Do you want anything to make you feel better?
+                                    option(value="6") Would you like anything for your head?
+                            p #[span.u-textColor_5: strong B:] No, thanks. I already took some medicine.
+                            p #[span.u-textColor_2: strong A:] #[strong: span(class="u-textColor_4-dark") (2)]
+                                select(name="act_12_3" class="c-select")
+                                    option(value="" disabled selected)
+                                    option(value="1") Get better. / I hope you feel better.
+                                    option(value="2") I’m going to the store. Would you like a pain killer?
+                                    option(value="3") I hope you feel better. / Get better.
+                                    option(value="4") Are you feeling any better?
+                                    option(value="5") Do you want anything to make you feel better?
+                                    option(value="6") Would you like anything for your head?
+                            p #[span.u-textColor_5: strong B:] Thank you.
+
+
+
+                div(class="col xs12 md6")
+                    div(class="row flex align-items-center")
+                        .col.xs2.ta-c
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_6_2.mp3")
+                        .col.xs10
+                            h6 CONVERSATION 2
+                            p #[span.u-textColor_2: strong A:] What reason do you have for missing practice?
+                            p #[span.u-textColor_5: strong B:] I was sick.
+                            p #[span.u-textColor_2: strong A:] How were you sick?
+                            p #[span.u-textColor_5: strong B:] I had a horrible headache
+                            p #[span.u-textColor_2: strong A:] Did it get any better?
+                            p #[span.u-textColor_5: strong B:] I’m still feeling a little bit dizzy
+                            p #[span.u-textColor_2: strong A:] #[strong: span(class="u-textColor_4-dark") (3)]
+                                select(name="act_12_3" class="c-select")
+                                    option(value="" disabled selected)
+                                    option(value="1") Get better. / I hope you feel better.
+                                    option(value="2") I’m going to the store. Would you like a pain killer?
+                                    option(value="3") I hope you feel better. / Get better.
+                                    option(value="4") Are you feeling any better?
+                                    option(value="5") Do you want anything to make you feel better?
+                                    option(value="6") Would you like anything for your head?
+                            p #[span.u-textColor_5: strong B:] I took something earlier.
+                            p #[span.u-textColor_2: strong A:] #[strong: span(class="u-textColor_4-dark") (4)]
+                                select(name="act_12_3" class="c-select")
+                                    option(value="" disabled selected)
+                                    option(value="1") Get better. / I hope you feel better.
+                                    option(value="2") I’m going to the store. Would you like a pain killer?
+                                    option(value="3") I hope you feel better. / Get better.
+                                    option(value="4") Are you feeling any better?
+                                    option(value="5") Do you want anything to make you feel better?
+                                    option(value="6") Would you like anything for your head?
+                            p #[span.u-textColor_5: strong B:] Thanks a lot.
+
+
+                    div(class="row flex align-items-center")
+                        .col.xs2.ta-c
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_6_3.mp3")
+                        .col.xs10
+                            h6 CONVERSATION 3
+                            p #[span.u-textColor_2: strong A:] Why didn’t you go to school yesterday?
+                            p #[span.u-textColor_5: strong B:] I stayed home because I wasn’t feeling well.
+                            p #[span.u-textColor_2: strong A:] What was your problem?
+                            p #[span.u-textColor_5: strong B:] My back was bothering me.
+                            p #[span.u-textColor_2: strong A:] #[strong: span(class="u-textColor_4-dark") (5)]
+                                select(name="act_12_3" class="c-select")
+                                    option(value="" disabled selected)
+                                    option(value="1") Get better. / I hope you feel better.
+                                    option(value="2") I’m going to the store. Would you like a pain killer?
+                                    option(value="3") I hope you feel better. / Get better.
+                                    option(value="4") Are you feeling any better?
+                                    option(value="5") Do you want anything to make you feel better?
+                                    option(value="6") Would you like anything for your head?
+                            p #[span.u-textColor_5: strong B:] It still hurts a little bit.
+                            p #[span.u-textColor_2: strong A:] #[strong: span(class="u-textColor_4-dark") (6)]
+                                select(name="act_12_3" class="c-select")
+                                    option(value="" disabled selected)
+                                    option(value="1") Get better. / I hope you feel better.
+                                    option(value="2") I’m going to the store. Would you like a pain killer?
+                                    option(value="3") I hope you feel better. / Get better.
+                                    option(value="4") Are you feeling any better?
+                                    option(value="5") Do you want anything to make you feel better?
+                                    option(value="6") Would you like anything for your head?
+                            p #[span.u-textColor_5: strong B:] That’s OK.
+                            p #[span.u-textColor_5: strong B:] I hope you feel better.
+                            p #[span.u-textColor_5: strong B:] I’d appreciate that.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

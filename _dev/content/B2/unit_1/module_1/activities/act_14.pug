@@ -1,0 +1,64 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row mt40 ")
+                h5 #[strong.u-textColor_4 1. ]  Complete the sentences using the future perfect continuous. 
+                h6 Watch out for negative sentences and questions.
+            div(class="row-flex mt40-md")
+                div(class="col-flex-sm4 col-flex-xs5 col-center ta-c mb40 showTo-md")
+                    img(src="./unit_1/module_1/assets/images/act_14_1.png", alt="", srcset="" class="u-responsive-img")
+
+                div(class="col-flex-sm11 col-flex-md7 col-center")
+                    div(class="row-flex mt40-xs")
+                        ol(class="c-listDefault row mb30" data-ejercicio="")
+                            li
+                                span I 
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (work) 
+                                span all weekend so I won’t have a lot of energy on Sunday night.
+                            li
+                                span How
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (you / wait) 
+                                span when you finally get your exam results?
+                            li
+                                span Julie
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (not / eat)
+                                span much, so we’ll need to make sure she has a good meal when she arrives.
+                            li
+                                span How
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (she / plan)  
+                                span to move house when she finally moves?
+                            li
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (she / wait) 
+                                span long by the time we get there?
+                            li
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (he / play) 
+                                span computer games for ten hours when he finally stops?
+                            li
+                                span They
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (study)  
+                                span all day, so they'll want to go out in the evening.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh"  ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,37 @@
+.u-bgTemplate {
+	background-image: url(../images/wel_bg.jpg);
+}
+
+.u-wordsComplete {
+	background-color: #b04f52;
+	color: #fff;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+}
+
+.u-txtSpace {
+	line-height: 2em;
+}
+
+.act_9 .c-table_grid {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (minmax(100px,1fr))[2];
+	grid-template-columns: repeat(2,minmax(100px,1fr));
+	grid-gap: 5px;
+}
+
+.act_9 .c-table_grid-th {
+	background-color: var(--color_4);
+	padding: 5px;
+	color: white;
+	font-weight: 700;
+	text-align: center;
+}
+
+.act_9 .c-table_grid-item {
+	width: 100%;
+	margin: 0;
+	padding: 5px;
+}

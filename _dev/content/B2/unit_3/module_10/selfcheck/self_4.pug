@@ -1,0 +1,50 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")                           
+                    div(class="row row-flex"): div(class="col-flex-xs9 col-center")
+                        span(class="dragCont m-a"): span(class="drag") about
+                        span(class="dragCont m-a"): span(class="drag") things like that
+                        span(class="dragCont m-a"): span(class="drag") someone like that
+                        span(class="dragCont m-a"): span(class="drag") around
+                        span(class="dragCont m-a"): span(class="drag") or so
+                    div(class="row row-flex mt40"): div(class="col-flex-xs9 col-center")
+                        ul(class="c-listDefault")
+                            li(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 1]. There were 30  #[span(class="drop")] people at the meeting.
+                            li(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 2]. I’ve typed some letters, reports and   #[span(class="drop")].
+                            li(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 3]. It’s  #[span(class="drop")] half past two.
+                            li(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 4]. You have to ask a doctor or a lawyer or  #[span(class="drop")].
+                            li(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5]. It cost   #[span(class="drop")] 20 pounds or so.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+     
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")        
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/self_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

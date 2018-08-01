@@ -1,0 +1,120 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            div(class="row-flex mt10-xs mt10-md")
+                div(class="col-flex-xs12 col-flex-md8 col-center mt10-md")
+                    table(class="c-table-estilo_tres")
+                        thead
+                            tr
+                                th 
+                                th Examples
+                        tbody
+                            tr
+                                td: strong accuse of
+                                td The man was accused of driving under the influence of alcohol.
+                            tr
+                                td: strong apologize for
+                                td Arturo apologized for coming late.
+                            tr
+                                td: strong approve of
+                                td The teacher approved of presenting papers after the deadline.
+                            tr
+                                td: strong blame for
+                                td She can’t blame me for listening to her conversation! She speaks too loud!
+                            tr
+                                td: strong carry on
+                                td You can carry on telling us your story.
+                            tr
+                                td: strong congratulate on
+                                td My teacher congratulated me on improving my writing.
+                            tr
+                                td: strong care for
+                                td Most students care for getting good grades.
+                            tr
+                                td: strong concentrate on
+                                td Keep concentrated on understanding the verbs.
+                            tr
+                                td: strong consist of
+                                td The exam consisted of writing a long composition.
+                            tr
+                                td: strong depend on
+                                td My trip depends on getting the money.
+                            tr
+                                td: strong dream of
+                                td Most students dream of studying their Masters abroad.
+                            tr
+                                td: strong forgive for
+                                td Please forgive me for forgetting your birthday!
+                            tr
+                                td: strong keep on
+                                td Are you going to keep on driving so fast? It is raining!
+                            tr
+                                td: strong prevent from
+                                td Vaccinations prevent kids from getting diseases.
+                            tr
+                                td: strong rely on
+                                td She has to rely on working with others.
+                            tr
+                                td: strong spend time on
+                                td Judith spent some time on organizing her photo album.
+                            tr
+                                td: strong suspect of
+                                td Rolando was suspected of taking the books without authorization.
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row-flex mt10-xs mt10-md")
+                div(class="col-flex-xs12 col-flex-md8 col-center mt10-md")
+                    table(class="c-table-estilo_tres")
+                        thead
+                            tr
+                                th 
+                                th Examples
+                        tbody
+                            tr
+                                td: strong think of
+                                td I am thinking of building a country house!
+                            tr
+                                td: strong die of
+                                td My grandmother died of a heart attack.
+                            tr
+                                td: strong escape from
+                                td She escaped from the traffic jam by taking a shortcut.
+                            tr
+                                td: strong insist on
+                                td Tutors insist on having the meetings with students.
+                            tr
+                                td: strong pay for
+                                td In Colombia, you have to pay for renewing your drivers’ license.
+
+                            tr
+                                td: strong protect from
+                                td The law is suppose to protect citizens from injustice.
+                            tr
+                                td: strong spend money on
+                                td Men spend money on eating in expensive places.
+                            tr
+                                td: strong suffer from
+                                td She has suffered from dealing with the disease.
+                            tr
+                                td: strong thank for
+                                td I always thank people for being so helpful.
+                            tr
+                                td: strong use for
+                                td This tool is used for carving the stone.
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

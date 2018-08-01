@@ -1,0 +1,42 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_15")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            .row.row-flex.justify-between.align-items-center
+                .col.xs12.md6.ta-c.mb30
+                    img(src="unit_1/module_3/assets/images/act_15_1.png" alt="" class="u-responsive-img mt30 m-a")
+
+                .col.xs12.md6
+                    h5 What does it mean to remind?
+                    p It is to make someone remember something they would have forgotten.
+                    h6 Look at the following example:
+                    ul.lh25
+                        li #[strong.u-textColor_4 •] Juan: You need to send the email later today. #[br] Peter: I will not remember. Can you remind me to send it later?
+                        li #[strong.u-textColor_4 •] Sandy reminded her mother that she needs to pick her up after school today
+                        li #[strong.u-textColor_4 •] I forgot the name of the doctor. Can you remind me?
+
+                    h6  Fill in the blanks with “remind” or “remember”.
+                    ul.lh25
+                        li #[strong.u-textColor_4 •] #[input(type="text" class="c-input js-escribir")] to turn off the lights.
+                        li #[strong.u-textColor_4 •] #[input(type="text" class="c-input js-escribir")] Angie to turn off the lights.
+                        li #[strong.u-textColor_4 •] I always forget to shut down my computer. Please #[input(type="text" class="c-input js-escribir")] me next time.
+                        li #[strong.u-textColor_4 •] #[input(type="text" class="c-input js-escribir")] to tell your friends about the event tomorrow.
+                        li #[strong.u-textColor_4 •] Could you #[input(type="text" class="c-input js-escribir")] me of the address? I keep forgetting.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

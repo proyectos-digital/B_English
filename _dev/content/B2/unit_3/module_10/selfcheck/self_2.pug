@@ -1,0 +1,129 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_7")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex align-items-center lh30")
+                h5(class="mb35 row") #[strong.u-textColor_4 1. ] Read the following dialogue and choose the best option to complete the phrases.
+                div(class="col xs12 md6 ta-l")
+
+                    strong: span(class="u-textColor_2") A:
+                    span  I am sure you 
+                    strong: span(class="u-textColor_4-dark") (1)
+                    select(name="act_12_2" class="c-select")
+                        option(value="" disabled selected) 
+                        option(value="1") are going to
+                        option(value="2") will
+                    span  love this. I read in the newspaper 
+
+                    br
+                    
+                    span  that Carlos Vives 
+                    strong: span(class="u-textColor_4-dark") (2)
+                    select(name="act_12_2" class="c-select")
+                        option(value="" disabled selected) 
+                        option(value="1") is going to
+                        option(value="2") will
+                    span  give a concert in our city!  
+
+                    br
+
+                    strong: span(class="u-textColor_5") B:
+                    span  Super! When 
+                    strong: span(class="u-textColor_4-dark") (3)
+                    select(name="act_12_2" class="c-select")
+                        option(value="" disabled selected) 
+                        option(value="1") is it going to
+                        option(value="2") will
+                    span  be? 
+
+                     br
+
+                    strong: span(class="u-textColor_2") A:
+                    span  November 19. I need to know if you are interested.
+
+                    br
+
+                    strong: span(class="u-textColor_5") B:
+                    span  Yes! 
+                    strong: span(class="u-textColor_4-dark") (4)
+                    select(name="act_12_2" class="c-select")
+                        option(value="" disabled selected) 
+                        option(value="1") I am going to
+                        option(value="2") will
+                    span  buy the tickets now. 
+
+                    br
+
+                    strong: span(class="u-textColor_2") A:
+                    span   No! I want to invite you! I  
+                    strong: span(class="u-textColor_4-dark") (5)
+                    select(name="act_12_2" class="c-select")
+                        option(value="" disabled selected) 
+                        option(value="1") am going to
+                        option(value="2") will
+                    span  buy the tickets on Friday.
+
+                    br
+
+                    strong: span(class="u-textColor_5") B:
+                    span   Thank you! I am sure I  
+                    strong: span(class="u-textColor_4-dark") (6)
+                    select(name="act_12_2" class="c-select")
+                        option(value="" disabled selected) 
+                        option(value="1") am going to
+                        option(value="2") will
+                    span  enjoy that concert!  
+
+                    br
+
+                    strong: span(class="u-textColor_2") A:
+                    span  Me too. Hey! I 
+                    strong: span(class="u-textColor_4-dark") (7)
+                    select(name="act_12_2" class="c-select")
+                        option(value="" disabled selected) 
+                        option(value="1") 'm going to
+                        option(value="2") 'll
+                    span  call Andres and Camila! They also love Carlos Vives!  
+
+                    br
+
+                    strong: span(class="u-textColor_5") B:
+                    span   OK, but we need to buy the tickets soon. He is so famous that the stadium
+                    strong: span(class="u-textColor_4-dark") (8)
+                    select(name="act_12_2" class="c-select")
+                        option(value="" disabled selected) 
+                        option(value="1") is going to
+                        option(value="2") will
+                    span be full! 
+
+
+
+                div(class="col xs12 md6 ta-c")
+                    img(src="unit_3/module_10/assets/images/self_1.png", alt="self" class="u-responsive-img")
+                        
+
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+| 

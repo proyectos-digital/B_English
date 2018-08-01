@@ -1,0 +1,60 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                .row-flex.justify-between.col-center.mt30
+
+                    .dragCont: .drag.w10 turn down
+                    .dragCont: .drag.w10 tell him off
+                    .dragCont: .drag.w10 watch out
+                    .dragCont: .drag.w10 think over
+                    .dragCont: .drag.w10 used up
+                    .dragCont: .drag.w10 take on
+                    .dragCont: .drag.w10 works out
+                    .dragCont: .drag.w10 try on
+                    .dragCont: .drag.w10 take out
+                    .dragCont: .drag.w10 wipe off
+
+
+                .row-flex.mt30.align-items-center.justify-between
+                    .col.xs12.md5
+                        p #[strong.u-textColor_4 •]  Janet will #[span.drop.w20] the challenge of explaining to non-science people, the science behind global warming.
+                        p #[strong.u-textColor_4 •]  We are going to #[span.drop.w20] all the old computer disk and put in a new one.
+                        p #[strong.u-textColor_4 •]  I was so mad at my boss yesterday! I had to  #[span.drop.w20] about is restrictive management style.
+                        p #[strong.u-textColor_4 •]  I am doing a presentation on the weather pattern in Bogota. I don’t like the presentation so I will have to #[span.drop.w20] my design.
+                        p #[strong.u-textColor_4 •]  Fiona can never remember what size jeans she wears, so she always needs to  #[span.drop.w20] several pairs. 
+                    .col.xs12.md6.mt30-sm.mt0-md
+                        p #[strong.u-textColor_4 •] I always wanted a chance to work at the meteorological center at the university, but after getting a job at the weather station, I had to #[span.drop.w20] the university’s offer.
+                        p #[strong.u-textColor_4 •] Sarah #[span.drop.w20] all the sunscreen she had, now she is going to get sunburnt.
+                        p #[strong.u-textColor_4 •] In Bogota you always need to #[span.drop.w20] for rain clouds.
+                        p #[strong.u-textColor_4 •] It is difficult to predict the weather in London; I don’t know how the weatherman  #[span.drop.w20] the forecast.
+                        p #[strong.u-textColor_4 •] After a long drive through the forest, mom needs to #[span.drop.w20] the dead bugs from the windshield.
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

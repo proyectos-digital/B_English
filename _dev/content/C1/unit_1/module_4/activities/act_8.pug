@@ -1,0 +1,37 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_7" )
+    aside(class="template-asideLeft o-aside-Item")
+
+
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content" )
+            div(class="row row-flex mt30 align-items-center")
+                    //-video
+                    .row
+                        div(class="row-flex justify-center mb20"): div(class="col md11 col-center"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                            source(src="unit_1/module_4/"+pathVideo+"act_8_1.mp4" type="video/mp4")
+                        h5.ta-c.mb40  Record 3 short messages expressing your thanks to someone for something that was done for you.
+                    .row
+                        .row-flex.justify-around
+                            .col.xs12.sm7.col-center
+                                div(class="row c-ngRecorder xs12 md4 mt10" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod4_act8a',1)"): +ngRecorder
+
+                                div(class="row c-ngRecorder xs12 md4 mt10" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt1_mod4_act8b',2)"): +ngRecorder
+
+                                div(class="row c-ngRecorder xs12 md4 mt10" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt1_mod4_act8c',3)"): +ngRecorder
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

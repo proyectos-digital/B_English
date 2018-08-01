@@ -1,0 +1,63 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_4")
+	aside(class="template-asideLeft o-aside-Item")
+
+	|
+	|
+	div(class="template-section m-a")
+		|
+		section(class="template-content" )
+			.row-flex.align-items-center
+					.col.xs12.md6
+						h5 Complete the sentences with the correct form of the expression ‘be going to’ using the words in parenthesis.
+
+						p.ta-j.mt40  #[strong.u-textColor_4 • ] Last year and the year before, I was selected to represent the university in Canada. This year they’re definitely #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (not send)] me.
+						p.ta-j.mt20  #[strong.u-textColor_4 • ] Are we #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (we / continue)] from where we left off?
+						p.ta-j.mt20  #[strong.u-textColor_4 • ] Martin confirmed with me this morning that he  #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (not go)]  with us to Brazil this year because he hasn’t got enough money. Instead, he #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (spend)]  a week with his brother in Cali.
+						p.ta-j.mt20  #[strong.u-textColor_4 • ] #[input(class="c-input ta-c js-escribir" type="text") ]  #[strong.u-textColor_2 (Sally / become)]  the next CEO of the company? I’ve been hearing a few murmurs around the office.
+						p.mt20  #[strong.u-textColor_4 • ] Hey Karen! Quick question.  #[input(class="c-input ta-c js-escribir ancho180" type="text") ]  #[strong.u-textColor_2 (Mary and her husband / not get a divorce)] ?
+
+
+
+					.col.xs12.md6
+						.c-cardGreen
+							.c-cardGreenContent.u-textColor_1
+									p.
+										#[strong Be going to + verb] #[strong.u-textColor_2 (positive)]#[br]
+										#[strong Be not going to + verb] #[strong.u-textColor_4 (negative)]#[br]
+										#[strong →] to express planned actions for the future or something that is certain to happen.#[br]#[br]
+										#[strong Eg1: I am going to travel to] Cartagena this weekend with my family.#[br]
+										#[strong Eg2: The manager is not going to have] the meeting this afternoon.#[br]#[br]
+									h6.ta-c INTERROGATIVE FORMS
+									p.
+										#[strong Positive]#[br]#[br]
+										#[strong → used to find out if something is going to happen].#[br]#[br]
+
+										#[strong.ml20 •] Am I going to + verb… ? → #[strong Am I going to live] with my cousins? #[br]
+										#[strong.ml20 •] Are you / we / they going to + verb… ? → #[strong Are they going to apply] for the
+										 scholarship? #[br]
+										#[strong.ml20 •] Is he /she / it going to + verb… ? → #[strong Is the government going to increase]
+										 taxes again? #[br]#[br]
+										#[strong Negative]#[br]#[br]
+										#[strong → used when we wish to confirm if something is going to occur or not].#[br]#[br]
+										#[strong.ml20 •] Am I not… ? → Mr. Darwin, #[strong am I not going to be] the class valedictorian?#[br]
+										#[strong.ml20 •] Aren’t you / we / they… ? → #[strong Aren’t we going to attend] the concert?#[br]
+										#[strong.ml20 •] Isn’t he / she / it… ? → #[strong Isn’t Michelle going to get married] next month?#[br]
+
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+		//- button(class="c-btn-IconAction u-bgIconRefresh is-active" ng-show="s_actividad == 3")
+		//- button(class="c-btn-IconAction u-bgIconCheck is-active" ng-show="s_actividad == 3")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

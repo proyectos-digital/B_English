@@ -1,0 +1,97 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex mt10-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md5 col-center mt10-sm mt20-md")
+                    audio( controls class="row")
+                        source(src="unit_2/module_6/assets/audios/test_5.mp3" type="audio/mpeg")
+                        | Your browser does not support the audio element.
+
+                    div(class="row mb20 mt30")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • Is the man sure that air pollution is dangerous for children?
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                            label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ) Yes.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                            label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ) No.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                            label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ) I don´t know.
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • What does he say about air pollution?
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                            label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ) That it is difficult to destroy.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                            label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ) That it contributes to the environment.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="3")
+                            label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ) That it´s starting to cause illnesses.
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • Is the man sure that all garbage is easy to destroy?
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                            label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ) Yes.
+                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                            label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ) No.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="3")
+                            label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ) I don´t know.
+                    
+                div(class="col-flex-xs12 col-flex-md5 offset-md1 col-center mt10-sm mt20-md")|
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • What does he say about garbage?
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                            label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ) That it contributes to the environment.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                            label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ) That plastics are difficult to destroy.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_4" value="3")
+                            label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10" ) That it is causing illnesses.
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span • How does the man suggest the woman help the environment?
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                            label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ) Using her car less and classifying her garbage.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                            label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ) Destroying plastics.
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_5" value="3")
+                            label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10" ) Visit the people who recycle plastic.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

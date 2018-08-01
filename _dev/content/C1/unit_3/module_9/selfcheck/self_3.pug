@@ -1,0 +1,92 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_3")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row row-flex mt30 align-items-center")
+                .row
+                    h5.ta-c Listen to the news report and answer the questions that follow.
+                .row-flex.align-items-center.justify-between
+                    div(class="col xs12 md6"): div(class="col xs12 md11 col-center")
+                        .row-flex.justify-center.mt30
+                            audio(controls class='')
+                                source(src='unit_3/module_9/assets/audios/self_3_1.mp3' type='audio/mpeg')
+                        .c-cardGreen
+                            .c-cardGreenContent.ta-c
+                                h5 Andrea Muizelaar on fashion, anorexia, and life after ‘Top Model’
+                                h6 Monday, November 26, 2007
+
+                                p Read the full story here: #[a(href="https://en.wikinews.org/wiki/Andrea_Muizelaar_on_fashion,_anorexia,_and_life_after_%27Top_Model%27" target="blank") en.wikinews.org]
+
+                        h6.ta-j.mt30.
+                            #[strong.u-textColor_4 •] Andrea decided to enter the televised modeling competition because...
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_1") she wanted to change her life.
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_2") her image would make her successful.
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_3") she felt lonely and didn’t have a support unit.
+
+                        h6.ta-j.mt30.
+                            #[strong.u-textColor_4 •] Andrea claimed her career was ruined because...
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_12" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_12") her health was getting worse.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_13" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_13") the people in the industry were disrespectful.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_14" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_14") of things said against her by one of the judges on Top Model.
+                    |
+                    div(class="col xs12 md6"): div(class="col xs12 md11 col-center")
+
+                        h6.ta-j.mt30 #[strong.u-textColor_4 •] Complete the sentence.
+                        p After winning Top Model...
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_4" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_4") Andrea began to appear in many fashion magazines.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_5" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_5") Andrea had many issues with housing.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_6" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_6") Andrea and her parents lost contact.
+
+                        h6.ta-j.mt30.
+                            #[strong.u-textColor_4 •] Choose true or false.
+                        p Most Top Model winners turn out not achieving the modeling success they dreamed of.
+
+                        div(class="row row-flex justify-around")
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_7" value="1")
+                            label(class="c-Checkbox xs12 md5" for="selInput_7") True.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_8" value="2")
+                            label(class="c-Checkbox xs12 md5" for="selInput_8") False.
+
+                        h6.ta-j.mt30.
+                            #[strong.u-textColor_4 •] With the Top Model contract, the winners...
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_9" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_9") can leave Canada and find work in other countries.
+                            input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_10" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_10") get $65,000 in addition to magazine spreads.
+                            input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_11" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_11") must fulfill many contractual agreements.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

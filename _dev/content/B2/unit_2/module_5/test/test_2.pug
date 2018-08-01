@@ -1,0 +1,176 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        
+        section(class="template-content")
+            
+             div(class="row")
+
+                div(class="c-flickity")
+
+                    div(class="row mt10")
+                        |
+                        div(class="row c-flickity-controls")
+                            //- button(class="c-flickity-button c-flickity-button--previous") ←
+                            div(class="c-flickity-controlsSlides")
+                                button(class="c-flickity-button is-selected ") 1
+                                button(class="c-flickity-button ") 2
+                                button(class="c-flickity-button ") 3
+                                button(class="c-flickity-button ") 4
+                                button(class="c-flickity-button ") 5
+                            //- button(class="c-flickity-button c-flickity-button--next") →
+
+                    div(class="row mt50-sm")
+                        div(class="c-flickity--cell")
+
+                            div(class="row-flex align-items-center")
+                                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/tes_2_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+
+                                div(class="col-flex-sm10 col-flex-md6 col-center") 
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20") 
+                                                | Mr. Jones 
+                                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir ml10 mr10 mb10" ng-model="txtcaptura_a")
+                                                | reading a newspaper in the mornings. It´s part of his daily routine.
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                                        label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='gets used to'") gets used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                                        label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='is used to'") is used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                                        label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='used to'") used to
+                            
+                        |
+                        div(class="c-flickity--cell")
+
+                            div(class="row-flex align-items-center")
+                                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/tes_2_2.png", alt="", srcset="" class="u-responsive-img centrado")
+
+
+                                div(class="col-flex-sm10 col-flex-md6 col-center") 
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20") 
+                                                | My cousin
+                                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir ml10 mr10 mb10" ng-model="txtcaptura_b")
+                                                | have a car when he was in high-school. He got his driver´s license after he graduated.
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                                        label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click!="txtcaptura_b='didn&#96;t use to'") didn't use to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                                        label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click!="txtcaptura_b='wasn&#96;t used to'") wasn't used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="3")
+                                        label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='got used to used to'") got used to
+                            
+                        |
+                        div(class="c-flickity--cell")
+
+                            div(class="row-flex align-items-center")
+                                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/tes_2_3.png", alt="", srcset="" class="u-responsive-img centrado")
+
+
+                                div(class="col-flex-sm10 col-flex-md6 col-center") 
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20") 
+                                                | Mike and Jimmy
+                                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir ml10 mr10 mb10" ng-model="txtcaptura_c")
+                                                | sharing a room. They´re twins, so they´ve been doing this since they were born.
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                                        label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click!="txtcaptura_c='aren&#96;t used to'") aren't used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                                        label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='used to'") used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="3")
+                                        label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='are used to'") are used to
+                            
+                        |
+                        div(class="c-flickity--cell")
+
+                            div(class="row-flex align-items-center")
+                                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/tes_2_4.png", alt="", srcset="" class="u-responsive-img centrado")
+
+
+                                div(class="col-flex-sm10 col-flex-md6 col-center") 
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20") 
+                                                |  I can't drive, so I'm
+                                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir ml10 mr10" ng-model="txtcaptura_d")
+                                                | taking a bus to work.
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                                        label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='not used to'") not used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                                        label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='used to'") used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_4" value="3")
+                                        label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='get used to'") get used to
+                            
+                        |
+                        div(class="c-flickity--cell")
+                            
+                            div(class="row-flex align-items-center")
+                                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/tes_2_5.png", alt="", srcset="" class="u-responsive-img centrado")
+
+
+                                div(class="col-flex-sm10 col-flex-md6 col-center") 
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20") 
+                                                | After a couple of months in Mexico, I finally
+                                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir ml10 mr10" ng-model="txtcaptura_e")
+                                                | having lunch late in the afternoon.
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                                        label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='am used to'") am used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                                        label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='was used to'") was used to
+
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_5" value="3")
+                                        label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='got used to'") got used to
+                            
+                        
+
+                    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button');

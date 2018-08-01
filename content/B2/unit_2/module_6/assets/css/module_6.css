@@ -1,0 +1,314 @@
+.u-bgTemplate {
+	background-image: url(../images/wel_bg.jpg);
+	background-color: #ff5252;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.c-green {
+	background: #87c5bf!important;
+	color: #22645B;
+}
+
+.c-blue {
+	background: #b5c6f8!important;
+	color: #3e538c;
+}
+
+.act_6 .drag {
+	height: calc(3.4rem - 4px);
+	font-size: 0.8rem;
+}
+
+.act_6 .dragCont {
+	margin: 5px auto;
+	float: left;
+	margin: 5px;
+}
+
+.act_6 .dragCont,.act_6 .drop {
+	width: calc(180px - 10px);
+	height: 3.4rem;
+}
+
+.c-green-text {
+	background: #87c5bf!important;
+	color: #ffffff;
+	font-weight: 500;
+	padding: 20px;
+	text-align: justify;
+}
+
+.c-blue-text {
+	background: #b5c6f8!important;
+	color: #ffffff;
+	font-weight: 600;
+	padding: 10px;
+	text-align: center;
+}
+
+.line-h {
+	line-height: 40px!important;
+}
+
+.line-h1 {
+	line-height: 30px!important;
+}
+
+.absol-mod2-self {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	color: #969696;
+}
+
+.c-blue-text1 {
+	background: #b5c6f8!important;
+	color: #3e538c;
+	font-weight: 600;
+	padding: 10px;
+	text-align: center;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.c-blue-text2 {
+	background: #b5c6f8!important;
+	color: #3e538c;
+	font-weight: 600;
+	padding: 5px;
+	text-align: center;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-left: 10px;
+}
+
+.ancho-abs-mod6 {
+	width: 100%!important;
+}
+
+.f-in {
+	float: inherit;
+}
+
+.d-inbl {
+	display: inline-block;
+}
+
+.act_18 .center {
+	margin: 0 auto;
+}
+
+.act_18 .btn {
+	margin: 8px 4px 0;
+}
+
+.act_18 .btn {
+	width: 172px;
+	height: 28px;
+}
+
+.act_18 .line {
+	height: 2em;
+}
+
+.act_18 .clue,.act_18 .word {
+	display: inline-block;
+	height: 1.5em;
+	padding: 0 5px;
+}
+
+.act_18 .word {
+	text-align: right;
+	width: 100px;
+}
+
+.act_18 .clue {
+	width: 500px;
+}
+
+.act_18 .crossword {
+	display: block;
+	width: 704px;
+}
+
+.act_18 .crossword_number {
+	display: -ms-flexbox;
+	display: flex;
+	background-color: #8496c5;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.act_18 .crossword_number span {
+	font-size: .8rem;
+	color: white;
+}
+
+.act_18 .square {
+	margin: 1px;
+	font: 24px Calibri;
+	width: 1.25em;
+	height: 1.25em;
+	line-height: 1.25em;
+	vertical-align: middle;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.act_18 .letter {
+	border: 1px solid #27A29B;
+	padding: 2px;
+	border-radius: 5px;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
+.act_18 .char {
+	font-size: 24px;
+	text-transform: uppercase;
+	outline: 0;
+	border: 0;
+	padding: 0;
+	margin: -1px 0 0 -1px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: none;
+}
+
+.act_18 .hide {
+	visibility: hidden;
+}
+
+.act_18 .clueReadOnly {
+	border: 0;
+	outline: 0;
+	color: #303030!important;
+	background: none;
+}
+
+.self_7 .drag {
+	height: calc(3.4rem - 4px);
+	font-size: 0.8rem;
+	display: inline-block;
+	padding: 1rem;
+}
+
+.self_7 .dragCont {
+	margin: 5px auto;
+	float: left;
+	margin: 5px;
+}
+
+.self_7 .dragCont,.self_7 .drop {
+	width: calc(90% - 10px);
+	height: 3.4rem;
+}
+
+.self_7 .dragCont .drag::first-letter,.self_7 .drop .drag::first-letter {
+	text-transform: uppercase;
+}
+
+.self_8 .c-inputRadio[type="radio"] + label.c-Checkbox {
+	width: 100%;
+	height: 66.39px;
+	background-color: var(--color_4);
+}
+
+.self_8 .c-inputRadio[type="radio"] + label.c-Checkbox::before {
+	background-color: var(--color_4-dark);
+}
+
+.self_8 .c-inputRadio[type="radio"]:checked + label.c-Checkbox:after {
+	right: calc(50% - 10px);
+	background-color: var(--color_4-light);
+	border-color: var(--color_4-light);
+}
+
+.mycol_2 ._c-email {
+	max-width: 768px;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-radius: 0 0 1rem 1rem;
+	margin: auto;
+	background-color: #eeeeee;
+	box-shadow: 0px 3px 7px 3px rgba(121,121,121,0.28);
+}
+
+.mycol_2 ._c-email-row {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	min-height: 1px;
+	border-bottom: 1px solid #bcbcbc;
+}
+
+.mycol_2 ._c-email-row:after,.mycol_2 ._c-email-row:before {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.mycol_2 ._c-email-header {
+	padding: 0 0.5rem .5rem .5rem;
+	box-shadow: 0px 3px 2px 0px rgba(165,165,165,0.3);
+}
+
+.mycol_2 ._c-email-body {
+	padding: 1rem 0.5rem;
+	width: calc(100% - 1rem);
+	margin: 0.5rem auto 0rem;
+	background-color: white;
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.mycol_2 ._c-email-asunto,.mycol_2 ._c-email-copia,.mycol_2 ._c-email-destinatario {
+	position: relative;
+	padding: 0.5rem;
+	margin: 5px 0;
+	border-radius: 0.5rem;
+	background-color: white;
+}
+
+.mycol_2 ._c-email-copia {
+	float: left;
+}
+
+.mycol_2 ._c-email-asunto {
+	float: right;
+}
+
+.mycol_2 ._c-email-asunto,.mycol_2 ._c-email-copia {
+	width: 45%;
+}
+
+@media screen and (max-width: 500px) {
+	.mycol_2 ._c-email-asunto,.mycol_2 ._c-email-copia {
+		width: 100%;
+	}
+}
+
+.mycol_2 ._c-email-mensaje {
+	padding: 1rem 0.5rem;
+}

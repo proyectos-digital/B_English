@@ -1,0 +1,80 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_19")
+    aside(class="template-asideLeft o-aside-Item " ng-init="s_actividad = 1")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        article(class="template-content")
+            div: h4 Politely interrupting
+            section(class="row u-animationFadeDown" ng-show="s_actividad == 1")
+
+                p When someone is speaking, sometimes we really want to add to the conversation but we don’t want to be rude and interrupt that person. There are a few phrases we can use to join in the conversation politely without too much interruption of the general conversation.
+                div(class="row row-flex mb30")
+                    div(class="col xs12 md8 mb30 mt40")
+                        div(class="row mt20")
+                            p(class="") The best time to interrupt someone is when they pause in the conversation.
+                            audio(controls class='row m-a mt30')
+                                source(src='unit_1/module_1/assets/audios/act_19_1.mp3' type='audio/mpeg')
+                                | Your browser does not support the audio element.
+                        div(class="row mt20")
+                            p.ml10 You can also indicate that you want to say something by using hand gestures or a facial expression.
+                            audio(controls class='row m-a mt30')
+                                source(src='unit_1/module_1/assets/audios/act_19_2.mp3' type='audio/mpeg')
+                                | Your browser does not support the audio element.
+
+                    div(class="col xs12 md4 ta-c mt40 showTo-md")
+                        img(src="unit_1/module_1/assets/images/act_19_1.png", alt="", class="u-responsive-img")
+                div(class="row mt20")
+                    p.ml10 You can politely interrupt someone by agreeing or disagreeing with them.
+                    div(class="row row-flex mt20")
+                        div(class="col-flex-xs12 col-flex-md4")
+                            h6 Agreeing
+                            audio(controls class='xs12 sm11 m-a mt30') #[source(src='unit_1/module_1/assets/audios/act_19_3.mp3' type='audio/mpeg')] Your browser does not support the audio element.
+                        div(class="col-flex-xs12 col-flex-md4")
+                            h6 Disagreeing
+                            audio(controls class='xs12 sm11 m-a mt30') #[source(src='unit_1/module_1/assets/audios/act_19_4.mp3' type='audio/mpeg')] Your browser does not support the audio element.
+                        div(class="col-flex-xs12 col-flex-md4")
+                            h6 By apologizing
+                            audio(controls class='xs12 sm11 m-a mt30') #[source(src='unit_1/module_1/assets/audios/act_19_5.mp3' type='audio/mpeg')] Your browser does not support the audio element.
+            |
+            section(class="row u-animationFadeDown" ng-show="s_actividad == 2")
+                h5 Other polite phrases include.
+                p Listen to the phrases that you can use to politely interrupt a speaker.
+                .row
+                    .col.xs5.flex.justify-around.col-center
+                        button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_19_6.mp3")
+                        button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_19_7.mp3")
+                        button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_19_8.mp3")
+
+                .row.mt30.row-flex.align-items-center
+                    .col.xs12.md6.ta-c
+                        img(src="unit_1/module_1/assets/images/act_19_2.png", alt="", class="u-responsive-img")
+                    .col.xs12.md6
+                        h6 #[span.u-textColor_4 1]. Record the most appropriate way to interrupt the following conversations.
+                        p #[strong.u-textColor_4 •] Your boss has made a mistake about the number of new computers that your office has received, you only received 10 new computers.
+                        p Record how you would interrupt him in order to correct him.
+                        p #[strong Boss:] I am happy to say that the HR department has received 25 new computers. (Record your interruption here).
+                        div(class="col xs12 md6 mt30 col-center")
+
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod1_act19a',1)"): +ngRecorder
+
+                        p.mt30 #[strong.u-textColor_4 •] Your secretary is reporting the new procedure for calling in sick. You need to let her know that they must also send an email, not only call in.
+                        p Record how you would interrupt him in order to correct him.
+                        p #[strong Secretary:] As you know we have had some troubles with people missing work. When you are not going to come into work, you must call in at least a few hours before your start time. (Record your interruption here).
+                        div(class="col xs12 md6 mt30 col-center")
+
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt1_mod1_act19b',2)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

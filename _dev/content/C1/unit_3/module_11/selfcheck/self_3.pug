@@ -1,0 +1,92 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_3")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row row-flex mt30 align-items-center")
+                .row
+                    h5.ta-c Listen to the news report and answer the questions that follow.
+                .row-flex.align-items-center.justify-between
+                    div(class="col xs12 md6"): div(class="xs12 md11 col-center")
+                        .row-flex.justify-center.mt30
+                            audio(controls class='mt30')
+                                source(src='unit_3/module_11/assets/audios/self_3_1.mp3' type='audio/mpeg')
+                        .c-cardGreen
+                            .c-cardGreenContent.ta-c
+                                h5 Netflix and Bill Nye are saving science—30 minutes at a time
+                                p.ta-c: i With Netflix’s ascendancy and the way it’s changing viewing habits, “Bill Nye Saves the World” may be a huge opportunity for science education.
+                                p.ta-c Mark Rahner posted May 08, 2017
+
+                                p Read the full story here: #[a(href="http://www.yesmagazine.org/planet/netflix-and-bill-nye-are-saving-science-30-minutes-at-a-time-20170508" target="blank") www.yesmagazine.org]
+
+                        .row.mt30
+                            h6.ta-j #[strong.u-textColor_4 •] The People’s Climate March...
+
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_1") is a new Netflix series.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_2") was a response to the new American government’s stance on science.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_3") is described as paranormal.
+
+                        .row.mt30
+                            h6 #[strong.ta-j.u-textColor_4 •] Choose true or false.
+                            p The Environmental Protection Agency (EPA) will no longer exist.
+
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_4") True.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_5") False.
+                    |
+                    div(class="col xs12 md6"): div(class="xs12 md11 col-center")
+
+                        h6 #[strong.u-textColor_4 •] Complete the sentence.
+                        p.ta-j With a now theocratic Republican Party,
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_6" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_6") less concern is given to environmental protection.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_7") the Department of Interior will become responsible for the Board of Scientific Counselors.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_8") Andrea and her parents lost contact.
+
+                        .row.mt30
+                            h6 #[strong.u-textColor_4 •] Choose true or false.
+                            p.ta-j Under the new administration, came the suspension of over 200 research advisory panels.
+
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_9") True.
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_10") False.
+
+                        .row.mt30
+                            h6.ta-j #[strong.u-textColor_4 •] Complete the sentence.
+                            p The news media and the scientific community  #[input(type="text" readonly class="c-input row" ng-model="txtcaptura_a")]
+
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_11" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_11" ng-click="txtcaptura_a = 'are both influential when it comes to certain issues.'") are both influential when it comes to certain issues.
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_12" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_12" ng-click="txtcaptura_a = 'consider climate change and evolution serious issues to be discussed.'") consider climate change and evolution serious issues to be discussed.
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="3")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_13" ng-click="txtcaptura_a = 'have opposite views concerning climate change.'") have opposite views concerning climate change.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

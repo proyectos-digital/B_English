@@ -1,0 +1,89 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_6" )
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content" )
+
+
+            div(class="row row-flex justify-between align-items-center")
+                .col.xs12.md10.col-center
+                    h5 Listen to the news report and answer the questions that follow.
+                    div.row-flex.justify-center.align-items-center
+                        audio(controls class="")
+                            source(src='unit_1/module_3/assets/audios/act_6_1.mp3' type='audio/mpeg')
+                            | Your browser does not support the audio element.
+                    .col.xs12.md7.col-center: .c-cardGreen
+                        .c-cardGreenContent.ta-c
+                            h5 Major Colombian newspaper reveals Bogotá mayor does not hold claimed Ph.D. degree
+                            h6 Wikinews.org, Tuesday, April 12, 2016
+
+                            p Read the full story here: #[a(href="https://en.wikinews.org/wiki/Major_Colombian_newspaper_reveals_Bogot%C3%A1_mayor_does_not_hold_claimed_PhD_degree" target="blank")  https://en.wikinews.org/]
+
+            .row.mt30
+                h5 Now choose the best answer. Answer the following questions based on the audio recording.
+            div(class="row row-flex justify-between align-items-center")
+                .col.xs12.md5
+                    .row
+                        p Enrique Peñalosa said...
+                    .row
+                        input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                        label(class="c-Checkbox row ta-l " for="selInput_1") The library at the University of Paris holds his doctoral thesis.
+                        input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                        label(class="c-Checkbox row ta-l " for="selInput_2") He holds a Ph.D. in economics and history.
+                        input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                        label(class="c-Checkbox row ta-l " for="selInput_3") He holds Diploma in advanced studies.
+                        input(type="hidden" class="js-select")
+                    .row.mt30
+                        .row
+                            p #[strong.u-textColor_4 •]  ...Claimed that Enrique Peñalosa lied about his studies.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_4") Enrique Penalosa
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_5") Newspapers
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                            label(class="c-Checkbox row ta-l " for="selInput_6") Reporters
+                            input(type="hidden" class="js-select")
+                    .row.mt30
+                        h6 Complete the sentence.
+                        p #[strong.u-textColor_4 •] Enrique Peñalosa is the #[input(type="text" class="c-input js-escribir")] of Bogota.
+
+                .col.xs12.md5
+
+                    .row.mt30
+                        h6 Choose true or false.
+                        p #[strong.u-textColor_4 •] Enriques Peñalosa did his graduate study at the University of Paris.
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_7") True.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_8") False.
+                            input(type="hidden" class="js-select")
+                    .row.mt30
+                        h6 #[strong.u-textColor_4 •] According to the report, Enrique Peñalosa blamed in the misinformation on:
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_10")  The newspaper.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_11") The reporters.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3")
+                            label(class="c-Checkbox row ta-l " for="selInput_12") Campaign's staff.
+                            input(type="hidden" class="js-select")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

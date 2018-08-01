@@ -1,0 +1,68 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    h5 Look at the example:
+                    div(class="row mb30 mt30 ta-c showTo-md")
+                        img(src="unit_1/module_2/assets/images/act_4.png", alt="" class="u-responsive-img w80 m-a")
+                    div(class="padding10 c-green w60 ta-c m-a mt10"): strong I’m waiting for Sam to come home.
+                    div(class="padding10 c-green w60 ta-c m-a mt10"): strong You’re waiting for who to do what?
+                div(class="col-flex-xs12 col-flex-md6 col-center mt30-sm mt100-md")
+                    div(class="row-flex")
+                        h5 #[strong.u-textColor_4 1. ]  Now read these short dialogues. 
+                    div(class="row mt20")
+                        div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  A. 
+                                | I was a little sick last week.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  B. 
+                                | You were sick last week?
+                        div(class="mb20 row-flex mt40")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  A. 
+                                | This is my first time in a concert.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  B. 
+                                | Your first time?
+                        div(class="mb20 row-flex mt40")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  A. 
+                                | Look. This is my new car!
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  B. 
+                                | Wow, your new car!!!
+                    div(class="row-flex mt40")
+                        h5 Click and listen: 
+                    div(class="row mt20")
+                        button(class="c-btn-Icon u-bgIconListen"  ng-audio="unit_1/module_2/assets/audios/act_4_1.mp3")
+                            span Example 1
+                        button(class="c-btn-Icon u-bgIconListen ml10"  ng-audio="unit_1/module_2/assets/audios/act_4_2.mp3")
+                            span Example 2
+                    div(class="row-flex mt40")
+                        h5 Now try to repeat the questions orally, with the appropriate intonation.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        button(class="c-btn-IconAction openNotice u-bgIconAlert is-active" ng-click="idNotice = 1")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_2/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

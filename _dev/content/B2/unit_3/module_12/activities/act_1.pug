@@ -1,0 +1,81 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1" ng-init="s_actividad = 1" )
+
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        |
+        |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            div(class="row-flex s-actividad u-animationFadeDown" ng-show="s_actividad == 1")
+                div(class="row")
+                    div(class="row-flex align-items-center")
+                        div(class="col-flex-sm12 col-flex-md12 col-flex-lg5 col-center")
+                            h5 Watch the video. 
+                            h6 Pay attention to the use of the modal auxiliaries, can, could, may, might, should, and must.
+                            div(class="row-flex justify-center mt20 mb20"): div(class="col md11"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                                source(src="unit_3/module_12/"+pathVideo+"act_1.mp4" type="video/mp4")
+
+                        div(class="col-flex-sm12 col-flex-md12 col-flex-lg6 col-center")
+                            h5 Listen again and check the following sentences, paying attention to the words in bold.
+                                ul.lh30
+                                    li #[strong: span(class="u-textColor_4-dark") •] #[strong I must ] respect the law.
+                                    li #[strong: span(class="u-textColor_4-dark") •] #[strong I should] invite others to do the same.
+                                    li #[strong: span(class="u-textColor_4-dark") •] #[strong I can tell] people when things are right or wrong.
+                                    li #[strong: span(class="u-textColor_4-dark") •] #[strong I could begin] with little changes at home.
+
+
+
+            div(class="row-flex s-actividad u-animationFadeDown" ng-show="s_actividad == 2")
+                div(class="row")
+                    div(class="col xs12 col-center ta-c" )
+                    h5 #[span(class="u-textColor_4-dark") 2]. Match the verbs with Go and Get with their meanings.
+                    div(data-ejercicio="unir" class="mt40 row flex justify-center")                 
+                        div(id="sourceElements" class="col xs10 js-columnas")
+                            span(id="Item0_0" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="1") If we don’t hurry we could be late.
+                            span(id="Item0_1" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="2") They can run but they can’t hide.
+                            span(id="Item0_2" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="3") May we go home now?
+                            span(id="Item0_3" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="4") Would you carry this for me please?
+                            span(id="Item0_4" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="5") We could eat out tonight.
+                            span(id="Item0_5" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="6") You shouldn’t go by train. It’s a very long journey.
+                            span(id="Item0_5" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="7") Shall I call you on your mobile?
+                            span(id="Item0_5" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="8") That can’t be true.
+                            span(id="Item0_5" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="9") We could wear what we liked, but we had to look neat and tidy.
+                            span(id="Item0_5" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="10") You must stop at a red light.
+                        div(id="linecanvas" style="width: 60px;")
+                        div(id="targetElements" class="col xs2 js-columnas") 
+                            span(id="Item1_0" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="4") Requests
+                            span(id="Item1_1" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="8") Impossibility
+                            span(id="Item1_2" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="7") Offers
+                            span(id="Item1_3" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="5") Suggestions
+                            span(id="Item1_4" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="2") Ability
+                            span(id="Item1_5" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="1") Possibility
+                            span(id="Item1_5" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="6") Advice
+                            span(id="Item1_5" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="3") Permission
+                            span(id="Item1_5" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="10") Obligation
+                            span(id="Item1_5" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="9") Necessity
+                                                                   
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_12/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

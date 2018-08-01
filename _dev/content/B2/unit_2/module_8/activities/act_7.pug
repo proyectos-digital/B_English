@@ -1,0 +1,99 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Complete the examples below with the verbs in the box.
+            div(class="row-flex")
+                div(class="col-flex-xs10 col-flex-md6 col-center mt10-sm mt20-md")
+                    div(class="row-flex")
+                        h5 Read the following sentences:
+
+                        p(class="mt20") • Jair 
+                            strong thanked 
+                            | Julio 
+                            strong for making 
+                            | that suggestion. 
+
+                        p(class="mt20") • Henry is 
+                            strong thinking  
+                            | of 
+                            strong going  
+                            | to Fresno in August. 
+
+                        p(class="mt20") • He   
+                            strong kept  
+                            | on  
+                            strong asking 
+                            | for money. 
+
+                        p(class="mt20") • Please, 
+                            strong refrain from making 
+                            | that horrible noise! 
+
+                div(class="col-flex-xs10 col-flex-md6 col-center mt10-sm mt20-md")
+                    div(class="row-flex")
+                        h5 Choose a verb from the list to complete the sentences. Use the right form.
+                    div(class="c-cardGreen"): div(class="c-cardGreenContent flex align-items-center justify-center")
+                        p Depend on / keep on / apologize for / dream of / blamed for
+
+                    div(class="row mb20 mt40")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span I
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_a")
+                                    span being late to class yesterday.
+                    |
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span He
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_b")
+                                    span playing basketball when he grows up.
+                    |
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span We have to
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_c")
+                                    span working if we want to finish the report on time.
+                    |
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span I was
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_d")
+                                    span losing the game.
+                    |
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span We
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_e")
+                                    span getting help. Otherwise, we won’t be able to make it.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        button(class="c-btn-IconAction openNotice u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_8/activities/act_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

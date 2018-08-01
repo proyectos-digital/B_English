@@ -1,0 +1,199 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_3" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a" )
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            div(class="row")
+                div(class="c-flickity")
+                    div(class="row mt10 mb30")
+                        div(class="row c-flickity-controls c-flickity-controls-flex")
+                            div(class="c-flickity-controlsSlides")
+                                button(class="c-flickity-button is-selected ") Page 1
+                                button(class="c-flickity-button ") Page 2
+                                span(class="c-flickity--cell-total") 2
+                            button(class="c-flickity-button c-flickity-button--previous") ←
+                            button(class="c-flickity-button c-flickity-button--next") →
+
+                        div(class="c-flickity--cell"): div(class="row" style="height:720px; overflow-x: hidden; overflow-y:auto;")
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent u-textColor_1")
+                                    .col.xs12.md6
+                                        h5.ta-c The Painting That Saved My Family from the Holocaust
+                                        h6.ta-c Stephen Engelberg
+                                        p.ta-c ProPublica, Nov. 24, 2015, 5:39 p.m.
+                                        p.ta-j.
+                                            #[strong 1]. A #[strong frightened] young woman left her apartment in Munich in November 1938 and returned with the visa that saved her family. A team of German journalists launched an #[strong improbable] search to find the missing artwork and tell its story.#[br]
+                                            Seventy-seven years ago this week, my grandmother left her fourth-floor apartment in Munich carrying a painting by Otto Stein, a modestly popular German artist. Earlier that month, the Nazis had #[strong launched] a nationwide program against Germany’s Jewish minority, a #[strong rampage] in which gangs of men burned stores, schools and #[strong synagogues]. In the #[strong aftermath] of what became known as Kristallnacht, the Gestapo rounded up hundreds of Jewish men and sent them to the Dachau concentration camp. Among them was my grandfather, Jakob Engelberg.#[br]
+                                            Seventy-seven years ago this week, my grandmother left her fourth-floor apartment in Munich carrying a painting by Otto Stein, a modestly popular German artist. Earlier that month, the Nazis had #[strong launched] a nationwide program against Germany’s Jewish minority, a #[strong rampage] in which gangs of men burned stores, schools and #[strong synagogues]. In the #[strong aftermath] of what became known as Kristallnacht, the Gestapo rounded up hundreds of Jewish men and sent them to the Dachau concentration camp. Among them was my grandfather, Jakob Engelberg.#[br]
+                                            Paula Engelberg never talked about what happened during her visit to the Swiss consulate. But when she returned home a few hours later, she no longer had the painting. What she had was the most precious of commodities in Nazi Germany of 1938: A valid visa to enter Switzerland.
+                                        p.ta-j.
+                                            #[strong 2].  The consulate issued only 600 such documents that year, up from just 200 the previous year. This particular one secured the release of my grandfather from Dachau after two weeks, allowing my grandparents, father and aunt to escape Germany and ultimately settle in the United States. It made possible the existence of 20 more human beings. I’m one of them.#[br] Five years ago, I told this story to Christian Salewski, a German journalist who was working at ProPublica for several months as part of a fellowship. I said I had always wondered what had happened to the painting, not because it was particularly valuable — works by Stein can be found on eBay selling for a few hundred dollars — but because I wanted to know its story.
+
+                                    .col.xs12.md6
+                                        p.ta-j.
+                                            #[img(src="unit_1/module_4/assets/images/act_3_1.png" alt="" class="u-responsive-img w40 mr10 mb10 " align="left")]
+                                            As a journalist, I imagined any number of possible #[strong narratives]. Perhaps the painting was given to a diplomat who #[strong dispensed] visas to desperate Jews, a Schindler of the Swiss diplomatic service. Perhaps it had been sold to an art dealer to raise the money for a #[strong bribe]. Maybe it was simply a gratuity for a service #[strong rendered].#[br]#[br]
+                                            #[strong 3]. I had fantasies of finding a house full of paintings in Switzerland, the owners #[strong unaware] of the lives saved by their existence. I told Christian that we had only one real #[strong clue]. My family had managed to leave Germany with a second painting by Stein, a portrait of a young woman whose #[strong gaze] seems to follow you, Mona Lisa-like, across a room. In my father’s memory, this painting, which he called “My Mona Lisa,” #[strong bore] a #[strong striking resemblance] to its missing sister in both style and subject. The remaining painting hung in our family’s living room, a testament to our past as refugees.#[br]
+                                            Early this year, Christian and three colleagues decided to launch what they called #kunstjagdt — “art hunt.” Their plan was to spend six weeks using social media like WhatsApp and stories on the radio, on television and in newspapers to search for the artistic equivalent of a needle in a very large #[strong haystack].#[br] Their reporting unfolded against the #[strong backdrop] of the exploding refugee crisis in Europe and the Middle East. It was not hard to see parallels.#[br]#[br]
+
+                                        p.ta-j.
+
+                                            #[strong 4]. Then, as now, a desperate group of people sought to escape an increasingly terrifying situation. Then, as now, most countries in the world turned their backs. It’s sometimes suggested that German Jews of the 1930’s was a delusional group, waiting far too long to flee a country in which they had grown too comfortable.
+
+                        div(class="c-flickity--cell"): div(class="row" style="height:720px; overflow-x: hidden; overflow-y:auto;")
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent u-textColor_1 ")
+                                    .col.xs12.md6
+                                        p.ta-j.
+                                           The truth as documented by the Art Hunt team is that then, as now, there was hardly anywhere to go.#[br] Jakob Engelberg applied to immigrate to the United States in 1934, shortly after Hitler came to power. He waited four years for his number to be called in America’s restrictive, Depression-era immigration system. My aunt told me years later that people who applied for U.S. visas just a few weeks later in 1934 died in the Holocaust. My father and his sister recall that Hitler’s speeches and the Nazi Party’s program persuaded Jakob Engelberg that the Jews of Germany faced an existential threat, one sufficiently dire to persuade him to abandon a comfortable middle-class life as a traveling salesman living in one of Europe’s most beautiful cities.#[br] The records dug up by the Art Hunt team suggest he was trying to live his life as an ordinary German. According to a Gestapo report Christian found in the Munich archives, Jakob Engelberg “read the rather liberal Frankfurter Zeitung but besides that was quite an apolitical person who didn’t show party flagging from his window on national holidays.” I never got the chance to ask him precisely what persuaded him to try to leave Germany at such an early date. Jakob Engelberg died from a cerebral hemorrhage in 1941, long before I was born. (The German government would eventually make a small payment in compensation for his death, acknowledging that it was caused, at least in part, by blows to the head he received while at Dachau.)
+                                        p.ta-j.
+                                            #[img(src="unit_1/module_4/assets/images/act_3_2.png" alt="" class="u-responsive-img w40 mr10 mb10 " align="left")]
+                                             #[strong 5] The U.S. visas for Paula Engelberg and the two children, Melly and Edward, arrived in October 1938. Jakob’s visa was delayed because of his Polish nationality, a less-desirable category of immigrant under U.S. law for which fewer visas were issued. And so he was imprisoned in the barracks of Dachau on Nov. 10, 1938, a Jew still
+                                    .col.xs12.md6
+                                        p.ta-j.
+                                           #[img(src="unit_1/module_4/assets/images/act_3_3.png" alt="" class="u-responsive-img w40 ml10 mb10 " align="right")]
+                                           waiting for his papers to leave the country. These facts were confirmed by records recovered from archives in Germany and Switzerland by Christian and his Art Hunt colleagues: Fredy Gareis, Marcus Pfeil and Carolyn Braun.#[br] The search for the painting proved much more difficult. The team identified the man who stamped the precious visa: Wolfgang Gribi, a Swiss diplomat whose wife lived to be over 100. Unfortunately, she died two years ago. #[br] They tracked down an expert on the art of Otto Stein who helped them identify 14 possible “suspects” that were similar to my family’s Mona Lisa. Most could be eliminated by date or provenance and my father eliminated several more in a Skype conversation (his first, at age 86). Eventually, the team narrowed it down to one particular painting that was bought by a private collector in Munich in 1950 after suffering what was described as “war damage.” #[br] #[br] Read the full story here: #[a(href="https://www.propublica.org/article/the-painting-that-saved-my-family-from-the-holocaust") https://www.propublica.org/ ]
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row"): h5 Answer the following texts based on the text you have read.
+            .row.align-items-center.row-flex
+                .col.xs12.md6
+                    .row
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Choose the most appropriate heading for the following extract: #[br]#[br]
+                        p.
+                            The consulate issued only 600 such documents that year, up from just 200 the previous year.
+                            This particular one secured the release of my grandfather from Dachau after two weeks,
+                            allowing my grandparents, father and aunt to escape Germany and ultimately settle in the
+                            United States. It made possible the existence of 20 more human beings.#[br]
+                            I’m one of them. #[br]#[br]
+                            Five years ago, I told this story to Christian Salewski, a German journalist who was working at
+                            ProPublica for several months as part of a fellowship. I said I had always wondered what had
+                            happened to the painting, not because it was particularly valuable — works by Stein can be
+                            found on eBay selling for a few hundred dollars — but because I wanted to know its story.
+                            As a journalist, I imagined any number of possible narratives. Perhaps the painting was given
+                            to a diplomat who dispensed visas to desperate Jews, a Schindler of the Swiss diplomatic
+                            service. Perhaps it had been sold to an art dealer to raise the money for a bribe. Maybe it was
+                            simply a gratuity for a service rendered.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                            label(class="c-Checkbox row ta-c" for="selInput_1") The German journalist and my family
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_2") The Schindler list
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_3") The painting that save my family
+                            input(type="hidden" class="js-select")
+
+                .col.xs12.md6
+                    .row.mt30-xs.mt0-md
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Choose “true”, “false” or “information not given”. #[br]#[br]
+                        p.
+                            The author found out what exactly happened to his family’s art work.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox row ta-c" for="selInput_4") True.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                            label(class="c-Checkbox row ta-c " for="selInput_5") False.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                            label(class="c-Checkbox row ta-c " for="selInput_6") Information not given.
+                            input(type="hidden" class="js-select")
+
+                    .row.mt30
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Match the information given with one of the paragraphs from the text.  #[br]#[br]
+                        p.
+                            The author’s grandfather travelled a lot.
+                        div(class="row row-flex justify-around")
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                            label(class="c-Checkbox xs12 sm3 ta-c" for="selInput_7") 1.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                            label(class="c-Checkbox xs12 sm3 ta-c " for="selInput_8") 3.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+                            label(class="c-Checkbox xs12 sm3 ta-c " for="selInput_9") 4
+                            input(type="hidden" class="js-select")
+
+
+                    //- .row.mt30
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Complete the sentence with a word from the table below #[br]#[br]
+                        .c-cardGreen
+                            .c-cardGreenContent.flex.align-items.center.justify-content-center.u-textWhite
+                                span Haystack | Aftermath | Striking resemblance | Synagogues | Launched | Rampaging
+
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 3")
+            .row.row-flex.align-items-center
+                .col.xs12.md6
+                    .row.mt30
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Fill in the summary using the words form the paragraph.  #[br]#[br]
+                        p.
+                            The story is about a Jewish family from Germany. The Nazis #[input(type="text" class="c-input js-escribir")] a national
+                            program against the Jewish people. This resulted in #[input(type="text" class="c-input js-escribir")] gangs in the streets.
+                            The #[input(type="text" class="c-input js-escribir")] of it was the destruction of #[input(type="text" class="c-input js-escribir")], business and
+                            homes. The family's life was saved by a painting that had a #[input(type="text" class="c-input js-escribir")] to the Mona Lisa.
+                            The author is trying to find the painting now but it's like searching for a needle in #[input(type="text" class="c-input js-escribir")].
+
+                    .row.mt30
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Choose the correct answer. #[br]#[br]
+                        p.
+                            The author...
+                        div(class="row row-flex justify-around")
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+                            label(class="c-Checkbox xs12 sm3 md3 ta-c" for="selInput_10") Witnessed the events of 1938.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+                            label(class="c-Checkbox xs12 sm3 md3 ta-c " for="selInput_11") Was not born yet.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3")
+                            label(class="c-Checkbox xs12 sm3 md3 ta-c " for="selInput_12") Is the great grandson of the witnesses.
+                            input(type="hidden" class="js-select")
+
+                    .row.mt30
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Complete the table by using the correct person from the text.
+                        div(class="row mt30"): table(class="c-table-estilo_tres m-a ")
+                            thead: tr
+                                th German nationals
+                                th Other nationality
+                            tbody
+                                tr
+                                    td: input(type="text" class="c-input js-escribir")
+                                    td: input(type="text" class="c-input js-escribir")
+                                tr
+                                    td: input(type="text" class="c-input js-escribir")
+                                    td: input(type="text" class="c-input js-escribir")
+                                tr
+                                    td: input(type="text" class="c-input js-escribir")
+                                    td
+
+                .col.xs12.md6
+                    .row.ta-c.mt30
+                        img(src="unit_1/module_4/assets/images/act_3_4.png" alt="" class="u-responsive-img")
+
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2 || s_actividad == 3" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2 || s_actividad == 3" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next', '720');

@@ -1,0 +1,139 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_7" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+                h5 As with any language, there are several ways of expressing an idea. With this is mind, here are some other ways of making offers and invitations:
+                table(class="c-table-estilo_tres m-a")
+                    thead: tr
+                        th
+                        th Accepting
+                        th Declining
+                    tbody
+                        tr
+                            td.w33.ta-c
+                                h6 Would you care to + verb?
+                                p #[strong Would you care to join] us at tomorrow’s meeting? I’d love to have your input on the issues we are going to discuss.
+                                p #[strong Would you care to try] a sample of our latest red wine?
+                            td.w33.ta-c
+                                p: strong.
+                                    • Yes, I’d like / love to.#[br]
+                                    • Sure, Thanks for inviting me.#[br]
+                                    • Certainly.#[br]
+                                    • Yes, Of course.#[br]
+                                    • Yes, Thank you.#[br]
+                            td.w33.ta-c
+                                p  When declining an offer or invitation, it’s normally polite to give a reason.
+                                p: strong.
+                                    • Thanks for the offer / invitation but…#[br]
+                                    • I’m sorry but…#[br]
+                                    • I’d like/love to but…#[br]
+                                    • No thank you.#[br]
+                                p Would you care to come with us to the park on Thursday?
+                                p #[strong Thanks for the invitation] but I’ve already made plans with Peter.
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            .row-flex.align-items-center.justify-between
+                .col.xs12.md5
+                    h5 Choose the correct response.
+                    div(class="row mt30")
+                        .row
+                            button(class="c-btn-IconAction u-bgIconListen mr10 f-l" ng-audio="unit_1/module_4/assets/audios/act_10_1.mp3")
+                            p.w90.mb0  Would you care to have a look at my essay? I believe there are some errors in it.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_1") Certainly. Just give me a minute.
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_2") Give me a minute.
+
+                    div(class="row mt30")
+                        .row
+                            button(class="c-btn-IconAction u-bgIconListen mr10 f-l" ng-audio="unit_1/module_4/assets/audios/act_10_2.mp3")
+                            p.w90.mb0  Would you care to give us your opinion on this topic?
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_3" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_3") I’m sorry but I’m a bit busy right now. I’m preparing for my next class.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_4") No, I have no time for that.
+
+                    div(class="row mt30")
+                        .row
+                            button(class="c-btn-IconAction u-bgIconListen mr10 f-l" ng-audio="unit_1/module_4/assets/audios/act_10_3.mp3")
+                            p.w90.mb0 Would you care to have lunch with us this afternoon?
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_5" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_5") Yes.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_6" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_6") Yes, I’d love to.
+
+                    div(class="row mt30")
+                        .row
+                            button(class="c-btn-IconAction u-bgIconListen mr10 f-l" ng-audio="unit_1/module_4/assets/audios/act_10_4.mp3")
+                            p.w90.mb0 Would you care to join me and my sister at the book signing on Saturday? I’d really like the help.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_7" value="1")
+                            label(class="c-Checkbox row ta-l " for="selInput_7") What else are you doing?
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_8" value="2")
+                            label(class="c-Checkbox row ta-l " for="selInput_8") Thanks for the invitation but I won’t be available at that time. I’ll be out of town.
+
+                .col.xs12.md7: div(class="col xs12 md11 col-center")
+
+                    h5 Record your responses to the following invitations.
+
+                    .row-flex.align-items-center.mt40
+                        .col.xs12.sm7
+                            p.mb0 #[strong.u-textColor_4 •] Would you care to join us at the fair this weekend? #[strong (Accept)]
+                        .col.xs12.sm5
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod4_act10a',1)"): +ngRecorder
+
+                    .row-flex.align-items-center.mt40
+                        .col.xs12.sm7
+                            p.mb0 #[strong.u-textColor_4 •] Would you care to have a look at my essay? #[strong (Decline)]
+                        .col.xs12.sm5
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt1_mod4_act10b',2)"): +ngRecorder
+
+
+                    .row-flex.align-items-center.mt40
+                        .col.xs12.sm7
+                            p.mb0 #[strong.u-textColor_4 •] Would you care to join me and my sister at the book signing on Saturday? #[strong (Accept)]
+                        .col.xs12.sm5
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt1_mod4_act10c',3)"): +ngRecorder
+
+                    h5.mt50 Record invitations to a friend for the following occasions.
+
+                    .row-flex.align-items-center.mt40
+                        .col.xs12.sm7
+                            p.mb0 #[strong.u-textColor_4 •] Lunch.
+                        .col.xs12.sm5
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt1_mod4_act10d',4)"): +ngRecorder
+
+                    .row-flex.align-items-center.mt40
+                        .col.xs12.sm7
+                            p.mb0 #[strong.u-textColor_4 •] A trip to Santa Marta.
+                        .col.xs12.sm5
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_e" time-limit='120' audio-model="audio_5" on-playback-start="guardarRecord('unt1_mod4_act10e',5)"): +ngRecorder
+
+
+                    .row-flex.align-items-center.mt40
+                        .col.xs12.sm7
+                            p.mb0 #[strong.u-textColor_4 •] A family get together.
+                        .col.xs12.sm5
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_f" time-limit='120' audio-model="audio_6" on-playback-start="guardarRecord('unt1_mod4_act10f',6)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

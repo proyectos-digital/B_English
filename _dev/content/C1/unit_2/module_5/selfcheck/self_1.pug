@@ -1,0 +1,57 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1")
+    aside(class="template-asideLeft o-aside-Item")
+    
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                div(class="row row-flex justify-center mt30")
+                    div(class="dragCont ml5"): div(class="drag") find out
+                    div(class="dragCont ml5"): div(class="drag") get away
+                    div(class="dragCont ml5"): div(class="drag") figure out
+                    div(class="dragCont ml5"): div(class="drag") get in
+                    div(class="dragCont ml5"): div(class="drag") fill out
+                    div(class="dragCont ml5"): div(class="drag") focused on
+                    div(class="dragCont ml5"): div(class="drag") fallen through
+                    div(class="dragCont ml5"): div(class="drag") get by
+                    div(class="dragCont ml5"): div(class="drag") get along
+
+                div(class="row row-flex justify-between mt30")
+                    .col.xs12.md5
+                        p.ta-j #[strong.u-textColor_4 •]  I have no luck with vacation, this is the third vacation I have planned and they have all  #[span.drop.w20] . Now I am home, bored with nowhere to go. 
+                        p.ta-j #[strong.u-textColor_4 •]  I don’t know how we are going to get from Madrid to Barcelona and then to Bogota, we have to  #[span.drop.w20] a plan that includes all three of us.  
+                        p.ta-j #[strong.u-textColor_4 •]  Whenever you travel to another country you always have to  #[span.drop.w20] the customs form before you get to the customs officer.  
+                        p.ta-j #[strong.u-textColor_4 •]  I don’t know the cheapest way to travel to Panama, can you #[span.drop.w20] for me. 
+                        p.ta-j #[strong.u-textColor_4 •]  With only two weeks to go, I am #[span.drop.w20] the company trip. It is so difficult to plan for so many people. 
+
+                    .col.xs12.md6
+                        p.ta-j #[strong.u-textColor_4 •]  Image being stuck in a car with someone you don’t #[span.drop.w20] with for 5 hours! That was the worse weekend of my life.
+                        p.ta-j #[strong.u-textColor_4 •]  This quarter has been so stressful! We should all #[span.drop.w20] for at least a weekend so we can relax.  
+                        p.ta-j #[strong.u-textColor_4 •]  We are going to backpack across Latin America for a month. I am sure I can #[span.drop.w20] on just 2,000 dollars.   
+                        p.ta-j #[strong.u-textColor_4 •]  I lost my hotel key card, now I can’t #[span.drop.w20] my room. 
+                        
+                        
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

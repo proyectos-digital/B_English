@@ -1,0 +1,93 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_4"  ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            .row.row-flex.align-items-center
+                .col.xs12.md6
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            h6 Arranging to meet somebody
+                            p When you wish to meet a friend or anyone for that matter, there is plethora of ways to do so. Here are a few:
+                            h6 When making the invitation to meet
+                            p • Do you have any plans for…? #[br]• Are you free...? #[br]• We should (definitely / really) meet up sometime.
+
+                            .row.ta-c.mt30
+                                button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_4_1.mp3")
+                                button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_4_2.mp3")
+                                button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_4_3.mp3")
+
+                            h6.mt30 When making the invitation to meet
+                            p • When proposing a date, time or place  #[br]• Let’s meet at...  #[br]• How about...? 
+
+                            .row.ta-c.mt30
+                                button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_4_4.mp3")
+                                button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_4_5.mp3")
+
+                .col.xs12.md6.ta-c
+                    img(src="unit_3/module_12/assets/images/self_4_1.png" alt="" class="u-responsive-img")
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+
+
+            h5.ta-c  Record how you would propose to meeting each of these people, record also what their response would be.
+            .row.mt30
+
+                .col.xs6.md3.mt30
+                    .col.xs12.col-center
+
+                        p.ta-c.h35  #[strong Tim] - Your boyfriend of two years.
+                        .hov
+                            img(src="unit_3/module_12/assets/images/self_4_2.png" alt="" class="u-responsive-img m-a")
+                        .row.mt25
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt3_mod12_self4a',1)"): +ngRecorder
+
+                .col.xs6.md3.mt30
+                    .col.xs12.col-center
+
+                        p.ta-c.h35  #[strong Karen] - A friend who you haven’t seen in over six years.
+                        .hov
+                            img(src="unit_3/module_12/assets/images/self_4_3.png" alt="" class="u-responsive-img m-a")
+                        .row.mt25
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt3_mod12_self4b',2)"): +ngRecorder
+
+                .col.xs6.md3.mt30
+                    .col.xs12.col-center
+
+                        p.ta-c.h35  #[strong  Sharon] - A work colleague.
+                        .hov
+                            img(src="unit_3/module_12/assets/images/self_4_4.png" alt="" class="u-responsive-img m-a")
+                        .row.mt25
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt3_mod12_self4c',3)"): +ngRecorder
+
+                .col.xs6.md3.mt30
+                    .col.xs12.col-center
+
+                        p.ta-c.h35  #[strong Brandon] - Your cousin who is visiting Bogotá.
+                        .hov
+                            img(src="unit_3/module_12/assets/images/self_4_5.png" alt="" class="u-responsive-img m-a")
+                        .row.mt25
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt3_mod12_self4d',4)"): +ngRecorder
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next');
+
+|
+|

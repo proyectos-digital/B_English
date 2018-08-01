@@ -1,0 +1,76 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            
+            div(class="row-flex col-center mt50-xs mt100-md")
+                p Sometimes bad things happen. When we hear about bad things that happen to other people it’s a good idea to express sympathy. We use the first set of expressions to express our concern.
+                br
+                p It’s also common to express sympathy in writing. The second set are some common phrases you can use when writing a sympathy note.
+                h5.ta-c.mt30.mb60.row Listen to the examples and classify them according to their use.
+                div.col.xs12.md8
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_4_1.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="1") Example 1
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_4_2.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="2")  Example 2
+                    div(class="col xs12 md4")
+                        div(class="col xs4 md12 mb15 ta-c")
+                            button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_4_3.mp3")
+                        div(class="col xs8 md12 mb15")    
+                            div(class="dragCont")
+                                div(class="drag" rescon="3") Example 3
+
+                div.col.xs12.md4
+                    table(class="c-table-estilo_uno col xs12")
+                        thead
+                            tr
+                                th Expressing Condolences
+                                th Sympathizing
+                                th Expressing Concern
+                          
+                        tbody
+                            tr
+                                td
+                                    span(class="drop h50 centrado")
+                                td
+                                    span(class="drop h50 centrado")
+                                td
+                                    span(class="drop h50 centrado")
+                               
+                            
+                           
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_12/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

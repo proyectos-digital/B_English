@@ -1,0 +1,80 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_3"  ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            .c-cardGreen
+                .c-cardGreenContent.u-textColor_1
+                    p.ta-c To praise someone is to be in awe of them or to approve of something they’ve done. Here are a few expressions:
+                    .row
+                        .col.xs4
+                            h6.ta-c •Congratulations!#[br] • Congratulations for + NOUN / ING
+                        .col.xs4
+                            h6.ta-c • You did a great / an excellent job!#[br] • Well done!
+                        .col.xs4
+                            h6.ta-c • Hats off to you.#[br] • Thanks to…
+
+                    .row.ta-c.mt30
+                        button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_3_1.mp3")
+                        button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_3_2.mp3")
+                        button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_3_3.mp3")
+                        button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_12/assets/audios/self_3_4.mp3")
+            |
+            section(class="row u-animationFadeDown" ng-show="s_actividad == 1")
+
+                h5.ta-c  Write a congratulatory note to each person using the most appropriate expressions.
+                .row.mt30
+                    .col.xs6.md4
+                        .col.xs10.col-center
+                            img(src="unit_3/module_12/assets/images/self_3_1.png" alt="" class="u-responsive-img")
+                            div(class="c-wrapTextarea "): textarea(placeholder="Write here..." class="c-textarea h50" ng-model="textousuario")
+                    .col.xs6.md4
+                        .col.xs10.col-center
+                            img(src="unit_3/module_12/assets/images/self_3_2.png" alt="" class="u-responsive-img")
+                            div(class="c-wrapTextarea "): textarea(placeholder="Write here..." class="c-textarea h50" ng-model="textousuariob")
+                    .col.xs6.md4
+                        .col.xs10.col-center
+                            img(src="unit_3/module_12/assets/images/self_3_3.png" alt="" class="u-responsive-img")
+                            div(class="c-wrapTextarea "): textarea(placeholder="Write here..." class="c-textarea h50" ng-model="textousuarioc")
+            |
+            section(class="row u-animationFadeDown" ng-show="s_actividad == 2")
+
+                h5.ta-c  Write a congratulatory note to each person using the most appropriate expressions.
+                .row.mt30
+                    .col.xs6.md4
+                        .col.xs10.col-center
+                            img(src="unit_3/module_12/assets/images/self_3_4.png" alt="" class="u-responsive-img")
+                            div(class="c-wrapTextarea "): textarea(placeholder="Write here..." class="c-textarea h50" ng-model="textousuariod")
+                    .col.xs6.md4
+                        .col.xs10.col-center
+                            img(src="unit_3/module_12/assets/images/self_3_5.png" alt="" class="u-responsive-img")
+                            div(class="c-wrapTextarea "): textarea(placeholder="Write here..." class="c-textarea h50" ng-model="textousuarioe")
+                    .col.xs6.md4
+                        .col.xs10.col-center
+                            img(src="unit_3/module_12/assets/images/self_3_6.png" alt="" class="u-responsive-img")
+                            div(class="c-wrapTextarea "): textarea(placeholder="Write here..." class="c-textarea h50" ng-model="textousuariof")
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTextoMultiple()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next');
+
+|
+|

@@ -1,0 +1,116 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_13" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+
+            div(class="row row-flex align-items-center mt30")
+                .col.xs12.md5
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            p.
+                                Another way of making a request is by using the expression Is it #[strong alright if...?]#[br]
+                            blockquote #[strong • Eg:] Is it alright if I leave early today? It’s just that I’m not feeling very well.
+                            div(class="row")
+                                .col.xs6.mt20: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_13_1.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_13_1.mp3" )
+
+                                .col.xs6.mt20: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_13_2.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_13_2.mp3" )
+                |
+                .col.xs12.md6.ma-l
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            p.
+                                #[strong Giving Advice]#[br]
+                                Should / Shouldn’t + verb#[br]#[br]
+                            strong • Eg:
+                            blockquote.
+                                Mike and Kelly want to go to Canada for the one-month English program. But they’re not sure of what to do.#[br]
+                                #[strong ›] I think they should speak to their parents before making a decision.#[br]#[br]
+                            strong • Eg:
+                            blockquote.
+                                Sue keeps shouting at her little brother when he misbehaves.#[br]
+                                #[strong ›] No, she shouldn’t do that. She needs to remember that he’s a small child and  most times he’s not really aware of what he’s doing.
+                            div(class="row")
+                                .col.xs6.mt20: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_13_3.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_13_3.mp3" )
+
+                                .col.xs6.mt20: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_13_4.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_13_4.mp3" )
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row row-flex align-items-center justify-center")
+                .col.xs12.md10
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            p.
+                                #[strong Making Suggestions]#[br]
+                                I would suggest / recommend + gerund #[strong.u-textColor_2 (positive)]#[br]
+                                I wouldn’t suggest / recommend + gerund #[strong.u-textColor_4 (negative)]#[br]#[br]
+                            div(class="row row-flex justify-center mt30")
+                                div(class="col xs12 md4")
+                                    strong • Eg:
+                                    blockquote.
+                                        I’ve been feeling this pain in my chest for the past two days.#[br]
+                                        #[strong ›] I would suggest going to do a check-up.#[br]
+                                div(class="col xs12 md4")
+                                    strong • Eg:
+                                    blockquote.
+                                        I love going out to the bars on the weekend. It makes me feel so relaxed.#[br]
+                                        #[strong ›] Ok. However, I wouldn’t suggest doing it every weekend. At times, you can just stay home.#[br]
+                                div(class="col xs12 md4")
+                                    strong • Eg:
+                                    blockquote.
+                                        My husband and I are going to France in May. But we don’t know where to visit.#[br]
+                                        #[strong ›] Well, I would recommend visiting the Eiffel Tower in Paris.
+                            div(class="row row-flex justify-center mt30")
+                                .col.xs6.sm4.md3: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_13_5.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_13_5.mp3")
+
+                                .col.xs6.sm4.md3: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_13_6.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_13_6.mp3")
+                |
+                .col.xs12.md9
+                    h5 Based on the following scenarios, record your advice or suggestions.
+
+                    .row.flex.align-items.center.mt30
+                        span   Andres is very interested in learning a foreign language, but he can’t decide on which to one learn.
+                        .row
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt2_mod8_act11a',1)"): +ngRecorder
+
+
+                    .row.flex.align-items.center.mt30
+                        span   Your aunt adds a lot of salt when preparing her food. Now, she is having a terrible headache.
+                        .row
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt2_mod8_act11b',2)"): +ngRecorder
+
+
+                    .row.flex.align-items.center.mt30
+                        span Jessie will be travelling to England next year. However, she doesn’t know what clothes to carry.
+                        .row
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt2_mod8_act11c',3)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next');

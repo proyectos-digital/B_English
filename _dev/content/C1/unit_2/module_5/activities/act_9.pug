@@ -1,0 +1,115 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+
+
+|
+|
+section(class="template-wrapper act_9" ng-init="s_actividad = 1" )
+    aside(class="template-asideLeft o-aside-Item" )
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1" )
+            div(class="row row-flex mt30 align-items-center")
+                div(class="c-cardBlue")
+                    div(class="c-cardBlueContent u-textColor_1")
+                        .col.xs12.md6
+                            h5.ta-c Expressing and asking about health, symptoms and
+                            h5.ta-c physical sensations.
+
+                            p.ta-j.
+                                To ask about how someone feels, especially regarding their health, it is common to ask
+                                #[strong “How do you feel?”] #[br]#[br]
+
+                                To find out if the person’s condition has improved, one might ask #[strong “(Are you) feeling any better?”] #[br]#[br]
+
+                                #[strong Common type of aches]: The verb ‘have’ is used when referring to these aches.
+                                • stomach ache / belly ache , headache, backache, toothache, earache.#[br]
+                                Other symptoms with the verb ‘have’:#[br]#[br]
+
+                                #[strong.u-textColor_4.ml30 •] have a rash.#[br]
+                                #[strong.u-textColor_4.ml30 •] have a runny nose.#[br]
+                                #[strong.u-textColor_4.ml30 •] have a sore throat.#[br]
+                                #[strong.u-textColor_4.ml30 •] have / feel a tingling sensation → a feeling of pins and needles.#[br]
+                                #[strong.u-textColor_4.ml30 •] have / get butterflies in one’s stomach → feel very excited or nervous about something.#[br]
+
+                        .col.xs12.md6
+                            p.ja-j.
+                                #[strong It is also possible to qualify the pain or ache that you feel:]
+                                Sharp, Shooting, Piercing, Intense, Unbearable, Throbbing, Numb, Awful, Terrible, Splitting.#[br]#[br]
+
+                                #[strong Eg:] Karen has had a throbbing headache for the past few days. I think she might be
+                                suffering from a migraine.#[br]#[br]
+
+                                #[strong Of course, you can say where hurts:] #[br]#[br]
+
+                                #[strong Eg:] I sprained my ankle the other day while jogging. Now, it’s swollen and it really hurts.#[br]
+                                #[strong Eg:] He says he can’t walk any further because his feet hurt.#[br]
+                                #[strong **Remember to use say ‘hurts’ with the singular and ‘hurt’ with the plural.**]
+
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2" )
+            div(class="row row-flex mt30 align-items-center")
+                h5.ta-c Based on the images, say what illness or symptom each person has. You need to incorporate the adjective given.
+                .row
+                    .col.xs6.md3.ta-c.mt40
+                        p #[strong.u-textColor_4 •] #[strong Ronald / Unbearable]
+                        div(class="c-wrapTextarea min-h40"): textarea(class="c-textarea min-h40 js-escribir")
+                        img(src="unit_2/module_5/assets/images/act_9_1.png" alt="" class="u-responsive-img w80")
+
+                    .col.xs6.md3.ta-c.mt40
+                        p #[strong.u-textColor_4 •] #[strong Jack / Terrible]
+                        div(class="c-wrapTextarea min-h40"): textarea(class="c-textarea min-h40 js-escribir")
+                        img(src="unit_2/module_5/assets/images/act_9_2.png" alt="" class="u-responsive-img w80")
+
+                    .col.xs6.md3.ta-c.mt40
+                        p #[strong.u-textColor_4 •] #[strong Nicole / Awful]
+                        div(class="c-wrapTextarea min-h40"): textarea(class="c-textarea min-h40 js-escribir")
+                        img(src="unit_2/module_5/assets/images/act_9_3.png" alt="" class="u-responsive-img w80")
+
+                    .col.xs6.md3.ta-c.mt40
+                        p #[strong.u-textColor_4 •] #[strong Jason / Rash]
+                        div(class="c-wrapTextarea min-h40"): textarea(class="c-textarea min-h40 js-escribir")
+                        img(src="unit_2/module_5/assets/images/act_9_4.png" alt="" class="u-responsive-img w80")
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 3" )
+            div(class="row row-flex mt30 align-items-center")
+                .row
+                    .col.xs6.md3.ta-c.mt40
+                        p #[strong.u-textColor_4 •] #[strong Sharon / Splitting]
+                        div(class="c-wrapTextarea min-h40"): textarea(class="c-textarea min-h40 js-escribir")
+                        img(src="unit_2/module_5/assets/images/act_9_5.png" alt="" class="u-responsive-img w80")
+
+                    .col.xs6.md3.ta-c.mt40
+                        p #[strong.u-textColor_4 •] #[strong Ashley / Runny]
+                        div(class="c-wrapTextarea min-h40"): textarea(class="c-textarea min-h40 js-escribir")
+                        img(src="unit_2/module_5/assets/images/act_9_6.png" alt="" class="u-responsive-img w80")
+
+                    .col.xs6.md3.ta-c.mt40
+                        p #[strong.u-textColor_4 •] #[strong Elaine / Butterflies in]
+                        div(class="c-wrapTextarea min-h40"): textarea(class="c-textarea min-h40 js-escribir")
+                        img(src="unit_2/module_5/assets/images/act_9_7.png" alt="" class="u-responsive-img w80")
+
+                    .col.xs6.md3.ta-c.mt40
+                        p #[strong.u-textColor_4 •] #[strong Mr. Duval / Intense]
+                        div(class="c-wrapTextarea min-h40"): textarea(class="c-textarea min-h40 js-escribir")
+                        img(src="unit_2/module_5/assets/images/act_9_8.png" alt="" class="u-responsive-img w80")
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

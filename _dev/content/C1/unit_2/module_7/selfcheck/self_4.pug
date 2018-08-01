@@ -1,0 +1,44 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_4")
+	aside(class="template-asideLeft o-aside-Item")
+
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content")
+
+			h5 Let’s talk about the internet.
+			div(class="row row-flex mt30 align-items-center")
+
+				.col.xs12.md6
+					div(class="row-flex justify-center mb20"): div(class="col md11 col-center"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+						source(src="unit_2/module_7/"+pathVideo+"self_4_1.mp4" type="video/mp4")
+				.col.xs12.md6
+
+					.c-cardGreen
+						.c-cardGreenContent
+							ul.lh25
+								li Talk about the most important benefit of the internet. Talk about:
+								li ● What is the most importante benefit of the internet?
+								li ● Why is it the most important benefit?
+								li ● How can students take advantage of it? 
+								li ● Explain what is the importance of it in your country.
+
+					.row
+						div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt2_mod7_self4',1)"): +ngRecorder
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		//- button(class="c-btn-IconAction u-bgIconRefresh")
+		//- button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

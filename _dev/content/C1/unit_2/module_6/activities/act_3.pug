@@ -1,0 +1,284 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_3" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+
+    |
+    |
+    div(class="template-section m-a" )
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            div(class="row")
+                div(class="c-flickity")
+                    div(class="row mt10 mb30")
+                        div(class="row c-flickity-controls c-flickity-controls-flex")
+                            div(class="c-flickity-controlsSlides")
+                                button(class="c-flickity-button is-selected ") Page 1
+                                button(class="c-flickity-button ") Page 2
+                                span(class="c-flickity--cell-total") 2
+                            button(class="c-flickity-button c-flickity-button--previous") ←
+                            button(class="c-flickity-button c-flickity-button--next") →
+
+                    div(class="row ")
+                        div(class="c-flickity--cell"): div(class="row" style="height:720px; overflow-x: hidden; overflow-y:auto;")
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent u-textColor_1")
+                                    .col.xs12.md6
+                                        h5.ta-c There Are Lots of Climate Uncertainties. Let’s Acknowledge and Plan for Them with Honesty
+                                        h6.ta-c A New York Times column on the climate set off yet another dangerous tempest of exaggeration and simplification.
+                                        p.ta-c by Andrew Revkin ProPublica, May 2, 2017, 2:18 p.m.
+                                        p.ta-j.
+                                            #[strong 1].  Last fall, I attended a meeting of the Society for Decision Making Under Deep Uncertainty,
+                                            hosted by the World Bank. The small, somewhat #[strong ad-hoc] organization has a #[strong quirky]
+                                            name but an urgent goal — helping governments, companies and international agencies
+                                            #[strong grapple] with complicated problems with enormous and #[strong enduring] consequences,
+                                            from #[strong forging] climate change policy to avoiding the collapse of a financial system.#[br]#[br]
+                                            #[strong 2] Given that the workshop took place one week after the 2016 election, and given the
+                                            #[strong dismissive stance] on climate change of the president-elect, climate policy was a big
+                                            theme, as were the limits of predictability.#[br]#[br]
+                                            What was rare about the conversations and presentations was a full #[strong embrace] of the
+                                            #[strong unknowable] along with the known, even amid demands for immediate and #[strong far-reaching]
+                                            policies. Think of that in the context of three decades of the public climate
+                                            debate, in which discourse has so often been bracketed by proclamations of certain
+                                            #[strong calamity] — either environmental (the planet will overheat) or economic (regulations
+                                            aimed at limiting carbon emissions will strangle businesses).
+                                            Of course, no one there questioned the basic science identifying a growing human
+                                            impact on climate from the buildup of carbon dioxide and other greenhouse gases
+                                            in the atmosphere. But as is well known in the scientific community, while the climate
+                                            basics have long been clear, many of the most consequential aspects of climate change
+                                            remain #[strong shrouded] in uncertainty.
+
+                                    .col.xs12.md6
+                                        p.ta-j.
+                                            #[img(src="unit_2/module_6/assets/images/act_3_1.png" alt="" class="u-responsive-img w40 ml10  " align="right")]
+                                            Despite three decades of intensifying analysis
+                                            using ever more sophisticated computer
+                                            simulations and observing systems and
+                                            #[strong vast troves] of data #[strong gleaned] through
+                                            the passage of time, two of the most basic
+                                            questions remain enduringly unclear: the
+                                            pace and extent of warming from a given rise
+                                            in CO2 and the resulting rate of sea-level rise
+                                            as ice sheets deteriorate. Through 2100 or
+                                            so, either could be disastrous or manageable.#[br]
+                                            #[strong 3] There are also important, if more granular
+                                            questions to which the answer, with
+                                            increasing confidence, is essentially we don’t
+                                            know. Here are just two:
+                                        p.ta-j.ml20.
+
+                                            #[strong •] Will the deeply vulnerable African nations along the southern #[strong fringe] of the
+                                            Sahara get wetter or drier as CO2 levels build? The last two reports of the
+                                            Intergovernmental Panel on Climate Change, in 2007 and 2014, said it’s unclear.#[br]
+                                            #[strong •] Will hurricanes pose a bigger threat to U.S. coastlines in 2100 than today?
+                                            The IPCC reports and more recent research hold a mix of results. Of course
+                                            rising seas, with only the rate uncertain, will worsen any storm’s impact.
+                                        p.ta-j.
+                                            I’ve seen no evidence #[strong hinting] that clarity is likely to emerge on these questions in the
+                                            next decade. Does this mean the world should let that African region — which other
+                                            studies show is vulnerable to mega-droughts with or without global warming — sweat
+                                            it out as populations double in coming decades? Should coastal cities ignore hurricane
+                                            #[strong hazards] and rising seas, whatever the rate, when they plan urban development on
+                                            coasts? Hardly.
+
+
+                    div(class="row ")
+                        div(class="c-flickity--cell"): div(class="row" style="height:720px; overflow-x: hidden; overflow-y:auto;")
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent u-textColor_1 ")
+                                    .col.xs12.md6
+                                        p.ta-j.
+                                            #[strong 4] In a #[strong surge] of internet #[strong rage] over the weekend, what could appropriately be called
+                                            the “uncertainty monster” surfaced once again in the climate debate, in a flood of
+                                            oversimplification, misinterpretation and correctives. (The phrase was coined in
+                                            2005 by Jeroen P. Van der Sluijs, a University of Bergen researcher whose focus is
+                                            “contested science.”)
+                                            The #[strong trigger] was the #[strong inaugural] New York Times opinion column by Bret Stephens, the
+                                            Pulitzer-winning conservative columnist who has variously #[strong enraged] and #[strong enthralled]
+                                            the left and right in political commentary but, until recently, consistently framed “global
+                                            warming as mass neurosis.”
+                                            His piece, “Climate of Complete Certainty,” centered on the #[strong failure] of the environmental
+                                            (and political) left to #[strong galvanize] climate concern and action and blamed that failure on
+                                            over adherence to certain models and lots of overstatement. “We live in a world in which
+                                            data convey authority,” he wrote. “But authority has a way of descending to certitude,
+                                            and #[strong certitude begets hubris.”]
+                                            In some ways, the column made clear Stephens had come a distance in his views.
+                                        p.ta-j.
+                                            #[img(src="unit_2/module_6/assets/images/act_3_2.png" alt="" class="u-responsive-img w35 mr10" align="left")]
+                                            And he #[strong flirted] with some thoughtfulness
+                                            about the #[strong perils] of certainty. But his prime
+                                            conclusion amounted to a defense of
+                                            #[strong forestalling] action on climate change while
+                                            awaiting more certitude.#[br]#[br]
+                                            #[strong 5] The column prompted #[strong outrage] and
+                                            criticism from environmental commentators
+                                            and readers of the Times, upset inflamed
+                                            even further by the timing — the day of the
+                                            People’s Climate March that flooded streets in
+                                            Washington and dozens of other cities.
+                                            The resulting debate has born little resemblance
+                                            to that among the risk managers gathered at
+                                            the bank. Most likely the result will be more
+                                    .col.xs12.md6
+                                        p.ta-j.
+                                            #[img(src="unit_2/module_6/assets/images/act_3_3.png" alt="" class="u-responsive-img w40 ml10" align="right")]
+                                            public confusion than #[strong enlightenment].
+                                            I had written to Stephen's last week before
+                                            his column ran. I was curious to get a sense
+                                            of the roots of his stance on climate issues.
+                                            I included a link to a 2016 magazine essay in
+                                            which I described my 30-year learning curve
+                                            on the topic.#[br]#[br]
+                                            We had a pleasant, brief back and forth. I noted
+                                            that some climate insights involved important
+                                            “known unknowables.” I also said, “The climate
+                                            arena is rife with overstatement, but it’s at
+                                            both ends.”#[br]#[br]
+                                            Stephens wound up using parts of my writing.
+                                            “As Andrew Revkin wrote last year about his
+                                            storied career as an environmental reporter
+                                            at The Times, ‘I saw a widening gap between what scientists had been learning about
+                                            global warming and what advocates were claiming as they pushed ever harder to pass
+                                            climate legislation.’”#[br]#[br]
+                                            At around 800 words, columns inevitably involve #[strong trimming]. But I wouldn’t have minded
+                                            if he’d included the rest of my paragraph: “Mind you, there was usually a much bigger
+                                            gap between the science and the views of industry supporters defending fossil fuels
+                                            or fighting environmental regulations or taxes. But to me, the monumental nature of
+                                            the task facing those trying to move the world away from fossil fuels called for extra
+                                            attention to detail.”
+                                        p.ta-j.
+
+                                            Read the full story here:#[a(href="https://www.propublica.org/article/climate-change-uncertainties-bret-stephens-column") https://www.propublica.org/ ]
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            .row.row-flex
+                h5 Complete the following activities based on the text you have read. 
+                .col.xs12.md6: div(class="xs12 md11 col-center")
+                            
+                    h6  #[strong.u-textColor_4 •] Choose the most appropriate heading for the following extract:
+                    .row
+                        p.ta-j.
+                            Given that the workshop took place one week after the 2016 election, and given the #[strong dismissive stance]
+                            on climate change of the president-elect, climate policy was a big theme, as were the
+                            limits of predictability.
+                            What was rare about the conversations and presentations was a full #[strong embrace] of the
+                            #[strong unknowable] along with the known, even amid demands for immediate and #[strong far-reaching]
+                            policies. Think of that in the context of three decades of the public climate debate, in which
+                            discourse has so often been bracketed by proclamations of certain #[strong calamity] — either
+                            environmental (the planet will overheat) or economic (regulations aimed at limiting carbon
+                            emissions will strangle businesses).
+                            Of course, no one there questioned the basic science identifying a growing human impact on
+                            climate from the buildup of carbon dioxide and other greenhouse gases in the atmosphere.
+                            But as is well known in the scientific community, while the climate basics have long been clear,
+                            many of the most consequential aspects of climate change remain #[strong shrouded] in uncertainty.
+                            Despite three decades of intensifying analysis using ever more sophisticated computer
+                            simulations and observing systems and #[strong vast troves] of data #[strong gleaned] through the passage
+                            of time, two of the most basic questions remain enduringly unclear: the pace and extent of
+                            warming from a given rise in CO2 and the resulting rate of sea-level rise as ice sheets deteriorate.
+                            Through 2100 or so, either could be disastrous or manageable.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1" ng-click="valorinputa=1")
+                            label(class="c-Checkbox row ta-c" for="selInput_1") The president and climate change
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2" ng-click="valorinputa=2")
+                            label(class="c-Checkbox row ta-c " for="selInput_2") The uncertainty of climate change
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3" ng-click="valorinputa=3")
+                            label(class="c-Checkbox row ta-c " for="selInput_3") Climate change dangers
+                            input(type="hidden" ng-model="valorinputa" class="js-select")
+                |
+                .col.xs12.md6: div(class="xs12 md11 col-center")
+                    .row
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Match the information given with one of the paragraphs from the text.
+                        p.
+                            Information gives you the reins on a topic.
+                        .row-flex.justify-center
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1" ng-click="valorinputb=1")
+                            label(class="c-Checkbox xs3 padding0 mr10 ml10 ta-c" for="selInput_4") 2.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2" ng-click="valorinputb=2")
+                            label(class="c-Checkbox xs3 padding0 mr10 ml10 ta-c " for="selInput_5") 4.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3" ng-click="valorinputb=3")
+                            label(class="c-Checkbox xs3 padding0 mr10 ml10 ta-c " for="selInput_6") 5.
+                            input(type="hidden" ng-model="valorinputb" class="js-select")
+                    .row.mt30
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Complete the sentence with a word from the table below.
+                        .c-cardGreen
+                            .c-cardGreenContent.flex.align-items.center.justify-content-center.u-textWhite
+                                span calamity | dismissive | trove | far-reaching | galvanized | enthralled
+                        p.
+                            Global warming is a very contentious topic with many #[input(type="text" class="c-input js-escribir")] consequences for both
+                            the environment and politics. But even the #[input(type="text" class="c-input js-escribir")] of information about climate change,
+                            scientist and politicians are still #[input(type="text" class="c-input js-escribir")] in a battle over the effects. Some people are
+                            very #[input(type="text" class="c-input js-escribir")] of the #[input(type="text" class="c-input js-escribir")] that will occur while others are #[input(type="text" class="c-input js-escribir")] in their
+                            belief of certain doom of the planet.
+
+
+                    .row.mt30
+                        h6.
+                            #[strong.u-textColor_4 •]
+                            Complete the sentence with a word from the table below.
+                        .c-cardGreen
+                            .c-cardGreenContent.flex.align-items.center.justify-content-center.u-textWhite
+                                span calamity | dismissive | trove | far-reaching | galvanized | enthralled
+                        p.
+                            Carbon Dioxide emissions have #[input(type="text" class="c-input js-escribir")] consequences for the planet.
+
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 3")
+
+             .row.align-items-center.row-flex
+                .col.xs12.md6
+
+                    .row
+                        p.
+                            #[strong.u-textColor_4 •] Choose “true”, “false” or “information not given”.  #[br]
+                            Based on the text you have read, scientist have come to a unanimous conclusion about the
+                            effects of climate change.
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1" ng-click="valorinputc=1")
+                            label(class="c-Checkbox row ta-c" for="selInput_7") True.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2" ng-click="valorinputc=2")
+                            label(class="c-Checkbox row ta-c " for="selInput_8") False.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3" ng-click="valorinputc=3")
+                            label(class="c-Checkbox row ta-c " for="selInput_9") Information not given.
+                            input(type="hidden" ng-model="valorinputc" class="js-select")
+
+                    .row.mt30
+                        p.
+                            #[strong.u-textColor_4 •]
+                            Choose the correct answer to the following question.  #[br]
+                            The times article...
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1" ng-click="valorinputd=1")
+                            label(class="c-Checkbox row ta-c" for="selInput_10") Was the result of the climate change march in Washington?
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2" ng-click="valorinputd=2")
+                            label(class="c-Checkbox row ta-c " for="selInput_11") Prompted the climate march in Washington
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3" ng-click="valorinputd=3")
+                            label(class="c-Checkbox row ta-c " for="selInput_12") Was a cause of anger because of the date it was published.
+                            input(type="hidden" ng-model="valorinputd" class="js-select")
+
+                .col.xs12.md6.row-flex.align-items-center.mt30
+                    img(src="unit_2/module_6/assets/images/act_3_4.png" alt="" class="u-responsive-img col-center" align="left")
+
+
+
+
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2" ng-click="CompTxt_SelectMult()")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 3" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 3" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next', '720');

@@ -1,0 +1,90 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+
+                    h6 Read the following sentences:
+
+                    div(class="row mt20")
+                        p 
+                            | He looks 
+                            strong  as if 
+                            |  he 
+                            strong knew 
+                            | the answer.
+
+                        p
+                            | She walks
+                            strong  as if
+                            |  she were a supermodel.
+
+                    div(class="row mt20")
+                        p
+                            | He boarded the airplane as 
+                            strong if 
+                            | he 
+                            strong were 
+                            | a seasoned traveler.
+
+                        p
+                            | He spends money as
+                            strong  if 
+                            | he 
+                            strong owned
+                            |  a bank.
+
+                    div(class="row mt40")
+                        h6 Now, match the sentences that logically go together.
+
+                        div(class="row mt30" data-ejercicio="unir")
+                            div(id="sourceElements" class="ancho250 js-columnas")
+                                span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") My goodness those children are loud!  
+                                span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") It was great to see Rodrigo again. He is studying hard at the UNAD and getting excellent grades.  
+                                span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Is Andrea feeling well? Her voice sounded different.  
+                                span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") My sister is acting so strange. She has a tense look on her face.
+                                span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") My friend is under a lot of pressure at the moment.  
+                            div(id="linecanvas" style="width: 60px;")
+                            div(id="targetElements" class="ancho250 js-columnas") 
+                                span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="2") It sounds as if he’s doing well in life.
+                                span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="4") When I talk to her, it’s as if she’s not even listening to me.
+                                span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="5") She feels as if she had the weight of the world on her shoulders.
+                                span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="1") It sounds as if there’s a herd of animals running around upstairs.
+                                span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="3") I spoke to her today and it sounded as if she were getting a cold.
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+
+                    div(class="row-flex flex-column")
+
+                        img(src="./unit_3/module_9/assets/images/act_11_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                        img(src="./unit_3/module_9/assets/images/act_11_2.png", alt="", srcset="" class="u-responsive-img centrado mt30")
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/activities/act_11_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

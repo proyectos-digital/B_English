@@ -1,0 +1,50 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm12 col-flex-md4 col-center showTo-md")
+                        div(class="row mt20")
+                            img(src="./unit_2/module_5/assets/images/sel_2_1.png", alt="", srcset="" class="u-responsive-img u-f-l")
+
+                            img(src="./unit_2/module_5/assets/images/sel_2_2.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md7 offset-md1 col-center") 
+                        div(class="row")
+                            p(class="u-txtSpace")
+                                | I work as an office assistant in Ecopetrol. I had two intense days at the office between Tuesday and Wednesday last week. I went home after working for almost 12 hours a day. I
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (work)
+                                |  so hard that I didn’t want to go out. My boss had given us lots of fast food while we were working. I 
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (eat) 
+                                |  so much that I didn’t want to have dinner. I went to bed around 7:00 pm. The next day, when my friend Catalina called me, I
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (sleep)
+                                |  for ten hours! We have been friends with Catalina for a long time. When we met, I
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                strong (work)
+                                |  in this company for six months!
+
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

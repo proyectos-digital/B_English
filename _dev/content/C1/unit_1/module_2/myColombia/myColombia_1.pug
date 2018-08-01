@@ -1,0 +1,101 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_1" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropImg()")
+        section(class="template-content")
+            article(class=" u-animationFadeDown" ng-show="s_actividad == 1")
+                h5 Watch the following video:
+                div(class="row-flex justify-center mb20"): div(class="col xs12 md9 col-center")
+                    div(class="c-contVideo")
+                        video(controls class="u-responsive-video")
+                            source(src="unit_1/module_2/"+pathVideo+"col_1_1.mp4" type="video/mp4")
+                            | Your browser does not support the audio element.
+
+            |
+            article(class="template-content u-animationFadeDown" ng-show="s_actividad == 2" )
+                h5 Look at the pictures below then match the name of the dishes and regions to the dishes.
+                .row.row-flex.justify-center
+                    //- .min-w185.min-h185
+                    span(class="dragCont"): span(class="drag" rescon="1")
+                        img(class="u-responsive-img padding5" src="unit_1/module_2/assets/images/col_1_1.png", alt="myColombia")
+                    //- .min-w185.min-h185
+                    span(class="dragCont"): span(class="drag" rescon="2")
+                        img(class="u-responsive-img padding5" src="unit_1/module_2/assets/images/col_1_2.png", alt="myColombia")
+                    //- .min-w185.min-h185
+                    span(class="dragCont"): span(class="drag" rescon="3")
+                        img(class="u-responsive-img padding5" src="unit_1/module_2/assets/images/col_1_3.png", alt="myColombia")
+                    //- .min-w185.min-h185
+                    span(class="dragCont"): span(class="drag" rescon="4")
+                        img(class="u-responsive-img padding5" src="unit_1/module_2/assets/images/col_1_4.png", alt="myColombia")
+                    //- .min-w185.min-h185
+                    span(class="dragCont"): span(class="drag" rescon="5")
+                        img(class="u-responsive-img padding5" src="unit_1/module_2/assets/images/col_1_5.png", alt="myColombia")
+                    //- .min-w185.min-h185
+                    span(class="dragCont"): span(class="drag" rescon="6")
+                        img(class="u-responsive-img padding5" src="unit_1/module_2/assets/images/col_1_6.png", alt="myColombia")
+                    //- .min-w185.min-h185
+                    span(class="dragCont"): span(class="drag" rescon="7")
+                        img(class="u-responsive-img padding5" src="unit_1/module_2/assets/images/col_1_7.png", alt="myColombia")
+
+                .row.row-flex.justify-center
+                    table(class="c-table-estilo_tres mt30 ta-c mr5")
+                        thead: tr
+                            th  Name
+                            th.w50 Region
+
+                        tbody
+                            tr
+                                td: span.drop.max-ancho100.h100
+                                td: span Antioquia
+                            tr
+                                td: span.drop.max-ancho100.h100
+                                td: span Tolima
+                    |
+                    table(class="c-table-estilo_tres mt30 ta-c mr5")
+                        thead: tr
+                            th  Name
+                            th.w50 Region
+
+                        tbody
+                            tr
+                                td: span.drop.max-ancho100.h100
+                                td: span Valle del Cauca
+                            tr
+                                td: span.drop.max-ancho100.h100
+                                td: span Tolima
+                            tr
+                                td: span.drop.max-ancho100.h100
+                                td: span Cundinamarca
+                    |
+                    table(class="c-table-estilo_tres mt30 ta-c")
+                        thead: tr
+                            th  Name
+                            th.w50 Region
+                        tbody
+                            tr
+                                td: span.drop.max-ancho100.h100
+                                td: span The West Planess
+                            tr
+                                td: span.drop.max-ancho100.h100
+                                td: span Caribbean Coast
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropImg()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+

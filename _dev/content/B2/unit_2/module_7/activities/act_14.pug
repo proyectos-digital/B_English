@@ -1,0 +1,138 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                                    
+                        
+                    div(class="col xs12 md6")
+
+                        h5(class="col xs10 mb30") Listen to the conversation and complete it by choosing the right verbs.
+
+
+                        div(class="col x8 md10 col-center ta-c mt30 mb30")
+                            img(src="unit_2/module_7/assets/images/act_14.png", alt="act_14" class="u-responsive-img m-a")
+                            div.row: audio(controls class='')
+                                 source(src='unit_2/module_7/assets/audios/act_14.mp3' type='audio/mpeg') 
+                                 | Your browser does not support the audio element.
+
+                        div(class="col-center col xs12 md11 lh-20 ta-j")
+
+                            strong: span(class="u-textColor_2") Beth:  
+                            span I’m really interested in 
+                            strong: span(class="u-textColor_4-dark") (1)
+                            select(class="c-select" name="act_14_1")
+                                option(value="" disabled selected) 
+                                option(value="1") finding
+                                option(value="2") buying
+                                option(value="3") selling
+                            span  the house we saw in your neighborhood what do you think?
+
+                            br
+                            br 
+
+                            strong: span(class="u-textColor_5") David:  
+                            span It’s great, I love it!
+
+                            br
+                            br 
+
+                            strong: span(class="u-textColor_2") Beth:  
+                            span I must confess to 
+                            strong: span(class="u-textColor_4-dark") (2)
+                            select(class="c-select" name="act_14_1")
+                                option(value="" disabled selected) 
+                                option(value="1") being
+                                option(value="2") having
+                                option(value="3") seeing
+                            span  a little worried about moving here because of the prices, but I love it too.
+
+
+                    div(class="col xs12 md6")
+                        div(class="col-center col xs12 md11 lh-20 ta-j")
+                            strong: span(class="u-textColor_5") David:  
+                            span You know, I’m counting on 
+                            strong: span(class="u-textColor_4-dark") (3)
+                            select(class="c-select" name="act_14_1")
+                                option(value="" disabled selected) 
+                                option(value="1") buying
+                                option(value="2") moving
+                                option(value="3") doing
+                            span  somewhere new too, I initially concentrated on 
+                            strong: span(class="u-textColor_4-dark") (4)
+                            select(class="c-select" name="act_14_1")
+                                option(value="" disabled selected) 
+                                option(value="1") selling
+                                option(value="2") renting
+                                option(value="3") looking for
+                            span  a bigger apartment, but then I decided against it. I count on 
+                            strong: span(class="u-textColor_4-dark") (5)
+                            select(class="c-select" name="act_14_1")
+                                option(value="" disabled selected) 
+                                option(value="1") finding
+                                option(value="2") buying
+                                option(value="3") selling
+                            span  a smaller apartment that I can decorate myself. 
+
+                            br
+                            br 
+
+                            strong: span(class="u-textColor_2") Beth:  
+                            span That’s really exciting! But why do you insist on 
+                            strong: span(class="u-textColor_4-dark") (6)
+                            select(class="c-select" name="act_14_1")
+                                option(value="" disabled selected) 
+                                option(value="1") getting
+                                option(value="2") living
+                                option(value="3") renting in
+                            span  small apartments? There’s so much you can do in larger spaces!
+
+                            br
+                            br
+
+                            strong: span(class="u-textColor_5") David:  
+                            span It’s something to think about. But I think I have simply gotten used to 
+                            strong: span(class="u-textColor_4-dark") (7) 
+                            select(class="c-select" name="act_14_1")
+                                option(value="" disabled selected) 
+                                option(value="1") living
+                                option(value="2") finding
+                                option(value="3") being
+                            span  myself comfortable in smaller spaces. I don’t think I would be able to cope with all the  
+                            strong: span(class="u-textColor_4-dark") (8) 
+                            select(class="c-select" name="act_14_1")
+                                option(value="" disabled selected) 
+                                option(value="1") cleaning up
+                                option(value="2") washing up
+                                option(value="3") going up
+                            span  in a larger place!
+                            
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

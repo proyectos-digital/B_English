@@ -1,0 +1,97 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_6" )
+	aside(class="template-asideLeft o-aside-Item")
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content" )
+
+				.row-flex.align-items-center.justify-between
+
+				.row-flex.justify-between.align-items-center
+					.col.xs12.md5
+						h5 Listen to the news report and answer the questions that follow.
+						.row-flex.justify-center
+							audio(controls class='mt30')
+								source(src='unit_3/module_10/assets/audios/act_6_1.mp3' type='audio/mpeg')
+
+						.c-cardGreen
+							.c-cardGreenContent.ta-c
+								h5 Painting the Town Prosperous
+								h6: i Urban artists revive our neighborhoods and show us how to share our gifts
+								p.ta-c James Trimarco posted Nov 16, 2011
+
+								p Read the full story here: #[a(href="http://www.yesmagazine.org/issues/new-livelihoods/painting-the-town-prosperous" target="blank")  www.yesmagazine.org]
+
+						h5 Now choose the best answer.
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •] Often times artists lack...
+
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_1") emotional and financial support.
+								input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_2") an outlet to express themselves.
+								input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+								label(class="c-Checkbox row ta-l " for="selInput_3") resources to help develop their craft.
+
+						//- .row.mt30
+						//- 	.row
+						//- 		p #[strong.u-textColor_4 •] Choose true or false.
+						//- 		p  The nonprofit arts sector is not as beneficial to other sectors.
+						//- 	.row
+						//- 		input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+						//- 		label(class="c-Checkbox row ta-l " for="selInput_4") True.
+						//- 		input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+						//- 		label(class="c-Checkbox row ta-l " for="selInput_5") False.
+
+
+					.col.xs12.md5
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •]  Complete the sentence.
+								p Artists play a major role in terms of #[input(type="text" class="c-input" readonly)]
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_6" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_6") painting murals in neighborhoods.
+								input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_7") building communities through social relationships.
+								input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="3")
+								label(class="c-Checkbox row ta-l " for="selInput_8") teaching community youth how to negotiate.
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •] Choose true or false.#[br]#[br] Art can serve as a means of stability in some challenged communities.
+
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_9") True.
+								input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_10") False.
+
+						.row.mt30
+							.row
+								p #[strong.u-textColor_4 •] In Philadelphia #[input(type="text" class="c-input" readonly)]
+							.row
+								input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_11" value="1")
+								label(class="c-Checkbox row ta-l " for="selInput_11") there are no museums or art galleries.
+								input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_12" value="2")
+								label(class="c-Checkbox row ta-l " for="selInput_12") art murals are ubiquitous.
+								input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="3")
+								label(class="c-Checkbox row ta-l " for="selInput_13") many poor neighborhoods depend on the economic support of the Mural Arts Program (MAP).
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,413 @@
+.act_1 .c-card-phrasalVerbs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+.act_1 .c-card-phrasalVerbs--header {
+	height: 3rem;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding: 5px;
+	background-color: var(--color_2);
+}
+
+.act_1 .c-card-phrasalVerbs--header-title {
+	color: white;
+}
+
+.act_1 .c-card-phrasalVerbs--body {
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 2px 9px rgba(0,0,0,0.5);
+}
+
+.act_1 .c-card-phrasalVerbs--body-image {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+}
+
+@media all and (min-width: 1024px) {
+	.act_2 ._phrasal-column {
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+
+.act_3 .u-checkbox-responsive {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+@media all and (min-width: 600px) {
+	.act_3 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[3];
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media all and (max-width: 598px) {
+	.act_3 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+@media all and (min-width: 600px) {
+	.act_4 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_4 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.act_4 .theNews {
+	padding: 1rem 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 1168.4px;
+	margin: 0 auto;
+}
+
+.act_4 .theNews .paperNews {
+	width: 100%;
+	max-width: 508px;
+	margin: 0 auto;
+	font-size: 0.85rem;
+	line-height: 1.15rem;
+}
+
+.act_4 .theNews .paperNews[layout="grid"] {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 0.5rem;
+	-ms-grid-columns: (minmax(70px,1fr))[6];
+	grid-template-columns: repeat(6,minmax(70px,1fr));
+}
+
+.act_4 .theNews .paperNews[layout="grid"] p {
+	margin-top: 0;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] {
+	-ms-grid-rows: minmax(100px,400px) 90px minmax(100px,auto);
+	grid-template-rows: minmax(100px,400px) 90px minmax(100px,auto);
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block {
+	word-break: break-word;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(1) {
+	grid-column: 1/4;
+	-ms-grid-row: 1;
+	grid-row: 1;
+	position: relative;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(1) figcaption {
+	width: 100%;
+	position: absolute;
+	bottom: 1rem;
+	z-index: 1;
+	padding: 0.5rem;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px black;
+	font-size: 1rem;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(2) {
+	grid-column: 4/7;
+	-ms-grid-row: 1;
+	grid-row: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(3) {
+	grid-column: 1/7;
+	-ms-grid-row: 2;
+	grid-row: 2;
+	padding-bottom: 0.5rem;
+	border-bottom: 1rem solid gray;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(4) {
+	grid-column: 1/4;
+	-ms-grid-row: 3;
+	grid-row: 3;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(5) {
+	grid-column: 4/7;
+	-ms-grid-row: 3;
+	grid-row: 3;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block {
+	word-break: break-word;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block p {
+	margin-top: 0;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block:nth-child(1) {
+	grid-column: 1/3;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block:nth-child(2) {
+	grid-column: 3/5;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block:nth-child(3) {
+	grid-column: 5/7;
+}
+
+.act_8 .grid-layout-drag {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (minmax(180px,190px))[auto-fill];
+	grid-template-columns: repeat(auto-fill,minmax(180px,190px));
+	grid-gap: 0.3125rem;
+	margin: auto;
+	max-width: calc((200px * 4));
+}
+
+.act_8 .dragCont {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: calc(var(--size-uiBtns) + 0.5rem) 1fr;
+	grid-template-columns: calc(var(--size-uiBtns) + 0.5rem) 1fr;
+}
+
+.act_8 .dragCont .c-btn-Icon {
+	margin: auto;
+}
+
+.act_10 .c-btn-Icon {
+	background-color: var(--color_5-light);
+}
+
+.act_10 .c-Checkbox {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+@media all and (min-width: 600px) {
+	.act_10 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_10 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		width: 100%;
+		float: left;
+	}
+}
+
+.act_10 .c-inputRadio[type="radio"]:checked + .c-Checkbox .c-btn-Icon {
+	background-color: var(--color_5)!important;
+}
+
+@media all and (min-width: 1024px) {
+	.act_10 .c-inputRadio[name="sel_input_1"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(25% - 10px);
+		flex: 0 0 calc(25% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(25% - 10px);
+		float: left;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.act_10 .c-inputRadio[name="sel_input_3"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+	.act_10 .c-inputRadio[name="sel_input_1"] + .c-Checkbox,.act_10 .c-inputRadio[name="sel_input_2"] + .c-Checkbox,.act_10 .c-inputRadio[name="sel_input_3"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(50% - 10px);
+		flex: 0 0 calc(50% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(50% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_11 ul.puzzleWords {
+		-ms-grid-columns: (33%)[auto-fill];
+		grid-template-columns: repeat(auto-fill,33%);
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 989px) {
+	.act_11 ul.puzzleWords {
+		-ms-grid-columns: (33%)[auto-fill];
+		grid-template-columns: repeat(auto-fill,33%);
+	}
+}
+
+@media all and (min-width: 989px) {
+	.act_11 ul.puzzleWords {
+		grid-gap: 10px;
+		-ms-grid-columns: (calc(50% - 10px))[auto-fill];
+		grid-template-columns: repeat(auto-fill,calc(50% - 10px));
+	}
+}
+
+.act_15 .book {
+	background: url(../images/act_15_1.png) no-repeat;
+	background-size: cover;
+	padding: 12% 25%;
+	line-height: 30px;
+}
+
+.self_1 .u-checkbox-responsive {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+@media all and (min-width: 600px) {
+	.self_1 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[3];
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media all and (max-width: 598px) {
+	.self_1 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+.self_2 .u-checkbox-responsive {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+@media all and (min-width: 600px) {
+	.self_2 .u-checkbox-responsive.dos-columnas {
+		-ms-grid-columns: (1fr)[2];
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+
+@media all and (max-width: 598px) {
+	.self_2 .u-checkbox-responsive.dos-columnas {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+@media all and (min-width: 600px) {
+	.self_2 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[3];
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media all and (max-width: 598px) {
+	.self_2 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+.col_13 .c-contVideo {
+	border: 1px dashed var(--color_2);
+}
+
+.col_13 iframe.u-responsive-video {
+	border: none;
+}
+
+.col_13 .insert-video {
+	width: 80%;
+	margin-top: 10px;
+	border: 1px solid var(--color_2);
+	padding: .5rem;
+}

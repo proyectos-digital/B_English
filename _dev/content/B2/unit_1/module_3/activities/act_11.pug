@@ -1,0 +1,75 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_11")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            div(class="row")
+                h5(class="ta-c")
+                    | #[strong.u-textColor_4 1. ]  We can make guesses about the past using
+                    strong(class="u-textColor_4-dark") modal verbs + have + past participle.
+                    br
+                    | Choose the right modal to make deductions about an event in the past.
+
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                        div(class="row mt30")
+                            img(src="./unit_1/module_3/assets/images/act_11_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row-flex justify-around mt30")
+                            div(class="dragCont"): div(class="drag") Can't
+                            div(class="dragCont"): div(class="drag") Might
+                            div(class="dragCont"): div(class="drag") Must
+                            div(class="dragCont"): div(class="drag") Could
+                            div(class="dragCont"): div(class="drag") Should
+                            div(class="dragCont"): div(class="drag") May
+
+                        div(class="row mt50")
+                            p
+                                strong(class="u-textColor_4-dark") 1.
+                                span(class="drop ml20")
+                                span(class="drop")
+                                | - uncertainty.
+
+                            p(class="mt20")
+                                strong(class="u-textColor_4-dark") 2.
+                                span(class="drop ml20")
+                                | - it was 99% possible.
+
+                            p(class="mt20")
+                                strong(class="u-textColor_4-dark") 3.
+                                span(class="drop ml20")
+                                | - it was 50% possible.
+
+                            p(class="mt20")
+                                strong(class="u-textColor_4-dark") 4.
+                                span(class="drop ml20")
+                                | - expectation.
+
+                            p(class="mt20")
+                                strong(class="u-textColor_4-dark") 5.
+                                span(class="drop ml20")
+                                | - it was 99% impossible.
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconAlert openNotice is-active" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh"  ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_3/activities/act_11_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

@@ -1,0 +1,49 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_4")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-init="DragandDrop()")
+
+            h5 Fill in the blank space with the appropriate words from the list below.
+            h6 Written by Stephen Gill March 31, 2016.
+
+            div(class="row row-flex mt30 ta-c")
+                div.dragCont.col.sm6.md2.mt10.offset-md1: span.drag Cuisine
+                div.dragCont.col.sm6.md2.mt10: span.drag mouthwatering
+                div.dragCont.col.sm6.md2.mt10: span.drag Portions
+                div.dragCont.col.sm6.md2.mt10: span.drag Tempting
+                div.dragCont.col.sm6.md2.mt10: span.drag Filling
+                div.dragCont.col.sm6.md2.mt10.offset-md1: span.drag unprocessed
+                div.dragCont.col.sm6.md2.mt10: span.drag gone bad
+                div.dragCont.col.sm6.md2.mt10: span.drag horrible
+                div.dragCont.col.sm6.md2.mt10: span.drag leftovers
+                div.dragCont.col.sm6.md2.mt10: span.drag inedible
+
+            p.mt50.
+                When most people travel to Colombia they tend to enjoy the local #[span.drop]. In my opinion most of the dishes are #[span.drop]
+                . Every time a new dish is introduced to me I find it so #[span.drop]. The meals usually come in large #[span.drop]
+                and are very #[span.drop]. Because most of the ingredients are #[span.drop] and fresh, it makes
+                the food more appetizing.#[br]
+                Whenever I go out for a meal I tend to ask for the uneaten portion to be placed in a box so I can take it home. #[span.drop.on-mayusc] make
+                a delicious breakfast, but you need to be careful that its hasn’t #[span.drop]. If you did not refrigerate your leftovers in Colombia
+                they tend to be #[span.drop] and taste #[span.drop] .
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+

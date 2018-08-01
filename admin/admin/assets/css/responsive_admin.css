@@ -1,0 +1,88 @@
+@media (min-width: 576px) and (max-width: 767px) { 
+
+	/*-------- HOME -------------*/
+	
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) { 
+
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+
+	/* FORM */
+
+	.general-form{
+  	   width: 90%;
+ 	   margin: 40px auto;
+	}
+
+	
+	/* TABLAS */
+
+	table > thead> tr> th{
+	   font-size: 0.9em;
+	}
+
+	/* BOTONES */
+
+	.btn-large{
+		height: 44px;
+    	line-height: 44px;
+	}
+
+
+	/* MENU */
+
+	#sideMenu {
+  		width: 210px;
+  	}
+
+
+  	#sideMenuFixed{
+  		width: 210px;
+  	}
+
+
+  	#sidecontent{
+  		width: 210px;
+  	}
+
+
+  	/* LOGO */
+
+  	.logo-img{
+  		width: 180px;
+  		height: 69px;
+  	}
+	
+}
+
+
+@media (min-width: 1200px) { 
+
+
+}
+
+
+@media (min-width: 1440px) {
+
+	
+
+}
+
+
+@media (min-width: 1600px) { 
+	
+	
+}
+
+
+@media (min-width: 1920px) {
+
+
+}

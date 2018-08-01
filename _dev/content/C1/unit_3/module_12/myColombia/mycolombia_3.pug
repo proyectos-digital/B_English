@@ -1,0 +1,47 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_3")
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-init="unirColumnasFuncion()")
+            article(class="col xs12 md8 col-center")
+                h5 1. A wide range of vocabulary is used when we speak about the government and politics. Match the words listed below with their corresponding meaning.                  
+                div(class="col col-center mt40" data-ejercicio="unir")
+                    div(id="sourceElements" class="js-columnas")                            
+                        span(id="Item0_0" class="treeItem source_item" onclick="setSource(this)" seleccion valor="1") Ballot
+                        span(id="Item0_1" class="treeItem source_item" onclick="setSource(this)" seleccion valor="2") Campaign 
+                        span(id="Item0_2" class="treeItem source_item" onclick="setSource(this)" seleccion valor="3") Independent 
+                        span(id="Item0_3" class="treeItem source_item" onclick="setSource(this)" seleccion valor="4") Poll
+                        span(id="Item0_3" class="treeItem source_item" onclick="setSource(this)" seleccion valor="5") Ticket
+                        span(id="Item0_3" class="treeItem source_item" onclick="setSource(this)" seleccion valor="6") Campaign Contribution 
+                        span(id="Item0_3" class="treeItem source_item" onclick="setSource(this)" seleccion valor="7") Conservative
+                        span(id="Item0_3" class="treeItem source_item" onclick="setSource(this)" seleccion valor="8") Debate
+                    div(id="linecanvas" style="width: 60px;")
+                    div(id="targetElements" class=" js-columnas flex-column justify-center") 
+                        span(id="Item1_0" class="treeItem ta-c target_item" onclick="setTarget(this)" seleccion valor="8") A discussion about the major issues of an election by the candidates.
+                        span(id="Item1_1" class="treeItem ta-c target_item" onclick="setTarget(this)" seleccion valor="7") A person who tends to hold up traditions and is resistant to drastic changes in the laws, government  and society in general. 
+                        span(id="Item1_2" class="treeItem ta-c target_item" onclick="setTarget(this)" seleccion valor="6") Something of value that is given to a political campaign.
+                        span(id="Item1_3" class="treeItem ta-c target_item" onclick="setTarget(this)" seleccion valor="4") A survey of public opinion.
+                        span(id="Item1_3" class="treeItem ta-c target_item" onclick="setTarget(this)" seleccion valor="5") This list of candidates that a political party has registered for an election.
+                        span(id="Item1_3" class="treeItem ta-c target_item" onclick="setTarget(this)" seleccion valor="3") Someone who is not registered with a political party.
+                        span(id="Item1_3" class="treeItem ta-c target_item" onclick="setTarget(this)" seleccion valor="2") A series of events put on by a political candidate leading up to an election. This includes advertising, speeches, rallies and TV appearances.
+                        span(id="Item1_3" class="treeItem ta-c target_item" onclick="setTarget(this)" seleccion valor="1") A list of political candidates and  issues on which citizens vote in elections. 
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'") 
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

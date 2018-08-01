@@ -1,0 +1,89 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_5" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md4 mt30-md mt30-sm")
+                    div(class="row-flex")
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="1") That´s great!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="2") How sad!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="2") Oh, no!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="1") Lovely!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="2") I am sorry to hear that!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="2") I can´t believe it! Sorry!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="1") What? Marvelous!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="2") Terrible!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="1") Really? Super!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="2") That´s too bad!
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="1") Wow. Super
+                        div(class="dragCont m-a mt10")
+                            div(class="drag" rescon="2") That´s awful!
+
+
+
+                div(class="col-flex-sm12 col-flex-md6 offset-md1 mt30-md mt30-sm")
+
+                    table(class="c-table-estilo_dos")
+                        thead
+                            tr
+                                th REACTION WHEN SOMETHING GOOD HAPPENS
+                                th REACTION WHEN SOMETHING BAD HAPPENS
+                        tbody
+                            tr
+                                td: div(class="drop")
+                                td: div(class="drop")
+                            tr
+                                td: div(class="drop")
+                                td: div(class="drop")
+                            tr
+                                td: div(class="drop")
+                                td: div(class="drop")
+                            tr
+                                td: div(class="drop")
+                                td: div(class="drop")
+                            tr
+                                td: div(class="drop")
+                                td: div(class="drop")
+                            tr
+                                td
+                                td: div(class="drop")
+                            tr
+                                td
+                                td: div(class="drop")
+
+
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction is-active openNotice u-bgIconInfoActivity" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()" )
+        button(class="c-btn-IconAction u-bgIconCheck js-validar" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_2/selfcheck/self_5_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

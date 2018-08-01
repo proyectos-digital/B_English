@@ -1,0 +1,50 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex mt100-xs mt10-md")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt30-md")
+                    div(class="c-cardGreen"): div(class="c-cardGreenContent padding20")
+                        p In the passive voice, #[strong the object ] in an active sentence becomes #[strong the subject ] of the passive sentence.
+                        p: strong The passive voice is used when:
+
+                        p • We do not know who did the action:
+                        p • The receiver of the action is more important.
+
+                        p In the passive voice, the #[strong by + agent phrase ] is used when it is important to say who performed the action.
+                        p
+                            strong Example: 
+                            | The National Symphonic Orchestra is directed by a Russian musician.
+                        
+                        p The 
+                            strong by + agent phrase 
+                            | is omitted when we don’t know who performed the action or when it is obvious who performed the action. El Tiempo is red all over Colombia.
+                
+            div(class="row-flex mt50 w100 m-a centrado ancho450")
+                table(class="c-table-estilo_tres")
+                    thead
+                        tr
+                            th Tense
+                            th Form
+                    tbody
+                        tr
+                            td Present simple passive
+                            td Is / are + past participle
+                        tr
+                            td Present continuous passive
+                            td Is / are being + past participle
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

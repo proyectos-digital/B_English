@@ -1,0 +1,35 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_10")
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-init="ContadorPalabras(150)")
+            article(class="row-flex justify-center")
+                div(class="col-flex-xs12 col-flex-md8 col-center mt10-sm")
+                    figure(class="row ta-c"): img(class="u-responsive-img" src="unit_3/module_9/assets/images/col_8_1.png", alt="" draggable="false")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm")
+                    h6 Write a report for a university teacher describing the information shown.
+                    ul(class="row")
+                        li » You should write at least 150 words.
+                        li » You should spend about 20 minutes on this task.
+                    div(class="row")
+                        div(class="c-wrapTextarea ")
+                            textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                            div(class="c-wrapTextarea__counter")
+                                span(id="contador") 0
+                                span(ng-bind="limitePalabras")
+                                span(id="alertamensaje")
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

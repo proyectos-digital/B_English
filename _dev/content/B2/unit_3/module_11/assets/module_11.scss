@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+$MultimediaImages   : '../images/';
+.act_1{
+		position: relative;
+}
+
+
+
+.act_3{
+	@media all and (min-width:600px) {
+		.c-CheckSelected{
+			flex: 0 0 calc(33% - 10px);
+			margin: 0 auto;
+			width: calc(33% - 10px);
+			float: left;
+		}
+	}
+	@media all and (max-width:599px) {
+		.c-CheckSelected{
+			flex: 0 0 100%;
+			margin: .5rem auto;
+			width: 100%;
+			float: left;
+		}
+	}
+}
+
+
+
+.act_5{
+	$heightDrag: 5rem;
+    $widthDrag: 150px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+		font-size: 0.8rem;
+		word-break: break-word;
+    }
+    .dragCont{
+        margin: 5px auto;
+		width: $widthDrag;
+    }
+    .drop, .dragCont{
+		width: $widthDrag;
+        height: $heightDrag;
+        
+    }
+}
+
+.act_6{
+	._float-span{
+		background-color: var(--color_4-lighter);
+		
+		padding: 5px;
+		margin: 5px auto;
+		width: 100px;
+
+		@media all and (max-width: 989px){
+			width: 100px;
+		}
+	}
+	.treeItem, .treeItem_hi, .treeItem_set {
+		min-height: 2.5rem;
+		margin-bottom: 6px;
+		cursor: pointer;
+		font-size: 0.9rem;
+		padding: 5px;
+	}
+}
+
+.act_8{
+	.flip_card{
+        @media all and (max-width:599px) {
+            width: 120px;
+            height: 164px;
+            font-size: 0.8rem;
+        }
+        @media all and (min-width:600px) and (max-width:1023px) {
+            width: 130px;
+            height: 174px;
+        }
+        @media all and (min-width:1024px) {
+            width: 140px;
+            height: 184px;
+        }
+    }
+}
+
+.act_11{
+	$heightDrag: 2rem;
+    $widthDrag: 150px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+		font-size: 0.8rem;
+		word-break: break-word;
+    }
+    .drop, .dragCont{
+		// min-width: $widthDrag;
+        height: $heightDrag;
+        
+	}
+	
+}
+.act_12{
+	$heightDrag: 3rem;
+    $widthDrag: 170px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+		font-size: 0.8rem;
+		word-break: break-word;
+    }
+    .dragCont{
+        margin: 5px auto;
+		width: $widthDrag;
+    }
+    .drop, .dragCont{
+		min-width: $widthDrag;
+        height: $heightDrag;
+        
+    }
+}
+
+.self_7{
+	@media all and (min-width:600px) {
+		.c-CheckSelected{
+			flex: 0 0 calc(33% - 10px);
+			margin: 0 auto;
+			width: calc(33% - 10px);
+			float: left;
+		}
+	}
+	@media all and (max-width:599px) {
+		.c-CheckSelected{
+			flex: 0 0 100%;
+			margin: .5rem auto;
+			width: 100%;
+			float: left;
+			margin-top: 20px;
+		}
+	}
+}
+
+.self_8{
+	@media all and (min-width:600px) {
+		.c-CheckSelected{
+			flex: 0 0 calc(40% - 10px);
+			margin: 0 auto;
+			width: calc(40% - 10px);
+			float: left;
+		}
+	}
+	@media all and (max-width:599px) {
+		.c-CheckSelected{
+			flex: 0 0 100%;
+			margin: .5rem auto;
+			width: 100%;
+			float: left;
+			margin-top: 20px;
+		}
+	}
+}
+
+.test_5{
+	@media all and (min-width:600px) {
+		.c-CheckSelected{
+			flex: 0 0 calc(33% - 10px);
+			margin: 0 auto;
+			width: calc(33% - 10px);
+			float: left;
+		}
+	}
+	@media all and (max-width:599px) {
+		.c-CheckSelected{
+			flex: 0 0 100%;
+			margin: .5rem auto;
+			width: 100%;
+			float: left;
+			margin-top: 20px;
+		}
+	}
+}
+
+.col_1{
+	.c-CheckSelected{
+		@media all and (min-width:600px) {
+			flex: 0 0 calc(20% - 10px);
+			margin: 0 auto;
+			width: calc(20% - 10px);
+			float: left;
+		}
+		@media all and (min-width:400px) and (max-width:599px) {
+			flex: 0 0 90%;
+			margin: .5rem auto;
+			width: 90%;
+			float: left;
+			margin-top: 20px;
+		}
+		@media all and (max-width:399px) {
+			flex: 0 0 100%;
+			margin: .5rem auto;
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+}
+
+.col_3{
+	.c-Checkbox{
+		@media all and (min-width:600px) {
+			flex: 0 0 calc(33% - 10px);
+			margin: 0 auto;
+			width: calc(33% - 10px);
+			float: left;
+		}
+		@media all and (min-width:400px) and (max-width:599px) {
+			flex: 0 0 90%;
+			margin: .5rem auto;
+			width: 90%;
+			float: left;
+			margin-top: 20px;
+		}
+		@media all and (max-width:399px) {
+			flex: 0 0 100%;
+			margin: .5rem auto;
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+}
+
+
+.bold{font-weight : 700;	}
+
+
+.c-green{ background: #87c5bf !important;
+		color: #22645B;}
+		
+.c-blue{ background: #b5c6f8 !important;
+	color: #3e538c;
+}
+
+.c-green-text{ 
+	background: #87c5bf !important;
+	color: #ffffff;
+	font-weight: 500;
+	padding: 20px;
+	text-align: justify;
+}
+
+.c-blue-text{ 
+	background: #b5c6f8 !important;
+	color: #ffffff;
+	font-weight: 600;
+	padding: 10px;
+	text-align: center;
+}
+
+.line-h{ line-height: 40px !important;}
+.line-h1{ line-height: 30px !important;}
+
+.absol-mod2-self{
+		position: absolute;
+		left:10px;
+		top:10px;
+		color:rgba(150,150,150,1);
+}
+
+.c-blue-text1{ 
+		background: #b5c6f8 !important;
+		color: #3e538c;
+		font-weight: 600;
+		padding: 10px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+.c-blue-text2{ 
+		background: #b5c6f8 !important;
+		color: #3e538c;
+		font-weight: 600;
+		padding: 5px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 10px;
+		}
+
+.ancho-abs-mod6{width: 100% !important;}
+
+.f-in{float: inherit;}
+
+.d-inbl{display: inline-block;}
+
+.flotantes{
+		width: 150px !important;
+		height: 150px !important;
+		float: left !important;
+		padding: 10px !important;
+}

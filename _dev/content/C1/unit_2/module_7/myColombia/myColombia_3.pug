@@ -1,0 +1,59 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_3")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h5 The English vocabulary changes with time. One of the areas that changes the most is vocabulary related to technology. Try matching these words to there meaning. 
+                div(class="col xs12 col-center" data-ejercicio="unir")
+                    div(id="sourceElements" class="js-columnas w30")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Techie
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") Computer crash
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Podcast
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") Send an attachment
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Back up
+                        span(id="Item0_5" class="treeItem" onclick="setSource(this)" seleccion valor="6") Wireless network
+                        span(id="Item0_6" class="treeItem" onclick="setSource(this)" seleccion valor="7") Bookmark
+                        span(id="Item0_7" class="treeItem" onclick="setSource(this)" seleccion valor="8") Upgrade
+                        span(id="Item0_8" class="treeItem" onclick="setSource(this)" seleccion valor="9") High spec
+                        span(id="Item0_9" class="treeItem" onclick="setSource(this)" seleccion valor="10") Hotspot
+
+                     
+                        
+                    div(id="linecanvas" style="width: 80px; flex: 0 0 80px;")
+                    div(id="targetElements" class=" js-columnas max-w75 w75") 
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="1") A person that knows a lot about technology and enjoy using new technologies.
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="10") A means of sharing the internet connection with others in a cafe, a school or even from your mobile phone.
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="3") An audio file that is made available on the internet for the public. 
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="2") When it suddenly stop working. 
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="5") To make a copy of data, a computer or files in case the original is corrupted. 
+                        span(id="Item1_5" class="treeItem" onclick="setTarget(this)" seleccion valor="8") To get the latest version or more advanced version of a technology or equipment. 
+                        span(id="Item1_6" class="treeItem" onclick="setTarget(this)" seleccion valor="7") To save the address of a webpage on your computer or browser for future use. 
+                        span(id="Item1_7" class="treeItem" onclick="setTarget(this)" seleccion valor="6") A way to access a network or the internet without a physical cable attached to your device. 
+                        span(id="Item1_8" class="treeItem" onclick="setTarget(this)" seleccion valor="9") A computer or system with the latest top quality components and software. 
+                        span(id="Item1_9" class="treeItem" onclick="setTarget(this)" seleccion valor="4") To add a file ( audio, video, PDF, word etc) to an email that you are sending.
+                    
+                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

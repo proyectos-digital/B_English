@@ -1,0 +1,59 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt10-md")
+                    h5 Read the following sentences. Pay attention to the words in bold.
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • We 
+                            strong used to play 
+                            | in this park when I was a child.
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex"): p • There #[strong didn´t use to be ] mall here before.
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • My brother 
+                            strong had/used to have 
+                            | a red bicycle.
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • We 
+                            strong went 
+                            | to Bucaramanga in 2013. 
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt70-md")
+                    p: strong Look at the examples and complete the rules.
+                    div(class="mb20 row-flex mt20")
+                        div • We use 
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir") 
+                        span to talk about past states.
+                    div(class="mb20 row-flex mt20")
+                        div • When an action happened only once we use 
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir") 
+                    div(class="mb20 row-flex mt20")
+                        div • We can use 
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir") 
+                        span or
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir") 
+                        span to talk about repeated past actions.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_8/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

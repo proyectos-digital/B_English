@@ -1,0 +1,119 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row") 
+                            
+                    div(class="col xs12 md6 lh30")
+                        p #[span(class="u-textColor_2"): strong A: ] I heard about your grandmother passing away. I am terribly sorry.
+                        p #[span(class="u-textColor_5"): strong B: ] Thanks a lot! She was very, very sick.
+                        p #[span(class="u-textColor_2"): strong A: ] You know you can count on us in case you need anything.
+                        p #[span(class="u-textColor_5"): strong B: ] Thanks. Everything is taken care of. I appreciate your words, though.
+                        p #[span(class="u-textColor_2"): strong A: ] I was wondering. Would it be ok to accompany you to the funeral?
+                        p #[span(class="u-textColor_5"): strong B: ] Actually it will be a private service. Only relatives will be there. Thanks anyway.
+                        p #[span(class="u-textColor_2"): strong A: ] Don’t mention it. Please do let me know if there is anything we can do, ok?
+                        p #[span(class="u-textColor_5"): strong B: ] Actually, yes. Would you mind watering the plants in my apartment? I have been really busy these days.
+                        p #[span(class="u-textColor_2"): strong A: ] Count on that! See you then.
+                    div(class=" col xs12 md6 lh30")
+                        table(class="c-table mt30 row" data-ejercicio="table-truefalse")
+                            thead
+                                tr
+                                    th 
+                                    th.ta-c
+                                        h5(class="u-textColor_4") True
+                                    th.ta-c
+                                        h5(class="u-textColor_4") False
+                            tbody
+                                tr
+                                    td
+                                        p
+                                            strong(class="u-textColor_4-dark") 1.
+                                            |  Somebody passed away.
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="InputRadio_1" value="1")  
+                                            label(for="inputRadio_1" class="c-Checkbox")
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="InputRadio_1" value="2")
+                                            label(for="inputRadio_2" class="c-Checkbox")
+                                tr
+                                    td
+                                        p
+                                            strong(class="u-textColor_4-dark") 2.
+                                            |   The person was really ill. 
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="InputRadio_2" value="1")
+                                            label(for="inputRadio_3" class="c-Checkbox")
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="InputRadio_2" value="2")
+                                            label(for="inputRadio_4" class="c-Checkbox")
+                                tr
+                                    td
+                                        p
+                                            strong(class="u-textColor_4-dark") 3.
+                                            |   Everybody can attend the funeral.
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="InputRadio_3" value="1")
+                                            label(for="inputRadio_5" class="c-Checkbox")
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="InputRadio_3" value="2")
+                                            label(for="inputRadio_6" class="c-Checkbox")
+                                tr
+                                    td
+                                        p
+                                            strong(class="u-textColor_4-dark") 4.
+                                            |   Relatives are not invited to the funeral. 
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="InputRadio_4" value="1")
+                                            label(for="inputRadio_7" class="c-Checkbox")
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="InputRadio_4" value="2")
+                                            label(for="inputRadio_8" class="c-Checkbox")
+                                tr
+                                    td
+                                        p
+                                            strong(class="u-textColor_4-dark") 5.
+                                            |   The person needs someone to take care of the cat. 
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="InputRadio_5" value="1")
+                                            label(for="inputRadio_9" class="c-Checkbox")
+                                    td.ta-c
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="InputRadio_5" value="2")
+                                            label(for="inputRadio_10" class="c-Checkbox")
+                           
+                        div(class="row ta-c mt20")
+                            img(src="unit_3/module_12/assets/images/self_5_1.jpg", alt="self_5" class="u-responsive-img m-a w70")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

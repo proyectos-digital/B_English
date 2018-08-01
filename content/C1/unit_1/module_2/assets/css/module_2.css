@@ -1,0 +1,205 @@
+.act_1 .c-card-phrasalVerbs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+.act_1 .c-card-phrasalVerbs--header {
+	height: 3rem;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding: 5px;
+	background-color: var(--color_2);
+}
+
+.act_1 .c-card-phrasalVerbs--header-title {
+	color: white;
+}
+
+.act_1 .c-card-phrasalVerbs--body {
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 2px 9px rgba(0,0,0,0.5);
+}
+
+.act_1 .c-card-phrasalVerbs--body-image {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+}
+
+.act_2 .c-select {
+	color: white;
+	background-color: var(--color_5);
+}
+
+.act_3 [height-cardGreen="auto"] {
+	height: auto;
+}
+
+.act_3 .dragCont,.act_3 .drop {
+	width: 130px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.act_3 .dragCont .drag,.act_3 .drop .drag {
+	width: 100%;
+}
+
+.act_6 .u-checkbox-responsive {
+	display: -ms-grid;
+	display: grid;
+}
+
+@media all and (min-width: 600px) {
+	.act_6 .u-checkbox-responsive {
+		grid-gap: 1rem;
+		-ms-grid-columns: (1fr)[3];
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_6 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+@media all and (min-width: 600px) {
+	.act_17 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_17 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.col_1 .dragCont,.col_1 .drop {
+	width: 120px;
+	height: 120px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+.col_1 .drag {
+	width: auto;
+	padding: 0;
+}
+
+.col_1 .drag img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.col_4 .on-mayusc {
+	display: inline-block;
+}
+
+.col_4 .on-mayusc .drag {
+	display: inline-block;
+}
+
+.col_4 .on-mayusc .drag:first-letter {
+	text-transform: uppercase;
+}
+
+@media all and (min-width: 600px) {
+	.col_5 .c-Checkbox {
+		width: 150px;
+	}
+}
+
+@media all and (max-width: 598px) {
+	.col_5 .c-Checkbox {
+		width: 45%;
+		margin-right: 3%;
+	}
+
+	.col_5 .c-Checkbox:last-child {
+		margin-right: 0;
+	}
+}
+
+.col_7 .u-checkbox-responsive {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+@media all and (min-width: 600px) {
+	.col_7 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[3];
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media all and (max-width: 598px) {
+	.col_7 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+.test_1 .u-checkbox-responsive {
+	display: -ms-grid;
+	display: grid;
+}
+
+@media all and (min-width: 767px) {
+	.test_1 .u-checkbox-responsive {
+		grid-gap: 1rem;
+		-ms-grid-columns: (1fr)[3];
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media all and (max-width: 599px) {
+	.test_1 .u-checkbox-responsive {
+		-ms-grid-columns: (1fr)[1];
+		grid-template-columns: repeat(1,1fr);
+	}
+}

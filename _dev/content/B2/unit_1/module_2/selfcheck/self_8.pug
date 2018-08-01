@@ -1,0 +1,45 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_8")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md12 col-center mt30-md mt30-sm ta-j")
+                div(class="row-flex")
+                    ul(class="c-counterStep ui-sortable sortreload flex flex-wrap justify-center" id="sortable" data-ejercicio="sortable")
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") Manuel studied his high school at La Salle School in Floridablanca, Santander.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") Next year, he will have to take his English examination, as a requirement to graduate.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") In two years, he will have completed all the requirements for graduation.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") In three and a half years, he will have graduated as an accountant.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") He says that in four years, he will have gained enough experience to open his own accounting office.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") When he finished the English courses, he took the admission exam at University of Colombia.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") Manuel began to study Accounting at University of Colombia.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") Before he entered University of Colombia, he took two basic English courses in Bucaramanga.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") Manuel has studied two semesters of his major at the University of Colombia.
+                        li(class="ui-sortable--item c-counterStep__item js-sortdrag") When he completes the language requirements, he will have to do the research paper.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice u-bgIconAlert is-active" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSortable()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="sortable()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_2/selfcheck/self_8_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+|
+script.
+    $( "#sortable" ).sortable()

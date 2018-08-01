@@ -1,0 +1,57 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_9")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    
+                    div(class="col-flex-sm12  col-center")
+                        h5(class="mb30") A mother is talking to her eldest and youngest sons. She is going to the kitchen and wants to make sure they can take care of each other. 
+                        h6 Read the sentences and then report them in the second line:
+
+                    div(class="col xs12 md5 col-center showTo-md "): div(class="row-flex align-items-center")
+                        img(src="unit_2/module_7/assets/images/act_9.png", alt="act_9" class="u-responsive-img m-a")
+
+                    div(class="col xs12 md7 col-center")
+
+                        div(class="col xs12 sm10 col-center")
+                            p #[strong: span(class="u-textColor_4-dark") 1]. The mother said, “I love you both.” 
+                            p The mother said #[input(type="text" placeholder="Text here..." class="c-input js-escribir w60 mb15") ]
+                        div(class="col xs12 sm10 col-center")
+                            p #[strong: span(class="u-textColor_4-dark") 2]. “Do you want something to eat?”, she asked him
+                            p She asked him #[input(type="text" placeholder="Text here..." class="c-input js-escribir w60 mb15") ]
+                        div(class="col xs12 sm10 col-center")
+                            p #[strong: span(class="u-textColor_4-dark") 3]. “I can’t understand when you speak at the same time,” she said.
+                            p She said #[input(type="text" placeholder="Text here..." class="c-input js-escribir w60 mb15") ]
+                        div(class="col xs12 sm10 col-center")
+                            p #[strong: span(class="u-textColor_4-dark") 4]. “Be nice to your brother,” she said.
+                            p She asked her eldest son #[input(type="text" placeholder="Text here..." class="c-input js-escribir w60 mb15") ]
+                        div(class="col xs12 sm10 col-center")
+                            p #[strong: span(class="u-textColor_4-dark") 5]. “Don’t fight with your brother”, she said.
+                            p She told the boys #[input(type="text" placeholder="Text here..." class="c-input js-escribir w60 mb15") ]
+                        
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

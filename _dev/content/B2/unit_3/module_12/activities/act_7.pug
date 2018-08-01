@@ -1,0 +1,66 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-top")
+                    div(class="row ta-c")                   
+                        h5.row.mb40 Complete the sentences with the verb in parenthesis in a past form and a modal from the box.
+                        div(class="col xs12 md8 col-center")
+                            .c-cardGreen
+                                div(class="c-cardGreenContent flex align-items-center justify-center")
+                                    p Must - Can’t - May - Could
+                    
+                            
+                            
+                    div(class="col xs12 md6")
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+                        
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 1]. You look sad and worried. You  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (have) ] a problem with your family.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 2]. Mary  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (be) ]at home because she hasn’t been in her room all day.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 3]. Betty hasn’t showed up yet. She  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (miss) ]the bus.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 4]. Neil is a very good boy. He isn’t naught, so he   #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (break) ]the vase. Someone else  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (break) ]it.
+
+
+                    div(class="col xs12 md6")
+                        
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+                        
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5].  I’m sure that I dropped my glasses in the car. They #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (be) ] in the car at the moment.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 6]. The street is wet this morning. I’m not sure but it  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (rain) ]last night.
+
+                           
+
+                        
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+     
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/self_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

@@ -1,0 +1,468 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" ng-init="JuegoCompletartxt()")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a act_18")
+        section(class="template-content")
+            #crossword.center.crossword
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 17
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 3
+                    .square.ta-c.crossword_number: span 20
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 18
+                    .square
+                    .square.ta-c.crossword_number: span 10
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 8
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 14
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.ta-c.crossword_number: span 4
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.ta-c.crossword_number: span 12
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square.ta-c.crossword_number: span 15
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.ta-c.crossword_number: span 7
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 5
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 13
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square.ta-c.crossword_number: span 16
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.ta-c.crossword_number: span 2 
+                    .square.ta-c.crossword_number: span 6
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 1
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.ta-c.crossword_number: span 19
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.ta-c.crossword_number: span 11
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square.ta-c.crossword_number: span 9
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square.letter
+                        input.char(type='text', maxlength='1' class="js-escribir")
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                .row-flex
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+                    .square
+
+            .row-flex
+                .xs12.md6.padding10
+                    h6.ta-c ACROSS
+                    p.ta-j #[strong.u-textColor_4 1. ] Alex and Jane fight all the time. They don’t really get on __________ each other.
+                    p.ta-j #[strong.u-textColor_4 3. ] She is fluent in French even though she has never had a lesson. She __________ it up when she lived in Paris last year.
+                    p.ta-j #[strong.u-textColor_4 4. ] When you get to the airport you must __________ in, so your bags can be put on the plane.
+                    p.ta-j #[strong.u-textColor_4 6. ] I can’t find my glasses. I’ve been __________ for them for ages!
+                    p.ta-j #[strong.u-textColor_4 9. ] Her boyfriend __________ up with her last week. She is single now.
+                    p.ta-j #[strong.u-textColor_4 10. ] Please, __________ on your coat. It’s very cold outside.
+                    p.ta-j #[strong.u-textColor_4 11. ] Do you mind if I __________ on the TV?
+                    p.ta-j #[strong.u-textColor_4 12. ] The flight was delayed, so the airplane __________ off 5 hours late.
+                    p.ta-j #[strong.u-textColor_4 16. ] I’m going on holiday to Mexico next month. I am looking __________ to it so much!
+                    p.ta-j #[strong.u-textColor_4 19. ] My father has __________ up smoking recently.
+                    p.ta-j #[strong.u-textColor_4 20. ] If you don’t know something, look it __________ on Google!
+                .xs12.md6.padding10
+                    h6.ta-c DOWN
+                    p.ta-j #[strong.u-textColor_4 2. ] The music was too loud and the neighbors asked me to __________it down.
+                    p.ta-j #[strong.u-textColor_4 5. ] When Mary went on holiday, her neighbors __________after her two dogs.
+                    p.ta-j #[strong.u-textColor_4 7. ] Please, slow __________! You’re driving too fast!
+                    p.ta-j #[strong.u-textColor_4 8. ] Their mother died when they were young. So their father __________ up the children on his own.
+                    p.ta-j #[strong.u-textColor_4 13. ] I am going to __________ up my sister from the airport tomorrow morning.
+                    p.ta-j #[strong.u-textColor_4 14. ] I tried to Skype my friend yesterday, but I couldn’t get __________ .
+                    p.ta-j #[strong.u-textColor_4 15. ] She __________ in love with her boyfriend at first sight.
+                    p.ta-j #[strong.u-textColor_4 17. ] Sarah likes to go __________ with friends every Saturday night. They usually go to a bar and then go dancing. 
+                    p.ta-j #[strong.u-textColor_4 18. ] People are always telling me that I take __________ my mother, because we look so similar.
+                        
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,71 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section")
+        section(class="template-content")
+            div(class="row mt40-md")
+            div(class="row mt40-md")
+                div(class="col sm9 md7 col-center")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent")
+                            div(class="row-flex justify-center")
+                                span Look
+                                    strong.mr10.ml10 | 
+                                span Put up
+                                    strong.mr10.ml10 | 
+                                span Talk
+                                    strong.mr10.ml10 | 
+                                span Go
+                                    strong.mr10.ml10 | 
+                            div(class="row-flex mt20 justify-center")
+                                span Complain
+                                    strong.mr10.ml10 | 
+                                span Get on
+                                    strong.mr10.ml10 | 
+                                span Take
+                                    strong.mr10.ml10 | 
+                                span Think
+                                    strong.mr10.ml10 | 
+                                span  Do away
+            div(class="row-flex mt60-xs mt40-md")
+                div(class="col-flex-md9 col-flex-sm11 col-center")
+                    table(class="c-table-estilo_dos row mb20")
+                        thead
+                            tr
+                                th About
+                                th With
+                                th After
+                        tbody
+                        tr
+                    
+                    table(class="c-table-estilo_dos row mb20")
+                        tbody
+                            tr
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+                            tr
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+                            tr
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+                                td: input(type="text" placeholder="" class="w100 c-input ta-c js-escribir")
+    |
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

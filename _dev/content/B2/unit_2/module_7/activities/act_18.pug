@@ -1,0 +1,79 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_17")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="girarCartas()")
+        section(class="template-content")
+            div.row
+                h5(class="ta-c") Match the direct and reported speech sentences.
+            div.flip_card-container.mt40-md
+                div(class="flip_card-row flipFlexible")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content We asked where the shoe store was.
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Wilma said she would make some food for Tim.
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content “Was it tested for safety?”
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content “Does the phone have Wi-Fi?”
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content I asked Ivan if he could help me.
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content He asked her if she had all the ingredients.
+                div(class="flip_card-row flipFlexible")
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content Marco asked if the phone had Wi-Fi.
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content “Where is the shoe store?”
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content “Can you help me, Ivan?”
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content “I’ll make some food for you, Tim.”
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content The man asked if it had been tested for safety.
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back")
+                                p.flip_card-content “Do you have all the ingredients?”
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+       
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadCartas()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+| 
+script(src="./../assets/js/librerias/jquery.flip.min.js")

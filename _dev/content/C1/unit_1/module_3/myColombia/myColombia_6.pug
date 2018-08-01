@@ -1,0 +1,40 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_4")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown")
+            h5 Let’s talk about education.
+            div(class="row row-flex mt30 align-items-center")
+                .col.xs12.md6                
+                    div(class="c-contVideo")
+                        video(controls class='u-responsive-video')
+                            source(src='unit_1/module_3/assets/videos/col_6_1.mp4' type='video/mp4') 
+                .col.xs12.md6
+                    .c-cardGreen
+                        .c-cardGreenContent
+                            p.
+                                How do you think an improvement in the
+                                education level of Colombian would affect
+                                the culture of Colombians in terms of how
+                                they interact with others and how things are
+                                done generally in the country? #[br]#[br]
+                                Speak not less than 3 minutes.
+
+                    .row
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod3_mycol11',1)"): +ngRecorder
+        |
+        |
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

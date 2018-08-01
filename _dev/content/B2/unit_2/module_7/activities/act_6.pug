@@ -1,0 +1,62 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2" )
+
+    aside(class="template-asideLeft o-aside-Item")
+        |
+        |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            div(class="row-flex align-items-center")
+                div(class="col sm12 md5 col-center")
+                    h5.
+                        #[span(class="u-textColor_4-dark") 1]. Read the following passage. 
+                    h6 Check the words in bold and, based on the context, choose the best definition in the chart below:
+                    div(class="row-flex align-items-center")
+                        div(class="col-flex-xs11 col-flex-sm9 col-center ")
+                            div(class="c-cardGreen ")
+                                div(class="c-cardGreenContent") 
+                                    p It is very important to know what to do when you are facing a difficult situation. For example, Giovanni Hernandez is an old man aged 82. His #[strong.u-textColor_1 hair has gone gray ] but he is a very relaxed person. Last month, he had a flight from Bogota to Saravena. He was at the airport, #[strong.u-textColor_1 he got on ] the plane when suddenly one of the engines #[strong.u-textColor_1 went off ]. The pilot had to ask the passengers to leave the plane and the flight was cancelled. Mr. Hernández took a deep breath, he #[strong.u-textColor_1 went for a walk ], and then he found a seat in another flight. He finally arrived in Saravena without any problem.
+                        
+                div(class="col xs12 md7 col-center" )
+                    h5 #[span(class="u-textColor_4-dark") 2]. Match the verbs with Go and Get with their meanings.
+                    div(data-ejercicio="unir" class="mt40 row")                 
+                        div(id="sourceElements" class="ancho150 js-columnas")
+                            span(id="Item0_0" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="1") get on
+                            span(id="Item0_1" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="2") go gray
+                            span(id="Item0_2" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="3") go off
+                            span(id="Item0_3" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="4") get by
+                            span(id="Item0_4" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="5") get here
+                            span(id="Item0_5" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="6") go for a walk
+                        div(id="linecanvas" style="width: 60px;")
+                        div(id="targetElements" class=" js-columnas") 
+                            span(id="Item1_0" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="4") to have just enough of something such as money or knowledge so that you can do what you need to do.
+                            span(id="Item1_1" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="6") to walk for pleasure rather than for practical reasons
+                            span(id="Item1_2" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="5") arrive at a specific place or location.
+                            span(id="Item1_3" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="2") used for describing the white color of hair in older people.
+                            span(id="Item1_4" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="1") to get into a bus, plane, or train.
+                            span(id="Item1_5" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="3") when something such as a light or an electricity supply stops working or being available.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconListen")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

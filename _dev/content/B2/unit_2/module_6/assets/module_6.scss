@@ -1,0 +1,299 @@
+@charset "utf-8";
+@import "./../../../../assets/scss/_var/variables.scss";
+
+$MultimediaImages   : '../images/';
+
+.u-{
+    &bgTemplate{
+        background-image: url(#{$MultimediaImages}wel_bg.jpg);
+        background-color: #ff5252;
+    }
+}
+
+.bold{font-weight : 700;	}
+
+
+.c-green{ background: #87c5bf !important;
+    color: #22645B;}
+    
+.c-blue{ background: #b5c6f8 !important;
+              color: #3e538c;}
+
+
+.act_6{
+    $heightDrag: 3.4rem;
+    $widthDrag: 180px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+        float: left;
+        margin: 5px;
+    }
+    .drop, .dragCont{
+        width: calc(#{$widthDrag} - 10px);
+        height: $heightDrag;
+        
+    }
+}
+
+.c-green-text{ 
+background: #87c5bf !important;
+color: #ffffff;
+font-weight: 500;
+padding: 20px;
+text-align: justify;
+}
+
+.c-blue-text{ 
+    background: #b5c6f8 !important;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+    }
+
+.line-h{ line-height: 40px !important;}
+.line-h1{ line-height: 30px !important;}
+
+.absol-mod2-self{
+    position: absolute;
+    left:10px;
+    top:10px;
+    color:rgba(150,150,150,1);
+}
+
+.c-blue-text1{ 
+    background: #b5c6f8 !important;
+    color: #3e538c;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .c-blue-text2{ 
+        background: #b5c6f8 !important;
+        color: #3e538c;
+        font-weight: 600;
+        padding: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
+    .ancho-abs-mod6{width: 100% !important;}
+    
+.f-in{float: inherit;}
+
+.d-inbl{display: inline-block;}
+
+.act_18{
+    .center{
+        margin: 0 auto;
+      }
+      
+      .btn{
+        margin: 8px 4px 0;  
+      }
+      .btn{
+        width: 172px;
+        height: 28px;
+      }
+      
+      .line{  
+        height: 2em;
+      }
+      .word, .clue{
+        display: inline-block;
+        height: 1.5em;  
+        padding: 0 5px;
+      }
+      .word{
+        text-align: right;  
+        width: 100px;
+      }
+      .clue{
+        width: 500px;
+      }
+      
+      
+      .crossword{
+        display: block;
+        width: 704px;  
+        &_number{
+            display: flex;
+            background-color: #8496c5;
+            justify-content: center;
+            align-items: center;
+            & span{                
+                font-size: .8rem;
+                color: white;
+            }
+        }
+      }
+      .square{  
+        margin: 1px ;
+        // display: inline-block;
+        
+        font: 24px Calibri;
+        width: 1.25em;
+        height: 1.25em;
+        line-height: 1.25em;
+        vertical-align: middle;        
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .letter{
+        border: 1px solid #27A29B;
+        padding: 2px;
+        border-radius: 5px;
+         display: flex;
+        -webkit-touch-callout: text;
+        -webkit-user-select: text;
+        -khtml-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
+      .char {
+        font-size:24px;
+        text-transform: uppercase;
+        outline: 0;
+        border: 0;
+        padding: 0;
+        margin: -1px 0 0 -1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: none; 
+      } 
+      
+      .hide{
+        visibility: hidden;
+      }
+      
+      .clueReadOnly
+      {
+        border: 0 ;
+        outline: 0;
+        color:#303030 !important;
+        background:none;
+      }
+}
+
+.self_7{
+    $heightDrag: 3.4rem;
+    $widthDrag: 90%;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+        display: inline-block;
+        padding: 1rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+        float: left;
+        margin: 5px;
+    }
+    .drop, .dragCont{
+        width: calc(#{$widthDrag} - 10px);
+        height: $heightDrag;
+
+        & .drag::first-letter {
+            text-transform: uppercase;
+        }  
+    } 
+}
+.self_8{
+    .c-inputRadio[type="radio"] + label.c-Checkbox{
+        width: 100%;
+        height: 66.39px;
+        background-color: var(--color_4);
+        &::before{
+            background-color: var(--color_4-dark);
+        }
+    }
+    .c-inputRadio[type="radio"]:checked + label.c-Checkbox:after{
+        right: calc(50% - 10px);
+        background-color:var(--color_4-light);
+        border-color: var(--color_4-light);
+    }
+}
+.mycol_2{
+    ._c-email{
+        max-width: 768px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 0 0 1rem 1rem;
+        
+        margin: auto;
+        background-color: #eeeeee;
+        box-shadow: 0px 3px 7px 3px rgba(121,121,121,0.28);
+        
+        &-row{
+            width      : 100%;
+            position   : relative;
+            margin     : 0 auto;
+            min-height: 1px;
+            //Limpiar el float
+            &:before, &:after {
+                content : "";
+                display : table;
+                clear   : both;
+            }
+            border-bottom: 1px solid #bcbcbc;
+        }
+
+        &-header{
+            padding: 0 0.5rem .5rem .5rem;
+            box-shadow: 0px 3px 2px 0px rgba(165, 165, 165, 0.3);
+        }
+
+        &-body{
+            padding: 1rem 0.5rem;
+            width: calc(100% - 1rem);
+            margin: 0.5rem auto 0rem;
+            background-color: white;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        
+        &-destinatario,
+        &-copia,
+        &-asunto{
+            position: relative;
+            padding: 0.5rem;
+            margin: 5px 0;
+            border-radius: 0.5rem;
+            background-color: white;
+        }
+        
+        &-copia{ float: left; }
+        
+        &-asunto{ float: right; }
+        
+        &-copia,
+        &-asunto{
+            width: 45%;
+            @media screen and (max-width: 500px) {
+                width: 100%;
+                
+            }
+        }
+
+        &-mensaje{
+            padding: 1rem 0.5rem;
+        }
+    }
+}

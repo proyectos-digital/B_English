@@ -1,0 +1,82 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex mt10-xs mt30-md mt10-sm")
+                div(class="col-flex-md4 showTo-md col-center"): img(src="unit_2/module_6/assets/images/self_6.png", alt="image self 6", srcset="" class="u-responsive-img")
+                div(class="col-flex-md8 col-flex-sm10 col-flex-xs12 col-center")
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | Do you know the girl  
+                        strong.ml5.mr5 (talk)  
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_a")
+                        | to Pedro? 
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | The money
+                        strong.ml5.mr5 (steal) 
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_b")
+                        | in the robbery was never found.
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | Who was that man
+                        strong.ml5.mr5 (stand)
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_c")
+                        | outside?
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | Most of the products made in this factory are 
+                        strong.ml5.mr5 (export)
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_d")
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | When I arrived there was a big red car
+                        strong.ml5.mr5  (park) 
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_e")
+                        | outside the house.
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | What is the name of that music
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_f")
+                        strong.ml5.mr5  (play) 
+                        | ?
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | Look at those kids
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_g")
+                        strong.ml5.mr5  (ride) 
+                        | their bikes!
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | The people
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_h")
+                        strong.ml5.mr5  (photograph) 
+                        | in this picture don’t look very young…
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | The couple
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_i")
+                        strong.ml5.mr5  (invite) 
+                        | to the reception were excellent hosts!
+                    div(class="mb20 row-flex")
+                        strong(class="u-textColor_4-dark") •  
+                        | One of the umbrellas
+                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_j")
+                        strong.ml5.mr5  (find) 
+                        | in the library was mine!
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

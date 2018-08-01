@@ -1,0 +1,77 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_13")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="col xs12 md6")
+                div(class="row mt30")
+                    p #[strong Will] in the present situation and #[strong would] in the past situation is used to express someone’s willingness or unwillingness to do something.
+
+                div(class="row")
+                    h6 #[span.u-textColor_2 e.g. ]  Willingness in the present:
+                    blockquote
+                        p #[strong.u-textColor_4 •] Mary #[strong will take care of] the cat while you are away.
+                        p #[strong.u-textColor_4 •] They #[strong will catch] the 5:00 AM train to get here on time.
+                div(class="row mt30")
+                    h6 #[span.u-textColor_2 e.g. ]  Unwillingness in the present:
+                    blockquote
+                        p #[strong.u-textColor_4 •] Mary #[strong  won’t (will not) take care of] the cat while you are away.
+                        p #[strong.u-textColor_4 •] They #[strong won´t (will not) catch ] the 5:00 AM train to get here on time.
+                div(class="row mt30")
+                    h6 #[span.u-textColor_2 e.g. ]  Willingness in the past:
+                    blockquote
+                        p #[strong.u-textColor_4 •] Mary #[strong would take care of] the cat while you are away.
+                        p #[strong.u-textColor_4 •] They #[strong would catch] the 5:00 AM train to get here on time.
+                div(class="row mt30")
+                    h6 #[span.u-textColor_2 e.g. ]  Unwillingness in the past:
+                    blockquote
+                        p #[strong.u-textColor_4 •] Mary #[strong  wouldn’t (would not) take care of] the cat while you are away.
+                        p #[strong.u-textColor_4 •] They #[strong  wouldn’t (would not) catch] the 5:00 AM train to get here on time.
+
+
+            div(class="col xs12 md6")
+                div(class="row mt30")
+                    h6 #[strong.u-textColor_4 1]. Choose the correct answer from the options below to fIll in the blank spaces.  
+                    div(class="col xs11 col-center")
+                        div(class="c-cardGreen")
+                            div(class="c-cardGreenContent row row-flex justify-center align-items-center")
+                                h6 will take care of #[span(class="ml10 mr10 u-fz1-5") |] would take care of
+                        span #[strong.u-textColor_4 •] Mary is a nice person and very reliable. She also loves cats and
+
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir" name="group_input_13_1")
+                        span of my cat when I went away for work. I am sure she
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir" name="group_input_13_1")
+                        span your cat as well.
+                    div(class="col xs11 col-center")
+                        div(class="c-cardGreen")
+                            div(class="c-cardGreenContent row row-flex justify-center align-items-center")
+                                h6 wouldn’t take care of #[span(class="ml10 mr10 u-fz1-5") |] won’t take care of
+                        span #[strong.u-textColor_4 •] Mary is a nice person and very reliable. She also loves cats and Francis hates dogs. He
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir" name="group_input_13_1")
+                        span my dog when I went away on vacation and he
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir" name="group_input_13_1")
+                        span yours.
+
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

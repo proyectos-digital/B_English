@@ -1,0 +1,41 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_7" ng-init="ContadorPalabras(150)")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content")
+            .row
+                p.ta-c.
+                    #[strong You have 20 minutes for this task].#[br]
+                    The first chart below shows the results of a survey which sampled a cross-section of 100,000 people asking if they
+                    traveled abroad and why they traveled for the 1994-1998 time period. The second chart shows their destinations over the same time period.#[br]
+            .row
+                .row
+                    .col.xs12.md6.ta-c
+                        img(src="unit_2/module_5/assets/images/act_7_1.png" alt="" class="u-responsive-img mt30 m-a")
+                    .col.xs12.md6.ta-c
+                        img(src="unit_2/module_5/assets/images/act_7_2.png" alt="" class="u-responsive-img mt30 m-a")
+
+                .row.mt50
+                    h6 Write a report for a university professor describing the information shown above. Minimum 150 words.
+                    div(class="c-wrapTextarea ")
+                        textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0 
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="enviarTexto()" ng-show="enviarMensaje_minPalabras")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

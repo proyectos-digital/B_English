@@ -1,0 +1,38 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_4" ng-init="DragandDrop()")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" )
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h5 Here are some common collocations used when talking about schools and education.
+                span Can you fill the blank with the correct answers from the list below.
+                .row.row-flex.mt30.justify-center
+                    span.dragCont.mb10: .drag.col.xs6.sm4.md2 singles sex
+                    span.dragCont.mb10: .drag.col.xs6.sm4.md2 girls school
+                    span.dragCont.mb10: .drag.col.xs6.sm4.md2 public school
+                    span.dragCont.mb10: .drag.col.xs6.sm4.md2 elementary schools
+                    span.dragCont.mb10: .drag.col.xs6.sm4.md2 private schools
+                    span.dragCont.mb10: .drag.col.xs6.sm4.md2 early years
+                p.mt40.ta-j.
+                    In Colombia, children start their #[span.drop] in nurseries. The most common type of nurseries are community homes sponsored
+                    by the national institute of family welfare. At around age 5 children start #[span.drop]. There are #[span.drop] run by companies and #[span.drop] run by the government. 
+                    High School is the highest level, some high-schools specialize
+                    in teaching some areas such as technical, industrial, comercial, pedagogical, agricultural or social promotion track.
+                    In some some high schools there is separation of the sexes so that schools are #[span.drop], with boys school and #[span.drop].
+                    The universities usually offer 5 year undergraduate degrees followed by masters degrees and PhDs.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

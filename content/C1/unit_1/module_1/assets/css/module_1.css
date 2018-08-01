@@ -1,0 +1,882 @@
+@import url("https://fonts.googleapis.com/css?family=Jua");
+
+.act_1 .c-card-phrasalVerbs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+.act_1 .c-card-phrasalVerbs--header {
+	height: 3rem;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding: 5px;
+	background-color: var(--color_2);
+}
+
+.act_1 .c-card-phrasalVerbs--header-title {
+	color: white;
+}
+
+.act_1 .c-card-phrasalVerbs--body {
+	width: 100%;
+	box-shadow: 0px 2px 9px rgba(0,0,0,0.5);
+}
+
+.act_1 .c-card-phrasalVerbs--body-image {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+}
+
+@media all and (min-width: 1024px) {
+	.act_2 ._phrasal-column {
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+
+.act_3 .c-select {
+	color: white;
+	background-color: var(--color_5);
+}
+
+@media all and (min-width: 600px) {
+	.act_4 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_4 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.act_4 .theNews {
+	padding: 1rem 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 1168.4px;
+	margin: 0 auto;
+}
+
+.act_4 .theNews .paperNews {
+	width: 100%;
+	max-width: 508px;
+	margin: 0 auto;
+	font-size: 0.85rem;
+	line-height: 1.15rem;
+}
+
+.act_4 .theNews .paperNews[layout="grid"] {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 0.5rem;
+	-ms-grid-columns: (minmax(70px,1fr))[6];
+	grid-template-columns: repeat(6,minmax(70px,1fr));
+}
+
+.act_4 .theNews .paperNews[layout="grid"] p {
+	margin-top: 0;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] {
+	-ms-grid-rows: minmax(100px,400px) 90px minmax(100px,auto);
+	grid-template-rows: minmax(100px,400px) 90px minmax(100px,auto);
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block {
+	word-break: break-word;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(1) {
+	grid-column: 1/4;
+	-ms-grid-row: 1;
+	grid-row: 1;
+	position: relative;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(1) figcaption {
+	width: 100%;
+	position: absolute;
+	bottom: 1rem;
+	z-index: 1;
+	padding: 0.5rem;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px black;
+	font-size: 1rem;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(2) {
+	grid-column: 4/7;
+	-ms-grid-row: 1;
+	grid-row: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(3) {
+	grid-column: 1/7;
+	-ms-grid-row: 2;
+	grid-row: 2;
+	padding-bottom: 0.5rem;
+	border-bottom: 1rem solid gray;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(4) {
+	grid-column: 1/4;
+	-ms-grid-row: 3;
+	grid-row: 3;
+}
+
+.act_4 .theNews .paperNews[paperNews="1"] .paperNews-block:nth-child(5) {
+	grid-column: 4/7;
+	-ms-grid-row: 3;
+	grid-row: 3;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block {
+	word-break: break-word;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block p {
+	margin-top: 0;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block:nth-child(1) {
+	grid-column: 1/3;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block:nth-child(2) {
+	grid-column: 3/5;
+}
+
+.act_4 .theNews .paperNews[paperNews="2"] .paperNews-block:nth-child(3) {
+	grid-column: 5/7;
+}
+
+@media all and (min-width: 600px) {
+	.act_7 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_7 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.act_8--newsReport {
+	position: relative;
+	padding: 2rem;
+	background-color: gray;
+	background-image: linear-gradient(0,#ebebec,50%,#f8f8f8,90%,white);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.act_8--newsReport::after {
+	content: "";
+	position: absolute;
+	right: -40px;
+	top: 0;
+	width: 40px;
+	height: 100%;
+	background-color: #fff;
+	background-image: url("../images/act_8_2.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.act_8--newsReport .c-wrapTextarea {
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media all and (min-width: 600px) {
+	.act_8--newsReport {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 70%;
+		flex: 0 0 70%;
+		margin: 0 auto;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_8--newsReport {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		width: 100%;
+	}
+}
+
+.act_10 .c-btn-Icon {
+	background-color: var(--color_5-light);
+}
+
+.act_10 .c-Checkbox {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+@media all and (min-width: 600px) {
+	.act_10 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_10 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		width: 100%;
+		float: left;
+	}
+}
+
+.act_10 .c-inputRadio[type="radio"]:checked + .c-Checkbox .c-btn-Icon {
+	background-color: var(--color_5)!important;
+}
+
+@media all and (min-width: 1024px) {
+	.act_10 .c-inputRadio[name="sel_input_1"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(25% - 10px);
+		flex: 0 0 calc(25% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(25% - 10px);
+		float: left;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.act_10 .c-inputRadio[name="sel_input_3"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+	.act_10 .c-inputRadio[name="sel_input_1"] + .c-Checkbox,.act_10 .c-inputRadio[name="sel_input_2"] + .c-Checkbox,.act_10 .c-inputRadio[name="sel_input_3"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(50% - 10px);
+		flex: 0 0 calc(50% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(50% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_11 ul.puzzleWords {
+		-ms-grid-columns: (33%)[auto-fill];
+		grid-template-columns: repeat(auto-fill,33%);
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 989px) {
+	.act_11 ul.puzzleWords {
+		-ms-grid-columns: (33%)[auto-fill];
+		grid-template-columns: repeat(auto-fill,33%);
+	}
+}
+
+@media all and (min-width: 989px) {
+	.act_11 ul.puzzleWords {
+		grid-gap: 10px;
+		-ms-grid-columns: (calc(50% - 10px))[auto-fill];
+		grid-template-columns: repeat(auto-fill,calc(50% - 10px));
+	}
+}
+
+.act_15 .book {
+	background: url(../images/act_15_1.png) no-repeat;
+	background-size: cover;
+	padding: 12% 25%;
+	line-height: 30px;
+}
+
+.act_18 .drag {
+	padding: 10px;
+	font-size: 0.9rem;
+	min-height: 75px;
+}
+
+.act_18 .dragCont,.act_18 .drop {
+	min-height: 78px;
+	width: 258px;
+}
+
+@media all and (min-width: 320px) {
+	.act_18 .dragCont,.act_18 .drop {
+		width: 100%;
+	}
+}
+
+.act_18 .drop .drag {
+	display: inline-block;
+}
+
+.act_18 .drop .drag::first-letter {
+	text-transform: uppercase;
+}
+
+.act_18 .c-table-estilo_tres {
+	width: 100%;
+}
+
+.act_18 .c-table-estilo_tres tr td:first-child {
+	width: 80%;
+}
+
+.act_18 .c-table-estilo_tres tr td:last-child {
+	width: 20%;
+}
+
+.self_3 .crucigrama {
+	width: auto;
+	display: table;
+	margin-bottom: 50px;
+}
+
+.self_3 .crucigrama tr td {
+	text-align: center;
+	border: none;
+	background-color: transparent;
+	width: 30px!important;
+	height: 30px!important;
+}
+
+.self_3 .crucigrama tr td strong {
+	color: #FFFFFF;
+	width: 32px;
+	height: 35px;
+	padding-top: 6px;
+	display: inline-block;
+	background-color: #8496c5;
+}
+
+.self_3 .crucigrama tr td input {
+	width: 35px;
+	height: 35px;
+	border: 2px solid #27A29B;
+	padding: 0px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+	.self_3 .crucigrama {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+		margin-left: -150px;
+	}
+
+	.self_3 .ml {
+		margin-left: 20px;
+	}
+}
+
+.col_2 .c-wrapTextarea {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.col_2 .c-textarea,.col_2 .c-wrapTextarea {
+	min-height: 3rem;
+}
+
+.col_1 .c-table-estilo_uno tbody th {
+	background-color: white;
+	border: 1px solid #87c5bf;
+	border-right: 7px solid #5f958f;
+}
+
+.col_1 .c-table-estilo_uno tbody tr td:nth-child(1) {
+	text-align: center;
+}
+
+.col_1 .c-table-estilo_uno tbody tr td input {
+	height: 3rem;
+}
+
+.col_1 .c-game {
+	overflow: hidden;
+}
+
+.col_1 .c-game[game='HowIsIt'] {
+	--color_1: #71A97F;
+	position: relative;
+	width: 100%;
+	min-width: 500px;
+	min-height: calc(500px * 0.7025);
+	padding-top: 70.25%;
+	margin: auto;
+	box-shadow: 0px 10px 15px 0px rgba(103,101,101,0.5);
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--error"] {
+	display: none;
+}
+
+.col_1 .c-game[game='HowIsIt'].no-init [game="game--body"],.col_1 .c-game[game='HowIsIt'].no-init [game="game--feedBack"] {
+	display: none;
+}
+
+.col_1 .c-game[game='HowIsIt'].no-init [game="game--notices"] [game="game--error"] {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--bg"],.col_1 .c-game[game='HowIsIt'] [game="game--body"],.col_1 .c-game[game='HowIsIt'] [game="game--content"],.col_1 .c-game[game='HowIsIt'] [game="game--feedBack"],.col_1 .c-game[game='HowIsIt'] [game="game--footer"],.col_1 .c-game[game='HowIsIt'] [game="game--header"],.col_1 .c-game[game='HowIsIt'] [game="game--notices"],.col_1 .c-game[game='HowIsIt'] [game="game--scene"] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--bg"],.col_1 .c-game[game='HowIsIt'] [game="game--content"],.col_1 .c-game[game='HowIsIt'] [game="game--footer"],.col_1 .c-game[game='HowIsIt'] [game="game--header"],.col_1 .c-game[game='HowIsIt'] [game="game--notices"],.col_1 .c-game[game='HowIsIt'] [game="game--scene"] {
+	-webkit-animation: fadeInContent 630ms;
+	animation: fadeInContent 630ms;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes fadeInContent {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack"] {
+	text-align: center;
+	z-index: 4;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-instructions"],.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-selectName"],.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-welcome"],.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-youWin"] {
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	-webkit-animation: fadeInContent 630ms;
+	animation: fadeInContent 630ms;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-instructions"] > img,.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-selectName"] > img,.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-welcome"] > img,.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-youWin"] > img {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-welcome"] {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation: fadeInContent 42ms;
+	animation: fadeInContent 42ms;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	background-color: rgba(251,239,189,0.9);
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-instructions"] {
+	background-color: rgba(251,239,189,0.5);
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-instructions-content"] {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 0.7fr 1.3fr;
+	grid-template-columns: 0.7fr 1.3fr;
+	height: 100%;
+	pointer-events: none;
+	position: relative;
+	z-index: 1;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-instructions-content"] [game="game--feedBack-instructions-content_block"] {
+	padding: 10% 3%;
+	margin: 0;
+	display: -ms-grid;
+	display: grid;
+	grid-auto-rows: 0.5fr 1.3fr;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-instructions-content"] [game="game--feedBack-instructions-content_title"] {
+	font-size: 3vmin;
+	margin: 0;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-instructions-content"] [game="game--feedBack-instructions-content_text"] {
+	font-size: 2.4vmin;
+	font-weight: lighter;
+	margin: 0;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-selectAvatar"] {
+	background-color: rgba(251,239,189,0.5);
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--selectAvatar"] {
+	height: 40%;
+	width: 90%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	z-index: 2;
+	margin: 5% auto;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (1fr)[4];
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 2%;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--selectAvatar"] input[game="game--inputRadio"] {
+	display: none;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--selectAvatar"] input[game="game--inputRadio"]:checked + label,.col_1 .c-game[game='HowIsIt'] [game="game--selectAvatar"] input[game="game--inputRadio"]:hover + label {
+	cursor: pointer;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--selectAvatar"] input[game="game--inputRadio"]:checked + label [game*="game--avatar"],.col_1 .c-game[game='HowIsIt'] [game="game--selectAvatar"] input[game="game--inputRadio"]:hover + label [game*="game--avatar"] {
+	-webkit-filter: none;
+	filter: none;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--selectAvatar"] [game*="game--avatar"] {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-webkit-filter: grayscale(50);
+	filter: grayscale(50);
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--feedBack-inputName"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+	margin: 36% auto;
+	height: 7vmin;
+	width: 47%;
+	border: none;
+	font-size: 3.8vmin;
+	text-align: center;
+	box-shadow: 0 0 24px -2px var(--color_1);
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--notices"] {
+	background-color: rgba(31,31,31,0.5);
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--bg"] {
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game_bg.png");
+	z-index: 0;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--scene"] {
+	height: calc(100% - 13%);
+	z-index: 1;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--scene"] [game*="-three"],.col_1 .c-game[game='HowIsIt'] [game="game--scene"] [game*="-two"] {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 0.7fr 1.3fr;
+	grid-template-columns: 0.7fr 1.3fr;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--scene"] [game*="game--scene-"] {
+	height: 100%;
+	-webkit-animation: fadeInContent 630ms;
+	animation: fadeInContent 630ms;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+@keyframes fadeInContent {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--avatar"] {
+	position: relative;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--avatar-name"] {
+	position: absolute;
+	top: auto;
+	bottom: 12%;
+	left: 0;
+	min-width: 100%;
+	font-size: 3vmin;
+	text-align: center;
+	color: var(--color_1);
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--map"] {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--pista"] {
+	display: -ms-grid;
+	display: grid;
+	grid-auto-columns: 1fr;
+	-ms-grid-rows: 0.5fr 1.5fr 1.3fr;
+	grid-template-rows: 0.5fr 1.5fr 1.3fr;
+	height: 80%;
+	width: 100%;
+	margin: auto;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--pista-opciones"] {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (minmax(1.6em,2.6em))[auto-fill];
+	grid-template-columns: repeat(auto-fill,minmax(1.6em,2.6em));
+	grid-auto-rows: 2.6em;
+	grid-gap: 5%;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--pista-opcion"] {
+	border: none;
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--frase-after.png");
+	background-size: contain;
+	box-shadow: -2px 2px 9px 1px #d4c87f;
+	cursor: pointer;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--pista-frase"] {
+	position: relative;
+	padding-top: 3%;
+	padding-left: 3%;
+	padding-right: 10%;
+	box-shadow: -2px 2px 9px 1px #d4c87f;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--pista-frase"]::after,.col_1 .c-game[game='HowIsIt'] [game="game--pista-frase"]::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	top: 0;
+	background: white;
+	background-size: contain;
+	z-index: -1;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--pista-frase"]::before {
+	width: 10%;
+	right: 0;
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--frase-before.png");
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	-webkit-transform-origin: center;
+	transform-origin: center;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--pista-frase"]::after {
+	width: 90%;
+	left: 0;
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--frase-after.png");
+	background-size: 40px;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--content"] {
+	z-index: 2;
+	font-size: 4vmin;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--notices"] {
+	z-index: 5;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--footer"] {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	height: 13%;
+	top: auto;
+	bottom: 0;
+	z-index: 3;
+	font-size: 2.5vmin;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"] {
+	display: none;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"]:checked + label,.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"]:hover + label {
+	cursor: pointer;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"]:checked + label[game$="btn-one"],.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"]:hover + label[game$="btn-one"] {
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--btn-one_active.png");
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"]:checked + label[game$="btn-two"],.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"]:hover + label[game$="btn-two"] {
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--btn-two_active.png");
+}
+
+.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"]:checked + label[game$="btn-three"],.col_1 .c-game[game='HowIsIt'] [game="game--footer"] input[game="game--inputRadio"]:hover + label[game$="btn-three"] {
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--btn-three_active.png");
+}
+
+.col_1 .c-game[game='HowIsIt'] [game*="game--footer-btn"] {
+	height: 100%;
+	width: 25%;
+	border: none;
+	background-color: transparent;
+	padding-bottom: 0;
+	background-size: 90%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game*="game--footer-btn"] img {
+	max-width: 100%;
+	height: 100%;
+	width: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+.col_1 .c-game[game='HowIsIt'] [game$="btn-one"] {
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--btn-one.png");
+}
+
+.col_1 .c-game[game='HowIsIt'] [game$="btn-two"] {
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--btn-two.png");
+}
+
+.col_1 .c-game[game='HowIsIt'] [game$="btn-three"] {
+	background-image: url("https://bbdigitaldemo.com/00.material_apoyo/games/HowIsIt/game--btn-three.png");
+}

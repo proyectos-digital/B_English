@@ -1,0 +1,40 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                h5 #[strong.u-textColor_4 1. ] Complete the newspaper report choosing verbs from the box and using them in the correct form.
+                div(class="col-flex-xs12 col-flex-md9 col-center mt10-sm mt20-md")
+                    div(class="c-cardGreen"): div(class="c-cardGreenContent flex justify-center align-items-center") Be | Promote | Strike | Fire| Go | Permit
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex fz9 line-h") Yesterday, Congress voted 10 to 2 in favor of  
+                            strong (1) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            | strike. 
+                            br
+                            | By 
+                            strong (2) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            | , they hope to reverse the administrations’ decision to fire staff working for them. Congressmen are very much against 
+                            strong (3) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            | people because of their political views. They strongly believe in 
+                            strong (4) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                            | the free expression of all opinions. They feel that everyone should be able to say what they want without 
+                            strong (5) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                            | afraid of the administration’s reaction. If the Congress succeeds in 
+                            strong (6) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                            | the strike, it will begin next Thursday.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

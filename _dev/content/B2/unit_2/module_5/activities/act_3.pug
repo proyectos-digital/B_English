@@ -1,0 +1,60 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            div(class="row")
+                h6 #[strong.u-textColor_4 1. ] Listen to the conversation. Then match the problems with what had happened.
+
+                div(class="row")
+                    img(src="./unit_2/module_5/assets/images/act_3_1.png", alt="", srcset="" class="u-responsive-img centrado w25")
+                    div(class="row-flex row mt20")
+                        audio(controls class='col-flex-xs12 col-flex-sm8 col-flex-md7 col-center')
+                            source(src='unit_2/module_5/assets/audios/act_3.mp3' type='audio/mpeg') 
+                            | Your browser does not support the audio element.
+            
+            
+                div(class="row mt50")
+                    div(class="col xs12 md8 col-center" data-ejercicio="unir")
+                        div(id="sourceElements" class="ancho280 js-columnas")
+
+                            p(class="mb30 ml100")
+                                strong(class="u-textColor_4-dark u-ta-c") Problem
+                            span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Not many guests arrived
+                            span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") There was no birthday cake
+                            span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") There was nothing to drink
+                            span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") He had no new clothes to wear
+                            span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") There was no music
+                        div(id="linecanvas" style="width: 60px;")
+
+                        div(id="targetElements" class="ancho280 js-columnas") 
+
+                            p(class="mb30 ml50")
+                                strong(class="u-textColor_4-dark") What had happened
+
+                            span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="4") He had forgotten to go clothes shopping.
+                            span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="5") The DJ had had an accident
+                            span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="1") He had forgotten to send out the invitations
+                            span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="3") The shop had run out of beer
+                            span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="2") The bakery had already closed    
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

@@ -1,0 +1,57 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex align-items-center")    
+                         
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    button(class="c-btn-Icon u-bgIconListen centrado" ng-audio="unit_3/module_10/assets/audios/act_18.mp3")
+                    img(src="./unit_3/module_10/assets/images/act_18.png", alt="", srcset="" class="u-responsive-img centrado mt30")
+                    
+                    
+                        
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="mb30")
+                        p #[strong(class="u-textColor_4-dark") 1].   Length of day.
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir row" ng-model="textousuario")
+                    div(class="mb30")
+                        p #[strong(class="u-textColor_4-dark") 2].   Oxygen.
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir row" ng-model="textousuariob")
+                    div(class="mb30")
+                        p #[strong(class="u-textColor_4-dark") 3].   Temperature.
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir row" ng-model="textousuarioc")
+                    div(class="mb30")
+                        p #[strong(class="u-textColor_4-dark") 4].  Weather.
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir row" ng-model="textousuariod")
+                    div(class="mb30")
+                        p #[strong(class="u-textColor_4-dark") 4].  Water.
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir row" ng-model="textousuarioe")
+                    div(class="mb30")
+                        p #[strong(class="u-textColor_4-dark") 4].  Gravity.
+                        input(type="text" placeholder="Text here..." class="c-input js-escribir row" ng-model="textousuariof")
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //-button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")  
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTextoMultiple()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_10/activities/act_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

@@ -1,0 +1,146 @@
+
+
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_12" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            h5.ta-c.u-textColor_2 Asking for information and giving answers about people, places, timetables, facts, activities or events
+            p.ta-c #[strong Normally, when asking for information we have to use a polite tone, especially if we have to interrupt the person]. Depending on the time of the day, you can start off with an appropriate greeting, before asking for the information: #[strong Greeting / afternoon / evening].
+            p.ta-c You can say #[strong ‘excuse me’]  in order to get the person’s attention.
+            p.ta-c #[strong ‘Could’] is also a polite way to request something.
+            .row
+                .col.xs12.md8.col-center
+                    .row-flex.mt30.flex.align-items-center.mt20.justify-around
+                        button(class="c-btn-IconAction u-bgIconListen mr10" ng-audio="unit_2/module_8/assets/audios/act_12_1.mp3")
+                        button(class="c-btn-IconAction u-bgIconListen mr10" ng-audio="unit_2/module_8/assets/audios/act_12_2.mp3")
+                        button(class="c-btn-IconAction u-bgIconListen mr10" ng-audio="unit_2/module_8/assets/audios/act_12_3.mp3")
+                //- .col.xs12.md4
+                //- .col.xs12.md4.flex.align-items-center.mt20
+                //- .col.xs12.md4.flex.align-items-center.mt20
+            .row.mt30
+                h5 #[strong Embarrassment]#[br]
+                p.
+                    Expressing embarrassment is expressing how ashamed one is of or for doing something. #[br]
+                    Here are few expressions:
+            div(class="row row-flex align-items-center justify-center")
+                .col.xs12.md5
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            p.
+                                #[strong Embarrassment] tends to refer to#[strong  socially awkward or uncomfortable contexts].#[br]#[br]
+                                • feel / be (so) embarrassed when / because + explanation#[br]
+                                • feel / be (so) embarrassed to + verb#[br]
+                                • make someone feel ashamed / embarrassed#[br]
+                            div(class="row"): div(class="row row-flex align-items-center justify-center")
+                                .col.xs6.sm4.md6.mt20: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_12_1.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_12_4.mp3" )
+
+                                .col.xs6.sm4.md6.mt20: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_12_2.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_12_5.mp3" )
+
+                .col.xs12.md5.ma-l
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            p.
+                                #[strong Shame] tends to refer to #[strong some sort of guilt or regret].#[br]#[br]
+                                • feel / be (so) ashamed to + verb#[br]
+                                • feel / be (so) ashamed when / because + explanation#[br]
+                            div(class="row"): div(class="row row-flex align-items-center justify-center")
+                                .col.xs6.sm4.md6.mt20: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_12_3.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_12_6.mp3" )
+
+                                .col.xs6.sm4.md6.mt20: div(class="row row-flex align-items-center justify-center")
+                                    img(src="unit_2/module_8/assets/images/act_12_4.png" alt="" class="u-responsive-img m-a")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_2/module_8/assets/audios/act_12_7.mp3" )
+
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            h5.ta-c Based on the images, how would each person feel: embarrassed or ashamed?
+            .row.mt30
+                .col.sm12.md4
+                    .w90.align-items-center
+                        span Being hit the face with a baseball at a national game.
+                        img(src="unit_2/module_8/assets/images/act_12_5.png" alt="" class="u-responsive-img mt30 m-a collection-item")
+                        .row.ta-c.mt10
+                            select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+                                option(value="" disabled selected)
+                                option(value="2") ashamed
+                                option(value="1") embarrassed
+                .col.sm12.md4
+                    .w95.col.align-items-center
+                        span Falling on the runway at a fashion show
+                        img(src="unit_2/module_8/assets/images/act_12_6.png" alt="" class="u-responsive-img mt45 m-a collection-item")
+                        .row.ta-c.mt10
+                            select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+                                option(value="" disabled selected)
+                                option(value="1") ashamed
+                                option(value="2") embarrassed
+                .col.sm12.md4
+                    .w95.col.align-items-center
+                        span.ta-c A father dancing while wearing a pink tutu.
+                        img(src="unit_2/module_8/assets/images/act_12_7.png" alt="" class="u-responsive-img mt45 m-a collection-item")
+                        .row.ta-c.mt10
+                            select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+                                option(value="" disabled selected)
+                                option(value="1") ashamed
+                                option(value="2") embarrassed
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 3")
+            h5.ta-c Based on the images, how would each person feel: embarrassed or ashamed?
+            .row.mt30
+                .col.sm12.md4
+                    .w95.align-items-center
+                        span Getting caught on camera accepting a bribe.
+                        img(src="unit_2/module_8/assets/images/act_12_8.png" alt="" class="u-responsive-img m-a mt30 collection-item")
+                        .row.ta-c.mt10
+                            select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+                                option(value="" disabled selected)
+                                option(value="1") ashamed
+                                option(value="2") embarrassed
+                .col.sm12.md4
+                    .w95.align-items-center
+                        span The wind blowing up your skirt in public
+                        img(src="unit_2/module_8/assets/images/act_12_9.png" alt="" class="u-responsive-img m-a mt30 collection-item")
+                        .row.ta-c.mt10
+                            select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+                                option(value="" disabled selected)
+                                option(value="2") ashamed
+                                option(value="1") embarrassed
+                .col.sm12.md4
+                    .w95.align-items-center
+                        span Getting caught cheating on exam.
+                        img(src="unit_2/module_8/assets/images/act_12_10.png" alt="" class="u-responsive-img m-a mt30 collection-item")
+                        .row.ta-c.mt10
+                            select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+                                option(value="" disabled selected)
+                                option(value="2") ashamed
+                                option(value="1") embarrassed
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" ng-click="reloadSelectOption()")
+        //- button(class="c-btn-IconAction u-bgIconCheck"  ng-show="s_actividad == 2" ng-click="selectOption()")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 3" ng-click="reloadSelectOption()")
+        button(class="c-btn-IconAction u-bgIconCheck"  ng-show="s_actividad == 3" ng-click="selectOption()")
+
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next');

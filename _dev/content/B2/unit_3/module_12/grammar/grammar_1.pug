@@ -1,0 +1,99 @@
+gylp//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex col-center mt50-xs mt100-md")
+                table(class="c-table-estilo_tres row")
+                        thead
+                            tr
+                                th Modal Verb
+                                th Use
+                                th Example
+                        tbody
+                            tr
+                                td(class="ta-c" rowspan="2") Must
+                                td(class="ta-c") Strong obligation
+                                td(class="ta-c") You must repect the elderly. 
+
+                            tr
+                                td(class="ta-c") Logical conclusion / certainty
+                                td(class="ta-c") She must be sick. She had a fever yesterday.
+                                
+                                
+                            tr
+                                td(class="ta-c") Must not
+                                td(class="ta-c") Prohibition
+                                td(class="ta-c") You musn’t drive without a drivers’ license 
+                            tr
+                                td(class="ta-c" rowspan="3") Can
+                                td(class="ta-c") Ability
+                                td(class="ta-c") I can swim very well.
+                            tr
+                                td(class="ta-c") Permission
+                                td(class="ta-c") Yes, you can use the dictionary in the test.
+                            tr
+                                td(class="ta-c") Possibility
+                                td(class="ta-c") When you are in Cali, you can go to the Pance river.
+                            
+                            tr
+                                td(class="ta-c" rowspan="3") Could
+                                td(class="ta-c") Ability in the past
+                                td(class="ta-c") I could roller skate when I was a kid.
+                            tr
+                                td(class="ta-c") Polite permission
+                                td(class="ta-c") Could I ask you a question?
+                            tr
+                                td(class="ta-c") Possibility
+                                td(class="ta-c") We could go to the disco instead.
+
+                            tr
+                                td(class="ta-c" rowspan="2") May
+                                td(class="ta-c") Permission
+                                td(class="ta-c") May I answer the mobile?
+
+                            tr
+                                td(class="ta-c") Possibility, probability
+                                td(class="ta-c") It may rain tonight.
+
+                            tr
+                                td(class="ta-c" rowspan="2") Might
+                                td(class="ta-c") Polite permission
+                                td(class="ta-c") Might I take the book now?
+
+                            tr
+                                td(class="ta-c") Possibility, probability
+                                td(class="ta-c") They might have forgotten.
+
+                            tr
+                                td(class="ta-c" rowspan="3") Should / ought to
+                                td(class="ta-c") 50 % obligation
+                                td(class="ta-c") You should pay before spending.
+
+                            tr
+                                td(class="ta-c") Advice
+                                td(class="ta-c") You should go to the doctor.
+                            tr
+                                td(class="ta-c") Logical conclusion
+                                td(class="ta-c") That should be the reason!
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        //- button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

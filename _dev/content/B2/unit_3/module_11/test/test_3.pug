@@ -1,0 +1,96 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="col-flex-xs11 col-flex-md9 col-center pb30")
+                    div(class="row-flex row")
+                        div(class="mr10 dragCont"): div(class="drag") that´s
+                        div(class="mr10 dragCont"): div(class="drag") whose
+                        div(class="mr10 dragCont"): div(class="drag") party
+                        div(class="mr10 dragCont"): div(class="drag") to
+                        div(class="mr10 dragCont"): div(class="drag") the girl
+                        div(class="mr10 dragCont"): div(class="drag") we went
+                    div(class="row-flex row")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                div(class="col-flex-xs11 col-flex-md9 col-center pb30")
+                    div(class="row-flex row")
+                        div(class="mr10 dragCont"): div(class="drag") where
+                        div(class="mr10 dragCont"): div(class="drag") a city
+                        div(class="mr10 dragCont"): div(class="drag") a lot
+                        div(class="mr10 dragCont"): div(class="drag") Bogota
+                        div(class="mr10 dragCont"): div(class="drag") happens
+                        div(class="mr10 dragCont"): div(class="drag") is
+                    div(class="row-flex row")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                div(class="col-flex-xs11 col-flex-md9 col-center pb30")
+                    div(class="row-flex row")
+                        div(class="mr10 dragCont"): div(class="drag") whom
+                        div(class="mr10 dragCont"): div(class="drag") the pleasure
+                        div(class="mr10 dragCont"): div(class="drag") of speaking?
+                        div(class="mr10 dragCont"): div(class="drag") will I
+                        div(class="mr10 dragCont"): div(class="drag") to
+                        div(class="mr10 dragCont"): div(class="drag") have
+                    div(class="row-flex row")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                div(class="col-flex-xs11 col-flex-md9 col-center pb30")
+                    div(class="row-flex row")
+                        div(class="mr10 dragCont"): div(class="drag") where
+                        div(class="mr10 dragCont"): div(class="drag") I can´t
+                        div(class="mr10 dragCont"): div(class="drag") I
+                        div(class="mr10 dragCont"): div(class="drag") remember
+                        div(class="mr10 dragCont"): div(class="drag") put
+                        div(class="mr10 dragCont"): div(class="drag") the report
+                    div(class="row-flex row")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                div(class="col-flex-xs11 col-flex-md9 col-center pb30")
+                    div(class="row-flex row")
+                        div(class="mr10 dragCont"): div(class="drag") whose
+                        div(class="mr10 dragCont"): div(class="drag") an actress
+                        div(class="mr10 dragCont"): div(class="drag") worth watching
+                        div(class="mr10 dragCont"): div(class="drag") are always
+                        div(class="mr10 dragCont"): div(class="drag") she is
+                        div(class="mr10 dragCont"): div(class="drag") movies
+                    div(class="row-flex row")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+                        div(class="drop mr10")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

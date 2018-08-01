@@ -1,0 +1,199 @@
+.u-bgTemplate {
+	background-image: url(../images/wel_bg.jpg);
+	background-color: #ff5252;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.c-green {
+	background: #87c5bf!important;
+	color: #22645B;
+}
+
+.c-blue {
+	background: #b5c6f8!important;
+	color: #3e538c;
+}
+
+.c-green-text {
+	background: #87c5bf!important;
+	color: #ffffff;
+	font-weight: 500;
+	padding: 20px;
+	text-align: justify;
+}
+
+.c-blue-text {
+	background: #b5c6f8!important;
+	color: #ffffff;
+	font-weight: 600;
+	padding: 10px;
+	text-align: center;
+}
+
+.line-h {
+	line-height: 40px!important;
+}
+
+.line-h1 {
+	line-height: 30px!important;
+}
+
+.absol-mod2-self {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	color: #969696;
+}
+
+@media (min-width: 992px) {
+	.act_7 .c-Checkbox.col-flex-md4 {
+		margin-right: 5px;
+		-webkit-box-flex: calc(33.33333% - 5px);
+		-ms-flex: calc(33.33333% - 5px);
+		flex: calc(33.33333% - 5px);
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.act_12 .c-Checkbox {
+		-webkit-box-flex: 100%;
+		-ms-flex: 100%;
+		flex: 100%;
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 992px) {
+	.act_12 .c-Checkbox {
+		margin-right: 5px;
+		-webkit-box-flex: calc(33.33333% - 5px);
+		-ms-flex: calc(33.33333% - 5px);
+		flex: calc(33.33333% - 5px);
+		width: calc(33.33333% - 5px);
+	}
+}
+
+@media screen and (min-width: 993px) {
+	.act_12 .c-Checkbox {
+		margin-right: 10px;
+		-webkit-box-flex: calc(33.33333% - 10px);
+		-ms-flex: calc(33.33333% - 10px);
+		flex: calc(33.33333% - 10px);
+		width: calc(33.33333% - 10px);
+	}
+}
+
+.act_10 .dragm2 {
+	display: inline-block;
+}
+
+.act_10 .dragm2::first-letter {
+	text-transform: capitalize;
+}
+
+.act_12 .c-Checkbox span {
+	display: inline-block;
+}
+
+.act_12 .c-Checkbox span::first-letter {
+	text-transform: capitalize;
+}
+
+.act_15 .treeItem,.act_15 .treeItem_hi,.act_15 .treeItem_set {
+	position: relative;
+	overflow: hidden;
+	height: 100px;
+}
+
+.act_15 .treeItem_hi img,.act_15 .treeItem_set img,.act_15 .treeItem img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	height: 130px;
+}
+
+@media all and (min-width: 600px) {
+	.self_3 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.self_3 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 90%;
+		flex: 0 0 90%;
+		margin: .5rem auto;
+		width: 90%;
+		float: left;
+	}
+}
+
+.self_5 .dragCont,.self_5 .drop {
+	width: 250px;
+}
+
+@media all and (max-width: 599px) {
+	.self_5 .dragCont,.self_5 .drop {
+		width: 200px;
+		font-size: 0.9rem;
+	}
+}
+
+.self_7 .dragCont,.self_7 .drop {
+	width: 165px;
+	height: 110px;
+}
+
+@media all and (max-width: 599px) {
+	.self_7 .dragCont,.self_7 .drop {
+		width: 145px;
+		height: 96px;
+	}
+}
+
+.self_8 .drag {
+	height: 87px;
+}
+
+.self_8 .dragCont,.self_8 .drop {
+	width: 45%;
+	height: 90px;
+}
+
+@media all and (max-width: 599px) {
+	.self_8 .dragCont,.self_8 .drop {
+		height: 96px;
+	}
+}
+
+.self_8 .ui-sortable--item {
+	height: 3rem;
+	width: 80%;
+	max-width: 700px;
+	padding: .5em;
+}
+
+@media all and (max-width: 599px) {
+	.self_8 .ui-sortable--item {
+		width: 90%;
+		min-height: 3.5rem;
+	}
+}
+
+.col_1 #sourceElements > [class*="tree"] {
+	padding: 0;
+}

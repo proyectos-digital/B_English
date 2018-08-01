@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+$MultimediaImages   : '../images/';
+
+.col_1{
+    .gallery__audios{
+        display: grid;
+        grid-template-columns: 70px repeat(4, minmax(150px, 1fr));
+        grid-auto-rows: calc(var(--size-uiBtns) * 2);
+        grid-gap: 0.5em;
+        max-width: 80%;
+        width: 100%;
+        &--text{
+            margin-right: 0.5rem;
+        }
+        &--item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            background-color: var(--color_4-lighter);
+        }
+    }
+}
+
+.col_3{
+    .c-Checkbox{
+        width: 100%;
+    }
+    @media all and (min-width:600px) {
+        .c-Checkbox.checkbox-mini{
+            flex: 0 0 calc(33% - 10px);
+            margin: 0 auto;
+            float: left;
+        }
+    }
+    @media all and (max-width:599px) {
+        .c-Checkbox.checkbox-mini{
+            flex: 0 0 100%;
+            margin: .5rem auto;
+            width: 100%;
+            float: left;
+        }
+    }
+}
+
+.col_4{
+    .c-cardBlue{
+        height: 140px;
+    }
+}

@@ -1,0 +1,231 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_2" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="4" ng-click="s_actividad = 4" ng-class="(s_actividad == 4) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="5" ng-click="s_actividad = 5" ng-class="(s_actividad == 5) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a" ng-init="girarCartas()")
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            div.row
+                h5 Find the two activities that go together.
+
+            div.flip_card-container.mt40-md
+                div(class="flip_card-row flipGrid")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_1.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_2.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Grate
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_3.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Simmer
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content  Slice
+
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Chop
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_4.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Grill
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_5.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_6.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content carve
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div.row
+                h5 Find the two activities that go together.
+
+            div.flip_card-container.mt40-md
+                div(class="flip_card-row flipGrid")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_7.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_8.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Knead
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_9.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content cut
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content  measure
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Layer
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_10.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Dip
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_11.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_12.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Spread
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 3")
+            div.row
+                h5 Find the two activities that go together.
+
+            div.flip_card-container.mt40-md
+                div(class="flip_card-row flipGrid")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_13.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_14.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content fry
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_15.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Melt
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content  Stir
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Blend
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_16.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Pinch
+                        div(class="flip_card col-center" pareja="5")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_17.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="6")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_18.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Sift
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 4")
+            div.row
+                h5 Find the two activities that go together.
+
+            div.flip_card-container.mt40-md
+                div(class="flip_card-row flipGrid")
+                    div(class="flip_card col-center" pareja="1")
+                        div(class="flip_front")
+                        div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_19.png", alt="myColombia")
+                    div(class="flip_card col-center" pareja="2")
+                        div(class="flip_front")
+                        div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_20.png", alt="myColombia")
+                    div(class="flip_card col-center" pareja="3")
+                        div(class="flip_front")
+                        div(class="flip_back"): p.flip_card-content Pour
+                    div(class="flip_card col-center" pareja="3")
+                        div(class="flip_front")
+                        div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_21.png", alt="myColombia")
+                    div(class="flip_card col-center" pareja="2")
+                        div(class="flip_front")
+                        div(class="flip_back"): p.flip_card-content squeeze
+                    div(class="flip_card col-center" pareja="1")
+                        div(class="flip_front")
+                        div(class="flip_back"): p.flip_card-content  Mince
+                    div(class="flip_card col-center" pareja="6")
+                        div(class="flip_front")
+                        div(class="flip_back"): p.flip_card-content mash
+                    div(class="flip_card col-center" pareja="4")
+                        div(class="flip_front")
+                        div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_22.png", alt="myColombia")
+                    div(class="flip_card col-center" pareja="4")
+                        div(class="flip_front")
+                        div(class="flip_back"): p.flip_card-content Boil
+                    div(class="flip_card col-center" pareja="5")
+                        div(class="flip_front")
+                        div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_23.png", alt="myColombia")
+                    div(class="flip_card col-center" pareja="6")
+                        div(class="flip_front")
+                        div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_24.png", alt="myColombia")
+                    div(class="flip_card col-center" pareja="5")
+                        div(class="flip_front")
+                        div(class="flip_back"): p.flip_card-content Steam
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 5")
+            div.row
+                h5 Find the two activities that go together.
+
+            div.flip_card-container.mt40-md
+                div(class="flip_card-row flipGrid")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_25.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_26.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Strain
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Roll
+                        div(class="flip_card col-center" pareja="2")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Broil
+                        div(class="flip_card col-center" pareja="3")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_27.png", alt="myColombia")
+                        div(class="flip_card col-center" pareja="1")
+                            div(class="flip_front")
+                            div(class="flip_back"): p.flip_card-content Scramble
+                        div(class="flip_card col-center" pareja="4")
+                            div(class="flip_front")
+                            div(class="flip_back"): img(class="u-responsive-img flip_card-content" src="unit_1/module_2/assets/images/col_2_28.png", alt="myColombia")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadCartas()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarWordFind")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/jquery.flip.min.js")

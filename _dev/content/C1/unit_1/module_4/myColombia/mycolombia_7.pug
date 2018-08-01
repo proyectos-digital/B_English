@@ -1,0 +1,53 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_7")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Picture Stories
+           
+            .row-flex.mt50
+                
+                .col.xs6
+                    p #[strong.u-textColor_4 •]  What does the picture show?, explain the significance of this event in Colombia. Record your answer.
+                    .row.align-items-center.flex.ta-c.mt30
+                        .col.xs6.md4.ta-r
+                            img(class="responsive-img w100" src="unit_1/module_4/assets/images/col_7_1.png", alt="myColombia")
+                        .col.xs6.md8
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod4_mycol7a',1)"): +ngRecorder
+                .col.xs6
+                    p #[strong.u-textColor_4 •] What does the picture show?, explain the significance of this event in Colombia. Record your answer.
+                    .row.align-items-center.flex.ta-c.mt30
+                        .col.xs6.md4.ta-r
+                            img(class="responsive-img w100" src="unit_1/module_4/assets/images/col_7_2.png", alt="myColombia")
+                        .col.xs6.md8
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt1_mod4_mycol7b',2)"): +ngRecorder
+                
+                .col.xs6
+                    p #[strong.u-textColor_4 •] What does the picture show?, explain the significance of this event in Colombia. Record your answer.
+                    .row.align-items-center.flex.ta-c.mt30
+                        .col.xs6.md4.ta-r
+                            img(class="responsive-img w100" src="unit_1/module_4/assets/images/col_7_3.png", alt="myColombia")
+                        .col.xs6.md8
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt1_mod4_mycol7c',3)"): +ngRecorder
+
+                .col.xs6
+                    p #[strong.u-textColor_4 •] What does the picture show?, explain the significance of this event in Colombia. Record your answer. 
+                    .row.align-items-center.flex.ta-c.mt30
+                        .col.xs6.md4.ta-r
+                            img(class="responsive-img w100" src="unit_1/module_4/assets/images/col_7_4.png", alt="myColombia")
+                        .col.xs6.md8
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt1_mod4_act17d',4)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

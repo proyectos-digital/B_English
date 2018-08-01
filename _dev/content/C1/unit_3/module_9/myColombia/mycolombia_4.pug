@@ -1,0 +1,122 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_4")
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-init="DragandDrop()")
+            div(class="row mt40-xs mt20-md")
+                h5 Fill in the blank space with the appropriate collocation from the table below.
+            div(class="row-flex mt40")
+                div(class="col-flex-xs12")
+                    div(class="row-flex justify-around"): div(class="col-flex-xs12 col-flex-sm9 col-flex-md9 col-center")
+                        div(class="row row-flex justify-center")
+                            div(class="dragCont ml5"): div(class="drag") must have
+                            div(class="dragCont ml5"): div(class="drag") slave to fashion
+                            div(class="dragCont ml5"): div(class="drag") old fashioned
+                            div(class="dragCont ml5"): div(class="drag") get dressed up
+                            div(class="dragCont ml5"): div(class="drag") fashion icons
+                            div(class="dragCont ml5"): div(class="drag") smart clothes
+                            div(class="dragCont ml5"): div(class="drag") well dressed
+                            div(class="dragCont ml5"): div(class="drag") takes a lot of pride in her appearance
+                            div(class="dragCont ml5"): div(class="drag") vintage clothes
+                            div(class="dragCont ml5"): div(class="drag") timeless
+                            div(class="dragCont ml5"): div(class="drag") designer labels
+                    div(class="row mt20")
+                        table(class="c-table-default")
+                            thead
+                            tbody
+                                tr
+                                    td: strong 1.
+                                    td.
+                                        I cannot resist the new spring collection of sweaters I am
+                                        #[strong (1) ]
+                                        #[span(class="drop")]
+                                        .
+
+                                tr
+                                    td: strong 2.
+                                    td.
+                                        I like the way Martin takes pride in his appearance he is always so
+                                        #[strong (2) ]
+                                        #[span(class="drop")]
+                                        .
+
+                                tr
+                                    td: strong 3.
+                                    td.
+                                        Maria does always wear the latest fashion trends, the girls at work are mean to her, they say her clothes are
+                                        #[strong (3)]
+                                        #[span(class="drop")]
+                                        but I think it’s #[strong (4)] #[span(class="drop")].
+
+                                tr
+                                    td: strong 4.
+                                    td.
+                                        Julian also has a fresh haircut and is so well dressed, he
+                                        #[strong (5)]
+                                        #[span(class="drop")]
+                                        .
+
+                                tr
+                                    td: strong 5.
+                                    td.
+                                        My wife loves to
+                                        #[strong (6)]
+                                        #[span(class="drop")]
+                                        for dinner parties and nights out on the town.
+
+
+                                tr
+                                    td: strong 6.
+                                    td.
+                                        We can dress casually at work but we must wear
+                                        #[strong (7)]
+                                        #[span(class="drop")]
+                                        to attend meetings.
+
+                                tr
+                                    td: strong 7.
+                                    td.
+                                        There are some well known musicians in Colombia, whatever they wear becomes the new trend, they are
+                                        #[strong (8)]
+                                        #[span(class="drop")].
+
+                                tr
+                                    td: strong 8.
+                                    td.
+                                        This blouse looked fashionable ten years ago and it looks fashionable today. It is a
+                                        #[strong (9)]
+                                        #[span(class="drop")]
+                                        piece of clothing.
+
+
+                                tr
+                                    td: strong 9.
+                                    td.
+                                        Everybody has the new choker necklaces. It is new
+                                        #[strong (10)]
+                                        #[span(class="drop")]
+                                        accessory  this summer.
+
+
+                                tr
+                                    td: strong 10.
+                                    td.
+                                        Juan does not care who makes his jackets as long as he gets them cheap. He does not buy
+                                        #[strong (11)]
+                                        #[span(class="drop")]
+                                        or generic brands.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

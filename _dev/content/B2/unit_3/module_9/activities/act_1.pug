@@ -1,0 +1,97 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                h5 #[strong.u-textColor_4 1. ] Watch the video:
+
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md5 col-center") 
+                        div(class="row-flex justify-center mt20 mb20"): div(class="col md11"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                            source(src="unit_3/module_9/assets/videos/act_1.mp4" type="video/mp4")
+                            | Your browser does not support the video tag.
+
+                        div(class="row"): div(class="col-flex-sm10 col-center")
+                            h6 Read the sentences. Pay attention to the words in bold. 
+                            p(class="mt20")
+                                | Families 
+                                strong that have more than two children 
+                                | will be a priority. Apartments 
+                                strong that are located 
+                                | on the third and fourth floors will be assigned first. People 
+                                strong who are older than 65 
+                                | will receive apartments on the ground floor. The same principle applies to 
+                                strong people who have 
+                                | physical limitations.
+
+                    div(class="col-flex-sm12 col-flex-md6 offset-md1 col-center") 
+                        div(class="row")
+                            h6 The following exercise will help you identify the relative clauses. The first one is an example:
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 1.
+                                |   Look out! There’s the dog that bit my brother.
+                                strong  / Which dog?
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir" value="the one that is there.")
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 2.
+                                |  The movie that we saw last week was awful.
+                                strong  / What movie?
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 3.
+                                |  Let's go to a country where we can ski.
+                                strong  / Which country?
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+
+                        div(class="row mt20")
+                            p 
+                                strong(class="u-textColor_4-dark") 4.
+                                |  The hotel in which we stayed in wasn't bad.
+                                strong  / Which hotel?
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 5.
+                                |  That is the bag that I want!
+                                strong    / Which bag?
+                                br
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 6.
+                                |  A seaman is someone who works on a ship
+                                strong  / Which person?
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

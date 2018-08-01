@@ -1,0 +1,89 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md5 col-center mt10-sm mt20-md")
+                        div(class="row mb20")
+                            ol(class="c-listDefault")
+                                li(class="u-textColor_4")
+                                    span(class="u-textColor_1-dark")
+                                        span Which of the statements is correct when talking about the past?
+                            div(class="row-flex mt20")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                                label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='In the past, I would be a piano teacher.'") In the past, I would be a piano teacher.
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                                label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='In the past, I would call my mother on weekends.'") In the past, I would call my mother on weekends.
+                        |
+                        div(class="row mb20")
+                            ol(class="c-listDefault")
+                                li(class="u-textColor_4")
+                                    span(class="u-textColor_1-dark")
+                                        span I
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_b")
+                                        span have a fancy sports car when I was younger.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                                label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='would'") would
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                                label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='used to'") used to
+                        |
+                        div(class="row mb20")
+                            ol(class="c-listDefault")
+                                li(class="u-textColor_4")
+                                    span(class="u-textColor_1-dark")
+                                        span He
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_c")
+                                        span be a psychologist, but now he is retired.
+                            div(class="row-flex justify-around")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                                label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='would'") would
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                                label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='used to'") used to
+                        |
+                div(class="col-flex-xs12 col-flex-md5 offset-md1 col-center mt10-sm mt20-md")
+                        div(class="row mb20")
+                            ol(class="c-listDefault")
+                                li(class="u-textColor_4")
+                                    span(class="u-textColor_1-dark")
+                                        span In the past, she
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_d")
+                                        span take the garbage outside every week. Now, her husband does it for her.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                                label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='would'") would
+                                input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                                label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='will'") will
+                        |
+                        div(class="row mb20")
+                            ol(class="c-listDefault")
+                                li(class="u-textColor_4")
+                                    span(class="u-textColor_1-dark")
+                                        span I remember when my brother
+                                        span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_e")
+                                        span buy me a new video game for every one of my birthdays.
+                            div(class="row-flex justify-around")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                                label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='would'") would
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                                label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e=' used'") used
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

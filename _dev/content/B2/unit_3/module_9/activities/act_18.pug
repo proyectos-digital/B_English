@@ -1,0 +1,128 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                h6 Which sentence is correct?
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm12 col-flex-md5 col-center")
+                        
+                        div(class="row-flex flex-column mt40")
+                            p
+                                strong(class="u-textColor_4-dark") 1.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_1" name="selInputRadio_1" value="1")
+                                label(for="inputRadio_1" class="c-Checkbox"): span I will be here as long as he will be here.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_2" name="selInputRadio_1" value="2")
+                                label(for="inputRadio_2" class="c-Checkbox"): span I will be here as long as he is here.
+
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_3" name="selInputRadio_1" value="3")
+                                label(for="inputRadio_3" class="c-Checkbox"): span I will be here as long as he will here. 
+
+
+                        div(class="row-flex flex-column mt40")
+                            p
+                                strong(class="u-textColor_4-dark") 3.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_4" name="selInputRadio_2" value="1")
+                                label(for="inputRadio_4" class="c-Checkbox"): span Providing you are have a good credit score, you can borrow the money.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_5" name="selInputRadio_2" value="2")
+                                label(for="inputRadio_5" class="c-Checkbox"): span Providing you have a good credit score, you can borrow the money.
+
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_6" name="selInputRadio_2" value="3")
+                                label(for="inputRadio_6" class="c-Checkbox"): span Providing you will have a good credit score, you can borrow the money.
+
+
+                        div(class="row-flex flex-column mt40")
+                            p
+                                strong(class="u-textColor_4-dark") 5.
+                                |  What's another way to say "You can join us if you contribute."?
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_7" name="selInputRadio_3" value="1")
+                                label(for="inputRadio_7" class="c-Checkbox"): span Provided you join us, you can contribute.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_8" name="selInputRadio_3" value="2")
+                                label(for="inputRadio_8" class="c-Checkbox"): span You can join us provided you contribute.
+
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_9" name="selInputRadio_3" value="3")
+                                label(for="inputRadio_9" class="c-Checkbox"): span You can join us provided you will contribute.
+                                
+
+                    div(class="col-flex-sm12 col-flex-md5 col-center") 
+
+                        div(class="row-flex flex-column mt40")
+                            p
+                                strong(class="u-textColor_4-dark") 2.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_10" name="selInputRadio_4" value="1")
+                                label(for="inputRadio_10" class="c-Checkbox"): span I'll come to the "Subienda Festival" provided you're there.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_11" name="selInputRadio_4" value="2")
+                                label(for="inputRadio_11" class="c-Checkbox"): span I'll come to the "Subienda Festival" provided you'll there.
+
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_12" name="selInputRadio_4" value="3")
+                                label(for="inputRadio_12" class="c-Checkbox"): span I'll come to the "Subienda Festival" provided you'll be there.
+
+
+                        div(class="row-flex flex-column mt40")
+                            p
+                                strong(class="u-textColor_4-dark") 4.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_13" name="selInputRadio_5" value="1")
+                                label(for="inputRadio_13" class="c-Checkbox"): span You can take the day off as long as you promise to come in early on Monday.
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_14" name="selInputRadio_5" value="2")
+                                label(for="inputRadio_14" class="c-Checkbox"): span You can take the day off as long as early on Monday.
+
+                            
+                            span(class="c-textField")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_15" name="selInputRadio_5" value="3")
+                                label(for="inputRadio_15" class="c-Checkbox"): span You can take the day off as long as you will promise to come in early on Monday.
+
+                            
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconInfoActivity is-active openNotice" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/activities/act_18_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

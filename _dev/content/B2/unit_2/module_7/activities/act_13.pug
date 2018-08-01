@@ -1,0 +1,76 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    div(class="row")                   
+                        h5 Read and choose the right word to complete the story.
+                    div(class="col xs12 md6")
+                        
+                        div(class="col x8 md10 col-center ta-c mt30 mb30")
+                            img(src="unit_2/module_7/assets/images/act_13.png", alt="act_13" class="u-responsive-img m-a")
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+                            p
+                                strong: span(class="u-textColor_2") Alex:  
+                                span Where is Mary?
+                            p
+                                strong: span(class="u-textColor_5") Jorge:  
+                                span Mary #[strong insisted on taking] the bus instead of a taxi.
+                            p
+                                strong: span(class="u-textColor_2") Alex:  
+                                span That is a problem. She always #[strong objects to taking ]public transportation.
+                            p
+                                strong: span(class="u-textColor_5") Jorge:  
+                                span Well, may be she is #[strong fed up with dealing] with full buses all the time!
+                            p
+                                strong: span(class="u-textColor_2") Alex:  
+                                span I just hope she #[strong succeeded in finding] an empty cab. This is rush hour!
+                            p
+                                strong: span(class="u-textColor_5") Jorge:  
+                                span Me too! Otherwise she is going to have to go #[strong into jogging]. Hahaha.
+                            
+                            
+                    div(class="col xs12 md6")
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+                            h5(class="mb50 mt30") Complete the sentences.
+
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 1].  Happiness consists largely in #[strong (have)]  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] true friends.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 2].  About two-thirds of Americans object to online #[strong (track)] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] by advertisers.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 3]. I look forward to #[strong (pick)] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] up my new computer.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 4]. He insisted on #[strong (go)] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] to the movies, despite the cold weather.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5].  I don’t think I can cope with your #[strong (complain)] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]anymore.
+                           
+
+                        
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_13_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

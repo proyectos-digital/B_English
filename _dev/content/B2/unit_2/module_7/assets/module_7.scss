@@ -1,0 +1,213 @@
+.act_1{
+    .italicFont{
+     font-style: italic;
+     font-size: 0.9rem
+    }
+    
+ }  
+ .act_2{
+    .lh-20{
+     line-height: 25px
+    }
+    
+}
+  
+ .act_5{
+    $heightDrag: 2rem;
+    $widthDrag: 120px;
+    ._draggableImg{
+        width: 180px;
+        @media all and (max-width:599px) {
+            width: 200px;
+        }
+    }
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+    }
+    .drop{
+        position: absolute;
+        top: auto;
+        bottom: -10px;
+        left: auto;
+        right: 30px;
+    }
+    .drop, .dragCont{
+        width: $widthDrag;
+        height: $heightDrag;
+        height: $heightDrag;
+        @media all and (max-width:599px) {
+            // width: 145px;
+        }
+        
+    }
+}
+
+.act_8{
+    $heightDrag: 3rem;
+    $widthDrag: 120px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+    }
+    .drop{
+        
+    }
+    .drop, .dragCont{
+        min-width: $widthDrag;
+        height: $heightDrag;
+        height: $heightDrag;
+        @media all and (max-width:599px) {
+            // width: 145px;
+        }
+        
+    }
+}  
+
+.act_15{
+    $heightDrag: 3rem;
+    $widthDrag: 120px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+    }
+    .drop{
+        
+    }
+    .drop, .dragCont{
+        min-width: $widthDrag;
+        height: $heightDrag;
+        height: $heightDrag;
+        
+    }
+}  
+
+.act_17{
+    .flip_card{
+        @media all and (max-width:599px) {
+            width: 120px;
+            height: 164px;
+            font-size: 0.8rem;
+        }
+        @media all and (min-width:600px) and (max-width:1023px) {
+            width: 130px;
+            height: 174px;
+        }
+        @media all and (min-width:1024px) {
+            width: 140px;
+            height: 184px;
+        }
+    }
+}
+
+
+.test_1{
+    $heightDrag: 2rem;
+    $widthDrag: 150px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+    }
+    ._dropCont{
+        position: relative;
+        width: 90%;
+        min-height: 90%;
+        box-shadow: 0 0 0 1px #8496c5;
+        padding: .5rem 1rem 1rem;
+        font-size: 0.8rem;
+        background-color: rgba(132, 150, 197, 0.61);
+    }
+    .drop{
+        position: absolute;
+        top: auto;
+        bottom: -1rem;
+        left: auto;
+        right: 0;
+    }
+    .drop, .dragCont{
+        min-width: $widthDrag;
+        height: $heightDrag;
+    }
+}  
+
+.test_3{
+    $heightDrag: 2rem;
+    $widthDrag: 120px;
+
+    .drag{
+        height: calc(#{$heightDrag} - 4px);
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+    }
+    ._dropCont{
+        position: relative;
+        width: 90%;
+        min-height: 90%;
+        box-shadow: 0 0 0 1px #8496c5;
+        padding: .5rem 1rem 1rem;
+        font-size: 0.8rem;
+        background-color: rgba(132, 150, 197, 0.61);
+    }
+    .drop{
+        position: absolute;
+        top: auto;
+        bottom: -1rem;
+        left: auto;
+        right: 0;
+    }
+    .drop, .dragCont{
+        min-width: $widthDrag;
+        height: $heightDrag;
+    }
+}  
+
+.test_5{
+    @media all and (min-width:600px) {
+        .c-CheckSelected{
+            flex: 0 0 calc(33% - 10px);
+            margin: 0 auto;
+            width: calc(33% - 10px);
+            float: left;
+        }
+    }
+    @media all and (max-width:599px) {
+        .c-CheckSelected{
+            flex: 0 0 100%;
+            margin: .5rem auto;
+            width: 100%;
+            float: left;
+        }
+    }
+}
+.col_2{
+    li{
+        padding-left: 3rem !important;
+        border:none;
+        span{
+            text-align: left;
+            margin-left: 10px;
+            width: 100%;
+        }
+        img{
+            object-fit: cover;
+        }
+    }
+}

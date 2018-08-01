@@ -1,0 +1,126 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex mt10-xs mt10-md")
+                div(class="col-flex-xs12 col-flex-md10 col-center mt10-sm padding10")
+                    p As you know, you can use formal or informal language depending on how formal the situation is.
+                    p Here are some aspects of formality you should know:
+                    ul.c-listDefault
+                        li In 
+                            strong formal 
+                            | English in particular, relative adverbs 
+                            strong when 
+                            | and 
+                            strong where 
+                            | are sometimes replaced by a 
+                            strong preposition + which.
+
+                        li In 
+                            strong Informal situations 
+                            | we would use that rather 
+                            strong than which 
+                            | or 
+                            strong who:
+                            blockquote.ml20
+                                | “The man 
+                                strong that 
+                                | spoke to me was very worried” rather than “The man #[strong who] spoke to me was very worried”.
+                        
+                        li Or we would 
+                            strong omit 
+                            | the relative clause completely:
+                            blockquote.ml20
+                                | “The jacket Fred usually wears is a tennis blazer” rather than “The jacket 
+                                strong that 
+                                | Fred usually wears is a tennis blazer.” (this is only possible if the verb has a subject)
+                        
+                        li Using 
+                            strong “whom” 
+                            | is more formal than 
+                            strong who.
+
+                        div
+                            li In informal spoken English we normally put the preposition after the verb:  
+                            blockquote.ml20
+                                | … the restaurant which we go 
+                                strong to. 
+                                br 
+                                | or … 
+                                br 
+                                | the letter that I was looking 
+                                strong for.
+                        
+                        li In formal English we can say:
+
+                            blockquote.ml20 Was that the restaurant to which we normally go? or
+                                br 
+                                | Electronics is a subject #[strong about] which I know very little. or
+                                br 
+                                | John is the person #[strong from] whom I obtained the information.
+
+
+                div(class="col-flex-xs12 col-flex-md8 col-center mt10-sm padding10")
+                    h5 Decide if the following sentences are formal or informal.
+                    table(class="c-table row" data-ejercicio="table-truefalse")
+                        thead
+                            tr
+                                th.xs10 
+                                th.xs1 Formal
+                                th.xs1 Informal
+                        tbody
+                            tr
+                                td 1. The woman to whom I talked was very nice.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_1" name="tfInputRadio_1" value="1")
+                                        label(for="inputRadio_1" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_2" name="tfInputRadio_1" value="2")
+                                        label(for="inputRadio_2" class="c-CheckFalse")
+                            tr
+                                td 2. She is a very nice woman who you can trust.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_3" name="tfInputRadio_2" value="1") 
+                                        label(for="inputRadio_3" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_4" name="tfInputRadio_2" value="2") 
+                                        label(for="inputRadio_4" class="c-CheckFalse")
+                            tr
+                                td 3. The woman who I talked to was very nice.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_5" name="tfInputRadio_3" value="1") 
+                                        label(for="inputRadio_5" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_6" name="tfInputRadio_3" value="2") 
+                                        label(for="inputRadio_6" class="c-CheckFalse")
+                            tr
+                                td 4. She is a very nice woman you can trust.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_7" name="tfInputRadio_4" value="1") 
+                                        label(for="inputRadio_7" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_8" name="tfInputRadio_4" value="2") 
+                                        label(for="inputRadio_8" class="c-CheckFalse")
+                            tr
+                                td 5. She is the woman for whom they have been looking.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_9" name="tfInputRadio_5" value="1") 
+                                        label(for="inputRadio_9" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_10" name="tfInputRadio_5" value="2") 
+                                        label(for="inputRadio_10" class="c-CheckFalse")
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

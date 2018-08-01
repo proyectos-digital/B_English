@@ -1,0 +1,61 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                .row-flex.justify-between.col-center.mt30
+
+                    div(class="dragCont ml5"): div(class="drag") get rid of
+                    div(class="dragCont ml5"): div(class="drag") hold on
+                    div(class="dragCont ml5"): div(class="drag") get up
+                    div(class="dragCont ml5"): div(class="drag") hand out
+                    div(class="dragCont ml5"): div(class="drag") hurry up
+                    div(class="dragCont ml5"): div(class="drag") get over
+                    div(class="dragCont ml5"): div(class="drag") sit down
+                    div(class="dragCont ml5"): div(class="drag") gave in
+                    div(class="dragCont ml5"): div(class="drag") get together
+                    div(class="dragCont ml5"): div(class="drag") handed in
+
+
+                .row-flex.mt30.flex.align-items-center.justify-between
+                    .col.xs12.md5
+                        p #[strong.u-textColor_4 •]  It is difficult to accept that we can no longer visit Kerry next door but I guess I will eventually #[span.drop.w20] it.
+                        p #[strong.u-textColor_4 •]  There are too many apps on the mobile phone, you must #[span.drop.w20] some.
+                        p #[strong.u-textColor_4 •]  I have not seen Sandra in a long time, we must #[span.drop.w20] with her for lunch one day.
+                        p #[strong.u-textColor_4 •]  Every morning at 5:00 ‘O’ clock, I need to #[span.drop.w20] and take the dog for a walk.
+                        p #[strong.u-textColor_4 •]  After being asked eight times to go with Karen to the mall, Suzy finally #[span.drop.w20] .
+
+                    .col.xs12.md6
+                        p #[strong.u-textColor_4 •] I finished my homework but I just wanted to check the answers again before it is #[span.drop.w20] to the teacher.
+                        p #[strong.u-textColor_4 •] The boss came down to our department to congratulate us and #[span.drop.w20] our bonuses.
+                        p #[strong.u-textColor_4 •] I have been waiting for 3 hours and the secretary just asked me to #[span.drop.w20] a little bit longer because the director will soon be here.
+                        p #[strong.u-textColor_4 •] We are late again, you eat too slowly, please #[span.drop.w20] !
+                        p #[strong.u-textColor_4 •] There are many problems with the new protocol that need to be fixed, we have to #[span.drop.w20] and iron out the problems before we can implement it.
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

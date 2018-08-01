@@ -1,0 +1,149 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row")
+                h5 
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row-flex")
+                             div(class="col-flex-sm12 col-flex-md6 col-center")
+                                div(class="row-flex mt40")
+                                    ul(class="c-listDefault")
+                                        li 
+                                            | I 
+                                            strong want to buy 
+                                            | a new house.
+                                        li(class="mt20") 
+                                            | I'm 
+                                            strong learning to speak 
+                                            | Italian.
+                                        li(class="mt20") 
+                                            | He 
+                                            strong offered to give 
+                                            | us a ride.
+                                        li(class="mt20")  
+                                            | I 
+                                            strong enjoy traveling.
+                                        li(class="mt20") 
+                                            | I 
+                                            strong feel like going 
+                                            | out tonight.
+                                        li(class="mt20")
+                                            | I 
+                                            strong suggest renting 
+                                            | a car.
+
+                        div(class="row-flex mt30")
+                            div(class="col-flex-sm3 col-flex-md5 col-center mt20")
+                                img(src="./unit_1/module_3/assets/images/act_15_1.png", alt="", srcset="" class="u-responsive-img centrado w90")
+                                
+                            div(class="col-flex-sm3 col-flex-md5 col-center mt20")
+                                img(src="./unit_1/module_3/assets/images/act_15_2.png", alt="", srcset="" class="u-responsive-img centrado w90")
+                                
+                            div(class="col-flex-sm3 col-flex-md5 col-center mt20")
+                                img(src="./unit_1/module_3/assets/images/act_15_3.png", alt="", srcset="" class="u-responsive-img centrado w90")
+                                
+                            div(class="col-flex-sm3 col-flex-md5 col-center mt20")
+                                img(src="./unit_1/module_3/assets/images/act_15_4.png", alt="", srcset="" class="u-responsive-img centrado w90")
+                                
+                            
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row mt50")
+
+                            table(class="c-table-estilo_tres w100")
+                                thead
+                                    tr
+                                        th VERB + TO
+                                        th VERB + ING
+                                        th VERB + INFINITIVE OR ING
+                                tbody
+                                    tr(class="ta-c")
+                                        td Agree
+                                        td Avoid
+                                        td Begin
+                                    tr(class="ta-c")
+                                        td Ask
+                                        td Admit
+                                        td Can't stand
+                                    tr(class="ta-c")
+                                        td Decide
+                                        td Complete
+                                        td Continue
+                                    tr(class="ta-c")
+                                        td Fail
+                                        td Consider
+                                        td Expect
+                                    tr(class="ta-c")
+                                        td Get ready
+                                        td Discuss
+                                        td Forget
+                                    tr(class="ta-c")
+                                        td Happen
+                                        td Dislike
+                                        td Go
+                                    tr(class="ta-c")
+                                        td Hope
+                                        td Don't mind
+                                        td Hate
+                                    tr(class="ta-c")
+                                        td Know how
+                                        td Enjoy
+                                        td Like
+                                    tr(class="ta-c")
+                                        td Learn
+                                        td Finish
+                                        td Love
+                                    tr(class="ta-c")
+                                        td Prepare
+                                        td Keep
+                                        td Plan
+                                    tr(class="ta-c")
+                                        td Promise
+                                        td Miss
+                                        td Prefer
+                                    tr(class="ta-c")
+                                        td Volunteer
+                                        td Mention
+                                        td Remember
+                                    tr(class="ta-c")
+                                        td Wait
+                                        td Practice
+                                        td Start
+                                    tr(class="ta-c")
+                                        td Want
+                                        td Quit
+                                        td Stop
+                                    tr(class="ta-c")
+                                        td Wish
+                                        td Recommend
+                                        td Try
+                                    tr(class="ta-c")
+                                        td
+                                        td Understand
+                                        td
+                                    
+
+                            
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconAlert is-active openNotice" ng-click="idNotice = 1")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_3/activities/act_15_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

@@ -1,0 +1,64 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md10 col-center")
+                    div(class="row")
+                        h6 You may omit the relative pronoun and the verb "be" when:
+                    div(class="row mt30")
+                        p
+                            strong(class="u-textColor_4-dark") 1.
+                            |  They are followed by a prepositional phrase. 
+
+                        div(class="row ml40")
+                            p
+                                strong Example:
+                                |  The man who is standing there is my boyfriend. 
+                            p
+                                | The man standing there is my boyfriend.
+
+                    div(class="row mt30")
+                        p
+                            strong(class="u-textColor_4-dark") 2.
+                            |  The relative pronoun can be deleted if there is a new subject and verb following it. 
+                    
+                        div(class="row ml40")
+                            p
+                                strong Example:
+                                |  The man whom I am speaking with is the Dean of the Physics School. 
+
+                            p
+                                | The man I am speaking with is the Dean of the Physics School.
+
+                    div(class="row mt30")
+                        p
+                            | A participle can often be used instead of a relative pronoun and full verb. 
+
+                        div(class="row ml40")
+                            p
+                                strong Example:
+                                |  The man who was injured in the accident is in the hospital now. 
+                            p
+                                | The man injured in the accident is in the hospital now. 
+
+                    div(class="row mt30")
+                        p
+                            | Do not delete a relative pronoun that is followed by a verb other than be. 
+                        p
+                            | The man that chose the candidates is Alberto Tejada.
+                        p   
+                            | The man chose the candidates is Alberto Tejada.               
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

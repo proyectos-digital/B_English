@@ -1,0 +1,190 @@
+
+// Estilos base del tema usando las variables
+	html{
+		font-size: var(--font-size);
+		line-height : $line-height;
+	}
+	body {
+		padding: 0;
+		margin: 0;
+		background  : $white;
+		font-family : $body--font-family;
+		color       : $body--color;
+		font-weight : $light;
+	}
+	a {
+		color       : var(--color_3);
+		text-decoration : none;
+		&:hover{
+			text-decoration : underline;
+		}
+	}
+	p {
+		font-size   : $p--font-size;
+		margin : 0 0 $p--margin 0;
+	}
+	small {
+		font-size   : $small--font-size;
+	}
+	ul {
+		padding-left: 0;
+		list-style-type: none;
+
+		// & > li {list-style-type: none; }
+		// &:not(.browser-default) { }
+	}
+
+	blockquote {
+		padding: $padding $padding $padding ($padding *1.5);
+		margin: 0 0 0 0;
+		border-left: 3px solid rgba($color_2, 0.5);
+		font-style: italic;
+	}
+	figure{
+		margin: 0 0 0 0;
+	}
+// Encabezados
+	h1, h2, h3, h4, h5, h6 {
+		font-family    : $header--font-family;
+		font-weight    : $header--font-weight;
+		text-transform : $header--text-transform;
+		color          : $header--color;
+		font-weight : $medium;
+	}
+	b, strong {
+		font-weight : $semi-bold;
+	}
+// Tamaños y estilos de los encabezados:
+	h1 {
+		font-size : $h1--font-size;
+		line-height:  $line-height;
+		margin: ($h1--font-size/3) 0 ($h1--font-size / 2.5) 0;
+		font-weight : $semi-bold;
+	}
+	h2 {
+		font-size : $h2--font-size;
+		line-height:  $line-height;
+		margin: ($h2--font-size/3) 0 ($h2--font-size / 2.5) 0;
+	}
+	h3 {
+		font-size : $h3--font-size;
+		line-height:  $line-height;
+		margin: ($h3--font-size/3) 0 ($h3--font-size / 2.5) 0;
+	}
+	h4 {
+		font-size : $h4--font-size;
+		line-height:  $line-height;
+		margin: ($h4--font-size/3) 0 ($h4--font-size / 2.5) 0;
+	}
+	h5 {
+		font-size : $h5--font-size;
+		line-height:  $line-height;
+		margin: ($h5--font-size/3) 0 ($h5--font-size / 2.5) 0;
+	}
+	h6 {
+		font-size : $h6--font-size;
+		line-height:  $line-height;
+		margin: ($h6--font-size/3) 0 ($h6--font-size / 2.5) 0;
+	}
+	pre{
+		background-color: var(--color_1);
+		padding: $padding ;
+		font-size: 0.9em;
+		color: #fff;
+		border-radius: 3px;
+	}
+
+/*! Level 3 de especificidad */
+/*! Input date ---------------- */
+input{
+	&[type=date]{
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			display: none;
+		}
+		&::before {
+			color: var(--color_1);
+			content: attr(placeholder);
+		}
+		& {
+			color: var(--color_1);
+		}
+		&:focus,
+		&:valid {
+			color: var(--color_1-light);
+		}
+		&:focus::before,
+		&:valid::before {
+			content: "" !important;
+		}
+	}
+}
+/*! Input Submit ---------------- */
+
+/* Style scroll in chrome browser --------------- */
+
+::-webkit-scrollbar-track
+{
+	border-radius: 5px;
+	background-color: rgba($color_1-lighter, 0);
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgba($color_1-dark, 0);
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: rgba($color_1, 0.4);
+}
+
+/* Elementos media --------------- */
+video::-webkit-media-controls-enclosure,
+audio::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
+  min-height: 50px;
+  max-height: 50px;
+}
+
+video::-webkit-media-controls-panel,
+audio::-webkit-media-controls-panel {
+  width: calc(100% + 33px);
+}
+video.is--track::-webkit-media-controls-panel{
+	width: calc(100% + 63px);
+}
+audio::-internal-media-controls-overflow-button,
+video::-internal-media-controls-overflow-button,
+audio input[pseudo*='internal-media-controls-overflow-button'],
+video input[pseudo*='internal-media-controls-overflow-button'],
+video input[pseudo='-internal-media-controls-download-button'],
+audio input[pseudo='-internal-media-controls-download-button']{
+    background-color: tomato
+}
+
+audio::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-fullscreen-button{
+    background-color: initial;
+    display: inline-block;
+}
+
+audio::-webkit-media-controls-fullscreen-button + input[type="button"],
+video::-webkit-media-controls-fullscreen-button + input[type="button"]{
+    background-color: tomato;
+}
+
+audio::-webkit-media-controls-play-button,
+video::-webkit-media-controls.audio-only [pseudo="-webkit-media-controls-play-button"],
+audio::-webkit-media-controls-mute-button,
+video::-webkit-media-controls.audio-only [pseudo="-webkit-media-controls-mute-button"],
+audio input[pseudo="-internal-media-controls-overflow-button"],
+video::-webkit-media-controls.audio-only [pseudo="-internal-media-controls-overflow-button"]{
+    background-color: tomato;
+}

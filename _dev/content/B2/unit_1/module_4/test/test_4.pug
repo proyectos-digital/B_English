@@ -1,0 +1,77 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md6 mt50-md mt30-sm")
+                    div(class="c-cardGreen"): div(class="c-cardGreenContent padding20") Angkor is a region of Cambodia that served as the seat of the Khmer Empire, which flourished from approximately the 9th to 15th centuries. Angkor was a megacity supporting at least 0.1% of the global population during 1010-1220. In 2007, an international team of researchers using satellite photographs and other modern techniques concluded that Angkor had been the largest pre-industrial city in the world, with an elaborate infrastructure system connecting an urban sprawl of at least 1,000 square kilometers to the well-known temples at its core. The principal temple of the Angkorian region, Angkor Wat, was built between 1113 and 1150 by King Suryavarman II. In 1181, Jayavarman assumed the throne. He was to be the greatest of the Angkorian kings. Jayavarman constructed the walled city of Angkor Thom, as well as its geographic and spiritual center, the temple known as the Bayon.
+
+                div(class="col-flex-sm12 col-flex-md4 offset-md1 mt50-md mt30-sm")
+                    div(class="row mb30 ta-c showTo-md")
+                        img(src="unit_1/module_4/assets/images/test_4.png", alt="" class="u-responsive-img w90 centrado")
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md7 col-center mt50-md mt30-sm")
+                    table(class="c-table row" data-ejercicio="table-truefalse")
+                        thead
+                            tr
+                                th 
+                                th true
+                                th false
+                        tbody
+                            tr
+                                td 1. Angkor was studied using satellite photographs.
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio" id="selInputRadio_1" name="selInputRadio_1" value="1") 
+                                        label(for="selInputRadio_1" class="c-CheckTrue")
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio" id="selInputRadio_2" name="selInputRadio_1" value="2") 
+                                        label(for="selInputRadio_2" class="c-CheckFalse")
+                            tr
+                                td 2. The main temple of Angkor was built by King Jayavarman VII.
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio" id="selInputRadio_3" name="selInputRadio_2" value="1") 
+                                        label(for="selInputRadio_3" class="c-CheckTrue")
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio" id="selInputRadio_4" name="selInputRadio_2" value="2") 
+                                        label(for="selInputRadio_4" class="c-CheckFalse")
+                            tr
+                                td 3. King Suryayarman was the greatest Angkorian king.
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio" id="selInputRadio_5" name="selInputRadio_3" value="1") 
+                                        label(for="selInputRadio_5" class="c-CheckTrue")
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio" id="selInputRadio_6" name="selInputRadio_3" value="2") 
+                                        label(for="selInputRadio_6" class="c-CheckFalse")
+                            tr
+                                td 4. The walled city was constructed by King Jayavarman.
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio" id="selInputRadio_7" name="selInputRadio_4" value="1") 
+                                        label(for="selInputRadio_7" class="c-CheckTrue")
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio" id="selInputRadio_8" name="selInputRadio_4" value="2") 
+                                        label(for="selInputRadio_8" class="c-CheckFalse")
+                            tr
+                                td 5. The spiritual center is called the Bayon.
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio"  id="selInputRadio_9" name="selInputRadio_5" value="1") 
+                                        label(for="selInputRadio_9" class="c-CheckTrue")
+                                td: span(class="c-textField")
+                                        input(type="radio" class="c-inputRadio"  id="selInputRadio_10" name="selInputRadio_5" value="2") 
+                                        label(for="selInputRadio_10" class="c-CheckFalse")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,86 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section")
+        section(class="template-content")
+        
+            div(class="row mt50-md")
+                div(class="row mt20-md")
+                    h5 #[strong.u-textColor_4 1. ]   Ana María is at her EPS because she is very sick. The doctor is giving her a prescription and instructions. Read and listen to the dialogue. Fill in the spaces with the information you hear.
+                div(class="row-flex mt30")
+                    div(class="col-flex-xs12 col-flex-md5 col-center mb30")
+                        div(class="row w90 col-center showTo-md")
+                            div(class="row ta-c showTo-sm"): img(src="unit_1/module_1/assets/images/self_5.png", alt="", class="u-responsive-img")
+                        div(class="row w90 col-center mt40-md")
+                            audio( controls class="row ")
+                                source(src="unit_1/module_1/assets/audios/self_5.mp3" type="audio/mpeg")
+                                | Your browser does not support the audio element.
+
+                    div(class="col-flex-xs11 col-flex-md7 col-center")
+                        div(class="row-flex mb30")
+                            table(class="row ")
+                                tbody
+                                    tr
+                                        td.w20: strong Ana María:
+                                        td.w80  I have a headache!
+                                    tr
+                                        td: i Doctor:
+                                        td  Don’t worry. In a couple of hours your headache #[strong.u-textColor_2 (1)] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                    tr
+                                        td: strong Ana María:
+                                        td  And, what about the fever?
+                                    tr
+                                        td: i Doctor:
+                                        td That will take longer. In about six hours, the antibiotics #[strong.u-textColor_2 (2)] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                    tr
+                                        td: strong Ana María:
+                                        td  When can I go to the gym?
+                                    tr
+                                        td: i Doctor:
+                                        td.
+                                            Hmm, not so soon. In two or three days you 
+                                            #[strong.u-textColor_2 (3)] 
+                                            #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                                            over the infection.
+                                    tr
+                                        td: strong Ana María:
+                                        td  And what about the lab tests they took today?
+                                    tr
+                                        td: i Doctor:
+                                        td.
+                                            The lab
+                                            #[strong.u-textColor_2 (4)] 
+                                            #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                            the results by the time you come back.
+                                    tr
+                                        td: strong Ana María:
+                                        td Is there any risk I can get worse?
+                                    tr
+                                        td: i Doctor:
+                                        td.
+                                            No, absolutely no. By our next appointment next week,
+                                            #[strong.u-textColor_2 (5)] 
+                                            #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                            the treatment.
+                                    tr
+                                        td: strong Ana María:
+                                        td Thank you, Doctor!
+                                    tr
+                                        td: i Doctor:
+                                        td You are welcome. Take good care of yourself.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,107 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_4")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropClonable()")
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h6.mb20 Match these words to for the appropriate two word phrase. Words can be used more than once:
+                .row
+                    .dragCont.col.xs4.md2: .drag A movie
+                    .dragCont.col.xs4.md2: .drag A song
+                    .dragCont.col.xs4.md2: .drag A video
+                    .dragCont.col.xs4.md2: .drag A concert
+                    .dragCont.col.xs4.md2: .drag A show
+                    .dragCont.col.xs4.md2: .drag A video game
+                    .dragCont.col.xs4.md2: .drag A game
+                    .dragCont.col.xs4.md2: .drag A book
+                    .dragCont.col.xs4.md2: .drag A magazine
+                    .dragCont.col.xs4.md2: .drag A talk show
+                    .dragCont.col.xs4.md2: .drag A podcast
+                    .dragCont.col.xs4.md2: .drag commentary
+
+                .col.md6.xs12
+                    table(class="c-table-estilo_tres m-a mt30 col xs10 col-center")
+                        thead: tr
+                            th(class="w20") Verbs
+                            th(class="w80") entertainment
+
+                        tbody
+                            tr
+                                td.ta-c
+                                    span Stream online
+                                td
+                                    .drop
+                                    .drop
+                                    .drop
+                            tr
+                                td.ta-c
+                                    span Watch
+                                td
+                                    .drop
+                                    .drop
+                            tr
+                                td.ta-c
+                                    span Attend
+                                td
+                                    .drop
+                                    .drop
+                            tr
+                                td.ta-c
+                                    span Play
+                                td
+                                    .drop
+                                    .drop
+
+                .col.md6.xs12
+                    table(class="c-table-estilo_tres m-a mt30 col xs10 col-center")
+                        thead: tr
+                            th(class="w20") Verbs
+                            th(class="w80") entertainment
+
+                        tbody
+                            tr
+                                td.ta-c
+                                    span download
+                                td
+                                    .drop
+                                    .drop
+                                    .drop
+                            tr
+                                td.ta-c
+                                    span Read
+                                td
+                                    .drop
+                                    .drop
+                            tr
+                                td.ta-c
+                                    span Listen
+                                td
+                                    .drop
+                                    .drop
+                                    .drop
+                      
+                            
+  
+                    
+                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropClonable()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")

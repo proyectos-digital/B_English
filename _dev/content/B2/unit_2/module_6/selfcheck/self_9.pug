@@ -1,0 +1,47 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 I can express certainty, probability, and doubt.
+
+            p Read the following chart about statistical probability for some events to happen. Then, write a sentence about yourself, as in the example.
+            div(class="row-flex mt10-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • Only one person in 11,500 wins an Oscar.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuario")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • Only 1 in 12 million people can become an astronaut.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuariob")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • Around 1 person in 13,300,000 can get Ebola.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuarioc")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • One person in 700 million can be directly killed by a small meteorite.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuariod")
+                    div(class="mb20 row-flex mt20")
+                        div(class="col-flex") • Only 1 person in 900,000 can become president of Colombia.
+                        div(class="c-wrapTextarea"): textarea(placeholder="Write here..." class="c-textarea" ng-model="textousuarioe")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconInfoActivity" ng-click="idNotice = 1")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" )
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTextoMultiple()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside  is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_6/selfcheck/self_9_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

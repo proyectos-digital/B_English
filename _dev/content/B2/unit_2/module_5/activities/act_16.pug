@@ -1,0 +1,79 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            
+             div(class="row")
+                h5 #[strong.u-textColor_4 1. ] Drag and drop the right option from the box to complete the dialogue.
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md5 col-center")
+                        div(class="row-flex justify-around mt30")
+                            div(class="dragCont"): div(class="drag") had gone
+                            div(class="dragCont"): div(class="drag") had been trying
+                            div(class="dragCont"): div(class="drag") had been waiting
+                            div(class="dragCont"): div(class="drag") had been waiting
+                            div(class="dragCont"): div(class="drag") had drunk
+                            div(class="dragCont"): div(class="drag") had almost given up
+                            div(class="dragCont"): div(class="drag") had already picked up
+                            div(class="dragCont"): div(class="drag") had arranged
+                        
+                        div(class="row mt30")
+                            img(src="./unit_2/module_5/assets/images/act_16_1.png", alt="", srcset="" class="u-responsive-img centrado w80")
+
+                    div(class="col-flex-sm12 col-flex-md6 offset-md1 col-center") 
+
+                        div(class="row mt30")
+                            audio( controls class="centrado")
+                                source(src="unit_2/module_5/assets/audios/act_16.mp3" type="audio/mpeg")
+                                | Your browser does not support the audio element.
+
+                        div(class="row mt30")
+
+                            p(class="u-txtSpace")
+                                | I’m sorry I left without you last night, but I told you to meet me early because the show started at 8:00. I 
+                                strong (1)
+                                span(class="drop")
+                                | to get tickets for that play for months, and I didn’t want to miss it. By the time I finally left the coffee shop where we were supposed to meet, I 
+                                strong (2)
+                                span(class="drop")
+                                | 5 cups of coffee and I 
+                                strong (3)
+                                span(class="drop")
+                                | over an hour. I had to leave because I 
+                                strong (4)
+                                span(class="drop")
+                                | to meet Kathy in front of the theater.
+
+                            p(class="u-txtSpace")
+                                | When I arrived at the theater, Kathy 
+                                strong (5) 
+                                span(class="drop")
+                                | up the tickets and she was waiting for us near the entrance. She was really angry because she 
+                                strong (6)  
+                                span(class="drop")
+                                | for more than half an hour. She said she 
+                                strong (7) 
+                                span(class="drop")
+                                | up and 
+                                strong (8) 
+                                span(class="drop")
+                                | into the theater without us.  
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

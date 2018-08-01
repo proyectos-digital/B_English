@@ -1,0 +1,35 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="ContadorPalabras(120)")
+        section(class="template-content")
+            h5 Look at the picture. What do you think happened? 
+            h6 Write 120 words speculating about the situation. 
+            div(class="row")
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md5 col-center showTo-md")
+                        div(class="row mt40")
+                            img(src="./unit_1/module_3/assets/images/sel_10.png", alt="", srcset="" class="u-responsive-img centrado")
+                    div(class="col xs12 md7 col-center")
+                        div(class="c-wrapTextarea ")
+                            textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                            div(class="c-wrapTextarea__counter")
+                                span(id="contador") 0 
+                                span(ng-bind="limitePalabras")
+                                span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" )
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="enviarTexto()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

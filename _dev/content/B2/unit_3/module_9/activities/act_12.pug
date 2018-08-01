@@ -1,0 +1,73 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+
+                    img(src="./unit_3/module_9/assets/images/act_12.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+
+                    div(class="row mt30" data-ejercicio="unir")
+                        div(id="sourceElements" class="ancho250 js-columnas")
+                            span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1")
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_3/module_9/assets/audios/act_12_1.mp3")   
+                                | It's quite sweet. It tastes like
+
+                            span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2")   
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_3/module_9/assets/audios/act_12_2.mp3")
+                                | These chocolates taste as if they've
+
+                            span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3")  
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_3/module_9/assets/audios/act_12_3.mp3")
+                                | Phew! This cheese smells like
+
+                            span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") 
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_3/module_9/assets/audios/act_12_4.mp3")
+                                | This fruit feels like
+
+                            span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") 
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_3/module_9/assets/audios/act_12_5.mp3")  
+                                | It looks as if it's
+
+                            span(id="Item0_5" class="treeItem" onclick="setSource(this)" seleccion valor="6") 
+                                button(class="c-btn-Icon u-bgIconListen mr10" ng-audio="unit_3/module_9/assets/audios/act_12_6.mp3")
+                                | That sounds like
+
+                        div(id="linecanvas" style="width: 60px;")
+                        div(id="targetElements" class="ancho250 js-columnas") 
+                            span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="5") it's made from pork.
+                            span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="4") silk.
+                            span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="3") Roquefort.
+                            span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="6") a fryer.
+                            span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="1") honey.
+                            span(id="Item1_5" class="treeItem" onclick="setTarget(this)" seleccion valor="2") got alcohol in them.
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconInfoActivity is-active openNotice" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/activities/act_12_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

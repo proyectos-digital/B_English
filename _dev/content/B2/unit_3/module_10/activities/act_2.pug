@@ -1,0 +1,73 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2" )
+
+    aside(class="template-asideLeft o-aside-Item")
+        |
+        |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            div(class="row-flex align-items-center")
+                div(class="col sm12 md6 col-center")
+                    h5 Listen and match the sentences to complete the conversations.
+                    div(class="row-flex align-items-center")
+                        
+                        img(src="unit_3/module_10/assets/images/act_2.png", alt="act_2" class="u-responsive-img m-a")
+                        
+                        
+                div(class="col xs12 md6 col-center" )
+                    div(data-ejercicio="unir" class="mt40")                 
+                        div(id="sourceElements" class="ancho350 js-columnas")
+                            h6.ta-c SPEAKER A
+                            div(class="flex align-items-center")
+                                button(class="c-btn-IconAction u-bgIconListen mb20 mr10" ng-audio="unit_3/module_10/assets/audios/act_2_1.mp3")
+                                span(id="Item0_0" class="treeItem" style="width:100%" onclick="setSource(this)" seleccion valor="1") I don’t want to cook tonight.
+                            div(class="flex align-items-center")
+                                button(class="c-btn-IconAction u-bgIconListen mb20 mr10" ng-audio="unit_3/module_10/assets/audios/act_2_2.mp3")
+                                span(id="Item0_1" class="treeItem" style="width:100%" onclick="setSource(this)" seleccion valor="2") Oh! I don’t have any money.
+                            div(class="flex align-items-center")
+                                button(class="c-btn-IconAction u-bgIconListen mb20 mr10" ng-audio="unit_3/module_10/assets/audios/act_2_3.mp3")
+                                span(id="Item0_2" class="treeItem" style="width:100%" onclick="setSource(this)" seleccion valor="3") Do you want to go out tonight?
+                            div(class="flex align-items-center")
+                                button(class="c-btn-IconAction u-bgIconListen mb20 mr10" ng-audio="unit_3/module_10/assets/audios/act_2_4.mp3")
+                                span(id="Item0_3" class="treeItem" style="width:100%" onclick="setSource(this)" seleccion valor="4") That shirt is dirty!
+                            div(class="flex align-items-center")
+                                button(class="c-btn-IconAction u-bgIconListen mb20 mr10" ng-audio="unit_3/module_10/assets/audios/act_2_5.mp3")
+                                span(id="Item0_4" class="treeItem" style="width:100%" onclick="setSource(this)" seleccion valor="5") You have an email from John.
+                        |
+                        |
+                        div(id="linecanvas" style="width: 60px;")
+                        |   
+                        |    
+                        div(id="targetElements" class="ancho350 js-columnas") 
+                            h6.ta-c SPEAKER B
+                            span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="3") No, I’m going to clean the house.
+                            span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="2") Don’t worry. I’ll pay.
+                            span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="4") Oh, yes. I’ll wash it.
+                            span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="1") OK. I’ll cook.
+                            span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="5") OK, I’ll answer it
+                       
+                                                               
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //-button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

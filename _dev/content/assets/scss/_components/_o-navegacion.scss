@@ -1,0 +1,168 @@
+
+
+.o-nav{
+    &__block{
+        display: flex;
+        align-items: center;
+
+        flex: auto;
+
+        height: 100%;
+
+        padding-left: .4rem;
+        padding-right: .4rem;
+
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: rgba($color_1-lighter , 0.6);
+
+        &:first-child{
+            border-left: none;
+        }
+    }
+
+    &--Menu{
+        width: 4rem;
+        flex: 0 0 4rem;
+
+        &-burguer{
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+			margin: auto;
+			cursor: pointer;
+        }
+    }
+
+    &--Data{
+        justify-content: flex-end;
+        &-Item{
+            padding-left: .4rem;
+            padding-right: .4rem;
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-left-color: rgba($color_1-lighter , 0.6);
+
+            &:first-child{
+                border-left: none;
+                padding-left: initial;
+            }
+        }
+        &-Link{
+            height: 100%;
+            width: 100%;
+            transition: height 350ms ease-in-out;
+            color: #8496c5;
+            &[before-content]{
+                &::before{
+                    font-size: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            &::before{
+                height: calc(var(--size-uiBtns-special) * 2.5);
+                width: calc(var(--size-uiBtns-special) * 2.5);
+                background-size: calc(var(--size-uiBtns-special) * 2);
+
+            }
+            &::after{
+                content: attr(data-title);
+                position: absolute;
+                top: auto;
+                bottom: 0.3rem;
+                width: 100%;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+            &:hover{
+               color: rgba($color_1, 0.71);
+               &::before{
+                filter: saturate(100%) brightness(80%)
+               }
+            }
+            // @include minBreakPoint(600px){
+            //     transform: rotateZ(45deg);
+            //     &::after{
+            //         opacity: 0;
+            //     }
+            //     &::before{
+            //         transform: rotateZ(-45deg);
+            //     }
+            // }
+            // @include minBreakPoint(900px){
+            //     & {
+            //         transform: none;
+            //         height: 100%;
+            //         border-radius: 0 !important;
+            //         box-shadow: none !important;
+            //         &::before{
+            //             width: calc(var(--size-uiBtns-special) * 1.4) !important;
+            //             transform: none;
+            //             background-size: calc(var(--size-uiBtns-special) * 1.2) !important;
+            //         }
+            //         &::after{
+            //             content: attr(data-title);
+            //             position: static;
+            //             width: 100%;
+            //             font-size: 0.81rem;
+            //             margin-left: 10px;
+            //             opacity: 1;
+            //         }
+
+            //     }
+            // }
+        }
+    }
+
+    &--Info{
+
+        width: 100%;
+        user-select: none;
+
+        &-indicator{
+            display: flex;
+            align-items: center;
+            min-height: $height-header;
+
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+            color: var(--color_4);
+
+            float: left;
+        }
+        &-title{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: $height-header;
+            width: 100%;
+
+            padding-left: 0.5rem;
+            margin: 0;
+
+
+            float: left;
+        }
+        &-titleSection,
+        &-titleDescription{
+            color: var(--color_4);
+            font-weight: normal;
+
+            margin: inherit;
+            padding-left: inherit;
+            width: inherit;
+        }
+
+        &-titleSection{
+            font-size: 1rem;
+        }
+        &-titleDescription{
+            font-size: 0.8rem;
+        }
+    }
+
+    // &__Menu-Burguer{}
+}

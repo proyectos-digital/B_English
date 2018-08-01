@@ -1,0 +1,80 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_2")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row row-flex mt30 align-items-center")
+                div(class="row")
+                    h5.ta-c  Listen to the following story about the sun and answer the questions that follow.
+                div(class="row")
+                    div(class="col xs12 md6"): div(class="xs12 md11 col-center")
+                        .row-flex.justify-center.mt30
+                            audio(controls)
+                                source(src='unit_3/module_11/assets/audios/test_2_1.mp3' type='audio/mpeg')
+                        .c-cardGreen
+                            .c-cardGreenContent.ta-c
+                                h5 Sun’s mood swings not so strange after all, say scientists
+                                h6 Monday, July 17, 2017
+                                p Read the full story here: #[a(href="https://en.wikinews.org/wiki/Sun%27s_mood_swings_not_so_strange_after_all,_say_scientists" target="blank") https://en.wikinews.org/]
+                        div(class="row mt30")
+                            h6.ta-j #[strong.u-textColor_4 •] According to Antoine Strugarek,
+                            div(class="row")
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_1") the sun has the shape of an odd-shaped ball.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_2") the sun is far from different to other solar stars.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_3") the sun is a cosmic odd-ball.
+                        div(class="row mt30")
+                            h6 #[strong.u-textColor_4 •] Choose true or false.
+                            p.ta-j There isn’t any relation between sunspots and solar volcanoes.
+                            div(class="u-responsive_check")
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_4") True.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_5") False.
+                    div(class="col xs12 md6"): div(class="xs12 md11 col-center")
+                        div(class="row")
+                            h6 #[strong.u-textColor_4 •] Complete the sentence..
+                            p.ta-l Satellites and power grids can be affected if #[input(type="text" readonly class="c-input row" ng-model="txtcaptura_a")]
+                            div(class="row")
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_6" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_6" ng-click="txtcaptura_a = 'the Earth’s magnetic field is struck.' " ) the Earth’s magnetic field is struck.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_7" ng-click="txtcaptura_a = 'the sunspots erupt.' " ) the sunspots erupt.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="3")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_8" ng-click="txtcaptura_a = 'charged particles are released resulting from plasma eruptions.' " ) charged particles are released resulting from plasma eruptions.
+                        div(class="row mt30")
+                            h6 #[strong.u-textColor_4 •] Choose true or false.
+                            p.ta-j.
+                                There is an increased intensity of the magnetic fields when the sun experiences very little activity.
+                            div(class="u-responsive_check")
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_9") True.
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_10") False.
+                        div(class="row mt30")
+                            h6 #[strong.u-textColor_4 •] Choose the correct answer.
+                            p.ta-j A star’s Rossby number is important in determining...
+                            div(class="row")
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_11" value="1")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_11") Its luminosity and rotation.
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_12" value="2")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_12") Its plasma flow.
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="3")
+                                label(class="c-Checkbox w100 ta-l " for="selInput_13") The intensity of its activity.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

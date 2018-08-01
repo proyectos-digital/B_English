@@ -1,0 +1,43 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+
+            div(class="row")
+                div(class="col xs12 md8 col-center" data-ejercicio="unir")
+                    div(id="sourceElements" class="ancho350 js-columnas")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Which do you prefer, tea or coffee?
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") Would you prefer to eat a cake or a fruit?
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Do you prefer pizza or spaghetti?
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") Which do you like better: baseball or basketball?
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Which do you prefer to drink, juice or mineral water?
+                    div(id="linecanvas" style="width: 60px;")
+                    div(id="targetElements" class="ancho350 js-columnas")
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="3") If I had a choice, I would eat a sandwich instead.
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="5") I'd rather drink water.
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="4") I prefer baseball.
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="1") A cup of coffee would be OK.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="2") I'd prefer to eat apple.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

@@ -1,0 +1,106 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_5")
+    aside(class="template-asideLeft o-aside-Item")
+
+
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+ 
+            div(class="row row-flex mt30 align-items-center")
+                .row
+                    h5.ta-c Listen to the news report and answer the questions that follow.
+                    .row-flex.align-items-center.justify-between
+
+                        .col.xs12.md5.row-flex.align-items-center
+                            audio(controls class='col-center')
+                                source(src='unit_1/module_4/assets/audios/test_2_1.mp3' type='audio/mpeg')
+                        .col.xs12.md6 
+                            .c-cardGreen
+                                .c-cardGreenContent.ta-c
+                                    h5 Nurseries not harmful to children, says new UK study
+                                    h6 Wikinews.org, Tuesday, June 8, 2010
+                                    p Read the full story here: #[a(href="https://en.wikinews.org/wiki/Nurseries_not_harmful_to_children,_says_new_UK_study" target="blank")  https://en.wikinews.org/]
+
+                .row-flex.align-items-center.justify-between
+                    .col.xs12.md6: div(class="xs12 md11 col-center")
+
+                        p.ta-j.mt30.
+                            #[strong.u-textColor_4 •] The study is focused on...
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                            label(class="c-Checkbox w100 ta-c " for="selInput_1") Parents of children under two years old who when to the nursery.
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                            label(class="c-Checkbox w100 ta-c " for="selInput_2") Children in elementary School
+                            input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                            label(class="c-Checkbox w100 ta-c " for="selInput_3") Children under two years old who went to daycare.
+                            input(type="hidden" class="js-select")
+
+                        p.mt30.
+                            #[strong.u-textColor_4 •] Kathy Sylva believes all children who attend a nursery when they are less than 2 years old #[input(type="text" class="c-input min-w260" ng-model="ngModel_sel_input_2")]
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_4" ng-click="ngModel_sel_input_2 = 'Suffer no consequences.'") Suffer no consequences.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_5" ng-click="ngModel_sel_input_2 = 'Suffer consequences.'") Suffer consequences.
+                            input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_6" ng-click="ngModel_sel_input_2 = 'Tend to have minor or no consequences.'") Tend to have minor or no consequences.
+                            input(type="hidden" class="js-select")
+
+
+                        p.ta-j.mt30.
+                            #[strong.u-textColor_4 •] Choose true or false.  #[br] #[br]
+                            The professor believes that aggression shown by some children is a minor issue.
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_7") True.
+                            input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_8") False
+                            input(type="hidden" class="js-select")
+
+                    .col.xs12.md6: div(class="xs12 md11 col-center")
+                        p.ta-j.mt30.
+                            #[strong.u-textColor_4 •] Fill in the blank space with the correct words.
+                        .col.xs10.col-center
+                            .c-cardGreen
+                                .c-cardGreenContent.flex.align-items-center.justify-center
+                                    span the wake of | findings | impaired | vast | contrast
+
+                        p.lh20.
+                            A Professor at Oxford University believes that based on the #[input.c-input.js-escribir(type="text")]  of her study,
+                            a  #[input.c-input.js-escribir(type="text")] proportion of the children who attend nursery under the age of two are not #[input.c-input.js-escribir(type="text")]
+                             by the experience. The opinion of many experts and contributors to the topic are
+                            in #[input.c-input.js-escribir(type="text")] to the professor’s. This is in #[input.c-input.js-escribir(type="text")] an effort to get mothers of toddlers
+                            back to work.
+
+
+                        p.ta-j.mt30.
+                            #[strong.u-textColor_4 •] The professor concedes that...
+
+                        .row
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="1")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_9") Boys are always more aggressive than girls.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="2")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_10") Parents that are wealthier have better outcomes.
+                            input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="3")
+                            label(class="c-Checkbox w100 ta-l " for="selInput_11") The quality of the nursery plays role in the outcome.
+                            input(type="hidden" class="js-select")
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

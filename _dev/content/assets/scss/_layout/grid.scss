@@ -1,0 +1,138 @@
+/**********************************************************************************
+***************************************************** @IMPORT / GRID.SCSS
+***********************************************************************************/
+// Configuración base para columnas y filas
+.row {
+	width      : 100%;
+	position   : relative;
+	margin     : 0 auto;
+	min-height: 1px;
+    //Limpiar el float
+	&:before, &:after {
+		content : "";
+		display : table;
+		clear   : both;
+	}
+	// ------------ Flex
+	&-flex {
+		display: flex;
+		flex-wrap: wrap;
+	    max-width : 100%;
+	}
+}
+.col {
+	position: relative;
+	float         : left;
+	margin        : 0;
+	padding-left  : ($padding / 2);
+	padding-right : ($padding / 2);
+	width         : 100%;
+	min-height: 1px;
+	&-center{
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	//Limpiar el float
+	&:before, &:after {
+		content : "";
+		display : table;
+		clear   : both;
+	}
+	&-flex{
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+		padding-left  : ($padding / 2);
+		padding-right : ($padding / 2);
+		&-auto{
+			flex: 0 0 auto;
+			width: auto;
+			max-width: 100%;
+		}
+	}
+}
+
+// Breakpoints
+@each $size, $screen-size, $screen-clase-next in $grid-breakpoints{
+	/*! Clase #{$size}: A partir de #{$screen-size} */
+        /*! and (max-width: #{$screen-clase-next+-1}) */
+	@media all and (min-width: $screen-size)
+    {
+		/*Grilla */
+		@for $i from 1 through $columnas-grilla {
+			.#{$size}#{$i}{
+				width: unquote($i*$parametro-ancho-columnas + "%");
+				flex: 0 0 unquote($i*$parametro-ancho-columnas + "%");
+			}
+			.col-flex-#{$i}, .col-flex-#{$size}#{$i}{
+				// -ms-flex-preferred-size:unquote($i*$parametro-ancho-columnas + "%");
+				flex: 0 0 unquote($i*$parametro-ancho-columnas + "%");
+				max-width: unquote($i*$parametro-ancho-columnas + "%");
+			}
+		}
+	}
+}
+
+// Comportamiento display definido en atributos
+@each $display in $layout {
+	[layout="#{$display}"]{
+		display: unquote($display);
+    }
+}
+
+// Comportamiento display definido en atributos
+
+@for $i from 1 through $columnas-grilla{
+    [grid-columns="#{$i}fr"]{
+        grid-template-columns: unquote($i + 'fr');
+    }
+}
+
+@for $x from 1 through 100{
+    $i : $x*5;
+    [grid-columns-repeat="#{$i}"]{
+        @include grid-columnsRepeat($i + 'px');
+    }
+}
+
+@for $x from 1 through 50{
+    $i : $x*0.1;
+    [grid-gap="#{$i}"]{
+        grid-gap: unquote($i + 'rem');
+    }
+}
+
+// Definir offsets (los han pedido hace mucho)
+@each $size, $screen-size in $grid-breakpoints{
+	// Loops para tama�os en porcentajes y fracciones
+	@media all and (min-width: $screen-size){
+		// Tamanos en porcentajes
+		.offset-#{$size}{
+			margin-left: unquote(0*$parametro-ancho-columnas + "%");
+		}
+	  	@for $i from 1 through $columnas-grilla {
+			.offset-#{$size}#{$i}{
+		  		margin-left: unquote($i*$parametro-ancho-columnas + "%");
+			}
+	  	}
+	}
+}
+
+// Visibilidad
+// Visibilidad desde $size
+@each $size, $screen-size in $grid-breakpoints{
+	@media screen and (min-width: $screen-size - 1){
+		.hideFrom-#{$size}{
+			display: none !important;
+		}
+	}
+}
+// Visibilidad hasta $size
+@each $size, $screen-size in $grid-breakpoints{
+	@media screen and (max-width: $screen-size){
+		.showTo-#{$size}{
+			display: none !important;
+		}
+	}
+}

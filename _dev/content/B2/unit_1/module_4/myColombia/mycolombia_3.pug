@@ -1,0 +1,105 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown")
+            
+            div(class="row mt40 ")
+                h5 #[strong.u-textColor_4 1. ] According to the previous text answer the following questions:
+                div(class="row-flex justify-center")
+
+                    div(class="xs12 md6 padding20 mt10-xs")
+
+                        h6(class="mt30 w95")
+                            strong 1. 
+                            | What is a good title for this conversation?
+                        
+                        div(class="row-flex justify-evenly flex-column mt20-md")
+                        
+                            input(id="inputRadio_1" type='radio', class="c-inputRadio" name='selInputRadio_1' value="1")
+                            label(class="c-Checkbox" for='inputRadio_1'): span.ta-c  1. Taxis in Colombia   
+                            
+                            input(id="inputRadio_2" type='radio', class="c-inputRadio" name='selInputRadio_1' value="2")
+                            label(class="c-Checkbox" for='inputRadio_2'): span.ta-c  2. Comparing taxi and Uber services in Colombia.
+
+                            input(id="inputRadio_3" type='radio', class="c-inputRadio" name='selInputRadio_1' value="3")
+                            label(class="c-Checkbox" for='inputRadio_3'): span.ta-c  3. Andrea’s party. 
+
+                        h6(class="mt30 w95")
+                            strong 2. 
+                            |  Riley wants to take a taxi because...
+                        
+                        div(class="row-flex justify-evenly flex-column mt20-md")
+
+                            input(id="inputRadio_4" type='radio', class="c-inputRadio" name='selInputRadio_2' value="1")
+                            label(class="c-Checkbox" for='inputRadio_4'): span.ta-c  1. He does not know how to drive a car  
+
+                            input(id="inputRadio_5" type='radio', class="c-inputRadio" name='selInputRadio_2' value="2")
+                            label(class="c-Checkbox" for='inputRadio_5'): span.ta-c  2. He is getting a ride with Nacho who knows how to get to the party. 
+                            
+                            input(id="inputRadio_6" type='radio', class="c-inputRadio" name='selInputRadio_2' value="3")
+                            label(class="c-Checkbox" for='inputRadio_6'): span.ta-c  3. He knows the consequences of drinking and driving in Colombia.
+
+
+                    div(class="xs12 md6 padding20 mt10-xs")
+
+                        h6(class="mt30 w95")
+                            strong 3. 
+                            | If it were up to Riley how would they get to the party?
+                        
+                        div(class="row-flex justify-around flex-wrap mt20-md")
+                           
+                            input(id="inputRadio_7" type='radio', class="c-inputRadio" name='selInputRadio_3' value="1")
+                            label(class="c-Checkbox" for='inputRadio_7'): span.ta-c  1. Taxi. 
+                
+                            input(id="inputRadio_8" type='radio', class="c-inputRadio" name='selInputRadio_3' value="2")
+                            label(class="c-Checkbox" for='inputRadio_8'): span.ta-c  2. Uber.
+                    
+                    
+                            input(id="inputRadio_9" type='radio', class="c-inputRadio" name='selInputRadio_3' value="3")
+                            label(class="c-Checkbox" for='inputRadio_9'): span.ta-c  3.  drive themselves.
+
+                        h6(class="mt30 w95")
+                            strong 4. 
+                            | If it were up to Nacho how would they get to the party?
+                        
+                        div(class="row-flex justify-around mt20-md")
+
+                            input(id="inputRadio_10" type='radio', class="c-inputRadio" name='selInputRadio_4' value="1")
+                            label(class="c-Checkbox" for='inputRadio_10'): span.ta-c  1. Taxi. 
+                            
+                            input(id="inputRadio_11" type='radio', class="c-inputRadio" name='selInputRadio_4' value="2")
+                            label(class="c-Checkbox" for='inputRadio_11'): span.ta-c  2. Uber.  
+
+                            input(id="inputRadio_12" type='radio', class="c-inputRadio" name='selInputRadio_4' value="3")
+                            label(class="c-Checkbox" for='inputRadio_12'): span.ta-c  3. drive themselves.
+
+                        h6(class="mt30 w95")
+                            strong 5. 
+                            | Where do Nacho and Riley live?
+                        
+                        div(class="row-flex justify-around flex-wrap mt20-md")
+
+                            input(id="inputRadio_13" type='radio', class="c-inputRadio" name='selInputRadio_5' value="1")
+                            label(class="c-Checkbox" for='inputRadio_13'): span.ta-c  1. Bogota.	
+
+                            input(id="inputRadio_14" type='radio', class="c-inputRadio" name='selInputRadio_5' value="2")
+                            label(class="c-Checkbox" for='inputRadio_14'): span.ta-c  2. Chia.
+                            
+                            input(id="inputRadio_15" type='radio', class="c-inputRadio" name='selInputRadio_5' value="3")
+                            label(class="c-Checkbox" for='inputRadio_15'): span.ta-c  3. Zipaquira.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

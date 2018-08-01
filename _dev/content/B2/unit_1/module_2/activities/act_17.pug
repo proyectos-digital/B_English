@@ -1,0 +1,51 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="row")
+                    h5 #[strong.u-textColor_4 1. ]  Mark and Kate have gone on an expedition to the Los Nevados National Park. A friend is talking about it. 
+                    h6 Complete the sentences with the correct future form of the verbs from the box. Look out for negative statements.
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="row mb30 ta-c showTo-md")
+                        figure(class="c-figure-Rombo" figure-size="25")
+                                div(class="c-figure-RomboRotate")
+                                    img(src="unit_1/module_2/assets/images/act_17.png", alt="" class="c-figure-RomboImage")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt100-md")
+                    div(class="row-flex")
+                        div(class="mb20 row-flex mt20")
+                            div(class="c-green-text ml20") eat
+                            div(class="c-green-text ml20") walk
+                            div(class="c-green-text ml20") sleep
+                            div(class="c-green-text ml20") take
+                            div(class="c-green-text ml20") be
+
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex fz9 line-h") Mark and Kate are my older brother and sister. They went on a trip across the Los Nevados National Park. They left home last week. By the time they finish their trip across the park, they 
+                                strong (1) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                | for more than six days. And they 
+                                strong (2) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                | in a bed or 
+                                strong (3) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                | a shower in almost a week! We will go to pick them up by the end of their trip. When we do, they 
+                                strong (4) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                                | camping food for days, and I am sure they  
+                                strong (5) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                                | proper food. They are going to be starving. I think we should plan on taking them directly to a restaurant when they arrive! Or maybe home for a proper shower?
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,46 @@
+/*! ============================ text */
+@import "_u-text";
+/*! ============================ flexTools */
+@import "_u-flexTools";
+/*! ============================ background */
+@import "_u-background";
+@import "_u-textColor";
+/*! ============================ icons */
+@import "_u-icons";
+/*! ============================ margins */
+@import "_u-margins";
+/*! ============================ animations */
+@import "_u-animations";
+
+/*! ============================ Z-index */
+.z-index{
+    &1{ z-index: 1; }
+    &2{ z-index: 2; }
+    &3{ z-index: 3; }
+    &4{ z-index: 4; }
+}
+/*! ============================ float  */
+.f-l     {  float: left !important; }
+.f-r     {  float: right !important; }
+/*! ============================ alinear texto  */
+.ta-c    { text-align: center !important; }
+.ta-l    { text-align: left !important; }
+.ta-r    { text-align: right !important; }
+.ta-j    { text-align: justify !important; }
+/*! ============================ posición  */
+.pos{
+    &Absolute{position: absolute !important;}
+    &Relative{position: relative !important;}
+    &Fixed{position: fixed !important;}
+}
+.m{
+    &argin0{ margin: 0 !important; }
+    &-a{ margin: auto; }
+}
+.centrado {
+    display: block !important;
+    clear: both;
+    float: none ;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}

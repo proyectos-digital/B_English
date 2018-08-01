@@ -1,0 +1,97 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_17")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            .row
+                .col.xs12.md7.col-center
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent u-textColor_1-darker lh30")
+                            h6.ta-c There are two ways to use forget.
+                            .col.xs6
+                                h6.u-textWhite 1. I forgot to open the window.
+                                strong Forget to (verb)#[br]
+                                p #[span(class="u-textColor_4-dark") • ] In this form, nothing happened because we did not remember to do the action (open the window).
+                            .col.xs6
+                                h6.u-textWhite 2. I forgot opening the window.
+                                strong Forget (verb) ing#[br]
+                                p #[span(class="u-textColor_4-dark") • ] In this form, the action was done. The window was opened but I have no memory of it happening.
+            div(class="row row-flex")
+                h5 #[span(class="u-textColor_4-dark") 1.] Choose the correct option to fll the blank spaces in the sentences below. 
+            div(class="row row-flex")
+                div(class="col-flex-xs12 col-flex-md6 mt20 col-center")
+
+                    div(class="row md11 col-center mt30")
+                        strong(class="u-textColor_4-dark") • 
+                        span The car is in the garage but I
+                        input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_a") 
+                        span  it there.
+                        ul(class="c-listDefault" style="list-style: none;")
+                            li: div(class="row-flex justify-around")
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                                label(class="c-Checkbox " for="selInput_1"  ng-click="txtcaptura_a = 'forget park.'")  forget park
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                                label(class="c-Checkbox " for="selInput_2"  ng-click="txtcaptura_a = 'remind parking.'") remind parking
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                                label(class="c-Checkbox " for="selInput_3"  ng-click="txtcaptura_a = 'forgot parking.'") forgot parking
+
+                    div(class="row md11 col-center mt30")
+                        strong(class="u-textColor_4-dark") • 
+                        span The car is not in the garage because I  
+                        input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_b") 
+                        span   it there. 
+                        ul(class="c-listDefault" style="list-style: none;")
+                            li: div(class="row-flex justify-around")
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                                label(class="c-Checkbox " for="selInput_4"  ng-click="txtcaptura_b = 'forgot park.'") forgot park
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                                label(class="c-Checkbox " for="selInput_5"  ng-click="txtcaptura_b = 'forgot to park'") forgot to park
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                                label(class="c-Checkbox " for="selInput_6"  ng-click="txtcaptura_b = 'forgot to parking.'") forgot to parking
+
+
+                div(class="col-flex-xs12 col-flex-md6 mt20 col-center")
+
+                    div(class="row md11 col-center mt30")
+                        strong(class="u-textColor_4-dark") • 
+                        span I 
+                        input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_c") 
+                        span  my lunch with me to work and now I have nothing to eat.
+                        ul(class="c-listDefault" style="list-style: none;")
+                            li: div(class="row-flex justify-around")
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                                label(class="c-Checkbox " for="selInput_7"  ng-click="txtcaptura_c = 'forgot to take. '") forgot to take
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                                label(class="c-Checkbox " for="selInput_8"  ng-click="txtcaptura_c = 'forgot to taking.'") forgot to taking
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+                                label(class="c-Checkbox " for="selInput_9"  ng-click="txtcaptura_c = 'forget.'") forget
+
+                    div(class="row md11 col-center mt30")
+                        strong(class="u-textColor_4-dark") • 
+                        span I
+                        input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_d") 
+                        span  my lunch with me to work. Now I have the lunch I took plus the one I bought. 
+                        ul(class="c-listDefault" style="list-style: none;")
+                            li: div(class="row-flex justify-around")
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+                                label(class="c-Checkbox " for="selInput_10"  ng-click="txtcaptura_d = 'forgot taking.'") forgot taking
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+                                label(class="c-Checkbox " for="selInput_11"  ng-click="txtcaptura_d = 'forgot to taking.'") forgot to taking
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3")
+                                label(class="c-Checkbox " for="selInput_12"  ng-click="txtcaptura_d = 'forgot take.'") forgot take
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

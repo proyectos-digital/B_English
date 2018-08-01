@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* ============================ font size */
+$tamanos_fuente: (
+		'fz0': 0
+		, 'fz01': 0.1
+		, 'fz02': 0.2
+		, 'fz03': 0.3
+		, 'fz04': 0.4
+		, 'fz05': 0.5
+		, 'fz06': 0.6
+		, 'fz07': 0.7
+		, 'fz08': 0.8
+		, 'fz09': 0.9
+		, 'fz1': 1
+		, 'fz1-1': 1.1
+		, 'fz1-2': 1.2
+		, 'fz1-3': 1.3
+		, 'fz1-4': 1.4
+		, 'fz1-5': 1.5
+		, 'fz1-6': 1.6
+		, 'fz1-7': 1.7
+		, 'fz1-8': 1.8
+		, 'fz1-9': 1.9
+		, 'fz2': 2
+		, 'fz2-1': 2.1
+		, 'fz2-2': 2.2
+		, 'fz2-3': 2.3
+		, 'fz2-4': 2.4
+		, 'fz2-5': 2.5
+		, 'fz2-6': 2.6
+		, 'fz2-7': 2.7
+		, 'fz2-8': 2.8
+		, 'fz2-9': 2.9
+		, 'fz3': 3
+		, 'fz3-1': 3.1
+		, 'fz3-2': 3.2
+		, 'fz3-3': 3.3
+		, 'fz3-4': 3.4
+		, 'fz3-5': 3.5
+		, 'fz3-6': 3.6
+		, 'fz3-7': 3.7
+		, 'fz3-8': 3.8
+		, 'fz3-9': 3.9
+		, 'fz4': 4
+);
+@each $Clase, $fuente in $tamanos_fuente{
+		/*! Fuente tipo#{$fuente}rem*/
+		.u-#{$Clase}{
+				font-size: #{$fuente}rem !important;
+		}
+}
+
+.u-{
+	&listStyle{
+		&-UAlpha{ list-style-type: upper-alpha; padding-left: 1.5rem; }
+		&-LAlpha{ list-style-type: lower-alpha; padding-left: 1.5rem; }
+		&-URoman{ list-style-type: upper-roman; padding-left: 1.5rem; }
+	}
+}
+
+.u-{
+	&italic{
+		font-style: italic;
+	}
+	&bold{
+		font-weight: bold;
+	}
+}
+
+[u-word-break="all"]{
+	word-break: break-all;
+}
+
+[u-over-flow="auto"]{ overflow: auto; }
+[u-over-flow="hidden"]{ overflow: hidden; }
+[u-over-flow="hidden-x"]{ overflow-x: hidden; }
+[u-over-flow="auto-x"]{ overflow-x: auto; }
+[u-over-flow="hidden-y"]{ overflow-y: hidden; }
+[u-over-flow="auto-y"]{ overflow-y: auto; }
+
+
+// Breakpoints
+@each $size, $screen-size, $screen-clase-next in $grid-breakpoints{
+	/*! Clase #{$size}: A partir de #{$screen-size} */
+        /*! and (max-width: #{$screen-clase-next+-1}) */
+	@media all and (min-width: $screen-size)
+    {
+		/*Grilla */
+		@for $i from 1 through 4 {
+			[phrasal-column*="column-#{$size}#{$i}"]{
+				column-count: $i;
+			}
+		}
+	}
+}

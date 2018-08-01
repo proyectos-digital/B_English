@@ -1,0 +1,106 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_11")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content" )
+            .row-flex.align-items-center.justify-between
+                
+                .col.xs12.md6
+                    h5 At times in life, things become difficult, challenging, we have uncertainties or doubts. For such instances, it is good to give encouragement. Here are a few expressions:
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            p.ta-l.mt20.lh35.
+                                #[strong • ] #[i What do you have to lose? #[strong →] A rhetorical question meaning that there’s nothing. ] #[br]
+                                #[strong • ] #[i Go for it! #[strong →] Do something with a lot of effort. ] #[br]
+                                #[strong • ] #[i Don’t give up. #[strong →] Continue trying your hardest to achieve something. ] #[br]
+                                #[strong • ] #[i It’s worth a shot. #[strong →] If you try, things could turn out favorable. ] #[br]
+                                #[strong • ] #[i Think positive. #[strong →] Do not be doubtful or negative in your thoughts. ] #[br]
+                                #[strong • ] #[i Believe in yourself. #[strong →] Do not doubt yourself or your abilities. ] #[br]
+                                 #[i wrong in attempting to do something. ] #[br]
+                                 #[i You won’t know the results until you try. ] #[br]
+                .col.xs12.md5.mr40
+                    h5 Which of the above expressions do you think best suit each situation? (There can be more than one option for a situation.)
+
+                    .row.mt20.flex.align-items-center                      
+                        p.
+                            #[strong.u-textColor_4 • ]Amy wishes to apply for a position at a bank.
+                            However, she’s not sure whether to send her
+                            résumé because one of the requirements is to have
+                            a C2 English level. But, she has a C1 level. 
+                        .col.xs6
+                            select(name="act_1_2" class="c-select")
+                                    option(value="" disabled selected) 
+                                    option(value="6") What do you have to lose?
+                                    option(value="2") Don’t give up
+                                    option(value="4") Think positive
+                                    option(value="1") It’s worth a shot
+                                    option(value="5") Go for it!
+                                    option(value="3") Believe in yourself
+                    .row.mt20.flex.align-items-center
+                        .col.xs6
+                            p.
+                                #[strong.u-textColor_4 • ]David loves learning English but sometimes he
+                                gets frustrated when speaking because he forgets
+                                words or mispronounces some of them. 
+                        .col.xs6
+                            select(name="act_1_2" class="c-select")
+                                    option(value="" disabled selected) 
+                                    option(value="6") What do you have to lose?
+                                    option(value="2") Don’t give up
+                                    option(value="4") Think positive
+                                    option(value="1") It’s worth a shot
+                                    option(value="5") Go for it!
+                                    option(value="3") Believe in yourself
+                    .row.mt20.flex.align-items-center
+                        .col.xs6
+                            p.
+                                #[strong.u-textColor_4 • ]Your sister applied to university but she has
+                                doubts about being accepted because it’s so
+                                competitive to get in.
+                        .col.xs6
+                            select(name="act_1_2" class="c-select")
+                                    option(value="" disabled selected) 
+                                    option(value="6") What do you have to lose?
+                                    option(value="2") Don’t give up
+                                    option(value="3") Think positive
+                                    option(value="1") It’s worth a shot
+                                    option(value="5") Go for it!
+                                    option(value="3") Believe in yourself
+                    .row.mt20.flex.align-items-center
+                        p.ta-j.
+                            #[strong.u-textColor_4 • ]Martin is a great chef and wants to open a fast
+                            food restaurant. However, he is hesitant.
+                        .col.xs6
+                            select(name="act_1_2" class="c-select")
+                                    option(value="" disabled selected) 
+                                    option(value="5") What do you have to lose?
+                                    option(value="2") Don’t give up
+                                    option(value="4") Think positive
+                                    option(value="1") It’s worth a shot
+                                    option(value="5") Go for it!
+                                    option(value="3") Believe in yourself
+                                  
+
+
+                          
+                                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+  
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,54 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section")
+        section(class="template-content")
+            
+            div(class="row-flex mt80-xs mt60-md ")
+                
+                div(class="col-flex-xs5 col-flex-xs5 col-flex-md4 m-a ta-c col-center")
+                    table(class="c-table-estilo_tres m-a")
+                        thead: tr: th(colspan="2") Future perfect
+                        tbody
+                            tr
+                                td Affirmative
+                                td Will have + past participle
+                            tr
+                                td Negative
+                                td Will + not + have + participle
+                            tr
+                                td Questions
+                                td Will + pronoun + have + participle
+    
+                |
+                div(class="col-flex-sm10 col-flex-md7 m-a col-center")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent")
+                            ul.c-list
+                                p We use the future perfect to say that something will be finished by a time in the future. We often use the future perfect with ‘by’, “in” or ‘by the time’.
+                                li I think astronauts will have landed on Mars #[strong.u-textColor_1 by] the year 2020. 
+                                li I’ll have finished #[strong.u-textColor_1 in] an hour and then you can use the computer. 
+                                li By the time you finish your soup, the rest of your meal will be cold.
+                            p #[strong.u-textColor_1 ‘By’] and #[strong.u-textColor_1 “by the time”] mean ‘not later than a particular time’ and #[strong.u-textColor_1 ‘in’] means ‘within a period of time’. 
+                                br 
+                                span We use these expressions when we don’t know exactly when something will finish.
+
+                            ul.c-listDefault
+                                li  I promise I’ll have done all the work #[strong by next Saturday]. - We don’t know exactly when this person will finish the work – maybe Thursday, maybe Friday – but definitely before Saturday.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction is-active u-bgIconAlert")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" )
+        //- button(class="c-btn-IconAction u-bgIconCheck" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

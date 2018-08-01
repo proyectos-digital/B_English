@@ -1,0 +1,68 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_6" )
+	aside(class="template-asideLeft o-aside-Item")
+	|
+	|
+	div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+		section(class="template-content")
+			h5 Match the collocations with the correct definition.
+			div(class="row-flex mt10-xs mt10-md mt10-sm")
+				div(class="col-flex-xs12 col-flex-md2 col-center mt10-sm mt20-md")
+					div(class="row-flex justify-center")
+						div(class="_float-span") EARN
+						div(class="_float-span") LOSE
+						div(class="_float-span") RAISE
+						div(class="_float-span") SPEND
+						div(class="_float-span") DONATE
+						div(class="_float-span") SAVE
+						div(class="_float-span") STEAL
+						div(class="_float-span") LEND
+						div(class="_float-span") WIN
+						div(class="_float-span") FIND
+				div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt20-md")
+					div(class="row"  data-ejercicio="unir")
+						div(id="sourceElements" class="ancho150 js-columnas")
+							span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Earn money.
+							span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") Raise money.
+							span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Donate money.
+							span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") Steal money.
+							span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Win money.
+							span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="6") Lose money.
+							span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="7") Spend money.
+							span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="8") Save money.
+							span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="9") Lend money.
+							span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="10") Find money.
+						div(id="linecanvas" style="width: 60px;")
+						div(id="targetElements" class="ancho350 js-columnas") 
+							span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="3") Give money to an organization.
+							span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="6") Not have money any longer.
+							span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="5") Get money in a lottery, game, show.
+							span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="8") Keep money for future use.
+							span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="1") Get money by working.
+							span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="9") Give somebody money that they must return.
+							span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="4") Take money from somebody without permission.
+							span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="10") Discover by chance.
+							span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="7") Pay money for something.
+							span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="2") Get money from people for a purpose.
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconAlert openNotice is-active" ng-click="idNotice = 1")
+		button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+		button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+	article(class="c-noticeAside-body" ng-include="'unit_3/module_11/activities/act_6_notice_'+ idNotice +'.php'")
+	footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+	graphicsInit()

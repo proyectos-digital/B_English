@@ -1,0 +1,39 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_3")
+    aside(class="template-asideLeft o-aside-Item" )
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-init="unirColumnasFuncion()")
+            article(class="col xs12 md8 col-center")
+                h5 A wide range of vocabulary is used to when we speak about fashion. Match the words to the pictures.
+                div(class="row-flex justify-center col col-center mt40" data-ejercicio="unir")
+                    div(id="sourceElements" class="js-columnas")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") #[img(class="u-responsive-img" src="unit_3/module_9/assets/images/col_3_1.png", alt="myColombia")]
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") #[img(class="u-responsive-img" src="unit_3/module_9/assets/images/col_3_2.png", alt="myColombia")]
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") #[img(class="u-responsive-img" src="unit_3/module_9/assets/images/col_3_3.png", alt="myColombia")]
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") #[img(class="u-responsive-img" src="unit_3/module_9/assets/images/col_3_4.png", alt="myColombia")]
+                    div(id="linecanvas" style="width: 60px;")
+                    div(id="targetElements" class=" js-columnas row-flex")
+                        span(id="Item1_0" class="treeItem ta-c" onclick="setTarget(this)" seleccion valor="3") Sarong
+                        span(id="Item1_1" class="treeItem ta-c" onclick="setTarget(this)" seleccion valor="4") Corsage
+                        span(id="Item1_2" class="treeItem ta-c" onclick="setTarget(this)" seleccion valor="1") Lapel Pin
+                        span(id="Item1_3" class="treeItem ta-c" onclick="setTarget(this)" seleccion valor="2") Cufflinks
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

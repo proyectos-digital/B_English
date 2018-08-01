@@ -1,0 +1,57 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_3" ng-init="DragandDrop()")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row")
+                div(class="c-flickity h_auto")
+                    h5 Drag and drop the correct preposition into each sentence.
+                div(class="row-flex mt20")
+                    div(class="dragCont"): div(class="drag") after
+                    div(class="dragCont"): div(class="drag") around
+                    div(class="dragCont"): div(class="drag") in
+                    div(class="dragCont"): div(class="drag") for
+                    div(class="dragCont"): div(class="drag") about
+                    div(class="dragCont"): div(class="drag") to
+                div.row.mt30
+                    div(class="row-flex align-items-center")
+                        div(class="col xs12 sm10 col-center")
+
+                            p #[strong: span(class="u-textColor_4-dark") A: ] Hi Carlos, what are you still doing here?
+
+                            p #[strong: span(class="u-textColor_5-dark") B: ] I´m waiting #[strong (1)] #[span(class="drop h25")] Sara. She is supposed to look #[strong (2)] #[span(class="drop h25")] her little sister today.
+
+                            p #[strong: span(class="u-textColor_4-dark") A: ] And do you know where she is?
+
+                            p #[strong: span(class="u-textColor_5-dark") B: ] No, I have no idea. I´ve looked all  #[strong (3)] #[span(class="drop h25")] the school for her, but I haven´t been able to find her.
+
+                            p #[strong: span(class="u-textColor_4-dark") A: ] Just give her some more time. I heard she had to talk with the English teacher  #[strong (4)] #[span(class="drop h25")] her result on the last test.
+
+                            p #[strong: span(class="u-textColor_5-dark") B: ] Really? I don´t believe #[strong (5)] #[span(class="drop h25")] talking to teachers about grades on tests. They usually don´t change them.
+
+                            p #[strong: span(class="u-textColor_4-dark") A: ] Well, you never know. Maybe Sara manages #[strong (6)] #[span(class="drop h25")] get her grade changed!
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_8_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

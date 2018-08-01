@@ -1,0 +1,48 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_2")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Listen carefully to the following text and arrange the events in chronological order.
+            div(class="row-flex")
+                div(class="col col-center md8 xs12 mt40"): audio(controls class='row m-a')
+                     source(src='unit_2/module_7/assets/audios/col_2_1.mp3' type='audio/mpeg') 
+                     | Your browser does not support the audio element.
+                div(class="col-flex-sm12 col-flex-md8 col-center mt20-sm ta-j")
+                    ul(class="c-counterStep ui-sortable sortreload justify-center" id="sortable" data-ejercicio="sortable")
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_1.jpg", alt="" class="w30 h70" )]#[span The fire station was founded in 1957.]
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_2.jpg", alt="" class="w30 h70" )]#[span Tumaco was made a municipality by President Tomas Cipriano de Mosquera in 1861.]
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_3.jpg", alt="" class="w30 h70" )]#[span The San Judas sports arena was founded in 1986, upon arrival of Pope John Paul II.]
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_4.jpg", alt="" class="w30 h70" )]#[span The Trans-Andean oil duct was built in 1966.]
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_5.jpg", alt="" class="w30 h70" )]#[span The park known as Parque Colon was built by Colonel Pio Quiñones in 1903. Materials used in its construction include cement and oyster shells.]
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_6.jpg", alt="" class="w30 h70" )]#[span The park known as Parque de Nariño was built in 1950.]
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_7.jpg", alt="" class="w30 h70" )]#[span The monument of Nariño that is displayed in the park known as Parque de Nariño was built in 1923.]
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_8.jpg", alt="" class="w30 h70" )]#[span Florida Airport was founded in 1940.]
+                        li(class="ui-sortable--item h70 row flex justify-between ta-l c-counterStep__item js-sortdrag") #[img(src="unit_2/module_7/assets/images/col_2_9.jpg", alt="" class="w30 h70" )]#[span Stella Marquez Zawadski de Araneta, born and raised in Tumaco, was elected Miss Colombia in 1959 and Miss International in 1960.]
+                       
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        //-button(class="c-btn-IconAction openNotice u-bgIconAlert is-active" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSortable()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="sortable()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+//-div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_2/selfcheck/self_8_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+|
+script.
+    $( "#sortable" ).sortable()

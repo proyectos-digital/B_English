@@ -1,0 +1,119 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Read and listen to a conversation between two students. Decide if the statements are True or False.
+            div(class="row-flex mt10-xs mt10-md")
+                div(class="col-flex-xs12 col-flex-md12 col-center mt10-sm padding10")
+                    audio( controls class="row w30 centrado")
+                        source(src="unit_3/module_11/assets/audios/act_13.mp3" type="audio/mpeg")
+                        | Your browser does not support the audio element.
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm padding10")
+                    table(class="c-table-estilo_tres m-a mt30")
+                        thead
+                            tr
+                                th
+                                th.xs9
+                        tbody
+                            tr
+                                td: strong Jimmy: 
+                                td Hi, Carol.
+                    
+                            tr
+                                td: strong Carol: 
+                                td Hi, Jimmy.
+                    
+                            tr
+                                td: strong Jimmy: 
+                                td Why’s the cafeteria so noisy? There shouldn’t be many people there at three in the afternoon.
+                    
+                            tr
+                                td: strong Carol: 
+                                td There’s a sort of rally going on- for the demonstration.
+                    
+                            tr
+                                td: strong Jimmy: 
+                                td Demonstration? Really? Against what? What’s it about?
+                    
+                            tr
+                                td: strong Carol: 
+                                td Tuition. It’s about the tuition increase. How do you pay for your tuition?
+                    
+                            tr
+                                td: strong Jimmy: 
+                                td My money comes from a savings account my father started when I was born. He put a little money into it every month, and over- what? - eighteen years, that grew to enough to get me through university. And God bless Daddy! Oh, hey Rose!
+                    
+                            tr
+                                td: strong Rose: 
+                                td Hi, guys.
+                    
+                            tr
+                                td: strong Jimmy: 
+                                td Did you know about the demonstration? What do you think about it, Rose?
+                    
+                            tr
+                                td: strong Rose: 
+                                td Well, students don’t have any money. Their parents don’t have any money. They just can’t afford to pay any more for school right now. So I understand why they are demonstrating.
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm padding10")
+                    table(class="c-table row" data-ejercicio="table-truefalse")
+                        thead
+                            tr
+                                th.xs10 
+                                th.xs1 True
+                                th.xs1 False
+                        tbody
+                            tr
+                                td 1. The cafeteria is noisier than usual.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_1" name="tfInputRadio_1" value="1")
+                                        label(for="inputRadio_1" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_2" name="tfInputRadio_1" value="2")
+                                        label(for="inputRadio_2" class="c-CheckFalse")
+                            tr
+                                td 2. There will be a demonstration today.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_3" name="tfInputRadio_2" value="1") 
+                                        label(for="inputRadio_3" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_4" name="tfInputRadio_2" value="2") 
+                                        label(for="inputRadio_4" class="c-CheckFalse")
+                            tr
+                                td 3. The demonstration is about the new schedules.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_5" name="tfInputRadio_3" value="1") 
+                                        label(for="inputRadio_5" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_6" name="tfInputRadio_3" value="2") 
+                                        label(for="inputRadio_6" class="c-CheckFalse")
+                            tr
+                                td 4. The man has a savings account to pay for his expenses.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_7" name="tfInputRadio_4" value="1") 
+                                        label(for="inputRadio_7" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_8" name="tfInputRadio_4" value="2") 
+                                        label(for="inputRadio_8" class="c-CheckFalse")
+                            tr
+                                td 5. Rose understands the reasons behind the demonstration.
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_9" name="tfInputRadio_5" value="1") 
+                                        label(for="inputRadio_9" class="c-CheckTrue")
+                                td: span
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_10" name="tfInputRadio_5" value="2") 
+                                        label(for="inputRadio_10" class="c-CheckFalse")
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

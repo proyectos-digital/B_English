@@ -1,0 +1,36 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row row-flex align-items-center")
+
+                .col.xs12.md6.col-center
+                    h5 How would you clarify the following statements using a question? Record your answer and send it to your teacher.
+                    p #[strong.u-textColor_4 •] I am planning a family trip to New York next month so I need to borrow your suitcase so please let me know if you can lend it to me or not because.
+
+                    .row.mt30
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod4_self4a',1)"): +ngRecorder
+
+
+                    p.mt30 #[strong.u-textColor_4 •] I should have had a meeting tomorrow but It has been changed to Wednesday, I was told that the meeting place is the same, the time of day is the same and the attendees are the same. The change is in the day that the meeting will take place.
+
+                    .row.mt30
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt1_mod4_self4b',2)"): +ngRecorder
+
+                .col.xs12.md5.ta-c.mt30: img(src="unit_1/module_4/assets/images/self_4_1.png", alt="", class="u-responsive-img")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

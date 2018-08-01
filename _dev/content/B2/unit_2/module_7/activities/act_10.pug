@@ -1,0 +1,64 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10" )
+
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            div(class="row-flex align-items-center")
+                div(class="col sm12 md6 col-center")
+                    h5 #[span(class="u-textColor_4-dark") 1]. Read the following sentences:
+                    div(class="row-flex align-items-center")
+                        div(class="col-flex-xs11 col-flex-sm9 col-center ")
+                            p Pablo is telling Carlos how determined he is. Carlos wants to show that he is also very determined:
+                            p.ml20 #[span: strong(class="u-textColor_2 ") Pablo:]  I enjoyed our camping holiday #[strong in spite of ] the rain
+                            p.ml20 #[span: strong(class="u-textColor_5 ") Carlos:]  In my case, #[strong despite ] the pain in my leg, I completed the marathon.
+                            p.ml20 #[span: strong(class="u-textColor_2 ") Pablo:]  Well, we went swimming in the pool #[strong although ] the water was freezing.
+                            p.ml20 #[span: strong(class="u-textColor_5 ") Carlos:]  #[strong Even though ] I had to be taken to the hospital, I went to school the next day!
+                            p.ml20 #[span: strong(class="u-textColor_2 ") Pablo:]  Ok, you win! You are more determined than me!
+                           
+                        
+                div(class="col xs12 md6 col-center" )
+                    h5 #[span(class="u-textColor_4-dark") 2]. Read the following sentences:
+                    div(data-ejercicio="unir" class="mt40 row")                 
+                        div(id="sourceElements" class="ancho350 js-columnas")
+                            span(id="Item0_0" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="1") Although I was tired…
+                            span(id="Item0_1" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="2") I like my job…
+                            span(id="Item0_2" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="3") He walked home…
+                            span(id="Item0_3" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="4") Despite his age…
+                            span(id="Item0_4" class="ta-c u-bgColor_5 treeItem" onclick="setSource(this)" seleccion valor="5") Although we grew up in the same neighborhood…
+                        |   
+                        |   
+                        div(id="linecanvas" style="width: 60px;")
+                        |
+                        |
+                        div(id="targetElements" class="ancho350 js-columnas") 
+                            span(id="Item1_0" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="5") we weren’t close friends.
+                            span(id="Item1_1" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="3") in spite of the bad weather.
+                            span(id="Item1_2" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="1") I just couldn’t sleep.
+                            span(id="Item1_3" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="2") despite the long hours.
+                            span(id="Item1_4" class="ta-c u-bgColor_5 treeItem" onclick="setTarget(this)" seleccion valor="4") he still works out every day.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

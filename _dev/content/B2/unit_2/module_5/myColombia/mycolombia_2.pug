@@ -1,0 +1,130 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                h5 #[strong.u-textColor_4 1. ] Read the following text:
+
+                div(class="row-flex mt30")
+                    div(class="col-flex-sm12 col-flex-md12 col-center")
+                        img(src="./unit_2/module_5/assets/images/col_2.png", alt="", srcset="" class="u-responsive-img centrado")
+                        p(class="ta-c")
+                            strong Scanning: Sogamoso
+
+                        div(class="row mt30")
+                            h6 Weather Data for Sogamoso
+                            table(class="c-table-estilo_tres w100 mt30")
+                                thead
+                                    tr
+                                        th Month
+                                        th Jan
+                                        th Feb
+                                        th Mar
+                                        th Apr
+                                        th May
+                                        th Jun
+                                        th Jul
+                                        th Aug
+                                        th Sep
+                                        th Oct
+                                        th Nov
+                                        th Dec
+                                        th Year
+                                tbody
+                                    tr(class="ta-c")
+                                        td(class="u-wordsComplete") Record high °C
+                                        td 24
+                                        td 23
+                                        td 22
+                                        td 21
+                                        td 21
+                                        td 21
+                                        td 20
+                                        td 21
+                                        td 21
+                                        td 22
+                                        td 23
+                                        td 22
+                                        td 24      
+
+                                    tr(class="ta-c")
+                                        td(class="u-wordsComplete") Average high °C   
+                                        td 19
+                                        td 19
+                                        td 19
+                                        td 18
+                                        td 18
+                                        td 17
+                                        td 16
+                                        td 18
+                                        td 18
+                                        td 19
+                                        td 19
+                                        td 19
+                                        td 18.3
+
+                                    tr(class="ta-c")
+                                        td(class="u-wordsComplete") Average low °C
+                                        td 2
+                                        td 2
+                                        td 3
+                                        td 3
+                                        td 3
+                                        td 2
+                                        td 1
+                                        td 0
+                                        td 1
+                                        td 2
+                                        td 2
+                                        td 2
+                                        td 1.9
+
+                                    tr(class="ta-c")
+                                        td(class="u-wordsComplete") Record low °C
+                                        td -2
+                                        td -1
+                                        td -1
+                                        td 0
+                                        td 0
+                                        td -1
+                                        td -3
+                                        td -1
+                                        td -2
+                                        td -1
+                                        td -3
+                                        td 1
+                                        td -3
+
+                                    tr(class="ta-c")
+                                        td(class="u-wordsComplete") Precipitation mm
+                                        td 80
+                                        td 78
+                                        td 89
+                                        td
+                                        td 75
+                                        td 55
+                                        td 40
+                                        td 38
+                                        td 42
+                                        td 90
+                                        td 
+                                        td 82
+                                        td 871
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        //- button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

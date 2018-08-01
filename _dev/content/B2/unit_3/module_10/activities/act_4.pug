@@ -1,0 +1,130 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1" ng-init="s_actividad = 1" )
+
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        |
+        |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex s-actividad u-animationFadeDown" ng-show="s_actividad == 1")
+                div(class="row")
+                    h5 How exact is the information in them?
+                    div(class="row-flex align-items-center")
+                        div(class="col-flex-sm12 col-flex-md8 col-flex-lg7 col-center")
+                            div(class="c-cardGreen  ")
+                                div(class="c-cardGreenContent u-textColor_1 ta-l lh25")
+                                    ul
+                                        li • There are #[strong approximately] 600 people working in this company.
+                                        li • There is #[strong a large number of] students interested in taking his course.
+                                        li • It’s #[strong kind of] a bottle opener which can also be used to peel vegetables.
+                                        li • It’s #[strong the type of] place you can go to relax for a week or so.
+                                        li • They’re #[strong the sort of] people that like going bowling on Saturday evenings.
+                                        li • #[strong It’s difficult to stay, but I’d guess that] it’s used for cleaning house.
+                                        li • #[strong I’m not really sure, but I think] they enjoy hiking in the mountains.
+
+                        div(class="col-flex-sm12 col-flex-md4 col-flex-lg5 col-center ta-c")
+                            img(src="unit_3/module_10/assets/images/act_4.png", alt="act_1" class="u-responsive-img")
+        
+
+
+            div(class="row-flex s-actividad u-animationFadeDown" ng-show="s_actividad == 2")
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    h5 #[strong.u-textColor_4 1. ] Choose the option that is the vaguest.
+                    div(class="row mb50 mt20")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 1.
+                            span  I think there are
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_a") 
+                            span  20,000 people studying at UNAD in Bogota. 
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                label(for="SelectRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='about'") about
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                label(for="SelectRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='exactly'") exactly
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_3" name="selection_1" value="3")
+                                label(for="SelectRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='from 19,000 to'") from 19,000 to
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 2.
+                            span   There are
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_b") 
+                            span  60 people working in this company.
+
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="1")
+                                label(for="SelectRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='approximately'") approximately
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_2" value="2")
+                                label(for="SelectRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='just'") just
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_6" name="selection_2" value="3")
+                                label(for="SelectRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='only'") only
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 3.
+                            span  There is a(n)
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_c") 
+                            span  number of students interested in taking his course.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_3" value="1")
+                                label(for="SelectRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='large'") large
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_3" value="2")
+                                label(for="SelectRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='exact'") exact
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_9" name="selection_3" value="3")
+                                label(for="SelectRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='certain'") certain
+                    
+                    
+                
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 4.
+                            span  The DANE predicts  
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_d") 
+                            span  53% growth in the population of Colombia in 10 years.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_10" name="selection_4" value="1")
+                                label(for="SelectRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='From 52 to'") From 52 to
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_11" name="selection_4" value="2")
+                                label(for="SelectRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='a'") a
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_12" name="selection_4" value="3")
+                                label(for="SelectRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='ahead to'") ahead to
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 5.
+                            span  It’s   
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_e") 
+                            span  a bottle opener which can also be used to peel vegetables. 
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_5" value="1")
+                                label(for="SelectRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='a specific type of'") a specific type of
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_5" value="2")
+                                label(for="SelectRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='some kind of'") some kind of
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_5" value="3")
+                                label(for="SelectRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='simply'") simply
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_10/activities/act_4_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+    

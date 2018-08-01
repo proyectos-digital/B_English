@@ -1,0 +1,53 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center") 
+                            
+                    div(class="row")
+                        div(class="col-center col xs12 sm11 md10 lh-20 ta-l")
+                            
+
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 1]. #[strong (Never/I/meet)]  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] such well-behaved children before. They are as good as gold.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 2]. Only when the situation gets out of hand  #[strong (the government/ begin)] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] to act.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 3]. #[strong (Little/he/know)]  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] that his culinary skills are quite substandard.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 4]. #[strong (At no time/ I/ mean) ] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] to hurt your feelings. It was all a big misunderstanding. 
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5]. #[strong (Seldom/we/ have)]  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] friends over for a drink. We prefer to meet them at pubs or restaurants. 
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 6]. #[strong (Not only/he/make) ]  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] a mean cheesecake, but he also prepares homemade jam.
+
+                           
+
+                        
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+     
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/self_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

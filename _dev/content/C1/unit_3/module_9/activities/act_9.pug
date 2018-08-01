@@ -1,0 +1,106 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_9" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content" )
+            div(Class="row u-animationFadeDown" ng-show="s_actividad == 1")
+                h5 Apologizing and accepting apologies.
+                div(class="row")
+                    .c-cardGreen
+                        .c-cardGreenContent.u-textColor_1
+                            p When you apologize to someone, you are sorry for having caused an inconvenience or some unhappiness. With the following expressions, either a noun or a verb in the gerund can follow:
+                            p.ta-l.mt20.lh35.
+
+                                #[strong • ] I (do / must) apologize for… → ‘do’ or ‘must’ adds emphasis. #[br]
+                                #[strong • ] I am (so / very / terribly) sorry for… → ‘so’, ‘very’ or ‘terribly’ adds emphasis. #[br]
+                                #[strong • ] I would like to apologize for… #[br]
+                                #[strong • ] Please, forgive me for…
+
+                    div(class="col xs12 md6")
+                        blockquote Good morning, Mr. Chambers. I must apologize for arriving late this morning. The thing is that I was stuck in traffic on the highway.
+                        div(class="xs12 md9"): hr
+                        blockquote
+                            p Why didn’t you respond to my email? I waited for almost an hour.
+                            p -	I’m so sorry. I was in the line at the bank, and I wasn’t allowed to use my cellphone.
+
+                    div(class="col xs12 md6")
+                        .c-cardGreen.mt10-md.mt0-hd
+                            .c-cardGreenContent.u-textColor_1
+                                p.ta-j.mt20.
+                                    When apologizing for not doing something, just add ‘not’ after the
+                                    word ‘for’ in the expressions.#[br]#[br]
+                                    #[strong Eg:] Please, forgive me for not calling to tell you about what happened.
+
+                                .row.mt20.flex.justify-center
+                                    button(class="c-btn-IconAction u-bgIconListen mr20" ng-audio="unit_3/module_9/assets/audios/act_9_1.mp3")
+                                    button(class="c-btn-IconAction u-bgIconListen mr20" ng-audio="unit_3/module_9/assets/audios/act_9_2.mp3")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_9/assets/audios/act_9_3.mp3")
+
+            div(Class="row u-animationFadeDown" ng-show="s_actividad == 2")
+                .col.xs12.md10.col-center
+                    h5 Pretend you are in the following situations and you need to apologize for something.
+
+                    .row.mt20.flex.align-items-center
+                        .col.xs8
+                            p.ta-j.
+                                #[strong.u-textColor_4 • ]You and your sister were playing in the living room when
+                                you accidentally knocked over the glass vase and it broke.
+                                Your father is now furious. What do say?
+                        .col.xs4
+                            .row
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt3_mod9_act9a',1)"): +ngRecorder
+                    .row.mt20.flex.align-items-center
+                        .col.xs8
+                            p.ta-j.
+                                #[strong.u-textColor_4 • ]You arrive late for work and your boss is not happy.
+                                What apology do you give him?
+                        .col.xs4
+                            .row
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt3_mod9_act9b',2)"): +ngRecorder
+                    .row.mt20.flex.align-items-center
+                        .col.xs8
+                            p.ta-j.
+                                #[strong.u-textColor_4 • ]Yesterday, you arranged to meet a friend at 3 pm at the
+                                park to explain some things about the US visa application.
+                                However, due to a family emergency, you could not make it.
+                                Give her your apology.
+                        .col.xs4
+                            .row
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt3_mod9_act9c',3)"): +ngRecorder
+                    .row.mt20.flex.align-items-center
+                        .col.xs8
+                            p.ta-j.
+                                #[strong.u-textColor_4 • ]You’re late on your rent payment for the current month.
+                                You call your landlord to apologize. What do you say?
+                        .col.xs4
+                            .row
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt3_mod9_act9d',4)"): +ngRecorder
+                    .row.mt20.flex.align-items-center
+                        .col.xs8
+                            p.ta-j.
+                                #[strong.u-textColor_4 • ]Your parents have confronted you about lying to them about where you were last night. Feeling ashamed, you decide to apologize.
+                        .col.xs4
+                            .row
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_e" time-limit='120' audio-model="audio_5" on-playback-start="guardarRecord('unt3_mod9_act9e',5)"): +ngRecorder
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2")
+        button(class="c-btn-IconAction u-bgIconRefresh is-active" ng-show="s_actividad == 3")
+        button(class="c-btn-IconAction u-bgIconCheck is-active" ng-show="s_actividad == 3")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,36 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="ContadorPalabras(120)")
+        section(class="template-content")
+            div(class="row-flex mt100-xs mt10-md mt10-sm aling-items-center")
+                div(class="col-flex-xs12 align-items-center col-flex-md6 col-center")
+                    div(class="row mb30 mt20 ta-c showTo-md")
+                        img(src="unit_1/module_2/assets/images/self_10.png", alt="" class="u-responsive-img w80")
+                div(class="row-flex align-items-center col-flex-xs12 col-flex-md6 col-center mt10-xm")
+                    div(class="c-cardGreen")    
+                        div(class="c-cardGreenContent")                            
+                            p #[strong: span(class="u-textColor_4-dark") •  ] Think of a mysterious or historic place or location in your country.
+                            p #[strong: span(class="u-textColor_4-dark") •  ] Who discovered it? Who was it built/constructed by? What was it
+                            p #[strong: span(class="u-textColor_4-dark") •  ] built/constructed for? How old is this place?
+                            p #[strong: span(class="u-textColor_4-dark") •  ] Write 120 words describing this place.
+                    div(class="c-wrapTextarea ")
+                        textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0 
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

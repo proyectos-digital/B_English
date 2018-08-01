@@ -1,0 +1,54 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 #[strong.u-textColor_4 1. ] Listen to the short dialogues and complete the sentences using the cues in parenthesis and an appropriate preposition.
+            div(class="row-flex mt10-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md7 col-center mt10-sm mt20-md")
+                    ol(class="c-listReset mb30" data-ejercicio="")
+                        p: button(class="c-btn-Icon u-bgIconListen mt40" ng-audio="unit_2/module_8/assets/audios/test_5_1.mp3"): span.ml20 Conversation 1
+                        li
+                            span. 
+                            | The woman
+                            strong (apologize / come) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            | late.
+                        p: button(class="c-btn-Icon u-bgIconListen mt40" ng-audio="unit_2/module_8/assets/audios/test_5_2.mp3"): span.ml20 Conversation 2
+                        li
+                            span. 
+                            | Students
+                            strong (be worried / miss) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            | classes.
+                        p: button(class="c-btn-Icon u-bgIconListen mt40" ng-audio="unit_2/module_8/assets/audios/test_5_3.mp3"): span.ml20 Conversation 3
+                        li
+                            span. 
+                            | The man
+                            strong (insist / reach) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            | a decision immediately.
+                        p: button(class="c-btn-Icon u-bgIconListen mt40" ng-audio="unit_2/module_8/assets/audios/test_5_4.mp3"): span.ml20 Conversation 4
+                        li
+                            span. 
+                            | The man
+                            strong (be tired / wait)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            | for the doctor to answer the phone.
+                        p: button(class="c-btn-Icon u-bgIconListen mt40" ng-audio="unit_2/module_8/assets/audios/test_5_5.mp3"): span.ml20 Conversation 5
+                        li
+                            span. 
+                            | They are
+                            strong (look forward / return)  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            | to their normal activities.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

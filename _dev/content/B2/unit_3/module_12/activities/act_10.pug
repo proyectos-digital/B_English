@@ -1,0 +1,104 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            
+            div(class="row-flex col-center mt50-xs mt100-md align-items-center")
+                div(class="col xs12 md6")
+                    p #[span(class="u-textColor_2"): strong A:] The party was terrible.
+                    p #[span(class="u-textColor_5"): strong B:] Was it?
+                    p #[span(class="u-textColor_2"): strong A:] Yes, I had a horrible time! There was no music!
+                    p #[span(class="u-textColor_5"): strong B:] It was a great performance.
+                    p #[span(class="u-textColor_2"): strong A:] Wasn’t it? Renee’s voice was superb.
+                    div(class="col xs12 md10 col-center")
+                        div(class="c-cardBlue mt30 ")
+                            div(class="c-cardBlueContent pl50")
+                                ul.lh30
+                                    li • Really?
+                                    li • What?
+                                    li • What a surprise!
+                                    li • Well I never! / Blimey!
+                                    li • That’s the last thing I expected.
+                                    li • You’re kidding!
+                                    li • I don’t believe it! / Are you serious?
+                                    li • I’m speechless!
+                                    li • I’d never have guessed.
+                                    li • You don’t say!.
+
+                    
+                div(class="col xs12 md6")
+                    div(class="col xs12 md10 col-center")
+                        p In English, there are three intonation patterns:
+                        br
+                        p.flex.align-items-center Rise #[img(src="unit_3/module_12/assets/images/act_10.png", alt="act_5" class="rotar270 ")]
+                        p.flex.align-items-center Full fall #[img(src="unit_3/module_12/assets/images/act_10.png", alt="act_5" class="rotar90")]
+                        p.flex.align-items-center Partial fall #[img(src="unit_3/module_12/assets/images/act_10.png", alt="act_5" class="rotar45")]
+
+                    p.mt30 We use the rising intonation pattern to tell the listener that we are surprised by what they just heard.#[br] Sometimes we repeat the surprising statement as a question with the rising intonation.
+                    br
+                    p Listen to the intonation when expressing surprise.
+                    p Classify them according to the intonation used in each case.
+                    div.row.mt30
+                        div.col.xs12.md7
+                            div(class="col xs12 md6")
+                                div(class="col xs4 md12 mb15 ta-c")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_10_1.mp3")
+                                div(class="col xs8 md12 mb15")    
+                                    div(class="dragCont")
+                                        div(class="drag" rescon="1") Example 1
+                            div(class="col xs12 md6")
+                                div(class="col xs4 md12 mb15 ta-c")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_10_2.mp3")
+                                div(class="col xs8 md12 mb15")    
+                                    div(class="dragCont")
+                                        div(class="drag" rescon="2") Example 2
+                            div(class="col xs12 md6")
+                                div(class="col xs4 md12 mb15 ta-c")
+                                    button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_10_3.mp3")
+                                div(class="col xs8 md12 mb15")    
+                                    div(class="dragCont")
+                                        div(class="drag" rescon="3") Example 3
+
+                        div.col.xs12.md5
+                            table(class="c-table-estilo_uno col xs12")
+                                thead
+                                    tr
+                                        th Rising intonation
+                                        th Full fall
+                                tbody
+                                    tr
+                                        td
+                                            span(class="drop h50 centrado")
+                                        td
+                                            span(class="drop h50 centrado")
+                                    tr
+                                        td
+                                            span(class="drop h50 centrado")
+                                        td
+                                            span(class="drop h50 centrado")
+
+                               
+                
+                            
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

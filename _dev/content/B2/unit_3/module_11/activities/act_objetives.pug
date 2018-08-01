@@ -1,0 +1,29 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+   div(class="template-section m-a")
+        section(class="template-content")
+            ul
+                li #[a(ui-sref="activities({Unidad_id: 1, Module_id: 2, Activity_id: 'welcome'})") back weolcome]
+                li #[a(ui-sref="activities({Unidad_id: 1, Module_id: 2, Activity_id: 'description'})") go to description]
+            div(class="row-flex c-moduleObjetive")
+                div(class="col-flex-md7 showTo-md")
+                    figure(class="c-figure-Rombo")
+                            div(class="c-figure-RomboRotate")
+                                img(src="unit_2/module_8/assets/images/objetives.png", alt="" class="c-figure-RomboImage")
+                div(class="col-flex-md5 col-flex-xs12 col-flex-sm7 col-center")
+                    div(class="row")
+                        div(class="c-moduleObjetive-title"): img(src=""+appPathImage+"obj_title.png", alt="" class="u-responsive-img c-moduleObjetive-img")
+                        ul(class="c-moduleObjetive-description browser-default")
+                            li(class="c-moduleObjetive-items") Students will be able to:
+                            li(class="c-moduleObjetive-items") Understand additional information in communicative exchanges.
+                            li(class="c-moduleObjetive-items") Take the initiative in an interaction.
+                            li(class="c-moduleObjetive-items") Encourage others to continue with the conversation.
+
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

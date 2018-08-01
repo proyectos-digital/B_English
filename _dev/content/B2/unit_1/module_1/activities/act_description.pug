@@ -1,0 +1,27 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+
+section(class="template-wrapper" )
+   div(class="template-section m-a")
+        section(class="template-content")
+            ul
+                li #[a(ui-sref="activities({Unidad_id: 1, Module_id: 1, Activity_id: 'objetives'})") back Objetives]
+                li #[a(ui-sref="activities({Unidad_id: 1, Module_id: 1, Activity_id: 1})") init activities]
+            div(class="row-flex c-moduleDescription")
+                figure(class="c-figure-Rombo")
+                    div(class="c-figure-RomboRotate")
+                        img(src="unit_1/module_1/assets/images/obj_1.jpg", alt="" class="c-figure-RomboImage")
+                    div(class="c-figure-RomboData")
+                        div(class="c-figure-RomboDataTitle c-icon u-bgIconDownload")
+                        div(class="c-figure-RomboDataIcon"): img(src="unit_1/module_1/assets/images/obj_1.jpg", alt="" class="u-responsive-img")
+        style.
+            .c-moduleDescription {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                min-height: 65vh;
+            }
+//- footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

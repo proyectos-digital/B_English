@@ -1,0 +1,158 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_9")
+	aside(class="template-asideLeft o-aside-Item")
+	|
+	|
+	div(class="template-section m-a")
+		|
+		section(class="template-content" )
+			.row-flex.align-items-center.justify-between
+				.c-cardGreen
+					.c-cardGreenContent.u-textColor_1
+						p When we complain about something, we are expressing our displeasure about it. Normally, it helps to be polite when doing so in order to prevent a tense situation.
+						.row
+							.col.xs4
+								h6 • I want to make a complaint (about)...
+							.col.xs4
+								h6 • I have a complaint about...
+							.col.xs4
+								h6 • I have a complaint to make.
+						.col.xs12.flex.justify-center.mt25
+							button(class="c-btn-IconAction u-bgIconListen mr10" ng-audio="unit_3/module_11/assets/audios/act_9_1.mp3")
+							button(class="c-btn-IconAction u-bgIconListen ml10" ng-audio="unit_3/module_11/assets/audios/act_9_2.mp3")
+
+			h5.ta-c Now Pretend that you are the people in the images with an annoyance or displeasure. Record your complaints making use of the expressions learnt.
+			.row.mt30
+				.col.xs6.md3.mt30
+					.col.xs11.col-center.ta-c
+						span At a restaurant.
+						img(src="unit_3/module_11/assets/images/act_9_1.png", alt="", class="u-responsive-img mt25")
+						.row.mt30
+							div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt3_mod11_act9a',1)")
+
+								div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+								|
+								div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+									div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+										button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+											type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+											ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+											span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+											//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+											span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+												sub seg.
+										|
+										button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+											type="button"
+											ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+											ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+											ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+											span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+												span play
+											span(ng-if="recorder.status.isPlaying")
+												span pause
+
+				.col.xs6.md3.mt30
+					.col.xs11.col-center.ta-c
+						span At the airport.
+						img(src="unit_3/module_11/assets/images/act_9_2.png", alt="", class="u-responsive-img mt25")
+						.row.mt30
+							div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt3_mod11_act9b',2)")
+
+								div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+								|
+								div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+									div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+										button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+											type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+											ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+											span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+											//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+											span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+												sub seg.
+										|
+										button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+											type="button"
+											ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+											ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+											ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+											span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+												span play
+											span(ng-if="recorder.status.isPlaying")
+												span pause
+
+
+
+				.col.xs6.md3.mt30
+					.col.xs11.col-center.ta-c
+						span On the phone with your internet provider.
+						img(src="unit_3/module_11/assets/images/act_9_3.png", alt="", class="u-responsive-img mt10")
+						.row.mt30
+							div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt3_mod11_act9c',3)")
+
+								div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+								|
+								div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+									div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+										button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+											type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+											ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+											span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+											//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+											span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+												sub seg.
+										|
+										button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+											type="button"
+											ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+											ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+											ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+											span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+												span play
+											span(ng-if="recorder.status.isPlaying")
+												span pause
+
+
+
+
+				.col.xs6.md3.mt30
+					.col.xs11.col-center.ta-c
+						span At the cinema.
+						img(src="unit_3/module_11/assets/images/act_9_4.png", alt="", class="u-responsive-img mt25")
+						.row.mt30
+							div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt3_mod11_act9d',4)")
+
+								div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+								|
+								div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+									div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+										button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+											type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+											ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+											span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+											//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+											span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+												sub seg.
+										|
+										button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+											type="button"
+											ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+											ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+											ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+											span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+												span play
+											span(ng-if="recorder.status.isPlaying")
+												span pause
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

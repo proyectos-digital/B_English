@@ -1,0 +1,490 @@
+/*!*/
+.c{
+    &-submit{
+        @extend %btn-default;
+        background-color: $color_5;
+		color: $white ;
+    }
+    &-input{
+
+        &:focus{
+			outline-color: #484848;
+			outline-style: auto;
+			outline-offset: 0;
+			outline-width: 1px;
+		}
+
+        &[type=text],
+        &[type=password],
+        &[type=email],
+        &[type=url],
+        &[type=time],
+        &[type=date],
+        &[type=datetime],
+        &[type=datetime-local],
+        &[type=tel],
+        &[type=number],
+        &[type=search],{
+
+            @extend %placeholder;
+            @extend %textFieldBorder;
+            
+            // width: 100%;
+            border-bottom-style: dashed;
+            outline: none;
+            font-size: 0.9rem;
+        
+        }
+    }
+    /* Input checkbox, radio ============================================================ */
+    &-inputCheckbox[type="checkbox"], &-inputRadio[type="radio"] {
+        /* Remove default checkbox */
+        // display: none;
+        &:not(:checked),
+        &:checked {
+            display: none;
+        }
+        // Text Label Style
+        + label {
+            
+            &.c-{
+                // ------------------ 
+                &CheckSelected{
+                    @extend %btn-default;
+                    margin-top: 10px;
+                    padding: 5px;
+    
+                    background-color: $color_5;
+                    
+                    text-align: center;
+                    color: $white ;
+                    /*! En el caso de que se necesite identificar el el resultado del ejercicio en los label*/
+                    &.bien{
+                        background-color: rgba($color_good, 0.6); 
+                        box-shadow: 0 0 0px 2px $color_good;
+                    }
+                    &.mal{
+                        background-color: rgba($color_wrong, 0.6); 
+                        box-shadow: 0 0 0px 2px $color_wrong;
+                    }
+                }
+                // ------------------ 
+                &CheckIconSelected{
+                    
+                    @extend .c-CheckSelected;
+
+                    &::before{
+                        content: "";
+                        width: 1rem;
+                        height: 1rem;
+                        filter: brightness(250%);
+                        background-size: 1.2rem;
+                        background-position: center;
+                    }
+                    & > *:first-child {
+                        margin-left: 0.5rem;
+                    }
+                }
+                // ------------------ 
+                &Checkbox{
+                    @extend %btn-default;
+
+                    padding: .5rem 30px .5rem .5rem !important;
+
+                    text-align: left;
+                    position: relative;
+                    z-index: 2;
+                    margin-top: 10px;
+                    color: #fff;
+                    background-color: var(--color_5);
+                    
+                    transition: all 200ms ease-in;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        z-index: -1;
+                        
+                        width: 10px;
+                        height: 10px;
+
+                        border-radius: 50%;
+                        
+                        background-color: var(--color_5-light);
+                        transform: translate(-50%, -50%) scale3d(1, 1, 1);
+                        transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+                        opacity: 0;
+                    }
+                    &:after {
+                        content: '';
+                    
+                        width: 20px; 
+                        height: 20px; 
+                    
+                        position: absolute; 
+                        right: -25px; 
+                        top: 50%; 
+                        z-index: 2;
+                        
+                        border-radius: 50%;
+                        border: 2px solid var(--color_5);
+                        
+                        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 25 25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+                        background-repeat: no-repeat;
+                        background-position: center -2px;
+                        
+                            
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                        transition: all 200ms ease-in;
+                    }
+                }
+                // ------------------
+                &CheckImage{
+                    position: relative;
+                    z-index: 2;
+                    
+                    display: inline-block;
+                    padding: .2rem; 
+                    
+                    overflow: hidden;
+                    background-color: var(--color_5);
+                    
+                    cursor: pointer;
+                    transition: color 200ms ease-in;
+
+                    img{
+                        object-fit: cover;
+                        object-position: center;
+                        filter: grayscale(50%);
+                        opacity: 0.8;
+                    }
+
+                    &:before{
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        z-index: 2;
+                        
+                        background-color: var(--color_5);
+                        mix-blend-mode: color;
+                        border-radius: 50%;
+                        opacity: 0;
+                        
+                        transform: translate(-50%, -50%) scale3d(1, 1, 1);
+                        transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+                    }
+                    &:after {
+                        content: '';
+
+                        width: 20px; 
+                        height: 20px; 
+
+                        position: absolute; 
+                        right: 7px; 
+                        top: 17px; 
+                        z-index: 3;
+
+                        border-radius: 50%;
+                        border: 2px solid #D1D7DC;
+
+                        background-color: #fff;
+                        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 25 25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+                        background-repeat: no-repeat;
+                        background-position: center 0;
+
+
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                        transition: all 200ms ease-in;
+                    }
+                }
+                // ------------------ 
+                &CheckTrue,
+                &CheckFalse,
+                &CheckGood,
+                &CheckWrong,
+                &CheckHandUp,
+                &CheckHandDown{
+                    // ------------------
+                    $SeudoElementos: 2rem;
+                    // ------------------
+                    position: relative;
+                    padding-left: 2rem;
+                    padding-top: .5rem;
+                    padding-bottom: .5rem;
+                    
+                    cursor: pointer;
+                    
+                    display: inline-block;
+                    min-height: $SeudoElementos;
+                    // line-height: $SeudoElementos;
+                    font-size: 1rem;
+                    // ------------------ 
+                    transition: all 350ms;
+                    // @extend .user-select;
+                    
+                    // ------------------ en el caso de que se incluya texto usar:
+                        & > *{
+                            display: inline-block;
+                            padding-left: 0.5rem;
+                        }
+                    // ------------------ 
+    
+                    /* seudoElements aspect */
+                    &:before
+                    , &:after {
+                        content: '';
+                        // ------------------ 
+                        font-family: "b-english" ;
+                        line-height: 1rem;
+                        font-size: 0.9rem;
+                        color: white; 
+                        // ------------------ 
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        right: auto;
+                        z-index: 0;
+                        // ------------------ 
+                        width: $SeudoElementos;
+                        height: $SeudoElementos;
+                        // ------------------ 
+                        display:            flex;
+                        justify-content:    center;
+                        align-items:        center;
+                        // ------------------ 
+                        border-radius: 0;
+                        // ------------------ 
+                        transform:translateY(-50%);
+                        transition: all 350ms;
+                    }
+                }
+                // ------------------  true - false
+                &CheckTrue,
+                &CheckFalse{
+                    &:before{
+                        background-color: rgba($color_2, 0.6);
+                    } 
+                    &:after{
+                        font-family: "open sans", sans-serif;
+                        // color: $color_1;
+                    }
+                    // &:before, &:after{
+                    //     min-width: 2rem;
+                    //     min-height: 2rem;
+                    // }
+    
+                }
+                // ------------------ 
+                &CheckTrue{ &:after { content: "T"; } }
+                &CheckFalse{ &:after { content: "F"; } }
+                // ------------------ good - wrong
+                &CheckGood, &CheckWrong{ &:before{ background-color: rgba($color_2, 0.6); } 
+                }
+                &CheckGood{ &:after{ content: "\67"; } }
+                &CheckWrong{ &:after{ content: "\66"; } }
+                //---------------------hands
+                &CheckHandUp,
+                &CheckHandDown{
+                    &:after{ color: rgba($color_2, 0.9); font-size: 1.6rem;} 
+                }
+                &CheckHandUp{ &:after{ content: "\70"; } }
+                &CheckHandDown{ &:after{ content: "\6f"; } }
+            }
+        }
+        &:not(:checked):disabled + label { 
+            &.c-{
+                // ------------------ selection
+                &Checkbox,
+                &CheckGood,
+                &CheckWrong{
+                    &:before{ background-color: $color_1-lighter; }
+                    &:after{ color: $color_1; }
+                }
+                &Checkbox,
+                &CheckHandUp,
+                &CheckHandDown{
+                    &:before{ background-color: $color_1-lighter; }
+                    &:after{ color: $color_1; }
+                }
+            }
+        }
+        &:checked{
+            /* Estilos por defecto para los input - requerimiento de programación */
+            &.bien{
+                + label{
+                    &.c-{
+                        &CheckSelected{
+                            background-color: rgba($color_good, 0.6); 
+                            box-shadow: 0 0 0px 2px $color_good;
+                        }
+                        &Checkbox{
+                            //color: rgba($color_good, 0.6);
+                            &:before{ background-color: rgba($color_good, 0.6); border-color: $color_good;}
+                            &:after{ background-color: rgba($color_good, 0.6); border-color: $color_good; right: 5px;}
+                        }
+                        &CheckImage{
+                            //color: rgba($color_good, 0.6);
+                            &:before{ background-color: rgba($color_good, 0.6); border-color: $color_good; mix-blend-mode: inherit;}
+                            &:after{ background-color: rgba($color_good, 0.6); border-color: $color_good; right: 5px;}
+                        }
+                        &CheckFalse,
+                        &CheckTrue {
+                            color: rgba($color_good, 0.6);
+                            &:before{ background-color: rgba($color_good, 0.6); border-color: $color_good; color: $white;}
+                        }
+                        &CheckGood,
+                        &CheckWrong {
+                            &:before{ background-color: $color_good; }
+                        }
+                        &CheckHandUp,
+                        &CheckHandDown {
+                           &:after{ color: rgba($color_good, 0.9); }
+                        }
+                    }
+                }
+            }
+            &.mal{
+                + label{
+                    &.c-{
+                        &CheckSelected{
+                            background-color: rgba($color_wrong, 0.6); 
+                            box-shadow: 0 0 0px 2px $color_wrong;
+                        }
+                        &Checkbox{
+                            &:before{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong;}
+                            &:after{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong; right: 5px;}
+                        }
+                        &CheckImage{
+                            &:before{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong; mix-blend-mode: inherit;}
+                            &:after{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong; right: 5px;}
+                        }
+                        &CheckFalse,
+                        &CheckTrue {
+                            color: rgba($color_wrong, 0.6);
+                            &:before{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong; color: $white;} 
+                        }
+                        &CheckGood,
+                        &CheckWrong {
+                            &:before{ background-color: rgba($color_wrong, 0.9); }
+                        }
+                        &CheckHandUp,
+                        &CheckHandDown {
+                            &:after{ color: rgba($color_wrong, 0.9); }
+                        }
+                    }
+                }
+            }
+            /* Estilos por defecto para los label */
+            + label{
+                &.c-{
+                    &CheckSelected{
+                        &, &.sel{ 
+                            background-color: rgba($color_3, 0.6); 
+                        }    
+                        &.sel{ 
+                            color: rgba($color_3-darker, 1); 
+                        }
+                        &.bien{
+                            // color: rgba($color_good, 1);
+                            background-color: rgba($color_good, 0.6); 
+                            box-shadow: 0 0 0px 2px $color_good;
+                        }
+                        &.mal{
+                            // color: rgba($color_wrong, 1);
+                            background-color: rgba($color_wrong, 0.6); 
+                            box-shadow: 0 0 0px 2px $color_wrong;
+                        }
+                    }
+                    &Checkbox{
+                        background-color: var(--color_5-light);
+                        
+                        &:before {
+                            transform: translate(-50%, -50%) scale3d(56, 56, 1);
+                            opacity: 1;
+                        }
+
+                        &:after {
+                            background-color: var(--color_5);
+                            border-color: var(--color_5);
+                            right: 5px;
+                        }
+                        &.bien{
+                            //color: rgba($color_good, 0.6);
+                            &:before{ background-color: rgba($color_good, 0.6); border-color: $color_good;}
+                            &:after{ background-color: rgba($color_good, 0.6); border-color: $color_good;}
+                        }
+                        &.mal{
+                            //color: rgba($color_wrong, 0.6);
+                            &:before{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong;} 
+                            &:before{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong;} 
+                        }
+                    }
+                    &CheckImage{
+                        background-color: var(--color_5-light);
+                        
+                        &:before {
+                            transform: translate(-50%, -50%) scale3d(56, 56, 1);
+                            opacity: 1;
+                        }
+
+                        img{
+                            filter: grayscale(0);
+                        }
+
+                        &:after {
+                            background-color: var(--color_5);
+                            border-color: var(--color_5);
+                            right: 5px;
+                        }
+                        &.bien{
+                            //color: rgba($color_good, 0.6);
+                            &:before{ background-color: rgba($color_good, 0.6); border-color: $color_good; mix-blend-mode: inherit;}
+                            &:after{ background-color: rgba($color_good, 0.6); border-color: $color_good;}
+                        }
+                        &.mal{
+                            //color: rgba($color_wrong, 0.6);
+                            &:before{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong; mix-blend-mode: inherit;} 
+                            &:before{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong;} 
+                        }
+                    }
+                    &CheckTrue,
+                    &CheckFalse{
+                        &:before, &.sel:before{ background-color: rgba($color_3, 0.6); border-color: $color_1; color: $white;}
+                        &:after, &.sel:after{ color: $white;}
+                        &.bien{
+                            color: rgba($color_good, 0.6);
+                            &:before{ background-color: rgba($color_good, 0.6); border-color: $color_good; color: $white;}
+                        }
+                        &.mal{
+                            color: rgba($color_wrong, 0.6);
+                            &:before{ background-color: rgba($color_wrong, 0.6); border-color: $color_wrong; color: $white;} 
+                        }
+                    }
+                    &CheckGood,
+                    &CheckWrong{
+                        &:before, &.sel:before{ background-color: rgba($color_1, 0.6); }
+                        // &:before, &:after{ color: white; }
+                        &.bien{ &:before{ background-color: $color_good; }}
+                        &.mal{ &:before{ background-color: rgba($color_wrong, 0.9); } }
+                    }
+                    &CheckHandUp,
+                    &CheckHandDown{
+                        &:after, &.sel:after{ color: $color_1; }
+                        &.mal{ &:after{ color: rgba($color_wrong, 0.9); } }
+                        &.bien{ &:after{ color: rgba($color_good, 0.9); } }
+                    }
+                }
+            }
+        }
+    }
+}

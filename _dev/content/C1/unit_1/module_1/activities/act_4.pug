@@ -1,0 +1,192 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_4" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            main(class="theNews")
+                div(class="paperNews" layout="grid" paperNews="1")
+                    figure(class="paperNews-block")
+                        img(src="unit_1/module_1/assets/images/act_4_1.jpg" alt="" class="u-responsive-img" img-fit="cover h100 w100")
+                        figcaption Argentinian workers preparing to defend control of factory
+
+                    div(class="paperNews-block")
+                        img(src="unit_1/module_1/assets/images/act_4_2.png" alt="" class="u-responsive-img" img-fit="cover w100")
+                        p Thirty workers travelled the 1,200 kilometers from Neuquén to protest outside the central courthouse in Buenos Aires.
+                            br
+                            br
+                            strong.mr10 A. 
+                            |    Factory workers at a ceramic factory in #[u Neuquén], #[u Argentina] are preparing to defend their autonomous running of their #[strong workplace], as the courts start to look at #[strong appointing] an owner.  The workers have been running the factory strong since the Argentinian government #[strong meltdown] in 2001, and say they are more effective working independently.
+                    div(class="paperNews-block")
+                        img(src="unit_1/module_1/assets/images/act_4_3.jpg" alt="" class="u-responsive-img" img-fit="cover h100 w100")
+                    div(class="paperNews-block")
+                        p
+                            strong.mr10 B.
+                            | There are now 410 workers at #[u FaSinPat] ('Fabrica sin Patrones' or 'Factory without Bosses'), having hired over 170 new workers in four years of autonomous control. The factory is #[strong widely known] as Zanon, the name under the previous owner, Luis Zanon, who #[strong accumulated] some US$170 million in #[strong debt], and #[strong shut down] the factory, #[strong firing] the workers.
+                        p
+                            strong.mr10 C.
+                            | Argentinian government and businesses were in chaos at the time, with the government dissolving repeatedly and defaulting on $88 billion of debt, inflation #[strong skyrocketing] and people demanding money from banks who had closed their doors.
+                    div(class="paperNews-block")
+                        p
+                            strong.mr10 D.
+                            |  Like over 200 Argentinian workplaces facing similar conditions, the workers chose spontaneously to run the factory themselves, and continued maintenance and production, to keep trading on their own behalf.
+                        p
+                            strong.mr10 E.
+                            |  Now thirty workers have travelled the 1,200 kilometers to Buenos Aires, presenting a #[strong petition] containing thousands of signatures from all over the world at the central courthouse, and mobilizing outside.
+                        p
+                            strong.mr10 F.
+                            |  "With these actions we are marking a playing ground for the judge," said Raul Godoy, Zanon worker and General Secretary of the Ceramists' Union.
+                div(class="paperNews" layout="grid" paperNews="2")
+                    div(class="paperNews-block")
+                        p
+                            strong.mr10 G.
+                            | As the government has continued its legal #[strong assault] upon the Zanon factory, at least one factory employee has been reported to have suffered repeated threats and violence at the hand of unknown attackers.
+                        p
+                            strong.mr10 H.
+                            | Esteban Magnani, author of El Cambio Silencioso (The Silent Change), a book about worker cooperatives in Argentina told  #[i UpsideDownWorld.org], "In Neuquen you have Jorge Sobisch, a right-wing governor who wants to be the new [President] #[u Carlos Menem] ... wants to show how tough he is ... Zanon is very #[strong politicized] and famous, which is bad for a governor who wants to be seen as a right-wing savior. Sobisch feels the need to #[strong crack down] now, because the longer he waits, the more powerful Zanon becomes." Some of the workers feel that Sobisch may be approving the attacks or may be guilty in failing to defend the workers.
+                        p
+                            strong.mr10 I.
+                            | Magnani indicates incumbent President #[u Néstor  Kirchner], described by Wikipedia as "a #[u Peronist] with #[strong leftist] leanings", might defend Zanon. "One of Kirchner’s flags is human rights. Now with this kidnapping and the continued threats, Kirchner shouldn’t have any excuse to not do something about this."
+                    div(class="paperNews-block")
+                        p
+                            strong.mr10 J.
+                            | "Subway workers, train workers, airline workers, other recuperated businesses and many other sectors have made it clear that the employees at Zanon will not be alone." Says one Zanon worker, "We are willing to defend the factory with our lives."
+                        p
+                            strong.mr10 K.
+                            | It may not come to that. Governor Sobisch has been attempting to #[strong evict] the workers of Zanon in an #[strong ongoing], highly politicized legal battle for several years. Sobisch has been ordered by the Federal Supreme Court of Argentina to evict the workers as soon as possible.
+                        p
+                            strong.mr10 L.
+                            | Other sources consulted about the past record of behavior by Sobisch do not reflect a record of #[strong overt] violence against the workers.  At least one source from October 2004 said that Sobish wants the workers to leave the Zanon factory and work instead in a government-sponsored micro-enterprise project for unemployed workers, constructing prefabricated houses.
+                        p Read the full story here: #[a(href="https://en.wikinews.org/wiki/Argentinian_workers_preparing_to_defend_control_of_factory" target="_blank") https://en.wikinews.org/wiki/Argentinian_workers_preparing_to_defend_control_of_factory]
+                    div(class="paperNews-block")
+                        img(src="unit_1/module_1/assets/images/act_4_4.jpg" alt="" class="u-responsive-img" img-fit="cover h100 w100")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row")
+                h5 Answer the following questions based on the text you have read.
+            div(class="row row-flex mt30")
+                div(class="col-flex-xs12 col-flex-md5 ma-r")
+                    div(class="row mt20")
+                        h6 Choose the most appropriate heading for the following extract:
+                        p Factory workers at a ceramic factory in #[u Neuquén], #[u Argentina] are preparing to defend their autonomous running of their #[strong workplace], as the courts start to look at #[strong appointing] an owner. The workers have been running the factory themselves since the Argentinian government meltdown in 2001, and say they are more effective working independently.
+                        ul(class="c-listDefault" style="list-style: none;")
+                            li: div(class="row-flex")
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1" ng-click="valorinputa=1")
+                                label(class="c-Checkbox " for="selInput_1"): span Argentina.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2" ng-click="valorinputa=2")
+                                label(class="c-Checkbox " for="selInput_2"): span Worker’s rights in today’s workplace.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3" ng-click="valorinputa=3")
+                                label(class="c-Checkbox " for="selInput_3"): span The worker managed company.
+                                input(type="hidden" ng-model="valorinputa" class="js-select")
+                    div(class="row mt20")
+                        h6 Mark the following statement “true”, “false” or “information not given”.
+                        p The workers at the Zanon plant are left-wing activists.
+                        ul(class="c-listDefault" style="list-style: none;")
+                            li: div(class="row-flex")
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1" ng-click="valorinputb=1")
+                                label(class="c-Checkbox " for="selInput_4"): span True.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2" ng-click="valorinputb=2")
+                                label(class="c-Checkbox " for="selInput_5"): span False.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3" ng-click="valorinputb=3")
+                                label(class="c-Checkbox " for="selInput_6"): span Information not given.
+                                input(type="hidden" ng-model="valorinputb" class="js-select")
+                div(class="col-flex-xs12 col-flex-md5 ma-l")
+                    div(class="row mt20")
+                        h6 Match the information given with one of the paragraphs from the reading exercise.
+                        p Showing your authority and iron will to the people.
+                        ul(class="c-listDefault" style="list-style: none;")
+                            li: div(class="row-flex")
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1" ng-click="valorinputc=1")
+                                label(class="c-Checkbox " for="selInput_7"): span Paragraph B.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2" ng-click="valorinputc=2")
+                                label(class="c-Checkbox " for="selInput_8"): span Paragraph D.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3" ng-click="valorinputc=3")
+                                label(class="c-Checkbox " for="selInput_9"): span Paragraph H.
+                                input(type="hidden" ng-model="valorinputc" class="js-select")
+                    div(class="row mt20")
+                        h6 Choose the correct answer for the following sentences.
+                        p The Zanon factory hired #[span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c" ng-model="txtcaptura_a")] in four years.
+                        ul(class="c-listDefault" style="list-style: none;")
+                            li: div(class="row-flex")
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1" ng-click="valorinputd=1")
+                                label(class="c-Checkbox " for="selInput_10" ng-click="txtcaptura_a = 'a new owner'"): span a new owner
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2" ng-click="valorinputd=2")
+                                label(class="c-Checkbox " for="selInput_11" ng-click="txtcaptura_a = 'over 410 workers'"): span over 410 workers
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3" ng-click="valorinputd=3")
+                                label(class="c-Checkbox " for="selInput_12" ng-click="txtcaptura_a = 'more than 100 new employees'"): span more than 100 new employees
+                                input(type="hidden" ng-model="valorinputd" class="js-select")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 3")
+            div(class="row row-flex mt20")
+                div(class="col-flex-xs12 col-flex-md5 ma-r")
+                    div(class="row mt20")
+                        h6 Fill in the summary using the words form the paragraph.
+                        div(class="row")
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent row-flex justify-center align-items-center") skyrocketing | meltdown | accumulated | workplace
+                        div(class="row"): p.
+                            The workers from the Zanon factory have taken over their
+                            #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")] .
+                            The country had a political
+                            #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")]
+                            resulting
+                            #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")]
+                            price increase. The previous owners had to shut down the factory due to large debt that was
+                            #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")]
+                            over the years.
+                    div(class="row mt20")
+                        h6 Complete the sentences with a word from the box below.
+                        div(class="row")
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent row-flex justify-center align-items-center") debt | shut down | fire | accumulated | skyrocket
+                        div(class="row"): ul(class="c-listDefault")
+                            li.
+                                When there is hyperinflation, the price of common goods and services
+                                #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")] .
+                            li.
+                                When
+                                #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")]
+                                is
+                                #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")]
+                                to a certain level, there is no other option than to
+                                #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")]
+                                the factory and
+                                #[span(class="c-textField"): input(type="text" placeholder="" class="c-input ta-c js-escribir")]
+                                the works.
+                div(class="col-flex-xs12 col-flex-md5 ma-l")
+                    div(class="row mt20")
+                        h6 Complete the table by using the correct person from the passage.
+                        div(Class="row row-flex justify-center")
+                            table(class="c-table-estilo_tres")
+                                thead
+                                    tr
+                                        th(class="xs6") Leftist
+                                        th(class="xs6") Right wing
+                                tbody
+                                    tr
+                                        td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                        td: span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                            div(Class="row ta-c mt30"): img(src="unit_1/module_1/assets/images/act_4_5.png", class="u-responsive-img")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2" ng-click="CompTxt_SelectMult()")
+
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 3" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 3" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

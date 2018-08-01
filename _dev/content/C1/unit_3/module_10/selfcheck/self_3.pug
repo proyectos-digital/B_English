@@ -1,0 +1,84 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_3")
+	aside(class="template-asideLeft o-aside-Item")
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content")
+
+			div(class="row row-flex mt30 align-items-center")
+				.row
+					h5.ta-c Listen to the news report and answer the questions that follow.
+					.row-flex.align-items-center.justify-between
+
+				.row-flex.align-items-center.justify-between
+					.col.xs12.md5
+						.row-flex.justify-center
+							audio(controls class='mt30')
+								source(src='unit_3/module_10/assets/audios/self_3_1.mp3' type='audio/mpeg')
+						.c-cardGreen
+							.c-cardGreenContent.ta-c
+								h5 Five arrested in Italian art smuggling
+								h6 Saturday, October 8, 2005
+
+								p Read the full story here: #[a(href="https://en.wikinews.org/wiki/Five_arrested_in_Italian_art_smuggling" target="blank") en.wikinews.org]
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Choose true or false. #[br] #[br] ‘Mozart’ worked as a curator in Rome
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_1") True.
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_2") False.
+
+					.col.xs12.md6
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Complete the sentence.#[br] #[br]
+							For the crime committed #[input(type="text" class="c-input" readonly)]
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_3" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_3") ‘mozart’ will be prosecuted in Austria.
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_4") each criminal must pay seven hundred euros.
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_5") Over 28 people were arrested.
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Choose true or false.  #[br] #[br]
+							The smuggled artifacts are said to go back to the 8th century BCE.
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_6" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_6") True.
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_7") False.
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Italian authorities #[input(type="text" class="c-input" readonly)]
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_8" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_8") believe the artifacts are going to be on display in Italy.
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_9" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_9") suspect artifacts were stolen from a museum in Rome.
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_10") are certain that all the artifacts were ceramic.
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

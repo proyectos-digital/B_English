@@ -1,0 +1,141 @@
+/**
+* Wordfind.js 0.0.1
+* (c) 2012 Bill, BunKat LLC.
+* Wordfind is freely distributable under the MIT license.
+* For all details and documentation:
+*     http://github.com/bunkat/wordfind
+*/
+
+/**
+* Styles for the puzzle
+*/
+#puzzle {
+    /* border: 1px solid black; */
+    padding: 0px;
+    // width: 100%;
+    position: relative;
+    margin: 0 auto;
+    min-height: 1px;
+    width: 100%;
+    // margin: 30px 0px;
+
+    
+    button::-moz-focus-inner {
+        border: 0;
+    }
+    &.puzzleComplete {
+        button:not(.puzzleFound) {
+            color: var(--color_4);
+            background-color: #ffffff00 !important;
+        }
+    }
+}
+.puzzleRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.puzzleSquare {
+    $dimension: 100%;
+    --width-puzzle:100%;
+    --puzzleCount-rows: 13;
+    --puzzleHeight-rows: calc(var(--width-puzzle) / var(--puzzleCount-rows));
+    position: relative;
+    height: 0;
+    width: $dimension;
+    // flex: 0 0 $dimension;
+    box-shadow: 0 0 2px purple;
+    
+    background-color: white;
+    outline-style: initial;
+    outline-width: 1px;
+    outline-color: purple;
+    border: 0;
+    
+    text-transform: uppercase;
+    font: 1em sans-serif;
+
+    background-color: #F3E5F5;
+    color: var(--color_1);
+    padding-top: var(--puzzleHeight-rows);
+}
+/* style for each square in the puzzle */
+/* indicates when a square has been selected */
+.puzzleSelected {
+    background-color: var(--color_3);
+    color: white;
+    outline-color: var(--color_3-darker);
+    outline-style: solid;
+}
+    /* indicates that the square is part of a word that has been found */ 
+.puzzleFound {
+    background-color: var(--color_3);
+    color: white;
+}
+.puzzleSolved {
+    background-color: var(--color_4);
+    color: white;
+}
+/* indicates that all words have been found */
+.puzzleComplete:not(#puzzle) {
+    background-color: var(--color_good);
+}
+
+
+span.puzzleSquare_word {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/**
+* Styles for the word list
+*/
+#words {
+    padding: 5px;
+    min-width: 390px;
+}
+ul.puzzleWords {
+    @supports (grid-template-columns: initial) {
+        display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, 33%);
+        // minmax(120px, max-content) 
+    };
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-wrap: break-word;
+    list-style-type: none;
+};
+
+li.puzzleWord {
+    padding: 3px 0;
+    font: 1em sans-serif;
+    flex: 1 0 auto;
+    margin-right: 0.7rem;
+    min-width: 29%;
+}
+
+/* indicates that the word has been found */
+.puzzleWordFound {
+    text-decoration: line-through;
+    color: var(--color_3);
+}
+/**
+* Styles for the button
+*/
+#solve {
+  margin: 0 30px;
+}
+

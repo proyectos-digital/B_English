@@ -1,0 +1,38 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_3")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            h5 Let’s talk about movies.
+            div(class="row row-flex mt30 align-items-center")
+                .col.xs12.md6
+                    div(class="c-contVideo")
+                        video(controls class="u-responsive-video")
+                            source(src="unit_2/module_8/"+pathVideo+"test_3_1.mp4" type="video/mp4")
+                .col.xs12.md6
+                    .c-cardGreen
+                        .c-cardGreenContent
+                            ul.lh25
+                                li • Are movies a popular form of entertainment in your country?
+                                li • How has the cinema experience changed in recent years?
+                                li • Do you think that movies should always have an educational value?
+                                li • Is it important for governments to support filmmaking in their countries?
+                                li • Do you think the Internet has had a big impact on the entertainment industry?
+                                li • In what ways do you think that entertainment media may develop in the future?
+                    .row
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt2_mod8_test3',1)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

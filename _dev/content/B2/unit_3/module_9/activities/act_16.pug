@@ -1,0 +1,163 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                h5 Choose the right option.
+
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md5 col-center")
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 1.
+                                |  You should not swim in the Atrato river
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_a")
+                                | you are a good swimmer.
+                                
+                            div(class="row-flex")
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                                label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='as long as'") as long as
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                                label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='unless'") unless
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 2.
+                                |  I will take a day off
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_b")
+                                my boss says that it is ok.
+                                
+                            div(class="row-flex")
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_2" value="1")
+                                label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='unless'") unless
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="2")
+                                label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='as long as'") as long as
+
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 3.
+                                |  You will not get fit
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_c")
+                                | you stop smoking.
+                                
+                            div(class="row-flex")
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_3" value="1")
+                                label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='as long as'")  as long as
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_3" value="2")
+                                label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='unless'") unless
+
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 4.
+                                |  It does not matter how it tastes
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_d")
+                                | you do not eat it.
+                                
+                            div(class="row-flex")
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_4" value="1")
+                                label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='unless'") unless
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_4" value="2")
+                                label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='as long as'") as long as
+
+
+                    div(class="col-flex-sm12 col-flex-md5 col-center") 
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 5.
+                                |  She will be angry with him 
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_e")
+                                | he says sorry.
+                                
+                            div(class="row-flex")
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_5" value="1")
+                                label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='as long as'") as long as
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_5" value="2")
+                                label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='unless'") unless
+
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 6.
+                                |  There is no need to wake up early
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_f")
+                                | you want to.
+                                
+                            div(class="row-flex")
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_6" value="1")
+                                label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='unless'") unless
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_6" value="2")
+                                label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='as long as'") as long as
+
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 7.
+                                |   The rock concert will be good
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_g")
+                                | you don't mind loud music.
+                                
+                            div(class="row-flex")
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_7" value="1")
+                                label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='unless'") unless
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_7" value="2")
+                                label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='as long as'") as long as
+
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 8.
+                                |  My pet lion will not bite you
+                                span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_h")
+                                | you do not get too close.
+                                
+                            div(class="row-flex")
+                                
+                                input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_8" value="1")
+                                label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_h='as long as'") as long as
+
+                                input(class="c-inputRadio" type="radio" id="inputRadio_16" name="SelInputRadio_8" value="2")
+                                label(for="inputRadio_16" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_h='unless'") unless
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconInfoActivity is-active openNotice" ng-click="idNotice = 2")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/activities/act_16_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

@@ -1,0 +1,63 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row row-flex align-items-center")
+                      
+                    div(class="col xs12 md6")
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+                            div(class="c-cardGreen ")
+                                div(class="c-cardGreenContent ta-c pt30")
+                                    h6.u-textWhite find | get | play | practice | quit | study
+                    div(class="col xs12 md6 ")
+
+                        div.row
+                            div(class="col xs4 ta-c")
+                                button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_10/assets/audios/test_5_1.mp3")
+                                h6 Audio 1
+                            div(class="col xs4 ta-c")
+                                button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_10/assets/audios/test_5_2.mp3")
+                                h6 Audio 2
+                            div(class="col xs4 ta-c")
+                                button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_10/assets/audios/test_5_3.mp3")
+                                h6 Audio 3
+                    
+                        div(class="row pt40")
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 1]. Paul loves  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] soccer.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 2]. Paul needs #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] in better shape.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 3]. Carlos´s father wants him #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] playing on the soccer team.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 4]. Carlos promised #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] more.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5]. Ben decided #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] another judo class.
+                    
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+     
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/self_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

@@ -1,0 +1,55 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a"  ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+
+            h5 Look out for the use of negative forms.
+            div(class="row-flex")
+                div(class="col xs12 md9 col-center mt30" data-ejercicio="unir")
+                    div(id="sourceElements" class="ancho450 js-columnas")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1")
+                            button(class="c-btn-Icon u-bgIconListen mr20" ng-audio="unit_1/module_2/assets/audios/test_5_1.mp3")
+                            | What will your life be like in 2025?
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2")
+                            button(class="c-btn-Icon u-bgIconListen mr20" ng-audio="unit_1/module_2/assets/audios/test_5_2.mp3")
+                            | What will you be doing by the time
+                            br
+                            | you´re 60?
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3")
+                            button(class="c-btn-Icon u-bgIconListen mr20" ng-audio="unit_1/module_2/assets/audios/test_5_3.mp3")
+                            | What do you think will have happened by the 22nd century?
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4")
+                            button(class="c-btn-Icon u-bgIconListen mr20" ng-audio="unit_1/module_2/assets/audios/test_5_4.mp3")
+                            | I lost my job, but I´m not worried. I need a vacation.
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5")
+                            button(class="c-btn-Icon u-bgIconListen mr20" ng-audio="unit_1/module_2/assets/audios/test_5_5.mp3")
+                            | How long will you have lived here for in a month?
+                    div(id="linecanvas" style="width: 60px;")
+                    div(id="targetElements" class="ancho350 js-columnas")
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="3") By that time, we will have developed cars that fly.
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="4") You should be worried because in a month or two, your money will have run out!
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="5") Five years.
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="1") I think I will have had children by then.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="2") I will have retired and will be a millionaire.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+
+// ==============================
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

@@ -1,0 +1,63 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex mt10-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt10-md")
+                    h5 Rewrite the following sentences, using the word even in the correct position. Use the cues in parenthesis to help you.
+                    div(class="row-flex")
+                        div(class="mb20 row-flex mt20 w100")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  1. 
+                                |  I am terrible at cooking. I can´t make eggs! 
+                                strong (Surprise)
+                                div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                        div(class="mb20 row-flex mt20 w100")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  2. 
+                                | Cali is hot, but Buenaventura is hotter. 
+                                strong (Comparison)
+                                div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                        div(class="mb20 row-flex mt20 w100")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  3. 
+                                | I saved you this time! Now we´re equal. 
+                                strong (Equality)
+                                div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                        div(class="mb20 row-flex mt20 w100")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  4. 
+                                | He has all the movies; he has the latest one! 
+                                strong (Surprise)
+                                div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                        div(class="mb20 row-flex mt20 w100")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  5. 
+                                | The match was 2-2. 
+                                strong (Equality) 
+                                div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                        div(class="mb20 row-flex mt20 w100")
+                            div(class="col-flex")
+                                strong(class="u-textColor_4-dark")  6. 
+                                | This surface is not leveled. 
+                                strong (Flat) 
+                                div #[span(class="c-textField row"): input(type="text" placeholder="Text here..." class="c-input js-escribir row")]
+                div(class="col-flex-xs12 col-flex-md5 offset-md1 col-center mt10-sm mt100-md showTo-md")
+                    img(src="unit_2/module_6/assets/images/act_9.png", alt="" class="u-responsive-img mt30")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

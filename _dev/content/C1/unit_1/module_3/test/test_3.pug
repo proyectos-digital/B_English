@@ -1,0 +1,37 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row row-flex mt30 align-items-center")
+                h5.row.mb60 Let's talk about education.
+                .col.xs12.md6
+                    div(class="row-flex justify-center mb20"): div(class="col md11 col-center"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                        source(src="unit_1/module_3/"+pathVideo+"test_3_1.mp4" type="video/mp4")
+                .col.xs12.md6
+                    .c-cardGreen
+                        .c-cardGreenContent
+                            ul.lh25
+                                li • What makes a good student?
+                                li • What role should the teacher have in the classroom?
+                                li • Do you think computers will one day replace teachers in the classroom?
+                                li • How has teaching changed in your country in the last few decades?
+                                li • What is the difference between the way children learn and the way adults learn?
+                                li • How can a teacher make lessons for children more interesting?
+
+                    .row
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod3_test3',1)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

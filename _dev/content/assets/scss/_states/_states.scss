@@ -1,0 +1,79 @@
+ /*! ********************************************************************************* 
+***************************************************** STATES.scss
+***********************************************************************************/
+
+
+// clase que validará programación para evaluar textos (escritos vs respuestas)
+$js_escribir : '.js-escribir';
+
+
+%is-good{
+	background-color: var(--color_good) !important;
+	color: white !important;
+}
+
+%is-wrong{
+	background-color: var(--color_wrong) !important;
+	color: white !important;
+}
+
+
+.is-{
+	// &visible{ }
+	
+	&hidden{ display: none !important; }
+
+	&blur { filter: blur(3px); }
+
+	// &disabled{ }
+
+	&good{
+		/* ********** Estado para los ejercicios de escribir ********* */
+		&#{$js_escribir}{
+			@extend %is-good;
+		}
+	}
+
+	&wrong{
+		/* ********** Estado para los ejercicios de escribir ********* */
+		&#{$js_escribir}{
+			@extend %is-wrong;
+		}
+	}
+	
+	&prevDefault{
+        user-select: none;
+        pointer-events: none;
+	}
+	
+	// &locked{}
+}
+// .has-{}
+// .on-{}
+
+
+.bien{
+	/* ********** Estado para los ejercicios de escribir ********* */
+	&.c-select, 
+	/* ********** Estado para los ejercicios de escribir ********* */
+	&#{$js_escribir}{
+		@extend %is-good;
+	}
+	
+	img{
+		box-shadow: 0 0 0 3px var(--color_good); 
+	}
+}
+
+.mal{
+	/* ********** Estado para los ejercicios de escribir ********* */
+	&.c-select, 
+	/* ********** Estado para los ejercicios de escribir ********* */
+	&#{$js_escribir}{
+		@extend %is-wrong;
+	}
+	
+	img{
+		box-shadow: 0 0 0 3px var(--color_wrong); 
+	}
+}

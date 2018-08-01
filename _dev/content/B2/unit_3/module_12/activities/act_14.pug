@@ -1,0 +1,74 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            h5 Listen to the conversation and choose expressions from the box to complete it.
+            div(class="row-flex col-center align-items-center")
+                .row
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") I owe you big time
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") Don’t mention it
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") What’s going on
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") appreciate
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") I thought you did a great job
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") Thanks
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") Seriously
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") What are you working on
+                    div(class="col xs6 md4")
+                        div(class="dragCont")
+                            div(class="drag") a million
+                                    
+                                            
+                                        
+                .row
+                    div(class="row flex align-items-center mt40")
+                            .col.xs2.ta-c
+                                button(class="c-btn-IconAction u-bgIconListen" ng-audio="unit_3/module_12/assets/audios/act_14.mp3")
+                            .col.xs10
+                                p #[span(class="u-textColor_2"): strong A: ] #[span(class="u-textColor_4"): strong (1) ] #[span(class="drop h25 ") ] ?
+                                p #[span(class="u-textColor_5"): strong B: ] Some visual aids. I have to give another presentation next week.
+                                p #[span(class="u-textColor_2"): strong A: ] Really? #[span(class="u-textColor_4"): strong (2) ] #[span(class="drop h25 ") ] with the last one. 
+                                p #[span(class="u-textColor_5"): strong B: ] #[span(class="u-textColor_4"): strong (3) ] #[span(class="drop h25 ") ] I really #[span(class="u-textColor_4"): strong (4) ] #[span(class="drop h25 ") ] that. #[span(class="u-textColor_4"): strong (5) ] #[span(class="drop h25 ") ] with you?
+                                p #[span(class="u-textColor_2"): strong A: ] I’m finishing up the report we were working on.
+                                p #[span(class="u-textColor_5"): strong B: ] Hey, thanks #[span(class="u-textColor_4"): strong (6) ] #[span(class="drop h25 ") ]. #[span(class="u-textColor_4"): strong (7) ] #[span(class="drop h25 ") ] 
+                                p #[span(class="u-textColor_2"): strong A: ] No problem.
+                                p #[span(class="u-textColor_5"): strong B: ] #[span(class="u-textColor_4"): strong (8) ] #[span(class="drop h25 ") ] ! I don’t think I could get this presentation done without your help.
+                                p #[span(class="u-textColor_2"): strong A: ] #[span(class="u-textColor_4"): strong (9) ] #[span(class="drop h25 ") ]
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+//- |
+//- |
+//- div(class="c-noticeAside is-visible" id="notice")
+//-     article(class="c-noticeAside-body" ng-include="'unit_3/module_12/activities/act_13_notice_'+ idNotice +'.php'")
+//-     footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

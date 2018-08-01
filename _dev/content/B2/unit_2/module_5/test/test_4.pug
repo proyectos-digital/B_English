@@ -1,0 +1,121 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent")
+                            p.ta-j
+                                | When I was leaving Sidney, I decided to pull stop at one of those rest areas on the side of the road.
+                                | There were a gas station and a mini-market with bathrooms. I got into the bathrooms. The first stall was taken,
+                                | so I go into the second stall. I had just sat down when I heard a voice from the other stall.
+                                | "Hi, there, how's it going?" I think to myself, "What?" I am not the type of person that starts up conversations
+                                | with strangers. I don't know what to say, so I finally said "Not bad" Then the voice says:
+                                | "So, what are you doing" I am starting to find this a little bit weird and very uncomfortable, but I finally reply
+                                | "Well, I'm going back east" Then I hear the person say "Look honey, I'll call you back. Every time I ask you a question, the person in the stall next to me keeps answering my questions!"
+                                | There was a moment of complete silence in the bathrooms. I have to tell you I was a relieved. But never before has I felt 
+                                | so silly! Horrible cell!
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+
+                    img(src="./unit_2/module_5/assets/images/tes_4.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="row-flex justify-center mt40")
+                        table(class="c-table w80" data-ejercicio="table-truefalse")
+                            thead
+                                tr
+                                    th 
+                                    th true
+                                    th false
+                            tbody
+                                tr
+                                    td 
+                                        p
+                                            strong(class="u-textColor_4-dark") 1.
+                                            |  The man telling the story was traveling by train.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="tfInputRadio_1" value="1")
+                                            label(for="inputRadio_1" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="tfInputRadio_1" value="2")
+                                            label(for="inputRadio_2" class="c-CheckFalse")
+                                tr
+                                    td 
+                                        p
+                                            strong(class="u-textColor_4-dark") 2.
+                                            |  The man stopped for gas.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="tfInputRadio_2" value="1")
+                                            label(for="inputRadio_3" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="tfInputRadio_2" value="2")
+                                            label(for="inputRadio_4" class="c-CheckFalse")
+
+                                tr
+                                    td 
+                                        p
+                                            strong(class="u-textColor_4-dark") 3.
+                                            |  The person in the other bathroom stall was talking to him.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="tfInputRadio_3" value="1")
+                                            label(for="inputRadio_5" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="tfInputRadio_3" value="2")
+                                            label(for="inputRadio_6" class="c-CheckFalse")
+
+                                
+                                tr
+                                    td 
+                                        p
+                                            strong(class="u-textColor_4-dark") 4.
+                                            |  The man is not comfortable talking to strangers.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="tfInputRadio_4" value="1")
+                                            label(for="inputRadio_7" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="tfInputRadio_4" value="2")
+                                            label(for="inputRadio_8" class="c-CheckFalse")
+                                
+                                tr
+                                    td 
+                                        p
+                                            strong(class="u-textColor_4-dark") 5.
+                                            |  The man in the other bathroom stall was talking on the phone.
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="tfInputRadio_5" value="1")
+                                            label(for="inputRadio_9" class="c-CheckTrue")
+                                    td
+                                        span(class="c-textField")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="tfInputRadio_5" value="2")
+                                            label(for="inputRadio_10" class="c-CheckFalse")
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

@@ -1,0 +1,106 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Choose the correct phrasal verbs in these sentences. You may check any online dictionary in case of any doubt.
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md5 col-center mt30-md mt30-sm")
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span Try not to
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_a" disabled)
+                                    span out on the opportunity. You don’t know when you might get a second chance.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                            label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='point'") point
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                            label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='miss'") miss
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                            label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='whip'") whip
+
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span I think it’s time for you to
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_b" disabled)
+                                    span down and find a job.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="1")
+                            label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='come'") come
+                            
+                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="2")
+                            label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='count'") count
+                            
+                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="3")
+                            label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='settle'") settle
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span Look! I think someone has tried to
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_c" disabled)
+                                    span into your car!
+                        div(class="row-flex justify-around")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_3" value="1")
+                            label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='break'") break
+                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_3" value="2")
+                            label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='put'") put
+                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="3")
+                            label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='turn'") turn
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span Sorry! Can you
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_d" disabled)
+                                    span on a minute?
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_4" value="1")
+                            label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='go'") go
+                            input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_4" value="2")
+                            label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='hang'") hang
+                            input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_4" value="3")
+                            label(for="inputRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='try'") try
+                    div(class="row mb20")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span I think I’m going to
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c js-escribir" ng-model="txtcaptura_e" disabled)
+                                    span up swimming. I need to get fit.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_5" value="1")
+                            label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='take'") take
+                            input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_5" value="2")
+                            label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='put'") put
+                            input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_5" value="3")
+                            label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='speed'") speed
+
+                div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center mt30-md mt30-sm showTo-md")
+                    img(src="unit_2/module_6/assets/images/act_16.png", alt="" class="u-responsive-img w90 centrado mt30 ")
+            
+
+
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

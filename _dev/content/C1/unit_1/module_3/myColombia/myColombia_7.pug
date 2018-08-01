@@ -1,0 +1,32 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_7" ng-init="ContadorPalabras(150)")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Write a report for a university teacher describing the information shown.
+            .row
+                .col.xs12.md6.ta-c: img(class="u-responsive-img w80 mt30" src="unit_1/module_3/assets/images/col_7_1.png", alt="myColombia")
+                .col.xs12.md6.mt30
+                    p #[strong.u-textColor_4 »] You should write at least 150 words.
+                    p #[strong.u-textColor_4 »] You should spend about 20 minutes on this task.
+                    div(class="c-wrapTextarea ")
+                        textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()" ng-show="enviarMensaje_minPalabras")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

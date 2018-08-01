@@ -1,0 +1,39 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_5")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Let’s talk about weather.
+
+            div(class="row row-flex mt30 align-items-center")
+
+                .col.xs12.md6.ta-c
+                    div(class="row-flex justify-center mb20"): div(class="col md11 col-center"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                        source(src="unit_2/module_6/"+pathVideo+"self_5_1.mp4" type="video/mp4")
+
+                .col.xs12.md6
+
+                    .c-cardGreen
+                        .c-cardGreenContent
+                            ul.lh25
+                                li • What’s the weather like today?
+                                li • What’s your favorite weather?
+                                li • Do you like the weather in your country?
+                                li • Is the weather the same in all parts of your country?
+                                li • Does the weather ever affect the way you feel?
+                                li • Does the weather in your country ever affect transportation?
+                    div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt2_mod6_self5',1)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

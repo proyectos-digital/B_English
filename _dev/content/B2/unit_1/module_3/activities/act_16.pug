@@ -1,0 +1,75 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row")
+                h5(class="row ta-c") #[strong.u-textColor_4 1. ]
+                    | The University’s basketball team has two spaces left. The coach is going to choose a male and a female player.
+                    br
+                    | There are four candidates. #[span(class="u-textColor_2") Listen to the candidates and complete the sentences. ]
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                        div(class="row mt50")
+                            img(src="./unit_1/module_3/assets/images/act_16_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        audio(controls class="row mt20 mb20 centrado")
+                            source(src="unit_1/module_3/assets/audios/act_16.mp3" type="audio/mpeg")
+                            | Your browser does not support the audio element.
+
+                        div(class="row-flex justify-around mt30")
+                            div(class="dragCont"): div(class="drag") playing
+                            div(class="dragCont"): div(class="drag") to play
+                            div(class="dragCont"): div(class="drag") to try
+                            div(class="dragCont"): div(class="drag") trying
+                            div(class="dragCont"): div(class="drag") to practice
+                            div(class="dragCont"): div(class="drag") practicing
+                            div(class="dragCont"): div(class="drag") to be
+                            div(class="dragCont"): div(class="drag") be
+
+                        div(class="row mt30")
+                            p
+                                strong(class="u-textColor_4-dark") 1.
+                                |   Jessica can't help
+                                span(class="drop ml10 mr10")
+                                | all the time.
+                            p
+                                strong(class="u-textColor_4-dark") 2.
+                                |    Jack expects
+                                span(class="drop ml10 mr10")
+                                | chosen by the coach.
+                            p
+                                strong(class="u-textColor_4-dark") 3.
+                                |  Cindy decided
+                                span(class="drop ml10 mr10")
+                                | out because she has friends on the team.
+
+                            p
+                                strong(class="u-textColor_4-dark") 4.
+                                |  Cindy dislikes
+                                span(class="drop ml10")
+                                |.
+
+                            p
+                                strong(class="u-textColor_4-dark") 5.
+                                |   Eric won’t give up
+                                span(class="drop ml10 mr10")
+                                | to make the team.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh"  ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

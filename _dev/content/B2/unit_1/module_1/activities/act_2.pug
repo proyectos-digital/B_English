@@ -1,0 +1,90 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            h5 #[strong.u-textColor_4 1. ] Select a verb from the box and complete the dialogues using the correct form.
+            div(class="row"): div(class="col xs10 md8 col-center")
+                div(class="c-cardGreen")
+                    div(class="c-cardGreenContent")
+                        p(class="space-between").
+                            #[span watch] #[span wash] #[span stay] #[span wait] #[span have] #[span dance] #[span pick]
+                        p(class="space-between").
+                            #[span complain] #[span stand] #[span sit] #[span call] #[span make] #[span do] #[span tidy up]
+            div(class="row-flex")
+                div(class="col-flex-xs12 col-flex-md6 col-center ")
+                    div(class="row mb30 ta-c showTo-md")
+                        img(src="unit_1/module_1/"+pathImage+"act_2.png", alt="" class="u-responsive-img xs8 centrado")
+                    div(class="row-flex")
+                        ol(class="c-listReset mb30" data-ejercicio="")
+                            p: button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_2_1.mp3"): span.ml20 Conversation 1
+                            li: span.
+                                #[strong Woman]: Where is your brother going to meet us?
+                            li: span.
+                                #[strong Man]: He (1) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                for us when our train arrives in Pamplona. I am sure he (2) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                on the platform when we get to the station. 
+                            li: span.
+                                    #[strong Woman]: And then what? 
+                            li: span.
+                                    #[strong Man]: We (3) 
+                                    #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                    Mary up at work and go out to dinner.
+                div(class="col-flex-xs12 col-flex-md6 col-center")
+                    div(class="row-flex")
+                        ol(class="c-listReset mb30" data-ejercicio="")
+                            p: button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_2_2.mp3"): span.ml20 Conversation 2
+                            li: span.
+                                #[strong Man]: When we get to the party, Penelope
+                                 (4) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                TV, Sam
+                                 (5) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                                drinks, Beth (6) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                by herself, and Aaron (7) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                about his day at work.
+                            li: span.
+                                #[strong Woman]: Maybe, this time they won’t be doing the same things.
+                            li: span.
+                                #[strong Man]: I am absolutely positive they (8)
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                the same things; they always do the same things.
+                    div(class="row-flex")
+                        ol(class="c-listReset mb30" data-ejercicio="")
+                            p: button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_1/assets/audios/act_2_3.mp3"): span.ml20 Conversation 3
+                            li: span.
+                                #[strong Woman]: Oh, look at that mountain of dirty dishes! Who (9) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                all of those?
+                            li: span.
+                                #[strong Man]: I promise I (10) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                when I get home from work.
+                            li: span.
+                                #[strong Woman]: Thanks.
+                            li: span.
+                                #[strong Man]: When you get home this evening, that mountain will be gone and nice stacks of sparkling clean dishes (11) 
+                                #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                in the cabinets.
+                        
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconCheck"  ng-click="validarCompletartxt()")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

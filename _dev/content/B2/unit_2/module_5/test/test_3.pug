@@ -1,0 +1,112 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                h5 #[strong.u-textColor_4 1. ] Past perfect or past perfect continuous.
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row mt20")
+                            p 
+                                strong(class="u-textColor_4-dark") Conversation 1:
+                            p
+                                strong A: 
+                                |  I was really angry at John yesterday.
+                            p
+                                strong B:
+                                |  Really? What happened?
+
+                            p
+                                strong A:
+                                |  By the time he finally arrived, I 
+                                strong (1. wait) 
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | for over an hour. I almost left without him.
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") Conversation 2:
+
+                            p
+                                strong A: 
+                                | Did you hear that Ben was fired last month?
+
+                            p
+                                strong B: 
+                                |  No! Seriously? He 
+                                strong (2. work)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | for that import company for more than ten years!
+
+                            p   
+                                strong A:
+                                |  I know! And he 
+                                strong (3. work)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | in almost every department.
+
+                            p
+                                strong B: 
+                                | Nobody knew the company like he did.
+
+                    div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center") 
+                        div(class="row mt20")
+                            p 
+                                strong(class="u-textColor_4-dark") Conversation 3:
+                            p   
+                                strong A: 
+                                | Hey, how was your vacation In Mexico?.
+                            p
+                                strong B: 
+                                | Oh, we had a great time! I 
+                                strong (4. see)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | many pictures of the pyramids before I went to Mexico.
+                                | Pictures of the monuments are very misleading.
+
+                            p
+                                strong A: 
+                                | Are they?
+
+                            p
+                                strong B: 
+                                | Yes! The pyramids are actually bigger than I expected!
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") Conversation 4:
+                            p
+                                strong A: 
+                                | Do you know what happened to Monica?
+                            p
+                                strong B: 
+                                | No, why?
+
+                            p
+                                strong A: 
+                                |  When she came into the office yesterday, her eyes were red and watery. I think she 
+                                strong (5. cry)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                
+
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

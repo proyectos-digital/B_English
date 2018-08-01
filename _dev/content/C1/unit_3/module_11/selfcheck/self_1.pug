@@ -1,0 +1,61 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                .row-flex.xs12.md7.justify-center.col-center.mt30
+
+                    .dragCont.ml10.w10: .drag Ruled out
+                    .dragCont.ml10.w10: .drag Stand up
+                    .dragCont.ml10.w10: .drag Pay back
+                    .dragCont.ml10.w10: .drag Show off
+                    .dragCont.ml10.w10: .drag Put out
+                    .dragCont.ml10.w10: .drag Sit down
+                    .dragCont.ml10.w10: .drag Put off
+                    .dragCont.ml10.w10: .drag Ran away
+                    .dragCont.ml10.w10: .drag Showed up
+                    .dragCont.ml10.w10: .drag Picked up
+
+
+                .row-flex.mt30.align-items-center.justify-between
+                    .col.xs12.md5
+                        p.ta-j #[strong.u-textColor_4 •] Maria borrowed some money from her sister, she has 4 weeks to #[span.drop.w20] the money.
+                        p.ta-j #[strong.u-textColor_4 •] I have to go to the doctor today so I have to #[span.drop.w20] shopping at the mall until tomorrow.
+                        p.ta-j #[strong.u-textColor_4 •] There is a small fire in the kitchen. Sarah #[span.drop.w20] the fire with the fire extinguisher.
+                        p.ta-j #[strong.u-textColor_4 •] The book fell from the desk, so John #[span.drop.w20] the book from the floor and placed it on the chair.
+                        p.ta-j #[strong.u-textColor_4 •] The company does not have enough engineers to build the bridge so we #[span.drop.w20] bidding for that project.
+
+                    .col.xs12.md6
+                        p.ta-j #[strong.u-textColor_4 •] Kevin was only 16 when he #[span.drop.w20] from home, now the police is looking for him but nobody can find him.
+                        p.ta-j #[strong.u-textColor_4 •] Karen has a very beautiful car. She likes to  #[span.drop.w20] her car to her friends.
+                        p.ta-j #[strong.u-textColor_4 •] We waited on Karen at the circus for two hours. When she finally #[span.drop.w20] , she did not have the tickets.
+                        p.ta-j #[strong.u-textColor_4 •] My legs are tired from standing all day, I need a chair so I can #[span.drop.w20] .
+                        p.ta-j #[strong.u-textColor_4 •] When the national anthem is playing, we should all #[span.drop.w20] and place our right hand across our chest.
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

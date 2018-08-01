@@ -1,0 +1,47 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                    img(src="./unit_3/module_9/assets/images/test_1_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    img(src="./unit_3/module_9/assets/images/test_1_2.png", alt="", srcset="" class="u-responsive-img centrado mt30")
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+                    div(class="row mt30" data-ejercicio="unir")
+                        div(id="sourceElements" class="ancho280 js-columnas")
+                            span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") A watch is a machine
+                            span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") A can opener is a tool
+                            span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") This is the book
+                            span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") There are a few restaurants here
+                            span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Neil Armstrong is the first man
+                        div(id="linecanvas" style="width: 60px;")
+                        div(id="targetElements" class="ancho280 js-columnas") 
+                            span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="5") who landed on the moon.
+                            span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="4") which serves fresh food.
+                            span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="2") which is used for opening cans.
+                            span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="1") which tells the time.
+                            span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="3") which is 120 years old.
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

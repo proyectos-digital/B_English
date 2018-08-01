@@ -1,0 +1,61 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                .row-flex.justify-between.col-center.mt30
+
+                    .dragCont.w10: .drag Pointed out
+                    .dragCont.w10: .drag Shut up
+                    .dragCont.w10: .drag Put off
+                    .dragCont.w10: .drag Ran into
+                    .dragCont.w10: .drag Set off
+                    .dragCont.w10: .drag Put on
+                    .dragCont.w10: .drag Set up
+                    .dragCont.w10: .drag Rely on
+                    .dragCont.w10: .drag Put out
+                    .dragCont.w10: .drag Run out of
+
+
+                .row-flex.mt30.flex.align-items-center.justify-between
+                    .col.xs12.md5
+                        p #[strong.u-textColor_4 •] It is cold outside, you need to #[span.drop.w20] a jacket.
+                        p #[strong.u-textColor_4 •] It is raining, we will have to  #[span.drop.w20] the picnic for another day.
+                        p #[strong.u-textColor_4 •] On Fridays the garbage truck passes at 8 am. So make sure you #[span.drop.w20] the garbage before then.
+                        p #[strong.u-textColor_4 •] We were not sure what time the movie started so Andrea #[span.drop.w20] that the movies start at 6:00 pm every day.
+                        p #[strong.u-textColor_4 •] I need to be at the airport at 10:00 am, can I #[span.drop.w20] you to get me there on time.
+
+                    .col.xs12.md6
+                        p #[strong.u-textColor_4 •] Johnny has not seen his sister in 2 years. He #[span.drop.w20] her at the mall yesterday, what a surprise!
+                        p #[strong.u-textColor_4 •] There are a lot of students at the museum today so we need more candy. We are going to  #[span.drop.w20] candy very soon.
+                        p #[strong.u-textColor_4 •] The crowd was angry but what really #[span.drop.w20] the crowd was when they said the concert was cancelled.
+                        p #[strong.u-textColor_4 •] The dogs are always thirsty when they play in the park so we need to  #[span.drop.w20] a water trough.
+                        p #[strong.u-textColor_4 •] Francy was talking loudly during the presentation so the teacher asked her to  #[span.drop.w20] so everyone could hear the presentation.
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

@@ -1,0 +1,37 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="ContadorPalabras(150)")
+        section(class="template-content")
+
+            div(class="row row-flex align-items-center")
+                p #[strong You have 20 minutes for this task]. The charts below show responses to a survey by students at Carell University. The first chart shows students’ reasons for choosing their course and the second chart shows what effect students feel their courses have had on their lives afterward.
+                p Write a report for a university lecturer describing the information below. #[strong Minimum 150 words].
+                .col.xs12.md7.col-center.ta-c
+                    img(src="unit_1/module_3/assets/images/self_4_1.png", alt="", class="u-responsive-img mt30")
+                    img(src="unit_1/module_3/assets/images/self_4_2.png", alt="", class="u-responsive-img mt30")
+
+                .col.xs12.md5
+
+                    .row
+                        div(class="c-wrapTextarea ")
+                            textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                            div(class="c-wrapTextarea__counter")
+                                span(id="contador") 0 
+                                span(ng-bind="limitePalabras")
+                                span(id="alertamensaje")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()" ng-show="enviarMensaje_minPalabras")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

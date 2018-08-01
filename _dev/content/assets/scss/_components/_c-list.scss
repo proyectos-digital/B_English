@@ -1,0 +1,193 @@
+.c-{
+    &moduleObjetive {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 65vh;
+    }
+    &moduleObjetive-title {
+        padding: 1rem;
+    }
+    &moduleObjetive-img {
+        max-width: 250px;
+    }
+    &moduleObjetive-description{
+        padding-left: 0;
+        list-style-type: initial;
+    }
+    &moduleObjetive-items{
+        margin-left: 2rem;
+        list-style-image: url('#{$GlobalImages}/c_objetiveList-type.png');
+    }
+    &moduleObjetive-items:first-child{
+        list-style: none;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    /**/
+    &list{
+        padding: 0;
+        margin: 0;
+        list-style-type: initial;
+        & > * {
+            margin-bottom: 10px;
+            margin-left: 20px;
+            &:first-child{
+                padding: 0;
+                margin-left: 0;
+            }
+        }
+        &Reset{
+            @extend .c-list;
+            list-style-type: none;
+            & > * {
+                margin-left: 0;
+            }
+        }
+        &Default{
+            @extend .c-list;
+            list-style-type: disc;
+            & > * , & > *:first-child{
+                margin-left: 20px;
+            }
+        }
+    }
+    &counterList{
+        @extend .c-list;
+        list-style: none;
+        $step : 'contador';
+        counter-reset: #{$step};
+        & > *{
+            counter-increment: #{$step};
+            display: inline-flex;
+            &::before {
+                color: var(--color-4);
+                content: counter(#{$step}) '. ';
+                padding-right:.6rem;
+            }
+            &:first-child{
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        &-Reset{
+            @extend .c-counterList;
+            & > * {
+                &:first-child{
+                    display: block;
+                    &::before{
+                        content: '';
+                        padding: 0;
+                    }
+                }
+                &:nth-child(2){
+                    counter-reset: #{$step};
+                }
+                &:nth-child(n+2){
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*! Componente */
+.c-lista-{
+	&detalles{
+		$anchoDetalles: 100%;
+		&-column{
+			width: $anchoDetalles;
+			float: left;
+			@media screen and (min-width:700px){
+				$anchoDetalles: 250px;
+				&:nth-child(1){
+					width: calc(100% - #{$anchoDetalles});
+				}
+				&:nth-child(2){
+					width: $anchoDetalles;
+				}
+			}
+			@media screen and (min-width:500px) and (max-width:699px){
+				$anchoDetalles: 200px;
+				&:nth-child(1){
+					width: calc(100% - #{$anchoDetalles});
+				}
+				&:nth-child(2){
+					width: $anchoDetalles;
+				}
+			}
+		}
+		&-datos{
+			&--header{
+				@media screen and (max-width:499px){
+					opacity: 0;
+					height: 0;
+				}
+			}
+		}
+	}
+	&detalle{
+		&__estado,
+		&__link,
+		&__preguntas{
+			position: relative;
+			&::after{
+				position: absolute;
+				top: -1rem;
+				content: '';
+				font-size: 0.7rem;
+				color: initial;
+				@media screen and (max-width:499px){
+					content: attr(nombre-detalle);
+				}
+			}
+		}
+
+		&__preguntas{
+			width: 90px;
+			@media screen and (min-width:500px) and (max-width:659px){
+				width: 70px;
+			}
+			// &--resultado{ }
+			// &--total{}
+		}
+		&__estado,
+		&__link{
+			width: 45px;
+		}
+		&__estado{
+			&Icon{
+				width: 45px;
+				height: 45px;
+				color: $color_3;
+				&::before{
+					content: "\6b";
+					font-family: "b-english";
+				}
+				&.is-visit{
+					&::before{
+						content: "\6b";
+					}
+				}
+			}
+		}
+		&__link{
+			&Icon{
+				width: 45px;
+				height: 45px;
+				transition: background-color 350ms ease-in-out;
+				&:hover{
+					text-decoration: none;
+					background-color: rgba($color_3, 0.7);
+					color: white;
+				}
+				&::before{
+					content: "\67";
+					font-family: "b-english";
+				}
+			}
+		}
+	}
+}

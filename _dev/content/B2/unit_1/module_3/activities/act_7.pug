@@ -1,0 +1,59 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_7")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md9 col-center")
+                    h5(class="") #[strong.u-textColor_4 1. ]  Modal verbs are used to say how sure we are about something.
+                    p Look at the picture. What can you guess about him?
+            div(class="row")
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                        div(class="row mt50")
+                            img(src="./unit_1/module_3/assets/images/act_7_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+
+                        h6.mt20 Drag the sentences to match the possibilities.
+
+                        div(class="row-flex justify-around mt40")
+                            div(class="dragCont"): div(class="drag") He can't be a dentist.
+                            div(class="dragCont"): div(class="drag") He must be a chef.
+                            div(class="dragCont"): div(class="drag") He should be a nice person.
+                            div(class="dragCont"): div(class="drag") He could be famous.
+
+                        table(class="c-table-estilo_uno w100 mt40")
+                            thead
+                                tr
+                                    th Asking for Opinions
+                                    th Outlining Facts
+                            tbody
+                                tr
+                                    td(class="ta-c w50") 99% sure it is possible.
+                                    td(class="w50"): span(class="drop w80 centrado")
+                                tr
+                                    td(class="ta-c") 99% sure it is impossible.
+                                    td: span(class="drop w80 centrado")
+                                tr
+                                    td(class="ta-c") 50% possible.
+                                    td: span(class="drop w80 centrado")
+                                tr
+                                    td(class="ta-c") We use should when we expect something to happen.
+                                    td: span(class="drop w80 centrado")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

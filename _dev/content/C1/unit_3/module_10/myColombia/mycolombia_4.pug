@@ -1,0 +1,113 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_4")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h6.mb20 When talking about art there are thousands of descriptive words that can be used.  Lest take a look at the some words use to describe mood and atmosphere created by a painting. #[br] Match the words  with similar meanings.
+                .row
+                    .dragCont.col.xs4.md2: .drag(rescon="1") dull
+                    .dragCont.col.xs4.md2: .drag(rescon="2") tranquil
+                    .dragCont.col.xs4.md2: .drag(rescon="3") happy
+                    .dragCont.col.xs4.md2: .drag(rescon="5") angry
+                    .dragCont.col.xs4.md2: .drag(rescon="5") dark
+                    .dragCont.col.xs4.md2: .drag(rescon="5") violent
+                    .dragCont.col.xs4.md2: .drag(rescon="4") miserable
+                    .dragCont.col.xs4.md2: .drag(rescon="6") exciting
+                    .dragCont.col.xs4.md2: .drag(rescon="2") content
+                    .dragCont.col.xs4.md2: .drag(rescon="1") lifeless
+                    .dragCont.col.xs4.md2: .drag(rescon="3") joyful
+                    .dragCont.col.xs4.md2: .drag(rescon="5") chilling
+                    .dragCont.col.xs4.md2: .drag(rescon="5") distressing
+                    .dragCont.col.xs4.md2: .drag(rescon="4") gloomy
+                    .dragCont.col.xs4.md2: .drag(rescon="4") somber
+                    .dragCont.col.xs4.md2: .drag(rescon="6") Thought-provoking
+                    .dragCont.col.xs4.md2: .drag(rescon="2") peaceful
+                    .dragCont.col.xs4.md2: .drag(rescon="2") relaxed
+                    .dragCont.col.xs4.md2: .drag(rescon="1") insipid
+                    .dragCont.col.xs4.md2: .drag(rescon="3") romantic
+                    .dragCont.col.xs4.md2: .drag(rescon="5") frightening
+                    .dragCont.col.xs4.md2: .drag(rescon="4") sad
+                    .dragCont.col.xs4.md2: .drag(rescon="4") tearful
+                    .dragCont.col.xs4.md2: .drag(rescon="6") stimulating
+
+                .col.md12.xs12
+                    table(class="c-table-estilo_tres m-a mt30 col xs10 col-center")
+                        
+                        tbody
+                            tr
+                                td.ta-c
+                                    span Boring
+                                td.row-flex.justify-around.align-items-center
+                                    .drop.w30
+                                    .drop.w30
+                                    .drop.w30
+                            tr
+                                td.ta-c
+                                    span Calm
+                                td.row-flex.justify-around.align-items-center
+                                    .drop.w30
+                                    .drop.w30
+                                    .drop.w30
+                                    
+                                    .drop.w30
+
+                            tr
+                                td.ta-c
+                                    span Cheerful
+                                td.row-flex.justify-around.align-items-center
+                                    .drop.w30
+                                    .drop.w30
+                                    .drop.w30
+
+                            tr
+                                td.ta-c
+                                    span Depressed
+                                td.row-flex.justify-around.align-items-center
+                                    .drop.w30
+                                    .drop.w30
+                                    .drop.w30
+                                    
+                                    .drop.w30
+                                    .drop.w30 
+
+                            tr
+                                td.ta-c
+                                    span Aggressive
+                                td.row-flex.justify-around.align-items-center
+                                    .drop.w30
+                                    .drop.w30
+                                    .drop.w30
+                                    
+                                    .drop.w30
+                                    .drop.w30
+                                    .drop.w30
+
+                            tr
+                                td.ta-c
+                                    span Energetic
+                                td.row-flex.justify-around.align-items-center
+                                    .drop.w30
+                                    .drop.w30
+                                    .drop.w30
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

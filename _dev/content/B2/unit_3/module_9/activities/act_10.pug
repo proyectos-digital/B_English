@@ -1,0 +1,120 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row-flex flex-column")
+
+                        img(src="./unit_3/module_9/assets/images/act_10_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                        img(src="./unit_3/module_9/assets/images/act_10_2.png", alt="", srcset="" class="u-responsive-img centrado mt20")
+                    
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+
+                    h6 Choose the right word to complete the sentences.
+
+                    div(class="row mt30")
+                        p 
+                            strong(class="u-textColor_4-dark") 1.
+                            |  This exercise is 
+
+                            span(class="c-textField ml10 mr10")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_1" name="tfInputRadio_1" value="1")
+                                label(for="inputRadio_1" class="c-CheckSelected") Like
+
+                            span(class="c-textField mr10")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_2" name="tfInputRadio_1" value="2")
+                                label(for="inputRadio_2" class="c-CheckSelected") As
+
+                            | a personal lesson in grammar.
+
+
+                    div(class="row mt20")
+                        p 
+                            strong(class="u-textColor_4-dark") 2.
+                            |  He is acting
+                            
+                            span(class="c-textField ml10 mr10")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_3" name="tfInputRadio_2" value="1")
+                                label(for="inputRadio_3" class="c-CheckSelected") Like
+
+                            span(class="c-textField mr10")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_4" name="tfInputRadio_2" value="2")
+                                label(for="inputRadio_4" class="c-CheckSelected") As
+
+                            | the manager while the real manager is on holidays.
+
+                    div(class="row mt20")
+
+                        p
+                            strong(class="u-textColor_4-dark") 3.
+                            |  He smokes
+
+                            span(class="c-textField ml10 mr10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_5" name="tfInputRadio_3" value="1")
+                                    label(for="inputRadio_5" class="c-CheckSelected") Like
+
+                            span(class="c-textField mr10")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_6" name="tfInputRadio_3" value="2")
+                                label(for="inputRadio_6" class="c-CheckSelected") As
+
+                            | a chimney.
+
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 4.
+                            |  I work
+
+                            span(class="c-textField ml10 mr10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_7" name="tfInputRadio_4" value="1")
+                                    label(for="inputRadio_7" class="c-CheckSelected") Like
+
+                            span(class="c-textField mr10")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_8" name="tfInputRadio_4" value="2")
+                                label(for="inputRadio_8" class="c-CheckSelected") As
+
+                            | a teacher for students who are learning to practice French.
+
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 5.
+                            |  The bread tastes
+
+                            span(class="c-textField ml10 mr10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_9" name="tfInputRadio_5" value="1")
+                                    label(for="inputRadio_9" class="c-CheckSelected") Like
+
+                            span(class="c-textField mr10")
+                                input(class="c-inputRadio" type="radio" id="inputRadio_10" name="tfInputRadio_5" value="2")
+                                label(for="inputRadio_10" class="c-CheckSelected") As
+
+                            | it was made three weeks ago. Are you sure it is from today?
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+         button(class="c-btn-IconAction u-bgIconInfoActivity is-active openNotice" ng-click="idNotice = 2")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

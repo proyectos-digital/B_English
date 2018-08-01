@@ -1,0 +1,136 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_11" ng-init="s_actividad = 1" )
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            .row-flex.justify-between.align-items-center    
+                .col.xs12.md6
+                    .row
+                        p To express wishes regarding the past, whether for ourselves or someone else, the past perfect tense is used.
+                        p.mb20.mt20: strong I wish + subject + past perfect
+                        p.ml20 #[strong.u-textColor_4 • ] #[strong Eg1: I wish I hadn’t eaten] all that spicy food. Now I have a terrible stomachache. 
+                        p.ml20 #[strong.u-textColor_4 •] #[strong I wish Sebastian had listened ] to me when I told him not to quit his job.
+                    .row
+                        h5.mb20 Based on the following situations, create sentences expressing wishes for the past.
+                        p.ml20 #[strong.u-textColor_2 Example:] #[strong  Carl took my bicycle to the park and the front wheel got punctured. ] 
+                        p.ta-c: strong #[strong.u-textColor_4 •] I wish Carl hadn’t taken my bicycle to the park.
+
+                    div(class="row col-center mt30")
+                        p #[strong.u-textColor_4 •] I didn’t take the medication prescribed by the doctor. Now, I’m in so much pain.
+                        p I wish I #[input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_a") ] the medication prescribed by the doctor.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_1" ng-click="txtcaptura_a = 'had taken.'") had taken
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_2" ng-click="txtcaptura_a = 'have taken.'") have taken
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_3" ng-click="txtcaptura_a = 'had take.'") had take
+                                input(type="hidden" class="js-select")
+
+
+                    div(class="row col-center mt30")
+                        p #[strong.u-textColor_4 •] I fell in love with Ronald and he ended up breaking my heart.
+                        p I wish I #[input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_b") ] in love with Ronald.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_4" ng-click="txtcaptura_b = 'haven’t fall.'") haven’t fall
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_5" ng-click="txtcaptura_b = 'hadn’t fallen.'") hadn’t fallen
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_6" ng-click="txtcaptura_b = 'hadn’t fall.'") hadn’t fall
+                                input(type="hidden" class="js-select")
+                .col.xs12.md5
+                    div(class="row col-center mt30")
+                        p #[strong.u-textColor_4 •] I ate a lot of sweets when I was younger which caused me to be diagnosed with diabetes. 
+                        p I wish I #[input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_c") ]  a lot of sweets when I was younger.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_7" ng-click="txtcaptura_c = 'hadn’t eat.'") hadn’t eat
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_8" ng-click="txtcaptura_c = 'haven’t eat.'") haven’t eat
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_9" ng-click="txtcaptura_c = 'hadn’t eaten.'") hadn’t eaten
+                                input(type="hidden" class="js-select")
+
+                    div(class="row col-center mt30")
+                        p #[strong.u-textColor_4 •] Margaret didn’t pay the rent on time. Now the landlord is absolutely upset. 
+                        p I wish Margaret #[input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_d") ] the rent on time.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_10" ng-click="txtcaptura_d = 'had pay.'") had pay
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_11" ng-click="txtcaptura_d = 'had paid.'") had paid
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_12" ng-click="txtcaptura_d = 'have pay'") have pay
+                                input(type="hidden" class="js-select")
+
+                    div(class="row col-center mt30")
+                        p #[strong.u-textColor_4 •] I told the students they could use their cellphones in class. It was a big mistake! 
+                        p I wish I #[input(type="text" disabled placeholder="" class="c-input ta-c " ng-model="txtcaptura_e") ]  the students to use their cellphones in class.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_13" ng-click="txtcaptura_e = 'had tell.'") had tell
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_14" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_14" ng-click="txtcaptura_e = 'have tell.'") have tell
+                                input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_15" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_15" ng-click="txtcaptura_e = 'hadn’t told.'") hadn’t told
+                                input(type="hidden" class="js-select")
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            
+            .row-flex.align-items-center.justify-between
+                .col.xs12.md6
+                    h5 Here are the same examples from the previous exercise. Rewrite using wish and the past participle. 
+
+                    .row.mt30
+                        p #[strong.u-textColor_4 •] I didn’t take the medication prescribed by the doctor. Now, I’m in so much pain.
+                        input(type="text" placeholder="Text here..." class="row c-input js-escribir")
+
+                    .row.mt30
+                        p #[strong.u-textColor_4 •] I fell in love with Ronald and he ended up breaking my heart.
+                        input(type="text" placeholder="Text here..." class="row c-input js-escribir")
+
+                    .row.mt30
+                        p #[strong.u-textColor_4 •] I ate a lot of sweets when I was younger which caused me to be diagnosed with diabetes.
+                        input(type="text" placeholder="Text here..." class="row c-input js-escribir")
+                    
+                    .row.mt30
+                        p #[strong.u-textColor_4 •] Margaret didn’t pay the rent on time. Now the landlord is absolutely upset.
+                        input(type="text" placeholder="Text here..." class="row c-input js-escribir")
+
+                    .row.mt30
+                        p #[strong.u-textColor_4 •] I told the students they could use their cellphones in class. It was a big mistake!
+                        input(type="text" placeholder="Text here..." class="row c-input js-escribir")
+
+                .col.xs12.md5
+                    img(src="unit_1/module_1/assets/images/act_11_1.png", alt="", class="u-responsive-img")
+
+
+
+
+            
+          
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+| 
+script(src="./../assets/js/librerias/wordfind.js")
+script(src="./../assets/js/librerias/wordfindgame.js")
+

@@ -1,0 +1,208 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_14" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+
+
+    div(class="template-section m-a")
+        section(class="template-content " ng-show="s_actividad == 1")
+   
+
+            div(class="row")
+                div(class="c-flickity")
+                    h5 Tumaco was made a municipality by President Tomas Cipriano de Mosquera in 1861.#[br] By the way, do you remember these presidents of Colombia and when they were in office? Let’s find   out.
+                    br
+                    div(class="row mt10")
+                        |
+                        div(class="row c-flickity-controls c-flickity-controls-flex")
+                            div(class="c-flickity-controlsSlides")
+                                button(class="c-flickity-button is-selected ") Exercises 1
+                                button(class="c-flickity-button ") Exercises 2
+                                button(class="c-flickity-button ") Exercises 3
+                                button(class="c-flickity-button ") Exercises 4
+                                button(class="c-flickity-button ") Exercises 5
+                                button(class="c-flickity-button ") Exercises 6
+                                button(class="c-flickity-button ") Exercises 7
+                                button(class="c-flickity-button ") Exercises 8
+                                button(class="c-flickity-button ") Exercises 9
+                                span(class="c-flickity--cell-total") 9
+                            button(class="c-flickity-button c-flickity-button--previous") ←
+                            button(class="c-flickity-button c-flickity-button--next") →
+                    div(class="row mt50-sm")
+                        
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_i.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 1. Juan Manuel Santos Calderón
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_32" name="SelInputRadio_9" value="1")
+                                        label(for="inputRadio_32" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1990-1994
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_33" name="SelInputRadio_9" value="2")
+                                        label(for="inputRadio_33" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 2010-Incumbent
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_34" name="SelInputRadio_9" value="3")
+                                        label(for="inputRadio_34" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 2002-2010
+    
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_c.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 2. Belisario Betancur Cuartas
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_3" value="1")
+                                        label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1982-1986
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_3" value="2")
+                                        label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1978-1982
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_3" value="3")
+                                        label(for="inputRadio_11" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1986-1990
+                     
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_d.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 3. Virgilio Barco Vargas
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_4" value="1")
+                                        label(for="inputRadio_13" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1982-1986
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_4" value="2")
+                                        label(for="inputRadio_14" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1978-1982
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_4" value="3")
+                                        label(for="inputRadio_15" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1986-1990
+             
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_f.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 4. Ernesto Samper Pizano
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_21" name="SelInputRadio_6" value="1")
+                                        label(for="inputRadio_21" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1994-1998
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_22" name="SelInputRadio_6" value="2")
+                                        label(for="inputRadio_22" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1998-2002
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_23" name="SelInputRadio_6" value="3")
+                                        label(for="inputRadio_23" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1986-1990
+                       
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_a.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 5. Alfonso López Michelsen
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                                        label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1974-1978
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                                        label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1978-1982
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="3")
+                                        label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1986-1990
+                                 
+                 
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_g.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 6. Andrés Pastrana Arango
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_25" name="SelInputRadio_7" value="1")
+                                        label(for="inputRadio_25" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1994-1998
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_26" name="SelInputRadio_7" value="2")
+                                        label(for="inputRadio_26" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1998-2002
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_27" name="SelInputRadio_7" value="3")
+                                        label(for="inputRadio_27" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1986-1990
+                       
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_b.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 7. Julio César Turbay Ayala 
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_2" value="1")
+                                        label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1974-1978
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_2" value="2")
+                                        label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1978-1982
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_2" value="3")
+                                        label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1986-1990
+              
+
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_h.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 8. Álvaro Uribe Vélez
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_29" name="SelInputRadio_8" value="1")
+                                        label(for="inputRadio_29" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1982-1986
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_30" name="SelInputRadio_8" value="2")
+                                        label(for="inputRadio_30" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 2002-2010
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_31" name="SelInputRadio_8" value="3")
+                                        label(for="inputRadio_31" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1998-2002
+                       
+                        div(class="c-flickity--cell")
+                            .row
+                                div(class="col xs12 sm3 col-center")
+                                    img(class="centrado u-responsive-img" src='unit_2/module_7/assets/images/col_3_e.png')
+                                    div.c-cardGreen.padding0: div.c-cardGreenContent.flex.align-items-center.justify-center: h6.u-textWhite 9. César Gaviria Trujillo
+
+                                div(class="row mt30")
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_17" name="SelInputRadio_5" value="1")
+                                        label(for="inputRadio_17" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1990-1994
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_18" name="SelInputRadio_5" value="2")
+                                        label(for="inputRadio_18" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1978-1982
+                                    div(class="col xs6 sm4  ta-c")
+                                        input(class="c-inputRadio" type="radio" id="inputRadio_19" name="SelInputRadio_5" value="3")
+                                        label(for="inputRadio_19" class="c-CheckSelected col-flex ml10 mr10 h40 w50") 1986-1990
+                   
+
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //-button(class="c-btn-IconAction openNotice u-bgIconInfoActivity" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_4/activities/act_14_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next');

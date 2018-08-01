@@ -1,0 +1,106 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_15")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            div(class="row")
+                h5 Classify the verbs. 
+                h6 Drag and drop the verbs into the right preposition column.
+                div(class="row mt40")
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="4") believe
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="1") go
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="2") cope
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="5") admit
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="3") concentrate
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="4") specialize
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="2") put up
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="5") confess
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="3") depend
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="4") succeed
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="5") look forward
+                    div(class="col xs3 md2")
+                                div(class="dragCont")
+                                    div(class="drag" rescon="3") insist
+
+                div(class="row mt40")
+                    table(class="c-table-estilo_uno col xs12")
+                        thead
+                            tr
+                                th into
+                                th with
+                                th on                               
+                                th in
+                                th to
+                        tbody
+                            tr
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+                            
+                            tr
+                                td
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+                            
+                            tr
+                                td
+                                td
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+                                td
+                                    span(class="drop centrado")
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+    

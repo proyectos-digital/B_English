@@ -1,0 +1,97 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_2")
+	aside(class="template-asideLeft o-aside-Item")
+
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content")
+
+
+			div(class="row row-flex mt30 align-items-center")
+				.row
+					h5.ta-c Listen to the news report and answer the questions that follow.
+					.row-flex.align-items-center.justify-between
+
+				.row-flex.justify-between
+					.col.xs12.md5
+						.row-flex.justify-center
+							audio(controls class='mt30')
+								source(src='unit_3/module_10/assets/audios/test_2_1.mp3' type='audio/mpeg')
+
+						.c-cardGreen
+							.c-cardGreenContent.ta-c
+								h5 International exhibit of chair art starts in Canada
+								h6 Monday, November 21, 2005
+								p Read the full story here: #[a(href="https://en.wikinews.org/wiki/International_exhibit_of_chair_art_starts_in_Canada" target="blank") https://en.wikinews.org/]
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] SAT’s display of artwork...
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_1") makes use of mundane objects.
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_2") highlights one particular object.
+							input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_3") includes abstract collages.
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Choose true or false. #[br] #[br]
+							Between seven to ten countries are going to have exhibitions at the Visual Arts Brampton show.
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_4") True.
+							input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_5") False.
+
+					.col.xs12.md6
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Complete the sentence. #[br] #[br]
+							The theme for SAT’s exhibit #[input(type="text" class="c-input" readonly)]
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_7") was the exact same theme used at a previous art show.
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_8") was suggested by art curator Nicholas Moreau.
+							input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_9") had a likeness to a previous art show.
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Choose true or false. #[br] #[br]
+							The Snail Mail World Postcard Art Show has been held since 2001.
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_10") True.
+							input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_11") False.
+
+						p.ta-j.mt30.
+							#[strong.u-textColor_4 •] Visual Arts Brampton #[input(type="text" class="c-input" readonly)]
+
+						.row
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_12" value="1")
+							label(class="c-Checkbox w100 ta-l " for="selInput_12") created a third display space for kids.
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_13" value="2")
+							label(class="c-Checkbox w100 ta-l " for="selInput_13") hosts artworks by professional artists.
+							input(type="radio" class="c-inputRadio" name="sel_input_5" id="selInput_14" value="3")
+							label(class="c-Checkbox w100 ta-l " for="selInput_14") will have a space dedicated to mail art.
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

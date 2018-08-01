@@ -1,0 +1,55 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content")
+            
+            div(class="row")
+
+                h6(class="mt30") If you are not sure about the regulation, you can check on the web: Pay attention to these regulations in Colombia:
+            
+            div(class="row mt40-md mt20-xs")
+                div(class="col xs12 sm10 md8 col-center" data-ejercicio="unir")
+                    div(id="sourceElements" class="ancho280 js-columnas")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") You cannot drive a car
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") You can drive with glasses
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") You can drink alcohol and drive
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") You cannot have children at the front seat
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Children under 10 don't need to have the safety belt
+                        span(id="Item0_5" class="treeItem" onclick="setSource(this)" seleccion valor="6") You can turn right when the traffic light is red
+                        span(id="Item0_6" class="treeItem" onclick="setSource(this)" seleccion valor="7") You can have up to 5 people in the car
+                    div(id="linecanvas" style="width: 60px;")
+                    div(id="targetElements" class="ancho280 js-columnas") 
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="5") only if they are accompanied by an adult.
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="7") if the car specifications include more seats.
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="3") providing you do not exceed the amount of alcohol permitted.
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="1") unless you are 18 and have taken and passed a driving test.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="2") you driving license does not specify the contrary
+                        span(id="Item1_5" class="treeItem" onclick="setTarget(this)" seleccion valor="6") unless this is openly prohibited.
+                        span(id="Item1_6" class="treeItem" onclick="setTarget(this)" seleccion valor="4") even if they are wearing a safety belt.
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction openNotice is-active u-bgIconInfoActivity" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_3/module_9/selfcheck/sel_8_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

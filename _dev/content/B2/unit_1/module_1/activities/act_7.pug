@@ -1,0 +1,65 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            h5 #[strong.u-textColor_4 1. ]  Complete the sentences with the right form of the verbs.
+            
+            div(class="row-flex")
+                div(class="col-flex-xs12 col-flex-sm7 col-center"): img(src="unit_1/module_1/assets/images/act_7_1.png", alt="", class="u-responsive-img")
+                div(class="col-flex-sm11 col-flex-md7 col-center mt30")
+                    div(class="row-flex")
+                        ol(class="c-list row mb10" data-ejercicio="")
+                            li  By the time the money arrives, we 
+                                strong (go)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span broke.
+                    div(class="row-flex")
+                        ol(class="c-list row mb10" data-ejercicio="")
+                            li  By April, my grandfather 
+                                strong (reach)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span eighty.
+                    div(class="row-flex")
+                        ol(class="c-list row mb10" data-ejercicio="")
+                            li  The president 
+                                strong (make)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span a decision by the end of the week.
+                    div(class="row-flex")
+                        ol(class="c-list row mb10" data-ejercicio="")
+                            li  By 2017, we 
+                                strong (know)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span each other for ten years.
+                    div(class="row-flex")
+                        ol(class="c-list row mb10" data-ejercicio="")
+                            li  In five minutes, Eric 
+                                strong (complete)
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                span the first lap of the race.
+                                
+                                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction is-active u-bgIconAlert openNotice" ng-click="idNotice = 2" )
+        button(class="c-btn-IconAction is-active u-bgIconInfoActivity openNotice" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

@@ -1,0 +1,61 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md10 col-center mt50-md mt30-sm")
+                    p We use the 
+                        strong Future Perfect 
+                        | to say that something will be finished by a particular time in the future. We often use the future perfect with ‘by’, “in” or ‘by the time’.
+                    p We use the 
+                        strong Future Perfect 
+                        | Continuous tense to express situations that will last for a specified period of time at a definite moment in the future. We also use this tense to express certainty about the cause of some future situation.
+
+                    div(class="row-flex mt50-md mt30-sm ")
+                        table(class="c-table-estilo_tres")
+                            thead   
+                                tr
+                                    th.ancho200 
+                                    th Future perfect
+                                    th Future Perfect Continuous
+                                    th Example
+                            tbody
+                                tr
+                                    td.ancho200.ta-c Affirmative
+                                    td.ancho200.ta-c Will have + past participle
+                                    td.ancho200.ta-c Will have been + ing
+                                    td.ancho200.ta-c I will have painted the apartment.
+                                        br
+                                        | I will have been painting the apartment.
+
+                                tr
+                                    td.ancho200.ta-c Negative
+                                    td.ancho200.ta-c Will + not + have + participle
+                                    td.ancho200.ta-c Will + not + have been + ing
+                                    td.ancho200.ta-c I will not have painted the apartment.
+                                        br
+                                        | I will have not been painting the apartment.
+
+                                tr
+                                    td.ancho200.ta-c.padding10 Questions
+                                    td.ancho200.ta-c.padding10 Will + pronoun + have + participle
+                                    td.ancho200.ta-c.padding10 Will + pronoun + have been + ing
+                                    td.ancho200.ta-c.padding10 Will you have painted the apartment?
+                                        br
+                                        | Will you have been painting the apartment?
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,227 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex mt40 ")
+                div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center mt30-sm mt10-md mt10-xs")
+                    div(class="c-cardGreen"): div(class="c-cardGreenContent")
+                        p: strong Pronunciando / ɔ/
+                        p Los labios están tensionados en una forma ovalada y pronunciada, la quijada debe estar más abierta que al pronunciar /ou/. Finalmente, la lengua se ubica en la parte de debajo de la boca.
+                        p Problemas posibles de pronunciación para el hispano hablante: 
+                        p La vocal /ɔ/ no existe en español, los patrones de ortografía del inglés pueden resultar confusos, haciendo que el estudiante la sustituya por una vocal similar.                    
+                        p: strong Ejemplo
+                        p Si reemplazas /ɔ/ por /a/: caller sonará como collar
+                        p Si reemplazas /ɔ/ por /ou/: bought sonará como boat
+                        p Si reemplazas /ɔ/ con /Gbws/ bought sonará como but
+
+                    h5(class="ta-c mt40") Spellings: /ɔ/
+                    table(class="c-table-default m-a mt20")
+                        tbody
+                            tr
+                                td(class="ta-c") “o”
+                                td(class="ta-c") “a”
+                                td(class="ta-c") “aw”
+                                td(class="ta-c") “au”
+                            tr
+                                td(class="ta-c") Dog
+                                td(class="ta-c") Fall
+                                td(class="ta-c") Lawn
+                                td(class="ta-c") Auto
+                            tr
+                                td(class="ta-c") Lost
+                                td(class="ta-c") Mall
+                                td(class="ta-c") Drawn
+                                td(class="ta-c") Fault
+                            tr
+                                td(class="ta-c") Offer
+                                td(class="ta-c") Salt
+                                td(class="ta-c") Awful
+                                td(class="ta-c") Pauper
+                div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center mt30-sm mt10-md mt10-xs")
+                    div(class="row-flex")
+                        div(class="mb20 row-flex mt20 m-a")
+                            div(class="col-flex"): div(class="row-flex")
+                                strong(class="u-textColor_4-dark")  1.
+                                span(class="c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt2_mod6_act_19',1)")
+                                        div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                        |
+                                        div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                            div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                                button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                    type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                    ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                |
+                                                button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                    type="button" 
+                                                    ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                    ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                    ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                    span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Cold | Called | Coiled
+                                                    span(ng-if="recorder.status.isPlaying"): span pause
+                                            div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting"): p Please wait while we process your recording
+
+                        div(class="mb20 row-flex mt20 m-a")
+                            div(class="col-flex"): div(class="row-flex")
+                                strong(class="u-textColor_4-dark")  2.
+                                span(class="c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt2_mod6_act_19b',2)")
+                                        div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                        |
+                                        div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                            div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                                button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                    type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                    ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                |
+                                                button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                    type="button" 
+                                                    ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                    ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                    ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                    span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Toll | Tall | Toil
+                                                    span(ng-if="recorder.status.isPlaying"): span pause
+                                            div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting"): p Please wait while we process your recording
+                        
+                        div(class="mb20 row-flex mt20 m-a")
+                            div(class="col-flex"): div(class="row-flex")
+                                strong(class="u-textColor_4-dark")  3.
+                                span(class="c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt2_mod6_act_19c',3)")
+                                        div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                        |
+                                        div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                            div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                                button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                    type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                    ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                |
+                                                button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                    type="button" 
+                                                    ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                    ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                    ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                    span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Coal | Call | Coil
+                                                    span(ng-if="recorder.status.isPlaying"): span pause
+                                            div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting"): p Please wait while we process your recording
+
+                        div(class="mb20 row-flex mt20 m-a")
+                            div(class="col-flex"): div(class="row-flex")
+                                strong(class="u-textColor_4-dark")  4.
+                                span(class="c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt2_mod6_act_19d',4)")
+                                        div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                        |
+                                        div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                            div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                                button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                    type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                    ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                |
+                                                button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                    type="button" 
+                                                    ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                    ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                    ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                    span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Foal | Fall | Foil
+                                                    span(ng-if="recorder.status.isPlaying"): span pause
+                                            div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting"): p Please wait while we process your recording
+
+                        div(class="mb20 row-flex mt20 m-a")
+                            div(class="col-flex"): div(class="row-flex")
+                                strong(class="u-textColor_4-dark")  5.
+                                span(class="c-ngRecorder" ng-audio-recorder id="mainAudio_e" time-limit='120' audio-model="audio_5" on-playback-start="guardarRecord('unt2_mod6_act_19e',5)")
+                                        div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                        |
+                                        div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                            div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                                button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                    type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                    ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                |
+                                                button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                    type="button" 
+                                                    ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                    ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                    ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                    span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Knows | Gnaws | Noise
+                                                    span(ng-if="recorder.status.isPlaying"): span pause
+                                            div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting"): p Please wait while we process your recording
+
+                        div(class="mb20 row-flex mt20 m-a")
+                            div(class="col-flex"): div(class="row-flex")
+                                strong(class="u-textColor_4-dark")  6.
+                                span(class="c-ngRecorder" ng-audio-recorder id="mainAudio_f" time-limit='120' audio-model="audio_6" on-playback-start="guardarRecord('unt2_mod6_act_19f',6)")
+                                        div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                        |
+                                        div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                            div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                                button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                    type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                    ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                |
+                                                button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                    type="button" 
+                                                    ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                    ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                    ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                    span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Loan | Lawn | Loin
+                                                    span(ng-if="recorder.status.isPlaying"): span pause
+                                            div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting"): p Please wait while we process your recording
+
+                        div(class="mb20 row-flex mt20 m-a")
+                            div(class="col-flex"): div(class="row-flex")
+                                strong(class="u-textColor_4-dark")  7.
+                                span(class="c-ngRecorder" ng-audio-recorder id="mainAudio_g" time-limit='120' audio-model="audio_7" on-playback-start="guardarRecord('unt2_mod6_act_19g',7)")
+                                        div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                        |
+                                        div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                            div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                                button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                    type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                    ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                |
+                                                button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                    type="button" 
+                                                    ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                    ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                    ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                    span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Bowled | Balled | Boiled
+                                                    span(ng-if="recorder.status.isPlaying"): span pause
+                                            div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting"): p Please wait while we process your recording
+
+                        div(class="mb20 row-flex mt20 m-a")
+                            div(class="col-flex"): div(class="row-flex")
+                                strong(class="u-textColor_4-dark")  8.
+                                span(class="c-ngRecorder" ng-audio-recorder id="mainAudio_h" time-limit='120' audio-model="audio_8" on-playback-start="guardarRecord('unt2_mod6_act_19h',8)")
+                                        div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                        |
+                                        div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                            div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                                button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                    type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                    ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                |
+                                                button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                    type="button" 
+                                                    ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                    ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                    ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                    span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Pose | Paws | Poise
+                                                    span(ng-if="recorder.status.isPlaying"): span pause
+                                            div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting"): p Please wait while we process your recording
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh")
+        //- button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

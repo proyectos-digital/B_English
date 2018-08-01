@@ -1,0 +1,74 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md5 col-center mt10-sm mt20-md")
+                    div(class="row mb30 ta-c showTo-md")
+                        img(src="unit_1/module_4/assets/images/self_7.png", alt="" class="u-responsive-img w70 m-a")
+                    
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt20-md")
+                    div(class="row-flex")
+                        table(class="c-table row" data-ejercicio="table-truefalse")
+                            thead
+                                tr
+                                    th 
+                                    th true
+                                    th false
+                            tbody
+                                tr
+                                    td 1. US independence day is celebrated on the 4th of July.
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_1" name="selInputRadio_1" value="1") 
+                                            label(for="selInputRadio_1" class="c-CheckTrue")
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_2" name="selInputRadio_1" value="2") 
+                                            label(for="selInputRadio_2" class="c-CheckFalse")
+                                tr
+                                    td 2. In Latin America, labor day is celebrated on October 31st.
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_3" name="selInputRadio_2" value="1") 
+                                            label(for="selInputRadio_3" class="c-CheckTrue")
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_4" name="selInputRadio_2" value="2") 
+                                            label(for="selInputRadio_4" class="c-CheckFalse")
+                                tr
+                                    td 3. United Nations day is commemorated on May 1st.
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_5" name="selInputRadio_3" value="1") 
+                                            label(for="selInputRadio_5" class="c-CheckTrue")
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_6" name="selInputRadio_3" value="2") 
+                                            label(for="selInputRadio_6" class="c-CheckFalse")
+                                tr
+                                    td 4. Halloween is celebrated on October 31st.
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_7" name="selInputRadio_4" value="1") 
+                                            label(for="selInputRadio_7" class="c-CheckTrue")
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_8" name="selInputRadio_4" value="2") 
+                                            label(for="selInputRadio_8" class="c-CheckFalse")
+                                tr
+                                    td 5. Earth Day is commemorated on April 22nd.
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_9" name="selInputRadio_5" value="1") 
+                                            label(for="selInputRadio_9" class="c-CheckTrue")
+                                    td: span
+                                            input(type="radio" class="c-inputRadio" id="selInputRadio_10" name="selInputRadio_5" value="2") 
+                                            label(for="selInputRadio_10" class="c-CheckFalse")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

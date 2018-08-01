@@ -1,0 +1,104 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex col-center mt50-xs mt100-md")
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 1.
+                            span  He apologized 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_a") 
+                            span  not having mentioned he was arriving late. 
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                label(for="SelectRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='for'") for
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                label(for="SelectRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='to'") to
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_3" name="selection_1" value="3")
+                                label(for="SelectRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='on'") on
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 2.
+                            span  The employers complained 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_b") 
+                            span  having to wear the new uniforms. 
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="1")
+                                label(for="SelectRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='for'") for
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_2" value="2")
+                                label(for="SelectRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='of'") of
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_6" name="selection_2" value="3")
+                                label(for="SelectRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='about'") about
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 3.
+                            span We laughed 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_c") 
+                            span  having to wear costumes.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_3" value="1")
+                                label(for="SelectRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='at'") at
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_3" value="2")
+                                label(for="SelectRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='about'") about
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_9" name="selection_3" value="3")
+                                label(for="SelectRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='of'") of
+                    
+                    
+                
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 4.
+                            span  When will you give 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_d") 
+                            span  smoking? 
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_10" name="selection_4" value="1")
+                                label(for="SelectRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='up'") up
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_11" name="selection_4" value="2")
+                                label(for="SelectRadio_11" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='in'") in
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_12" name="selection_4" value="3")
+                                label(for="SelectRadio_12" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='off'") off
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 5.
+                            span Nancy insisted  
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_e") 
+                            span  calling the doctor. 
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_5" value="1")
+                                label(for="SelectRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='in'") in
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_5" value="2")
+                                label(for="SelectRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='to'") to
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_5" value="3")
+                                label(for="SelectRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='on'") on
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

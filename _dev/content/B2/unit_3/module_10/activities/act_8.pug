@@ -1,0 +1,148 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10" )
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a" ng-init="s_actividad = 1")
+        section(class="template-content")
+    
+            div(class="row-flex s-actividad" ng-show="s_actividad == 1")
+                div(class="col-flex-xs12")
+                    div(class="row-flex")
+                        h5 Unscramble the words to make sentences with negative adverbials.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex mb20")
+                                strong(class="u-textColor_4-dark") 1. 
+                            div(data-ejercicio="sortable" id="sortable1" class="flex flex-wrap sortreload ta-c") 
+                                span(class="ancho200 ui-sortable--item js-sortdrag") you
+                                span(class="ancho200 ui-sortable--item js-sortdrag") pilots
+                                span(class="ancho200 ui-sortable--item js-sortdrag") to
+                                span(class="ancho200 ui-sortable--item js-sortdrag") allowed
+                                span(class="ancho200 ui-sortable--item js-sortdrag") the
+                                span(class="ancho200 ui-sortable--item js-sortdrag") no
+                                span(class="ancho200 ui-sortable--item js-sortdrag") circumstances
+                                span(class="ancho200 ui-sortable--item js-sortdrag") .
+                                span(class="ancho200 ui-sortable--item js-sortdrag") under
+                                span(class="ancho200 ui-sortable--item js-sortdrag") are
+                                span(class="ancho200 ui-sortable--item js-sortdrag") disturb
+
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex mb20")
+                                strong(class="u-textColor_4-dark") 2. 
+                            div(data-ejercicio="sortable" id="sortable2" class="flex flex-wrap sortreload") 
+                                span(class="ancho200 ui-sortable--item js-sortdrag") never
+                                span(class="ancho200 ui-sortable--item js-sortdrag") faced
+                                span(class="ancho200 ui-sortable--item js-sortdrag") a
+                                span(class="ancho200 ui-sortable--item js-sortdrag") have
+                                span(class="ancho200 ui-sortable--item js-sortdrag") challenge
+                                span(class="ancho200 ui-sortable--item js-sortdrag") such
+                                span(class="ancho200 ui-sortable--item js-sortdrag") !
+                                span(class="ancho200 ui-sortable--item js-sortdrag") we
+
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex mb20")
+                                strong(class="u-textColor_4-dark") 3. 
+                            div(data-ejercicio="sortable" id="sortable3" class="flex flex-wrap sortreload") 
+                                span(class="ancho200 ui-sortable--item js-sortdrag") only
+                                span(class="ancho200 ui-sortable--item js-sortdrag") this
+                                span(class="ancho200 ui-sortable--item js-sortdrag") guessing
+                                span(class="ancho200 ui-sortable--item js-sortdrag") solve
+                                span(class="ancho200 ui-sortable--item js-sortdrag") by
+                                span(class="ancho200 ui-sortable--item js-sortdrag") .
+                                span(class="ancho200 ui-sortable--item js-sortdrag") can
+                                span(class="ancho200 ui-sortable--item js-sortdrag") you
+                                span(class="ancho200 ui-sortable--item js-sortdrag") puzzle
+
+
+            div(class="row-flex" ng-show="s_actividad == 2")
+                div(class="col-flex-xs12")
+                    div(class="row-flex")
+                        h5 Unscramble the words to make sentences with negative adverbials.
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex mb20")
+                                strong(class="u-textColor_4-dark") 4. 
+                            div(data-ejercicio="sortable" id="sortable4" class="flex flex-wrap sortreload ta-c") 
+                                span(class="ancho200 ui-sortable--item js-sortdrag") if
+                                span(class="ancho200 ui-sortable--item js-sortdrag") would
+                                span(class="ancho200 ui-sortable--item js-sortdrag") everybod
+                                span(class="ancho200 ui-sortable--item js-sortdrag") I
+                                span(class="ancho200 ui-sortable--item js-sortdrag") accept
+                                span(class="ancho200 ui-sortable--item js-sortdrag") position
+                                span(class="ancho200 ui-sortable--item js-sortdrag") Only
+                                span(class="ancho200 ui-sortable--item js-sortdrag") .
+                                span(class="ancho200 ui-sortable--item js-sortdrag") agreed
+                                span(class="ancho200 ui-sortable--item js-sortdrag") this
+
+
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex mb20")
+                                strong(class="u-textColor_4-dark") 5. 
+                            div(data-ejercicio="sortable" id="sortable5" class="flex flex-wrap sortreload") 
+                                span(class="ancho200 ui-sortable--item js-sortdrag") I
+                                span(class="ancho200 ui-sortable--item js-sortdrag") had
+                                span(class="ancho200 ui-sortable--item js-sortdrag") would
+                                span(class="ancho200 ui-sortable--item js-sortdrag") the
+                                span(class="ancho200 ui-sortable--item js-sortdrag") told
+                                span(class="ancho200 ui-sortable--item js-sortdrag") answer
+                                span(class="ancho200 ui-sortable--item js-sortdrag") ,
+                                span(class="ancho200 ui-sortable--item js-sortdrag") I
+                                span(class="ancho200 ui-sortable--item js-sortdrag") known
+                                span(class="ancho200 ui-sortable--item js-sortdrag") you
+                                span(class="ancho200 ui-sortable--item js-sortdrag") have
+                                span(class="ancho200 ui-sortable--item js-sortdrag") .
+
+                        div(class="mb20 row-flex mt20")
+                            div(class="col-flex mb20")
+                                strong(class="u-textColor_4-dark") 6. 
+                            div(data-ejercicio="sortable" id="sortable6" class="flex flex-wrap sortreload") 
+                                span(class="ancho200 ui-sortable--item js-sortdrag") told
+                                span(class="ancho200 ui-sortable--item js-sortdrag") have
+                                span(class="ancho200 ui-sortable--item js-sortdrag") before
+                                span(class="ancho200 ui-sortable--item js-sortdrag") ,
+                                span(class="ancho200 ui-sortable--item js-sortdrag") I
+                                span(class="ancho200 ui-sortable--item js-sortdrag") me
+                                span(class="ancho200 ui-sortable--item js-sortdrag") could
+                                span(class="ancho200 ui-sortable--item js-sortdrag") an
+                                span(class="ancho200 ui-sortable--item js-sortdrag") ticket
+                                span(class="ancho200 ui-sortable--item js-sortdrag") .
+                                span(class="ancho200 ui-sortable--item js-sortdrag") you
+                                span(class="ancho200 ui-sortable--item js-sortdrag") extra
+                                span(class="ancho200 ui-sortable--item js-sortdrag") had
+                                span(class="ancho200 ui-sortable--item js-sortdrag") bought
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad==2" ng-click="reloadSortable()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad==2" ng-click="sortable()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_4/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+|
+script.
+    $(function(){
+        $( "#sortable6" ).sortable();
+        $( "#sortable6" ).disableSelection();
+        $( "#sortable5" ).sortable();
+        $( "#sortable5" ).disableSelection();
+        $( "#sortable4" ).sortable();
+        $( "#sortable4" ).disableSelection();
+        $( "#sortable3" ).sortable();
+        $( "#sortable3" ).disableSelection();
+        $( "#sortable2" ).sortable();
+        $( "#sortable2" ).disableSelection();
+        $( "#sortable1" ).sortable();
+        $( "#sortable1" ).disableSelection();
+    });

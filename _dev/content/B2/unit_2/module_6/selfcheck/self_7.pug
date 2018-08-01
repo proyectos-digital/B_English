@@ -1,0 +1,40 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_7" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            div(class="row-flex mt20-xs mt10-md mt10-sm")
+                div(class="col-flex-xs11 col-flex-md5 col-center mt10-sm mt20-md padding10")
+                    div(class="dragCont")
+                        div(class="drag") You may have left it in your room.
+                    div(class="dragCont")
+                        div(class="drag") I am positive you put it on the refrigerator yesterday.
+                    div(class="dragCont")
+                        div(class="drag") You might have forgotten it the restaurant.
+                    div(class="dragCont")
+                        div(class="drag") You can´t have left it in the classroom.
+                    div(class="dragCont")
+                        div(class="drag") You must have lost it in the bus.
+                div(class="col-flex-xs11 col-flex-md5 col-center mt10-sm mt20-md padding10")
+                    p: span(class="drop  ")
+                    p: span(class="drop mt10")
+                    p: span(class="drop mt10")
+                    p: span(class="drop mt10")
+                    p: span(class="drop mt10")
+                div(class="col-flex-xs3 col-flex-md2 col-center mt10-sm mt20-md showTo-md")
+                    img(src="unit_2/module_6/assets/images/self_1.png", alt="" class="u-responsive-img w45 ml10")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

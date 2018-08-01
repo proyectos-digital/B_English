@@ -1,0 +1,61 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_5")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h5 Match these word with their meanings.
+                div(class="col xs12 col-center" data-ejercicio="unir")
+                    div(id="sourceElements" class="js-columnas w30")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Physics
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") Biology
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Botany
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") Zoology
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Ecology
+                        span(id="Item0_5" class="treeItem" onclick="setSource(this)" seleccion valor="6") Genetics
+                        span(id="Item0_6" class="treeItem" onclick="setSource(this)" seleccion valor="7") Astronomy
+                        span(id="Item0_7" class="treeItem" onclick="setSource(this)" seleccion valor="8") Chemistry
+                        span(id="Item0_8" class="treeItem" onclick="setSource(this)" seleccion valor="9") Geology
+                        span(id="Item0_9" class="treeItem" onclick="setSource(this)" seleccion valor="10") Paleontology
+
+                        
+                        
+                    div(id="linecanvas" style="width: 80px; flex: 0 0 80px;")
+                    div(id="targetElements" class=" js-columnas max-w75 w75") 
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="4") The study of animals. 
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="8") The study of the components of matter and how they react together to form no compounds. 
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="3") The study of plants.
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="1") The study of matter and energy, this includes mechanics, heat, light and other radiation, sound, electricity, magnetism, and the structure of atoms.
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="5") The study of the environment.
+                        span(id="Item1_5" class="treeItem" onclick="setTarget(this)" seleccion valor="10") The study of fossils.
+                        span(id="Item1_6" class="treeItem" onclick="setTarget(this)" seleccion valor="7") The study of celestial bodies and spaces. 
+                        span(id="Item1_7" class="treeItem" onclick="setTarget(this)" seleccion valor="6") The study of heredity and inherited characteristics.
+                        span(id="Item1_8" class="treeItem" onclick="setTarget(this)" seleccion valor="9") The study of the structure of the Earth and what makes it up and the history and processing that act on the Earth. 
+                        span(id="Item1_9" class="treeItem" onclick="setTarget(this)" seleccion valor="2") The study of living organisms.
+                    
+
+                        
+                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

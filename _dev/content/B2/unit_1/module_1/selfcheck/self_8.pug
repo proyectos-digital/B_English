@@ -1,0 +1,59 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_8" ng-init="DragandDrop()")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                        
+            div(class="row") 
+
+                div(class="row row-flex")
+                    div(class="dragCont"): div(class="drag"): span By the next month, #[strong I will have been saving] money for a new house for 4 years.
+                    div(class="dragCont"): div(class="drag"): span By the next year, Ben and his wife #[strong will have been living] together for 50 years.
+                    div(class="dragCont"): div(class="drag"): span By this time, they #[strong will have been working] for 12 hours, so they will be very tired.
+                    div(class="dragCont"): div(class="drag"): span Before they arrive, we #[strong will have been cleaning] the house for 5 hours.
+                    div(class="dragCont"): div(class="drag"): span We #[strong will have been driving] 6 hours by the time we get home.
+                
+                div(class="row row-flex align-items-center")  
+                    div(class="row") 
+        
+                        div(class="col xs6 md4 ta-c")
+                            img(src="unit_1/module_1/assets/images/self_8_1.png", alt="" class="u-responsive-img _draggableImg")
+                            span(class="drop centrado")  
+                        div(class="col xs6 md4 ta-c")
+                            img(src="unit_1/module_1/assets/images/self_8_2.png", alt="" class="u-responsive-img _draggableImg")
+                            span(class="drop centrado")  
+                        div(class="col xs6 md4 ta-c")
+                            img(src="unit_1/module_1/assets/images/self_8_3.png", alt="" class="u-responsive-img _draggableImg")
+                            span(class="drop centrado")  
+                        div(class="col xs6 md4 ta-c")
+                            img(src="unit_1/module_1/assets/images/self_8_4.png", alt="" class="u-responsive-img _draggableImg")
+                            span(class="drop centrado")  
+                        div(class="col xs6 md4 ta-c")
+                            img(src="unit_1/module_1/assets/images/self_8_5.png", alt="" class="u-responsive-img _draggableImg")
+                            span(class="drop centrado")  
+
+
+                                               
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_8_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    

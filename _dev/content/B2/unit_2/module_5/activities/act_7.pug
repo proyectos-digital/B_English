@@ -1,0 +1,59 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            
+             div(class="row")
+                h5 
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm12 col-flex-md5 col-center")
+                        div(class="c-cardGreen mt40")
+                            div(class="c-cardGreenContent") 
+                                p 
+                                    | Juan Gossain is a journalist and writer from Cartagena.  
+                                    | For many years he <strong>had been planning</strong> to write about current events. 
+                                    | Prior to joining RCN, he <strong>had not been writing</strong> at all because he was working for Caracol. It took him around 20 years to do what he <strong>had planned</strong> for his life and now he writes very interesting articles about current events and culture in Colombia.
+                        div(class="row")
+                            img(src="./unit_2/module_5/assets/images/act_7.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md6 offset-md1 col-center") 
+                        div(class="row-flex justify-around")
+                            div(class="dragCont"): div(class="drag") Had + subject + been + ing
+                            div(class="dragCont"): div(class="drag") Had + been + ing
+                            div(class="dragCont"): div(class="drag") Had + not + been + ing
+
+                        div(class="row")
+                            div(class="row-flex justify-around  mt30")
+                                    div(class="u-wordsComplete") Affirmative 
+                                    span(class="drop w60")
+                            div(class="row-flex justify-around mt30")
+                                    div(class="u-wordsComplete") Negative
+                                    span(class="drop w60")
+                            div(class="row-flex justify-around mt30")
+                                    div(class="u-wordsComplete") Question
+                                    span(class="drop w60")
+                            
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_5/activities/act_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

@@ -1,0 +1,43 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_4")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h5 Here are some common collocations used when talking about schools and education.
+                span Fill the blank with the correct answers from the list below.
+                .row.row-flex.mt30
+                    span.dragCont.mt20: .drag.col.xs6.sm4 close-Knit
+                    span.dragCont.mt20: .drag.col.xs6.sm4 child support
+                    span.dragCont.mt20: .drag.col.xs6.sm4 carefree
+                    span.dragCont.mt20: .drag.col.xs6.sm4 broken
+                    span.dragCont.mt20: .drag.col.xs6.sm4 bitter
+                    span.dragCont.mt20: .drag.col.xs6.sm4 dysfunctional
+                    span.dragCont.mt20: .drag.col.xs6.sm4 troubled childhood
+                    span.dragCont.mt20: .drag.col.xs6.sm4 battle in court
+                    span.dragCont.mt20: .drag.col.xs6.sm4 granted joint custody
+                p.mt40.ta-j.
+                    In Colombia families stick together, they are usually very #[span.drop]. I had a wonderful childhood, i grew up in a loving family and
+                    I had a #[span.drop] childhood. My neighbour David was not so lucky. His family was #[span.drop]. He was always misbehaving,
+                    he had a #[span.drop]. His parents had a very #[span.drop] divorce so he grew up in a #[span.drop]
+                    home. Both his parents wanted custody of him so they had a custody #[span.drop] The family court judge #[span.drop]
+                    to his parents, so he had spent time with both of them. His father still had to pay #[span.drop] .
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|

@@ -1,0 +1,75 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    p
+                        | The 
+                        strong past perfect continuous 
+                        | is used to describe an action that started in the past and was still in progress when a second action started. 
+                        br
+                        | Both actions began and ended in the past.
+
+                    
+                    table(class="c-table-estilo_tres w100 mt80")
+                        tbody
+                            tr
+                                td 
+                                    strong Affirmative
+                                td 
+                                    | Had + been + ing
+
+                            tr
+                                td 
+                                    strong Negative
+                                td
+                                    | Had + not + been + ing
+                                
+                            tr
+                                td
+                                    strong Question
+                                td
+                                    | Had + subject + been + ing
+
+                div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center") 
+
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent")
+                            p
+                                strong Examples:
+
+                            p
+                                | Ben 
+                                strong had been working 
+                                | for three hours when Rachel came home.
+                            p
+                                | Ben 
+                                strong hadn't been working 
+                                | for hours when Rachel came home.
+
+                            p
+                                strong Had Ben been working  
+                                | for hours when Rachel came home?
+                    
+                    img(src="./unit_2/module_5/assets/images/grm_2.png", alt="", srcset="" class="u-responsive-img centrado")
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|

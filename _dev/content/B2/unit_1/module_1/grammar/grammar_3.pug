@@ -1,0 +1,51 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section")
+        section(class="template-content")
+            
+            div(class="row-flex mt80-xs mt60-md ")
+                
+                div(class="col-flex-xs5 col-flex-md4 m-a col-center")
+                    table(class="c-table-estilo_tres m-a")
+                        thead: tr: th(colspan="2") Future perfect continuous
+                        tbody
+                            tr
+                                td Affirmative
+                                td Will have been + ing
+                            tr
+                                td Negative
+                                td Will + not + have been + ing
+                            tr
+                                td Questions
+                                td Will + pronoun + have been + ing
+                |
+                div(class="col-flex-sm10 col-flex-md7 col-center")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent")
+                            p By the next year, I #[strong.u-textColor_1 will have been working] as a teacher for 30 years. 
+                            br
+                            p We use the #[strong.u-textColor_1 Future Perfect Continuous] to express situations that will last for a specified period of time at a definite moment in the future. We also use this tense to express certainty about the cause of a future situation.
+            div(class="row-flex mt80-xs mt60-md "): div(class="col-flex-xs11 col-flex-md8 col-center")
+                u.c-list
+                    h6 These are some time expressions that are commonly used with the Future Perfect Continuous:
+                    li By tomorrow / 8 o’clock = Ex. I will have arrived home by tomorrow. 
+                    li This year / month / week = Ex. She will have finished the courses this year. 
+                    li Next year / month / week = Ex. They will have read the book next week.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction is-active u-bgIconAlert")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" )
+        //- button(class="c-btn-IconAction u-bgIconCheck" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,32 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_8")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row row-flex")
+                h5 Listen to the news report again and write a summary of what you understand. Be sure to include the five most important points.
+                div(class="col col-center md8 xs12 mt20"): audio(controls class='row m-a')
+                     source(src='unit_1/module_1/assets/audios/act_8_1.mp3' type='audio/mpeg') 
+                     | Your browser does not support the audio element.
+            div(class="row row-flex mt30"): div(class="act_8--newsReport")
+                img(src="unit_1/module_1/assets/images/act_8_1.svg") 
+                div(class="c-wrapTextarea" wrapTextarea="default"): textarea(placeholder="Write here..." class="c-textarea h200" ng-model="textousuario")
+
+
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

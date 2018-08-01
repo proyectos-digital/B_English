@@ -1,0 +1,226 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_12" ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+
+            div(class="row row-flex flex-column align-items-center justify-between")
+
+                div(class="col xs12"): h6 To express a possibility or impossibility in the present or future, either of these modal verbs can be used
+                div(class="col xs12 md9")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent u-textColor_1")
+                            p.ta-l.mt20.lh35.
+                                #[strong • ] may / might + INFINITIVE #[span(class="u-textWhite") (positive)] #[br]
+                                #[strong • ] may not / might not + INFINITIVE #[span(class="u-textColor_wrong") (negative)] #[br]
+                            p → both ‘may’ and ‘might’ are interchangeable. However, ‘may’ indicates more certainty
+                            div(class="row mt20 row-flex justify-center")
+                                |
+                                div(class="row"): hr
+                                |
+                                div(class="col xs12 sm6 ta-c")
+                                    p: button(class="c-btn-IconAction u-bgIconListen mr20" ng-audio="unit_3/module_10/assets/audios/act_12_1.mp3")
+                                    p #[strong • ] I finish work at 5 pm this Friday. So, I may attend the housewarming party.
+                                div(class="col xs12 sm6 ta-c")
+                                    p: button(class="c-btn-IconAction u-bgIconListen mr20" ng-audio="unit_3/module_10/assets/audios/act_12_2.mp3")
+                                    p #[strong • ] Jason may not finish his part of the group work on time. So, we need to think of a plan B.
+                                |
+                                div(class="row"): hr
+                                |
+                                div(class="col xs12 sm6 ta-c")
+                                    p: button(class="c-btn-IconAction u-bgIconListen mr20" ng-audio="unit_3/module_10/assets/audios/act_12_3.mp3")
+                                    p #[strong • ] They might hire another English teacher because the department is thinking of splitting the groups.
+                                div(class="col xs12 sm6 ta-c")
+                                    p: button(class="c-btn-IconAction u-bgIconListen mr20" ng-audio="unit_3/module_10/assets/audios/act_12_4.mp3")
+                                    p #[strong • ] The spelling competition might not take place this year, because they’re having difficulties finding sponsors.
+                div(class="col xs12 md9")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent u-textColor_1")
+                            p.ta-l.mt20.lh35.
+                                #[strong • ] ‘Could’ + INFINITIVE #[br]
+                            p → this expresses a future possibility, and acts as an alternative to ‘may’ or ‘might’.
+
+                            div(class="row mt20 row-flex justify-center")
+                                div(class="col xs12 sm6 ta-c")
+                                    p: button(class="c-btn-IconAction u-bgIconListen mr20" ng-audio="unit_3/module_10/assets/audios/act_12_5.mp3")
+                                    p #[strong • ] Go to the park and walk around. It could be fun.
+                                div(class="col xs12 sm6 ta-c")
+                                    p: button(class="c-btn-IconAction u-bgIconListen mr20" ng-audio="unit_3/module_10/assets/audios/act_12_6.mp3")
+                                    p #[strong • ] Mary works at the Ministry of Education. So, I guess she could give you the information you need.
+        |
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            div(class="row")
+                div(class="col xs12 md10")
+                    h4 Activity
+                    h6 Appropriately respond to the following scenarios:
+                    |
+                    hr
+                    |
+                    div(class="row mt20")
+                        div(class="col xs12 md7")
+                            p #[strong(class="u-textColor_4") A. ] I want to apply to art school but I’m not sure how.
+                        div(class="col xs12 md5"): div(class="row flex")
+                            span #[strong(class="u-textColor_4") • ] response:
+                            div(class="c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt3_mod10_act12a',1)")
+
+                                    div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                    |
+                                    div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                        div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+                                            button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+                                                type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+                                                ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+                                                //- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                                span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+                                                    sub seg.
+                                            |
+                                            button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+                                                type="button"
+                                                ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+                                                ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+                                                ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+                                                    span play
+                                                span(ng-if="recorder.status.isPlaying")
+                                                    span pause
+                    |
+                    hr
+                    |
+                    div(class="row mt20")
+                        div(class="col xs12 md7")
+                            p #[strong(class="u-textColor_4") B. ] The manager is looking for a new painting to hang in the reception area. Any ideas?
+                        div(class="col xs12 md5"): div(class="row flex")
+                            span #[strong(class="u-textColor_4") • ] response:
+                            div(class="c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt3_mod10_act12b',2)")
+
+                                    div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                    |
+                                    div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                        div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+                                            button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+                                                type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+                                                ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+                                                //- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                                span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+                                                    sub seg.
+                                            |
+                                            button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+                                                type="button"
+                                                ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+                                                ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+                                                ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+                                                    span play
+                                                span(ng-if="recorder.status.isPlaying")
+                                                    span pause
+                    |
+                    hr
+                    |
+                    div(class="row mt20")
+                        div(class="col xs12 md7")
+                            p #[strong(class="u-textColor_4") C. ] Every day I try to encourage John to play a musical instrument, but he refuses. What could be the problem?
+                        div(class="col xs12 md5"): div(class="row flex")
+                            span #[strong(class="u-textColor_4") • ] response:
+                            div(class="c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt3_mod10_act12c',3)")
+
+                                    div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                    |
+                                    div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                        div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+                                            button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+                                                type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+                                                ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+                                                //- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                                span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+                                                    sub seg.
+                                            |
+                                            button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+                                                type="button"
+                                                ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+                                                ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+                                                ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+                                                    span play
+                                                span(ng-if="recorder.status.isPlaying")
+                                                    span pause
+                    |
+                    hr
+                    |
+                    div(class="row mt20")
+                        div(class="col xs12 md7")
+                            p #[strong(class="u-textColor_4") D. ] Carl has to do an internship at a museum before he can graduate. But he’s having trouble deciding where to go
+                        div(class="col xs12 md5"): div(class="row flex")
+                            span #[strong(class="u-textColor_4") • ] response:
+                            div(class="c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt3_mod10_act12d',4)")
+
+                                    div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                    |
+                                    div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                        div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+                                            button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+                                                type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+                                                ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+                                                //- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                                span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+                                                    sub seg.
+                                            |
+                                            button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+                                                type="button"
+                                                ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+                                                ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+                                                ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+                                                    span play
+                                                span(ng-if="recorder.status.isPlaying")
+                                                    span pause
+                    |
+                    hr
+                    |
+                    div(class="row mt20")
+                        div(class="col xs12 md7")
+                            p #[strong(class="u-textColor_4") E. ] Hey Maria. Have you seen my paint brushes? I remember leaving them in the basement but I can’t find them.
+                        div(class="col xs12 md5"): div(class="row flex")
+                            span #[strong(class="u-textColor_4") • ] response:
+                            div(class="c-ngRecorder" ng-audio-recorder id="mainAudio_e" time-limit='120' audio-model="audio_5" on-playback-start="guardarRecord('unt3_mod10_act12e',5)")
+                                    div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                    |
+                                    div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                        div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+                                            button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+                                                type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+                                                ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+                                                //- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                                span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+                                                    sub seg.
+                                            |
+                                            button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+                                                type="button"
+                                                ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+                                                ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+                                                ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+                                                    span play
+                                                span(ng-if="recorder.status.isPlaying")
+                                                    span pause
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

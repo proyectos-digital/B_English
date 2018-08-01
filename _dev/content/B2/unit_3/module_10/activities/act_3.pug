@@ -1,0 +1,98 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2" )
+
+    aside(class="template-asideLeft o-aside-Item")
+        |
+        |
+    div(class="template-section m-a" ng-init="DragandDropMultiple()")
+        section(class="template-content")
+            div(class="row-flex align-items-center")
+                div(class="col sm12 md6 col-center")
+                    //- h5 Listen and match the sentences to complete the conversations.
+                    div(class="row-flex align-items-center") 
+                        img(src="unit_3/module_10/assets/images/act_3.png", alt="act_2" class="u-responsive-img m-a")
+                        div(class="col xs10 col-center")
+                            div(class="c-cardBlue")
+                                div(class="c-cardBlueContent")
+                                    p As studied before, you use “be going to” when you decided BEFORE and “will” when it occurs to you and you decide at the moment of speaking. Classify the statements according to their meaning.#[br] #[br]
+                                    p Read the following dialogue and classify the sentences in bold into “intentions” (or something planned BEFORE) and “spontaneous decisions” (something that you have just decided at the moment of speaking).
+                        
+                        
+                div(class="col xs12 md6 col-center" )
+                    div(class="row")
+                        div(class="row mt40")
+                            div(class="col xs12 sm6")
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="2") What are you going to do this weekend?
+                            div(class="col xs12 sm6")
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="2") I think I am finally going to pass my driving test.
+                            div(class="col xs12 sm6")
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="1") How long will it take you to finish the report?
+                            div(class="col xs12 sm6")
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="1") I think I will go to visit my grandparents this weekend.
+                            div(class="col xs12 sm6")
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="2") I think that I am also going to buy that other pair of shoes.
+                            div(class="col xs12 sm6")
+                                        div(class="dragCont")
+                                            div(class="drag" rescon="2") I´m going to have lunch in half an hour.
+
+
+
+                        div(class="row mt40")
+                            table(class="c-table-estilo_uno col xs12")
+                                thead
+                                    tr
+                                        th Spontaneous Decisions
+                                        th Intentions
+                      
+                                tbody
+                                    tr
+                                        td
+                                            span(class="drop h50 centrado")
+                                        td
+                                            span(class="drop h50 centrado")
+
+
+                                    tr
+                                        td
+                                            span(class="drop h50 centrado")
+                                        td
+                                            span(class="drop h50 centrado")
+   
+                                    
+                                    tr
+                                        td
+                                        td
+                                            span(class="drop h50 centrado")
+                                    
+                                    tr
+                                        td
+                                        td
+                                            span(class="drop h50 centrado")
+
+                                                               
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //-button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDropMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

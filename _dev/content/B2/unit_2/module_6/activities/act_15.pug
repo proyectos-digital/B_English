@@ -1,0 +1,72 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+            h5 Replace the words in bold with the phrasal verbs in the box. There are two extra phrasal verbs.
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md4 col-center mt30-md mt30-sm showTo-md")
+                    img(src="unit_2/module_6/assets/images/act_15.png", alt="" class="u-responsive-img w80 centrado ")
+
+                div(class="col-flex-sm12 col-flex-md8 col-center mt30-md mt30-sm")
+                    div(class="row-flex mt20")
+                        div(class="dragCont f-l ml30 mt20")
+                            div(class="drag") Come in
+                        div(class="dragCont f-l ml30 mt20")
+                            div(class="drag") Cut down on
+                        div(class="dragCont f-l ml30 mt20")
+                            div(class="drag") Fill out
+                        div(class="dragCont f-l ml30 mt20")
+                            div(class="drag") Jot down
+                        div(class="dragCont f-l ml30 mt20")
+                            div(class="drag") Look into
+                        div(class="dragCont f-l ml30 mt20")
+                            div(class="drag") Push off
+                        div(class="dragCont f-l ml30 mt20")
+                            div(class="drag") Talk over
+                        div(class="dragCont f-l ml30 mt20")
+                            div(class="drag") Work out
+                    
+                    div(class="row-flex mt20")
+                        div(class="col-flex-sm12 col-flex-md5 col-center mt30-md mt30-sm")
+                            span(class="drop ancho150")
+                            p(class="mt20 centrado") 
+                                strong(class="u-textColor_4-dark")  1. 
+                                | Excuse me! Can you #[strong complete ] this form?
+                            span(class="drop ancho150")
+                            p(class="mt20 centrado") 
+                                strong(class="u-textColor_4-dark")  2. 
+                                | It doesn’t matter if you #[strong arrive ] last when you race.
+                            span(class="drop ancho150")
+                            p(class="mt20 centrado") 
+                                strong(class="u-textColor_4-dark")  3. 
+                                | You really should #[strong reduce ] the amount of sugar you eat.
+                        div(class="col-flex-sm12 col-flex-md5 offset-md1 col-center mt30-md mt30-sm")
+                            span(class="drop ancho150")
+                            p(class="mt20 centrado") 
+                                strong(class="u-textColor_4-dark")  4. 
+                                | I’ll just try to #[strong calculate ] how much this will cost.
+                            span(class="drop ancho150")
+                            p(class="mt20 centrado") 
+                                strong(class="u-textColor_4-dark")  5. 
+                                | The police are going to #[strong investigate ] what happened.
+                            span(class="drop ancho150")
+                            p(class="mt20 centrado") 
+                                strong(class="u-textColor_4-dark")  6. 
+                                | Do you think we should #[strong discuss ] this for a bit longer?
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

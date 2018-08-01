@@ -1,0 +1,68 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_2" ng-init="DragandDrop()")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 #[strong.u-textColor_4 1. ]  Drag and drop the correct verb to complete the sentences.
+                        
+            div(class="row") 
+                p(class="col xs12 mb30")                         
+                div.row
+                    div(class="col xs4 sm3 md2")
+                        div(class="dragCont")
+                            div(class="drag") playing
+                    div(class="col xs4 sm3 md2")
+                        div(class="dragCont")
+                            div(class="drag") having
+                    div(class="col xs4 sm3 md2")
+                        div(class="dragCont")
+                            div(class="drag") doing
+                    div(class="col xs4 sm3 md2")
+                        div(class="dragCont")
+                            div(class="drag") raining
+                    div(class="col xs4 sm3 md2")
+                        div(class="dragCont")
+                            div(class="drag") sleeping
+                    div(class="col xs4 sm3 md2")
+                        div(class="dragCont")
+                            div(class="drag") watching
+                 
+                div.row.mt30
+                    div(class="row-flex align-items-center")  
+                        div(class="col xs12 md6 col-center lh30") 
+            
+                            p #[strong: span(class="u-textColor_4-dark") •  ] I will be #[span(class="drop")] tennis at 11:00 am tomorrow.
+
+                            p #[strong: span(class="u-textColor_4-dark") •  ] They won’t be  #[span(class="drop")] TV at that time tonight.
+
+                            p #[strong: span(class="u-textColor_4-dark") •  ] What will you be #[span(class="drop")] when I arrive?
+
+                            p #[strong: span(class="u-textColor_4-dark") •  ] She will not be #[span(class="drop")] when you telephone her.
+
+                            p #[strong: span(class="u-textColor_4-dark") •  ] We’ll be #[span(class="drop")] dinner when the film starts.
+
+                            p #[strong: span(class="u-textColor_4-dark") •  ] Take your umbrella. It will be #[span(class="drop")] when you return.
+
+                                               
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_8_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 

@@ -1,0 +1,79 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row")
+                h5 #[strong.u-textColor_4 1. ] Listen to the dialogue and complete the missing words.
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm12 col-flex-md5 col-center showTo-md")
+                        div(class="row")
+                            img(src="./unit_1/module_3/assets/images/sel_6.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md7 col-center") 
+                        button(class="c-btn-Icon u-bgIconListen mt30" ng-audio="unit_1/module_3/assets/audios/sel_6.mp3")
+                        div(class="row mt30")
+                            p 
+                                strong Andrés: 
+                                |   I feel terrible! I forgot my mother’s birthday!
+                            p 
+                                strong Edna:	
+                                |  You 
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | the date on your agenda.
+                            p
+                                strong Andrés:	
+                                |  Well, I know. But you
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                |  me!
+                            p
+                                strong Edna:	
+                                | I forgot, too. 
+                            p
+                                strong Andrés:	
+                                | I 
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | her a present.
+
+                            p
+                                strong Edna:
+                                |  And what happened with your brothers!
+
+                            p
+                                strong Andrés:	
+                                | I know! They
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                | me!
+
+                            p 
+                                strong Edna:	
+                                | Well, let’s stop regretting. Let’s call her!
+
+                            p   
+                                strong Andrés:	
+                                | But it’s 10:00 PM.
+
+                            p
+                                strong Edna:	
+                                | I am sure she will be happy to hear you!
+                            
+                            p
+                                strong Andrés:	
+                                | Good idea. I will tell her we will take the present on Sunday.
+                    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,61 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                .row-flex.justify-between.col-center.mt30
+
+                    .dragCont: .drag.w100 Look up to
+                    .dragCont: .drag.w100 Passed away
+                    .dragCont: .drag.w100 Make up
+                    .dragCont: .drag.w100 Look for
+                    .dragCont: .drag.w100 Passed out
+                    .dragCont: .drag.w100 Mixed up
+                    .dragCont: .drag.w100 Nodded off
+                    .dragCont: .drag.w100 Looking forward to
+                    .dragCont: .drag.w100 Owned up
+                    .dragCont: .drag.w100 Making fun of
+
+
+                .row-flex.mt30.flex.align-items-center.justify-between
+                    .col.xs12.md5
+                        p #[strong.u-textColor_4 •] I bought a painting just before I moved into my new house. Now I can’t find it anywhere, can you help me  #[span.drop.w35] it’.
+                        p #[strong.u-textColor_4 •] I am finally going to visit the Gold Museum in Bogota. I am really #[span.drop.w35] it.
+                        p #[strong.u-textColor_4 •] I believe my teacher is a very honest and hardworking person. He is very intelligent and always makes the right decisions. I #[span.drop.w35] him.
+                        p #[strong.u-textColor_4 •] I am really bad at painting. I just don’t have the talent, so my friends are always  #[span.drop.w35] my paintings.
+                        p #[strong.u-textColor_4 •] Botero and some of his fellow artists put their artwork together to #[span.drop.w35] one of the biggest art displays in Colombia.
+
+                    .col.xs12.md6
+                        p #[strong.u-textColor_4 •] Your car and my dad’s car look exactly alike! I always get them #[span.drop.w35]
+                        p #[strong.u-textColor_4 •] I was so sleepy on the bus ride home. I #[span.drop.w35] and before I realized it, I was already home.
+                        p #[strong.u-textColor_4 •] As the manager, Jenny  #[span.drop.w35] to her responsibilities for the accident that happened in the factory.
+                        p #[strong.u-textColor_4 •] My dog was very sick, he #[span.drop.w35] yesterday at the animal hospital. I had him cremated.
+                        p #[strong.u-textColor_4 •] The teacher was feeling sick all morning. She was on her way to the sickbay when she #[span.drop.w35] The school had to call an ambulance.
+
+
+
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

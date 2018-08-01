@@ -1,0 +1,51 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content") 
+            
+             div(class="row")
+                h5(class="ta-c") This exercise will also help you identify relative clauses. Notice how the two sentences in the right are combined in ONE sentence on the left. Match the sentences with the same meaning.
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm12 col-flex-md5 col-center")
+                        div(class="row-flex")
+                            img(src="./unit_3/module_9/assets/images/act_2_1.png", alt="", srcset="" class="u-responsive-img centrado")
+                            img(src="./unit_3/module_9/assets/images/act_2_2.png", alt="", srcset="" class="u-responsive-img centrado mt10")
+
+                    div(class="col-flex-sm12 col-flex-md6 offset-md1 col-center mt30") 
+                        div(class="row col-center" data-ejercicio="unir")
+                            div(id="sourceElements" class="ancho250 js-columnas")
+                                span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Can you give me back the money that I lent you last month?
+                                span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") People who like playing tennis usually like playing squash, too.
+                                span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Is he the one who gave you a ride?
+                                span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") This is the hospital where my brother was born.
+                                span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") The man that you saw outside was there yesterday.
+                            div(id="linecanvas" style="width: 60px;")
+                            div(id="targetElements" class="ancho250 js-columnas") 
+                                span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="2") Some people like playing tennis. They also like squash.
+                                span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="4") This is a hospital. My brother was born here.
+                                span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="5") There was a man outside. He was there yesterday.
+                                span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="1") I lent you some money last month. I need it back.
+                                span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="3") I don't know that man. Did he give you a ride?
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

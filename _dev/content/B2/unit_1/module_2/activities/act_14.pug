@@ -1,0 +1,82 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+
+            div(class="row-flex")
+                div(class="col-flex-xs12 col-flex-md10 col-center")
+                    h5 #[strong.u-textColor_4 1. ]  Complete the table with the correct form of the verbs.
+
+                    div(class="row-flex mt20")
+                        table(class="c-table-estilo_tres")
+                            thead   
+                                tr
+                                    th(class="xs3 md4").showTo-md 
+                                    th(class="xs3 sm4 md2") Future tense
+                                    th(class="xs3 sm4 md3") Active
+                                    th(class="xs3 sm4 md3") Passive will + have been + participle
+                            tbody
+                                tr
+                                    td.showTo-md: img(src="unit_1/module_2/assets/images/act_14-a.jpg", alt="" class="u-responsive-img w100")
+                                    td.ta-c Future Continuous
+                                    td: div(class="row") 
+                                        div(class="col-flex ta-c") At 8:00 PM tonight, John 
+                                            strong (1. wash) 
+                                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                            br
+                                            | the dishes.
+                                    td: div(class="row") 
+                                        div(class="col-flex ta-c") At 8:00 PM tonight, the dishes
+                                            strong (2. Wash) 
+                                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                            br
+                                            | by John.
+                                tr
+                                    td.showTo-md: img(src="unit_1/module_2/assets/images/act_14-b.jpg", alt="" class="u-responsive-img w100")
+                                    td.ta-c Future Perfect
+                                    td: div(class="row") 
+                                        div(class="col-flex ta-c") They 
+                                            strong (3. complete) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                            br
+                                            | the assignment before the class ends.
+                                    td: div(class="row") 
+                                        div(class="col-flex ta-c") The assignment
+                                            strong (4. complete)
+                                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                                            br
+                                            | before the class ends.
+                                tr
+                                    td.showTo-md: img(src="unit_1/module_2/assets/images/act_14-c.jpg", alt="" class="u-responsive-img w100")
+                                    td.ta-c Future Perfect Continuous
+                                    td: div(class="row")
+                                        div(class="col-flex ta-c") The famous artist
+                                            strong (5. paint) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                            br
+                                            | the mural for over six months by the time it is finished.
+                                    td: div(class="row")
+                                        div(class="col-flex ta-c") The mural
+                                            strong (6. paint) #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                            br
+                                            | by the famous artist for over six months by the time it is finished.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        button(class="c-btn-IconAction openNotice u-bgIconAlert is-active" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_2/activities/act_14_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

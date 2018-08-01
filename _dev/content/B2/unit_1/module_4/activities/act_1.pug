@@ -1,0 +1,84 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+
+    aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1" )
+            
+            div(class="row mt40 ")
+                div(class="row-flex")
+                    div(class="row")
+                        h5 #[strong.u-textColor_4 1. ] Watch the video:
+                        div(class="col xs12 md6"): div(class="col md11"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                            source(src="unit_1/module_4/"+pathVideo+"act_1_1.mp4" type="video/mp4")
+                        div(class="col xs12 md6")
+                            h5(class="mb20 mt20") #[strong.u-textColor_4 2]. Now, read the sentences. Pay attention to the words in bold.
+                            div(class="col")
+                                div(class="c-cardBlue"): div(class="c-cardBlueContent")
+                                    p A farmer #[strong picks] the apples first, then he cleans them, and finally, he #[strong packs ] and #[strong ships] them to the market.
+                                    p First, the apples #[strong are picked], then they #[strong are cleaned], and finally, #[strong they’re packed] and #[strong shipped ] to the market.
+                                    p
+                                        strong Active Form: 
+                                        | A farmer #[strong picks ] the apples first, then he cleans them, and finally he #[strong packs ] and #[strong ships] them to the market.
+                                    p
+                                        strong Passive Form: 
+                                        | First the apples #[strong are picked], then they #[strong are cleaned], and finally #[strong they’re packed] and #[strong shipped ] to the market.
+                                |
+
+
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2" )
+                div(class="row mt40-sm mt10-md mt10-xs")
+                    div(class="col xs12 md4 showTo-md")
+                        img(src="unit_1/module_4/assets/images/act_1.png", alt="" )
+                    div(class="col xs12 md8")
+                            h5(class="mb30") Complete the examples below using the verbs in parentheses.
+                            p: strong(class="u-textColor_4") The passive voice is used when we do not know who did the action:
+
+                            div(class="mb20 row-flex mt20")
+                                div(class="col-flex")
+                                    strong(class="u-textColor_4-dark")  1. 
+                                    | This bridge: #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                                    strong (consider) 
+                                    | the longest in the world.
+                            div(class="mb20 row-flex mt20")
+                                div(class="col-flex")
+                                    strong(class="u-textColor_4-dark")  2. 
+                                    | The biggest diamond: #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                                    strong (kept) 
+                                    | in a safety vault in Paris.
+                            p(class="mt30 mb20"): strong(class="u-textColor_4") The passive voice is used when the action is more important than the doer.
+                            div(class="mb20 row-flex mt20")
+                                div(class="col-flex")
+                                    strong(class="u-textColor_4-dark")  3. 
+                                    | The new Audi: #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                                    strong (sell) 
+                                    | in 112 countries.
+                            div(class="mb20 row-flex mt20")
+                                div(class="col-flex")
+                                    strong(class="u-textColor_4-dark")  4. 
+                                    | Iphones: #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                                    strong (distribute) 
+                                    | by Apple stores.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_4/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

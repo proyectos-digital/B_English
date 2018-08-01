@@ -1,0 +1,32 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown")
+            
+            div(class="row mt40 ")
+                div(class="row-flex m-a")
+                    div(class="col-flex-sm12 col-flex-md3 col-center showTo-md")
+                        img(src="unit_3/module_11/assets/images/col_3.png", alt="" class="u-responsive-img  mt20")
+                    div(class="col-flex-sm12 col-flex-md6 col-center mt100-md mt40-xs")
+                        div(class="c-cardGreen")
+                            div(class="c-cardGreenContent")
+                                p Which is the native tribe in your region? In two minutes describe them. Record the text and send it to your tutor.
+                        
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt3_mod11_mycol4',1)"): +ngRecorder
+                       
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        //- button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")                                                        

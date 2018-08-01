@@ -1,0 +1,68 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_16"  ng-init="unirColumnasFuncion()")
+
+    aside(class="template-asideLeft o-aside-Item")
+        |
+        |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex align-items-center")
+                
+                        
+                        
+                div(class="row" )
+                    div(data-ejercicio="unir" class="mt40")                 
+                        div(id="sourceElements" class=" js-columnas")
+                            
+                            span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") How is your brother?
+                            span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") Simon hasn’t done any studying.
+                            span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") He didn’t take a jacket!
+                            span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") Helen is in love with Raul.
+                            span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Did you hear the weather forecast for today?
+                            span(id="Item0_5" class="treeItem" onclick="setSource(this)" seleccion valor="6") He isn’t doing very well at work.
+                            span(id="Item0_6" class="treeItem" onclick="setSource(this)" seleccion valor="7") Ted isn’t eating very much.
+                            span(id="Item0_7" class="treeItem" onclick="setSource(this)" seleccion valor="8") He’s three hours late.
+
+                            
+                            
+                        div(id="linecanvas"  style="width: 60px;")
+
+
+
+                        div(id="targetElements" class=" js-columnas") 
+                           
+                            span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="7") I’m worried he’ll get sick.
+                            span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="1") Great! He’s going to be a father!
+                            span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="8") He isn’t going to come, is he?
+                            span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="6") I think he’ll probably get fired.
+                            span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="4") I think she’ll probably marry him.
+                            span(id="Item1_5" class="treeItem" onclick="setTarget(this)" seleccion valor="5") They said it’s going to rain.
+                            span(id="Item1_6" class="treeItem" onclick="setTarget(this)" seleccion valor="3") He didn't because it is not going to rain.
+                            span(id="Item1_7" class="treeItem" onclick="setTarget(this)" seleccion valor="2") He won’t pass the exam then.
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //-button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()
+    

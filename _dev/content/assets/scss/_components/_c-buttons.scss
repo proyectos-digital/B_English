@@ -1,0 +1,132 @@
+%btn-default{
+	min-height: var(--size-uiBtns);
+	min-width: var(--size-uiBtns);
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: .5rem;
+	vertical-align: middle;
+
+	border: none;
+	border-radius: 0;
+	font-weight: lighter;
+	font-size: 0.9rem;
+
+	// user-select: none;
+	cursor: pointer;
+
+	&:disabled, &.is-disabled{
+		background-color: var(--color_1-lighter);
+		color: var(--color_1-light);
+		pointer-events: none;
+	}
+
+}
+
+.c-{
+	&btn{
+		@extend %btn-default;
+
+		// padding: 5px;
+		background-color: var(--color_5);
+		color: $white ;
+
+		&-Icon{
+			@extend .c-icon;
+			@extend .c-btn;
+			&:disabled{
+				&:before{
+					filter: invert(50%) brightness(110%);
+				}
+			}
+		}
+		&-IconIndicator{
+			@extend %btn-default;
+			@extend .c-icon;
+			padding: 0;
+			background-color: transparent;
+		}
+		&-IconAction{
+			@extend %btn-default;
+			@extend .c-icon;
+			background-color: var(--color_1);
+			&.is-active{
+				background-color: var(--color_5);
+			}
+		}
+		&-IconNavigation{
+			@extend %btn-default;
+			@extend .c-icon;
+
+			position: relative;
+			border-radius: 10px;
+			background-color: var(--white);
+			box-shadow: 0 0 0 .1rem var(--color_2-dark);
+			&.is-active{
+				background-color: var(--color_3);
+				color: white;
+			}
+		}
+	}
+	&menuBurguer{
+		position: relative;
+		display: block;
+		cursor: pointer;
+		width: 30px;
+		margin: auto;
+		transition: transform 150ms ease-in-out;
+		&.onMessage{
+			&:after{
+				content: "";
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: red;
+				top: -5px;
+				right: -5px;
+				border: 2px solid white;
+			}
+		}
+
+		&--Item{
+			display: block;
+			width: 30px;
+			height: 3px;
+
+			margin: 0 0 5px;
+			background-color: var(--color_2-dark);
+			transition: transform 150ms ease-in-out;
+		}
+		&:hover{
+			.c-menuBurguer--Item{
+				&:nth-child(2){
+					transform: translateX(5px);
+				}
+			}
+		}
+		&.is-active{
+			.c-menuBurguer--Item{
+				&:first-child {
+					width: 30px;
+					transition-delay: 0.2s;
+					transform: rotate(45deg);
+					transform-origin: 10% 0%;
+				}
+				&:nth-child(2) {
+					transform: translateX(40px);
+					opacity: 0;
+				}
+				&:nth-child(3) {
+					width: 30px;
+					transition-delay: 0.4s;
+					transform: rotate(-45deg);
+					transform-origin: 10% 100%;
+				}
+			}
+		}
+	}
+
+}

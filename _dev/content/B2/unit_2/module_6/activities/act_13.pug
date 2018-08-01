@@ -1,0 +1,50 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Look at the underlined words and answer.
+            div(class="row-flex mt40 ")
+                div(class="col-flex-sm12 col-flex-md5 col-center padding20 showTo-md")
+                    img(src="unit_2/module_6/assets/images/act_13.png", alt="" class="c-figure w70 centrado")
+
+                div(class="col-flex-sm12 col-flex-md6 col-center padding20")
+                    div(class="row mb20")
+                        p(class="mt20 centrado") 
+                            strong(class="u-textColor_4-dark")  1. 
+                            | The word #[strong #[u subject] ] in the text refers to #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                            |. 
+                        p(class="mt20 centrado") 
+                            strong(class="u-textColor_4-dark")  2. 
+                            | The #[strong #[u subject] ]  deals more specifically with the study of a society’s waste products – #[strong #[u its] ]  garbage. What is “it” in this statement? #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]
+                        p(class="mt20 centrado") 
+                            strong(class="u-textColor_4-dark")  3. 
+                            | From looking at the food scraps #[strong #[u they] ] left, or the broken tools they discarded, #[strong #[u we] ] can start to get a picture of how the society operated. Who are #[strong “they”] ? #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] Who is #[strong “it”] ? #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+                        p(class="mt20 centrado") 
+                            strong(class="u-textColor_4-dark")  4. 
+                            | By studying the amount of paper which offices and organizations throw away, #[strong #[u they] ] have concluded that computers, rather than cutting the amount of paper we use, have actually increased it. Who are #[strong “they”]? #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] Who is #[strong “it”]? #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] 
+
+
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside  is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_6/activities/act_13_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

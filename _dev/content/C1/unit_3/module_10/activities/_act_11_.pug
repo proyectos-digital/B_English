@@ -1,0 +1,185 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_11")
+	aside(class="template-asideLeft o-aside-Item")
+
+	|
+	|
+	div(class="template-section m-a")
+		|
+		section(class="template-content" )
+			.row-flex.align-items-center.justify-between
+				.col.xs12.md5
+
+					div(class="c-contVideo ta-c"): video(controls class="u-responsive-video")
+						source(src="unit_3/module_10/"+pathVideo+"act_11_1.mp4" type="video/mp4")
+
+
+				.col.xs12.md6
+					h5  Based on each situation, ask people what their opinion is.
+					p.
+						#[strong Eg]: Making it mandatory to learn a second language.#[br]
+						#[strong Response]: What’s your opinion on making it mandatory to learn a second a language?
+
+
+					.row.mt20.flex.align-items-center
+						.col.xs8
+							p.
+								#[strong.u-textColor_4 • ] High school children not receiving homework.
+						.col.xs4
+							.row
+								div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt3_mod10_act11a',1)")
+
+									div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+									|
+									div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+										div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+											button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+												type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+												ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+												span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+												//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+												span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+													sub seg.
+											|
+											button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+												type="button"
+												ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+												ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+												ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+												span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+													span play
+												span(ng-if="recorder.status.isPlaying")
+													span pause
+					.row.mt20.flex.align-items-center
+						.col.xs8
+							p.
+								#[strong.u-textColor_4 • ] Women getting the same pay as men.
+						.col.xs4
+							.row
+								div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt3_mod10_act11b',2)")
+
+									div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+									|
+									div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+										div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+											button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+												type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+												ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+												span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+												//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+												span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+													sub seg.
+											|
+											button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+												type="button"
+												ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+												ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+												ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+												span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+													span play
+												span(ng-if="recorder.status.isPlaying")
+													span pause
+					.row.mt20.flex.align-items-center
+						.col.xs8
+							p.
+								#[strong.u-textColor_4 • ] Longer vacation time for teachers.
+						.col.xs4
+							.row
+								div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt3_mod10_act11c',3)")
+
+									div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+									|
+									div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+										div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+											button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+												type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+												ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+												span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+												//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+												span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+													sub seg.
+											|
+											button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+												type="button"
+												ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+												ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+												ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+												span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+													span play
+												span(ng-if="recorder.status.isPlaying")
+													span pause
+					.row.mt20.flex.align-items-center
+						.col.xs8
+							p.
+								#[strong.u-textColor_4 • ] Having university students get their degrees in a shorte period of time.
+						.col.xs4
+							.row
+								div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_d" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt3_mod10_act11d',4)")
+
+									div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+									|
+									div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+										div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+											button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+												type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+												ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+												span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+												//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+												span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+													sub seg.
+											|
+											button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+												type="button"
+												ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+												ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+												ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+												span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+													span play
+												span(ng-if="recorder.status.isPlaying")
+													span pause
+					.row.mt20.flex.align-items-center
+						.col.xs8
+							p.
+								#[strong.u-textColor_4 • ] Politicians being paid based on how effective they are in their work.
+						.col.xs4
+							.row
+								div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_e" time-limit='120' audio-model="audio_5" on-playback-start="guardarRecord('unt3_mod10_act11e',5)")
+
+									div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+									|
+									div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+										div(class="c-ngRecorder-controls ta-c" ng-hide="recorder.status.isDenied === true")
+											button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"
+												type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord"
+												ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+												span {{recorder.status.isRecording ? 'Stop' : 'Start '}}
+												//- span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+												span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}}
+													sub seg.
+											|
+											button(class="c-btn-Icon c-ngRecorder-controls--btnListen"
+												type="button"
+												ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}"
+												ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
+												ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+												span(ng-if="recorder.status.isPaused || recorder.status.isStopped")
+													span play
+												span(ng-if="recorder.status.isPlaying")
+													span pause
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2")
+		button(class="c-btn-IconAction u-bgIconRefresh is-active" ng-show="s_actividad == 3")
+		button(class="c-btn-IconAction u-bgIconCheck is-active" ng-show="s_actividad == 3")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

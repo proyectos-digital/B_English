@@ -1,0 +1,138 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+             div(class="row")
+                div(class="row-flex align-items-center")
+                    div(class="col-flex-sm12 col-flex-md5 col-center")
+
+                        div(class="row mt30")
+                            p
+                                strong(class="u-textColor_4-dark") 1.
+                                |  Which word completes this sentence? 
+ 
+                            p(class="u-txtSpace")
+                                | The mountain  
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir" ng-model="txtcaptura_a")
+                                | we climbed yesterday was the highest mountain in Britain!
+                                
+                            div(class="row-flex flex-column mt20")
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_1" name="selInputRadio_1" value="1")
+                                    label(for="inputRadio_1" class="c-Checkbox"  ng-click="txtcaptura_a='which'"): span which
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_2" name="selInputRadio_1" value="2")
+                                    label(for="inputRadio_2" class="c-Checkbox"  ng-click="txtcaptura_a='where'"): span where
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_3" name="selInputRadio_1" value="3")
+                                    label(for="inputRadio_3" class="c-Checkbox"  ng-click="txtcaptura_a='what'"): span what
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 2.
+                                |   In which sentence can we omit "who"?
+                                
+                            div(class="row-flex flex-column mt20")
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_4" name="selInputRadio_2" value="1")
+                                    label(for="inputRadio_4" class="c-Checkbox"): span The man who I saw on the bus is my neighbor.
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_5" name="selInputRadio_2" value="2")
+                                    label(for="inputRadio_5" class="c-Checkbox"): span The man who lives next to me is nearly 80.
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_6" name="selInputRadio_2" value="3")
+                                    label(for="inputRadio_6" class="c-Checkbox"): span The man who cleans my windows has gone to the hospital.
+
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 3.
+                                |  In which sentence can you NOT omit "that"?
+
+                            div(class="row-flex flex-column mt20")
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_7" name="selInputRadio_3" value="1")
+                                    label(for="inputRadio_7" class="c-Checkbox"): span The movie that we saw yesterday was great.
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_8" name="selInputRadio_3" value="2")
+                                    label(for="inputRadio_8" class="c-Checkbox"): span I've lost the magazine that I was reading.
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_9" name="selInputRadio_3" value="3")
+                                    label(for="inputRadio_9" class="c-Checkbox"): span A drill is a machine that makes holes.
+
+
+                    div(class="col-flex-sm12 col-flex-md5 col-center") 
+                    
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 4.
+                                |  What word CAN NOT go in the space?
+
+                            p(class="u-txtSpace")
+                                | Julie looked after the injured bird
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir" ng-model="txtcaptura_b")
+                                | she found in the garden.
+
+                            div(class="row-flex flex-column mt20")
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_10" name="selInputRadio_4" value="1")
+                                    label(for="inputRadio_10" class="c-Checkbox" ng-click="txtcaptura_b='no word is needed here.'"): span no word is needed here.
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_11" name="selInputRadio_4" value="2")
+                                    label(for="inputRadio_11" class="c-Checkbox" ng-click="txtcaptura_b='that'"): span  that
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_12" name="selInputRadio_4" value="3")
+                                    label(for="inputRadio_12" class="c-Checkbox" ng-click="txtcaptura_b='who'"): span who
+                        
+                        div(class="row mt20")
+                            p
+                                strong(class="u-textColor_4-dark") 5.
+                                |  What word CAN NOT go in the space? 
+
+                            p  
+                                | Last week I bought a watch
+                                span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir" ng-model="txtcaptura_c")
+                                | half price.
+
+                        div(class="row-flex flex-column mt20")
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_13" name="selInputRadio_5" value="1")
+                                    label(for="inputRadio_13" class="c-Checkbox" ng-click="txtcaptura_c='that'"): span that
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_14" name="selInputRadio_5" value="2")
+                                    label(for="inputRadio_14" class="c-Checkbox" ng-click="txtcaptura_c='no word is needed here'"): span no word is needed here
+
+                                span(class="c-textField")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_15" name="selInputRadio_5" value="3")
+                                    label(for="inputRadio_15" class="c-Checkbox" ng-click="txtcaptura_c='which'"): span which
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

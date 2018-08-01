@@ -1,0 +1,82 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_1")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+            div(class="row-flex justify-around mt20")
+                div(class="dragCont"): div(class="drag") account for
+                div(class="dragCont"): div(class="drag") add up
+                div(class="dragCont"): div(class="drag") advises against
+                div(class="dragCont"): div(class="drag") agree with
+                div(class="dragCont"): div(class="drag") allow for
+                div(class="dragCont"): div(class="drag") appeal to
+                div(class="dragCont"): div(class="drag") applied for
+                div(class="dragCont"): div(class="drag") backed away
+                div(class="dragCont"): div(class="drag") back down
+                div(class="dragCont"): div(class="drag") backed up
+
+            .row.mt30
+                .col.xs12.md6
+
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] Liliana]
+                        #[span(class="drop")]
+                        a job yesterday. She submitted some scanned documents.
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] The doctor]
+                        #[span(class="drop")]
+                        using soap to wash the injury.
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] I ]
+                        #[span(class="drop")]
+                        your common sense when making arrangement to select the catering company.
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] They wondered what could ]
+                        #[span(class="drop")]
+                        his bad luck.
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] You need to]
+                        #[span(class="drop")]
+                        the possibility that some of the evidence presented cannot be trusted.
+
+                .col.xs12.md6
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] I ]
+                        #[span(class="drop")]
+                        your argument that children are not practicing enough for the coming competition.
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] Are you accusing us of fraud? Your accusation has to be ]
+                        #[span(class="drop")]
+                        solid evidence.
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] The sales manager]
+                        #[span(class="drop")]
+                        from the deal because it was not the best offer.
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] Even though it was a difficult challenge Sara did not  ]
+                        #[span(class="drop")]
+                        because she is a very resilient person.
+                    p.mt20.lh30.
+                        #[span #[strong.u-textColor_4 •] The two different reports of the same task don’t ]
+                        #[span(class="drop")]
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

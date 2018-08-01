@@ -1,0 +1,55 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                .row-flex.justify-center.col-center.mt30 
+
+                    .dragCont.ml5: .drag.w10.h35 kick off
+                    .dragCont.ml5: .drag.w10.h35 look down on
+                    .dragCont.ml5: .drag.w10.h35 keep on
+                    .dragCont.ml5: .drag.w10.h35 let me down
+                    .dragCont.ml5: .drag.w10.h35 moved in
+                    .dragCont.ml5: .drag.w10.h35 keep up with
+                    .dragCont.ml5: .drag.w10.h35 moved out
+                    .dragCont.ml5: .drag.w10.h35 left out
+                    .dragCont.ml5: .drag.w10.h35 look after
+                    .dragCont.ml5: .drag.w10.h35 worn out
+
+
+                .row-flex.mt30.align-items-center.justify-between
+                    .col.xs12.md5
+                        p.ta-j #[strong.u-textColor_4 •] When things get difficult you need to #[span.drop.w20] trying no matter what.
+                        p.ta-j #[strong.u-textColor_4 •] Johnny is riding his bike too fast, Karen cannot #[span.drop.w30] him. He needs to slow down.
+                        p.ta-j #[strong.u-textColor_4 •] What time will the game start? Well #[span.drop.w20] is at 5pm but we will arrive earlier.
+                        p.ta-j #[strong.u-textColor_4 •] While giving the report, Mary #[span.drop.w20] all the mistakes the team made. Next time she will have to include them.
+                        p.ta-j #[strong.u-textColor_4 •] I was so disappointed by my football club losing again. They always #[span.drop.w20]
+
+                    .col.xs12.md6
+                        p.ta-j #[strong.u-textColor_4 •] Francine is too young to #[span.drop.w20]  her baby sister, her parents have to hire a babysitter.
+                        p.ta-j #[strong.u-textColor_4 •] People #[span.drop.w30] on us because we come from a poor neighborhood but we are honest and hard working people.
+                        p.ta-j #[strong.u-textColor_4 •] This is my new office. We  #[span.drop.w20] last week.
+                        p.ta-j #[strong.u-textColor_4 •] Sandra didn´t like the new office space so she #[span.drop.w20] last week. She loves her new office.
+                        p.ta-j #[strong.u-textColor_4 •] I loved my shoes so much that I wore them every day. Now they are all #[span.drop.w20] with holes in the bottom.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

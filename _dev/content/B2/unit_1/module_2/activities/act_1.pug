@@ -1,0 +1,144 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row mt40-sm mt10-md mt10-xs ")
+                h5 #[strong.u-textColor_4 1. ] Watch the video:
+                |
+                div(class="row-flex")
+                    |
+                    |
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row")
+                            div(class="col xs12 col-center"): div(class="c-contVideo"): video(controls class="u-responsive-video")
+                                source(src="unit_1/module_2/"+pathVideo+"act_1_1.mp4" type="video/mp4")
+                            |
+                            div(class="col xs12 col-center mt10 pr20")
+                                h6 Now read the following sentences. Pay attention to the words in bold.
+                                p I <strong>have been working</strong> hard. By November this year, I <strong>will have received</strong> my promotion. My English level has improved tremendously! By the time of the test, I <strong>will have received</strong> my B2 certificate. I <strong>will have bought</strong> a new car a year from now. Most importantly, by then I <strong>will have found</strong> the love of my life!
+                    |
+                    |
+                    div(class="col-flex-xs12 col-flex-sm12 col-flex-md6 col-center")
+                        |
+                        |
+                        div(class="row mt40-sm mt30-md mt30-xs")
+                            div(class="col xs12")
+                                |
+                                table(class="c-table-estilo_tres m-a")
+                                    thead
+                                        tr
+                                            th 
+                                            th Future Perfect
+                                            th Future Perfect Continuous
+                                    tbody
+                                        tr
+                                            td(class="") Affirmative
+                                            td(class="") Will have + past participle
+                                            td(class="") Will have been + ing
+                                        tr
+                                            td(class="") Negative
+                                            td(class="") Will + not + have + participle
+                                            td(class="") Will + not + have been + ing
+                                        tr
+                                            td(class="") Questions
+                                            td(class="") Will + pronoun + have + participle
+                                            td(class="") Will + pronoun + have been + ing
+                            |
+                            |
+                            div(class="col xs12")
+
+                                div(class="row ")
+
+                                    h5(class="mb30 mt20") Decide if the following sentences are correct or incorrect:
+
+                                    div(class="mb20 row-flex")
+                                        div(class="col-flex-xs12 col-flex-sm11 col-flex-md8 col-center")
+                                            strong(class="u-textColor_4-dark")  1. 
+                                            | By next November, I will have received my promotion.
+                                        div(class="col-flex-xs6 col-flex-sm4  mt20-xs mt0-md col-center"): div(class="row-flex justify-end")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="tfInputRadio_1" value="1")
+                                            label(for="inputRadio_1" class="c-CheckSelected u-fz07") CORRECT
+                                            |
+                                            span.m-a
+                                            |
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="tfInputRadio_1" value="2")
+                                            label(for="inputRadio_2" class="c-CheckSelected u-fz07") INCORRECT
+                                    div(class="mb20 row-flex")
+                                        div(class="col-flex-xs12 col-flex-sm11 col-flex-md8 col-center")
+                                            strong(class="u-textColor_4-dark")  2. 
+                                            | By the time I finish this course, I will have been taken ten tests.
+                                        div(class="col-flex-xs6 col-flex-sm4  mt20-xs mt0-md col-center"): div(class="row-flex justify-end")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="tfInputRadio_2" value="1")
+                                            label(for="inputRadio_5" class="c-CheckSelected u-fz07") CORRECT
+                                            |
+                                            span.m-a
+                                            |
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="tfInputRadio_2" value="2")
+                                            label(for="inputRadio_6" class="c-CheckSelected u-fz07") INCORRECT
+                                    div(class="mb20 row-flex")
+                                        div(class="col-flex-xs12 col-flex-sm11 col-flex-md8 col-center")
+                                            strong(class="u-textColor_4-dark")  3. 
+                                            | Are you going to have been waiting for more than two hours when her plane finally arrives?
+                                        div(class="col-flex-xs6 col-flex-sm4  mt20-xs mt0-md col-center"): div(class="row-flex justify-end")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="tfInputRadio_3" value="1")
+                                            label(for="inputRadio_3" class="c-CheckSelected u-fz07") CORRECT
+                                            |
+                                            span.m-a
+                                            |
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="tfInputRadio_3" value="2")
+                                            label(for="inputRadio_4" class="c-CheckSelected u-fz07") INCORRECT
+                                    div(class="mb20 row-flex")
+                                        div(class="col-flex-xs12 col-flex-sm11 col-flex-md8 col-center") 
+                                            strong(class="u-textColor_4-dark")  4. 
+                                            | The mural will have been be painted by the famous artist for over six months by the time it is finished.
+                                        div(class="col-flex-xs6 col-flex-sm4  mt20-xs mt0-md col-center"): div(class="row-flex justify-end")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="tfInputRadio_4" value="1")
+                                            label(for="inputRadio_7" class="c-CheckSelected u-fz07") CORRECT
+                                            |
+                                            span.m-a
+                                            |
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="tfInputRadio_4" value="2")
+                                            label(for="inputRadio_8" class="c-CheckSelected u-fz07") INCORRECT
+                                    div(class="mb20 row-flex")
+                                        div(class="col-flex-xs12 col-flex-sm11 col-flex-md8 col-center") 
+                                            strong(class="u-textColor_4-dark")  5. 
+                                            | You are not going to have perfected your English by the time you come back from the U.S.
+                                        div(class="col-flex-xs6 col-flex-sm4  mt20-xs mt0-md col-center"): div(class="row-flex justify-end")
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="tfInputRadio_5" value="1")
+                                            label(for="inputRadio_9" class="c-CheckSelected u-fz07") CORRECT
+                                            |
+                                            span.m-a
+                                            |
+                                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="tfInputRadio_5" value="2")
+                                            label(for="inputRadio_10" class="c-CheckSelected u-fz07") INCORRECT
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice u-bgIconAlert is-active" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_2/activities/act_1_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")
+|
+|
+//- div.c-modal.c-modal--helloSection.is-visible(id="cModalHelloSection" ng-controller="CtrlFooter" ng-init="triggerModalHello(false)")
+//-     div.c-modal--helloSection-wrapper
+//-         div.c-modal--helloSection-block
+//-             div.c-modal--helloSection-body
+//-                 //- img(class="u-responsive-img" src="./assets/multimedia/images/wel_bg.jpg" alt="" style=" object-fit: cover; object-position: center; position: absolute; height: 100%;")
+//-                 img(class="u-responsive-img" draggable='false' src="./assets/multimedia/images/hello_activities.png" alt="" style="pointer-events: none; user-select: none; position: absolute; top: 0; right: 0; left: 0; bottom: 0; margin: auto;")

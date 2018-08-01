@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import "_var/variables.scss";
+
+:root{
+    --font-size             : $base-font-size ;
+    // White
+    --white		            : $white ;
+    // Black
+    --color_1-lighter       : $color_1-lighter ;
+    --color_1-light	        : $color_1-light   ;
+    --color_1		        : $color_1		   ;
+    --color_1-dark	        : $color_1-dark	   ;
+    --color_1-darker	    : $color_1-darker  ;
+    // Green
+    --color_2-lighter       : $color_2-lighter ;
+    --color_2-light	        : $color_2-light   ;
+    --color_2		        : $color_2		   ;
+    --color_2-dark	        : $color_2-dark	   ;
+    --color_2-darker	    : $color_2-darker  ;
+    // Yellow
+    --color_3-lighter       : $color_3-lighter ;
+    --color_3-light	        : $color_3-light   ;
+    --color_3		        : $color_3		   ;
+    --color_3-dark	        : $color_3-dark	   ;
+    --color_3-darker	    : $color_3-darker  ;
+    // Red
+    --color_4-lighter       : $color_4-lighter ;
+    --color_4-light	        : $color_4-light   ;
+    --color_4		        : $color_4		   ;
+    --color_4-dark	        : $color_4-dark	   ;
+    --color_4-darker	    : $color_4-darker  ;
+    // blue
+    --color_5-lighter       : $color_5-lighter ;
+    --color_5-light	        : $color_5-light   ;
+    --color_5		        : $color_5		   ;
+    --color_5-dark	        : $color_5-dark	   ;
+    --color_5-darker	    : $color_5-darker  ;
+    // State color
+    --color_good            : $color_good	    ;
+	--color_wrong           : $color_wrong      ;
+    // Size
+	--size-uiLogo           : 3rem;
+	--size-uiForms          : 1.9rem;
+	--size-uiIcon           : 1.4rem;
+	--size-uiBtns           : 1.9rem;
+    --size-uiBtns-special   : 1.5rem;
+    --size-uiFigure-Rombo   : 30em;
+    --size-xs               : $pixel320;
+	--size-sm               : $pixel480;
+	--size-bsm              : $pixel768;
+	--size-md               : $pixel992;
+	--size-lg               : $pixel1024;
+	--size-hd               : $pixel1280;
+    // Margin
+	--margin-uiForms    : 0.2em;
+	--margin-uiBtns     : 0.2em;
+}
+
+*, // todo elemento
+* > *, // Hijos directos
+* *, // Elementos hijo
+*:after, // Seudo Elementos After
+*:before // Seudo Elementos Before
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*!
+*****************
+***************** base
+*****************
+*/
+@import "_layout/base";
+/*!
+*****************
+***************** grid
+*****************
+*/
+@import "_layout/grid";
+/*!
+*****************
+***************** tipography
+*****************
+*/
+@import "_global/_tipography";
+/*!
+*****************
+***************** ui component
+*****************
+*/
+@import "_components/_ui";
+/*!
+*****************
+***************** layout proyect
+*****************
+*/
+@import "_layout/layout";
+/*!
+*****************
+***************** Objetos de proyect
+*****************
+*/
+@import "_components/_objects";
+
+/*!
+*****************
+***************** components proyect
+*****************
+*/
+@import "_components/_components";
+/*!
+*****************
+***************** components proyect
+*****************
+*/
+// @import "_components/_foro";
+/*!
+*****************
+***************** materialize components
+*****************
+*/
+@import "_materialize/_materialize"; 
+/*!
+*****************
+***************** utilities
+*****************
+*/
+@import "_utilities/_utilities";
+/*!
+*****************
+***************** states
+*****************
+*/
+@import "_states/_states";
+/*!
+*****************
+***************** specificities
+*****************
+*/
+@import "_specificity/_specificity";

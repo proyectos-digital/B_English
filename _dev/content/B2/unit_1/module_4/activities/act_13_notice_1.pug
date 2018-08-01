@@ -1,0 +1,41 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+div.vh100.row-flex(u-over-flow="auto-y")
+    div(class="row pl40 pr40 m-a")
+        header(class="c-noticeAside-header")
+            div(class="row mt40")
+                img(src=""+appPathImage+"c_noticeTitle.png", alt="", class="u-responsive-img w70")
+        section(class="c-noticeAside-section")
+            h5.ta-j In the passive voice, the object in an active sentence becomes the subject of the passive sentence.
+            div(class="row mt20")
+                table.c-table-SelfCheck
+                    thead
+                        tr
+                            th Tense
+                            th Form
+                    tbody
+                        tr
+                            td.u-textColor_1.ta-c.padding10 Present simple passive
+                            td.u-textColor_1.ta-c.padding10 Is/are + past participle
+                        tr
+                            td.u-textColor_1.ta-c.padding10 Present continuous passive
+                            td.u-textColor_1.ta-c.padding10 Is/ are/being + past participle
+                        tr
+                            td.u-textColor_1.ta-c.padding10 Past simple
+                            td.u-textColor_1.ta-c.padding10 Was/were + past participle
+                        tr  
+                            td.u-textColor_1.ta-c.padding10 past continuous
+                            td.u-textColor_1.ta-c.padding10 Was/were being + past participle
+
+                br
+                p(class="ta-r"): strong Present
+                p(class="ta-r") That house #[strong is made ] of brick.
+                p(class="ta-r") The woman #[strong is being ] held hostage.
+                br
+                p(class="ta-r"): strong Past
+                p(class="ta-r") Those boots #[strong were made ] in Spain.
+                p(class="ta-r") Those plants #[strong weren´t being cared ] for.
+
+
+

@@ -1,0 +1,89 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md6 mt50-md mt30-sm")
+                    div(class="col xs11 col-center")
+                        div(class="c-cardGreen")
+                            div(class="c-cardGreenContent padding25 ")
+                                p: strong Simple Future Tense:
+                                p
+                                    strong • Active: 
+                                    | Subject + will/shall + first form of the verb + object
+                                p
+                                    strong • Passive: 
+                                    | Object of the active sentence + will/shall + be + past participle form of the verb + by + subject of the active sentence.
+                                p
+                                    strong • Active:  
+                                    | She will help me.
+                                p
+                                    strong • Passive:  
+                                    | I will be helped by her.
+                    div(class="col xs11 col-center")
+                        div(class="c-cardGreen")
+                            div(class="c-cardGreenContent padding25 ")
+                                p: strong Changing a negative sentence into the passive:
+                                p
+                                    strong • Active: 
+                                    | She will not help us.
+                                p
+                                    strong • Passive: 
+                                    | We will not be helped by her.
+                                p: strong Changing an Interrogative sentence into the passive:
+                                p
+                                    strong • Active:  
+                                    | Will you help him?
+                                p
+                                    strong • Passive:  
+                                    | Will he be helped by you?
+
+                div(class="col-flex-sm12 col-flex-md6 mt50-md mt30-sm")
+                    div(class="col xs11 col-center")
+                        div(class="c-cardBlue")
+                            div(class="c-cardBlueContent padding25 ")
+                                p: strong Future perfect tense:
+                                p
+                                    strong • Active: 
+                                    | Subject + will/shall + have + past participle form of the verb + object
+                                p
+                                    strong • Passive: 
+                                    | Object of the active sentence + will/shall + have + been + past participle form of the verb + by + subject of the active sentence
+                                p
+                                    strong • Active:  
+                                    | We shall not have accepted the invitation.
+                                p
+                                    strong • Passive:  
+                                    | The invitation shall not have been accepted by us.
+                    
+                    div(class="col xs11 col-center")
+                        div(class="c-cardBlue")
+                            div(class="c-cardBlueContent padding25 ")
+                                p: strong Changing an interrogative sentence into the passive:
+                                p
+                                    strong • Active: 
+                                    | Will she have cooked the food?
+                                p
+                                    strong • Passive: 
+                                    | Will the food have been cooked by her?
+                                p Active sentences in 
+                                    strong the future continuous 
+                                    | and 
+                                    strong future perfect continuous 
+                                    | tenses cannot be changed to the passive.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

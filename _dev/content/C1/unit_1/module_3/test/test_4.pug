@@ -1,0 +1,35 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper test_4")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content" ng-init="ContadorPalabras(250)")
+
+            div(class="row row-flex mt30 align-items-center")
+                h6.ta-c.mb20 You have 40 minutes for this task. 
+                p Write about the following topic: #[strong People attend colleges or universities for many different reasons (for example, new experiences, career preparation, increased knowledge etc.)].
+                p Why do you think people attend colleges or universities? You should give reasons for your answer using your own ideas and experience. #[strong Minimum 250 words].
+
+                .col.xs12.md6
+                    div(class="c-wrapTextarea")
+                        textarea(placeholder="Write here..." class="campo c-textarea h300" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0 
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")
+
+                .col.xs12.md6.ta-c: img(ng-src="unit_{{unidadid}}/module_{{moduloid}}/assets/images/test_{{actividadid}}_1.png", alt="", class="u-responsive-img")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()" ng-show="enviarMensaje_minPalabras")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

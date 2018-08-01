@@ -1,0 +1,206 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+mixin select_tb
+	//- select(name="act_1_2" class="c-select ml5 mr5" c-select-style="inline")
+	select(name="act_2_1" class="c-select w95")
+		option(value="" disabled selected) 
+		option(value="1") constraints
+		option(value="2") resent
+		option(value="3") governance
+		option(value="4") grind
+		option(value="5") halt
+		option(value="6") tallied
+		option(value="7") overturn
+		option(value="8") gamesmanship
+		option(value="9") insiders
+		option(value="10") epithet
+		option(value="11") ensure
+		option(value="12") headline-grabbing
+		option(value="13") runoff
+		option(value="14") backers
+		
+
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2" ng-init="s_actividad = 1")
+	//- aside(class="template-asideLeft o-aside-Item")
+	//- 	button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+	//- 	button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+	//- 	button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content u-animationFadeDown")
+			div(class="row")
+				h5 Look at the use of the words below and match them to the correct definition.
+			div(class="row u-animationFadeDown" ng-show="s_actividad == 1")
+			div(class="row row-flex")
+				table(class="c-table-estilo_tres m-a")
+					thead
+						tr
+							th(class="w20") Word
+							th(class="w40") Meaning
+							th(class="w40") Use
+					tbody
+						tr 
+							td.pl15
+								+select_tb
+								
+							td Authority of government or management.
+							td.padding10 A successful company must practice good corporate governance to ensure ethical and legal obligations are always met.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td To smooth something through friction.
+							td.padding10 The server cage had very sharp edges, so we used a rock to grind the metal smooth to prevent injuries in the office.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td To come to a stop.
+							td.padding10 The power outage halted our work, as all our computers were off.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td To come to dislike something.
+							td.padding10 At first, he was excited the office switched to IPHONE but as time went on, he resented being forced to use an operating system he felt was inferior.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td Limitations.
+							td.padding10 Android may seem like a much more open system, I’ll admit, but it also has its constraints.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td Using suspicious methods in competitive events.
+							td.padding10 Our friendly challenge with the development team became less enjoyable when it was discovered they demonstrated poor gamesmanship by copying codes from another project to win.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td Members of a group who often share privileged information.
+							td.padding10 Only insiders at Apple could have known that a large stock buy-back was about to happen.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td A term or phrase often used in a hostile or insulting manner.
+							td.padding10 Non-smartphone users are often said to be in the “stone age,” but I don’t know why this epithet is necessary.  If they want to use regular phones, I think it’s okay.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td To turn over or defeat. 
+							td.padding10 It was looking like Samsung would be fined in the latest patent after the court’s decision, but the appealing judge overturned the decision and Samsung didn’t have to pay.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td Having kept score.
+							td.padding10 We thought we might not get all the new users we were hoping for before the end of the year with our new app, but when we tallied the user base and we actually added 10% more users!
+						tr 
+							td.pl15
+								+select_tb
+								
+							td A final deciding contest when there has been no clear winner.
+							td.padding10 It was unclear whether Amazon or Facebook would see the biggest increase in stock valuation this year, but in the runoff, Amazon took the lead and won.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td Someone who supports someone or something. 
+							td.padding10 At first I was scared to introduce my new shopping app, but very quickly I found myself with many financial backers.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td To make sure.
+							td.padding10 As the project is at its final stage, please ensure every line of code is perfect, we don’t want any last-minute errors.
+						tr 
+							td.pl15
+								+select_tb
+								
+							td Something that brings great attention. 
+							td.padding10 When our software company decided to buy our competitor, a hardware company, it was quite headline-grabbing because it’s an entirely new business for us.
+			//- div(class="row row-flex")
+			//- 	div(class="col-flex-xs12 col-flex-sm2 col-center sortable row-flex" sortable-direction)
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="1") constraints
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="2") resent
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="3") governance
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="4") grind
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="5") halt
+			//- 	div(class="col-flex-xs12 col-flex-sm3 col-center sortable row-flex" data-ejercicio="sortable" id="sortable" class="sortreload")
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="6") To smooth something through friction.
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="7") Limitations.
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="8") Authority of government or management.
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="9") To come to a stop.
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="10") To come to dislike something.
+			//- 	div(class="col-flex-xs12 col-flex-sm6 col-center sortable row-flex" data-ejercicio="sortable" id="sortable" class="sortreload")
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="11") The power outage halted our work, as all our computers were off.
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="12") At first, he was excited the office switched to IPHONE but as time went on, he resented being forced to use an operating system he felt was inferior.
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="13") The server cage had very sharp edges, so we used a rock to grind the metal smooth to prevent injuries in the office.
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="14") Android may seem like a much more open system, I’ll admit, but it also has its constraints.
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="15") A successful company must practice good corporate governance to ensure ethical and legal obligations are always met.
+		//- div(class="row u-animationFadeDown" ng-show="s_actividad == 2")
+			//- div(class="row row-flex")
+			//- 	div(class="col-flex-xs12 col-flex-sm2 col-center sortable_2 row-flex" sortable-direction)
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="16") tallied
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="17") overturn
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="18") gamesmanship
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="19") insiders
+			//- 		div(class="row js-sortdrag ui-sortable--item" dataval="20") epithet
+			//- 	div(class="col-flex-xs12 col-flex-sm3 col-center sortable_2 row-flex" data-ejercicio="sortable" id="sortable" class="sortreload")
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="21") A term or phrase often used in a hostile or insulting manner.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="22") To turn over or defeat.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="23") Members of a group who often share privileged information.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="24") Having kept score.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="25") Using suspicious methods in competitive events.
+			//- 	div(class="col-flex-xs12 col-flex-sm6 col-center sortable_2 row-flex" data-ejercicio="sortable" id="sortable" class="sortreload")
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="26") Only insiders at Apple could have known that a large stock buy-back was about to happen.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="27") We thought we might not get all the new users we were hoping for before the end of the year with our new app, but when we tallied the user base and we actually added 10% more users!
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="28") Our friendly challenge with the development team became less enjoyable when it was discovered they demonstrated poor gamesmanship by copying codes from another project to win.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="29") Non-smartphone users are often said to be in the “stone age,” but I don’t know why this epithet is necessary.  If they want to use regular phones, I think it’s okay.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="30") It was looking like Samsung would be fined in the latest patent after the court’s decision, but the appealing judge overturned the decision and Samsung didn’t have to pay.
+		//- div(class="row u-animationFadeDown" ng-show="s_actividad == 3")
+			//- div(class="row row-flex")
+			//- 	div(class="col-flex-xs12 col-flex-sm2 col-center sortable_2 row-flex" sortable-direction)
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="31") ensure
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="32") headline-grabbing
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="33") runoff
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="34") backers
+			//- 	div(class="col-flex-xs12 col-flex-sm3 col-center sortable_2 row-flex" data-ejercicio="sortable" id="sortable" class="sortreload")
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="35") Something that brings great attention.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="36") To make sure.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="37") A final deciding contest when there has been no clear winner.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="38") Someone who supports someone or something.
+			//- 	div(class="col-flex-xs12 col-flex-sm6 col-center sortable_2 row-flex" data-ejercicio="sortable" id="sortable" class="sortreload")
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="39") When our software company decided to buy our competitor, a hardware company, it was quite headline-grabbing because it’s an entirely new business for us.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="40") As the project is at its final stage, please ensure every line of code is perfect, we don’t want any last-minute errors.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="41") It was unclear whether Amazon or Facebook would see the biggest increase in stock valuation this year, but in the runoff, Amazon took the lead and won.
+			//- 		//- div(class="row js-sortdrag ui-sortable--item" dataval="42") At first I was scared to introduce my new shopping app, but very quickly I found myself with many financial backers.
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 1" ng-click="reloadSelectOption()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 1" ng-click="selectOption()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script.
+	$(function(){
+		$( ".sortable" ).sortable();
+		$( ".sortable" ).disableSelection();
+		$( ".sortable_2" ).sortable();
+		$( ".sortable_2" ).disableSelection();
+		$( ".sortable_3" ).sortable();
+		$( ".sortable_3" ).disableSelection();
+	});

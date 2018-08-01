@@ -1,0 +1,50 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_1" ng-init="unirColumnasFuncion()")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            |
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row")
+                    h5 Match the picture with its graphic definition:
+
+                div(class="row-flex justify-center col col-center mt40" data-ejercicio="unir")
+                    div(id="sourceElements" class="js-columnas")
+                        span(id="Item1_0" class="treeItem" onclick="setSource(this)" seleccion valor="3")
+                            img(src="unit_3/module_9/assets/images/col_1_1.png", alt="" class="u-responsive-img")
+                        span(id="Item1_1" class="treeItem" onclick="setSource(this)" seleccion valor="1")
+                            img(src="unit_3/module_9/assets/images/col_1_2.png", alt="" class="u-responsive-img")
+                        span(id="Item1_2" class="treeItem" onclick="setSource(this)" seleccion valor="2")
+                            img(src="unit_3/module_9/assets/images/col_1_3.png", alt="" class="u-responsive-img")
+                        span(id="Item3_3" class="treeItem" onclick="setSource(this)" seleccion valor="1")
+                            img(src="unit_3/module_9/assets/images/col_1_4.png", alt="" class="u-responsive-img")
+                        span(id="Item3_4" class="treeItem" onclick="setSource(this)" seleccion valor="3")
+                            img(src="unit_3/module_9/assets/images/col_1_5.png", alt="" class="u-responsive-img")
+                        span(id="Item3_5" class="treeItem" onclick="setSource(this)" seleccion valor="2")
+                            img(src="unit_3/module_9/assets/images/col_1_6.png", alt="" class="u-responsive-img")
+                    div(id="linecanvas" style="width: 60px;")
+                    div(id="targetElements" class=" js-columnas")
+                        span(id="Item0_0" class="treeItem ta-c"  onclick="setTarget(this)" seleccion valor="1"): span(class="centrado") Canoeing
+                        span(id="Item0_1" class="treeItem ta-c"  onclick="setTarget(this)" seleccion valor="2"): span(class="centrado") Climbing
+                        span(id="Item0_2" class="treeItem ta-c"  onclick="setTarget(this)" seleccion valor="3"): span(class="centrado") Rappel
+                        span(id="Item0_3" class="treeItem ta-c"  onclick="setTarget(this)" seleccion valor="1"): span(class="centrado") Skating
+                        span(id="Item0_4" class="treeItem ta-c"  onclick="setTarget(this)" seleccion valor="2"): span(class="centrado") Camping
+                        span(id="Item0_5" class="treeItem ta-c"  onclick="setTarget(this)" seleccion valor="3"): span(class="centrado") Mountain biking
+
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validar") 
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

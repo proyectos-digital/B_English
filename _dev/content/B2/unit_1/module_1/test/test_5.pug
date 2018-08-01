@@ -1,0 +1,67 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    div(class="row")
+
+
+                    div(class="col xs12 md6 ta-c")
+                        div(class="col-center col xs12 sm10 md8 lg11 ta-c mb20 ")
+                            img(src="unit_1/module_1/assets/images/test_5_1.png", alt="act_13" class="u-responsive-img m-a showTo-md")
+                        p: button(class="c-btn-IconAction u-bgIconListen u-textWhite mb30" ng-audio="unit_1/module_1/assets/audios/test_5_1.mp3"): span.ml10 Conversation 1
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") A: ] Janet is going to speak French well when she gets back from that language school in France.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_5") B: ] Hopefully! She  #[strong (1. take) ] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] classes for more than six months.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") A: ] She will be able to speak French with some of our French and Canadian clients.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_5") B: ] Good. Two clients from Canada #[strong (2. visit) ] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]  us next month when Janet returns.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") A: ] We need someone to entertain them while they are here.
+
+                    div(class="col xs12 md6 ta-c")
+                        div(class="col-center col xs12 sm10 md8 lg11 ta-c mb20 ")
+                            img(src="unit_1/module_1/assets/images/test_5_2.png", alt="act_13" class="u-responsive-img m-a showTo-md")
+                        p: button(class="c-btn-IconAction u-bgIconListen u-textWhite mb30" ng-audio="unit_1/module_1/assets/audios/test_5_2.mp3"): span.ml10 Conversation 2
+                        div(class="col-center col xs12 sm10 md8 lg11 lh-20 ta-l")
+
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") A: ] What are you going to be doing tomorrow at five?
+                            p(class="mb30").
+                                #[strong(class="u-textColor_5") B: ] I  #[strong (3. repair) ] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] my kitchen.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") A: ] Still? How long have you been working on your kitchen?
+                            p(class="mb30").
+                                #[strong(class="u-textColor_5") B: ]  It feels like forever. By the time I finish, I  #[strong (4. work) ] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")]  on the kitchen for over two weeks.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") A: ] Too bad. I was going to ask you if you wanted to go to the movies. What about the day after tomorrow?
+                            p(class="mb30").
+                                #[strong(class="u-textColor_5") B: ]  Sorry. I  #[strong (5. move) ] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] furniture and #[strong (6. hang) ] #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] curtains.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/self_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

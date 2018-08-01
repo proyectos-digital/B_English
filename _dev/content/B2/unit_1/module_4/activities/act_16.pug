@@ -1,0 +1,141 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_16" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 #[strong.u-textColor_4 1. ] Read the following sentences:
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md5 col-center mt30-md mt30-sm ml0")
+                    p(class="ta-j line-h1") Cartagena is expensive, but many people would like to vacation there, 
+                        strong anyway
+                        | . Cartagena is expensive, but many people would like to vacation there, 
+                        strong in any case. Anyway
+                        | , as I was telling you, Cartagena is a good place to go!
+                    img(src="unit_1/module_4/assets/images/act_16_1.png", alt="" class="u-responsive-img w45 f-l mb30 ml20 showTo-md")
+                    img(src="unit_1/module_4/assets/images/act_16_2.png", alt="" class="u-responsive-img w45 f-l mb30 ml10 showTo-md")
+
+                div(class="col-flex-sm12 col-flex-md5 col-center mt30-md mt30-sm")
+                    h5 Listen
+
+                    div(class="col xs12 mt10"): div(grid-layout="gap-05rem 2-columns-150-fr")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_4/assets/audios/act_16_1.mp3"): span Example 1
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio1" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod4_act16a',1)")
+                                
+                                div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                |
+                                div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                    div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                        button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                            type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                            ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                            span {{recorder.status.isRecording ? 'Stop' : 'Start '}} 
+                                            span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                            span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}} 
+                                                sub seg.
+                                        |
+                                        button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                            type="button" 
+                                            ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                            ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                            ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                            span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Send
+                                            span(ng-if="recorder.status.isPlaying"): span pause
+
+                    div(class="col xs12 mt10"): div(grid-layout="gap-05rem 2-columns-150-fr")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_4/assets/audios/act_16_2.mp3"): span Example 2
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio2" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt1_mod4_act16b',2)")
+                                
+                                div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                |
+                                div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                    div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                        button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                            type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                            ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                            span {{recorder.status.isRecording ? 'Stop' : 'Start '}} 
+                                            span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                            span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}} 
+                                                sub seg.
+                                        |
+                                        button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                            type="button" 
+                                            ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                            ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                            ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                            span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Send
+                                            span(ng-if="recorder.status.isPlaying"): span pause
+
+                    div(class="col xs12 mt10"): div(grid-layout="gap-05rem 2-columns-150-fr")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_4/assets/audios/act_16_3.mp3"): span Example 3
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio3" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt1_mod4_act16c',3)")
+                                
+                                div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                |
+                                div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                    div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                        button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                            type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                            ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                            span {{recorder.status.isRecording ? 'Stop' : 'Start '}} 
+                                            span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                            span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}} 
+                                                sub seg.
+                                        |
+                                        button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                            type="button" 
+                                            ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                            ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                            ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                            span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Send
+                                            span(ng-if="recorder.status.isPlaying"): span pause
+
+                    div(class="col xs12 mt10 mb30"): div(grid-layout="gap-05rem 2-columns-150-fr")
+                        button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_4/assets/audios/act_16_4.mp3"): span Example 4
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio4" time-limit='120' audio-model="audio_4" on-playback-start="guardarRecord('unt1_mod4_act16d',4)")
+                                
+                                div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                |
+                                div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                    div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                        button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                            type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                            ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                            span {{recorder.status.isRecording ? 'Stop' : 'Start '}} 
+                                            span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                            span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}} 
+                                                sub seg.
+                                        |
+                                        button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                            type="button" 
+                                            ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                            ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                            ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                            span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Send
+                                            span(ng-if="recorder.status.isPlaying"): span pause
+
+                    p • Now try practicing the statements, using the appropriate intonation.
+            
+
+
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconListen" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_4/activities/act_16_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

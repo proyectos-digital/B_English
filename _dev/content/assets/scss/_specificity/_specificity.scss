@@ -1,0 +1,148 @@
+/********************************************************************************** 
+***************************************************** Especificidad
+***********************************************************************************/
+
+
+/* Level 2 de especificidad */
+
+.c- { 
+    /* for buttons */
+    &btn{
+        &-IconIndicator{
+			&:before {
+				content: "";
+				height: calc(var(--size-uiBtns-special) + 1.5rem);
+				width: calc(var(--size-uiBtns-special) + 1.5rem);
+                    background-size: calc(var(--size-uiBtns-special) + 1.5rem);
+            }
+            &.bg-menuBurguer,
+            &.bg-menuModules{
+                &:before {
+                    background-size: calc(var(--size-uiBtns-special) + .8rem);
+                }
+            }
+            &.u-bgIconINVIL{
+                &:before {
+                    background-size: contain;
+                }
+            }
+        }
+        &-IconAction{
+			&:before {
+                content: "";
+				height: var(--size-uiBtns-special);
+				width: var(--size-uiBtns-special);
+				background-size: calc(var(--size-uiBtns-special));
+                filter: invert(50%) brightness(410%);
+                
+			}
+            &[data-activities-count]{
+                &:before {
+                    content: attr(data-activities-count);
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                }
+            }
+        }
+        &-IconNavigation{
+            &::before{
+				filter: invert(0%) brightness(100%)
+            }
+        }
+        &-Icon{
+            &[data-speudo-content]{
+                &:before {
+                    content: attr(data-speudo-content);
+                    width: auto;
+                    height: auto;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                }
+            }
+            &:before {
+                height: var(--size-uiIcon);
+                width: var(--size-uiIcon);
+                background-size: calc(var(--size-uiIcon));
+				filter: invert(50%) brightness(410%);
+            }
+			& > *:first-child {
+				padding-left: 0.3em;
+				padding-right: 0.3em;
+				margin: 0;
+            }
+        }
+    }
+}
+
+.u- {
+    /* for Grid */
+	&full {
+        &.row {
+            max-width : 100%;
+        }
+        &.col {
+            float   : none;
+            display : table;
+        }
+    }
+}
+
+.o-{
+    &nav--{
+        &Data-Link{
+            &::before {
+                height: calc(var(--size-uiBtns-special) * 2.5);
+                width: calc(var(--size-uiBtns-special) * 2.5);
+                background-size: calc(var(--size-uiBtns-special) * 2);
+            }
+        }
+    }
+}
+
+.c-modal {
+
+    &--MenuHeader{
+
+        &-Item{
+
+            &.is-disabled{
+                user-select: none;
+                cursor: no-drop;
+
+                .o-nav--Data-Link{
+                    pointer-events: none;
+                    background-color: rgba(0, 0, 0, 0.44);
+                    color: #fff;
+                    box-shadow: 0 0 0 0.1rem #484848;
+                    
+                    &::before{
+                        filter: brightness(200%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cronometro{
+    color: $color_4;
+    font-weight: bold;
+    border: solid 6px $color_1-lighter;
+    border-radius: 50%;
+    display: flex;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px #000;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,.8));
+    background-color: $white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+

@@ -1,0 +1,33 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item" ng-init="ContadorPalabras(120)")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 #[strong.u-textColor_4 1. ]  Write 120 words describing the changes you could make and your predictions for your future life.
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm8 col-flex-md4 offset-md1 col-center mt50-md mt30-sm ta-j")
+                    div(class="c-cardGreen")
+                        div(class="c-cardGreenContent padding20 ")
+                            p Think of a list of changes that you could make to your life (e.g. “I’m going to quit my job and become an artist”) and then predict your future life at certain points in time (e.g. this time tomorrow, in a year and in ten years).
+                div(class="col-flex-sm10 col-flex-md6 offset-sm1 col-center mt50-md mt30-sm")
+                    div(class="row-flex")
+                        div(class="c-wrapTextarea ")
+                            textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                            div(class="c-wrapTextarea__counter")
+                                span(id="contador") 0 
+                                span(ng-bind="limitePalabras")
+                                span(id="alertamensaje")
+    |
+    aside(class="template-asideRight o-aside-Item") 
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

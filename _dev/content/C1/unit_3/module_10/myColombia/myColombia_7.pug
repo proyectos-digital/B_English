@@ -1,0 +1,275 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_7"  ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';") 
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            h5  List of number one songs in Colombia in 2016.
+            div(class="row mt30-md mt20-xs")
+                .col.md6.xs12
+                    table(class="c-table-estilo_tres m-a mt30 col xs12 col-center")
+                        thead
+                            tr
+                                th Week
+                                th Issue date
+                                th Song
+                                th Artist(s)
+                        tbody
+                            tr
+                                th.ta-c  1
+                                td.ta-c January 1 
+                                td.ta-c(rowspan="4") “Desde el día en que te fuiste”
+                                td.ta-c(rowspan="4") ChocQuibTown
+                            tr
+                                th.ta-c  2
+                                td.ta-c January 8 
+                            tr
+                                th.ta-c  3
+                                td.ta-c January 15 
+                            tr
+                                th.ta-c  4
+                                td.ta-c January 22
+                            tr
+                                th.ta-c  5
+                                td.ta-c January 29
+                                td.ta-c “Ginza”
+                                td.ta-c J Balvin
+                            tr
+                                th.ta-c  6
+                                td.ta-c February 5 
+                                td.ta-c(rowspan="6") “Vestirse de Amor (La Flor)”
+                                td.ta-c(rowspan="6") Felipe Pelaez
+                            tr
+                                th.ta-c  7
+                                td.ta-c February 12
+                            tr
+                                th.ta-c  8
+                                td.ta-c February 19
+                            tr
+                                th.ta-c  9
+                                td.ta-c February 26
+                            tr
+                                th.ta-c  10
+                                td.ta-c March 4
+                            tr
+                                th.ta-c  11
+                                td.ta-c March 11
+                            tr
+                                th.ta-c 12
+                                td.ta-c March 18 
+                                td.ta-c “Hasta el Amanecer”
+                                td.ta-c Nicky Jam
+                            tr
+                                th.ta-c  13
+                                td.ta-c March 25
+                                td.ta-c(rowspan="4") “Vestirse de Amor (La Flor)”
+                                td.ta-c(rowspan="4") Felipe Pelaez
+                            tr
+                                th.ta-c  14
+                                td.ta-c April 1
+                            tr
+                                th.ta-c  15
+                                td.ta-c April 8
+                            tr
+                                th.ta-c  16
+                                td.ta-c April 15
+                            tr
+                                th.ta-c  17
+                                td.ta-c April 22
+                                td.ta-c(rowspan="5") “El Perdedor”
+                                td.ta-c(rowspan="5") Maluma
+                            tr
+                                th.ta-c  18
+                                td.ta-c April 29
+                            tr
+                                th.ta-c  19
+                                td.ta-c May 6
+                            tr
+                                th.ta-c  20
+                                td.ta-c May 13
+                            tr
+                                th.ta-c  21
+                                td.ta-c May 20
+                .col.md6.xs12
+                    table(class="c-table-estilo_tres m-a mt30 col xs12 col-center")
+                        thead
+                            tr
+                                th Week
+                                th Issue date
+                                th Song
+                                th Artist(s)
+                        tbody
+                            tr
+                                th.ta-c  22
+                                td.ta-c May 27
+                                td.ta-c(rowspan="19") “La Bicicleta” 
+                                td.ta-c(rowspan="19") Carlos Vives with Shakira
+                            tr
+                                th.ta-c  23
+                                td.ta-c June 3
+                            tr
+                                th.ta-c  24
+                                td.ta-c June 10
+                            tr
+                                th.ta-c  25
+                                td.ta-c June 17
+                            tr
+                                th.ta-c  26
+                                td.ta-c June 24
+                            tr
+                                th.ta-c  27
+                                td.ta-c July 1
+                             
+                            tr
+                                th.ta-c  28
+                                td.ta-c July 8
+                            tr
+                                th.ta-c  29
+                                td.ta-c July 15
+                            tr
+                                th.ta-c  30
+                                td.ta-c July 22
+                            tr
+                                th.ta-c  31
+                                td.ta-c July 29
+                            tr
+                                th.ta-c  32
+                                td.ta-c August 5
+                            tr
+                                th.ta-c 33
+                                td.ta-c August 12 
+                            
+                            tr
+                                th.ta-c  34
+                                td.ta-c August 19
+                            
+                            tr
+                                th.ta-c  35
+                                td.ta-c August 26
+                            tr
+                                th.ta-c  36
+                                td.ta-c September 2
+                            tr
+                                th.ta-c  37
+                                td.ta-c September 9
+                            tr
+                                th.ta-c  38
+                                td.ta-c September 16
+                         
+                            tr
+                                th.ta-c  39
+                                td.ta-c September 23
+                            tr
+                                th.ta-c  40
+                                td.ta-c September 30
+                            tr
+                                th.ta-c  41
+                                td.ta-c October 7
+                                td.ta-c(rowspan="2") “Fuego”
+                                td.ta-c(rowspan="2") Juanes
+                            tr
+                                th.ta-c  42
+                                td.ta-c October 14
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+            .col.md6.xs12
+                    table(class="c-table-estilo_tres m-a mt30 col xs12 col-center")
+                        thead
+                            tr
+                                th Week
+                                th Issue date
+                                th Song
+                                th Artist(s)
+                        tbody
+                            tr
+                                th.ta-c  43
+                                td.ta-c October 21
+                                td.ta-c(rowspan="4") “Traicionera”
+                                td.ta-c(rowspan="4") Sebastian Yatra
+                            tr
+                                th.ta-c  44
+                                td.ta-c October 28
+                            tr
+                                th.ta-c  45
+                                td.ta-c November 4
+                            tr
+                                th.ta-c  46
+                                td.ta-c November 11
+                            tr
+                                th.ta-c  47
+                                td.ta-c November 18
+                                td.ta-c “Ya no me duele mas”
+                                td.ta-c Silvestre Dangond
+                            tr
+                                th.ta-c  48
+                                td.ta-c November 25
+                                td.ta-c(rowspan="2") “Traicionera”
+                                td.ta-c(rowspan="2") Sebastian Yatra                             
+                            tr
+                                th.ta-c  49
+                                td.ta-c December 2
+                            tr
+                                th.ta-c  50
+                                td.ta-c December 9
+                                td.ta-c(rowspan="3") “Ya no me duele mas”
+                                td.ta-c(rowspan="3") Silvestre Dangond
+                            tr
+                                th.ta-c  51
+                                td.ta-c December 16
+                            tr
+                                th.ta-c  52
+                                td.ta-c December 23
+            .col.xs12.md6
+                    h6 Write a report for a university teacher describing the tendencies in popular music that can be deduced from the table shown.
+                    p #[strong.u-textColor_4 »] You should write at least 150 words.
+                    p #[strong.u-textColor_4 »] You should spend about 20 minutes on this task.
+                    div(class="c-wrapTextarea " ng-init="ContadorPalabras(150)")
+                        textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                        div(class="c-wrapTextarea__counter")
+                            span(id="contador") 0 
+                            span(ng-bind="limitePalabras")
+                            span(id="alertamensaje")           
+                                   
+                                    
+                                
+                        
+
+                      
+                            
+  
+                    
+                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()
+style.
+    .treeItem[correcta="bien"],
+    .treeItem_hi[correcta="bien"],
+    .treeItem_set[correcta="bien"]{
+        background-color: var(--color_good);
+        color: white;
+    }
+    .treeItem[correcta="mal"],
+    .treeItem_hi[correcta="mal"],
+    .treeItem_set[correcta="mal"]{
+        background-color: var(--color_wrong);
+        color: white;
+    }

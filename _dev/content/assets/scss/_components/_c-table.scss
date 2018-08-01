@@ -1,0 +1,151 @@
+%table-default{
+    border-collapse: collapse;
+    max-width: 100%;
+    td, th {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    tbody{
+        tr{
+            td{
+                &:first-child{
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.c{
+    &-table{
+        @extend %table-default;
+        thead{
+            border-bottom: 1px solid #d0d0d0;
+            th, &--th {
+                text-align: left;
+            }
+        }
+        &-default{
+            @extend %table-default;
+        }
+        &-estilo_uno{
+            @extend %table-default;
+            &--tr{
+                @extend .row;
+            }
+            thead, &--thead {
+                background-color: var(--color_2-dark);
+                color: white;
+            }
+            tbody, &--tbody {
+                tr, &--tr{
+                    &:nth-child(even){
+                        background-color: var(--color_2-light);
+                    }
+                    &:nth-child(odd){
+                        background-color: var(--color_2-lighter);
+                    }
+                }
+
+            }
+        }
+        &-estilo_dos{
+            @extend %table-default;
+            &--tr{
+                @extend .row;
+            }
+            thead, &--thead {
+                background-color: var(--color_5);
+                color: white;
+            }
+            tbody, &--tbody {
+                tr, &--tr{
+                    &:nth-child(even){
+                        background-color: var(--color_5-light);
+                    }
+                    &:nth-child(odd){
+                        background-color: var(--color_5-lighter);
+                    }
+                }
+
+            }
+        }
+        &-estilo_tres{
+            @extend %table-default;
+            border-collapse: separate;
+            &--tr{
+                @extend .row;
+            }
+            th, &--th {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            td, &--td, th, &--th {
+                border: 1px solid white;
+            }
+            thead, &--thead {
+                background-color: var(--color_4-dark);
+                color: white;
+            }
+            tbody, &--tbody {
+                tr, &--tr{
+                    &:nth-child(even){
+                        background-color: var(--color_4-light);
+                    }
+                    &:nth-child(odd){
+                        background-color: var(--color_4-lighter);
+                    }
+                }
+
+            }
+        }
+        &-SelfCheck{
+            @extend .c-table-estilo_tres;
+            &--tr{
+                @extend .row;
+            }
+            thead, &--thead {
+                background-color: transparent;
+                color: white;
+                th, &--th{
+                    &:nth-child(1),
+                    &:nth-child(2){
+                        background-color: var(--color_4-dark);
+                    }
+                }
+            }
+            tbody, &--tbody{
+                tr, &--tr{
+                    &:nth-child(even){
+                        background-color: var(--color_4-light);
+                    }
+                    &:nth-child(odd){
+                        background-color: var(--color_4-lighter);
+                    }
+                }
+                td, &--td{
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    .c-inputCheckbox[type="checkbox"] + label.c-Checkbox, .c-inputRadio[type="radio"] + label.c-Checkbox{
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        &[data-ejercicio="table-truefalse"]{
+            tbody{
+                tr{
+                    td{
+                        &:first-child{
+                            padding-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+	}
+}

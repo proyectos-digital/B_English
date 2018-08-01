@@ -1,0 +1,152 @@
+.u-bgTemplate {
+	background-image: url(../images/wel_bg.jpg);
+}
+
+.act_16_notice .bgBanner {
+	width: 386px;
+	height: 370px;
+	background: url(../images/act_16_2.png);
+	background-repeat: no-repeat;
+	padding: 45px 0px 0px 0;
+}
+
+.act_16_notice .bgBanner .option {
+	padding-left: 60px;
+	width: 367px;
+}
+
+.act_16_notice .bgBanner .option:hover {
+	background-color: rgba(0,255,255,0.2);
+}
+
+.act_16_notice .bgBanner p,.act_16_notice .bgBanner span,.act_16_notice .bgBanner strong {
+	color: initial;
+}
+
+.self_2 .drag {
+	height: 27px;
+}
+
+.self_2 .dragCont,.self_2 .drop {
+	width: 105px;
+	height: 31px;
+}
+
+.self_8 ._draggableImg {
+	width: 70%;
+}
+
+@media all and (max-width: 599px) {
+	.self_8 ._draggableImg {
+		width: 80%;
+	}
+}
+
+.self_8 .drag {
+	height: 76px;
+	font-size: 0.8rem;
+}
+
+.self_8 .dragCont {
+	margin: 5px auto;
+}
+
+.self_8 .drop {
+	position: absolute;
+	top: auto;
+	bottom: -10px;
+	left: auto;
+	right: 30px;
+}
+
+.self_8 .dragCont,.self_8 .drop {
+	width: 180px;
+	height: 80px;
+}
+
+.test_3 .drag {
+	height: auto-4px;
+	font-size: 0.8rem;
+}
+
+.test_3 .dragCont {
+	margin: 5px auto;
+}
+
+.test_3 .dragCont,.test_3 .drop {
+	width: 80px;
+	height: auto;
+}
+
+@media all and (min-width: 600px) {
+	.myColombia_3 .c-CheckSelected {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		width: calc(33% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.myColombia_3 .c-CheckSelected {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.col_1 .cont_grid {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (1fr)[3];
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 10px;
+}
+
+.col_1 .map_cont {
+	position: relative;
+	width: 315px;
+	height: 445px;
+	margin: 0 auto;
+}
+
+.col_1 .map_cont-item_1 {
+	position: absolute;
+	top: 70px;
+	left: -85px;
+}
+
+.col_1 .map_cont-item_2 {
+	position: absolute;
+	top: -15px;
+	left: -45px;
+}
+
+.col_1 .map_cont-item_3 {
+	position: absolute;
+	top: 70px;
+	left: 50px;
+}
+
+.col_1 .map_cont-item_4 {
+	position: absolute;
+	top: 10px;
+	left: 60px;
+}
+
+.col_1 .map_cont-item_5 {
+	position: absolute;
+	top: -10px;
+	left: 175px;
+}
+
+.col_1 .map_cont-item_6 {
+	position: absolute;
+	top: 60px;
+	left: 240px;
+}

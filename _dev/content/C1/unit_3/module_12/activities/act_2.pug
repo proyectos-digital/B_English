@@ -1,0 +1,484 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+	aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+		button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+		button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+
+			div(class="row row-flex")
+				h5 Choose the word that best suits the meaning and use.
+			div(class="row row-flex")
+				div(class="col-flex-xs12 m-a mt20"): .col-flex-xs12.col-flex-md11
+					table(class="c-table-estilo_tres m-a")
+						thead: tr
+							th(class="w20") Word
+							th(class="w40") Meaning
+							th(class="w40") Use
+
+						tbody
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td Owed or immediately payable.
+								td The gas bill is due this month.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td A research organization in charge of resolving particular issues.
+								td They’ve launched a new Joint Pakistan-China Think Tank dedicated solely to research and development of the China-Pakistan Economic Corridor.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td The number of people that participate in or attend a particular event.
+								td The Independence Day Celebrations attracted a large turnout.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td To vote.
+								td It is said that over three million people casted their ballot in yesterday’s election.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td Fair and impartial, pertaining to equity.
+								td Our country’s constitution guarantees the equitable treatment of all citizens.
+
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td The right to vote and freedom from political subjugation.
+								td Feminism played a key role in women’s enfranchisement.
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td In prison.
+								td The suspect will be incarcerated until further evidence is obtained.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td The act of arguing for or supporting a cause.
+								td Advocacy for environmental care and protection is now common across the world.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td To cause to become emotional or excited.
+								td The presidential candidate fired up the crowd with his speech.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td A different aspect or side to something, often times negative.
+								td I can definitely see some advantages to these proposed policies. The flip side, however, is that we will have to pay more taxes.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td To increase in amount.
+								td The factory ramped up its production to meet the increased demand.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td The mental attitude of thought process of an individual.
+								td If Sarah enters the race with a clear mindset, she could win.
+
+
+
+		section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+			div(class="row row-flex")
+
+
+				div(class="col-flex-xs12 col-flex-md6 m-a mt20"): .col-flex-xs12.col-flex-md11
+					table(class="c-table-estilo_tres m-a")
+						thead: tr
+							th(class="w20") Word
+							th(class="w40") Meaning
+							th(class="w40") Use
+
+						tbody
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td An ostentatious public display.
+								td When the Colombian football team returned, it was an absolute fanfare.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td To divide into new districts either for administrative or electoral purposes.
+								td After the elections, the winning party is going to redistrict this zone.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td A proposed law presented for approval to a legislative body.
+								td Government passed a new bill last week regarding child abuse.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td The casting of votes at an election.
+								td Polling will be in three weeks.
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td Responsibility or obligation.
+								td As parents, the onus is on us to raise our children in the right way.
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Think Tank
+									option(value="2") Enfranchisement
+									option(value="3") Pitch (speech)
+									option(value="4") Cast a ballot
+									option(value="5") Due
+									option(value="6") Fanfare
+									option(value="7") Redistrict
+									option(value="8") Ramp up
+									option(value="9") Mindset
+									option(value="10") Turnout
+									option(value="11") The flip side
+									option(value="12") Incarcerated
+									option(value="13") Advocacy
+									option(value="14") Equitable
+									option(value="15") Fire up
+									option(value="16") Polling
+									option(value="17") Bill (law)
+									option(value="18") Onus
+								td A line of talk designed to persuade someone.
+								td Mark’s sales pitch went well this morning.
+
+				div(class="row-flex col-flex-xs12 col-flex-md6 m-a mt20"): .col-flex-xs12.col-flex-md11.col-center
+
+					img(src="unit_3/module_12/assets/images/act_2_1.png", alt="", class="u-responsive-img row-flex col-center m-a")
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

@@ -1,0 +1,108 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper self_2"  ng-init="s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+            .row-flex.align-items-center
+                .col.xs12.md6
+                    h5  Read the following extract and choose the correct answers.
+                    .row.ta-c
+                        .c-cardGreen
+                            .c-cardGreenContent.u-textColor_1
+                                h5.ta-c Vitamin D deficiency more common, serious, than thought
+                                p.ta-c Friday, November 2, 2007
+                                p.ta-j.mt20 #[strong 1]. Two scientists working at McGill University in Canada, reporting on their #[strong research] and the research of other scientists, state in Scientific American that Vitamin D may have many uses in the human body besides building strong bones.
+                                p.ta-j.mt20 #[strong 2]. According to the scientists, Luz E. Tavera-Mendoza and John H. White, Vitamin D  #[strong intake] may also be beneficial in the prevention of cancer, multiple sclerosis, diabetes, and fighting tuberculosis, influenza and inflammatory bowel disease. The researchers say that there is an  #[strong emerging] “widespread  #[strong consensus]” among experts that a large part of the population has levels of Vitamin D in their bodies that is well below optimal concentrations for health, particularly in  #[strong temperate regions], due to decreased sunlight and or less time outdoors, and during or just after the winter months. One study indicated that as many as 92% of adolescent girls in Northern Europe may have deficient levels of Vitamin D and 37% have severely deficient levels.
+                                p.ta-j.mt20 #[strong 3]. The problem is far worse among African-Americans than Americans with lighter skin. Almost half of African-American women may be seriously Vitamin D deficient, with presumably still another fraction deficient. Furthermore, the authors say researchers at Harvard University and elsewhere believe the FDA minimum recommended daily allowance of Vitamin D is far too low. The Recommended Dietary Allowance (RDA) ranges from 200 to 600 International Units (IU). In fact, the authors themselves take Vitamin D supplements. The first author takes 1000 IU during wintertime and the second author takes 5,000 IU in wintertime. They do caution, however, that there is a level at which Vitamin D becomes toxic.
+                                p.ta-j.mt20 #[strong 4]. Similar research has also been recently performed by researchers at the Queensland University of Technology who found that many elderly were likely not getting sufficient Vitamin D due in part to insufficient exposure to the sun.
+                                p.ta-j.mt20 Read the full story here: #[a(href="https://en.wikinews.org/wiki/Vitamin_D_deficiency_more_common,_serious,_than_thought" target="blank") https://en.wikinews.org/wiki/]
+
+                .col.xs12.md5.col-center
+                    h5 Answer the following question based on the reading above.
+                    div(class="row col-center")
+                        p #[strong.u-textColor_4 •] Choose the most appropriate heading for the following extract:
+                        p The problem is far worse among African-Americans than Americans with lighter skin. Almost half of African-American women may be seriously Vitamin D deficient, with presumably still another fraction deficient. Furthermore, the authors say researchers at Harvard University and elsewhere believe the FDA minimum recommended daily allowance of Vitamin D is far too low. The Recommended Dietary Allowance (RDA) ranges from 200 to 600 International Units (IU). In fact, the authors themselves take Vitamin D supplements. The first author takes 1000 IU during wintertime and the second author takes 5,000 IU in wintertime. They do caution, however, that there is a level at which Vitamin D becomes toxic.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_1") The FDA rules.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_2") African Americans vs light skin American.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_3") Recommended vitamin C levels.
+                                input(type="hidden" ng-model="valorinputa" class="js-select")
+                    div(class="row col-center")
+                        p #[strong.u-textColor_4 •] Answer “true”, “false” or “information not given”.
+                        p Only a small percentage of the population has sufficient levels of vitamin D to be considered healthy.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_4") True.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_5") False.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_6") Information not given.
+                                input(type="hidden" ng-model="valorinputb" class="js-select")
+        |
+        section(class="template-content " ng-show="s_actividad == 2")
+
+            .row
+                .col.xs12.md6
+                    div(class="row col-center")
+                        p #[strong.u-textColor_4 •] Match the information given with one of the paragraphs from the text.
+                        p Due to the conditions of the winter months some people do not get enough vitamins.
+                            .row.row-flex.justify-around
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                                label(class="c-Checkbox xs12 md3" for="selInput_7") 1.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                                label(class="c-Checkbox xs12 md3" for="selInput_8") 2.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+                                label(class="c-Checkbox xs12 md3" for="selInput_9") 3.
+                                input(type="hidden" ng-model="valorinputc" class="js-select")
+
+                    div(class="row col-center mt30")
+                        p #[strong.u-textColor_4 •] Fill in the summary using the words form the paragraph.
+                            .c-cardGreen
+                                .c-cardGreenContent.flex.align-items-center.justify-center
+                                    span intake | research | emerging | temperate climates | consensus
+                            .row
+                                p.lh25 There is #[input(type="text" class="c-input js-escribir")] information  based on  #[input(type="text" class="c-input js-escribir")] conducted by scientists that caused them to reach a #[input(type="text" class="c-input js-escribir")] that people in countries with #[input(type="text" class="c-input js-escribir")] do not have sufficient #[input(type="text" class="c-input js-escribir")] of vitamin D.
+
+                .col.xs12.md6
+
+                    div(class="row col-center mt30")
+                        p #[strong.u-textColor_4 •] Complete the sentence with a word from the table below.
+                            .c-cardGreen
+                                .c-cardGreenContent.flex.align-items-center.justify-center
+                                    span intake | research | emerging | temperate climate | consensus
+                            .row
+                                p.lh25 The #[input(type="text" class="c-input js-escribir")] trend in fitness today is the use of apps to monitor performance.
+                    div(class="row col-center")
+                        p #[strong.u-textColor_4 •] Choose the correct answer.
+                        p Vitamin D…
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+                                label(class="c-Checkbox row ta-l " for="selInput_10") Levels in most people are at a healthy level.
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+                                label(class="c-Checkbox row ta-l " for="selInput_11") The FDA recommends 1000 IU per day.
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3")
+                                label(class="c-Checkbox row ta-l " for="selInput_12") Can be poisonous.
+                                input(type="hidden" ng-model="valorinputd" class="js-select")
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadEscribSelect()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="CompTxt_SelectMult()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

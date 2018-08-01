@@ -1,0 +1,68 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 #[strong.u-textColor_4 1. ] The first step has been identified for you.
+            p.ml20 Arrange the steps of the process, according to the audio. 
+            p.ml20 The first step has been identified for you.
+                //- button(class="c-btn-Icon u-bgIconListen" ng-audio="unit_1/module_4/assets/audios/test_5.mp3")
+            .row-flex.justify-center.mt30    
+                audio(controls preload="auto")
+                    source(src='unit_1/module_4/assets/audios/test_5.mp3' type='audio/mpeg') 
+                    | Your browser does not support the audio element.
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md5 mt50-md mt30-sm showTo-md")
+                   img(src="unit_1/module_4/assets/images/test_5.png", alt="" class="u-responsive-img w90 centrado")
+
+                div(class="col-flex-sm12 col-flex-md6 offset-md1 col-center mt50-md mt30-sm" data-ejercicio="sortable" id="sortable" class="sortreload")
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | 3 tablespoons of oil are poured in a large pot.
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | A quarter cup of popcorn is poured into the pot.
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | Melted butter and salt is added.
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | The pot is gently heaved until the corn pops
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | The popcorn is poured into a large bowl.
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | One kernel of popcorn is put in the pot.
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | The pot is put on the stove and the oil is heated on a light flame.
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | The pot is covered with a lid.
+                    div(class="mb20 row js-sortdrag ui-sortable--item")
+                        strong(class="u-textColor_4-dark")
+                        | The pot is removed from the stove.
+        
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSortable()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="sortable()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+script.
+    $(function(){
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+    });

@@ -1,0 +1,65 @@
+/********************************************************************************** 
+***************************************************** User Interfaces
+***********************************************************************************/
+
+
+%placeholder{
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: var(--color_1-light);
+        font-weight: 300;
+        font-style: italic;
+        font-size: .9em;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: var(--color_1-light);
+        font-weight: 300;
+        font-style: italic;
+        font-size: .9em;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: var(--color_1-light);
+        font-weight: 300;
+        font-style: italic;
+        font-size: .9em;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: var(--color_1-light);
+        font-weight: 300;
+        font-style: italic;
+        font-size: .9em;
+    }
+}
+
+%animation{
+    transition: all 350ms;
+}
+
+%textFieldBorder{
+    border: none;
+    border-color: var(--color_1-light);
+    border-width: 1px;
+}
+
+%textField{
+    position: relative;
+    outline: none;
+}
+
+.c-{
+    &textField{
+        @extend %textField;
+        border: none;
+        display: inline-block;
+    }
+}
+
+/*! ============================ multimedia.scss */
+@import "_c-multimedia";
+/*! ============================ forms.scss */
+@import "_c-forms";
+/*! ============================ buttons.scss */
+@import "_c-buttons";
+/*! ============================ list.scss */
+@import "_c-list";
+/*! ============================ table.scss */
+@import "_c-table";

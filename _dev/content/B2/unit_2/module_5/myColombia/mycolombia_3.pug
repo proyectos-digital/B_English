@@ -1,0 +1,299 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        
+        section(class="template-content")
+            
+             div(class="row")
+
+                div(class="c-flickity")
+                    h5(class="ta-c") #[strong.u-textColor_4 1. ] Scan the weather Data for Sogamoso and match the questions to the appropriate month of the year.
+                    br
+                    div(class="row mt10")
+                        |
+                        div(class="row c-flickity-controls")
+                            //- button(class="c-flickity-button c-flickity-button--previous") ←
+                            div(class="c-flickity-controlsSlides")
+                                button(class="c-flickity-button is-selected ") 1
+                                button(class="c-flickity-button ") 2
+                                button(class="c-flickity-button ") 3
+                                button(class="c-flickity-button ") 4
+                                button(class="c-flickity-button ") 5
+                            //- button(class="c-flickity-button c-flickity-button--next") →
+
+                    div(class="row mt50-sm")
+                        div(class="c-flickity--cell")
+                            div(class="row-flex align-items-center")
+                                div(class="col-flex-sm12 col-flex-md5 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/col_3_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                                div(class="col-flex-sm11 col-flex-md7 col-center")
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20") There are two months of the year where there are no records for rain in Sogamoso. Which are they?
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                        label(for="SelectRadio_1" class="c-CheckSelected col-flex ml10 mr10") January
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                        label(for="SelectRadio_2" class="c-CheckSelected col-flex ml10 mr10") February
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_3" name="selection_1" value="3")
+                                        label(for="SelectRadio_3" class="c-CheckSelected col-flex ml10 mr10") March
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_1" value="4")
+                                        label(for="SelectRadio_4" class="c-CheckSelected col-flex ml10 mr10") April
+
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_1" value="5")
+                                        label(for="SelectRadio_5" class="c-CheckSelected col-flex ml10 mr10") May
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_6" name="selection_1" value="6")
+                                        label(for="SelectRadio_6" class="c-CheckSelected col-flex ml10 mr10") June
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_1" value="7")
+                                        label(for="SelectRadio_7" class="c-CheckSelected col-flex ml10 mr10") July
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_1" value="8")
+                                        label(for="SelectRadio_8" class="c-CheckSelected col-flex ml10 mr10") August
+                                    
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_9" name="selection_2" value="1")
+                                        label(for="SelectRadio_9" class="c-CheckSelected col-flex ml10 mr10") September 
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_10" name="selection_2" value="2")
+                                        label(for="SelectRadio_10" class="c-CheckSelected col-flex ml10 mr10") October
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_11" name="selection_2" value="3")
+                                        label(for="SelectRadio_11" class="c-CheckSelected col-flex ml10 mr10") November
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_12" name="selection_2" value="4")
+                                        label(for="SelectRadio_12" class="c-CheckSelected col-flex ml10 mr10") December
+
+                        div(class="c-flickity--cell")
+
+                            div(class="row-flex align-items-center")
+                                div(class="col-flex-sm12 col-flex-md5 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/col_3_2.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                                div(class="col-flex-sm11 col-flex-md7 col-center")
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20")
+                                                | In what month is the highest temperature recorded in Sogamoso?
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_3" value="1")
+                                        label(for="SelectRadio_13" class="c-CheckSelected col-flex ml10 mr10") January
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_3" value="2")
+                                        label(for="SelectRadio_14" class="c-CheckSelected col-flex ml10 mr10") February
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_3" value="3")
+                                        label(for="SelectRadio_15" class="c-CheckSelected col-flex ml10 mr10") March
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_16" name="selection_3" value="4")
+                                        label(for="SelectRadio_16" class="c-CheckSelected col-flex ml10 mr10") April
+
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_17" name="selection_3" value="5")
+                                        label(for="SelectRadio_17" class="c-CheckSelected col-flex ml10 mr10") May
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_18" name="selection_3" value="6")
+                                        label(for="SelectRadio_18" class="c-CheckSelected col-flex ml10 mr10") June
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_19" name="selection_3" value="7")
+                                        label(for="SelectRadio_19" class="c-CheckSelected col-flex ml10 mr10") July
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_20" name="selection_3" value="8")
+                                        label(for="SelectRadio_20" class="c-CheckSelected col-flex ml10 mr10") August
+                                    
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_21" name="selection_3" value="9")
+                                        label(for="SelectRadio_21" class="c-CheckSelected col-flex ml10 mr10") September 
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_22" name="selection_3" value="10")
+                                        label(for="SelectRadio_22" class="c-CheckSelected col-flex ml10 mr10") October
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_23" name="selection_3" value="11")
+                                        label(for="SelectRadio_23" class="c-CheckSelected col-flex ml10 mr10") November
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_24" name="selection_3" value="12")
+                                        label(for="SelectRadio_24" class="c-CheckSelected col-flex ml10 mr10") December
+
+                        
+                        div(class="c-flickity--cell")
+
+                            div(class="row-flex align-items-center")
+                                div(class="col-flex-sm12 col-flex-md5 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/col_3_3.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                                div(class="col-flex-sm11 col-flex-md7 col-center")
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20")
+                                                | When are the lowest temperatures recorded in Sogamoso?
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_25" name="selection_4" value="1")
+                                        label(for="SelectRadio_25" class="c-CheckSelected col-flex ml10 mr10") January
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_26" name="selection_4" value="2")
+                                        label(for="SelectRadio_26" class="c-CheckSelected col-flex ml10 mr10") February
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_27" name="selection_4" value="3")
+                                        label(for="SelectRadio_27" class="c-CheckSelected col-flex ml10 mr10") March
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_28" name="selection_4" value="4")
+                                        label(for="SelectRadio_28" class="c-CheckSelected col-flex ml10 mr10") April
+
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_29" name="selection_4" value="5")
+                                        label(for="SelectRadio_29" class="c-CheckSelected col-flex ml10 mr10") May
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_30" name="selection_4" value="6")
+                                        label(for="SelectRadio_30" class="c-CheckSelected col-flex ml10 mr10") June
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_31" name="selection_4" value="7")
+                                        label(for="SelectRadio_31" class="c-CheckSelected col-flex ml10 mr10") July
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_32" name="selection_4" value="8")
+                                        label(for="SelectRadio_32" class="c-CheckSelected col-flex ml10 mr10") August
+                                    
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_33" name="selection_5" value="9")
+                                        label(for="SelectRadio_33" class="c-CheckSelected col-flex ml10 mr10") September 
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_34" name="selection_5" value="10")
+                                        label(for="SelectRadio_34" class="c-CheckSelected col-flex ml10 mr10") October
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_35" name="selection_5" value="11")
+                                        label(for="SelectRadio_35" class="c-CheckSelected col-flex ml10 mr10") November
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_36" name="selection_5" value="12")
+                                        label(for="SelectRadio_36" class="c-CheckSelected col-flex ml10 mr10") December
+                        
+                        div(class="c-flickity--cell")
+
+                            div(class="row-flex")
+                                div(class="col-flex-sm12 col-flex-md5 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/col_3_4.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                                div(class="col-flex-sm12 col-flex-md7 col-center")
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20")
+                                                | When does it rain the most in Sogamoso?
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_37" name="selection_6" value="1")
+                                        label(for="SelectRadio_37" class="c-CheckSelected col-flex ml10 mr10") January
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_38" name="selection_6" value="2")
+                                        label(for="SelectRadio_38" class="c-CheckSelected col-flex ml10 mr10") February
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_39" name="selection_6" value="3")
+                                        label(for="SelectRadio_39" class="c-CheckSelected col-flex ml10 mr10") March
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_40" name="selection_6" value="4")
+                                        label(for="SelectRadio_40" class="c-CheckSelected col-flex ml10 mr10") April
+
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_41" name="selection_6" value="5")
+                                        label(for="SelectRadio_41" class="c-CheckSelected col-flex ml10 mr10") May
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_42" name="selection_6" value="6")
+                                        label(for="SelectRadio_42" class="c-CheckSelected col-flex ml10 mr10") June
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_43" name="selection_6" value="7")
+                                        label(for="SelectRadio_43" class="c-CheckSelected col-flex ml10 mr10") July
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_44" name="selection_6" value="8")
+                                        label(for="SelectRadio_44" class="c-CheckSelected col-flex ml10 mr10") August
+                                    
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_45" name="selection_6" value="1")
+                                        label(for="SelectRadio_45" class="c-CheckSelected col-flex ml10 mr10") September 
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_46" name="selection_6" value="2")
+                                        label(for="SelectRadio_46" class="c-CheckSelected col-flex ml10 mr10") October
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_47" name="selection_6" value="3")
+                                        label(for="SelectRadio_47" class="c-CheckSelected col-flex ml10 mr10") November
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_48" name="selection_6" value="4 ")
+                                        label(for="SelectRadio_48" class="c-CheckSelected col-flex ml10 mr10") December
+                        
+                        
+                        div(class="c-flickity--cell")
+                            div(class="row-flex")
+                                div(class="col-flex-sm12 col-flex-md5 col-center showTo-md")
+                                    img(src="./unit_2/module_5/assets/images/col_3_5.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                                div(class="col-flex-sm12 col-flex-md7 col-center")
+                                    div(class="c-cardGreen")
+                                        div(class="c-cardGreenContent")
+                                            p(class="ta-c mt20")
+                                                | When does it rain the least?
+
+                                    div(class="row-flex")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_49" name="selection_7" value="1")
+                                        label(for="SelectRadio_49" class="c-CheckSelected col-flex ml10 mr10") January
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_50" name="selection_7" value="2")
+                                        label(for="SelectRadio_50" class="c-CheckSelected col-flex ml10 mr10") February
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_51" name="selection_7" value="3")
+                                        label(for="SelectRadio_51" class="c-CheckSelected col-flex ml10 mr10") March
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_52" name="selection_7" value="4")
+                                        label(for="SelectRadio_52" class="c-CheckSelected col-flex ml10 mr10") April
+
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_53" name="selection_7" value="5")
+                                        label(for="SelectRadio_53" class="c-CheckSelected col-flex ml10 mr10") May
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_54" name="selection_7" value="6")
+                                        label(for="SelectRadio_54" class="c-CheckSelected col-flex ml10 mr10") June
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_55" name="selection_7" value="7")
+                                        label(for="SelectRadio_55" class="c-CheckSelected col-flex ml10 mr10") July
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_56" name="selection_7" value="8")
+                                        label(for="SelectRadio_56" class="c-CheckSelected col-flex ml10 mr10") August
+                                    
+                                    div(class="row-flex mt20")
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_57" name="selection_7" value="9")
+                                        label(for="SelectRadio_57" class="c-CheckSelected col-flex ml10 mr10") September 
+                                        
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_58" name="selection_7" value="10")
+                                        label(for="SelectRadio_58" class="c-CheckSelected col-flex ml10 mr10") October
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_59" name="selection_7" value="11")
+                                        label(for="SelectRadio_59" class="c-CheckSelected col-flex ml10 mr10") November
+
+                                        input(class="c-inputRadio" type="radio" id="SelectRadio_60" name="selection_7" value="12")
+                                        label(for="SelectRadio_60" class="c-CheckSelected col-flex ml10 mr10") December
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()"
+)
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button')

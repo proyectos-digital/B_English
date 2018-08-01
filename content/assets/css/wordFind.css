@@ -1,0 +1,129 @@
+#puzzle {
+	padding: 0px;
+	position: relative;
+	margin: 0 auto;
+	min-height: 1px;
+	width: 100%;
+}
+
+#puzzle button::-moz-focus-inner {
+	border: 0;
+}
+
+#puzzle.puzzleComplete button:not(.puzzleFound) {
+	color: var(--color_4);
+	background-color: #ffffff00!important;
+}
+
+.puzzleRow {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.puzzleSquare {
+	--width-puzzle: 100%;
+	--puzzleCount-rows: 13;
+	--puzzleHeight-rows: calc(var(--width-puzzle) / var(--puzzleCount-rows));
+	position: relative;
+	height: 0;
+	width: 100%;
+	box-shadow: 0 0 2px purple;
+	background-color: white;
+	outline-style: initial;
+	outline-width: 1px;
+	outline-color: purple;
+	border: 0;
+	text-transform: uppercase;
+	font: 1em sans-serif;
+	background-color: #F3E5F5;
+	color: var(--color_1);
+	padding-top: var(--puzzleHeight-rows);
+}
+
+.puzzleSelected {
+	background-color: var(--color_3);
+	color: white;
+	outline-color: var(--color_3-darker);
+	outline-style: solid;
+}
+
+.puzzleFound {
+	background-color: var(--color_3);
+	color: white;
+}
+
+.puzzleSolved {
+	background-color: var(--color_4);
+	color: white;
+}
+
+.puzzleComplete:not(#puzzle) {
+	background-color: var(--color_good);
+}
+
+span.puzzleSquare_word {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+#words {
+	padding: 5px;
+	min-width: 390px;
+}
+
+ul.puzzleWords {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-wrap: break-word;
+	list-style-type: none;
+}
+
+@supports ((-ms-grid-columns: initial) or (grid-template-columns: initial)) {
+	ul.puzzleWords {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: (33%)[auto-fill];
+		grid-template-columns: repeat(auto-fill,33%);
+	}
+}
+
+li.puzzleWord {
+	padding: 3px 0;
+	font: 1em sans-serif;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	margin-right: 0.7rem;
+	min-width: 29%;
+}
+
+.puzzleWordFound {
+	text-decoration: line-through;
+	color: var(--color_3);
+}
+
+#solve {
+	margin: 0 30px;
+}

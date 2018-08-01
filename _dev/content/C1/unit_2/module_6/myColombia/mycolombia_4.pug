@@ -1,0 +1,71 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper col_7")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="unirColumnasFuncion()")
+        section(class="template-content u-animationFadeDown")
+            div(class="row mt30-md mt20-xs")
+                h5 When speaking about the weather and climate we use certain vocabulary.
+                h6 Match these words with their meanings.
+                div(class="col xs12 col-center mt20" data-ejercicio="unir")
+                    div(id="sourceElements" class="js-columnas w30")
+                        span(id="Item0_0" class="treeItem" onclick="setSource(this)" seleccion valor="1") Fossil fuels
+                        span(id="Item0_1" class="treeItem" onclick="setSource(this)" seleccion valor="2") Renewable energy
+                        span(id="Item0_2" class="treeItem" onclick="setSource(this)" seleccion valor="3") Greenhouse effect
+                        span(id="Item0_3" class="treeItem" onclick="setSource(this)" seleccion valor="4") Invasive specie
+                        span(id="Item0_4" class="treeItem" onclick="setSource(this)" seleccion valor="5") Carbon Neutral
+                        span(id="Item0_5" class="treeItem" onclick="setSource(this)" seleccion valor="6") Mitigation
+                        span(id="Item0_6" class="treeItem" onclick="setSource(this)" seleccion valor="7") Food Shortage
+                        span(id="Item0_7" class="treeItem" onclick="setSource(this)" seleccion valor="8") Biofuels
+                        span(id="Item0_8" class="treeItem" onclick="setSource(this)" seleccion valor="9") Coral bleaching
+                        span(id="Item0_9" class="treeItem" onclick="setSource(this)" seleccion valor="10") Landfill
+
+                        span(id="Item0_10" class="treeItem mt50" onclick="setSource(this)" seleccion valor="11") Impact
+                        span(id="Item0_11" class="treeItem" onclick="setSource(this)" seleccion valor="12") Sustainable
+                        span(id="Item0_12" class="treeItem" onclick="setSource(this)" seleccion valor="13") Offset
+                        span(id="Item0_13" class="treeItem" onclick="setSource(this)" seleccion valor="14") Neutral 
+                        span(id="Item0_14" class="treeItem" onclick="setSource(this)" seleccion valor="15") harmful
+                        
+                    div(id="linecanvas" style="width: 80px; flex: 0 0 80px;")
+                    div(id="targetElements" class=" js-columnas max-w75 w75") 
+                        span(id="Item1_0" class="treeItem" onclick="setTarget(this)" seleccion valor="10") When waste is placed in the earth and covered and left to decompose. 
+                        span(id="Item1_1" class="treeItem" onclick="setTarget(this)" seleccion valor="6") Action that will reduce the effects of climate change eg. planting more drives and switching to clean energy. 
+                        span(id="Item1_2" class="treeItem" onclick="setTarget(this)" seleccion valor="3") When heat is drop in the atmosphere by gases like carbon dioxide and methane and causes the earth get warmer.
+                        span(id="Item1_3" class="treeItem" onclick="setTarget(this)" seleccion valor="4") An organism that does not belong to a particular ecosystem but was introduced there. usually by human action. They tend to cause harm to the ecosystem. 
+                        span(id="Item1_4" class="treeItem" onclick="setTarget(this)" seleccion valor="5") Process where there is no net release of carbon dioxide for example growing plants to cut down a tree. 
+                        span(id="Item1_5" class="treeItem" onclick="setTarget(this)" seleccion valor="9") When Coral appears whitened because they expelled the organism living inside due stress like heat. 
+                        span(id="Item1_6" class="treeItem" onclick="setTarget(this)" seleccion valor="7") When there is not enough food for everyone.
+                        span(id="Item1_7" class="treeItem" onclick="setTarget(this)" seleccion valor="8") Fuels made from plant material or other waste material. These include ethanol and methane. 
+                        span(id="Item1_8" class="treeItem" onclick="setTarget(this)" seleccion valor="2") Wind, solar and hydroelectricity.
+                        span(id="Item1_9" class="treeItem" onclick="setTarget(this)" seleccion valor="1") Oil, coal, natural.
+                    
+
+                        span(id="Item1_10" class="treeItem mt50" onclick="setTarget(this)" seleccion valor="12") To be able to maintain at a certain level without negative effects.
+                        span(id="Item1_11" class="treeItem" onclick="setTarget(this)" seleccion valor="13") To counteract something by doing something that as the opposite effect.
+                        span(id="Item1_12" class="treeItem" onclick="setTarget(this)" seleccion valor="14") Not having a negative or positive effect.
+                        span(id="Item1_13" class="treeItem" onclick="setTarget(this)" seleccion valor="11") To have an effect on something like the environment.
+                        span(id="Item1_14" class="treeItem" onclick="setTarget(this)" seleccion valor="15") Causes damage.
+                        
+                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" onclick="location.reload()")
+        button(class="c-btn-IconAction u-bgIconCheck js-validarUnir")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script(src="./../assets/js/librerias/drawConnector.js")
+script.
+    graphicsInit()

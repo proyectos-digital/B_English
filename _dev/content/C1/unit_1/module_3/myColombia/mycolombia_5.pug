@@ -1,0 +1,41 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            h5 Read on the following topics and express your opinion by recording it. 
+            .row.mt50
+                
+                .col.xs12.sm6
+                    p #[strong.u-textColor_4 •] The use of computers and computer systems in schools, how do you think this has changed education?
+                    .row.align-items-center.flex.ta-c.mt30
+                        .col.xs6.md4.ta-r
+                            img(class="u-responsive-img w100" src="unit_1/module_3/assets/images/col_10_1.png", alt="myColombia")
+                        .col.xs6.md8
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod3_mycol1',1)"): +ngRecorder
+                .col.xs12.sm6
+                    p #[strong.u-textColor_4 •] Do you believe that corporal punishment should still be allowed in school? Give some reasons for and some reasons against corporal punishment and then a conclusion?
+                    .row.align-items-center.flex.ta-c.mt30
+                        .col.xs6.md4.ta-r
+                            img(class="u-responsive-img w100" src="unit_1/module_3/assets/images/col_10_2.png", alt="myColombia")
+                        .col.xs6.md8
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_b" time-limit='120' audio-model="audio_2" on-playback-start="guardarRecord('unt1_mod3_mycol2',2)"): +ngRecorder
+                
+                .col.xs12.sm6
+                    p #[strong.u-textColor_4 •] How important do you think school lunch is to a child’s education? Does it affect their learning? Is it the government’s responsibility or parents’ responsibility?
+                    .row.align-items-center.flex.ta-c.mt30
+                        .col.xs6.md4.ta-r
+                            img(class="u-responsive-img w100" src="unit_1/module_3/assets/images/col_10_3.png", alt="myColombia")
+                        .col.xs6.md8
+                            div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_c" time-limit='120' audio-model="audio_3" on-playback-start="guardarRecord('unt1_mod3_mycol3',3)"): +ngRecorder
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

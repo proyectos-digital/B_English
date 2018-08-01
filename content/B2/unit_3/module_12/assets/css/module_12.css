@@ -1,0 +1,57 @@
+.col_1 .gallery__audios {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 70px (minmax(150px,1fr))[4];
+	grid-template-columns: 70px repeat(4,minmax(150px,1fr));
+	grid-auto-rows: calc(var(--size-uiBtns) * 2);
+	grid-gap: 0.5em;
+	max-width: 80%;
+	width: 100%;
+}
+
+.col_1 .gallery__audios--text {
+	margin-right: 0.5rem;
+}
+
+.col_1 .gallery__audios--item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 0.5rem;
+	background-color: var(--color_4-lighter);
+}
+
+.col_3 .c-Checkbox {
+	width: 100%;
+}
+
+@media all and (min-width: 600px) {
+	.col_3 .c-Checkbox.checkbox-mini {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.col_3 .c-Checkbox.checkbox-mini {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.col_4 .c-cardBlue {
+	height: 140px;
+}

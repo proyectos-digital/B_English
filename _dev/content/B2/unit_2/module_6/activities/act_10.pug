@@ -1,0 +1,99 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_10" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex mt100-xs mt10-md")
+                div(class="col-flex-xs12 col-flex-md4 col-center mt30-md ")
+                    img(src="unit_2/module_6/assets/images/act_10.png" alt="" class="u-responsive-img showTo-md")
+
+                    p(class="mt30"): strong Read the following sentences:
+                    p(class="mt30") Most #[strong interested students] in online tutorials at UNAD, and those #[strong registered in ] the blended learning programs can now access more information in the website. The #[strong tutors trained ] for this service offer #[strong motivating sessions ] and additional materials. Newly #[strong added materials ] facilitate your learning.
+
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm")
+                    h6 #[strong.u-textColor_4 1. ] Choose the right option.
+                    div(class="row mb20 mt50")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span The inspector learned that all the
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c" ng-model="txtcaptura_a" disabled)
+                                    span men worked for the same company.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                            label(for="inputRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='Interviewing'") interviewing
+
+                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="2")
+                            label(for="inputRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='Interviewed'") interviewed
+
+                    div(class="row mb20 mt50")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span I live in a very nice room
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c" ng-model="txtcaptura_b" disabled)
+                                    span the sea.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_2" value="1")
+                            label(for="inputRadio_3" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='Overlooked'") overlooked
+                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_2" value="2")
+                            label(for="inputRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='Overlooking'") overlooking
+                    div(class="row mb20 mt50")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span Some of the people
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c" ng-model="txtcaptura_c" disabled)
+                                    span to the party can’t come.
+                        div(class="row-flex justify-around")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_3" value="1")
+                            label(for="inputRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='Inviting'") inviting
+                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_3" value="2")
+                            label(for="inputRadio_6" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='Invited'") invited
+                    div(class="row mb20 mt50")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span I was woken up by a
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c" ng-model="txtcaptura_d" disabled)
+                                    span phone.
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_4" value="1")
+                            label(for="inputRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='Ringing'") ringing
+                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_4" value="2")
+                            label(for="inputRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_d='Rang'") rang
+                    div(class="row mb20 mt50")
+                        ol(class="c-listDefault")
+                            li(class="u-textColor_4")
+                                span(class="u-textColor_1-dark")
+                                    span The newly
+                                    span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input ta-c" ng-model="txtcaptura_e" disabled)
+                                    span factory is producing too much smoke
+                        div(class="row-flex")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_5" value="1")
+                            label(for="inputRadio_9" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='Opened'") opened
+                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_5" value="2")
+                            label(for="inputRadio_10" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='Opening'") opening
+    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction openNotice is-active u-bgIconAlert" ng-click="idNotice = 1")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside is-visible" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_6/activities/act_10_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

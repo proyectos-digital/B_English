@@ -1,0 +1,56 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                div(class="row-flex")
+                    div(class="col-flex-sm12 col-flex-md12 col-center")
+                        h5 #[strong.u-textColor_4 1. ]	CAN’T HAVE (+ PAST PARTICIPLE)
+                        div(class="c-cardGreen mt30")
+                            div(class="c-cardGreenContent")
+                                p <strong>Can't have + past participle</strong> is used to make deductions and speculations about the past. We use it when we are certain that something did not happen in the past, to make negative deductions.
+                                p 
+                                    | You 
+                                    strong can't have seen 
+                                    | her yesterday because she’s out of town all week. (I’m sure she is out of town.)
+                                p
+                                    | He 
+                                    strong can't have understood 
+                                    | because he doesn’t speak German. (I’m certain he doesn’t speak German.)
+
+                                p 
+                                    | <strong>Can't have</strong> can be used with <strong>clearly, surely</strong> or <strong>obviously</strong> in exclamations.
+
+                                p
+                                    strong Clearly
+                                    |, they 
+                                    strong can't have bought 
+                                    | it today because the shops are closed.
+
+                                p 
+                                    strong Surely
+                                    |, he 
+                                    strong can't have earned 
+                                    | so much money!
+
+                                p
+                                    strong Obviously
+                                    |, he 
+                                    strong can’t have revised 
+                                    | these notes because he didn’t know they were here.
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" )
+        button(class="c-btn-IconAction u-bgIconCheck" )
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

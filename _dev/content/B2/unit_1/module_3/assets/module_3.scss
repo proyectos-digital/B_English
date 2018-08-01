@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+$MultimediaImages   : '../images/';
+
+.u-{
+    &bgTemplate{
+        background-image: url(#{$MultimediaImages}wel_bg.jpg);
+        // background-color: #ff5252;
+    }
+}
+
+.u-{
+    &bgItem{
+        background-color: #b04f52;
+        color: #fff;
+    }
+}
+
+.act_7{
+    .drop{
+        .drag{
+            display: inline-block;
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.act_11{
+    .drop, .dragCont{
+        .drag{
+            display: inline-block;
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.act_10{
+    .flip_back{
+        text-align: center;
+        &-text{
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            top: auto;
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+    }
+    .flip_card.is-good .flip_back{
+        &-text{
+            color:var(--color_good);
+        }
+    }
+}
+

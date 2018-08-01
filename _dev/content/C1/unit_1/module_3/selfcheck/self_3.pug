@@ -1,0 +1,38 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_5")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row row-flex mt30 align-items-center")
+                h5.row.mb60 Let's talk about work.
+                .col.xs12.md6
+                    div(class="row-flex justify-center mb20"): div(class="col md11 col-center")
+                        div(class="c-contVideo")
+                            video(controls class="u-responsive-video")
+                                source(src="unit_1/module_3/"+pathVideo+"self_3_1.mp4" type="video/mp4")
+                                | Your browser does not support the audio element.
+                .col.xs12.md6
+                    .c-cardGreen
+                        .c-cardGreenContent
+                            p Describe a period of time from your school years that was the most difficult. Talk about:
+                            ul.lh25
+                                li: h6.u-textWhite • When was it
+                                li: h6.u-textWhite • Why was it hard?
+                                li: h6.u-textWhite • What were you doing at that time
+                    div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod3_self3',1)"): +ngRecorder
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

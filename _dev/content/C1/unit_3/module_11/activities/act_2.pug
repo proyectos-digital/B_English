@@ -1,0 +1,410 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+	aside(class="template-asideLeft o-aside-Item" ng-init="s_actividad = 1")
+		button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+		button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+	|
+	|
+	div(class="template-section m-a")
+		section(class="template-content u-animationFadeDown" ng-show="s_actividad == 1")
+
+			div(class="row row-flex")
+				h5 In the exercise below are a few words that will appear in the reading exercise, how many do you know?
+				H6 Match each meaning and use with the correct word. 
+			div(class="row row-flex")
+				div(class="col-flex-xs12 m-a mt20"): .col-flex-xs12.col-flex-md11
+					table(class="c-table-estilo_tres m-a")
+						thead: tr
+							th(class="w20") Word
+							th(class="w40") Meaning
+							th(class="w40") Use
+						tbody
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td Time available to do certain activities that one likes.
+								td In her spare time, Gina always goes to the park with her dog.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td Temporary substitute or means.
+								td We made a makeshift table in the backyard to place the food on.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td A rounded stone.
+								td In some parts of Paris, the streets are made of cobble.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td Unable to move.
+								td In Bogotá, it’s very common to get stuck in traffic at peak hours.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td A center of activity or interest.
+								td The northern part of the island is a major hub for tourists.
+
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td A period of sudden commotion.
+								td There was a flurry of activity when the ship reached the port.
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td Excessively in support of one political party.
+								td Many countries are today dominated by partisan politics.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td Someone who is critical of another and tends to disagree.
+								td There are many detractors regarding the issue of climate change.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td A group of secret of people plotting against a government or any authoritative body.
+								td She became a member of a cabal wanting to overthrow the leader.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td Very famous for a bad reputation.
+								td Pablo Escobar was an infamous drug lord.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td A deception or an act to trick.
+								td It is said that robbery at the supermarket was a hoax.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td To declare or engage in war or an argument with another country.
+								td Thailand waged war on the United States and Great Britain in 1942.
+
+
+
+		section(class="template-content u-animationFadeDown" ng-show="s_actividad == 2")
+			div(class="row row-flex")
+
+
+				div(class="col-flex-xs12 col-flex-md6 m-a mt20"): .col-flex-xs12.col-flex-md11
+					table(class="c-table-estilo_tres m-a")
+						thead: tr
+							th(class="w20") Word
+							th(class="w40") Meaning
+							th(class="w40") Use
+
+						tbody
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td To bring back to life or consciousness, or to restore to use.
+								td Luckily there was a nurse on the bus who helped to revive a woman that fainted.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td To urge, incite or stimulate.
+								td The Minister of Finance said that the latest tax cuts will spur further investment in the country.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td A defender against illegal practices.
+								td International watchdog Global Financial Company says that $21 billion was taken out of India in 2014.
+
+							tr
+								td: select(name="act_1_2" class="c-select ml5 mr5 mt5 mb5")
+									option(value="" disabled selected)
+									option(value="1") Makeshift (adj)
+									option(value="2") Infamous
+									option(value="3") Secondhand
+									option(value="4") Revive
+									option(value="5") Spur
+									option(value="6") Hoax
+									option(value="7") Wage war
+									option(value="8") Cabal
+									option(value="9") Stuck
+									option(value="10") Watchdog
+									option(value="11") Detractor
+									option(value="12") Hub
+									option(value="13") Flurry
+									option(value="14") Cobble 
+									option(value="15") Partisan (politics)
+									option(value="16") Spare time
+								td Formerly owned and used by someone else.
+								td Our organization normally collects secondhand clothing or toys to give to poor families.
+				div(class="col-flex-xs12 col-flex-md6 row-flex align-items-center"): .col-flex-xs12.col-flex-md11.ta-c.row-flex.align-items-center
+
+					img(src="unit_3/module_11/assets/images/act_2_1.png", alt="", class="u-responsive-img")
+
+	|
+	|
+	aside(class="template-asideRight o-aside-Item")
+		button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadSelectOption()")
+		button(class="c-btn-IconAction u-bgIconCheck" ng-click="selectOption()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

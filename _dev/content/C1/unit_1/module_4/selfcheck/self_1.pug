@@ -1,0 +1,61 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_1")
+    aside(class="template-asideLeft o-aside-Item")
+
+    |
+    |
+    div(class="template-section m-a" ng-init="DragandDrop()")
+        section(class="template-content")
+
+            div(class="row row-flex")
+                h5 Complete with the most suitable phrasal verb. Drag and drop.
+                .col.xs12.md10.row-flex.justify-between.col-center
+                div(class="row row-flex justify-between mt30")
+                    div(class="dragCont"): div(class="drag") bumped into
+                    div(class="dragCont"): div(class="drag") burned out
+                    div(class="dragCont"): div(class="drag") break up
+                    div(class="dragCont"): div(class="drag") call back
+                    div(class="dragCont"): div(class="drag") brush up on
+
+                .row.mt30.row-flex.align-items-center.justify-between
+                    .col.xs12.md5
+                        table(class="c-table-estilo_tres m-a")
+                            thead
+                                tr
+                                    th Use
+                            tbody
+                                tr
+                                    th.ta-l.lh30.padding15 My mother had to #[span.drop] a fight between my brothers again.
+                                tr
+                                    th.ta-l.lh30.padding15 I start my English course tomorrow, I need to #[span.drop] seen my English before I go to class.
+                                tr
+                                    th.ta-l.lh30.padding15 I have not seen my cousin in years! I #[span.drop] him yesterday at the mall, I was so surprised.
+                                tr
+                                    th.ta-l.lh30.padding15 After studying for 5 hours I was completely #[span.drop].
+                                tr
+                                    th.ta-l.lh30.padding15 I missed two calls from my mother this morning so now I have to #[span.drop] before she gets worried.
+
+                    .col.xs12.md5.ta-c.mt20
+                        img(src="unit_1/module_4/assets/images/self_1_1.png", alt="", class="u-responsive-img")
+
+                    //- div(class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:true}" ng-hide="!list1.title">{{list1.title}})
+                    div(class="row row-flex" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:true}" ng-hide="!list1.title") hola
+
+
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadDragandDrop()")
+        button(class="c-btn-IconAction u-bgIconCheck")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

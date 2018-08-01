@@ -1,0 +1,31 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            h5 #[strong.u-textColor_4 1. ]  Read the study tip below. Click on the icon to hear it.
+            div(class="row-flex mt100-xs mt10-md mt10-sm")
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt50-md")
+                    div(class="row mb30 ta-c")
+                        img(src="unit_1/module_2/assets/images/act_4b.png", alt="" class="md12 mt30 sm8 u-responsive-img xs10 w80")
+                        
+                div(class="col-flex-xs12 col-flex-md6 col-center mt10-sm mt50-md")
+                    div(class="row-flex align-center mt10-md mt20-sm")
+                        span(class="c-green-text") Avoid sounding like a robot. Imitating native speakers is the easiest way of learning an accent and this is exactly the way you learned your own language. A good method to improve your pronunciation and intonation in English is to <strong>enunciate</strong> (which is to pronounce every word clearly) <strong>and exaggerate</strong> (which is to overstress the words you’d normally stress).   
+                        div(class="col col-center xs12 mt20")
+                            audio(controls class='row m-a')
+                                source(src='unit_1/module_2/assets/audios/act_16_1.mp3' type='audio/mpeg')  
+                                | Your browser does not support the audio element. 
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

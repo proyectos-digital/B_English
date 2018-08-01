@@ -1,0 +1,227 @@
+.act_1 .c-card-phrasalVerbs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+.act_1 .c-card-phrasalVerbs--header {
+	height: 3rem;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding: 5px;
+	background-color: var(--color_2);
+}
+
+.act_1 .c-card-phrasalVerbs--header-title {
+	color: white;
+}
+
+.act_1 .c-card-phrasalVerbs--body {
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 2px 9px rgba(0,0,0,0.5);
+}
+
+.act_1 .c-card-phrasalVerbs--body-image {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+}
+
+@media all and (min-width: 1024px) {
+	.act_2 ._phrasal-column {
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+
+.act_3 .c-select {
+	color: white;
+	background-color: var(--color_5);
+}
+
+@media all and (min-width: 600px) {
+	.act_7 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin: 0 auto;
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_7 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin: .5rem auto;
+		width: 100%;
+		float: left;
+	}
+}
+
+.act_8 .flickity-viewport {
+	height: 0!important;
+	padding-top: 56%;
+}
+
+.act_8 .flickity-slider {
+	top: 0;
+}
+
+.act_10 .c-btn-Icon {
+	background-color: var(--color_5-light);
+}
+
+.act_10 .c-Checkbox {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+@media all and (min-width: 600px) {
+	.act_10 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_10 .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		width: 100%;
+		float: left;
+	}
+}
+
+.act_10 .c-inputRadio[type="radio"]:checked + .c-Checkbox .c-btn-Icon {
+	background-color: var(--color_5)!important;
+}
+
+@media all and (min-width: 1024px) {
+	.act_10 .c-inputRadio[name="sel_input_1"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(25% - 10px);
+		flex: 0 0 calc(25% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(25% - 10px);
+		float: left;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.act_10 .c-inputRadio[name="sel_input_3"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		float: left;
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+	.act_10 .c-inputRadio[name="sel_input_1"] + .c-Checkbox,.act_10 .c-inputRadio[name="sel_input_2"] + .c-Checkbox,.act_10 .c-inputRadio[name="sel_input_3"] + .c-Checkbox {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 calc(50% - 10px);
+		flex: 0 0 calc(50% - 10px);
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(50% - 10px);
+		float: left;
+	}
+}
+
+@media all and (max-width: 599px) {
+	.act_11 ul.puzzleWords {
+		-ms-grid-columns: (33%)[auto-fill];
+		grid-template-columns: repeat(auto-fill,33%);
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 989px) {
+	.act_11 ul.puzzleWords {
+		-ms-grid-columns: (33%)[auto-fill];
+		grid-template-columns: repeat(auto-fill,33%);
+	}
+}
+
+@media all and (min-width: 989px) {
+	.act_11 ul.puzzleWords {
+		grid-gap: 10px;
+		-ms-grid-columns: (calc(50% - 10px))[auto-fill];
+		grid-template-columns: repeat(auto-fill,calc(50% - 10px));
+	}
+}
+
+.act_15 .book {
+	background: url(../images/act_15_1.png) no-repeat;
+	background-size: cover;
+	padding: 12% 25%;
+	line-height: 30px;
+}
+
+.self_4 .template-section .template-content .col .js-columnas span {
+	height: 70px;
+	clear: both;
+	overflow: hidden;
+}
+
+.col_6 .dragCont {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+.col_6 .mt40 {
+	-webkit-column-count: 1;
+	column-count: 1;
+}
+
+@media all and (min-width: 768px) {
+	.col_6 .mt40 {
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+
+.col_8 .drop div {
+	display: inline-block;
+}
+
+.col_8 .drop div::first-letter {
+	text-transform: uppercase;
+}

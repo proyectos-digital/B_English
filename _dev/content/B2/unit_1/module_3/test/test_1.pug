@@ -1,0 +1,104 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+
+            div(class="row-flex")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row")
+                        p
+                            strong(class="u-textColor_4-dark") 1.
+                            |  Erika can have missed the train.
+
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row-flex")
+                        span(class="c-textField mr10")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_1" name="tfInputRadio_1" value="1")
+                            label(for="inputRadio_1" class="c-CheckSelected") CORRECT
+                        span(class="c-textField")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_2" name="tfInputRadio_1" value="2")
+                            label(for="inputRadio_2" class="c-CheckSelected") INCORRECT
+
+            div(class="row-flex mt20")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row")
+                        p
+                            strong(class="u-textColor_4-dark") 2.
+                            |  Nico must have forget about the party.
+
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row-flex")
+                        span(class="c-textField mr10")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_3" name="tfInputRadio_2" value="1")
+                            label(for="inputRadio_3" class="c-CheckSelected") CORRECT
+                        span(class="c-textField")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_4" name="tfInputRadio_2" value="2")
+                            label(for="inputRadio_4" class="c-CheckSelected") INCORRECT
+
+            div(class="row-flex mt20")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row")
+                        p
+                            strong(class="u-textColor_4-dark") 3.
+                            |  She must have lost her keys.
+
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row-flex")
+                        span(class="c-textField mr10")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_5" name="tfInputRadio_3" value="1")
+                            label(for="inputRadio_5" class="c-CheckSelected") CORRECT
+                        span(class="c-textField")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_6" name="tfInputRadio_3" value="2")
+                            label(for="inputRadio_6" class="c-CheckSelected") INCORRECT
+
+            div(class="row-flex mt20")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row")
+                        p
+                            strong(class="u-textColor_4-dark") 4.
+                            |  We could have go somewhere else.
+
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row-flex")
+                        span(class="c-textField mr10")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_7" name="tfInputRadio_4" value="1")
+                            label(for="inputRadio_7" class="c-CheckSelected") CORRECT
+                        span(class="c-textField")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_8" name="tfInputRadio_4" value="2")
+                            label(for="inputRadio_8" class="c-CheckSelected") INCORRECT
+
+            div(class="row-flex mt20")
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row")
+                        p
+                            strong(class="u-textColor_4-dark") 5.
+                            |  We should have took the train instead.
+
+                div(class="col-flex-sm12 col-flex-md6 col-center")
+                    div(class="row-flex")
+                        span(class="c-textField mr10")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_9" name="tfInputRadio_5" value="1")
+                            label(for="inputRadio_9" class="c-CheckSelected") CORRECT
+                        span(class="c-textField")
+                            input(class="c-inputRadio" type="radio" id="inputRadio_10" name="tfInputRadio_5" value="2")
+                            label(for="inputRadio_10" class="c-CheckSelected") INCORRECT
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

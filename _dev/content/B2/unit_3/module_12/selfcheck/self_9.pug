@@ -1,0 +1,68 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex col-center mt50-xs mt100-md")
+               div(class="col-center col xs12 md6 lh-20 ta-j")
+                            div(class="c-cardGreen")
+                                div(class="c-cardGreenContent ta-c padding40 lh30")
+                                    span: strong You and a friend are planning on going on an adventure vacation, but have not yet decided where to go and what kind of adventure you want. Think of where you’d like to go, and the adventures you’d like to have, and convince your friend of going to this place. Speak for 90 seconds.
+                            div(class="row ta-c")
+                                div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt3_mod12_sel9',1)")
+                                
+                                    div(class="c-ngRecorder-alert" ng-if="recorder.status.isDenied === true") Permission to use your microphone was declined, please refresh this page to grant permission.
+                                    |
+                                    div(class="c-ngRecorder-panel"  ng-if="recorder.isAvailable")
+                                        div(class="c-ngRecorder-controls" ng-hide="recorder.status.isDenied === true")
+                                            button(ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" 
+                                                type="button" class="c-btn-Icon u-bgIconRecord c-ngRecorder-controls--btnRecord" 
+                                                ng-class!="{'btn-primary': !recorder.status.isRecording, 'is-active': recorder.status.isRecording}")
+                                                span {{recorder.status.isRecording ? 'Stop' : 'Start '}} 
+                                                span(class="ml10" ng-show="recorder.status.isRecording === false") Recording
+                                                span(class="c-ngRecorder-timer ml10" ng-if="recorder.status.isRecording") {{recorder.elapsedTime <= 60 ? (' 0'+recorder.elapsedTime) : recorder.elapsedTime}} 
+                                                    sub seg.
+                                            |
+                                            button(class="c-btn-Icon c-ngRecorder-controls--btnListen" 
+                                                type="button" 
+                                                ng-class="{'u-bgIconPlay': (recorder.status.isPaused || recorder.status.isStopped), 'u-bgIconPause': recorder.status.isPlaying}" 
+                                                ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()" 
+                                                ng-disabled!="recorder.status.isRecording || !recorder.audioModel")
+                                                span(ng-if="recorder.status.isPaused || recorder.status.isStopped"): span Send
+                                                span(ng-if="recorder.status.isPlaying"): span pause
+                                            |
+                                    |
+                                    div(class="c-ngRecorder-alert" ng-if="recorder.status.isConverting") 
+                                        p Please wait while we process your recording
+                                    |
+                                    div(class="c-ngRecorder-canvas" canvas-sizer)
+                                        div(ng-show="recorder.status.isRecording" class="c-ngRecorder-canvasRecorder")
+                                            ng-audio-recorder-analyzer( max-width="100%" max-height="70px" width="400" height="50" wave-color="white")
+
+                                        div( class="c-ngRecorder-canvasAudio" ng-show!="!recorder.status.isRecording && recorder.audioModel")
+                                            ng-audio-recorder-wave-view( wave-color="silver" bar-color="red")
+
+                                
+                                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        //- button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        //- button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

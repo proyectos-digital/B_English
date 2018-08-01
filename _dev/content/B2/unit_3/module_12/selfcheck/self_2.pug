@@ -1,0 +1,115 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row-flex col-center mt50-xs mt100-md")
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 1.
+                            span  She looks pretty sick. I think she
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_a")   
+                            span  go to a doctor.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_1" name="selection_1" value="1")
+                                label(for="SelectRadio_1" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='can'") can
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_2" name="selection_1" value="2")
+                                label(for="SelectRadio_2" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_a='should'") should
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 2.
+                            span  You’ve been driving all day. You
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_b") 
+                            span  be exhausted!
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_4" name="selection_2" value="1")
+                                label(for="SelectRadio_4" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='must'") must
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_5" name="selection_2" value="2")
+                                label(for="SelectRadio_5" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_b='should'") should
+                                
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 3.
+                            span  You
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_c") 
+                            span smoke so much. It’s bad for your health.
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_7" name="selection_3" value="1")
+                                label(for="SelectRadio_7" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='can’t'") can’t
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_8" name="selection_3" value="2")
+                                label(for="SelectRadio_8" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_c='shouldn’t'") shouldn’t                         
+                    
+                    
+                
+                
+                div(class="col-flex-xs12 col-flex-sm11 col-flex-md6 col-center pr10 pl10")
+                    
+                    
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 4.
+                            span  Hey I’m lost
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_e") 
+                            span you help me?
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_13" name="selection_4" value="1")
+                                label(for="SelectRadio_13" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='Should'") should
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_14" name="selection_4" value="2")
+                                label(for="SelectRadio_14" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_e='Can'") can
+
+                                
+                    
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 5.
+                            span  You have such a beautiful voice. You 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_f") 
+                            span sing for us!
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_15" name="selection_5" value="1")
+                                label(for="SelectRadio_15" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='Should'") should
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_16" name="selection_5" value="2")
+                                label(for="SelectRadio_16" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_f='Can'") can
+                                
+
+                    div(class="row mb50")
+                        p 
+                            strong: span(class="u-textColor_4-dark") 6.
+                            span  I know he speaks five languages, but 
+                            span(class="c-textField"): input(type="text" disabled placeholder="" class="c-input ta-c js-escribir" ng-model="txtcaptura_g") 
+                            span  he speak Arabic?
+
+                            div(class="row-flex")
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_17" name="selection_6" value="1")
+                                label(for="SelectRadio_17" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='Should'") should
+                                input(class="c-inputRadio" type="radio" id="SelectRadio_18" name="selection_6" value="2")
+                                label(for="SelectRadio_18" class="c-CheckSelected col-flex ml10 mr10" ng-click="txtcaptura_g='Can'") can
+                                
+                                
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside" id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_1/module_1/activities/act_6_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice")

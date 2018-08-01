@@ -1,0 +1,45 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_5")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            div(class="row row-flex mt30 align-items-center")
+                h5.row Let’s talk about school.
+                .col.xs12.md6
+                    div(class="row-flex justify-center mb20"): div(class="col md11 col-center")
+                        div(class="c-contVideo")
+                            video(controls class="u-responsive-video")
+                                source(src="unit_1/module_3/"+pathVideo+"act_5_1.mp4" type="video/mp4")
+                                | Your browser does not support the audio element.
+
+                .col.xs12.md6
+                    .c-cardGreen
+                        .c-cardGreenContent
+                            ul.c-listDefault.lh25.col.xs6
+                                li.u-textWhite What do you study?
+                                li.u-textWhite Where do you study that?
+                                li.u-textWhite Why did you choose that subject?
+                                li.u-textWhite Is it a popular subject in your country?
+                                li.u-textWhite Do you like that subject?
+                                li.u-textWhite Do you get on with your colleagues?
+
+                            ul.c-listDefault.lh25.col.xs6
+                                li.u-textWhite What was your first day like?
+                                li.u-textWhite What are the main aspects of your subject?
+                                li.u-textWhite If you have the chance, would you change subject?
+                                li.u-textWhite Do you plan to get a job in the same field as your subject?
+
+                    .row
+                        div(class="row c-ngRecorder" ng-audio-recorder id="mainAudio_a" time-limit='120' audio-model="audio_1" on-playback-start="guardarRecord('unt1_mod3_act5',1)"): +ngRecorder
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

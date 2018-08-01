@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+$MultimediaImages   : '../images/';
+
+.u-{
+    &bgTemplate{
+        background-image: url(#{$MultimediaImages}wel_bg.jpg);
+        // background-color: #ff5252;
+    }
+}
+
+
+.act_11{
+    @media all and (orientation: portrait) {
+    }
+}
+.act_16 {
+    &_notice{
+        .bgBanner {
+            width: 386px;
+            height: 370px;
+            background: url(../images/act_16_2.png);
+            background-repeat: no-repeat;
+            padding: 45px 0px 0px 0;
+            .option{
+                padding-left: 60px;
+                width: 367px;
+                &:hover {
+                    background-color: rgba(0,255,255,.2);
+                }
+            }
+            p, strong, span {
+                color: initial;
+            }
+        }
+    }
+}
+
+.self_1{
+
+}
+
+.self_2{
+
+    $heightDrag: 31px;
+
+    .drag{
+        height: $heightDrag - 4px;
+    }
+    .drop, .dragCont{
+        width: 105px;
+        height: $heightDrag;
+        @media all and (max-width:599px) {
+            // width: 145px;
+            // height: $heightDrag + 6px;
+        }
+    }
+}
+
+.self_8{
+    $heightDrag: 80px;
+    $widthDrag: 180px;
+    ._draggableImg{
+        width: 70%;
+        @media all and (max-width:599px) {
+            width: 80%;
+        }
+    }
+
+    .drag{
+        height: $heightDrag - 4px;
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+    }
+    .drop{
+        position: absolute;
+        top: auto;
+        bottom: -10px;
+        left: auto;
+        right: 30px;
+    }
+    .drop, .dragCont{
+        width: $widthDrag;
+        height: $heightDrag;
+        
+    }
+}
+
+.test_3{
+    $heightDrag: auto;
+    $widthDrag: 80px;
+
+    .drag{
+        height: $heightDrag - 4px;
+        font-size: 0.8rem;
+    }
+    .dragCont{
+        margin: 5px auto;
+    }
+    .drop, .dragCont{
+        width: $widthDrag;
+        height: $heightDrag;
+        
+    }
+}
+
+.myColombia_3{
+    @media all and (min-width:600px) {
+        .c-CheckSelected{
+            flex: 0 0 calc(33% - 10px);
+            margin: 0 auto;
+            width: calc(33% - 10px);
+            float: left;
+        }
+    }
+    @media all and (max-width:599px) {
+        .c-CheckSelected{
+            flex: 0 0 100%;
+            margin: .5rem auto;
+            width: 100%;
+            float: left;
+        }
+    }
+}
+
+.col_1{
+    .cont_grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+    .map_cont{
+        position: relative;
+        width: 315px;
+        height: 445px;
+        margin: 0 auto;
+        &-item_1{
+            position: absolute;
+            top: 70px;
+            left: -85px;
+        }
+        &-item_2{
+            position: absolute;
+            top: -15px;
+            left: -45px;
+        }
+        &-item_3{
+            position: absolute;
+            top: 70px;
+            left: 50px;
+        }
+        &-item_4{
+            position: absolute;
+            top: 10px;
+            left: 60px;
+        }
+        &-item_5{
+            position: absolute;
+            top: -10px;
+            left: 175px;
+        }
+        &-item_6{
+            position: absolute;
+            top: 60px;
+            left: 240px;
+        }
+    }
+}

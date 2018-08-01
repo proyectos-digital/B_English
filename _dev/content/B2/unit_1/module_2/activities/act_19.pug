@@ -1,0 +1,198 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" ng-init="listenImage = 1; s_actividad = 1")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a act_19")
+        section(class="template-content")
+            
+            div(class="row u-animationFadeDown" ng-show="s_actividad == 1")
+                
+                div(class="row-flex")
+                    div(class="col col-flex-sm5 col-center") 
+                        div(class="c-contVideo"): video(controls class="u-responsive-video")
+                            source(src="unit_1/module_2/assets/videos/act_19.mp4" type="video/mp4")
+                            | Your browser does not support the video tag. 
+            |
+            |
+            div(class="row u-animationFadeDown" ng-show="s_actividad == 2")
+                
+                h5 Read and Listen to the following groups of words:
+                
+                div(class="row-flex")
+                    
+                    div(class="col col-flex-sm10 col-flex-md6 col-flex-lg5 col-center mt30-xs mt5-md")
+                        div(class="c-cardListen" style="background-image: url('unit_1/module_2/assets/images/act_19_{{listenImage}}.png');")
+                            div(class="c-cardListen--word" ) {{ listenWord_a }}
+                    
+                    div(class="col col-flex-sm12 col-flex-md6 col-flex-lg7 col-center mt30-xs mt5-md")
+                        div(class="row-flex")
+                            div(class="col col-flex-sm10 md6 lg5 mt20-xs mt5-md col-center")
+                                div(Class="col xs12"): h6 Mn
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_1" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_1" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_1.mp3" ng-click="listenWord_a='Autumn'; listenImage=2"): span Autumn
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_2" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_2" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_2.mp3" ng-click="listenWord_a='Column'; listenImage=3"): span Column
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_3" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_3" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_3.mp3" ng-click="listenWord_a='Hymn'; listenImage=4"): span Hymn
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_4" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_4" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_4.mp3" ng-click="listenWord_a='Condemn'; listenImage=5"): span Condemn
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_5" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_5" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_5.mp3" ng-click="listenWord_a='Chimneys'; listenImage=6"): span Chimneys
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_6" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_6" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_6.mp3" ng-click="listenWord_a='Gymnastics'; listenImage=7"): span Gymnastics
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_7" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_7" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_7.mp3" ng-click="listenWord_a='Omnivorous'; listenImage=8"): span Omnivorous
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_8" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_8" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_8.mp3" ng-click="listenWord_a='Solemn'; listenImage=9"): span Solemn
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_9" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_9" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_9.mp3" ng-click="listenWord_a='Warmness'; listenImage=10"): span Warmness
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_10" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_10" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_10.mp3" ng-click="listenWord_a='Alumni'; listenImage=11"): span Alumni
+                                |
+                                div(Class="col xs12 mt10-xs mt40-sm"): h6 M
+                                |
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_11" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_11" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_11.mp3" ng-click="listenWord_a='Ham'; listenImage=12"): span Ham
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_12" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_12" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_12.mp3" ng-click="listenWord_a='Arm'; listenImage=13"): span Arm
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_13" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_13" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_13.mp3" ng-click="listenWord_a='Farm'; listenImage=14"): span Farm
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_14" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_14" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_14.mp3" ng-click="listenWord_a='Jam'; listenImage=15"): span Jam
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_15" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_15" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_15.mp3" ng-click="listenWord_a='Drum'; listenImage=16"): span Drum
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_16" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_16" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_16.mp3" ng-click="listenWord_a='Helmet'; listenImage=17"): span Helmet
+                            |
+                            |
+                            div(class="col col-flex-sm10 md6 lg5 mt20-xs mt5-md col-center")
+                                div(Class="col xs12"): h6 Mb
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_17" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_17" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_17.mp3" ng-click="listenWord_a='Thumb'; listenImage=18"): span Thumb
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_18" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_18" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_18.mp3" ng-click="listenWord_a='Comb'; listenImage=19"): span Comb
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_19" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_19" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_19.mp3" ng-click="listenWord_a='Lamb'; listenImage=20"): span Lamb
+
+                                div(Class="col xs12 mt20-xs mt40-sm"): h6 Mm
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_20" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_20" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_20.mp3" ng-click="listenWord_a='Hammer'; listenImage=21"): span Hammer
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_21" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_21" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_21.mp3" ng-click="listenWord_a='Yummy'; listenImage=22"): span Yummy
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_22" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_22" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_22.mp3" ng-click="listenWord_a='Mummy'; listenImage=22"): span Mummy
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_23" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_23" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_23.mp3" ng-click="listenWord_a='Summer'; listenImage=23"): span Summer
+                                div(class="col md12 sm4 xs6 mt10")
+                                    input(class="c-inputRadio" type="radio" id="inputRadio_24" name="SelInputRadio_1" value="1")
+                                    label(for="inputRadio_24" class="c-CheckIconSelected u-bgIconPlay w90" ng-audio="unit_1/module_2/assets/audios/act_19_24.mp3" ng-click="listenWord_a='Tummy'; listenImage=23"): span Tummy
+                            |
+                            |
+            |
+            |
+            div(class="row-flex u-animationFadeDown" ng-show="s_actividad == 3")
+                
+                div(class="row-flex "): h5 You will listen to 8 phrases, circle yes if you hear /m/ and no if you don ́t.
+
+                div(class="row mt40-md")
+                    div(class="col-flex-xs10 col-flex-sm9 col-flex-md5 col-center")
+                        div(class="row-flex justify-between")
+                            |
+                            |
+                            div(class="col-flex-xs7 col-flex-sm5 col-center")
+                                div(class="row-flex justify-between mb10")
+                                    strong(class="u-textColor_4") 1. #[button(class="c-btn-Icon u-bgIconListen")]
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_1" name="selectionGrupo_1" value="1")
+                                    label(for="inputSelection_1" class="c-CheckSelected") YES
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_2" name="selectionGrupo_1" value="2")
+                                    label(for="inputSelection_2" class="c-CheckSelected") NO
+                                div(class="row-flex justify-between mb10")
+                                    strong(class="u-textColor_4") 2. #[button(class="c-btn-Icon u-bgIconListen")]
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_3" name="selectionGrupo_2" value="1")
+                                    label(for="inputSelection_3" class="c-CheckSelected") YES
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_4" name="selectionGrupo_2" value="2")
+                                    label(for="inputSelection_4" class="c-CheckSelected") NO
+                                div(class="row-flex justify-between mb10")
+                                    strong(class="u-textColor_4") 3. #[button(class="c-btn-Icon u-bgIconListen")]
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_5" name="selectionGrupo_3" value="1")
+                                    label(for="inputSelection_5" class="c-CheckSelected") YES
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_6" name="selectionGrupo_3" value="2")
+                                    label(for="inputSelection_6" class="c-CheckSelected") NO
+                                div(class="row-flex justify-between mb10")
+                                    strong(class="u-textColor_4") 4. #[button(class="c-btn-Icon u-bgIconListen")]
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_7" name="selectionGrupo_4" value="1")
+                                    label(for="inputSelection_7" class="c-CheckSelected") YES
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_8" name="selectionGrupo_4" value="2")
+                                    label(for="inputSelection_8" class="c-CheckSelected") NO
+                            |
+                            |
+                            div(class="col-flex-xs7 col-flex-sm5 col-center offset-md1")
+                                div(class="row-flex justify-between mb10")
+                                    strong(class="u-textColor_4") 5. #[button(class="c-btn-Icon u-bgIconListen")]
+                                    input(type="radio" class="c-inputRadio" id="inputSelection_9" name="selectionGrupo_5" value="1")
+                                    label(for="inputSelection_9" class="c-CheckSelected") YES
+                                    input(type="radio" class="c-inputRadio" id="inputSelection10" name="selectionGrupo_5" value="2")
+                                    label(for="inputSelection10" class="c-CheckSelected") NO
+                                div(class="row-flex justify-between mb10")
+                                    strong(class="u-textColor_4") 6. #[button(class="c-btn-Icon u-bgIconListen")]
+                                    input(type="radio" class="c-inputRadio" id="inputSelection11" name="selectionGrupo_6" value="1")
+                                    label(for="inputSelection11" class="c-CheckSelected") YES
+                                    input(type="radio" class="c-inputRadio" id="inputSelection12" name="selectionGrupo_6" value="2")
+                                    label(for="inputSelection12" class="c-CheckSelected") NO
+                                div(class="row-flex justify-between mb10")
+                                    strong(class="u-textColor_4") 7. #[button(class="c-btn-Icon u-bgIconListen")]
+                                    input(type="radio" class="c-inputRadio" id="inputSelection13" name="selectionGrupo_7" value="1")
+                                    label(for="inputSelection13" class="c-CheckSelected") YES
+                                    input(type="radio" class="c-inputRadio" id="inputSelection14" name="selectionGrupo_7" value="2")
+                                    label(for="inputSelection14" class="c-CheckSelected") NO
+                                div(class="row-flex justify-between mb10")
+                                    strong(class="u-textColor_4") 8. #[button(class="c-btn-Icon u-bgIconListen")]
+                                    input(type="radio" class="c-inputRadio" id="inputSelection15" name="selectionGrupo_8" value="1")
+                                    label(for="inputSelection15" class="c-CheckSelected") YES
+                                    input(type="radio" class="c-inputRadio" id="inputSelection16" name="selectionGrupo_8" value="2")
+                                    label(for="inputSelection16" class="c-CheckSelected") NO
+                    
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 3" ng-click="reloadClassMultiple()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 3" ng-click="seleccionMulti()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+script.
+    speechRecognition();

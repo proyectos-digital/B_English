@@ -1,0 +1,53 @@
+.c-{
+    &recognition {
+        // ------- var
+        $gutter: 1rem;
+        // ------- 
+        min-height: 100px;
+        position: relative;
+        
+        &:before{
+            content: '';
+            position: absolute;
+            top: calc(#{$gutter} * 2);
+            left: calc(#{$gutter} / 2);
+            width: calc(100% - #{$gutter});
+            height: calc(100% - (#{$gutter} * 2));
+            
+            box-shadow: 0 0 0 2px black;
+
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-position: center;
+            
+            
+        }
+        &.on-pause{ &:before{ background-image: url('./../multimedia/images/app/ui-audioGraphic.png'); }}
+        
+        &.on-record{ &:before{ background-image: url('./../multimedia/images/app/ui-audioGraphicLatency.gif'); }}
+
+        &Title{
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        &Answer{
+            user-select: none;
+            border: none;
+            resize: none;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+
+            position: absolute;
+            top: calc(#{$gutter} * 3);
+            left: calc(#{$gutter} / 2);
+            width: calc(100% - #{$gutter});
+            height: 50%;
+
+            background-color: transparent;
+            pointer-events: none;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+            
+            div(class="row-flex align-items-center")
+                div(class="col-flex-sm12 col-flex-md6 col-center showTo-md")
+                    div(class="row")
+                        img(src="./unit_2/module_5/assets/images/tes_1.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                div(class="col-flex-sm12 col-flex-md6 col-center") 
+                    div(class="row")
+                        p 
+                            strong(class="u-textColor_4-dark") 1.
+                            |  I 
+                            strong (have)
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                            | that computer for 6 years before it
+                            strong  (break) 
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                            | down.    
+
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 2.
+                            |  The old woman 
+                            strong (want)
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                            | to sit down because she 
+                            strong (stand)
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                            | for a long time.
+
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 3.
+                            |   James 
+                            strong (be)
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                            | tired because he
+                            strong  (correct)
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                            | exam papers all day.
+
+                    div(class="row mt20")
+                        p
+                            strong(class="u-textColor_4-dark") 4.
+                            |  We 
+                            strong (wait)
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                            | at the bus stop for more than an hour when the bus finally 
+                            strong (arrive) 
+                            span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+
+                    div(class="row mt20")
+                        p
+                           strong(class="u-textColor_4-dark") 5.
+                           strong  (you ever go) 
+                           span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")
+                           | to the opera before tonight?
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|

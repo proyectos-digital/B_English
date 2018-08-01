@@ -1,0 +1,35 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper" )
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a col_3")
+        section(class="template-content u-animationFadeDown")
+            
+            div(class="row mt40 ")
+                div(class="row-flex m-a")
+                    div(class="col-flex-sm12 col-flex-md4 col-center")
+                        p: strong Prepare a PowerPoint presentation about the traditional games in the town. At least 5 slides with real pictures from your camera.
+                        form(form enctype="multipart/form-data" id="formdata" method="post" class="row row-flex")
+                            input(type="file" multiple name="documentos" ng-model="documentos" value="" id="documentos"  class="upload")
+                            label(for="documentos" class="c-btn mr20") Choose Files
+                            input(type="submit" value="Send" ng-click="NewDoc()" class="c-btn-IconAction u-bgIconClip")
+                            p(ng-show="importFileDoc") send...
+                        //- button(class="c-btn-IconAction u-bgIconClip mt40 centrado ")
+                    div(class="col-flex-sm12 col-flex-md6 col-center ta-c")
+                        h6 This is an example of the Colombian game yermis:
+                        p.ta-l It is a traditional Colombian game for kids. It is played on the street or parks. You need to teams to play Yermis. The rules are:
+                        img(src="unit_2/module_8/assets/images/col_3.png", alt="" class="u-responsive-img  mt20 ")
+                        //- button(class="c-btn-Icon u-bgIconListen mt30 ancho40 h40" ng-audio="unit_1/module_2/assets/audios/col_4_1.mp3")
+                        //- button(class="c-btn-Icon u-bgIconRecord mt30 ancho40 h40")           
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")                                                        

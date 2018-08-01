@@ -1,0 +1,248 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_3" ng-init="s_actividad = 1; DragandDropMultiple()")
+    aside(class="template-asideLeft o-aside-Item")
+        button(class="c-btn-IconAction" data-activities-count="1" ng-click="s_actividad = 1" ng-class="(s_actividad == 1) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="2" ng-click="s_actividad = 2" ng-class="(s_actividad == 2) ? 'is-active' : '';")
+        button(class="c-btn-IconAction" data-activities-count="3" ng-click="s_actividad = 3" ng-class="(s_actividad == 3) ? 'is-active' : '';")
+    |
+    |
+    div(class="template-section m-a" )
+        section(class="template-content")
+            article(class="row u-animationFadeDown" ng-show="s_actividad == 1")
+                div(class="row")
+                    div(class="c-flickity")
+                        div(class="row mt10 mb30")
+                            div(class="row c-flickity-controls c-flickity-controls-flex")
+                                div(class="c-flickity-controlsSlides")
+                                    button(class="c-flickity-button is-selected ") Page 1
+                                    button(class="c-flickity-button ") Page 2
+                                    span(class="c-flickity--cell-total") 2
+                                button(class="c-flickity-button c-flickity-button--previous") ←
+                                button(class="c-flickity-button c-flickity-button--next") →
+
+                        div(class="c-flickity--cell"): div(class="row" style="height:720px; overflow-x: hidden; overflow-y:auto;")
+                            div(class="c-cardGreen mt0 mb0" height-cardGreen="auto")
+                                div(class="c-cardGreenContent u-textColor_1")
+                                    .col.xs12.md6
+                                        h5.ta-c Alberto Salazar Disputes Allegations — Some of Which Were Never Made
+                                        h6.ta-c In a lengthy response to stories by ProPublica and the BBC, Salazar addresses the allegations of former athletes and staff that he broke drug rules.
+                                        p.ta-c by David Epstein #[br] ProPublica, June 24, 2015, 11:03 p.ta-j.m.
+                                        p.ta-j.
+                                            #[strong 1]. Three weeks after ProPublica and the BBC reported allegations that Alberto Salazar,
+                                            the iconic coach of the Nike Oregon Project, had experimented with testosterone and
+                                            broken drug rules, Salazar posted a detailed, two-part response on the group’s website.
+                                            Salazar disputed several allegations that were not made in the stories, or inaccurately
+                                            described allegations that were. He also confirmed others, admitting, for example, he
+                                            tested testosterone gel on both of his sons. Salazar said the claims in the ProPublica
+                                            and BBC stories are based on lies by disgruntled former athletes and employees or
+                                            misunderstandings of his recommendations or conduct. “I will never permit doping.
+                                            Oregon Project athletes must fully comply with the WADA Code and IAAF Rules,” Salazar
+                                            said in the lengthy post.
+                                        p.ta-j.
+                                            #[strong 2]. The three-time winner of the New York City Marathon said he had pushed himself so
+                                            hard as an athlete that “I still suffer today the negative physical effects of my excessive
+                                            training … but will not hurt my athletes like I hurt myself.” His athletes, he said, have
+                                            appropriate documentation for any medications, and he has never helped an athlete
+                                            gain a medical exemption or prescription they didn’t need. Salazar reserved particular
+                                            ire for Steve Magness, a former Oregon Project assistant coach and current head crosscountry
+                                            coach at the University of Houston, who made several of the most contentious
+                                            allegations. Magness told ProPublica and the BBC that he left the Oregon Project in
+                                            2012 by mutual agreement with Salazar after he became disillusioned with the coach’s
+                                            approach to medicine.
+
+
+                                    .col.xs12.md6
+                                        p.ta-j.
+                                            #[img(src="unit_1/module_2/assets/images/act_3_1.png" alt="" class="u-responsive-img w40 mr10 " align="left")]
+                                            #[strong 3].  In his response, Salazar said “Magness did not leave the Oregon Project. The Oregon Project terminated his contract in 2012.” Prior to the publication of the initial stories, Magness provided ProPublica and the BBC with a “Mutual Termination of Contract” letter from Nike. The letter, dated June 27, 2012, starts: “Dear Steve, as discussed, both you and NIKE have decided to terminate your NIKE contract … As such, this letter shall acknowledge the mutual decision to terminate the contract, effective immediately.” The short letter ends with: “We would like to thank you for your association with NIKE. Should an opportunity present itself to work together again in the future, NIKE would welcome consideration of such an opportunity.” Emails from Salazar, provided by Magness, express “complete confidence” in him just one month earlier. Yesterday, the Associated Press reported that the U.S. Anti-Doping Agency is investigating Salazar and that “more than a dozen witnesses have been interviewed and USADA is actively pursuing documents and other evidence from Salazar.” Salazar was provided with an extensive list of questions a month prior to the initial ProPublica and BBC stories. He only answered a select group of them.
+                                        p.ta-j.
+                                            #[strong 4]. Salazar began today’s rebuttal by addressing an allegation about Salazar’s star athlete,
+                                            Galen Rupp, that neither ProPublica nor the BBC made: “The claims that Galen has been
+                                            on prednisone continuously since he was 15 are absolutely false.”
+                                            ProPublica and the BBC published a document showing that Rupp, who won the silver
+                                            medal in the 2012 Olympics, had apparently taken prednisone during one-time period
+                                            when he was 16. The story did not report allegations of continuous use nor cite the age 15.
+                        |
+                        div(class="c-flickity--cell"): div(class="row" style="height:720px; overflow-x: hidden; overflow-y:auto;")
+                            div(class="c-cardGreen mt0 mb0" height-cardGreen="auto")
+                                div(class="c-cardGreenContent u-textColor_1 ")
+                                    .col.xs12.md6
+                                        p.ta-j.ta-j.
+                                            #[img(src="unit_1/module_2/assets/images/act_3_2.png" alt="" class="u-responsive-img w40 ml10 " align="right")]
+                                            Salazar also said the article falsely reported that Rupp had received therapeutic use exemptions [TUE] by manipulating the TUE system and that he had received “numerous TUEs for multiple different treatments.” TUEs are exemptions that are granted to allow athletes to use otherwise restricted drugs or treatments. No such assertions were made in the story. #[br] ProPublica and the BBC gave no accounting of TUEs given to Rupp in an elite running career that spans more than a decade. Salazar stressed that Rupp “has only received two TUEs in his running career since 2010.” Salazar also noted that TUEs “are a rare occurrence in the Oregon Project.” No allegation about the prevalence of TUEs among Oregon Project athletes was made.
+                                        p.ta-j.
+                                            #[strong 5]. One of the most controversial elements of the ProPublica and BBC stories was an allegation
+                                            that Rupp, Salazar’s longtime star, may have used testosterone while still in high school.
+                                            Magness provided a photograph of a Nike Lab document that included a 2002 notation by
+                                            a scientist that said Rupp was “presently on prednisone and testosterone medication.”
+                                            Prior to the initial stories, Salazar told ProPublica and the BBC that the notation was a mistake,
+                                            and that Rupp was actually taking a legal dietary supplement meant to boost testosterone
+                                            called Testoboost. In his current response, Salazar says that Rupp “does not recall exactly
+                                            which supplement he took in 2002. It could have been Testoboost, Alpha Male, Tribex, or
+                                            ZMA.” All are supplements meant to naturally boost testosterone.
+                                            Magness told ProPublica and the BBC that when he asked Salazar at the time to explain
+                                            the document, Salazar called Loren Myhre, the scientist who made the notation, “crazy” and
+                                            said he would get it clarified. Magness said he never did. Myhre died in 2012 from ALS.
+                                    .col.xs12.md6
+                                        p.
+                                            #[strong 6]. In his response, Salazar questioned why Magness didn’t ask Myhre for an explanation
+                                            at the time. Magness told ProPublica Wednesday that he didn’t know Myhre and that it
+                                            was unfair to imply that it was his responsibility to investigate. Magness said there had
+                                            been “no mention of the word ‘Testoboost.’” #[br]#[br]
+                                            “I came to my superior, Salazar, and asked for answers,” Magness said. “It would have
+                                            been a simple clarification to make at the time by Salazar to contact Myhre, someone
+                                            who he had worked with for at least a decade, to clear up the confusion. Salazar admits
+                                            that he did not make this simple request, and instead blames it on me for not searching
+                                            out Myhre.”#[br]#[br]
+                                            ProPublica contacted Mauro DiPasquale, the owner of Testoboost, who said that
+                                            Salazar had recently contacted him in the hope that he would confirm that Rupp was
+                                            taking Testoboost. DiPasquale told ProPublica he had no records regarding Salazar and
+                                            Testoboost prior to 2004, and had no way of knowing whether Rupp was taking it in
+                                            2002. A number of Oregon Project athletes have told ProPublica they took Testoboost
+                                            at various times. Adam Goucher says that he took Testoboost, but does not believe any
+                                            of his lab documents indicated that he was taking testosterone medication. Salazar’s
+                                            current response says that Rupp cannot remember what he told Myhre. “[Rupp]
+                                            believes that he referred to his supplements as his testosterone supplements, stuff,
+                                            pills or medication.”#[br]#[br]
+                                            Read the full story here: #[a(href="https://www.propublica.org/article/alberto-salazar-disputes-allegations-some-of-which-were-never-made" target="blank") https://www.propublica.org/ ]
+            |
+            |
+            article(class="row u-animationFadeDown" ng-show="s_actividad == 2")
+                h5 Answer the following question based on the text you have read.
+                .row.align-items-center.row-flex
+                    .col.xs12.md6
+                        .row
+                            h6 #[strong.u-textColor_4 •] Choose the most appropriate heading for the following extract:
+                            p.
+                                ProPublica contacted Mauro DiPasquale, the owner of Testoboost, who said that Salazar had
+                                recently contacted him in the hope that he would confirm that Rupp was taking Testoboost.
+                                DiPasquale told ProPublica he had no records regarding Salazar and Testoboost prior to 2004,
+                                and had no way of knowing whether Rupp was taking it in 2002. A number of Oregon Project
+                                athletes have told ProPublica they took Testoboost at various times. Adam Goucher says that
+                                he took Testoboost, but does not believe any of his lab documents indicated that he was
+                                taking testosterone medication. Salazar’s current response says that Rupp cannot remember
+                                what he told Myhre. “[Rupp] believes that he referred to his supplements as his testosterone
+                                supplements, stuff, pills or medication.”
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_1" value="1")
+                                label(class="c-Checkbox row ta-c" for="selInput_1") The Salazar controversy.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_2" value="2")
+                                label(class="c-Checkbox row ta-c " for="selInput_2") Rupp and Testoboost.
+                                input(type="radio" class="c-inputRadio" name="sel_input_1" id="selInput_3" value="3")
+                                label(class="c-Checkbox row ta-c " for="selInput_3") The use of Testoboost in athletics.
+                                input(type="hidden" class="js-select")
+
+                        .row.mt20
+                            h6 #[strong.u-textColor_4 •] Choose “true”, “false” or “information not given”
+                            p Salazar was accused of using performance-enhancing drugs.
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_4" value="1")
+                                label(class="c-Checkbox row ta-c" for="selInput_4") True.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_5" value="2")
+                                label(class="c-Checkbox row ta-c " for="selInput_5") False.
+                                input(type="radio" class="c-inputRadio" name="sel_input_2" id="selInput_6" value="3")
+                                label(class="c-Checkbox row ta-c " for="selInput_6") Information not given.
+                                input(type="hidden" class="js-select")
+
+                    .col.xs12.md6
+                        .row
+                            h6 #[strong.u-textColor_4 •] Match the information given with one of the paragraphs from the text.
+                            p Salazar was really angry with some individuals he used to work with many years ago
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_7" value="1")
+                                label(class="c-Checkbox row ta-c" for="selInput_7") 1.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_8" value="2")
+                                label(class="c-Checkbox row ta-c " for="selInput_8") 2.
+                                input(type="radio" class="c-inputRadio" name="sel_input_3" id="selInput_9" value="3")
+                                label(class="c-Checkbox row ta-c " for="selInput_9") 3
+                                input(type="hidden" class="js-select")
+
+                        .row.mt40
+                            h6.
+                                #[strong.u-textColor_4 •]
+                                Fill in the summary using the words form the paragraph. #[br]#[br]
+
+                            .c-cardGreen
+                                .c-cardGreenContent.flex.justify-center.align-items-center
+                                    span blames | former | allegations | admits | dispute
+
+                            .row
+                                p.lh25.
+                                    Mr. Salazar is in the middle of a #[input(type="text" class="c-input js-escribir")] with Propublica and the BBC over #[input(type="text" class="c-input js-escribir")]
+                                    of misconduct. While Mr. Salazar #[input(type="text" class="c-input js-escribir")] to some of the accusations in the articles also he #[input(type="text" class="c-input js-escribir")]
+                                    some of the claims of misconduct on his #[input(type="text" class="c-input js-escribir")] colleagues and disgruntled
+                                    former athletes. He believes he is being judged unfairly.
+            |
+            |
+            article(class="row u-animationFadeDown" ng-show="s_actividad == 3")
+                .row-flex-center
+                    .col.xs12.md6
+                        .row
+                            p.
+                                #[strong.u-textColor_4 •]
+                                Complete the sentence with a word from the table below. #[br]#[br]
+                            .c-cardGreen
+                                .c-cardGreenContent.flex.justify-center.align-items-center
+                                    span blames | former | dispute | allegations
+                            p.lh25.
+                                in the hospital board meeting there was a #[input(type="text" class="c-input js-escribir")] over #[input(type="text" class="c-input js-escribir")] that a doctor had acted
+                                inappropriately towards a #[input(type="text" class="c-input js-escribir")] patient. The worker’s union #[input(type="text" class="c-input js-escribir")] the hospital for its
+                                poor regulations and claims the doctor is being sacrificed to appease the regulators.
+                                The hospital executives say that union’s claim was unfair and that they stand by their decision
+                                on the matter.
+                        .row.mt40
+                            p.
+                                #[strong.u-textColor_4 •]
+                                Choose the correct answer. #[br]#[br]
+                                Mr. Salazar has regrets about his time as an athlete one which is...
+                            .row
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_10" value="1")
+                                label(class="c-Checkbox row ta-c" for="selInput_10") Using Test boost.
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_11" value="2")
+                                label(class="c-Checkbox row ta-c " for="selInput_11") Not working hard enough.
+                                input(type="radio" class="c-inputRadio" name="sel_input_4" id="selInput_12" value="3")
+                                label(class="c-Checkbox row ta-c " for="selInput_12") Overworking himself.
+                                input(type="hidden" class="js-select")
+
+                    .col.xs12.md6()
+                        p.
+                            #[strong.u-textColor_4 •]
+                            Complete the table by using the correct person from the passage. #[br]#[br]
+                        .col-xs12.md10.col-center
+                            div(class="row row-flex justify-center align-items-center")
+                                span(class="dragCont"): span(class="drag" rescon="1") Loren Myhre
+                                span(class="dragCont"): span(class="drag" rescon="2") Adam Goucher
+                                span(class="dragCont"): span(class="drag" rescon="1") Alberto Salazar
+                                span(class="dragCont"): span(class="drag" rescon="2") Galen Rupp
+                                span(class="dragCont"): span(class="drag" rescon="1") Steve Magness
+
+                            div(class="row mt20")
+                                table(class="c-table-estilo_tres m-a")
+                                    thead: tr
+                                        th(class="w33") Employees
+                                        th(class="w33") Athletes
+                                    tbody
+                                        tr
+                                            td.ta-c: span.drop.js-drop
+                                            td.ta-c: span.drop.js-drop
+                                        tr
+                                            td.ta-c: span.drop.js-drop
+                                            td.ta-c: span.drop.js-drop
+                                        tr
+                                            td.ta-c: span.drop.js-drop
+                                            td.ta-c: span.drop.js-drop
+
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-show="s_actividad == 2 || s_actividad == 3" ng-click="reloadEscribSelectDrag()")
+        button(class="c-btn-IconAction u-bgIconCheck" ng-show="s_actividad == 2 || s_actividad == 3" ng-click="CompTxt_SelectMult_Drag()")
+|
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+script.
+    flickitySlide('c-flickity', 'c-flickity--cell', 'c-flickity-controlsSlides', 'c-flickity-button', 'c-flickity-button--previous', 'c-flickity-button--next', '720');

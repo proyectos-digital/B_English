@@ -1,0 +1,211 @@
+// ========================================================================== COLORS
+	// Grises
+    $white      : #FFFFFF;
+    // Proyect Color
+	// Black
+    $color_1-lighter	: #e4e4e4;
+    $color_1-light		: #9f9f9f;
+    $color_1			: #484848;
+    $color_1-dark		: #232323;
+	$color_1-darker		: #121212;
+	// Green
+    $color_2-lighter	: #cfe8e7;
+    $color_2-light		: #87c5bf;
+    $color_2    		: #36b1a3;
+	$color_2-dark		: #6aa199;
+	$color_2-darker		: #22645B;
+	// Yellow
+    $color_3-lighter    : #ffecbd; //#fef5ae;
+    $color_3-light  	: #ffd97a; //#fdee67;
+    $color_3    		: #fbc02d;
+    $color_3-dark   	: #c49000;
+	$color_3-darker     : #997000;
+	// Red
+    $color_4-lighter	: #f9ccc2;
+    $color_4-light		: #e1b3b1;
+    $color_4			: #ce7e80;
+    $color_4-dark		: #b04f52;
+    $color_4-darker		: #69242b;
+	// blue
+    $color_5-lighter 	: #d4dbf1;
+    $color_5-light  	: #b5c6f8;
+    $color_5    		: #8496c5;
+    $color_5-dark   	: #3e538c;
+    $color_5-darker  	: #273459;
+	// state
+	$color_good			: #73b62a; // 36b1a3
+	$color_wrong		: #bf3140;
+	$overlay			: $color_1-darker;
+
+// ========================================================================== zIndex
+	$draggable_drop					: 6;
+	$navigationModule_seudoElm		: 5;
+	$asideNotice					: 45;
+	$zIndex_templateHeader			: 35;
+	$zIndex_templateFooter			: 25;
+	$zIndex_templateWrapper			: 15;
+// ========================================================================== DIMENSIONS    
+    $fullView            : 100%;
+	$pixel1920           : 1920px;
+	$pixel1280           : 1280px;
+	$pixel1024           : 1024px;
+	$pixel992            : 992px;
+	$pixel892            : 892px;
+	$pixel768            : 768px;
+	$pixel600            : 600px;
+	$pixel480            : 480px;
+	$pixel450            : 450px;
+	$pixel320            : 320px;
+	$pixel70             : 3.5rem;
+	$pixel60             : 60px;
+	$pixel50             : 50px;
+	$pixel35             : 35px;
+	$pixelnone           : 0;
+	$height-header       : $pixel70;
+	$height-nav       	 : $height-header;
+	$height-wrapper		 : calc(100vh - (#{$height-header} * 2));
+
+// ========================================================================== SHADOWS 
+	$shadow-button		 :  0 2px 2px 0 rgba(0,0,0,0.14), 
+	0 1px 5px 0 rgba(0,0,0,0.12), 
+	0 3px 1px -2px rgba(0,0,0,0.2);
+	$shadow-button-hover :  0 3px 3px 0 rgba(0,0,0,0.14), 
+	0 1px 7px 0 rgba(0,0,0,0.12), 
+	0 3px 1px -1px rgba(0,0,0,0.2);
+	$shadow-1 	          : 0 2px 2px 0 rgba(0,0,0,0.14), 
+	0 1px 5px 0 rgba(0,0,0,0.12), 
+	0 3px 1px -2px rgba(0,0,0,0.2);
+	// 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	$shadow-2      	      : 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+	0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	$shadow-3      	      : 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+	0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	$shadow-4      	      : 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+	0 3px 14px 2px rgba(0, 0, 0, 0.12),
+	0 5px 5px -3px rgba(0, 0, 0, 0.3); //0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+	$shadow-5      	      : 0 27px 24px 0 rgba(0, 0, 0, 0.2),
+	0 40px 77px 0 rgba(0, 0, 0, 0.22);
+// ========================================================================== GRID SISTEM 
+// Definición grilla
+$columnas-grilla: 12;
+// Relación de grilla de 12 columnas, ejemplo(100% / 12) = 8.33333333333333
+$parametro-ancho-columnas: (100/$columnas-grilla);
+// Separador Principalmente para las columnas
+$padding : 0.625rem; // Equivalente a 10px
+// Nombres de tamaños responsive
+// Variables de clases, personalizacion de clases para columnas
+$base   		: 'base' ;
+$movil  		: 'xs' 	 ;
+$big-movil      : 'sm' 	 ;
+$tablet 		: 'md'	 ;
+$web    		: 'lg'   ;
+$hd     		: 'hd'   ;
+// Generador de Grilla
+$grid-breakpoints:
+($movil  	    , $pixel320 , $pixel600),
+($big-movil	    , $pixel600	 , $pixel992),
+($tablet 	    , $pixel992	 , $pixel1024),
+($web    	    , $pixel1024 , $pixel1280),
+($hd     	    , $pixel1280 , $pixel1920);
+
+$breakpoints: (
+	$base         :$pixel320
+	, $movil        :$pixel480
+	, $big-movil    :$pixel768
+	, $tablet       :$pixel992
+	, $web          :$pixel1024
+	, $hd           :$pixel1280
+	);
+	// Variables de layout, nombres de los diferentes valores de display
+	$grid   		: 'grid';
+	$block  		: 'block';
+	$flex           : 'flex';
+	$inline 		: 'inline';
+	$inline-block   : 'inline-block';
+	$initial	    : 'initial';
+	
+	$layout: (
+		$grid         
+		, $block        
+		, $flex    
+		, $inline       
+		, $inline-block          
+		, $initial           
+		);
+		
+// ========================================================================== HTML BASE
+		// Variables para aplicarlas en font-weight
+		$light      : 300;
+		$normal     : 400;
+		$medium     : 500;
+		$semi-bold  : 600;
+		$bold       : 700;
+		$extra-bold : 800;
+		$black      : 900;
+		
+		
+		// ESTILOS BASE
+		$body--font-family  	: 'Open Sans', sans-serif;   	// fuente predeterminada
+		$body--color        	: $color_1;                      // color de texto predeterminado
+		$base-font-size     	: 1em;				// Tamaño texto que define uniadades RE
+		$ratio-font-size    	: 1.15;			   			// Tamaño texto que define uniadades RE
+		$line-height 			: $ratio-font-size; 				         	// Altura de línea
+		// ESTILOS DE ENCABEZADOS
+		$header--font-family    : 'Poppins', sans-serif;  // fuente para los headers (h1,h2,h3...)
+		$header--font-weight    : $bold;                  // grosor de fuente para los headers
+		$header--text-transform : initial;                   // normal, uppercase, lowercase, capitalize
+		$header--color          : $color_1;                     // color predeterminado de los header
+		// TAMAÑO DE LOS ENCABEZADOS (h1...h6)
+		$h6--font-size : $base-font-size;
+		$h5--font-size : $h6--font-size * $ratio-font-size;
+		$h4--font-size : $h5--font-size * $ratio-font-size;
+		$h3--font-size : $h4--font-size * $ratio-font-size;
+		$h2--font-size : $h3--font-size * $ratio-font-size;
+		$h1--font-size : $h2--font-size * $ratio-font-size;
+	// ESTILOS DE PÁRRAFOS
+		$p--font-size   : $base-font-size;          // Tamaño de fuente
+		$small--font-size   : $base-font-size / ($ratio-font-size + ($ratio-font-size - 1));          // Tamaño de fuente
+		$p--margin      : .8rem;          // Separación entre un párrafo y el siguiente
+		$p--font-weight : $light;      // Grosor predeterminado de la fuente
+
+
+// ========================================================================== GLOBAL NAMES
+	$pathDirectory      : 'http://uiAtoms.com';
+	$MultimediaImages   : 'assets/multimedia/images/';
+	$GlobalImages   	: './../multimedia/images/app/';
+// ========================================================================== GRID LAYOUT
+
+@mixin grid-columnsRepeat($anchoColumna){
+    grid-template-columns:repeat(auto-fill, minmax(unquote($anchoColumna), 1fr));
+}
+@mixin layoutGrid ($display, $gap: 1rem, $templateColumns: 1fr, $templateRows: null) {
+    display: unquote($display);
+    grid-gap: $gap;
+    grid-template-columns: unquote($templateColumns);
+    grid-template-rows: unquote($templateRows);
+    @content;
+}
+@mixin layoutFlex ($display, $justify: flex-start, $align: flex-start, $wrap: nowrap, $direction: row) {
+    display: unquote($display);
+    justify-content: unquote($justify);
+    align-items: unquote($align);
+    flex-wrap: unquote($wrap);
+    flex-direction: unquote($direction);
+    @content;
+}
+// ========================================================================== BREAKPOINT
+@mixin maxBreakPoint($size){
+	@media screen and (max-width: $size){
+		@content
+	}
+};
+@mixin minBreakPoint($size){
+	@media screen and (min-width: $size){
+		@content
+	}
+};
+@mixin betweenBreakPoint($sizeMin, $sizeMax){
+	@media screen and (min-width: $sizeMin) and (max-width: $sizeMax){
+		@content
+	}
+};

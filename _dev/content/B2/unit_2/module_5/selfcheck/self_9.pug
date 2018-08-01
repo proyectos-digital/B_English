@@ -1,0 +1,44 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+// ============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper")
+    aside(class="template-asideLeft o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content" ng-init="ContadorPalabras(120)")
+            
+             div(class="row")
+                h5 #[strong.u-textColor_4 1. ] I can express abstract ideas.
+                div(class="row-flex align-items-center")
+                    p 
+                        | Think of some regrets you've had in the past. For example: 
+                        strong(class="u-textColor_4-dark") I wish I had learnt how to sing; I wish I had taken piano lessons; I wish I hadn't started smoking. 
+                        strong Write 120 words explaining the regrets you have. 
+                        | Try to use the sentence stem I wish I had/hadn't... elaborating on them a little.
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center")
+                        div(class="row mt20")
+                            img(src="./unit_2/module_5/assets/images/sel_9.png", alt="", srcset="" class="u-responsive-img centrado")
+
+                    div(class="col-flex-sm12 col-flex-md6 col-center") 
+
+                        div(class="c-wrapTextarea ")
+                            textarea(placeholder="Write here..." class="campo c-textarea h200" ng-model="textousuario")
+                            div(class="c-wrapTextarea__counter")
+                                span(id="contador") 0 
+                                span(ng-bind="limitePalabras")
+                                span(id="alertamensaje")
+
+                
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+        button(class="c-btn-IconAction u-bgIconUpload" ng-click="enviarTexto()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")

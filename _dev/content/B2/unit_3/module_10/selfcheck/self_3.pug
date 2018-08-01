@@ -1,0 +1,54 @@
+//- ============================== Mixins
+include ../../../../_pug/_mixin
+//-============================== templateContainer
+
+header(class="template-header" ng-controller="CtrlHeader" ng-include="'../ngMaster/header.php'")
+|
+|
+section(class="template-wrapper act_2")
+    aside(class="template-asideRight o-aside-Item")
+    |
+    |
+    div(class="template-section m-a")
+        section(class="template-content")
+                 
+            div(class="row-flex s-actividad u-animationFadeDown")
+                div(class="row-flex align-items-center")
+                    div(class="row")                       
+                            
+                    div(class="row")
+                        div(class="col-center col xs12 sm11 md10 lh-20 ta-l")
+                            
+
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 1]. Watch out! This car  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (explode)] any minute.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 2]. Can you remind me of my visit to the dentist tomorrow?  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (I, forget, certainly). ]
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 3]. The bus is late. I have a feeling  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (not arrive)] before 5 o’clock.
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 4]. Look at the engine!  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (never, we, repair) ] on time! 
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5]. Let’s stop by the supermarket.  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (be, Coke, cheaper)]
+                            p(class="mb30").
+                                #[strong(class="u-textColor_4-dark") 5]. Jane knows math well.  #[span(class="c-textField"): input(type="text" placeholder="Text here..." class="c-input js-escribir")] #[strong (help, she)] you.
+
+                           
+
+                        
+
+    |
+    |
+    aside(class="template-asideRight o-aside-Item")
+     
+        button(class="c-btn-IconAction u-bgIconRefresh" ng-click="reloadClass()")        
+        button(class="c-btn-IconAction u-bgIconCheck" ng-click="validarCompletartxt()")
+|        
+|
+footer(class="template-footer" ng-controller="CtrlFooter" ng-include="'../ngMaster/footer.php'")
+|
+|
+div(class="c-noticeAside " id="notice")
+    article(class="c-noticeAside-body" ng-include="'unit_2/module_7/activities/self_7_notice_'+ idNotice +'.php'")
+    footer(class="c-noticeAside-footer"): button(class="c-btn-IconAction u-bgIconClose closeNotice") 
+    
