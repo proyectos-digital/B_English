@@ -12,7 +12,7 @@
         </article>
       </article>
       <article class="c-appLogin-block">
-        <button class="c-appLogin-button" type="submit" id="login-button" ng-click="nivelUsuario()">Login Prueba TICAL</button>
+        <button class="c-appLogin-button" type="submit" id="login-button" ng-click="nivelUsuario()">Login</button>
       </article>
     </section>
     <footer class="c-appLogin-footer"></footer>
